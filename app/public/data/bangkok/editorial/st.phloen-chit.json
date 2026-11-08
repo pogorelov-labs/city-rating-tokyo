@@ -1,0 +1,653 @@
+{
+ "key": "st.phloen-chit",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Phloen Chit is old-money Bangkok in station form: BTS E2 on the Phloen Chit Road viaduct between Chit Lom and Nana, a skywalk straight into Central Embassy, 22 embassies down a tree-lined 2.6 km boulevard, and condo towers asking 25,000-90,000 THB a month. The ratings lean on quality more than quantity — a single top-ranked hotel bar for nightlife, a 2.2-ha heritage garden for green, one premium gym club for sport — while the unit's biggest changes (One Bangkok to the south, the old British Embassy site awaiting its confirmed successor) sit just outside the 800 m line or still on the drawing board.",
+   "claims": [
+    "phloen-chit-c01",
+    "phloen-chit-c02",
+    "phloen-chit-c03",
+    "phloen-chit-c04",
+    "phloen-chit-c06",
+    "phloen-chit-c07",
+    "phloen-chit-c08",
+    "phloen-chit-c09",
+    "phloen-chit-c11",
+    "phloen-chit-c12",
+    "phloen-chit-c13",
+    "phloen-chit-c14",
+    "phloen-chit-c16",
+    "phloen-chit-c17"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Skywalk-connected CBD node: the station enters Central Embassy without a street crossing, and Chit Lom's Ratchaprasong Sky Walk network (Central Chidlom skybridge, CentralWorld, Gaysorn) starts one stop west — 646 m away by coordinates.",
+     "claims": [
+      "phloen-chit-c03",
+      "phloen-chit-c01"
+     ]
+    },
+    {
+     "en": "Quality-anchored nightlife: Lennon's at Rosewood — No. 7 on Asia's 50 Best Bars 2026 with the Highest New Entry award — plus Penthouse Bar + Grill at Park Hyatt and CHAR at Hotel Indigo, all in-unit.",
+     "claims": [
+      "phloen-chit-c04"
+     ]
+    },
+    {
+     "en": "A premium wellness layer: Virgin Active Wireless Road (75+ classes weekly) and the unusually shaded 2.6 km Witthayu boulevard for walking and road running.",
+     "claims": [
+      "phloen-chit-c13"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Green 10 is not reproducible in-unit: the only named public-ish green is the 2.2-2.4 ha Nai Lert heritage garden; Lumphini (57.6 ha) and One Bangkok's 8 ha sit ~1.1 km south, and the old embassy gardens are private redevelopment sites.",
+     "claims": [
+      "phloen-chit-c08"
+     ]
+    },
+    {
+     "en": "Nightlife 10 rests on 33 mapped venues — a quiet hotel-bar cluster by PropertyScout's own description ('more relaxed than Asoke or Nana'); loud nightlife is Nana's, one stop east.",
+     "claims": [
+      "phloen-chit-c04"
+     ]
+    },
+    {
+     "en": "The rent floor is still high: even older-stock studios ask ~13,000-18,000 THB and 1BRs 25,000-60,000 — the least-affordable cohort citywide — with no cheap fresh market documented inside the polygon.",
+     "claims": [
+      "phloen-chit-c06",
+      "phloen-chit-c12"
+     ]
+    },
+    {
+     "en": "Street-level frontage works against walking: heavy multi-lane Phloen Chit Road, embassy walls with long destination-free stretches, and no continuous skywalk east to Nana.",
+     "claims": [
+      "phloen-chit-c17"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Day: the skywalk carries station-to-mall movement into Central Embassy; Eathai and Gourmet Market in the basement handle lunch and groceries at premium prices.",
+     "claims": [
+      "phloen-chit-c03",
+      "phloen-chit-c11",
+      "phloen-chit-c12"
+     ]
+    },
+    {
+     "en": "Evening: hotel bars open at 17:00 (Lennon's to midnight); dining runs hotel-led; anyone wanting louder nightlife rides one stop to Nana E3.",
+     "claims": [
+      "phloen-chit-c04"
+     ]
+    },
+    {
+     "en": "Weekend: malls and One Bangkok (40M+ visits/yr district-wide) keep pulling visitors while the office and embassy stretches quiet — an inference from the ~18,000-resident district base, not a documented count.",
+     "claims": [
+      "phloen-chit-c16",
+      "phloen-chit-c09"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Station core (skywalk block): Central Embassy, Park Hyatt, Rosewood, Gourmet Market/Eathai — the densest, most air-conditioned square of the unit.",
+     "claims": [
+      "phloen-chit-c03",
+      "phloen-chit-c11"
+     ]
+    },
+    {
+     "en": "Wireless Road south (embassy belt): tree rows, 22 missions, Virgin Active, Hotel Indigo — calm sidewalks, dead frontage, the unit's quiet register.",
+     "claims": [
+      "phloen-chit-c14",
+      "phloen-chit-c13",
+      "phloen-chit-c17"
+     ]
+    },
+    {
+     "en": "Nai Lert garden pocket (behind Central Embassy, toward Soi Somkid): the 2.2-2.4 ha heritage garden — the unit's only named green, admission-charged.",
+     "claims": [
+      "phloen-chit-c08"
+     ]
+    },
+    {
+     "en": "Sukhumvit north strip (Khlong Toei Nuea, Watthana): the working condo-and-office layer between the viaduct and Phetchaburi; rents dip toward 18,000-28,000 in projects like Life One Wireless.",
+     "claims": [
+      "phloen-chit-c02",
+      "phloen-chit-c06"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Pick it if you can pay the cohort's price for a leafy, secure, international CBD: 1BR 25,000-60,000 THB, 2BR 45,000-90,000, embassy-district quiet and skywalk convenience.",
+     "claims": [
+      "phloen-chit-c06",
+      "phloen-chit-c14"
+     ]
+    },
+    {
+     "en": "Pick it if your social life is hotel bars and fine dining — the unit holds a top-10 Asia bar and Park Hyatt's dining cluster — and Nana is one stop away when you want noise.",
+     "claims": [
+      "phloen-chit-c04"
+     ]
+    },
+    {
+     "en": "Skip it if rent is the constraint: the older-stock floor (~13,000-18,000 studios) is scarce and documented thin; Chit Lom, Nana or Lat Phrao-type units buy far more for less.",
+     "claims": [
+      "phloen-chit-c06",
+      "phloen-chit-c07"
+     ]
+    },
+    {
+     "en": "Skip it if you need parks at the door or cheap everyday groceries — Lumphini and Benjakitti are a train stop south, and the documented grocery offer is premium-tier.",
+     "claims": [
+      "phloen-chit-c08",
+      "phloen-chit-c12"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Polygon relations unresolved (OSM blocked): clip lines at Chit Lom/Nana, the southern boundary against the lumphini unit, whether any Lumphini tip or One Bangkok green edge falls inside, and which 2 piers the app mapped (Wireless pier confident; Chidlom vs Nana Nuea ambiguous).",
+   "The 10.7-ha mapped green cannot be decomposed from published data — Nai Lert (~2.2-2.4 ha) is the only named in-unit green; its area figure itself is snippet-sourced.",
+   "App counts (351 food, 53 cafes, 33 nightlife) unverified; the nightlife-10 mechanism (hotel-bar quality + Nana adjacency) is researcher inference from documented supply.",
+   "Rent evidence is asking-only (portals and guides); no signed-rent source found; the 33,500/74,000 blend's construction is editorial and unpublished.",
+   "Safety 7 has no unit-level evidence at all in accessible sources — the score reads as district-blend default.",
+   "Conflicting British Embassy figures (23 vs 25 rai; 2017 vs 2018) and an unconfirmed 'Central Embassy 2' programme; the Dutch-embassy sale is 'reported, not confirmed'.",
+   "Snippet-only corroborations used, never sole support: DDproperty 1BR average, LAD land analysis, Park Hyatt dual-station bridge claim, Reddit skywalk gap, 'quiet, secure' guide language, Witthayu loop distance.",
+   "The 2016 BK Magazine Wireless Road piece is sponsored ('Brought to you by' GROVE) and used only for history and framing; One Bangkok visitor figures are management-supplied."
+  ],
+  "attribution_required": [
+   "phloen-chit-c01"
+  ]
+ },
+ "claims": [
+  {
+   "id": "phloen-chit-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1999-12-05",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "The Wikipedia article is an uncited stub (its own banner).",
+    "Distances are coordinate-derived; polygon clipping is the coordinator's check."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current",
+    "recheck": "2026-12-01"
+   },
+   "limitations": [
+    "Ratchathewi share rests on snippet-level khwaeng-boundary statements, not on polygon data.",
+    "Wikipedia geocoding noise applies to the ~200 m centroid distance."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current service",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "The Park Hyatt hotel page's claim of a covered bridge to both BTS Phloen Chit and Chit Lom appeared only in search snippets (hotel marketing) — plausible given the hotel sits atop Central Embassy but not independently body-read.",
+    "Second pier identity unresolved; Overpass blocked."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c04",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": "2026-01-01",
+    "observed": "2025-2026 listings and awards",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "The 33-venue count is an app fact, not independently verified; which venues the app mapped is unknown.",
+    "CHAR (Hotel Indigo) and the Penthouse rooftop detail rest on rooftop-guide search snippets (corroboration only); Penthouse Bar + Grill itself is PropertyScout-listed.",
+    "The mechanism reading is inference from documented supply, not from app internals."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c05",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2023-2026 appraisal cycle; deals 2016-2026",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Asking vs transacted land prices differ sharply; only appraisal figures are official.",
+    "Embassy-site area and sale-year conflict between sources (23 vs 25 rai; 2017 vs 2018) — both cited, not averaged."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "listings retrieved 2026-11-07; guide updated 2025-11-25",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Asking, not signed, rents; aggregator advertisements.",
+    "Portal 'near BTS' catchments are their own definitions.",
+    "USD-THB conversions are the researcher's where made."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c07",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026 listings",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Blend construction is editorial (district-weighted); no published methodology was available to verify it.",
+    "Asking evidence only; signed rents unknown."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current",
+    "recheck": "2026-12-01"
+   },
+   "limitations": [
+    "Nai Lert garden area (~14-15 rai) is snippet-sourced (heritage-home listings), not body-read from an official page.",
+    "No published in-unit public park area besides Nai Lert could be found; the 10.7-ha polygon's remainder is unidentified (OI-2).",
+    "OSM blocked; inside/outside relations are coordinate-derived."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-10-25",
+    "observed": "opened 2024; growth data Sep 2026",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Visitor/occupancy figures are operator-supplied (interview piece).",
+    "The 16.7-ha site figure appears in planning-phase coverage (snippet-only); the official release says 'approximately 17 hectares'."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c10",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2018-01-01",
+    "observed": "sale 2018; status verified 2026-10-22",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Rai figures and sale-year conflict between the two sources; both cited.",
+    "Construction-start and opening estimates come from property trackers, not the developers."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026 guide; 2016 listicle flagged as historical",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Paste's current location/status not independently verified beyond the PropertyScout guide.",
+    "App counts (351 food, 53 cafes) unverified — no public dataset accessible (Overpass blocked)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025 guide",
+    "recheck": null
+   },
+   "limitations": [
+    "The 'no cheap fresh market inside the polygon' statement is an absence-of-evidence finding (Overpass blocked), not a verified negative."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current operator page; 2024 media",
+    "recheck": null
+   },
+   "limitations": [
+    "The commonly cited 'Witthayu loop' distance (~2.5-3 km around the block) appears only in running-guide search snippets — treat as approximate.",
+    "Hotel-club list is inference from hotel identity, not a verified facilities audit."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c14",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2016-2026 publications",
+    "recheck": null
+   },
+   "limitations": [
+    "Perception evidence is publication-based; the sponsored 2016 piece is used for historical framing only.",
+    "The vibe-9 interpretation (prestige + leafiness over street culture) is the researcher's synthesis."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c15",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026 publications",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "The 'quiet, secure' wording rests on snippet-level property-guide language; no crime data was accessible.",
+    "This claim deliberately documents an evidence gap rather than resolving the score."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c16",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2021 ridership; 2026 visitor data",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Ridership is 2021 (post-COVID); visitor figure is operator-supplied and site-level.",
+    "The weekend-quiet pattern is inference, flagged as such; no field observation or source states it directly."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c17",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "current",
+    "recheck": null
+   },
+   "limitations": [
+    "'Dead frontage' is an inference from embassy-compound descriptions, not a storefront survey.",
+    "Skywalk-gap detail is snippet-only forum evidence."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phloen-chit-c18",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-10-25",
+    "observed": "2024-2026",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Dutch-embassy sale rests on a reported figure corroborated by a snippet-level Thai analysis (source 19).",
+    "'No closure' for Open House is an absence-of-evidence statement."
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_b77284fbf748",
+   "url": "https://en.wikipedia.org/wiki/Phloen_Chit_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_7d8cf0276524",
+   "url": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_b0d3bdba53ac",
+   "url": "https://en.wikipedia.org/wiki/Nana_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_953f5171601f",
+   "url": "https://en.wikipedia.org/wiki/Phloen_Chit_Road",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_afd85636d7bc",
+   "url": "https://en.wikipedia.org/wiki/Witthayu_Road",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_4d8d327bd931",
+   "url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_e14f74c64d20",
+   "url": "https://today.line.me/th/v3/article/zNB08Kj",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thairath Money (via LINE Today)",
+    "family": "thairath"
+   }
+  },
+  {
+   "id": "src_6648a7e97a50",
+   "url": "https://embarkestate.com/en/journal/central-embassy-2-wireless-road-pipeline",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Embark Estate",
+    "family": "embarkestate"
+   }
+  },
+  {
+   "id": "src_1b1552afaa80",
+   "url": "https://www.nationthailand.com/business/corporate/40071053",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation (nationthailand.com)",
+    "family": "nation_group"
+   }
+  },
+  {
+   "id": "src_3255884c2b6d",
+   "url": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "One Bangkok (TCC Assets / Frasers Property)",
+    "family": "onebangkok"
+   }
+  },
+  {
+   "id": "src_856cff724ac6",
+   "url": "https://propertyscout.co.th/en/location-guides/phloen-chit-area-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyScout",
+    "family": "propertyscout"
+   }
+  },
+  {
+   "id": "src_e7fd579300d3",
+   "url": "https://www.hipflat.com/projects/noble-ploenchit-xpfzrg",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Hipflat",
+    "family": "hipflat"
+   }
+  },
+  {
+   "id": "src_4e8e833cb6c3",
+   "url": "https://propertyhub.in.th/เช่าคอนโด/bts-เพลินจิต",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyHub.in.th",
+    "family": "propertyhub"
+   }
+  },
+  {
+   "id": "src_8254a9d17d41",
+   "url": "https://www.bkmagazine.com/city-living/5-great-reasons-why-wireless-road-remains-bangkok-most-desirable-neighborhood",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BK Magazine",
+    "family": "bkmagazine"
+   }
+  },
+  {
+   "id": "src_450c066cbc2b",
+   "url": "https://en.wikipedia.org/wiki/Khlong_Toei_Nuea",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_63797b946fc0",
+   "url": "https://www.rosewoodhotels.com/en/bangkok/dining/lennons",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Rosewood Hotel Group",
+    "family": "rosewood"
+   }
+  },
+  {
+   "id": "src_2e195247a3a3",
+   "url": "https://www.virginactive.co.th/en/locations/wireless-road",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Virgin Active Thailand",
+    "family": "virginactive"
+   }
+  },
+  {
+   "id": "src_819de919079b",
+   "url": "https://www.ddproperty.com/เช่าคอนโด/ใกล้-bts-เพลินจิต-2153",
+   "body_read": false,
+   "attribution": {
+    "publisher": "DDproperty",
+    "family": "ddproperty"
+   }
+  },
+  {
+   "id": "src_cafe3bb0674a",
+   "url": "https://www.lad.co.th/post/วิเคราะห์-ที่ดินสถานทูตเนเธอร์แลนด์",
+   "body_read": false,
+   "attribution": {
+    "publisher": "LAD (lad.co.th)",
+    "family": "lad"
+   }
+  },
+  {
+   "id": "src_09e2a584448e",
+   "url": "https://map.longdo.com/poilist/32",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Longdo / SEC / Metropolitan Electricity Authority (address snippets)",
+    "family": "longdo_govdir"
+   }
+  },
+  {
+   "id": "src_1100bd1830e9",
+   "url": "https://baanlyy.com/thailand/bangkok/areas/wireless",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Baanlyy / Superagent (property guides)",
+    "family": "baanlyy_superagent"
+   }
+  },
+  {
+   "id": "src_eb568a0845df",
+   "url": "https://www.reddit.com/r/Bangkok/comments/1qip401/is_there_connecting_bts_skywalk_between_ploenchit",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Reddit (r/Bangkok)",
+    "family": "reddit"
+   }
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+{
+ "key": "thon-buri",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Thon Buri khet is west-bank family Bangkok at its most affordable: seven khwaeng of markets, temples and low-rise streets between the Chao Phraya and the khlongs, served by BTS Pho Nimit, Talat Phlu and Wutthakat plus the Maeklong-line terminal at Wongwian Yai. Registered population has fallen 57% since 1992 to 98,286, rents run from about 11,500 THB, and the food story is Talat Phlu's decades-old shops - nationally famous again after the 2024 film. The trade-offs are structural: the researched comparison set's lowest green (4.6 ha, 0.6%), no full-service hospital inside the khet, and the BTS Wongwian Yai terminus itself sitting across the Khlong San line.",
+   "claims": [
+    "thon-buri-c01",
+    "thon-buri-c04",
+    "thon-buri-c05",
+    "thon-buri-c07",
+    "thon-buri-c06",
+    "thon-buri-c02"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Cheapest of the researched comparison set with real transit: 1-bed portal averages ~USD 387 (13-14k THB), three in-polygon BTS Silom stations, the Maeklong terminal and the west bank's biggest bus hub.",
+     "claims": [
+      "thon-buri-c05",
+      "thon-buri-c08",
+      "thon-buri-c03"
+     ]
+    },
+    {
+     "en": "Authentic old-Bangkok texture: Talat Phlu's 80-year dessert shop and 60-year khao mu dang, the Kudi Chin riverfront and the new Memorial Bridge-to-Wat Kalayanamit walkway.",
+     "claims": [
+      "thon-buri-c07",
+      "thon-buri-c12"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Green 4 is the honest floor: no district-scale park inside the khet - the main named green is a ~10-rai pocket park, and the riverside showpiece (Chao Phraya Sky Park) is outside the polygon.",
+     "claims": [
+      "thon-buri-c06"
+     ]
+    },
+    {
+     "en": "No full-service hospital verified inside the khet: Siriraj is Bangkok Noi across the canal, and the wikis' Somdech Phra Pinklao entry falls outside the app polygon too.",
+     "claims": [
+      "thon-buri-c09"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Days follow the market-and-school rhythm around Talat Phlu and the BTS band, with the Maeklong train cutting through the market street; nights are local and early - the Wongwian Yai junction quiets with the buses, and the khet has no late-night strip of its own.",
+     "claims": [
+      "thon-buri-c07",
+      "thon-buri-c03",
+      "thon-buri-c08"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The riverfront Wat Kanlaya heritage strip, the Talat Phlu-Bukkhalo market band along the BTS line, and the interior Samre/Wutthakat/Dao Khanong khwaeng are three different neighbourhoods - with the northern tip (Santa Cruz/Kudi Chin) clipped out of the app polygon entirely.",
+     "claims": [
+      "thon-buri-c12",
+      "thon-buri-c07",
+      "thon-buri-c08"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Choose it if cheap long-term rent (12-14k for a 1-bed) with BTS access and an old-market, family-neighbourhood texture outweighs park access and late-night options.",
+     "claims": [
+      "thon-buri-c05",
+      "thon-buri-c08",
+      "thon-buri-c07"
+     ]
+    },
+    {
+     "en": "Skip it if you need parks at the door, a hospital in-district, or the named 'Wongwian Yai' BTS address - that terminus is administratively Khlong San's.",
+     "claims": [
+      "thon-buri-c06",
+      "thon-buri-c09",
+      "thon-buri-c02"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Unresolved: composition of the app's 4.6-ha park figure; Somdech Phra Pinklao Hospital's true khet membership; Purple Line opening target (~2030, snippet-level); Maeklong-line frequency; Kudi Chin walkway's formal opening date. BTS Wongwian Yai = Khlong San khet is resolved; anchors verified against OSM with no mismatch beyond the northern-tip clip."
+  ],
+  "attribution_required": [
+   "thon-buri-c01",
+   "thon-buri-c02",
+   "thon-buri-c04",
+   "thon-buri-c05",
+   "thon-buri-c07",
+   "thon-buri-c08",
+   "thon-buri-c09",
+   "thon-buri-c10",
+   "thon-buri-c12"
+  ]
+ },
+ "claims": [
+  {
+   "id": "thon-buri-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no khwaeng is named for the BTS station itself; placement inferred from the infobox district + PIP",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (thon-buri)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Maeklong-line service frequency not verified in this pass"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c04",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the 231,271/1992 figure is Thai Wikipedia's; no independent registry source body-read"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c05",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "portal averages; USD-THB conversion approximate (~35)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c06",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "BMA greener registry entry is snippet-only; absence of OSM parks is not absolute proof, but two independent passes plus both wikis agree"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c07",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "TAT is promotional; shop ages unverified beyond the guide"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c08",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no ridership or frequency data body-read; bridge membership per Thai Wikipedia's list",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (thon-buri)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "both wikis list Somdech Phra Pinklao under Thon Buri while the polygon excludes its campus - possible wiki/template error or boundary-edge campus; unresolved, flagged",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (thon-buri)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c10",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "expressway alignment is our inference from boundary lists, not a body-read road description",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (thon-buri)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c11",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "MRTA page and the 2030/65-70% figures are search-aggregated, not body-read; treat dates as reported targets, not commitments"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thon-buri-c12",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "walkway dimensions/status rest on aggregated search summaries (flagged); polygon clip needs coordinator reconciliation",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (thon-buri)"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_d25d5948eea2",
+   "url": "https://en.wikipedia.org/wiki/Thon_Buri_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_983a048a65d8",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%98%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_0a0d9beadf84",
+   "url": "https://en.wikipedia.org/wiki/Wongwian_Yai_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_b4524ec64500",
+   "url": "https://www.tourismthailand.org/Articles/talat-phlu",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Tourism Authority of Thailand",
+    "family": "Tourism Authority of Thailand"
+   }
+  },
+  {
+   "id": "src_c155dd523f7c",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/thon-buri",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap via Overpass API",
+    "family": "OpenStreetMap via Overpass API"
+   }
+  },
+  {
+   "id": "src_ef914dd906ae",
+   "url": "https://www.khaosodenglish.com/news/bangkok/2016/11/22/riverside-communities-evicted-chao-phraya-makeover/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Khaosod English",
+    "family": "Khaosod English"
+   }
+  },
+  {
+   "id": "src_e29735a883b2",
+   "url": "https://www.mrta-purplelinesouth.com/home_progress",
+   "body_read": false,
+   "attribution": {
+    "publisher": "MRTA (via search aggregation)",
+    "family": "MRTA (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_7e9420006e34",
+   "url": "https://greener.bangkok.go.th",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BMA greener.bangkok.go.th (via search aggregation)",
+    "family": "BMA greener.bangkok.go.th (via search aggregation)"
+   }
+  }
+ ]
+}

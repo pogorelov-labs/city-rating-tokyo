@@ -1,0 +1,633 @@
+{
+ "key": "st.sam-yan",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Sam Yan is the junction where Rama IV Road meets Phaya Thai and Si Phraya under the Thai-Japan flyover — Chulalongkorn University land on the north side, Bang Rak's temples and shops across it. The 1.25 sq km catchment holds three institutions that never close: a 1,400-plus-bed teaching hospital east, a 41,000-student university north, and Samyan Mitrtown (2019), the mall the university's redevelopment wave produced, with its free 24-hour Samyan Co-op study floor and 24-hour retail zone. Days run on hospital shifts and semester calendars; nights run on the 24-hour layer rather than bars — the actual nightlife sits one MRT stop south in the Silom corridor. What you trade: the old Sam Yan of 1965 shophouses and the 1965 market was redeveloped out from 2008 onward (the displacement record is unusually well documented), the famous parks (Centenary, Lumpini) are both outside the boundary, and the district-blend rents overstate what a typical unit here actually asks.",
+   "claims": [
+    "sam-yan-c03",
+    "sam-yan-c04",
+    "sam-yan-c05",
+    "sam-yan-c06",
+    "sam-yan-c07",
+    "sam-yan-c08",
+    "sam-yan-c09",
+    "sam-yan-c10",
+    "sam-yan-c12",
+    "sam-yan-c14",
+    "sam-yan-c15"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Institutional depth at the door: a top-tier teaching hospital (1,435-1,442 beds, 24h ER) ~0.6 km east and the country's oldest university (~41,600 students) on the north flank — constant demand keeps services dense.",
+     "claims": [
+      "sam-yan-c05",
+      "sam-yan-c06"
+     ]
+    },
+    {
+     "en": "The 24-hour layer is real infrastructure, not marketing: free 500-seat Samyan Co-op study space, a 24-hour retail zone, a 24-hour gym, all tunnel-connected to BL27 without crossing Rama IV.",
+     "claims": [
+      "sam-yan-c04",
+      "sam-yan-c03"
+     ]
+    },
+    {
+     "en": "Eating density matches the 462-venue count: a 1965 market lineage, hospital and campus canteens, and a Time Out 2020 coolest-neighbourhood crown built on the food-and-cafe mix.",
+     "claims": [
+      "sam-yan-c12"
+     ]
+    },
+    {
+     "en": "Car-free living works: the Blue Line loop station (3.54M passengers in 2021), underground mall links, buses at street level, and campus lanes north of the arterial.",
+     "claims": [
+      "sam-yan-c03",
+      "sam-yan-c06"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The amenities were financed by displacement: the 2008 demolition plans, the market's relocation, ~200% Chamchuri vendor rent hikes, and the 2020 shrine eviction attempt are documented in news and activist sources — the neighbourhood's social cost is part of its physical form.",
+     "claims": [
+      "sam-yan-c09",
+      "sam-yan-c10"
+     ]
+    },
+    {
+     "en": "Green is campus-mediated: no single 3.2 ha public park exists inside the boundary — the green score rests on university gardens and stadium lawns, while Centenary Park (~1.0 km NW) and Lumpini (~1.0 km E) belong to other units.",
+     "claims": [
+      "sam-yan-c07"
+     ]
+    },
+    {
+     "en": "The nightlife-10 score outruns its footprint: 21 mapped venues against a documented character of food-and-study nights — the score prices proximity to Silom's corridor, not bars in the catchment.",
+     "claims": [
+      "sam-yan-c15"
+     ]
+    },
+    {
+     "en": "The rent blends mislead in both directions: newer Sam Yan stock asks ~20-40k (below the Bang Rak blend of ~71k, around the Pathum Wan blend's floor), and no signed-rent data exists; the old cheap stock is gone.",
+     "claims": [
+      "sam-yan-c14",
+      "sam-yan-c09"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Morning-to-afternoon belongs to the hospital and campus: OPD queues, clinic runs, canteen meals, student flows on Phaya Thai — the weekday pulse of two institutions that never pause.",
+     "claims": [
+      "sam-yan-c05",
+      "sam-yan-c06"
+     ]
+    },
+    {
+     "en": "Evening shifts to Mitrtown's Eating Library and the tunnels; the junction's restaurants and the relocated market's stalls keep local hours.",
+     "claims": [
+      "sam-yan-c04",
+      "sam-yan-c12"
+     ]
+    },
+    {
+     "en": "Late night is a study-and-service night, not a bar night: the Co-op fills, the 24h zone and gym run, and the actual club traffic passes through the station toward Silom one stop south.",
+     "claims": [
+      "sam-yan-c04",
+      "sam-yan-c15"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Junction core (NW/NE corners): Mitrtown and Chamchuri Square with the tunnels — retail, offices, the 24h layer; the most polished frontage.",
+     "claims": [
+      "sam-yan-c04"
+     ]
+    },
+    {
+     "en": "East (hospital block): 24/7 institutional rhythm — ambulances, visitors, pharmacies, medical-faculty courts; the densest foot traffic and the 2025 earthquake disruption.",
+     "claims": [
+      "sam-yan-c05"
+     ]
+    },
+    {
+     "en": "South and west (Si Phraya side and old lane fabric): Wat Hua Lamphong, shrines, the relocated market's direction, older shophouse remnants — the quietest corners and the closest thing to pre-redevelopment Sam Yan.",
+     "claims": [
+      "sam-yan-c08",
+      "sam-yan-c09"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Choose Sam Yan if you are tied to the hospital or the university — staff, students, patients' families — or if a 24-hour study-and-gym rhythm matters more than a bar street; the tunnel-connected mall makes car-free daily life practical.",
+     "claims": [
+      "sam-yan-c04",
+      "sam-yan-c05",
+      "sam-yan-c06"
+     ]
+    },
+    {
+     "en": "Test the rent claim against real units: district blends (32.5k/71k) describe Pathum Wan and Bang Rak, not this stock; Chapter Chula-Samyan-style 1-beds ask ~20-40k, and older buildings ask less — verify per building before budgeting.",
+     "claims": [
+      "sam-yan-c14"
+     ]
+    },
+    {
+     "en": "Look elsewhere if you need big public green inside your daily radius, a within-catchment bar scene, or the old cheap-eats Sam Yan — all three live outside the boundary now.",
+     "claims": [
+      "sam-yan-c07",
+      "sam-yan-c15",
+      "sam-yan-c09"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "The app's 3.2 ha green polygon could not be matched to any single named park; OSM areas were not computed (centers only) — needs an app-side or geometry-level check.",
+   "Nightlife-10 mechanism is inference: corridor access + 24h layer + legacy venues; no source connects the 21-venue count to the score.",
+   "All rent figures are asking prices; signed rents absent from every source; Chapter Chula-Samyan average (~30,795 THB) is snippet-only.",
+   "Station ridership is 2021 only (COVID-suppressed); no 2024-2026 per-station BEM figure found; BEM's official station page not located.",
+   "Exit-name mapping (Exit 1 Wat Hua Lamphong / Exit 2 Chamchuri-Mitrtown) is snippet-level; footbridge/at-grade crossing inventory on Rama IV unverified.",
+   "Campus sports facilities' public-access rules unknown — gym_sports 9 partly rests on restricted amenities.",
+   "Bangkok Post 2024-2026 Sam Yan coverage (Chula 2037 master plan, heritage critiques) paywalled — headline-level corroboration only.",
+   "Whether Wikipedia's 'San Chao Mae Tubtim' inside the neighborhood duplicates the Saphan Lueang shrine site (~1.1 km N) is unresolved.",
+   "CU Bike bike-share status (brief lead) not researched — no query run; U-Center and Si Mueang Miang leads skipped per brief.",
+   "Wikipedia infobox station coordinate differs from the app/OSM node by ~95 m; app coordinate used throughout."
+  ],
+  "attribution_required": [
+   "sam-yan-c05",
+   "sam-yan-c13",
+   "sam-yan-c14"
+  ]
+ },
+ "claims": [
+  {
+   "id": "sam-yan-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current (2026-11)",
+    "recheck": null
+   },
+   "limitations": [
+    "Wikipedia infobox station coordinate differs from the app/OSM node by ~95 m; app coordinate used",
+    "Khwaeng attribution of individual blocks south of Rama IV (Si Phraya vs Si Lom khwaeng) not verified street-by-street"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current (2026-11)",
+    "recheck": null
+   },
+   "limitations": [
+    "All distances are researcher-computed straight lines from published coordinates, not official figures",
+    "Lumphini Park corner distance uses map geometry, not a published geotag (~1.0 km, estimate)",
+    "Exact app polygon not re-derived; clip distances are Voronoi-midline approximations"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2004-07-03",
+    "observed": "2004-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "2021 ridership only; no 2024-2026 per-station figure found",
+    "Exit-name mapping is snippet-only; BEM's official station page was not located",
+    "No complete inventory of at-grade crossings/footbridges over Rama IV at Sam Yan"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2019-09-01",
+    "observed": "2019-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Co-op floor level reported variously (2nd-3rd floor) across snippets; not pinned",
+    "Supermarket and gym tenants are snippet-only corroborations, not full reads",
+    "Shopping hours not stated on the mall site"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c05",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1914-05-30",
+    "observed": "1914-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Two bed figures disagree by 7 beds; range reported",
+    "2025 earthquake damage detail rests on a cited BBC note not expanded in the article",
+    "The hospital's Thai Red Cross Feb 2026 No.1 public-hospital ranking claim appeared only in search summaries — not used as a claim"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1917-03-26",
+    "observed": "1917-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Enrollment is a 2018 registrar figure",
+    "Which faculties/departments sit inside vs outside the catchment not itemised",
+    "Campus polygon boundaries are crowd-sourced"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c07",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "current (2026-11)",
+    "recheck": null
+   },
+   "limitations": [
+    "OSM polygon areas not computed; the 3.2 ha figure may be an aggregation or a single large unnamed way",
+    "App's actual green polygon not directly inspected",
+    "Crowd-sourced tagging may miss hospital lawns or private gardens"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2002-07-18",
+    "observed": "current",
+    "recheck": null
+   },
+   "limitations": [
+    "Whether 'San Chao Mae Tubtim' (Wikipedia, neighborhood) is the same shrine as the Chao Mae Tabtim Saphan Luang site ~1.1 km north (claim sam-yan-c10) is unresolved — possible name duplication after the 1960 fire relocation",
+    "16-temple count not independently enumerated"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2008-01-01",
+    "observed": "1963-2020",
+    "recheck": null
+   },
+   "limitations": [
+    "New Mandala piece is activist-authored — university side presented through critics' claims; no university response in the article",
+    "Number of displaced households never quantified in any source found"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c10",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2020-05-27",
+    "observed": "2020-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Shrine location given by sources as 'near the Centenary Park'/'Saphan Lueang' — precise geotag not obtained; outside the 800 m circle on the balance of evidence",
+    "2023-2026 litigation status is snippet-only",
+    "Unit count (1,803) not verified against the article body"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c11",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2026-09-09",
+    "observed": "2009-2026-10-22",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "The Standard article body did not render — only the lead was read",
+    "Exact rai-age and precise boundaries of the disputed land not obtained",
+    "2026 developments are snippet-level beyond the lead"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "1965-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "No current price or hygiene survey; cheap-eating continuity is asserted from history",
+    "Banthat Thong strip straddles the catchment edge — nearest point inside, most of the strip closer to National Stadium/Siam cells"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c13",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current (2026-11)",
+    "recheck": null
+   },
+   "limitations": [
+    "Public-access rules for campus facilities unverified",
+    "RBSC (Royal Bangkok Sports Club) grounds geocode ~1.07 km NE — outside the circle, not counted"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c14",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026 listings",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Chapter Chula-Samyan figures are snippet-only (project page 404 on direct fetch)",
+    "Asking vs signed rents indistinguishable in all sources",
+    "Older mid-market buildings' rents not sampled — inference on the typical unit price is directional, not measured"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c15",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2020-2026 sources",
+    "recheck": null
+   },
+   "limitations": [
+    "Mechanism is inferred; no source connects the 21-venue count to the score",
+    "TripAdvisor venue positions inside/outside the polygon unverified (platform 403)",
+    "Resident-side perception threads (Reddit) inaccessible — 403"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c16",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026",
+    "recheck": "2026-12-22"
+   },
+   "limitations": [
+    "No pedestrian or station footfall data for 2024-2026",
+    "Semester months are a calendar-structure summary, not a verified current-year calendar",
+    "Crowd-1 score presumably encodes app-side measures not available here"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c17",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-01-19",
+    "observed": "2023-01-2026-10",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "Bangkok Post pieces unverifiable beyond headlines (tollbit paywall)",
+    "Hua Lamphong redevelopment status (museum vs mixed-use) still undecided in sources",
+    "No 2024-2026 construction-start evidence inside the catchment itself was found"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yan-c18",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2018-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Point (1) draws on activist-authored and critical-press sources; the university's position is not represented in the read set beyond its own statements reported by Khaosod",
+    "No crime statistics found for the unit — safety 7 neither confirmed nor contradicted",
+    "Point (2) rests on a 2020 observation; current prices on the strip unmeasured"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_1bdca54090ef",
+   "url": "https://en.wikipedia.org/wiki/Sam_Yan",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_44237a455953",
+   "url": "https://en.wikipedia.org/wiki/Sam_Yan_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_224254de4a77",
+   "url": "https://en.wikipedia.org/wiki/King_Chulalongkorn_Memorial_Hospital",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_76c0b5585b24",
+   "url": "https://en.wikipedia.org/wiki/Chulalongkorn_University",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_91f014c1a2a6",
+   "url": "https://en.wikipedia.org/wiki/Bang_Rak_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_5ce88393817a",
+   "url": "https://en.wikipedia.org/wiki/Chulalongkorn_University_Centenary_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_560570f882de",
+   "url": "https://en.wikipedia.org/wiki/Hua_Lamphong_railway_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_db96d7abc7cb",
+   "url": "https://th.wikipedia.org/wiki/วัดหัวลำโพง",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_e5ce949ca696",
+   "url": "https://th.wikipedia.org/wiki/เขตปทุมวัน",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_66efd5f60ff7",
+   "url": "https://www.newmandala.org/the-gentrification-of-chulalongkorn-university",
+   "body_read": true,
+   "attribution": {
+    "publisher": "New Mandala (ANU)",
+    "family": "New Mandala"
+   }
+  },
+  {
+   "id": "src_09bc554852ec",
+   "url": "https://www.timeout.com/bangkok/news/samyan-chula-is-crowned-as-bangkoks-coolest-neighborhood-in-2020-100720",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out"
+   }
+  },
+  {
+   "id": "src_083eb36dadad",
+   "url": "https://www.samyan-mitrtown.com/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Samyan Mitrtown (Frasers Property)",
+    "family": "Samyan Mitrtown / Frasers Property"
+   }
+  },
+  {
+   "id": "src_617f9aa6dafa",
+   "url": "https://pmcu.co.th/chula-centenary-park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Property Management of Chulalongkorn University (PMCU)",
+    "family": "Chulalongkorn University (PMCU)"
+   }
+  },
+  {
+   "id": "src_8545a03657e2",
+   "url": "https://www.khaosodenglish.com/life/2020/06/11/historic-shrine-faces-eviction-by-chulalongkorn-university",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Khaosod English",
+    "family": "Khaosod English"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap contributors (Overpass API)",
+    "family": "OpenStreetMap / Overpass"
+   }
+  },
+  {
+   "id": "src_43fd4037aebd",
+   "url": "https://www.hipflat.com/condo-for-rent/mrt/sam-yan",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Hipflat",
+    "family": "Hipflat"
+   }
+  },
+  {
+   "id": "src_8927b8ebe908",
+   "url": "https://thestandard.co/uthenthawai-chula-relocation-measures",
+   "body_read": false,
+   "attribution": {
+    "publisher": "The Standard",
+    "family": "The Standard"
+   }
+  },
+  {
+   "id": "src_c9a73e8e22d5",
+   "url": "https://www.visitthailandtoday.com/transportation/bangkok/sam-yan-mrt-station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Visit Thailand Today",
+    "family": "Visit Thailand Today (travel portal)"
+   }
+  },
+  {
+   "id": "src_2694bcd7dc25",
+   "url": "https://www.hipflat.com/projects/chapter-chula-samyan",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Hipflat / property portals (snippet only)",
+    "family": "Hipflat / property portals"
+   }
+  },
+  {
+   "id": "src_42b0f10b4a85",
+   "url": "https://www.reg.chula.ac.th",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Chulalongkorn University Office of the Registrar",
+    "family": "Chulalongkorn University"
+   }
+  }
+ ]
+}

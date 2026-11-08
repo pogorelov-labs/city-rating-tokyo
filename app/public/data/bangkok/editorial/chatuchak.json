@@ -1,0 +1,561 @@
+{
+ "key": "chatuchak",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Chatuchak is the large, calm northern district most people know for its weekend market and its parks. The Mo Chit park complex — Chatuchak, Queen Sirikit and Rot Fai — puts genuinely public, hours-posted green inside the khet, and eighteen rail stations across four lines make it unusually well connected for a mid-ring family area. Weekends transform the market zone into the city's biggest crowd while the rest of the district stays leafy and quiet. The trade-offs are distance between khwaeng, corridors built for cars, and a market economy whose rent disputes and occasional violence reach the news.",
+   "claims": [
+    "chatuchak-c07",
+    "chatuchak-c02",
+    "chatuchak-c11",
+    "chatuchak-c13",
+    "chatuchak-c16"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "The four-park Mo Chit complex (~120.5 ha: Chatuchak 30.4, Queen Sirikit 22.4, Rot Fai 60, Chak Phupha 4, opened 2025) is genuinely public with posted hours — the honest green case.",
+     "claims": [
+      "chatuchak-c07"
+     ]
+    },
+    {
+     "en": "Eighteen rail stations across four lines, including the intercity hub at Krung Thep Aphiwat and Red Line service (~35,300 trips/day FY2025), make the district transit-rich for its density.",
+     "claims": [
+      "chatuchak-c02"
+     ]
+    },
+    {
+     "en": "Or Tor Kor market and the JJ Market food economy put produce and cooked food within reach of most khwaeng.",
+     "claims": [
+      "chatuchak-c11"
+     ]
+    },
+    {
+     "en": "Rent medians (1BR 16,000 / 2BR 31,500 THB paid-rent data) support the app's 16,000/33,000 blend.",
+     "claims": [
+      "chatuchak-c13"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Weekend market crowds, the Jul 2025 Or Tor Kor shooting (5 dead) and the 2024-25 market rent/eviction dispute are the cost of living next to a national-scale market.",
+     "claims": [
+      "chatuchak-c16"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Weekends belong to the market (200,000+ visitors); weekdays return the district to parks, universities and quiet residential sois — the sharpest weekend/weekday contrast of any researched entity.",
+     "claims": [
+      "chatuchak-c10"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The JJ Market / Mo Chit corner is a different city from Kasetsart and Sena Nikhom up Phahonyothin: market-economy bustle south, university calm north.",
+     "claims": [
+      "chatuchak-c01"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Strong fit: families and pet owners (Rot Fai's 2-rai dog park, registration and leash rules apply) who want park access and transit without core-city prices.",
+     "claims": [
+      "chatuchak-c08"
+     ]
+    },
+    {
+     "en": "Poor fit: late-night social life seekers — vibe 7 / nightlife 7 are the researched set's lowest and are largely unanchored by specific venues.",
+     "claims": [
+      "chatuchak-c12"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "green 9 - verified and caveated: The green case is genuinely inside the khet and contiguous: Chatuchak Park 30.4 ha, Queen Sirikit Park 22.4 ha, Rot Fai Park 375 rai, plus the 4-ha Chak Phupha park opened early 2025 - a four-park, 753-rai cluster on the old State Railway golf course, with posted facilities and hours (parks 05:00-21:00; free butterfly park Tue-Sun 08:30-16:30; bikes 20-150 THB; boats 50 THB). The honest caveat: OSM park polygons sum to 149.2 ha, ~18 ha under the app's 167.1 (5.1%), and the official cluster figure is 120.5 ha - the balance is plausibly Kasetsart's campus gardens and small parcels. Recommend keeping green 9 with a 'headline cluster verified; total not fully decomposed' note.",
+   "transport 9 - the 18-station district: This is the best rail-anchored non-core district in the researched set: 8 BTS Sukhumvit stations (Mo Chit to Bang Bua), 5 MRT Blue stations, 4 SRT Dark Red stations, the Light Red shared terminus, the Yellow Line's northern end - plus the national intercity hub (26 platforms, long-distance since 19 Jan 2023) and the Mo Chit 2 bus gate with its private-terminal cluster. The official FY2025 Red Line report (12.93M trips, ~35,300/day, weekday-skewed) shows the commuter spine working. The counterweight: the highway belt (Vibhavadi, Kamphaeng Phet 2, two expressways) makes the rail-adjacent blocks and the frontage blocks different worlds.",
+   "crowd 4 - the emptiest researched district with the biggest single crush: The structural numbers back crowd 4: 154,003 registered residents (Dec 2023) over 32.9 km2, khwaeng Chatuchak itself at 2,699/km2 - while the market inside it books 200,000+ weekend visitors. The crush is venue-local and weekly (Sat-Sun full market, Friday wholesale night, Wed-Thu plants only, Mon-Tue near-closed), not district-wide. No resident testimony on spillover exists in the corpus (Reddit/TripAdvisor 403) - the claim should be phrased as structural, not experiential.",
+   "rent 8 - the app editorial matches paid-rent medians: ThaiPins' paid-rent data (47 pins): median 20,000 THB, 1BR median 16,000, 2BR median 31,500, 20% below the Bangkok-wide median of 25,000 - the app's 16,000/33,000 editorial band lands on the observed medians. The spread is real (12,000 1BR at the Taopoon edge to 39,000 2BR at The Line Jatujak-Mochit), and the vendor-side economics (stall rents 10,600-17,700/month vs the official 1,800 THB tier) feed the district's two-tier market economy.",
+   "daily_essentials 7 - stretched district, thin hospitals: The 7 is the low outlier of the researched set and the mechanism is spatial: markets and malls cluster in the Mo Chit/Chatuchak khwaeng and the Lat Phrao junction (OTK, JJ, Central Ladprao, Union Mall), while Lat Yao and Sena Nikhom - the most populous khwaengs - lean on Bon Marché, Bang Khen Market and the campus economy; and the khet has no tertiary hospital inside its lines (private Vibhavadi + Mayo + a BMA health center + campus clinics is the in-khet set). For a 32.9 km2 district this is the difference between 'everything exists' and 'everything is within the neighborhood'.",
+   "the unanchored 7s and the market's governance risk: vibe 7, nightlife 7 and safety 7 all lack independent evidence in the corpus (resident voice is one neighborhood guide; the safety genre is visitor-facing pickpocket warnings that specifically flag JJ Market, plus two hard 2024-2025 events - the OTK shooting and the fish-zone fire). Meanwhile the market economy at the district's heart is in open dispute: vendor protests over rent collection (2024), eviction petitions (2025), an SRT arrears claim of 1,250M THB and talk of the market reverting to SRT. If the market's governance resolves badly, food-8 and the weekend-rhythm story change with it - pair the ratings with the volatility note."
+  ],
+  "attribution_required": [
+   "chatuchak-c09"
+  ]
+ },
+ "claims": [
+  {
+   "id": "chatuchak-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "BMA district-office page (bangkok.go.th/chatuchak) returned 403 - official khwaeng gazette cross-check not possible; Wikipedia + OSM used",
+    "khwaeng areas from EN Wikipedia table not independently cross-checked against a second official source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "registered (bureaucratic) population, not present population; the market pulls far larger transient weekday/weekend counts into khwaeng Chatuchak",
+    "OSM population tag is undated; the three series points (2017/2020/2023/OSM) are close enough to be one stable picture"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c03",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "app polygon decides inside/outside; OSM area membership used as the cross-check - the two agree on every tested point, so no boundary conflict was found for this khet",
+    "the 'chatuchak' name collision between khet ring and station catchment makes kit runs misleading without the workaround (documented in open_issues)",
+    "Suan Lum Night Bazaar Ratchada and Liab Duan are verified as located-in-khet only; their current operating status was not verified",
+    "app-data anchor (not a web source): PIP of 57 landmark points against app/src/data/bangkok/geometry.json entity chatuchak (khet ring)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the complex spans both khets (EN Wikipedia 'along the border'); no source read puts an exact boundary through the station footprint, so 'partial' is the honest relation",
+    "EN Wikipedia article fetched under the Bang Sue Grand Station title (the Krung Thep Aphiwat-station-title URL returned 404); same subject, rename history given in the article",
+    "app-data anchor (not a web source): PIP check of terminal coordinates against app khet ring"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Wikipedia per-park areas and OSM polygon areas disagree by up to ~9 ha per park in both directions (CP 30.4 vs 25.4; QSN 22.4 vs 32.0); the park boundaries in OSM may follow sub-parcels",
+    "'753 rai' is the four-park cluster per Thai Wikipedia; the 1.20 km2 'complex' figure on EN Wikipedia matches only the three older parks (1.128 km2)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c06",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "double counting risk inside OSM: campus gardens tagged park may overlap KU grounds also tagged green elsewhere",
+    "the app's own green methodology (which parcels count) is not exposed - treat 167.1 ha as a blended estimate until decomposed",
+    "app-data anchor (not a web source): park_ha 167.1 / park_pct 5.1 for entity chatuchak"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "search-snippet description of the pet park (off-leash running, lake play) contradicts the 2026 body-read (leash-only, no water); body-read preferred, flagged",
+    "BMA park-hour postings for Chatuchak/Queen Sirikit parks were not body-read; Rot Fai figures come from Thai Wikipedia which may lag schedule changes"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "weekday plant-day hours rest on a snippet source only (chatuchakmarket.org); corroborated by generic guides, not by the market administration",
+    "stall-count and vendor figures are 2019-dated; 2024-2026 vendor counts not found"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c09",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no resident-voice or crowd-measurement source available (Reddit/TripAdvisor 403 by project policy) - this is a structural inference, not testimony",
+    "transient daytime population (market vendors/staff, KU students, bus terminal users) not counted in registered figures"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c10",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "MRT 'Lat Phrao' station and the Yellow Line terminus sit on the Ratchadaphisek khet edge; inside per both OSM area membership and the app polygon, but address conventions sometimes assign them to Lat Phrao khet - mark subarea boundary claims partial",
+    "BTS extension opening years (2020 Saphan Mai segment, 2023 Khu Khot) are general knowledge here, not re-verified from a primary source in this session"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "FY2025 sum and averages computed by the researcher from the PDF tables; station-level splits (Chatuchak vs Aphiwat vs Bang Khen) are in the PDF charts but were not extracted",
+    "calendar-2025 18.2M figure is snippet-level; the fiscal-year 12.9M body-read figure is the one to cite"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Mo Chit 2's official khwaeng attribution (Chatuchak vs Bang Sue marketing) not separately verified; the OSM terminal polygon and app polygon both put it inside the khet",
+    "no traffic-volume counts were read for the Vibhavadi/Phahonyothin corridors"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "OTK address/hours from search aggregation only (no directory page opened); CNN ranking is 2017-dated",
+    "Big C / hypermarket presence was not verified either way - do not use in guide copy"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c14",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "absence-of-mention is weak evidence for absence; hospital registries (e.g., Ministry of Public Health facility list) not consulted in this session",
+    "Vibhavadi Hospital bed count/level not verified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c15",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the rent-dispute thread rests on snippet aggregation - MCOT renders body via JS (headline only retrieved), OPT News returned 403; no primary article body-read - do not quote figures beyond the 1,800 THB / 1,250M THB pair without a primary read",
+    "shooting/fire items are single-wiki-sourced; neither re-verified against news archives"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c16",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "ThaiPins sample is small (47 pins) and self-reported; no date-stamp on the aggregate - treat medians as indicative",
+    "asking-rent portals (HipFlat) were not body-read; median paid rent and editorial bands can diverge in fast-moving months"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c17",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no Chatuchak-specific temperature or noise measurement found in either language",
+    "both heat sources are snippet-level; paired only with the body-read road inventory - the heat claim should stay qualitative in copy"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chatuchak-c18",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no unit-specific crime statistics found (same gap as the phra-nakhon safety-5 finding) - safety 7 should carry a perception-genre label",
+    "vibe 7 and nightlife 7 have no found evidentiary basis beyond venue counts and one neighborhood guide; flagged as outside-the-score",
+    "Suan Lum Night Bazaar Ratchada operating status (it has a history of closures at this site) unverified"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_01fa05da6997",
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_57eb4385ff80",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%88%E0%B8%95%E0%B8%B8%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap via Overpass API",
+    "family": "OpenStreetMap via Overpass API"
+   }
+  },
+  {
+   "id": "src_5896a6c4d5aa",
+   "url": "https://en.wikipedia.org/wiki/Bang_Sue_Grand_Station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_914171c529a4",
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%A7%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B9%80%E0%B8%9A%E0%B8%8D%E0%B8%88%E0%B8%97%E0%B8%B1%E0%B8%A8",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_c135d7e77f0b",
+   "url": "https://jatujakliving.com/living-guide/dogs-in-chatuchak-parks-rules",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Jatujak Living",
+    "family": "Jatujak Living"
+   }
+  },
+  {
+   "id": "src_398714d2c425",
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Weekend_Market",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_572a8e43ac16",
+   "url": "https://www.timeout.com/bangkok/things-to-do/chatuchak-weekend-market-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out Bangkok"
+   }
+  },
+  {
+   "id": "src_9cb02a36ce67",
+   "url": "https://www.chatuchakmarket.org/opening-times",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Chatuchak Market (visitor site)",
+    "family": "Chatuchak Market (visitor site)"
+   }
+  },
+  {
+   "id": "src_7900c47b27f3",
+   "url": "https://www.srtet.co.th/upload_fm/%E0%B8%82%E0%B8%B1%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/Passenger%202025_Web%2010-09.pdf",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SRTEt (บริษัท รถไฟฟ้า ร.ฟ.ท.)",
+    "family": "SRTEt (บริษัท รถไฟฟ้า ร.ฟ.ท.)"
+   }
+  },
+  {
+   "id": "src_6442ef342afb",
+   "url": "https://www.srtet.co.th/th/single-page/38",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SRTEt (บริษัท รถไฟฟ้า ร.ฟ.ท.)",
+    "family": "SRTEt (บริษัท รถไฟฟ้า ร.ฟ.ท.)"
+   }
+  },
+  {
+   "id": "src_f9b3ce6455d9",
+   "url": "https://www.thaitrainguide.com/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thai Train Guide (via search aggregation)",
+    "family": "Thai Train Guide (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_f2683759b314",
+   "url": "https://en.wikipedia.org/wiki/Or_Tor_Kor_Market",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_3921b4756063",
+   "url": "https://en.wikipedia.org/wiki/CentralPlaza_Ladprao",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_019bc04929d8",
+   "url": "https://www.google.com/search?q=%E0%B8%AD%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%97%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thai directory via search aggregation",
+    "family": "Thai directory via search aggregation"
+   }
+  },
+  {
+   "id": "src_d20fd4d64db4",
+   "url": "https://tna.mcot.net/tna/-/news/list/86232",
+   "body_read": false,
+   "attribution": {
+    "publisher": "MCOT / OPT News / NBT / BMA (via search aggregation)",
+    "family": "MCOT / OPT News / NBT / BMA (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_e2442d60a65a",
+   "url": "https://thaipins.com/area/chatuchak",
+   "body_read": true,
+   "attribution": {
+    "publisher": "ThaiPins",
+    "family": "ThaiPins"
+   }
+  },
+  {
+   "id": "src_f275cce21ddf",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/chatuchak",
+   "body_read": false,
+   "attribution": {
+    "publisher": "HipFlat (via search aggregation)",
+    "family": "HipFlat (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_4a6ce51b4e60",
+   "url": "https://www.worldbank.org/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "World Bank (via search aggregation)",
+    "family": "World Bank (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_e1c0d8ef15dc",
+   "url": "https://www.agu.org/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Lee & Berkelhammer, GRL (via search aggregation)",
+    "family": "Lee & Berkelhammer, GRL (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_a862fa7a39c4",
+   "url": "https://www.google.com/search?q=chatuchak+pickpocket+2025",
+   "body_read": false,
+   "attribution": {
+    "publisher": "News coverage of 2025 pickpocket ranking (via search aggregation)",
+    "family": "News coverage of 2025 pickpocket ranking (via search aggregation)"
+   }
+  }
+ ]
+}

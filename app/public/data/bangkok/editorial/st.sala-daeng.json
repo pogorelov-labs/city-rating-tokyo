@@ -1,0 +1,685 @@
+{
+ "key": "st.sala-daeng",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Sala Daeng / Si Lom is a merged BTS-plus-MRT unit at the Sala Daeng intersection in Bang Rak's financial district, with the two stations linked by a covered elevated walkway rather than an in-fare transfer. Its everyday food story is a weekday one: Lalai Sap in Silom Soi 5 (Monday-Friday, roughly 06:00-15:30) and the Convent Road carts serve office-priced plates steps from the platforms, then close on weekends when malls and the park carry the day. The Patpong sois flip the same streets after dark into a market-and-go-go strip with a documented inflated-bill economy around upstairs show venues. Lumphini Park's southwestern corner and an entrance by MRT Si Lom's exit put a 57.6-hectare park within the unit's reach, though most of the park lies beyond it. Rent is the sore point: station-adjacent towers ask at the top of the range while guide medians for one-beds sit around 22,000-28,000 baht.",
+   "claims": [
+    "sala-daeng-c01",
+    "sala-daeng-c02",
+    "sala-daeng-c03",
+    "sala-daeng-c04",
+    "sala-daeng-c05",
+    "sala-daeng-c06",
+    "sala-daeng-c07",
+    "sala-daeng-c08",
+    "sala-daeng-c09",
+    "sala-daeng-c10",
+    "sala-daeng-c11",
+    "sala-daeng-c12",
+    "sala-daeng-c14",
+    "sala-daeng-c15",
+    "sala-daeng-c17",
+    "sala-daeng-c18"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Two rail lines meet at one intersection - BTS Sala Daeng (S2) and MRT Si Lom (BL26) on either side of it, joined by a covered walkway - giving the unit a dual-line interchange few Bangkok blocks have.",
+     "claims": [
+      "sala-daeng-c01",
+      "sala-daeng-c18"
+     ]
+    },
+    {
+     "en": "Weekday-only, office-priced food markets sit inside the unit: Lalai Sap (Mon-Fri, ~06:00-15:30) in Silom Soi 5 and the Convent Road carts that Travelfish calls the street-food highlight of the Sala Daeng area.",
+     "claims": [
+      "sala-daeng-c04",
+      "sala-daeng-c05"
+     ]
+    },
+    {
+     "en": "Everyday retail is anchored at the doorstep: Silom Complex connects directly to the BTS station and carries a TOPS supermarket and a four-floor Central department store.",
+     "claims": [
+      "sala-daeng-c12"
+     ]
+    },
+    {
+     "en": "Park access is real, not just tree cover: Lumphini's southwestern corner with its lake, jogging paths and public pool touches the unit near MRT Si Lom's Exit 1.",
+     "claims": [
+      "sala-daeng-c02",
+      "sala-daeng-c14"
+     ]
+    },
+    {
+     "en": "The 4 September 2025 opening of Central Park mall - with a food zone of 70 street-food stalls and Michelin-listed venues plus a free 7-rai rooftop park opened 3 September - added day-to-night food and elevated green at the intersection.",
+     "claims": [
+      "sala-daeng-c15"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The app's rent references (38k one-bed / 60k two-bed) match the top of observed asking ranges in station-adjacent towers, well above the ~22k-28k one-bed median band guides cite for the area.",
+     "claims": [
+      "sala-daeng-c08",
+      "sala-daeng-c07",
+      "sala-daeng-c06"
+     ]
+    },
+    {
+     "en": "The nightlife engine carries an externality: Patpong's show-venue inflated-bill pattern is documented (quoted 200-baht drinks becoming a 3,800-baht bill in one 2016 account), and the UK FCDO warns of drink spiking in tourist areas across Thailand - a national warning, not Patpong-specific.",
+     "claims": [
+      "sala-daeng-c10",
+      "sala-daeng-c11"
+     ]
+    },
+    {
+     "en": "Crowd pressure is concentrated, not ambient: Lalai Sap's narrow lanes peak hardest around weekday lunch with limited seating, and the same office flow drives intersection-level congestion.",
+     "claims": [
+      "sala-daeng-c04",
+      "sala-daeng-c17"
+     ]
+    },
+    {
+     "en": "The interchange is above-ground: the MRT platform sits ~30 m down and the BTS-MRT link runs through exits and walkways, so transfer effort depends on crowds rather than platform adjacency.",
+     "claims": [
+      "sala-daeng-c18",
+      "sala-daeng-c01"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Weekday day: office-worker markets to mid-afternoon, mall food courts and the park from early morning; Patpong's sidewalks are ordinary CBD frontage.",
+     "claims": [
+      "sala-daeng-c17",
+      "sala-daeng-c04"
+     ]
+    },
+    {
+     "en": "Evening: Patpong market runs ~17:00-24:00 alongside the go-go bars; The Commons Saladaeng turns DJ-led and is liveliest on Friday and Saturday nights.",
+     "claims": [
+      "sala-daeng-c09",
+      "sala-daeng-c17"
+     ]
+    },
+    {
+     "en": "Weekend: Lalai Sap and the Convent carts shut; malls (Silom Complex, Central Park) and Lumphini's edge carry the day, and the park keeps 04:30-21:00 hours.",
+     "claims": [
+      "sala-daeng-c04",
+      "sala-daeng-c12",
+      "sala-daeng-c14"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Patpong Soi 1-2 (bars, market, touts) and the Convent Road/Lalai Sap food lanes sit roughly 100-200 m apart but draw different crowds; guides point eaters to the food lanes and steer them off the Patpong side.",
+     "claims": [
+      "sala-daeng-c09",
+      "sala-daeng-c11",
+      "sala-daeng-c03"
+     ]
+    },
+    {
+     "en": "Rent varies block by block: a 2005 tower on Soi Sala Daeng 2 (listed 290 m from BL26) asks 24k-40k for one-beds, while district guides put the median band at 22k-28k and sois toward Surawong below the core.",
+     "claims": [
+      "sala-daeng-c06",
+      "sala-daeng-c07"
+     ]
+    },
+    {
+     "en": "Green is edge-loaded: the park's southwestern corner and one entrance fall by the MRT exit, while most of the 57.6 ha stretches northeast beyond the unit.",
+     "claims": [
+      "sala-daeng-c02",
+      "sala-daeng-c14"
+     ]
+    },
+    {
+     "en": "Lalai Sap sits toward the unit's western end near the Silom-Naradhiwas junction, about half a kilometre west of Sala Daeng BTS - its nearest stop may be Chong Nonsi for parts of the soi.",
+     "claims": [
+      "sala-daeng-c03"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Strong fit for CBD professionals, expats and digital nomads who want dual-line transit and weekday food variety and can absorb the station-adjacent rent premium.",
+     "claims": [
+      "sala-daeng-c08",
+      "sala-daeng-c05"
+     ]
+    },
+    {
+     "en": "Poor fit for families wanting quiet evenings: Patpong's adult strip abuts the main nightlife zone, and a resident guide explicitly advises against it for children.",
+     "claims": [
+      "sala-daeng-c11"
+     ]
+    },
+    {
+     "en": "Weak fit for weekend-centric routines: the signature markets close Saturday-Sunday, leaving malls and the park edge as the weekend offer.",
+     "claims": [
+      "sala-daeng-c04",
+      "sala-daeng-c17"
+     ]
+    },
+    {
+     "en": "Park users should price the edge, not the brochure: real lake-and-pool access exists, but only the park's western slice is inside the unit.",
+     "claims": [
+      "sala-daeng-c14",
+      "sala-daeng-c02"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "All rent figures are asking prices; no signed-lease data was found, so the app's 38k/60k blend cannot be validated against achieved rents.",
+   "Patpong scam documentation is strongest from a 2016 first-person account; 2024-2026 reports exist on review/social platforms that are not stably citable, and no news article on a recent Patpong case surfaced.",
+   "The UK FCDO drink-spiking warning applies to tourist areas across Thailand and does not name Patpong; local incident statistics were not found in this pass.",
+   "The brief's 'Duangtawee/monkey-pool vs patron safety' tension could not be verified in reliable public sources; adult-venue directory sites surfaced and were rejected.",
+   "Which park hectares and which Lalai Sap blocks fall inside the app polygon must be checked by the coordinator; this research used coordinate geometry and source-stated distances only.",
+   "Lumphini Park hawker centre (announced Aug 2025, 'early 2026' opening per Wikipedia) and Patpong Museum's reported May-2023 closure are single-source and need rechecking.",
+   "Nightlife-10 attribution: Patpong's market-plus-bars mix is confirmed as the visible engine (c09), but the app's score weighting to the scam externality remains an editorial judgment."
+  ],
+  "attribution_required": [
+   "sala-daeng-c01",
+   "sala-daeng-c02",
+   "sala-daeng-c05",
+   "sala-daeng-c06",
+   "sala-daeng-c07",
+   "sala-daeng-c09",
+   "sala-daeng-c12",
+   "sala-daeng-c13",
+   "sala-daeng-c14",
+   "sala-daeng-c16",
+   "sala-daeng-c18"
+  ]
+ },
+ "claims": [
+  {
+   "id": "sala-daeng-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "depth and escalator claims are encyclopedic, not operator-verified",
+    "the ~330 m app merge distance is app data, not independently measured here"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "'near a park entrance' is the encyclopedia's wording; entrance-by-entrance geometry not verified",
+    "catchment membership of the western edge inferred from coordinate geometry, pending the app's own polygon check"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "'inside the unit' rests on the app's stated 800 m nearest-stop catchment plus the ~0.5 km source distance, not on the app polygon (coordinator to verify)",
+    "guide directions are approximate"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "opening-hour precision varies slightly by source (06:00 vs 07:00 start); treat as approximate",
+    "vendor lineup rotates daily"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c05",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "single-guide observation; specific stalls open/close seasonally",
+    "2016 cleanup history is second-hand in the same guide"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c06",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "asking rents, not signed leases",
+    "one building only; excludes newer premium towers (e.g. Ashton Silom listings at 32k-40k seen in search) and older walk-ups",
+    "sample composition shifts as listings expire"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c07",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "early 2025 (stated data cut for the median figure)",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "commercial rental-platform estimates; no stated sample or methodology",
+    "asking rents exceed signed rents in most Bangkok CBD buildings; gap unquantified here"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c08",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "inference, not measurement; the app's exact sampling of 13 one-bed and 13 two-bed listings is not reproducible from public pages alone",
+    "asking-vs-signed rent gap unquantified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "stall count and market health not surveyed; recent first-person reports describe declining stall numbers",
+    "'office workers by day' is the encyclopedia's framing"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c10",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "core scam documentation is a 2016 first-person account; pattern recency unverified",
+    "FCDO guidance is national in scope and undated at retrieval",
+    "no local police statistics found in this pass"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c11",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2023-2026 guide observations",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "guide opinion, not verified incident data",
+    "the 2026 guide is a single visitor's 3-month stay"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c12",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "store count and tenure from operator marketing, not audited",
+    "supermarket hours not shown on the page read"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c13",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "hospital services and capacity not assessed in this pass",
+    "encyclopedic landmark framing"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c14",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "opening hours single-source (encyclopedia)",
+    "park-wide facilities do not translate one-to-one into unit-area green score without polygon work"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c15",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-09-04",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "visitor counts, sizes and brand counts are developer figures reported by news outlets",
+    "rooftop park access hours (06:00-22:00) appear in snippet-only Thai coverage, not in the pages read in full",
+    "MRT/BTS 'direct connection' claim is developer marketing"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c16",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-12-24",
+    "observed": null,
+    "recheck": "2026-12-31"
+   },
+   "limitations": [
+    "approval does not fix stall counts or guarantee implementation dates",
+    "which side of Convent falls inside the unit needs the polygon check"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c17",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "observations spanning 2021-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "weekend behaviour inferred from weekday-only market hours plus general mall/park operation; no dedicated weekend survey found",
+    "COVID-era nightlife description may understate the current Patpong evening trade"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sala-daeng-c18",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "depth/escalator claims from encyclopedia, not MRTA",
+    "no walking-time measurements taken in this pass and none derived from the app radius",
+    "a resident guide's '10-minute walk of three stations' statement was not independently verified"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_0f696490d0d4",
+   "url": "https://en.wikipedia.org/wiki/Sala_Daeng_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Wikimedia Foundation)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_ef3b9570e107",
+   "url": "https://en.wikipedia.org/wiki/Si_Lom_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Wikimedia Foundation)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_3d8a97067fb0",
+   "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security",
+   "body_read": true,
+   "attribution": {
+    "publisher": "UK Foreign, Commonwealth & Development Office (GOV.UK)",
+    "family": "UK Government"
+   }
+  },
+  {
+   "id": "src_272eb575bcf2",
+   "url": "https://en.wikipedia.org/wiki/Patpong",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Wikimedia Foundation)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_bd4a2cb61bd7",
+   "url": "https://www.demflyers.com/2016/01/18/how-to-survive-a-bangkok-ping-pong-show-without-getting-horribly-scammed",
+   "body_read": true,
+   "attribution": {
+    "publisher": "DEM Flyers",
+    "family": "DEM Flyers"
+   }
+  },
+  {
+   "id": "src_4aa0f704a84c",
+   "url": "https://www.thefinestthai.com/2026/06/03/soi-lalai-sap-silom-lunch-market-street-food-guide/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Finest Thai",
+    "family": "The Finest Thai"
+   }
+  },
+  {
+   "id": "src_b15f62885cf0",
+   "url": "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/3133",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Travelfish",
+    "family": "Travelfish"
+   }
+  },
+  {
+   "id": "src_231c01861add",
+   "url": "https://article.redprice.co/lalaisap-silom5/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Redprice (article.redprice.co)",
+    "family": "Redprice"
+   }
+  },
+  {
+   "id": "src_df24c1143270",
+   "url": "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/1456",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Travelfish",
+    "family": "Travelfish"
+   }
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Wikimedia Foundation)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_ed3b269d5127",
+   "url": "https://www.khaosodenglish.com/news/business/2025/09/06/central-park-the-latest-game-changer-in-bangkoks-downtown-scene/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Khaosod English",
+    "family": "Khaosod"
+   }
+  },
+  {
+   "id": "src_7143d832bcf1",
+   "url": "https://dusitcentralpark.com/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Vimarn Suriya / Dusit Central Park project",
+    "family": "Dusit Thani Group"
+   }
+  },
+  {
+   "id": "src_36d11d8a6973",
+   "url": "https://www.bangkokpost.com/business/general/3098902/central-park-mall-launch-ups-rivalry",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Bangkok Post",
+    "family": "Bangkok Post"
+   }
+  },
+  {
+   "id": "src_2e5b121251a8",
+   "url": "https://www.ddproperty.com/en/condo-for-rent/at-silom-grand-terrace-124",
+   "body_read": true,
+   "attribution": {
+    "publisher": "DDproperty (PropertyGuru Group)",
+    "family": "PropertyGuru"
+   }
+  },
+  {
+   "id": "src_6e3678342737",
+   "url": "https://www.superagent.co/en/blog/silom-and-bangrak-condo-rental-prices-the-business-district-breakdown",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Superagent",
+    "family": "Superagent"
+   }
+  },
+  {
+   "id": "src_73aa2ead31b2",
+   "url": "https://www.superagent.co/en/blog/renting-near-silom-food-street-bangkoks-lunch-district-living-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Superagent",
+    "family": "Superagent"
+   }
+  },
+  {
+   "id": "src_0eb7998215bc",
+   "url": "https://www.bkmagazine.com/city-living/how-to-spend-24-hours-silom-and-sathorn-local/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BK Magazine",
+    "family": "BK Magazine"
+   }
+  },
+  {
+   "id": "src_ab89d61c61bb",
+   "url": "https://taraohreilly.com/silom-bangkok-neighbourhood-eat-see-stay-guide/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "taraohreilly.com",
+    "family": "Tara O'Reilly"
+   }
+  },
+  {
+   "id": "src_8c054372a1f1",
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B9%8C%E0%B8%9E%E0%B8%87%E0%B8%A8%E0%B9%8C",
+   "body_read": true,
+   "attribution": {
+    "publisher": "วิกิพีเดีย (Wikimedia Foundation)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_7f454e56d810",
+   "url": "https://www.bangkokbiznews.com/news/news-update/1213716",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Biz News (กรุงเทพธุรกิจ)",
+    "family": "Bangkok Biz News"
+   }
+  },
+  {
+   "id": "src_ec6d3a3cd60b",
+   "url": "https://www.bangkokbiznews.com/business/business/1194818",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Bangkok Biz News (กรุงเทพธุรกิจ)",
+    "family": "Bangkok Biz News"
+   }
+  },
+  {
+   "id": "src_05c691ab2cb6",
+   "url": "https://www.silomcomplex.co.th/en/get-to-know",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Silom Complex (official site)",
+    "family": "Silom Complex"
+   }
+  },
+  {
+   "id": "src_9b513f66ab5b",
+   "url": "https://www.prachachat.net/business/news-1877826",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Prachachat",
+    "family": "Prachachat (Matichon Group)"
+   }
+  }
+ ]
+}

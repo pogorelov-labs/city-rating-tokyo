@@ -1,0 +1,289 @@
+{
+ "key": "bang-sue",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Bang Sue is where Bangkok put its rail future: the Krung Thep Aphiwat terminal (across the khet's northern boundary), the Blue/Purple interchange at Tao Poon, MRT Bang Pho, Purple Wong Sawang and Bang Son, plus the SRT junction - six-plus stops inside 11.5 km2. The present is less grand: Gateway-at-Bang-Sue and Big C carry the essentials, the green is pocket-scale, and 1,054 listed condos rent from about 10k for studios. A 14-year 'smart city' plan (announced November 2025) and the MRT Purple extension (2030 target) are the district's next chapters; until they land, Bang Sue is a commuter's khet with construction in its hair.",
+   "claims": [
+    "bang-sue-c04",
+    "bang-sue-c02",
+    "bang-sue-c05",
+    "bang-sue-c07",
+    "bang-sue-c10"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Unmatched rail supply for the price: Blue, Purple, SRT Red lines and the long-distance terminal all interchange on or beside the khet, OSM-verified at six in-khet stations.",
+     "claims": [
+      "bang-sue-c04",
+      "bang-sue-c02"
+     ]
+    },
+    {
+     "en": "Deep rental market at low price points: 1,054 portal listings with ~USD389 (1BR) / ~USD598 (2BR) averages in Oct 2026 - the researched comparison set's biggest inventory.",
+     "claims": [
+      "bang-sue-c07"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The hub is ahead of the district: design capacity 624,000/day against a legacy-60k comparator and development only at EIA stage in late 2025 - amenity scores of 6 are structural, not an oversight.",
+     "claims": [
+      "bang-sue-c06",
+      "bang-sue-c05"
+     ]
+    },
+    {
+     "en": "Park share 0.6% (8.3 ha) in pocket parks; the promised smart-city green exists on drawings, not on the ground.",
+     "claims": [
+      "bang-sue-c09"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Days are interchange days - commuters through Bang Pho and Tao Poon, students at KMUTNB, errands at Gateway and Big C. Evenings thin out quickly: the researched comparison set's smallest nightlife count, with the terminal's closed-platform policy (ticket-holders only) keeping the great hall quiet.",
+     "claims": [
+      "bang-sue-c05",
+      "bang-sue-c03"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Bang Pho's riverfront quarter (Vietnamese-heritage temple, MRT) feels oldest; Tao Poon is the interchange-mall corner; Wong Sawang/Prachachuen is the Big C-Lotus-Market Place dormitory belt; the rail yards stitch all of it together with dead edges.",
+     "claims": [
+      "bang-sue-c08",
+      "bang-sue-c05"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Best fit in the researched comparison set for maximum-rail, minimum-rent commuters - especially anyone whose week is defined by intercity departures or a KMUTNB/Prachachuen job.",
+     "claims": [
+      "bang-sue-c04",
+      "bang-sue-c07"
+     ]
+    },
+    {
+     "en": "Poor fit for park life and evening scenes: 0.6% park share and the researched comparison set's lowest nightlife count; expect years of construction before the smart-city plan changes the street level.",
+     "claims": [
+      "bang-sue-c09",
+      "bang-sue-c10"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Terminal footprint's in-khet share unknown (app polygons decide); MRT Bang Sue station node absent from OSM khet-area read despite TH wiki listing; 24-vs-26 platform discrepancy; KTW's own ridership not body-sourced; Feb-2026 land-auction reports snippet-level."
+  ],
+  "attribution_required": [
+   "bang-sue-c01",
+   "bang-sue-c02",
+   "bang-sue-c04",
+   "bang-sue-c07",
+   "bang-sue-c08"
+  ]
+ },
+ "claims": [
+  {
+   "id": "bang-sue-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "on next DOPA cycle"
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-sue-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-01-19",
+    "observed": null,
+    "recheck": "when app polygons place the terminal footprint"
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-sue-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "platform-count discrepancy across sources; 'underused' narrative from AP/thailandtrains remained snippet-only (AP body fetch failed)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-sue-c04",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "app polygon check; OSM area timestamp 2026-11-07"
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-sue-c05",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-sue-c06",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "Nov 2025 plan status",
+    "recheck": "SRTA contract signing (expected early 2026) and land auctions"
+   },
+   "limitations": [
+    "KTW's own daily ridership figure was not body-sourced; only the capacity-vs-legacy comparison"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-sue-c07",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "October 2026",
+    "recheck": "quarterly"
+   },
+   "limitations": [
+    "portal bias; conversion approximate"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-sue-c08",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-sue-c09",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no per-park areas in sources read; absence-of-findings within the query set"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-sue-c10",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "2026 land auctions; Purple line milestones"
+   },
+   "limitations": [
+    "Feb-2026 auction item is snippet-level (flagged); not load-bearing here"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_33f47b97ca63",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Wikipedia (TH)"
+   }
+  },
+  {
+   "id": "src_9ad2818ae46b",
+   "url": "https://en.wikipedia.org/wiki/Bang_Sue_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "Wikipedia (EN)"
+   }
+  },
+  {
+   "id": "src_b53ac3ccccfc",
+   "url": "https://en.wikipedia.org/wiki/Krung_Thep_Aphiwat_Central_Terminal",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "Wikipedia (EN)"
+   }
+  },
+  {
+   "id": "src_4fe6d8c91602",
+   "url": "https://www.thaitrainguide.com/stations/krung-thep-aphiwat-central-terminal",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Train Guide",
+    "family": "Thai Train Guide (independent rail site)"
+   }
+  },
+  {
+   "id": "src_4a3e136e9650",
+   "url": "https://www.thaipost.net/economy-news/889411",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Post",
+    "family": "Thai Post (news)"
+   }
+  },
+  {
+   "id": "src_c3ca9aa13cba",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/bang-sue",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  },
+  {
+   "id": "src_e7f47cd6e7d1",
+   "url": "https://www.mrta.co.th/th/rat-burana",
+   "body_read": true,
+   "attribution": {
+    "publisher": "MRTA",
+    "family": "MRTA (government, official)"
+   }
+  }
+ ]
+}

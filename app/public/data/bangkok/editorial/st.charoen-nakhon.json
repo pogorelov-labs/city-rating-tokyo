@@ -1,0 +1,525 @@
+{
+ "key": "st.charoen-nakhon",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Charoen Nakhon is two neighborhoods stapled together by a 300-metre walkway. One is ICONSIAM: a 525,000 m2 riverfront complex with Sook Siam's all-province food hall, a >10,000 m2 riverside terrace and the nightly fountain show, wired to the Gold Line's G2 station by covered bridges. The other is inland Khlong San: Wat Suwan's temple lanes, the district office, a Lotus's at the station's doorstep, and the fenced-off block where Khlong San Plaza market traded for four decades until its SRT lease ran out in 2021. The Gold Line (three stops, no river crossing, flat fare) is the only rail, and its ridership of 1,809-8,390/day shows most people reach the city by bus or the mall's free boat instead.",
+   "claims": [
+    "charoen-nakhon-c07",
+    "charoen-nakhon-c05",
+    "charoen-nakhon-c12",
+    "charoen-nakhon-c13",
+    "charoen-nakhon-c02",
+    "charoen-nakhon-c03"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Covered, weather-proof walk from three station exits straight into ICONSIAM and ICS; the mall is entered from the station exits over short direct bridges - steps, not a hike",
+     "claims": [
+      "charoen-nakhon-c05",
+      "charoen-nakhon-c06"
+     ]
+    },
+    {
+     "en": "Unusually dense river access for a single station area: ICONSIAM, Wat Suwan, Khlong San, Hilton and Taksin piers on the home bank plus Si Phraya/Oriental/CAT piers across the bend",
+     "claims": [
+      "charoen-nakhon-c09"
+     ]
+    },
+    {
+     "en": "Eight BMTA bus routes at the station street level, including Talat Phlu and Ekkamai links that bypass the Gold Line",
+     "claims": [
+      "charoen-nakhon-c11"
+     ]
+    },
+    {
+     "en": "Sook Siam's all-77-provinces food hall and a free nightly river fountain show give the area an outsized food-and-evening offer for its size",
+     "claims": [
+      "charoen-nakhon-c07",
+      "charoen-nakhon-c17"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "No direct BTS/MRT: one feeder shuttle to the Silom line at Krung Thon Buri, and its under-9,000/day ridership shows the transfer cost is real",
+     "claims": [
+      "charoen-nakhon-c02",
+      "charoen-nakhon-c03"
+     ]
+    },
+    {
+     "en": "The traditional local market closed end-2021 after the SRT lease expired — vendors displaced, the site fenced for redevelopment, and the cross-river ferry pier's contract lapsed the same December",
+     "claims": [
+      "charoen-nakhon-c12"
+     ]
+    },
+    {
+     "en": "Mall-hours dependence: retail/dining pulse runs 10:00-22:00 with packed weekend evenings and calm weekday mornings; the street scene after dark is thin",
+     "claims": [
+      "charoen-nakhon-c17"
+     ]
+    },
+    {
+     "en": "The mapped '9 piers' include hotel, private and closed facilities; express boats serve the area only via stops the operator does not even list publicly",
+     "claims": [
+      "charoen-nakhon-c10"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Weekday morning: calm at the mall and on the lanes; morning-market trading lingers near the old Khlong San Plaza site; express boats and buses run, Gold Line quietest",
+     "claims": [
+      "charoen-nakhon-c17",
+      "charoen-nakhon-c12",
+      "charoen-nakhon-c03"
+     ]
+    },
+    {
+     "en": "Weekday evening: fountain show on the River Park terrace, hotel bars and dinner cruises; mall shuts at 22:00 and the streets quiet with it",
+     "claims": [
+      "charoen-nakhon-c17",
+      "charoen-nakhon-c07"
+     ]
+    },
+    {
+     "en": "Weekend evening: the fountain terrace crowds up enough that guides say arrive 30+ minutes early; boats and Gold Line run past the show, but express-boat lines are Monday-Friday only",
+     "claims": [
+      "charoen-nakhon-c17",
+      "charoen-nakhon-c10"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Riverside strip: supertall condo towers (Magnolias ~318 m, Mandarin Oriental Residences ~272 m) and hotel riverfront — the postcard version",
+     "claims": [
+      "charoen-nakhon-c15"
+     ]
+    },
+    {
+     "en": "Inland lanes (Wat Suwan, Soi Somdet Chao Phraya): low-rise community blocks at 16,000-24,500 THB 1-bed rents, a short walk from 200,000+ river-tower listings",
+     "claims": [
+      "charoen-nakhon-c14",
+      "charoen-nakhon-c15"
+     ]
+    },
+    {
+     "en": "Across the river bend: the Si Phraya/Oriental pier strip and Talat Noi's shophouse quarter sit 500-900 m straight-line away — inside the catchment only if the app counts river-crossed ground",
+     "claims": [
+      "charoen-nakhon-c09",
+      "charoen-nakhon-c13"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Good fit if your life can route through ICONSIAM/ICS: mall dining, riverside running, covered station-home walks",
+     "claims": [
+      "charoen-nakhon-c07",
+      "charoen-nakhon-c05"
+     ]
+    },
+    {
+     "en": "Workable if you commute by bus or boat; eight bus routes and dense piers compensate for the feeder-only rail",
+     "claims": [
+      "charoen-nakhon-c11",
+      "charoen-nakhon-c09"
+     ]
+    },
+    {
+     "en": "Poor fit if you need direct BTS/MRT, street-level nightlife after 22:00, or wet-market everyday shopping — the market closed in 2021 and the street scene follows mall hours",
+     "claims": [
+      "charoen-nakhon-c02",
+      "charoen-nakhon-c17",
+      "charoen-nakhon-c12"
+     ]
+    },
+    {
+     "en": "Families with a hospital dependency should check options first: only a psychiatric institute is confirmed in-catchment",
+     "claims": [
+      "charoen-nakhon-c13"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Transport 10: plausibly driven by pier/shuttle mapping density (12+ piers, several closed or private) plus the mall walkways, rather than by scheduled network reach; the Gold Line's own ridership is 1,809-8,390/day (charoen-nakhon-c09, c03) — researcher_inference, score untouched",
+   "Whether the Khlong San-Si Phraya and Oriental-Wat Suwan ferries still operate: OSM maps them (2026), but the pier's SRT contract reportedly lapsed in Dec 2021 (charoen-nakhon-c12, c09)",
+   "The 0.8 ha park's identity: Princess Mother Memorial Park (address fits, coordinates conflict) vs Suan Pa Chaloem Phra Kiat (OSM, size unknown) (charoen-nakhon-c16)",
+   "App rents are an editorial Khlong San blend: portal means are luxury-skewed (2-bed mean 89,852 vs app 47,500) and no median or signed-rent data exists in free sources (charoen-nakhon-c14)",
+   "Independent editorial coverage of the station area itself is thin — what exists is mall-centered tourism writing; the absence of coverage is a measurement gap, not a popularity reading (charoen-nakhon-c17, c08)"
+  ],
+  "attribution_required": [
+   "charoen-nakhon-c01",
+   "charoen-nakhon-c02",
+   "charoen-nakhon-c10",
+   "charoen-nakhon-c11",
+   "charoen-nakhon-c14"
+  ]
+ },
+ "claims": [
+  {
+   "id": "charoen-nakhon-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2020-12-16",
+    "observed": null,
+    "recheck": "2027-06-01"
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2020-12-16",
+    "observed": "2020-12-16 onward",
+    "recheck": "2027-01-01"
+   },
+   "limitations": [
+    "flat fare 16 vs 17 THB unresolved across sources"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2020-12 to 2026-Q3",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "42,000/day forecast and 0.44% share are search-snippet level (Bangkok Post paywalled, MRTA report not fetched); used only as corroboration, never as sole evidence"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "construction-status part rests on a Facebook urban-transit post (snippet-only); treat 'not started' as uncertain"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2020-12-16",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "walk times are inference from geometry and the documented connections, not a timed walk"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2018-11-09",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "app's nearest-stop clip not published; 'inside' asserted on raw radius + neighbor-distance arithmetic, flagged as caveat rather than certainty"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2018-11-09",
+    "observed": "2018-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "mall is a gated-hours space (10:00-22:00 daily per official page) — its contents are not round-the-clock area amenities"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c08",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-01-11",
+    "observed": "2023-2026",
+    "recheck": "2027-01-01"
+   },
+   "limitations": [
+    "ICS opening month conflicting across sources",
+    "identity of the OSM Lotus's node with the reported Lotus's Privé is plausible but not separately confirmed"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "OSM snapshot 2026-11-07",
+    "recheck": "2027-11-01"
+   },
+   "limitations": [
+    "OSM mapping proves infrastructure, not timetables; whether the Khlong San-Si Phraya and Oriental-Wat Suwan ferries still run is unverified (see c12/open issues)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "as displayed 2026-11-07",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "stop-level service at Wat Suwan/Wat Prayur piers not confirmed by the operator; assume river-bus reach for the unit is mainly via the southern terminus direction or Sathorn, pending field check"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c11",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "as listed 2026",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "route list from Wikipedia station article; live BMTA status not cross-checked"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2021-12-31",
+    "observed": "2021 closure; 2025 residual-market reports",
+    "recheck": "2027-01-01"
+   },
+   "limitations": [
+    "operational status of the Khlong San-Si Phraya cross-river ferry today is unverified (OSM still maps it; the pier's SRT contract reportedly lapsed Dec 2021)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "OSM snapshot 2026-11-07",
+    "recheck": "2027-11-01"
+   },
+   "limitations": [
+    "no full-service general hospital confirmed inside the catchment; nearest such option unverified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c14",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "listings live as of 2026-11-07",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "means, not medians; asking vs signed gap unknown; luxury river towers (Magnolias, The River 15k-400k range per search summary) inflate the mean",
+    "the app's figures themselves are labeled an editorial district blend and were not modified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c15",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2018-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "tower height figures taken from a Wikipedia parenthetical that appeared partially garbled; magnitudes consistent across sources"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c16",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "coordinate conflict unresolved; park size figures (4 rai ≈ 0.64 ha vs app's 0.8 ha) near-matching but not proven identical",
+    "Overpass park-detail query timed out"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "charoen-nakhon-c17",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide published 2026-07-09; mall hours as displayed 2026-11-07",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "no resident-forum access (Reddit blocked); evening-street characterization is inferred, not observed",
+    "the 24-venue nightlife count's composition (mall bars vs street venues) not itemized in available sources"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_151eec5017f0",
+   "url": "https://en.wikipedia.org/wiki/Charoen_Nakhon_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_72eebd4675d7",
+   "url": "https://en.wikipedia.org/wiki/Gold_Line_(Bangkok)",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_0f27047f94e6",
+   "url": "https://en.wikipedia.org/wiki/ICONSIAM",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_c158d7172022",
+   "url": "https://en.wikipedia.org/wiki/Princess_Mother_Memorial_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap contributors",
+    "family": "OpenStreetMap"
+   }
+  },
+  {
+   "id": "src_37b68ce967d7",
+   "url": "https://propertyscout.co.th/en/bangkok/khlong-san/rentals/condo",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyScout Thailand",
+    "family": "PropertyScout"
+   }
+  },
+  {
+   "id": "src_a77791355331",
+   "url": "https://www.thaipbs.or.th/news/content/308078",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS",
+    "family": "Thai PBS"
+   }
+  },
+  {
+   "id": "src_3afeae7abb3c",
+   "url": "https://www.iconsiam.com/en/getting-here",
+   "body_read": true,
+   "attribution": {
+    "publisher": "ICONSIAM (Siam Piwat / MQDC)",
+    "family": "ICONSIAM (Siam Piwat)"
+   }
+  },
+  {
+   "id": "src_eca21341b803",
+   "url": "https://www.bangkok-spirit.com/destinations/iconsiam-khlong-san/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Spirit",
+    "family": "Bangkok Spirit"
+   }
+  },
+  {
+   "id": "src_e9d9cf464f79",
+   "url": "https://chaophrayaexpressboat.com/en/home",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Chao Phraya Express Boat Co.",
+    "family": "Chao Phraya Express Boat (operator)"
+   }
+  },
+  {
+   "id": "src_995203b6f5d5",
+   "url": "https://www.thansettakij.com/economy/mega-project/536321",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thansettakij",
+    "family": "Thansettakij (Krungthep Turakij group)"
+   }
+  },
+  {
+   "id": "src_4cb7ecbf510f",
+   "url": "https://www.getyourguide.com/en-gb/princess-mother-memorial-park-l5582",
+   "body_read": false,
+   "attribution": {
+    "publisher": "GetYourGuide",
+    "family": "GetYourGuide"
+   }
+  },
+  {
+   "id": "src_0832ae003a83",
+   "url": "https://www.facebook.com/UrbanJourneyByMalilee/posts/1515594696657836",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Urban Journey by Malilee",
+    "family": "Urban Journey by Malilee (Facebook page)"
+   }
+  }
+ ]
+}

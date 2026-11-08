@@ -1,0 +1,559 @@
+{
+ "key": "phaya-thai",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Phaya Thai khet is best read as three districts in one. Along Phahonyothin, Ari's Soi 1-7 grid pairs mid-rise condos with cafe-filled quiet sois, while Saphan Khwai two stops north concentrates shops, apartments and a junction that police close for major events. Between them, Pradiphat still carries its military-institutional character, and along Vibhavadi the Army Club and stadium occupy the largest green block - land you can see but not freely use. Rents reflect the split: portal asks from the 12,000s in older stock to 35,000+ in Ari's newer buildings.",
+   "claims": [
+    "phaya-thai-c08",
+    "phaya-thai-c09",
+    "phaya-thai-c06",
+    "phaya-thai-c10"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Three BTS stations inside the khet plus the ARL interchange one stop south - the district's core transit promise",
+     "claims": [
+      "phaya-thai-c03"
+     ]
+    },
+    {
+     "en": "Ari's walkable cafe sois one soi off the arterial, with street-food-priced eating on Soi Phahonyothin 7",
+     "claims": [
+      "phaya-thai-c08"
+     ]
+    },
+    {
+     "en": "Deep everyday healthcare: five private/military hospitals in-district plus Phramongkutklao across the boundary",
+     "claims": [
+      "phaya-thai-c13"
+     ]
+    },
+    {
+     "en": "Wide rent ladder (roughly 12,000-45,000 THB asking) letting budget and mid-market renters live within walking distance of the same line",
+     "claims": [
+      "phaya-thai-c11"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Phahonyothin rush-hour congestion and the Saphan Khwai junction chokepoint, which police advise avoiding city-wide on big-event days",
+     "claims": [
+      "phaya-thai-c09",
+      "phaya-thai-c12"
+     ]
+    },
+    {
+     "en": "Public green is pocket-scale: BMA's named parks here are expressway-margin leftovers of ~1-2 ha, while the big green is restricted military land",
+     "claims": [
+      "phaya-thai-c06",
+      "phaya-thai-c07"
+     ]
+    },
+    {
+     "en": "Flood exposure on some low sois in heavy rain, per the district guide's own cons list",
+     "claims": [
+      "phaya-thai-c12"
+     ]
+    },
+    {
+     "en": "Evening quiet: the area is cafe-daytime oriented and 'sleepy' after dark for those wanting nightlife",
+     "claims": [
+      "phaya-thai-c12"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Weekday mornings: school and office flows concentrate on Phahonyothin; Saphan Khwai junction backs up toward the sois",
+     "claims": [
+      "phaya-thai-c09",
+      "phaya-thai-c12"
+     ]
+    },
+    {
+     "en": "Daytime: Ari's cafes and the PRD garden at the end of Soi Ari Samphan absorb the district's leisure foot traffic",
+     "claims": [
+      "phaya-thai-c07",
+      "phaya-thai-c08"
+     ]
+    },
+    {
+     "en": "Event days: junction-level closures around GSB head office can cut the crossing for a full day (06:00-18:00 advisories)",
+     "claims": [
+      "phaya-thai-c09"
+     ]
+    },
+    {
+     "en": "Evenings: commercial energy drains; the guide describes Ari as sleepier than Sukhumvit-side districts",
+     "claims": [
+      "phaya-thai-c12"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Ari (Soi Ari 1-7, Ari Samphan): cafe-residential, the guide's most expensive and most walkable band",
+     "claims": [
+      "phaya-thai-c08"
+     ]
+    },
+    {
+     "en": "Saphan Khwai: denser, 'grittier, more local', cheapest stock, district's most concentrated population",
+     "claims": [
+      "phaya-thai-c09"
+     ]
+    },
+    {
+     "en": "Pradiphat-Sanam Pao: military plots between residential conversions; history visible in street fabric",
+     "claims": [
+      "phaya-thai-c10"
+     ]
+    },
+    {
+     "en": "Vibhavadi edge: Army Club/stadium, Channel 5, Veterans' Hospital - green without public access",
+     "claims": [
+      "phaya-thai-c06"
+     ]
+    },
+    {
+     "en": "Sam Sen Nai-Inthamara: plain townhouse/apartment grid, few named amenities, no BMA park on its own streets",
+     "claims": [
+      "phaya-thai-c07",
+      "phaya-thai-c14"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Fit: cafe-culture workers and remote workers priced out of Thonglor/Asoke who want calm sois near BTS",
+     "claims": [
+      "phaya-thai-c08",
+      "phaya-thai-c11"
+     ]
+    },
+    {
+     "en": "Fit: budget renters targeting Saphan Khwai's apartment stock who work locally or tolerate junction traffic",
+     "claims": [
+      "phaya-thai-c09",
+      "phaya-thai-c11"
+     ]
+    },
+    {
+     "en": "Poor fit: nightlife-first residents and anyone whose commute crosses town daily (30+ min to Silom/Sathorn per the guide)",
+     "claims": [
+      "phaya-thai-c12"
+     ]
+    },
+    {
+     "en": "Poor fit: households that need daily park access - the khet's public parks are pocket-scale and unevenly placed",
+     "claims": [
+      "phaya-thai-c07"
+     ]
+    },
+    {
+     "en": "Watch item: monsoon-season flooding on specific low sois; ask street-by-street, not district-wide",
+     "claims": [
+      "phaya-thai-c12"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Green 9 basis unresolved: the 14.8 ha could not be decomposed (OSM queries blocked); the Army compound is the only candidate large enough, and it is not public parkland [phaya-thai-c06, c07]",
+   "Safety 8 untested: no systematic crime statistic found; 2024-2026 news search returned only scattered, poorly-locatable incidents [phaya-thai-c14]",
+   "App rent reference sits above district-wide portal averages for 2-beds and at the low end for Ari 1-beds; sample definitions differ (portal listings vs editorial estimate) [phaya-thai-c11]",
+   "App counts (23 temples, 8 markets, 1,302 food places) could not be matched to named sources; EN/TH wiki name only Wat Phai Tan as the khet's temple, and no wet market was verifiable [phaya-thai-c01 limitations, Q07]",
+   "Suan Phaya Thai Phirom's side of the Ratchathewi boundary is ambiguous between BMA and third-party maps [phaya-thai-c07]"
+  ],
+  "attribution_required": [
+   "phaya-thai-c01",
+   "phaya-thai-c02",
+   "phaya-thai-c03",
+   "phaya-thai-c04",
+   "phaya-thai-c10",
+   "phaya-thai-c16"
+  ]
+ },
+ "claims": [
+  {
+   "id": "phaya-thai-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2017-07-26",
+    "observed": "2017-2023 (population snapshots)",
+    "recheck": null
+   },
+   "limitations": [
+    "app baseline (67,388 in 2020) not independently located in a published table; consistent in magnitude with the sourced snapshots"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c03",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2010-08-23",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "station-footprint straddling a boundary line cannot be fully excluded from wiki text alone; both district and station articles agree on Ratchathewi"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c04",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c05",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Chatuchak park placement rests on the boundary line plus common knowledge of those parks' locations; not verified by a dedicated park source in this run",
+    "Vachirabenjatas Park '450 rai' figure seen only in a search snippet and not used here",
+    "Conflict noted 2026-11-07: a point-in-polygon test against the app's own khet polygon (geometry.json) places the Victory Monument roundabout (~13.7699, 100.5350) INSIDE the phaya-thai khet, while the source attributes it to Ratchathewi - the monument sits at the boundary; treat its attribution as conflicting."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026 (no redevelopment news found)",
+    "recheck": "2027-11"
+   },
+   "limitations": [
+    "street address, capacity and golf/driving-range operation come from snippet-level sources (search result and Facebook page info), not opened pages",
+    "no source found quantifying the compound's area in hectares"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c07",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": "2011-09-04",
+    "observed": "list as published 2024-2026",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "composition of the 14.8 ha could not be decomposed: Overpass/OSM queries failed from this environment (HTTP 406/timeout/malformed) and Greener pages give no per-park areas",
+    "boundary side of Suan Phaya Thai Phirom is ambiguous (BMA lists it under the khet; Moovit labels it Ratchathewi; OSM point is near the boundary)",
+    "Suan Ari Samphan details (PRD garden, cafes inside) rest on snippet-level search results corroborating the Greener listing"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c08",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2025 (guide's last update 2025-12-31)",
+    "recheck": "2026-12"
+   },
+   "limitations": [
+    "specific cafe named from a snippet-level source only",
+    "guide is property-audience content"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-02-08",
+    "observed": "2024-2025 advisories",
+    "recheck": null
+   },
+   "limitations": [
+    "chronic pedestrian/crowding conditions around the wholesale blocks were not documented by a dedicated source; evidence is junction-traffic and guide character"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "1932-2020s",
+    "recheck": null
+   },
+   "limitations": [
+    "single-source historical narrative (Thai wiki road article); plausible but not independently corroborated in this run"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c11",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "2025-10 to 2026-10",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "asking rents only; no signed-lease data found for the district",
+    "portal averages not quality-controlled for floor/age/size",
+    "both sources commercial-context"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c12",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "perception content from a property-audience guide; no systematic safety statistic located (see open issues)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-05-20",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "exact rename effective date not stated in the body-read article; taken from search-result summaries",
+    "Wichaiyut/Vimut/Veterans placements accepted from the Thai wiki list without separate address checks"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c14",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026 sources",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "synthesis, not a direct source statement",
+    "safety conclusion is an absence-of-evidence result, not evidence of absence"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c15",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "1966-2026",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "absence of 2024-2026 park/Army-land news is a search result, not proof of stasis"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phaya-thai-c16",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "EN wiki address only; campus may front the boundary rail line but the source places it in Dusit"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_22deb73f92fe",
+   "url": "https://en.wikipedia.org/wiki/Phaya_Thai_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_83d19094630c",
+   "url": "https://th.wikipedia.org/wiki/เขตพญาไท",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_1bafc1e4c0dc",
+   "url": "https://en.wikipedia.org/wiki/Phaya_Thai_Palace",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_16cadddb23a1",
+   "url": "https://en.wikipedia.org/wiki/Phaya_Thai_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_d2046e72643b",
+   "url": "https://th.wikipedia.org/wiki/ถนนประดิพัทธ์",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_7d445c13b31b",
+   "url": "https://en.wikipedia.org/wiki/Vajiravudh_College",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_675e6cf3e1bd",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/phaya-thai",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "hipflat"
+   }
+  },
+  {
+   "id": "src_41e2f3bc6dc8",
+   "url": "https://condoreviewsthailand.com/neighborhoods/ari",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Condoreviews Thailand",
+    "family": "condoreviewsthailand"
+   }
+  },
+  {
+   "id": "src_29052a7eb6c9",
+   "url": "https://www.fm91bkk.com/newsarticle/44807",
+   "body_read": true,
+   "attribution": {
+    "publisher": "FM91 Traffic Radio",
+    "family": "fm91"
+   }
+  },
+  {
+   "id": "src_501c9f61021b",
+   "url": "https://www.phyathai.com/th/pytp/about/hospital",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Phyathai Hospitals (Thongtang Group)",
+    "family": "phyathai-group"
+   }
+  },
+  {
+   "id": "src_6f300730c243",
+   "url": "https://www.marketingoops.com/news/biz-news/paolo-hospital-rebrand-to-phyathai/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Marketing Oops",
+    "family": "marketingoops"
+   }
+  },
+  {
+   "id": "src_e574614c33da",
+   "url": "https://greener.bangkok.go.th/district/khet-phaya-thai/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Metropolitan Administration, Greener Bangkok",
+    "family": "bma-greener-bangkok"
+   }
+  },
+  {
+   "id": "src_c908c2ddc9f2",
+   "url": "https://www.thaipbs.or.th/news/content/30116",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS",
+    "family": "thaipbs"
+   }
+  },
+  {
+   "id": "src_4a90ae7694a8",
+   "url": "https://mapcarta.com/W167534432",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Mapcarta (OpenStreetMap-derived)",
+    "family": "mapcarta-osm"
+   }
+  },
+  {
+   "id": "src_ef1656855211",
+   "url": "https://moovitapp.com/index/en/public_transit-Phayathai_Pirom_Park_%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%9E%E0%B8%8D%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A0%E0%B8%B4%E0%B8%A3%E0%B8%A1%E0%B8%A2%E0%B9%8C-Bangkok-site_18666440-2401",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Moovit",
+    "family": "moovit"
+   }
+  },
+  {
+   "id": "src_ce47b695ed71",
+   "url": "https://www.facebook.com/ThaiArmyClubViphavadi/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Royal Thai Army Club (Vibhavadi)",
+    "family": "facebook-armyclub"
+   }
+  }
+ ]
+}

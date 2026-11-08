@@ -1008,6 +1008,17 @@
       "nightlife": "夜の選択肢の充実度は標準を下回ります。",
       "crowd": "混雑の代替指標では標準より混雑が多めです。"
     },
-    "photoAlt": "{name}の写真"
+    "photoAlt": "{name}の写真",
+    "editorial": {
+      "dataOnly": "スコアのみ（編集ガイドは準備中）",
+      "asOf": "編集リサーチ基準日 {date}",
+      "recheckDue": "要再確認: {date}",
+      "greenBuffer1km": "緑スコアはグリッド地点から1km以内の公園面積を数えています（区域外の公園も含む）。",
+      "transportMechanism": "交通スコアは鉄道駅に加え、バス停と船の桟橋も数えています。"
+    },
+    "disclosure": {
+      "greenBuffer1km": "緑スコアはグリッド地点から1km以内の公園面積を数えています（区域外の公園も含む）。",
+      "transportMechanism": "交通スコアは鉄道駅に加え、バス停と船の桟橋も数えています。"
+    }
   }
 }

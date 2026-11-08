@@ -1,0 +1,478 @@
+{
+ "key": "ratchathewi",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Ratchathewi packs four researched station areas (BTS Ratchathewi, ARL Ratchaprarop, BTS/ARL Phaya Thai, Victory Monument) into 7.1 km² with four khwaeng. Its green 9 rests on pocket parks — Phirom 3.38 ha, Santiphap 2.85 ha, Suan Rom 1.71 ha — plus institutional gardens; no public park above ~3.4 ha exists anywhere in the khet. Pratunam's wholesale economy and Baiyoke towers (khwaeng Thanon Phaya Thai) anchor the east, and the MRT Orange Line (three in-khet stations, opening ~July 2030) is reshaping its main corridors. Safety 5 repeats the pattern seen at station level: no per-khet statistics exist in any retrieved source.",
+   "claims": [
+    "ratchathewi-d-c03",
+    "ratchathewi-d-c15",
+    "ratchathewi-d-c06",
+    "ratchathewi-d-c12",
+    "ratchathewi-d-c09",
+    "ratchathewi-d-c01"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "District-level transit is structurally rich: three BTS stations, ARL and the under-construction Orange Line (OR08 Ratchathewi, OR09 Pratunam, OR10 Ratchaprarop).",
+     "claims": [
+      "ratchathewi-d-c03"
+     ]
+    },
+    {
+     "en": "Rent 7 is bracketed by live asking data (FazWaz 1,864 listings, 13,000-300,000 THB).",
+     "claims": [
+      "ratchathewi-d-c15"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Green 9 decomposes to 8.81 ha of named public parks plus small institutional/private garden stock — pocket-scale, not park-scale.",
+     "claims": [
+      "ratchathewi-d-c06"
+     ]
+    },
+    {
+     "en": "The Ratchathewi flyover is closed (since mid-Jan 2025) until 30 Apr 2028, and the Pratunam overpass demolition window is contested between sources.",
+     "claims": [
+      "ratchathewi-d-c12"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Pratunam's wholesale day economy and the office corridors set weekday rhythm; Phetchaburi Road runs quieter at night.",
+     "claims": [
+      "ratchathewi-d-c09"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Pratunam/Makkasan market-and-tower blocks, Thanon Phaya Thai's towers, and the Rangnam/Thanon Phetchaburi mid-rise belt are distinct subareas.",
+     "claims": [
+      "ratchathewi-d-c01"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Strong fit: market traders, airport commuters and transit-first renters who accept pocket-park green and construction disruption.",
+     "claims": [
+      "ratchathewi-d-c16"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "rating transport (9): Defensible as district-level modal redundancy: three BTS stations, both in-khet ARL stops, an SRT halt, canal boats on the whole southern edge, and three Orange Line stations under construction including two interchanges. The caveat is timing - the BTS/MRT interchange at Ratchathewi and ARL/MRT at Ratchaprarop open ~2030, so today's 9 describes the stack, not interchange quality (batch-2/3's headway findings carry over).",
+   "rating rent (7): The 18,000/38,000 blend sits inside FazWaz's live spread (13,000-300,000, typical 1-BR 20,000-28,000; 38,000 = 2024-vintage stock). Rent 7 = moderate affordability held by older stock and townhouses while new supply lands at the band's top - matches batch-2's PropertyScout/Superagent ranges.",
+   "rating daily_essentials (9): The strongest-evidenced score at district level: six public hospitals + two private, a university cluster, the Wannasorn tutoring hub, BMA cultural facilities and the market/convenience substrate. Mechanism is institutional depth, not mall coverage.",
+   "rating safety (5): Fifth entity tested, same result: no district-level crime statistics exist in open sources; the only quantitative comparator is citywide and unstable (study revision moved Bangkok from reported #1 to #23). Pratunam scam lore is corridor perception, not a district pattern. The 5 remains an untested prior - flag stays open.",
+   "rating food (9): Two one-star Michelin venues (not one) plus the wholesale-belt food economy and canal-side community eating (batch-2's Soi 5/Soi 10 streets). The app's 1,116-food-venue count reflects a richer POI database than OSM (12 worship vs 60 'temples' shows the same DB gap).",
+   "rating green (9): The 17.8 ha figure now decomposes honestly: 9.25 ha parks + 8.48 ha gardens on OSM, but only 8.81 ha is named public park, largest single park 3.38 ha (Phirom). Green 9 is carried by pocket + institutional green; park-scale quiet does not exist in the khet. The score survives only because the stock is dense and close, not because it is large.",
+   "rating gym_sports (9): Least-evidenced score, as at station level: OSM shows 10+ pitches in the khet (8 tennis, 2 basketball, 2 soccer, futsal/volleyball/sepak-takraw, multi) plus hotel/hospital facilities; no district-level gym inventory was retrieved. 9 is plausible for a district this dense but rests on thin sourcing.",
+   "rating vibe (9): The district's identity is genuinely layered: wholesale Pratunam, the Baiyoke skyline, the 1942 Victory Monument roundabout, Bangkok's oldest Muslim community weaving silk by the canal, the Phaya Thai Palace belt. The 9 is defensible as layered character, with the crowd cost scored separately.",
+   "rating nightlife (9): Anchors: Baiyoke Sky's 77F-84F observatory/bar/revolving deck, the hotel-bar/karaoke stock of the Pratunam belt (batch-3: OSM tags zero clubs in its circle while the app counts venues), Century Movie Plaza still screening near Victory Monument. Nightlife here is hotel- and screen-led, not club-led - the 9 leans on breadth of venues the app's DB sees and OSM does not.",
+   "rating crowd (2): Consistently supported: the dawn wholesale cycle puts porter and vendor traffic on the streets before 05:00, the Pratunam belt is the documented crush zone, the Victory Monument roundabout is a city bus hub, and 2025-2028 construction adds work crews. Nothing retrieved offsets the 2."
+  ],
+  "attribution_required": [
+   "ratchathewi-d-c10",
+   "ratchathewi-d-c12"
+  ]
+ },
+ "claims": [
+  {
+   "id": "ratchathewi-d-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c08",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c12",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c14",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c15",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c16",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c17",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-d-c18",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap via Overpass API",
+    "family": "OpenStreetMap via Overpass API"
+   }
+  },
+  {
+   "id": "src_4b8e15dea6d8",
+   "url": "https://en.wikipedia.org/wiki/Ratchathewi_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_567d0a1dc7b9",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B5",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia TH)",
+    "family": "Wikimedia (Wikipedia TH)"
+   }
+  },
+  {
+   "id": "src_c9d75c1722fb",
+   "url": "https://en.wikipedia.org/wiki/Pratunam",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_f3ce12d17b0b",
+   "url": "https://en.wikipedia.org/wiki/Victory_Monument_(Bangkok)",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_6c851769cf57",
+   "url": "https://en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_66b1411bd411",
+   "url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_194ddd2fb8f8",
+   "url": "https://en.wikipedia.org/wiki/MRT_Orange_Line",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_597cd39135c5",
+   "url": "https://en.wikipedia.org/wiki/Ban_Krua",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_fc2b77f94bb7",
+   "url": "https://www.bangkok.go.th/ratchathewi",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Metropolitan Administration",
+    "family": "Bangkok Metropolitan Administration"
+   }
+  },
+  {
+   "id": "src_11d0afa11d99",
+   "url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "body_read": true,
+   "attribution": {
+    "publisher": "FazWaz",
+    "family": "FazWaz"
+   }
+  },
+  {
+   "id": "src_a31faf40656f",
+   "url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/signature-1194955",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Michelin Guide",
+    "family": "Michelin Guide"
+   }
+  },
+  {
+   "id": "src_aa1946a82652",
+   "url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/wana-yook",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Michelin Guide",
+    "family": "Michelin Guide"
+   }
+  },
+  {
+   "id": "src_5dde3562770f",
+   "url": "https://guide.michelin.com/th/th/bangkok-region/bangkok/restaurant/wana-yook",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Michelin Guide",
+    "family": "Michelin Guide"
+   }
+  },
+  {
+   "id": "src_1a707f6d4091",
+   "url": "https://www.thaipbsworld.com/travel-tourism/ratchathewi-overpass-to-close-for-three-years-for-orange-line-construction-starting-tonight",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS World",
+    "family": "Thai PBS World"
+   }
+  },
+  {
+   "id": "src_90b1de01f36f",
+   "url": "https://web.codi.or.th/index.php/20240929-57255",
+   "body_read": true,
+   "attribution": {
+    "publisher": "CODI (Community Organizations Development Institute)",
+    "family": "CODI (Community Organizations Development Institute)"
+   }
+  },
+  {
+   "id": "src_281acc9e7d8d",
+   "url": "https://www.comparethemarket.com.au/travel-insurance/features/pickpocketing-and-scam-hotspots",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Compare the Market",
+    "family": "Compare the Market"
+   }
+  },
+  {
+   "id": "src_3db253d78bfd",
+   "url": "https://centurythemovieplaza.com/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Century Movie Plaza",
+    "family": "Century Movie Plaza"
+   }
+  },
+  {
+   "id": "src_67e7f515b7bb",
+   "url": "https://duckduckgo.com/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Web search AI summaries (multiple publishers; snippet-surface only)",
+    "family": "Web search AI summaries (multiple publishers; snippet-surface only)"
+   }
+  }
+ ]
+}

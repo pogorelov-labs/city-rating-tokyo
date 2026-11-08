@@ -1,0 +1,283 @@
+{
+ "key": "bang-phlat",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Bang Phlat is the low-key Thonburi side of the river that the MRT Blue Line reached only in December 2019. Its four stations - Bang Yi Khan, Sirindhorn, Bang Phlat, Bang O - put the khet on the rail map without turning it central: the 2021 counters still show Bang Phlat station as the Blue Line's quietest. Life here organizes around Charan Sanitwong Road's local retail spine, 23 temples, the Bang-or Mosque, and Suan Luang Rama VIII, one of the few public parks on the river's west bank. Rents sit well below central districts, and the trade-off is the same on every page read: little nightlife or tourist infrastructure, and parkland measured in single hectares.",
+   "claims": [
+    "bang-phlat-c02",
+    "bang-phlat-c03",
+    "bang-phlat-c05",
+    "bang-phlat-c08",
+    "bang-phlat-c04"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Four MRT Blue stations inside the khet (Bang Yi Khan, Sirindhorn, Bang Phlat, Bang O) plus an SRT Light Red stop at Bang Bamru - rare west-bank rail coverage, corroborated by OSM node membership.",
+     "claims": [
+      "bang-phlat-c02"
+     ]
+    },
+    {
+     "en": "Affordable, real-stock rental market: 622 portal-listed condos averaging roughly 15.5k (1BR) and 24.5k (2BR) THB in Oct 2026, with cheaper unlisted stock beneath.",
+     "claims": [
+      "bang-phlat-c04"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The district's own headline station (BL07) was the Blue Line's least-used in 2021 - connectivity has not yet produced central-style demand, so service frequency and crowd energy should not be assumed.",
+     "claims": [
+      "bang-phlat-c03"
+     ]
+    },
+    {
+     "en": "Public green is a single riverside park on a 0.4% park share; the nightlife-8 reading rests on corridor venues rather than an internal scene.",
+     "claims": [
+      "bang-phlat-c05",
+      "bang-phlat-c06"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Day: commute and errands on Charan Sanitwong, temple life, Rama VIII park on the river. Night: the Charan/Pin Klao strip supplies the venues; the khwaengs themselves go quiet - guides describe the area as non-touristic, and nothing read contradicts that.",
+     "claims": [
+      "bang-phlat-c06",
+      "bang-phlat-c08"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Bang Yi Khan/Bang Phlat khwaengs carry the stations, the retail spine and the riverside park; Bang Bamru is the Light Red stop area; Bang O toward the river is the mosque-and-wooden-house quarter - one khet, three distinctly anchored corners.",
+     "claims": [
+      "bang-phlat-c09"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Choose Bang Phlat if you want Blue Line access and sub-25k 2BR rents on the quiet side of the river; the park and temple fabric reward walkers on weekends.",
+     "claims": [
+      "bang-phlat-c02",
+      "bang-phlat-c04",
+      "bang-phlat-c05"
+     ]
+    },
+    {
+     "en": "Avoid if a dense nightlife scene or walkable late-evening street life is the priority - the 8-rated nightlife count is corridor-dependent and the residential khwaengs read quiet in every source read.",
+     "claims": [
+      "bang-phlat-c06"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Khwaeng-level station placement (incl. the Bang-O-vs-Bang-Phlat-khwaeng snippet) unresolved; Overpass per-khwaeng tests failed under server load. No local-news body read for this khet; 2024-2026 change check is absence-of-findings only. App venue/food/nightlife counts not independently verifiable. HipFlat averages are portal-biased toward marketed condo stock."
+  ],
+  "attribution_required": [
+   "bang-phlat-c01",
+   "bang-phlat-c02",
+   "bang-phlat-c03",
+   "bang-phlat-c04",
+   "bang-phlat-c09",
+   "bang-phlat-c10"
+  ]
+ },
+ "claims": [
+  {
+   "id": "bang-phlat-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1989-11-09",
+    "observed": null,
+    "recheck": "on next DOPA registration cycle"
+   },
+   "limitations": [
+    "population vintages differ across sources (2017 EN wiki not read for this khet; TH wiki 2023; app value unattributed)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-phlat-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "when app polygons are checked; OSM area timestamp 2026-11-07"
+   },
+   "limitations": [
+    "khwaeng-level placement (e.g., whether Bang Phlat station is in khwaeng Bang O as one EN-Wikipedia snippet claimed) not resolved - Overpass per-khwaeng tests failed under server load"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-phlat-c03",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2021",
+    "recheck": "when BEM/MRTA publishes newer per-station ridership"
+   },
+   "limitations": [
+    "single-year (2021) figure; post-COVID rebound not reflected"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-phlat-c04",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "October 2026",
+    "recheck": "quarterly portal refresh"
+   },
+   "limitations": [
+    "commercial portal; excludes non-listed walk-up/landlord-direct stock",
+    "conversion rate assumed ~35 THB/USD"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-phlat-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no independent area figure (ha) for the park found in sources read"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-phlat-c06",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no editorial source read describes Bang Phlat nightlife directly; inference from counts and corridor anchors",
+    "app venue counts not independently reproducible from sources read"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-phlat-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Explorenique's 'world's fifth-longest bridge' phrasing not corroborated; not used"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-phlat-c08",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "perception source is a single travel blog; crowd density comparison uses batch-internal app figures"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-phlat-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no street-level or market-level source read for this khet"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-phlat-c10",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "absence-of-findings claim: limited to the query set logged",
+    "no local-news body read for this khet"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_536e5ff1e01b",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%94",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Wikipedia (TH)"
+   }
+  },
+  {
+   "id": "src_47b62950ef02",
+   "url": "https://en.wikipedia.org/wiki/Bang_Phlat_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "Wikipedia (EN)"
+   }
+  },
+  {
+   "id": "src_7717ecf22029",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/bang-phlat",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  },
+  {
+   "id": "src_aaa8c07352c8",
+   "url": "https://explorenique.com/bang-phlat-lower-inner-thon-buri-rama-8-bridge-rama-8-park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Explorenique",
+    "family": "Explorenique (blog)"
+   }
+  },
+  {
+   "id": "src_b12447602f8b",
+   "url": "https://www.renown-travel.com/daytripsbangkok/rama8bridge.html",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Renown Travel",
+    "family": "Renown Travel (travel guide)"
+   }
+  }
+ ]
+}

@@ -1,0 +1,579 @@
+{
+ "key": "st.chit-lom",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Chit Lom is the Ratchaprasong node where retail and ritual share one junction: a BTS station with nine access points, a 7.5 m-wide, 513 m-long skywalk strung across CentralWorld, Gaysorn and the Grand Hyatt, and the four-faced Phra Phrom statue enshrined there since 1956. The trade shows up in rents that run from 27,000 THB studios to six-figure two-bedrooms in towers like Magnolias Ratchadamri, where 120,000 THB is the ceiling of the standard two-bedroom range rather than a corridor median. Street level is the weaker layer: the BMA called city sidewalks historically a tripping hazard and was still renovating Ratchaprasong in 2024. It rewards corporate expats and shoppers; it taxes budget renters and anyone hunting for a park.",
+   "claims": [
+    "chit-lom-c01",
+    "chit-lom-c02",
+    "chit-lom-c03",
+    "chit-lom-c07",
+    "chit-lom-c08",
+    "chit-lom-c09",
+    "chit-lom-c15",
+    "chit-lom-c14",
+    "chit-lom-c17"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Elevated connectivity is verified engineering, not brochure copy: nine station access points and a 513 m, 7.5 m-wide skywalk link Central Chidlom, Gaysorn, CentralWorld and on to Siam station without a street crossing.",
+     "claims": [
+      "chit-lom-c02"
+     ]
+    },
+    {
+     "en": "Restaurant density on the quiet side sois is unusually high for central Bangkok — 8 of Time Out's 50 best sit on Phloen Chit, Lang Suan and Ratchadamri, led by Inddee at No. 8.",
+     "claims": [
+      "chit-lom-c10"
+     ]
+    },
+    {
+     "en": "Everyday retail is deep: Central Chidlom reopened as a 4-billion-baht 'Store of Bangkok' flagship with a Sky Terrace straight onto the BTS, and Big C Ratchadamri adds a hypermarket, gym and cineplex.",
+     "claims": [
+      "chit-lom-c12",
+      "chit-lom-c16"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Rents are the tax on the address: November 2026 listings ran 27,000-380,000 THB with the luxury cluster at 80k-180k, and the app's 120k two-bed is premium-building ceiling stock rather than a corridor median.",
+     "claims": [
+      "chit-lom-c07",
+      "chit-lom-c08",
+      "chit-lom-c09"
+     ]
+    },
+    {
+     "en": "The crowd score has two engines: the shrine's daily devotional flow with hired dance troupes, and the Platinum Fashion Mall's 09:00-20:00 wholesale trade at the Pratunam edge.",
+     "claims": [
+      "chit-lom-c06",
+      "chit-lom-c13"
+     ]
+    },
+    {
+     "en": "Skywalk gloss does not extend to the pavement: the BMA itself described sidewalks here as historically uneven and a tripping hazard, with Ratchaprasong still under renovation in May 2024.",
+     "claims": [
+      "chit-lom-c15"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Daytime belongs to worship and wholesale: shrine visitors circling all four faces of Phra Phrom while Platinum's seven wholesale floors trade from 09:00.",
+     "claims": [
+      "chit-lom-c06",
+      "chit-lom-c13"
+     ]
+    },
+    {
+     "en": "Evenings thin out into hotel bars rather than street nightlife — Red Sky from 16:00 on the 55th floor, Sato San on the Moxy's 32nd, Speakeasy on Lang Suan — with the mall core closing between 20:00 and 22:00.",
+     "claims": [
+      "chit-lom-c11",
+      "chit-lom-c18"
+     ]
+    },
+    {
+     "en": "The block has absorbed political weather before: the 2010 crackdown, the 2014 protests and the 2020-2021 wave all used this intersection, and the 2015 bombing still shapes its security memory through the June 2026 verdict.",
+     "claims": [
+      "chit-lom-c04",
+      "chit-lom-c05"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Lang Suan and the side sois run quieter and restaurant-led, while the Ratchaprasong corridor is mall-and-shrine dense.",
+     "claims": [
+      "chit-lom-c10",
+      "chit-lom-c03"
+     ]
+    },
+    {
+     "en": "The northern Pratunam edge flips register entirely: Platinum's wholesale crowds and Ratchathewi-district pavements rather than flagship retail.",
+     "claims": [
+      "chit-lom-c13"
+     ]
+    },
+    {
+     "en": "Green access differs by degree, not kind: tree-lined streets and private gardens everywhere, an actual park only about 1.5 km south at Lumphini's centre.",
+     "claims": [
+      "chit-lom-c14"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Fits corporate expats, diplomatic staff and long-stay professionals whom agents describe as the tenant base, and who can carry upper-market rents.",
+     "claims": [
+      "chit-lom-c17",
+      "chit-lom-c09"
+     ]
+    },
+    {
+     "en": "Fits car-free shoppers and hotel guests who will live on the skywalk network.",
+     "claims": [
+      "chit-lom-c02"
+     ]
+    },
+    {
+     "en": "Does not fit budget renters priced out at 45k+ for ordinary two-beds, nor families wanting a park within the block, nor seekers of club-district nightlife.",
+     "claims": [
+      "chit-lom-c07",
+      "chit-lom-c14",
+      "chit-lom-c11"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "All rent figures are asking prices; no signed-lease or median data was found, so the app's 45k/120k references cannot be validated against transactions (chit-lom-c07, chit-lom-c09).",
+   "Polygon membership is unresolved for the Platinum/Pratunam edge, Lumphini Park's northern corner and the Lang Suan projects; the coordinator's geometry pass decides these (chit-lom-c13, chit-lom-c14).",
+   "The 'big bike protest at Erawan' lead could not be confirmed in English or Thai mainstream coverage; only general 2020-2021 protest and 2021 car-mob history is documented (chit-lom-c05).",
+   "PropertyScout's portal shows area rents below its Bangkok average for every size class, an anomaly left unreconciled (chit-lom-c09)."
+  ],
+  "attribution_required": [
+   "chit-lom-c01",
+   "chit-lom-c02",
+   "chit-lom-c05",
+   "chit-lom-c07",
+   "chit-lom-c08",
+   "chit-lom-c10",
+   "chit-lom-c11",
+   "chit-lom-c14",
+   "chit-lom-c15",
+   "chit-lom-c16",
+   "chit-lom-c17"
+  ]
+ },
+ "claims": [
+  {
+   "id": "chit-lom-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1999-12-05",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "English article carries March 2026 maintenance banners about sourcing",
+    "2021 ridership of 3,154,058 quoted in infobox is a pandemic-year low"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "skywalk in place since the 2010s; links verified 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Per-segment lengths between individual malls are not published",
+    "Skywalk reach does not by itself measure street-level walkability (see chit-lom-c15)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1956-11-09",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Wikipedia article's infobox coordinates initially mismatch; footer coordinate 13.744361N 100.540444E is the shrine"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2015-08-17",
+    "observed": "trial concluded June 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Casualty tallies differ slightly between reports (125 vs 'more than 120')",
+    "Security-camera failures and investigation criticisms noted by sources"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c05",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2010-05-19",
+    "observed": "2010-2021 protest episodes",
+    "recheck": null
+   },
+   "limitations": [
+    "Thai and English searches found no mainstream confirmation of a 'big bike' convoy protest specifically at Erawan Shrine; vehicle-convoy (car mob) protests are documented for 2021 in general",
+    "2010 death toll is approximate in the source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "ban in force since 2020-03 and still in effect per 2025 Thai reporting",
+    "recheck": null
+   },
+   "limitations": [
+    "PRD (thainews.prd.go.th) confirmation of the 2025 seventh-year continuation was unreachable (DNS failure), so the 2025 continuation rests on search-engine descriptions of it plus the Wikipedia ban record"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c07",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "listings observed November 2026",
+    "recheck": "2027-11-08"
+   },
+   "limitations": [
+    "Asking rents, not signed leases; no transaction data found",
+    "Single agent portal's snapshot of 47 listings (21 visible on first page)",
+    "Premium addresses on Lang Suan/Tonson may fall partly outside the app polygon"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c08",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "listings observed November 2026",
+    "recheck": "2027-11-08"
+   },
+   "limitations": [
+    "Asking rents only",
+    "The building is deliberately top-end, so it is not a corridor-average sample"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c09",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "November 2026 listings",
+    "recheck": "2027-11-08"
+   },
+   "limitations": [
+    "No published median rent for the corridor was found; the inference compares clusters, not a computed median",
+    "PropertyScout's page shows area rents 'lower than Bangkok average' for every size class, an anomaly not reconciled here",
+    "All figures are asking rents"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-03-10",
+    "observed": null,
+    "recheck": "2027-03-10"
+   },
+   "limitations": [
+    "One outlet's editorial selection",
+    "Does not capture everyday or street-level eating options"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c11",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-12-31",
+    "observed": "venues operating as of May 2026 guide",
+    "recheck": null
+   },
+   "limitations": [
+    "Guide selection, not an inventory; club-style nightlife is not represented here"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-12-20",
+    "observed": "transformation completing during 2025",
+    "recheck": "2026-12-20"
+   },
+   "limitations": [
+    "All quantitative claims (4bn THB, 30,000 visitors) come from the company's own release",
+    "Independent verification of completed 2025 phase openings not obtained"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2000-01-01",
+    "observed": "operating daily; hours verified 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Widely quoted stall counts (thousands of shops) were not verified on the sources used",
+    "Crowd volume inferred from wholesale role and hours rather than measured"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c14",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1925-01-01",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Distance is computed from article coordinates, not surveyed",
+    "Whether the park's northern edge grazes the app unit is explicitly left to the coordinator's polygon check",
+    "Private greenery (hotel gardens, the 'Garden of Rose' theming at Central Chidlom) is not park access"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c15",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-05-01",
+    "observed": "programme reported running 2024-2025",
+    "recheck": "2026-12-01"
+   },
+   "limitations": [
+    "Reports the city's own progress framing; no independent walkability audit cited",
+    "Does not quantify how much of Ratchaprasong was complete at publication"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c16",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2022-03-01",
+    "observed": "composition as of 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "'Second largest mall in Southeast Asia' is a Wikipedia descriptor, not independently verified here",
+    "Police Hospital adjacency implies ambulance/siren traffic on Ratchadamri at times"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c17",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "agent commentary observed November 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Single commercial agent's characterisation, unverified by tenancy data",
+    "US Embassy/Witthayu diplomatic presence nearby is consistent but not independently established here"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chit-lom-c18",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "hours as posted on sources read November 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "No pedestrian-count or event-calendar data found",
+    "Thursday devotional custom at the shrine is widely repeated in Thai sources but was not confirmed from a strong source in this session"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_7d8cf0276524",
+   "url": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_6fd72dec4bb7",
+   "url": "https://en.wikipedia.org/wiki/Erawan_Shrine",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_7e869560d326",
+   "url": "https://en.wikipedia.org/wiki/Ratchaprasong",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_1fc36699994a",
+   "url": "https://en.wikipedia.org/wiki/Platinum_Fashion_Mall",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_4aab2c4fca93",
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B4%E0%B8%94%E0%B8%A5%E0%B8%A1",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_31cd3bdbbaa0",
+   "url": "https://www.bbc.com/news/articles/ckg8v51g9lno",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BBC News",
+    "family": "bbc"
+   }
+  },
+  {
+   "id": "src_410615786a1c",
+   "url": "https://www.khaosodenglish.com/featured/2024/05/01/bangkok-makes-progress-in-improving-sidewalks-and-sets-10-standards/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Khaosod English",
+    "family": "khaosod"
+   }
+  },
+  {
+   "id": "src_edcc56ab152b",
+   "url": "https://www.timeout.com/bangkok/restaurants/the-50-best-restaurants-in-bangkok",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "timeout"
+   }
+  },
+  {
+   "id": "src_f8238a88f6b6",
+   "url": "https://www.timeout.com/bangkok/bars/best-rooftop-and-sky-high-bars",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "timeout"
+   }
+  },
+  {
+   "id": "src_d5cef1b4dadc",
+   "url": "https://www.prnewswire.com/ae/news-releases/the-store-of-bangkok-central-chidlom-elevates-retail-experience-as-the-no-1-luxury-department-store-302337219.html",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PR Newswire (Central Department Store release)",
+    "family": "prnewswire-central"
+   }
+  },
+  {
+   "id": "src_8f47ad3e3737",
+   "url": "https://www.erawanbangkok.com/en/erawan-shrine/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Erawan Bangkok Co., Ltd.",
+    "family": "erawan-bangkok"
+   }
+  },
+  {
+   "id": "src_d9cb7bb63d51",
+   "url": "https://www.platinumfashionmall.com/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Platinum Fashion Mall Co., Ltd.",
+    "family": "platinum"
+   }
+  },
+  {
+   "id": "src_22be58b804cc",
+   "url": "https://propertyscout.co.th/en/bangkok/bts/chit-lom",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyScout",
+    "family": "propertyscout"
+   }
+  },
+  {
+   "id": "src_a9838735cff2",
+   "url": "https://amazingproperties.org/search/bangkok/condo-for-rent/chidlom",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Amazing Properties",
+    "family": "amazingproperties"
+   }
+  },
+  {
+   "id": "src_537f20b992db",
+   "url": "https://propertyhub.in.th/en/condo-for-rent/project-magnolias-ratchadamri-boulevard",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyHub.in.th",
+    "family": "propertyhub"
+   }
+  },
+  {
+   "id": "src_6d3b21590eca",
+   "url": "https://thethaiger.com/thai-life/property/bangkok-rent-neighbourhood-budget-2026",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Thaiger",
+    "family": "thaiger"
+   }
+  }
+ ]
+}

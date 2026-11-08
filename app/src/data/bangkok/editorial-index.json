@@ -1,0 +1,3030 @@
+{
+ "_meta": {
+  "schema_version": "1.1-p0",
+  "exporter": "export-editorial.mjs P0"
+ },
+ "entities": {
+  "bang-rak": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/bang-rak.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 22,
+    "body_read": 22,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-15",
+   "superseded_by": null
+  },
+  "samphanthawong": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/samphanthawong.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 17,
+    "body_read": 17,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-01-01",
+   "superseded_by": null
+  },
+  "st.ari": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.ari.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 10,
+    "body_read": 10,
+    "claims": 20
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-31",
+   "superseded_by": null
+  },
+  "st.asok": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.asok.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 10,
+    "body_read": 10,
+    "claims": 19
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-31",
+   "superseded_by": null
+  },
+  "st.chong-nonsi": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.chong-nonsi.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 22,
+    "body_read": 22,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-01-31",
+   "superseded_by": null
+  },
+  "st.thong-lo": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.thong-lo.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 17,
+    "body_read": 14,
+    "claims": 19
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027 rainy season",
+   "superseded_by": null
+  },
+  "phaya-thai": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/phaya-thai.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 16,
+    "body_read": 13,
+    "claims": 16
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12",
+   "superseded_by": null
+  },
+  "pom-prap-sattru-phai": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/pom-prap-sattru-phai.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 19,
+    "body_read": 16,
+    "claims": 17
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-11-30",
+   "superseded_by": null
+  },
+  "st.charoen-nakhon": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.charoen-nakhon.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 13,
+    "body_read": 10,
+    "claims": 17
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-01-01",
+   "superseded_by": null
+  },
+  "st.nana": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.nana.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 18,
+    "body_read": 18,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12",
+   "superseded_by": null
+  },
+  "st.ratchathewi": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.ratchathewi.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 18,
+    "body_read": 16,
+    "claims": 17
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "st.wat-mangkon": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.wat-mangkon.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 27,
+    "body_read": 26,
+    "claims": 19
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027",
+   "superseded_by": null
+  },
+  "chatuchak": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/chatuchak.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 21,
+    "body_read": 13,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "pathum-wan": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/pathum-wan.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 31,
+    "body_read": 16,
+    "claims": 16
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-01-15",
+   "superseded_by": null
+  },
+  "phra-nakhon": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/phra-nakhon.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 27,
+    "body_read": 14,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "ratchathewi": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/ratchathewi.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 19,
+    "body_read": 18,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "st.ha-yaek-lat-phrao": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.ha-yaek-lat-phrao.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 29,
+    "body_read": 24,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-01",
+   "superseded_by": null
+  },
+  "st.phloen-chit": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.phloen-chit.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 23,
+    "body_read": 18,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-01",
+   "superseded_by": null
+  },
+  "st.ratchaprarop": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.ratchaprarop.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 13,
+    "body_read": 13,
+    "claims": 17
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "st.sam-yan": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.sam-yan.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 20,
+    "body_read": 17,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-22",
+   "superseded_by": null
+  },
+  "st.sam-yot": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.sam-yot.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 44,
+    "body_read": 12,
+    "claims": 16
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "st.sena-ruam": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.sena-ruam.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 14,
+    "body_read": 12,
+    "claims": 17
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-05-07",
+   "superseded_by": null
+  },
+  "bang-phlat": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/bang-phlat.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 5,
+    "body_read": 5,
+    "claims": 10
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "on next DOPA registration cycle",
+   "superseded_by": null
+  },
+  "bang-sue": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/bang-sue.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 7,
+    "body_read": 7,
+    "claims": 10
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026 land auctions; Purple line milestones",
+   "superseded_by": null
+  },
+  "bangkok-noi": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/bangkok-noi.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 6,
+    "body_read": 6,
+    "claims": 10
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "SRT timetable changes",
+   "superseded_by": null
+  },
+  "din-daeng": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/din-daeng.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 9,
+    "body_read": 8,
+    "claims": 12
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "dusit": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/dusit.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 8,
+    "body_read": 8,
+    "claims": 10
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "Purple line milestones",
+   "superseded_by": null
+  },
+  "khlong-san": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/khlong-san.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 8,
+    "body_read": 8,
+    "claims": 11
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "sathon": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/sathon.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 8,
+    "body_read": 6,
+    "claims": 12
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "st.chit-lom": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.chit-lom.json",
+   "review": {
+    "status": "ready_for_review",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "stats": {
+    "sources": 17,
+    "body_read": 17,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-01",
+   "superseded_by": null
+  },
+  "st.hua-lamphong": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.hua-lamphong.json",
+   "review": {
+    "status": "ready_for_review",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "stats": {
+    "sources": 20,
+    "body_read": 20,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-04-30",
+   "superseded_by": null
+  },
+  "st.kamphaeng-phet": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.kamphaeng-phet.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 10,
+    "body_read": 10,
+    "claims": 11
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-05",
+   "superseded_by": null
+  },
+  "st.khlong-san": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.khlong-san.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 6,
+    "body_read": 6,
+    "claims": 12
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "st.mo-chit": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.mo-chit.json",
+   "review": {
+    "status": "ready_for_review",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "stats": {
+    "sources": 22,
+    "body_read": 21,
+    "claims": 17
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-01-31",
+   "superseded_by": null
+  },
+  "st.national-stadium": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.national-stadium.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 9,
+    "body_read": 9,
+    "claims": 12
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-06",
+   "superseded_by": null
+  },
+  "st.phaya-thai": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.phaya-thai.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 9,
+    "body_read": 7,
+    "claims": 12
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "coordinator",
+   "superseded_by": null
+  },
+  "st.phetchaburi": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.phetchaburi.json",
+   "review": {
+    "status": "ready_for_review",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "stats": {
+    "sources": 15,
+    "body_read": 15,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-06-30",
+   "superseded_by": null
+  },
+  "st.phra-ram-9": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.phra-ram-9.json",
+   "review": {
+    "status": "ready_for_review",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "stats": {
+    "sources": 14,
+    "body_read": 13,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-05-31",
+   "superseded_by": null
+  },
+  "st.ratchadamri": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.ratchadamri.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 9,
+    "body_read": 9,
+    "claims": 12
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027",
+   "superseded_by": null
+  },
+  "st.saint-louis": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.saint-louis.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 9,
+    "body_read": 6,
+    "claims": 12
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "coordinator (app anchor + polygon)",
+   "superseded_by": null
+  },
+  "st.sala-daeng": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.sala-daeng.json",
+   "review": {
+    "status": "ready_for_review",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "stats": {
+    "sources": 23,
+    "body_read": 20,
+    "claims": 18
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-31",
+   "superseded_by": null
+  },
+  "st.saphan-khwai": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.saphan-khwai.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 9,
+    "body_read": 9,
+    "claims": 11
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-05",
+   "superseded_by": null
+  },
+  "st.saphan-taksin": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.saphan-taksin.json",
+   "review": {
+    "status": "ready_for_review",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "stats": {
+    "sources": 14,
+    "body_read": 14,
+    "claims": 17
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2027-02-28",
+   "superseded_by": null
+  },
+  "st.siam": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.siam.json",
+   "review": {
+    "status": "ready_for_review",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "stats": {
+    "sources": 19,
+    "body_read": 19,
+    "claims": 16
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-01",
+   "superseded_by": null
+  },
+  "st.victory-monument": {
+   "preview": null,
+   "tier": "A",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/st.victory-monument.json",
+   "review": {
+    "status": "ready_for_review",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "stats": {
+    "sources": 20,
+    "body_read": 14,
+    "claims": 17
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": "2026-12-31",
+   "superseded_by": null
+  },
+  "thon-buri": {
+   "preview": null,
+   "tier": "B",
+   "copy_eligible": false,
+   "as_of": null,
+   "chunk": "/data/bangkok/editorial/thon-buri.json",
+   "review": {
+    "status": "approved",
+    "signatory": "none|agent",
+    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+    "reviewed_at": "2026-11-08T13:00:00+03:00"
+   },
+   "stats": {
+    "sources": 9,
+    "body_read": 7,
+    "claims": 12
+   },
+   "disclosures": [
+    "disclosure.greenBuffer1km",
+    "disclosure.transportMechanism"
+   ],
+   "recheck_due": null,
+   "superseded_by": null
+  },
+  "bang-bon": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "bang-kapi": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "bang-khae": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "bang-khen": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "bang-kho-laem": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "bang-khun-thian": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "bang-na": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "bangkok-yai": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "bueng-kum": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "chom-thong": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "don-mueang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "huai-khwang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "khan-na-yao": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "khlong-sam-wa": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "khlong-toei": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "lak-si": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "lat-krabang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "lat-phrao": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "min-buri": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "nong-chok": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "nong-khaem": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "phasi-charoen": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "phra-khanong": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "prawet": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "rat-burana": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "sai-mai": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "saphan-sung": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.11th-infantry-regiment": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.ban-thap-chang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-bua": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-chak": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-chan": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-kapi": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-khae": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-khen": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-khun-non": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-na": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-o": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-phai": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-phlat": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-pho": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-son": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-wa": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bang-yi-khan": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bearing": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.bhumibol-adulyadej-hospital": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.chaeng-watthana-14": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.charan-13": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.chatuchak": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.chok-chai-4": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.don-mueang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.ekkamai": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.fai-chai": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.government-complex": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.hua-mak": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.huai-khwang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.itsaraphap": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.kalantan": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.kan-kheha": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.kasetsart-university": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.khlong-toei": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.khu-bon": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.krung-thep-aphiwat": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.krung-thon-buri": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.lak-si": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.lak-song": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.lat-krabang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.lat-phrao-101": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.lat-phrao-71": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.lat-phrao-83": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.lat-phrao": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.lat-pla-khao": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.lumphini": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.mahatthai": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.maiyalap": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.min-buri-market": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.min-buri": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.national-telecom": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.nopparat": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.on-nut": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.outer-ring-road-ram-inthra": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.phahonyothin-24": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.phahonyothin-59": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.phasi-charoen": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.phawana": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.phetkasem-48": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.pho-nimit": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.phra-khanong": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.phrom-phong": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.punnawithi": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.queen-sirikit-national-convention-centre": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.rajabhat-phranakhon": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.ram-inthra-3": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.ram-inthra-kor-mor-4": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.ram-inthra-kor-mor-6": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.ram-inthra-kor-mor-9": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.ramkhamhaeng": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.ratchadaphisek": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.ratchayothin": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.royal-forest-department": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.royal-thai-air-force-museum": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.sai-yud": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.sanam-chai": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.sanam-pao": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.saphan-mai": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.sena-nikhom": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.setthabutbamphen": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.si-iam": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.si-kritha": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.si-la-salle": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.si-nut": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.sirindhorn": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.srinagarindra-38": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.surasak": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.sutthisan": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.talat-phlu": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.taling-chan": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.tao-poon": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.tha-phra": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.thailand-cultural-centre": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.thung-song-hong": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.udom-suk": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.vacharaphol": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.wat-phra-sri-mahathat": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.wat-samian-nari": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.wong-sawang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.wongwian-yai": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.wutthakat": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.yaek-kor-por-aor": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "st.yaek-lam-sali": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "suan-luang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "taling-chan": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "thawi-watthana": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "thung-khru": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "wang-thonglang": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "watthana": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  },
+  "yan-nawa": {
+   "tier": "C",
+   "card": "data_only",
+   "copy_eligible": false,
+   "as_of": null,
+   "review": {
+    "status": "draft",
+    "signatory": "none|agent",
+    "reviewer": null,
+    "reviewed_at": null
+   },
+   "chunk": null,
+   "superseded_by": null
+  }
+ }
+}

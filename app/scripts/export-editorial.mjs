@@ -41,9 +41,7 @@ const TIER_BY_BATCH = {
   '2026-11-08-tail-data-only': 'C',
 };
 const AGENT_REVIEWER = /^agent-review:/;
-const BANNED = /\b(vibrant|hidden gem|something for everyone)\b/i;
 
-const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);
 const isDataOnly = bundle =>
   (bundle.review?.notes ?? []).some(n => String(n).toLowerCase().includes('data-only'));
 
@@ -109,6 +107,16 @@ export function guideSections(editorial, allowedIds) {
   return out;
 }
 
+/** Evidence bar for the card preview: every preview claim corroborated. */
+export function eligiblePreview(bundle) {
+  const pv = bundle.editorial?.preview;
+  if (!pv || !copyEligible(bundle)) return null;
+  const statuses = new Map((bundle.claims ?? []).map(c => [c.id, c.review_status]));
+  const ids = pv.claim_ids ?? [];
+  if (!ids.length || !ids.every(id => statuses.get(id) === 'corroborated')) return null;
+  return { en: pv.text_en };
+}
+
 export function buildIndexEntity(bundle) {
   const entity = bundle.entity;
   const tier = tierOf(bundle);
@@ -118,6 +126,7 @@ export function buildIndexEntity(bundle) {
              review: signoffRecord(bundle), chunk: null, superseded_by: bundle.superseded_by ?? null };
   }
   return {
+    preview: eligiblePreview(bundle),
     tier,
     copy_eligible: copyEligible(bundle),
     as_of: null, // P1: derived from review.reviewed_at / manifest research_completed_at
@@ -126,7 +135,9 @@ export function buildIndexEntity(bundle) {
     stats: { sources: bundle.sources?.length ?? 0,
              body_read: (bundle.sources ?? []).filter(s => s.body_read).length,
              claims: bundle.claims?.length ?? 0 },
-    disclosures: [], // P1: derived from scope_notes/limitation classes (B-3/B-5 families)
+    // E-3 disclosures: program-level rating mechanisms (B-3/B-5 receipts), one
+    // tap from the score. Keys resolve via messages/*/common.json.
+    disclosures: ['disclosure.greenBuffer1km', 'disclosure.transportMechanism'],
     recheck_due: minRecheck(bundle),
     superseded_by: bundle.superseded_by ?? null,
   };

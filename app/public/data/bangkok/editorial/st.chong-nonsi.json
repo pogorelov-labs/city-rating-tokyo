@@ -1,0 +1,606 @@
+{
+ "key": "st.chong-nonsi",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Chong Nonsi is where the BTS Silom line crosses Narathiwas Road at the Sathorn junction, ringed by MahaNakhon, Empire Tower and Sathorn Square within a few hundred metres. The unit's everyday logic is an office clock: pavement food stalls and the weekday-only Lalai Sap market at lunch, an elevated walkway system for the heat and rain, then a widely described emptying after 6 pm and on Sundays. Its one new public space, the Chong Nonsi Canal Park, opened as a 200 m section by the station in December 2021 and the rest of the 4.5 km plan has stalled. Sala Daeng and the edge of the Patpong streets sit about 660–740 m north, so the catchment's nightlife is a fringe phenomenon, not the unit's own street life.",
+   "claims": [
+    "chong-nonsi-c01",
+    "chong-nonsi-c02",
+    "chong-nonsi-c04",
+    "chong-nonsi-c05",
+    "chong-nonsi-c07",
+    "chong-nonsi-c09",
+    "chong-nonsi-c10",
+    "chong-nonsi-c12",
+    "chong-nonsi-c13",
+    "chong-nonsi-c14",
+    "chong-nonsi-c15",
+    "chong-nonsi-c17",
+    "chong-nonsi-c18"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Transit is stacked rather than merely present: BTS on the Silom line, the BRT terminus off the same skywalk (modernized with electric buses and a flat 15 THB fare in 2024), and a river-pier option one stop away.",
+     "claims": [
+      "chong-nonsi-c01",
+      "chong-nonsi-c09"
+     ]
+    },
+    {
+     "en": "Landmark employers and addresses are at walking distance as geometry, not marketing: MahaNakhon roughly 110–120 m and Empire Tower roughly 400 m from the platform.",
+     "claims": [
+      "chong-nonsi-c02"
+     ]
+    },
+    {
+     "en": "Weekday food is dense and cheap by design — pavement stalls feeding an office lunch crowd, plus the weekday-morning Lalai Sap market on Silom Soi 5 near the unit's northern edge.",
+     "claims": [
+      "chong-nonsi-c10"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The weekend empties out: five independent texts describe Sunday inactivity and ghost-town blocks, and two of them call the effect unsettling rather than merely quiet.",
+     "claims": [
+      "chong-nonsi-c14"
+     ]
+    },
+    {
+     "en": "Rent data at the unit level is thin and skewed: a 24,000 THB one-bed median rests on 7 listings, and the 72,000 THB two-bed median is inflated by 72–93 sq m serviced and luxury stock above the reference band.",
+     "claims": [
+      "chong-nonsi-c12",
+      "chong-nonsi-c13"
+     ]
+    },
+    {
+     "en": "The canal park debate was never resolved in the sources: critics called it greenwashing on a traffic-choked canal with only half the entrances signalized and no wheelchair access at the BRT point, and no later source confirms fixes.",
+     "claims": [
+      "chong-nonsi-c07"
+     ]
+    },
+    {
+     "en": "Corridor traffic is a daily tax: peak-hour Sathorn Road taxis are described as unusable and Narathiwas carries a claimed ~300,000 vehicles a day, with road-facing buildings catching the noise.",
+     "claims": [
+      "chong-nonsi-c15"
+     ]
+    }
+   ],
+   "dayNight": [],
+   "variation": [
+    {
+     "en": "The Narathiwas/Sathorn junction is a tower canyon — fast-paced, limited greenery, highest condo density — while inner sois two turns off hold mature trees and older low-rise compounds; guides say rent street-by-street, not by postcode.",
+     "claims": [
+      "chong-nonsi-c18"
+     ]
+    },
+    {
+     "en": "St Louis BTS, opened 2021 about 440 m southwest, is inside the circle but a separate station area with its own hospital-linked traffic — errands and apartment hunting should check which unit an address actually belongs to.",
+     "claims": [
+      "chong-nonsi-c04",
+      "chong-nonsi-c05"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Choose this unit if your week is anchored at a Narathiwas/Sathorn office: one resident's 10-minute walk to work replaced an estimated 45-minute cross-town commute — the mechanism behind the area's whole value proposition.",
+     "claims": [
+      "chong-nonsi-c17"
+     ]
+    },
+    {
+     "en": "Avoid it if weekends are when you live: street-food-first eaters, weekend socializers and anyone needing Sunday conveniences nearby are explicitly screened out by the guides; go one stop north for that life.",
+     "claims": [
+      "chong-nonsi-c17",
+      "chong-nonsi-c14"
+     ]
+    },
+    {
+     "en": "Budget check before signing: one-bed medians near 24,000 THB are the honest baseline; two-bed 'typical' figures are composition-skewed, so price by unit size and building age, not by the station-area median.",
+     "claims": [
+      "chong-nonsi-c12",
+      "chong-nonsi-c13"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Canal park opening hours: a 16:30–21:00 figure appeared in one search snippet and was never confirmed by a body-read source.",
+   "Continuity of the opened park section: opened 25 Dec 2021, but a March 2024 site visit found walkways fenced off — whether it was closed, reopened, or the visit caught finishing works is unresolved.",
+   "Phase 3 (Soi Narathiwas 7–Chan Rd) status in 2025–2026: unverified social-media update says unfinished in 2025 with completion hoped for 2026; no official source read.",
+   "The app's '4.2 ha park within 800 m' could not be reconciled with any sourced area figure (total five-phase project ~70 rai ≈ 11 ha; opened section much smaller).",
+   "The ~300,000 vehicles/day figure for Narathiwas Road is a critic's claim from 2021, never measured in a body-read source.",
+   "Canal smell and flood history: only the 2021 'smelly canal' description exists; one 2026 guide explicitly declined to state flood risk for lack of government data.",
+   "Patpong boundary geometry rests on a single block-level geotag; which bars specifically fall inside 800 m is unknown.",
+   "One Bangkok and other mega-projects: outside the unit and unverified here; not asserted either way.",
+   "No 2024–2026 safety or crime data for the unit was found; the only station-linked incident in sources is the minor 2019 bombing.",
+   "Whether the park's accessibility criticisms (BRT wheelchair access, signalized crossings) were ever remedied is undocumented."
+  ],
+  "attribution_required": [
+   "chong-nonsi-c01",
+   "chong-nonsi-c07",
+   "chong-nonsi-c09",
+   "chong-nonsi-c12",
+   "chong-nonsi-c16"
+  ]
+ },
+ "claims": [
+  {
+   "id": "chong-nonsi-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1999-12-05",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "district attribution for the station itself (Bang Rak) comes from one encyclopedia"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2016-12-01",
+    "observed": "built 1999 (Empire) and 2016 (MahaNakhon)",
+    "recheck": null
+   },
+   "limitations": [
+    "straight-line distances computed from volunteer-maintained coordinates (haversine), not surveyed values",
+    "the 'Ojo' name for the rooftop bar is not confirmed by the Wikipedia article used"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c03",
+   "status": "conflicted",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "computed distances, not measured walking distances; geotag precision is a whole city block",
+    "the far corner of the Patpong block was estimated, not sourced; treat 'partly outside' as low-confidence",
+    "Silom Road's southern stretch inside the circle is plausible from the same coordinates but no source describes it as part of the Chong Nonsi area",
+    "Corrected in the 2026-11-07 quality review: the original text said the fringe 'reaches into the catchment'; the app's nearest-stop model excludes it (verified against the app polygon). Bare-radius distances retained because a plain reading of '800 m circle' would suggest inclusion."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2021-02-08",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "distance is computed from one set of volunteer coordinates"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the app's 68.4/31.6 split itself could not be independently verified against district statistics"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c06",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2021-12-25",
+    "observed": "2020 launch (project announced under Governor Aswin); opened 25 Dec 2021; stalled through Aug 2023 (Barrow) and still fenced Mar 2024 (The Standard); phases 4–5 (toward Rama III) unbuilt",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "whether the opened section stayed continuously open between Dec 2021 and the Mar 2024 fence report is unresolved — the two accounts conflict and neither explains a closure",
+    "no official BMA opening-hours statement found; the 16:30–21:00 evening-hours figure appeared in one search snippet and could not be confirmed by a body-read source",
+    "app fact '4.2 ha park within 800 m' could not be reconciled with any sourced figure (total project ~70 rai ≈ 11 ha per Genie; opened section much smaller)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c07",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": "2021-12-23",
+    "observed": "opening week, Dec 2021",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "all criticisms are attributed opinions from Dec 2021, not measured outcomes (the ~300,000 vehicles/day figure is the critics' claim)",
+    "no post-2021 body-read source confirms or refutes whether accessibility or water-quality issues were fixed",
+    "one-off 2019 minor bombing near the station is recorded separately (c16) and is unrelated to the park"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c08",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide texts updated 2026-08 to 2026-10",
+    "recheck": null
+   },
+   "limitations": [
+    "these are guide authors' judgments, not measured pavement widths or pedestrian counts",
+    "accessibility of the elevated network beyond the park's BRT-point gap (c07) is not covered by any body-read source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-09-01",
+    "observed": "operational status as described on the page retrieved 2026-11-05",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "encyclopedia only; BTSC's own service notices not consulted",
+    "post-2024 ridership data is listed as unpublished on the page"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c10",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide texts 2025–2026; market hours checked Oct 2026 (Bangkok Authority)",
+    "recheck": null
+   },
+   "limitations": [
+    "guide-author opinions, not counts; the app's own figures (419 food places, 86 cafes) are not replicated by any read source",
+    "which named venues fall inside 800 m was not verified address-by-address"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "resident account written 2015; guides updated 2025–2026",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "the 2015 vintage of the resident account means named retail may have changed",
+    "no body-read source confirms a full-size supermarket inside the circle today besides the Empire Tower Tops (status unconfirmed)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c12",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "listings live on 2026-11-03 (DooAsset) and 2026-10-01 (app snapshot)",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "asking rents, not signed leases; excludes unlisted stock",
+    "extremely small n — one or two luxury listings swing the 2-bed median",
+    "a second aggregator (PropMatch, Oct 2026, 89 verified listings) appeared only in a search snippet (avg ~26.8k one-bed / ~71.5k two-bed) — corroborating direction but not read directly, so kept out of evidence"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c13",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "2025–2026 guide editions",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "commercially-published figures without disclosed samples",
+    "'expensive for what you get' is editorial judgment from parties with listing incentives"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c14",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide texts 2025-12 to 2026-10",
+    "recheck": null
+   },
+   "limitations": [
+    "all sources are guide authors; no diaries, counters or timestamped resident reports corroborate the magnitude",
+    "whether the canal-park section and Patpong fringe change the weekend picture at the unit's edges is not documented"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c15",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2021 criticism; guide texts 2025–2026",
+    "recheck": null
+   },
+   "limitations": [
+    "the 300,000 vehicles/day figure is an unverified activist/advocate number",
+    "canal smell and flood history could not be established from body-read sources beyond the critics' 'smelly canal' description of 2021; Baanlyy explicitly declined to state flood risk for lack of government data",
+    "no body-read source on construction-noise timelines in the unit"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c16",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2019-08-02",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no recent (2024–2026) safety or crime data for the unit was found in body-read sources",
+    "one property-site FAQ asserts the corridor is generally safe with regular police presence — commercial and unverified, so kept out of evidence"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c17",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "accounts 2015–2026",
+    "recheck": null
+   },
+   "limitations": [
+    "synthesis judgment, not a measured preference study",
+    "the strongest commuting claim rests on one person's 2015 experience"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "chong-nonsi-c18",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide texts 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "sub-area boundaries are informal; no map in any source draws them inside the 800 m circle",
+    "condo-density and greenery assertions are unquantified"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_dc3414a484f1",
+   "url": "https://en.wikipedia.org/wiki/Bangkok_BRT",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_6041aeffcdcb",
+   "url": "https://en.wikipedia.org/wiki/Chong_Nonsi_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_3aa8bba45e50",
+   "url": "https://en.wikipedia.org/wiki/MahaNakhon",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_3595b2eef256",
+   "url": "https://en.wikipedia.org/wiki/Chong_Nonsi_Canal_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (EN)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_7aafd725b869",
+   "url": "https://th.wikipedia.org/wiki/สวนสาธารณะคลองช่องนนทรี",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (TH)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_d7f4a11502db",
+   "url": "https://thestandard.co/chong-nonsi-canal-phase-2",
+   "body_read": true,
+   "attribution": {
+    "publisher": "THE STANDARD",
+    "family": "The Standard (Thai media)"
+   }
+  },
+  {
+   "id": "src_82a9bd4857e8",
+   "url": "https://www.genie-property.com/blog/คลองช่องนนทรี-สวนสาธารณะเปิดใหม่ใกล้-bts-ช่องนนทรี-พอดแห่งใหม่ของชาวกรุง-2022-99",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Genie Property",
+    "family": "Genie Property"
+   }
+  },
+  {
+   "id": "src_3b3653b687a9",
+   "url": "https://typefully.com/RichardBarrow/chong-nonsi-canal-park-transforming-bangkok-QcSq3yk",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Typefully (Richard Barrow)",
+    "family": "Richard Barrow (independent)"
+   }
+  },
+  {
+   "id": "src_5196a9377bdc",
+   "url": "https://dooasset.com/en/rent/condo/bts-chong-nonsi",
+   "body_read": true,
+   "attribution": {
+    "publisher": "DooAsset",
+    "family": "DooAsset"
+   }
+  },
+  {
+   "id": "src_94f4ec4debe8",
+   "url": "https://www.1dproperty.com/what-i-love-about-living-in-silom-sathon",
+   "body_read": true,
+   "attribution": {
+    "publisher": "1D Property",
+    "family": "1D Property"
+   }
+  },
+  {
+   "id": "src_3882771bd68a",
+   "url": "https://condoreviewsthailand.com/neighborhoods/sathorn",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Condo Reviews Thailand (Condoreviews)",
+    "family": "Condoreviews Thailand"
+   }
+  },
+  {
+   "id": "src_00b9f978d78e",
+   "url": "https://www.bkmagazine.com/city-living/canal-park-costs-billion-baht-to-build-it-worth-it",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BK Magazine",
+    "family": "BK Magazine"
+   }
+  },
+  {
+   "id": "src_88628f7d53df",
+   "url": "https://www.xinxinhomes.com/guides/sathorn",
+   "body_read": true,
+   "attribution": {
+    "publisher": "XinXin Homes",
+    "family": "XinXin Homes"
+   }
+  },
+  {
+   "id": "src_58eb0e6ca31c",
+   "url": "https://www.isranews.org/article/isranews-news/106144-bkk-chong-nonsi-canal-park-Phase-3-e-bidding-news.html",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Isranews",
+    "family": "Isranews"
+   }
+  },
+  {
+   "id": "src_8fb285829115",
+   "url": "https://bangkokauthority.com/en/articles/silom-sathorn-bangkok",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Authority",
+    "family": "Bangkok Authority"
+   }
+  },
+  {
+   "id": "src_92f9199a81c7",
+   "url": "https://baanlyy.com/learn/living-in-sathorn",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Baanlyy",
+    "family": "Baanlyy"
+   }
+  },
+  {
+   "id": "src_72ccd1bf6f8f",
+   "url": "https://planwellabroad.com/articles/living-in-sathorn-bangkok",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Plan Well Abroad",
+    "family": "Plan Well Abroad"
+   }
+  },
+  {
+   "id": "src_d0b08f1d1e1a",
+   "url": "https://www.asia-relocation.com/sathorn-rental-market-guide-for-expats-in-bangkok-2025/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Asia Relocation",
+    "family": "Asia Relocation"
+   }
+  },
+  {
+   "id": "src_0f696490d0d4",
+   "url": "https://en.wikipedia.org/wiki/Sala_Daeng_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_272eb575bcf2",
+   "url": "https://en.wikipedia.org/wiki/Patpong",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_adca2b7c51da",
+   "url": "https://en.wikipedia.org/wiki/Empire_Tower,_Bangkok",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_2044e157daff",
+   "url": "https://en.wikipedia.org/wiki/Saint_Louis_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia"
+   }
+  }
+ ]
+}

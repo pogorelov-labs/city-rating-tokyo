@@ -1,0 +1,406 @@
+{
+ "key": "st.ratchaprarop",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Ratchaprarop is the app's ARL-only control: no BTS or MRT interchange, just City Line service (10-13 min headways) to Suvarnabhumi and a one-stop transfer at Phaya Thai. Its transport 9 is 'airport rail plus everything nearby' — Pratunam's wholesale blocks, Platinum Fashion Mall's economy and the Pratunam canal pier — not rail density. Suan Rom Ratchathewi (1.70 ha, 343-471 m) is the verifiable in-unit green; the mapped 3.2 ha figure matches Santiphap Park straddling the 800 m edge. Safety 5 repeats the dataset's unanchored pattern. The MRT Orange Line runs under Ratchaprarop Road with an ARL interchange targeted for July 2030.",
+   "claims": [
+    "ratchaprarop-c06",
+    "ratchaprarop-c09",
+    "ratchaprarop-c07",
+    "ratchaprarop-c12",
+    "ratchaprarop-c10",
+    "ratchaprarop-c01"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Airport rail at the door: ARL City Line headways of 10-13 minutes and 70,887 daily riders (2026 Q1) make airport commuting the unit's defining convenience.",
+     "claims": [
+      "ratchaprarop-c06"
+     ]
+    },
+    {
+     "en": "Suan Rom Ratchathewi (1.70 ha, 343-471 m) is polygon-verified in-unit green.",
+     "claims": [
+      "ratchaprarop-c09"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Transport 9 has no interchange behind it: ARL headways trail BTS 2.4-6 minutes, and the unit depends on buses and walking for non-airport trips.",
+     "claims": [
+      "ratchaprarop-c07"
+     ]
+    },
+    {
+     "en": "Safety 5 is the third entity in a row with zero unit-level statistics; only alleged tourist-scam reports (bag-slicing, pickpocket alleys) exist.",
+     "claims": [
+      "ratchaprarop-c12"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Wholesale-market hours set the day; the garment district's evenings thin earlier than the nearby hotel belt.",
+     "claims": [
+      "ratchaprarop-c10"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The ARL/Pratunam frontage differs from the quieter Ratchaprarop sois west toward Santiphap.",
+     "claims": [
+      "ratchaprarop-c01"
+     ]
+    }
+   ],
+   "fit": []
+  },
+  "uncertainties": [
+   "rating transport (9): Defensible only as 'airport rail + everything nearby', not as interchange quality: no BTS/MRT interchange on site today, headway 10-13 min vs BTS 2.4-6 min, express never served this station. The MRT Orange Line interchange under construction (opening target 2030) will retroactively validate the 9, but the rating describes a pre-2030 condition.",
+   "rating rent (7): District blend (18,000/38,000 editorial) is corroborated by FazWaz (median 25,100; 1-BR avg 25,500; older Baiyoke-side stock 18,000-20,500). Own-stock evidence puts the unit's older condos at the affordable end of the district band - rent 7 holds as 'moderate'.",
+   "rating daily_essentials (9): Convenience density (32 stores, 25+ 7-Eleven) plus the market belt plus Phyathai 1 Hospital at ~285 m. Note the OSM absence of any supermarket inside 800 m - the 9 leans on small-format retail, which matches how the district actually shops.",
+   "rating safety (5): Third entity in a row where safety 5 has no unit-specific statistical support. Evidence is reported-perception only (alleged bag-slicing 2023; 'hell alley' pickpocket-prone alley; citywide #1 pickpocket ranking). The score should be understood as a placeholder for an unverifiable mid-band, not a measurement.",
+   "rating food (8): Market food culture is well documented (Go-Ang Bib Gourmand; Platinum food court; dawn/night stalls); 336 app food venues vs 94 OSM-tagged eateries shows OSM under-coverage, not app inflation.",
+   "rating green (8): Weakest-supported high score: only 1.70 ha verifiably in-unit; the 3.2 ha figure most plausibly names Santiphap Park, whose centroid straddles the 800 m edge and whose Voronoi ownership is boundary-dependent. Flag for polygon review.",
+   "rating gym_sports (9): Least-evidenced score in open data: OSM shows Anytime Fitness, Topkart, 2 pools (1200 m radius) and 8 pitches. The 9 plausibly counts hotel gyms/pools (Baiyoke, Novotel Platinum) - researcher inference, no direct source. Flag.",
+   "rating vibe (8): Trade-market character with a skyline anchor (304 m Baiyoke II at ~200 m) and a documented 'colorful and chaotic' tourist framing; vibe 8 reads as day-market energy, not evening leisure.",
+   "rating nightlife (8): 21 venues vs 0 OSM nightclubs: the stock is hotel bars/karaoke/rooftops. The score is plausible but its composition (late-closing hotels vs dedicated nightlife) is unverified.",
+   "rating crowd (3): Best-corroborated negative: every source describes crush conditions (dawn market hell-alley, 'armies of local vendors', chaotic streets). Crowd 3 is honest and possibly conservative for mid-day market hours."
+  ],
+  "attribution_required": [
+   "ratchaprarop-c04",
+   "ratchaprarop-c10",
+   "ratchaprarop-c11"
+  ]
+ },
+ "claims": [
+  {
+   "id": "ratchaprarop-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c02",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c04",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c08",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c11",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c12",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c13",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c14",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c15",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c16",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchaprarop-c17",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap via Overpass API",
+    "family": "OpenStreetMap via Overpass API"
+   }
+  },
+  {
+   "id": "src_0ffc7b2e1322",
+   "url": "https://en.wikipedia.org/wiki/Airport_Rail_Link_(Bangkok)",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_66b1411bd411",
+   "url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_6c851769cf57",
+   "url": "https://en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_9b0fde7684f5",
+   "url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_Express_Boat",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_c5f3c99ec332",
+   "url": "https://en.wikipedia.org/wiki/BTS_Skytrain",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia EN)",
+    "family": "Wikimedia (Wikipedia EN)"
+   }
+  },
+  {
+   "id": "src_e0699ecb5ccd",
+   "url": "https://en.wikipedia.org/api/rest_v1/page/summary/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikimedia (Wikipedia REST summary API)",
+    "family": "Wikimedia (Wikipedia REST summary API)"
+   }
+  },
+  {
+   "id": "src_13ffd9d3912f",
+   "url": "https://www.mrta.co.th/en/the-orange-line-Bang%20Khun%20Non",
+   "body_read": true,
+   "attribution": {
+    "publisher": "MRTA (Mass Rapid Transit Authority of Thailand, official)",
+    "family": "MRTA (Mass Rapid Transit Authority of Thailand, official)"
+   }
+  },
+  {
+   "id": "src_a46712848c7c",
+   "url": "https://www.wongnai.com/beauty-tips/shopping-guide-night-pratunam",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wongnai (LINE Wongnai)",
+    "family": "Wongnai (LINE Wongnai)"
+   }
+  },
+  {
+   "id": "src_eaf0e1b2770c",
+   "url": "https://says.com/my/news/woman-warns-of-pickpockets-at-bangkok-after-her-bag-gets-allegedly-sliced-open",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SAYS",
+    "family": "SAYS"
+   }
+  },
+  {
+   "id": "src_11d0afa11d99",
+   "url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "body_read": true,
+   "attribution": {
+    "publisher": "FazWaz",
+    "family": "FazWaz"
+   }
+  },
+  {
+   "id": "src_d9cb7bb63d51",
+   "url": "https://www.platinumfashionmall.com/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Platinum Fashion Mall (official corporate site)",
+    "family": "The Platinum Fashion Mall (official corporate site)"
+   }
+  },
+  {
+   "id": "src_13f4f82d654f",
+   "url": "https://www.hotels.com/go/thailand/bangkok-pratunam",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Hotels.com Go Guides (Expedia Group; bangkok.com 301-redirects here)",
+    "family": "Hotels.com Go Guides (Expedia Group; bangkok.com 301-redirects here)"
+   }
+  }
+ ]
+}

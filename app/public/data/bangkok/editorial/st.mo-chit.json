@@ -1,0 +1,566 @@
+{
+ "key": "st.mo-chit",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "This is a station area that changes personality with the calendar: on Saturdays the outer aisles of Chatuchak pull in the city and half the tourist map, while by Tuesday morning the sois behind Phahonyothin are quiet enough for three-table noodle shops. The two stations — BTS Mo Chit and MRT Chatuchak Park — interchange at street level, and a covered walkway completed in July 2026 finally shades that transfer. The four-park complex at the door (botanical Queen Sirikit Park, the 3-km Rot Fai loop) is the strongest everyday asset, and it is public. What keeps this from being an easy story is the market itself: halved footfall, a Section 30 eviction fight, and contracts that all expire on 31 October 2027.",
+   "claims": [
+    "mo-chit-c01",
+    "mo-chit-c05",
+    "mo-chit-c07",
+    "mo-chit-c09",
+    "mo-chit-c11",
+    "mo-chit-c12",
+    "mo-chit-c13",
+    "mo-chit-c14",
+    "mo-chit-c16",
+    "mo-chit-c17"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Double transit anchor with a dedicated, now-covered BTS-MRT transfer walk, plus a 450 m median skywalk on the Phahonyothin side.",
+     "claims": [
+      "mo-chit-c01",
+      "mo-chit-c09"
+     ]
+    },
+    {
+     "en": "A four-park public green complex — botanical plantings, lotus ponds, a 3-km cycle loop, lake boats — directly reachable from the stations.",
+     "claims": [
+      "mo-chit-c07"
+     ]
+    },
+    {
+     "en": "Food economics work on market days: rice-and-curry from about 50 baht in the lanes, with the premium counter-option of Or Tor Kor next door.",
+     "claims": [
+      "mo-chit-c11"
+     ]
+    },
+    {
+     "en": "Condo rents run visibly below the Sukhumvit corridor while keeping a direct line to the centre.",
+     "claims": [
+      "mo-chit-c13"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Supermarket-tier groceries sit one MRT stop or a ride away; inside the catchment it is 7-Eleven tier.",
+     "claims": [
+      "mo-chit-c12"
+     ]
+    },
+    {
+     "en": "Crowded afternoon lanes carry explicit pickpocket and scam warnings.",
+     "claims": [
+      "mo-chit-c14"
+     ]
+    },
+    {
+     "en": "Bars exist only inside the market's weekend clock; there is no nightly district here.",
+     "claims": [
+      "mo-chit-c16"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Evening drinking is bounded by the market's own hours: the sit-down bar options open Sat-Sun.",
+     "claims": [
+      "mo-chit-c16"
+     ]
+    }
+   ],
+   "variation": [],
+   "fit": [
+    {
+     "en": "Strong fit: families and space-seekers wanting park access and BTS/MRT reach at below-corridor rents.",
+     "claims": [
+      "mo-chit-c17",
+      "mo-chit-c07",
+      "mo-chit-c13"
+     ]
+    },
+    {
+     "en": "Poor fit: Silom-commute professionals, Sukhumvit-nightlife seekers, and households needing in-catchment supermarkets or premium gyms.",
+     "claims": [
+      "mo-chit-c17",
+      "mo-chit-c12"
+     ]
+    },
+    {
+     "en": "Tolerance test: anyone who cannot absorb weekend tourist volume — crowds, noise, parking loss — should pick streets away from the Kamphaeng Phet side.",
+     "claims": [
+      "mo-chit-c17",
+      "mo-chit-c14"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Park-area totals conflict across sources (~120 ha per Thai Wikipedia vs the app's 149.2/167.1 ha figures); no verified single number exists without an OSM check.",
+   "Stall and vendor counts span 8,000+ to 15,000+ depending on source and year; the real denominator is unknown.",
+   "Whether the clock-tower/Section 30 landmark conversion actually proceeded after the April 2025 deadline is unverified in 2026 reporting.",
+   "No verified hospital or premium-gym inventory inside the 800 m catchment; the property portal that named hospitals was unreachable."
+  ],
+  "attribution_required": [
+   "mo-chit-c01",
+   "mo-chit-c12",
+   "mo-chit-c17"
+  ]
+ },
+ "claims": [
+  {
+   "id": "mo-chit-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2004-07-03",
+    "observed": "stations operating 1999/2004 to present; ridership figure for 2021",
+    "recheck": null
+   },
+   "limitations": [
+    "Ridership figure is from 2021 and understates current volumes."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "market operating since 1942; BMA-managed since 2018",
+    "recheck": null
+   },
+   "limitations": [
+    "'27 sections' (Wikipedia) and 'projects 1-31' (BMA) are different enumeration conventions for the same layout."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c03",
+   "status": "conflicted",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "2019-2026 figures compared",
+    "recheck": "2027-10-31"
+   },
+   "limitations": [
+    "Counts measure different things (registered rights vs active traders vs marketing copy) at different dates; no single verified denominator exists."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c04",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-02-19",
+    "observed": "protests from Sep 2024; deadline 30 Apr 2025; Spacebar (Aug 2026) still describes Section 30 as under cancellation planning",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "BMA's stated rationale (9 m walkway) conflicts with the market director's 5 m figure (source 2); both are official statements at different times.",
+    "Post-April-2025 execution status not found in 2026 reporting read."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c05",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "petitions Jan 2024 - Jul 2026; Spacebar analysis Aug 2026",
+    "recheck": "2027-10-31"
+   },
+   "limitations": [
+    "Visitor and vendor-share figures are management-sourced and unaudited; the fee-change sequence (2,800 then 2,300) comes from a politician's account reported by Thai News Agency via secondary coverage, not from BMA documents.",
+    "Interior vs outer-aisle traffic split is a journalistic characterization, not a measured flow."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c06",
+   "status": "conflicted",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "parks opened 1980/1996/2002; figures compared 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Per-park totals cannot be reconciled without the blocked OSM query; treated as conflicting rather than averaged.",
+    "The fourth park (Chak Phupha Su Maha Nathee, 26 rai) is rarely listed in English guides, which may explain divergent 'three-park' totals."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "facilities operating 2002-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Rot Fai Park's full facility set lies mostly north of the 800 m line; its southern edge is what the unit touches.",
+    "Rental-guide characterization is promotional in intent (commercial source)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1998-04-08",
+    "observed": "operating 1998-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "'Approximately 2 kilometers' is a walking distance per the terminal article; straight-line distance from BTS Mo Chit is shorter (~1.3 km by the cited coordinates) — either way outside an 800 m catchment."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2026-07-17",
+    "observed": "works 1 Dec 2025 - accepted 17 Jul 2026 (BMA progress report); skywalk opened 15 Jul 2018",
+    "recheck": null
+   },
+   "limitations": [
+    "BMA page metadata is self-contradictory (12% header vs 100%/accepted in report table) and its listed coordinates do not match Mo Chit; the acceptance date is the report table's statement.",
+    "Prachachat item is snippet-only and 2018-dated; used only for the skywalk's existence and length, never as sole evidence."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c10",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "weekly schedule as published 2025; interior-quiet pattern reported Aug 2026",
+    "recheck": "2027-10-31"
+   },
+   "limitations": [
+    "Saturday-Sunday opening hour conflicts across guides (09:00 vs 10:00); market-info site corroborates 09:00 at snippet level only.",
+    "The 200,000 visitor figure is a long-standing marketing statistic predating the reported 2026 footfall decline."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2017-04-18",
+    "observed": "CNN ranking 2017; menu prices as published Jan 2025",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "Prices are single-guide snapshots, not systematic price surveys.",
+    "OTK's catchment relation is unknown pending polygon check."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c12",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide published 2026-04-25",
+    "recheck": "2027-04-30"
+   },
+   "limitations": [
+    "Sole substantive evidence is a commercial rental-platform guide; treat as reported perception, not verified fact.",
+    "Exact in-catchment supermarket presence is unknown; an OSM-backed check by the coordinator is needed."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c13",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "listings labelled 2026 market reference; guide 2026-04-25",
+    "recheck": "2027-04-30"
+   },
+   "limitations": [
+    "Asking prices only; no signed-contract or time-series data.",
+    "Agency medians derive from each portal's own inventory; commercial context."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c14",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "warnings current as of 2024-2025 publications",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "No quantified crime-rate data for the station area; embassy guidance is country-level corroboration, not site-specific.",
+    "The market's crowded-lane conditions that enable pickpocketing are themselves seasonal (market days)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c15",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": "2024-06-11",
+    "observed": "wildlife surveys 2008-2016; fire Jun 2024; guide advice Jan 2025",
+    "recheck": null
+   },
+   "limitations": [
+    "Wildlife-trade studies are dated 2008-2016; current enforcement status unverified.",
+    "Pet-zone stall locations come from a guide mapping, not an official layout."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c16",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide Jan 2025; venue operations ongoing per 2026 market-site articles found in search",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "Nightlife evidence is guide-level, not resident-report level; weekday-evening options inside the catchment were not verifiable.",
+    "A market-dedicated tourism site's 2026 bar roundup (snippet-level) names the same venues, corroborating but not extending coverage."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "mo-chit-c17",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide 2026-04-25",
+    "recheck": "2027-10-31"
+   },
+   "limitations": [
+    "Single commercial-portal viewpoint; corroborated directionally by the Time Out 'hot and crowded' description and Spacebar's outer-aisle crowding report, but no resident-survey data."
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_a806cc8f74c1",
+   "url": "https://www.bangkokpost.com/thailand/general/2964115/hundreds-of-vendors-at-chatuchak-market-given-deadline-to-move",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Post",
+    "family": "bangkokpost"
+   }
+  },
+  {
+   "id": "src_dd9659a3b6b2",
+   "url": "https://www.bangkokpost.com/thailand/general/2954112/vendors-evicted-from-profitless-chatuchak-zone",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Post",
+    "family": "bangkokpost"
+   }
+  },
+  {
+   "id": "src_0318aa00871a",
+   "url": "https://www.nationthailand.com/news/general/40041314",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation Thailand",
+    "family": "nationthailand"
+   }
+  },
+  {
+   "id": "src_79bdb062b2fb",
+   "url": "https://thestandard.co/bangkok-chatuchak-market-rent-fines/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "THE STANDARD",
+    "family": "thestandard"
+   }
+  },
+  {
+   "id": "src_a768b12f5715",
+   "url": "https://editors.spacebar.th/business/chatuchak-crisis-half-number-shoppers-disappeared-leaving-only-13000-stalls-vendors",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SPACEBAR",
+    "family": "spacebar"
+   }
+  },
+  {
+   "id": "src_94f622063906",
+   "url": "https://thethaiger.com/news/bangkok/times-up-stallholders-at-chatuchak-weekend-market-told-to-leave",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thaiger",
+    "family": "thaiger"
+   }
+  },
+  {
+   "id": "src_398714d2c425",
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Weekend_Market",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_53a89f59fa15",
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_9ef38b83da10",
+   "url": "https://en.wikipedia.org/wiki/Queen_Sirikit_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_59000fbbc8a7",
+   "url": "https://en.wikipedia.org/wiki/Wachirabenchathat_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_ee244599da9b",
+   "url": "https://th.wikipedia.org/wiki/สวนจตุจักร",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_55f4700620dd",
+   "url": "https://en.wikipedia.org/wiki/Mo_Chit_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_b983ac3c6af6",
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Park_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_243589e89c48",
+   "url": "https://en.wikipedia.org/wiki/Mo_Chit_2_Bus_Terminal",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_75d455450b85",
+   "url": "https://policy.bangkok.go.th/watch/pub-project/legacy?id=63918",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Metropolitan Administration (policy.bangkok.go.th)",
+    "family": "bangkok.go.th"
+   }
+  },
+  {
+   "id": "src_44f98e75cb99",
+   "url": "https://www.prachachat.net/hilight-prachachat/news-194941",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Prachachat",
+    "family": "prachachat"
+   }
+  },
+  {
+   "id": "src_572a8e43ac16",
+   "url": "https://www.timeout.com/bangkok/things-to-do/chatuchak-weekend-market-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "timeout"
+   }
+  },
+  {
+   "id": "src_ead91fa9bf94",
+   "url": "https://www.sonicresidence.com/condo/chatuchak",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Sonic Residence",
+    "family": "sonicresidence"
+   }
+  },
+  {
+   "id": "src_c46755c79da4",
+   "url": "https://www.superagent.co/en/blog/renting-near-jj-market-chatuchak-weekend-market-living-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Superagent",
+    "family": "superagent"
+   }
+  },
+  {
+   "id": "src_e022724089f9",
+   "url": "https://www.khaosodenglish.com/life/food/2017/04/28/pride-produce-puts-bangkoks-tor-kor-market-among-worlds-best/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Khaosod English",
+    "family": "khaosodenglish"
+   }
+  },
+  {
+   "id": "src_00811e6fccad",
+   "url": "https://www.pilotguides.com/articles/bangkok-shopping-guide/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Pilot Guides",
+    "family": "pilotguides"
+   }
+  },
+  {
+   "id": "src_68fefefab27e",
+   "url": "https://th.usembassy.gov/common-scams-to-avoid/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "U.S. Embassy & Consulate in Thailand",
+    "family": "usmission"
+   }
+  }
+ ]
+}
