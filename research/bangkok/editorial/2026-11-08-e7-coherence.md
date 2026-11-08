@@ -87,5 +87,5 @@ differ by soi without contradiction; Jodd Fairs demolition carried identically t
 batch-4 records.
 
 **Verdict: G22 now covers all six corridors — zero framing contradictions found
-anywhere; the fix queue remains empty.** Cross-bundle fact spot-checks continue to
+anywhere at sweep time; the fix queue remains empty.** — **Staleness caveat (fourth review): the sweeps ran against the tier-B bundles of the 9 entities batch 5 later upgraded (e.g. sala-daeng in the Silom corridor, siam/chit-lom in Sukhumvit-core). Corridor framings must be re-checked against the tier-A bundles before integration — queued as a pre-E-2 step, scoped to the 9 upgraded units.** Cross-bundle fact spot-checks continue to
 hold (One Bangkok ×4; dual Pathum Wan blends correctly flagged, not smoothed).

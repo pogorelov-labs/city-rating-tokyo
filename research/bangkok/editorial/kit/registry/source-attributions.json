@@ -19,6 +19,44 @@
     ]
    }
   },
+  "https://amazingproperties.org/search/bangkok/condo-for-rent/chidlom": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "Amazing Properties",
+   "publisher_family": "amazingproperties",
+   "title": "47 Condos for Rent in Chidlom, Bangkok (Nov 2026)",
+   "variants": {
+    "publisher": [
+     "Amazing Properties"
+    ],
+    "publisher_family": [
+     "amazingproperties"
+    ],
+    "title": [
+     "47 Condos for Rent in Chidlom, Bangkok (Nov 2026)"
+    ]
+   }
+  },
+  "https://aroimakmak.com/jodd-fairs": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "aroimakmak",
+   "publisher_family": "aroimakmak",
+   "title": "Jodd Fairs",
+   "variants": {
+    "publisher": [
+     "aroimakmak"
+    ],
+    "publisher_family": [
+     "aroimakmak"
+    ],
+    "title": [
+     "Jodd Fairs"
+    ]
+   }
+  },
   "https://artasiapacific.com/news/private-art-space-takes-over-factory-in-bangkok-s-chinatown": {
    "cited_by": [
     "pom-prap-sattru-phai"
@@ -35,6 +73,44 @@
     ],
     "title": [
      "Private Art Space Takes Over Factory in Bangkok's Chinatown"
+    ]
+   }
+  },
+  "https://article.redprice.co/lalaisap-silom5/": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Redprice (article.redprice.co)",
+   "publisher_family": "Redprice",
+   "title": "รวมร้านอร่อยซอยละลายทรัพย์ (สีลม ซอย 5)",
+   "variants": {
+    "publisher": [
+     "Redprice (article.redprice.co)"
+    ],
+    "publisher_family": [
+     "Redprice"
+    ],
+    "title": [
+     "รวมร้านอร่อยซอยละลายทรัพย์ (สีลม ซอย 5)"
+    ]
+   }
+  },
+  "https://asianews.network/bangkok-car-free-2026-encourages-residents-to-switch-travel-modes/": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Asia News Network",
+   "publisher_family": "Nation (Asia News Network syndication of a Nation byline)",
+   "title": "Bangkok Car Free 2026 encourages residents to switch travel modes",
+   "variants": {
+    "publisher": [
+     "Asia News Network"
+    ],
+    "publisher_family": [
+     "Nation (Asia News Network syndication of a Nation byline)"
+    ],
+    "title": [
+     "Bangkok Car Free 2026 encourages residents to switch travel modes"
     ]
    }
   },
@@ -152,6 +228,25 @@
     ]
    }
   },
+  "https://bangkokforvisitors.com/districts/victory-monument/": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Bangkok for Visitors",
+   "publisher_family": "Bangkok for Visitors (independent site)",
+   "title": "Victory Monument Area",
+   "variants": {
+    "publisher": [
+     "Bangkok for Visitors"
+    ],
+    "publisher_family": [
+     "Bangkok for Visitors (independent site)"
+    ],
+    "title": [
+     "Victory Monument Area"
+    ]
+   }
+  },
   "https://bangkokup.com/patpong-bangkok": {
    "cited_by": [
     "st.sala-daeng"
@@ -168,6 +263,25 @@
     ],
     "title": [
      "Patpong Bangkok"
+    ]
+   }
+  },
+  "https://bangkokvenues.com/areas/siam/": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "Bangkok Venues",
+   "publisher_family": "Bangkok Venues",
+   "title": "Siam Nightlife - Best Bars, Clubs & Rooftops in Siam, Bangkok",
+   "variants": {
+    "publisher": [
+     "Bangkok Venues"
+    ],
+    "publisher_family": [
+     "Bangkok Venues"
+    ],
+    "title": [
+     "Siam Nightlife - Best Bars, Clubs & Rooftops in Siam, Bangkok"
     ]
    }
   },
@@ -225,6 +339,25 @@
     ],
     "title": [
      "มาแน่ 'One Bangkok' เปิดจริง 25 ตุลาคมนี้ (Brand Inside)"
+    ]
+   }
+  },
+  "https://brownpoliticalreview.org/lost-in-transformation": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "Brown Political Review",
+   "publisher_family": "Brown Political Review",
+   "title": "Lost in Transformation",
+   "variants": {
+    "publisher": [
+     "Brown Political Review"
+    ],
+    "publisher_family": [
+     "Brown Political Review"
+    ],
+    "title": [
+     "Lost in Transformation"
     ]
    }
   },
@@ -555,6 +688,44 @@
     ]
    }
   },
+  "https://dusitcentralpark.com/": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Vimarn Suriya / Dusit Central Park project",
+   "publisher_family": "Dusit Thani Group",
+   "title": "Dusit Central Park - official project site",
+   "variants": {
+    "publisher": [
+     "Vimarn Suriya / Dusit Central Park project"
+    ],
+    "publisher_family": [
+     "Dusit Thani Group"
+    ],
+    "title": [
+     "Dusit Central Park - official project site"
+    ]
+   }
+  },
+  "https://e.vnexpress.net/news/travel/places/49-storey-ghost-tower-in-bangkok-goes-viral-after-surviving-powerful-earthquake-4869103.html": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "VnExpress International",
+   "publisher_family": "vnexpress",
+   "title": "49-storey 'Ghost Tower' in Bangkok goes viral after surviving powerful earthquake",
+   "variants": {
+    "publisher": [
+     "VnExpress International"
+    ],
+    "publisher_family": [
+     "vnexpress"
+    ],
+    "title": [
+     "49-storey 'Ghost Tower' in Bangkok goes viral after surviving powerful earthquake"
+    ]
+   }
+  },
   "https://edition.cnn.com/travel/article/sathorn-unique-tower-bangkok-abandoned/index.html": {
    "cited_by": [
     "st.saphan-taksin"
@@ -571,6 +742,25 @@
     ],
     "title": [
      "Sathorn Unique tower coverage (CNN)"
+    ]
+   }
+  },
+  "https://editors.spacebar.th/business/chatuchak-crisis-half-number-shoppers-disappeared-leaving-only-13000-stalls-vendors": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "SPACEBAR",
+   "publisher_family": "spacebar",
+   "title": "เจาะลึกวิกฤต 'จตุจักร' คนเดินหายไปครึ่ง ผู้ค้าเหลือ 1.3 หมื่นแผง",
+   "variants": {
+    "publisher": [
+     "SPACEBAR"
+    ],
+    "publisher_family": [
+     "spacebar"
+    ],
+    "title": [
+     "เจาะลึกวิกฤต 'จตุจักร' คนเดินหายไปครึ่ง ผู้ค้าเหลือ 1.3 หมื่นแผง"
     ]
    }
   },
@@ -746,6 +936,25 @@
     ],
     "title": [
      "Asok BTS station"
+    ]
+   }
+  },
+  "https://en.wikipedia.org/wiki/BNH_Hospital": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "Wikipedia",
+   "publisher_family": "wikimedia",
+   "title": "BNH Hospital",
+   "variants": {
+    "publisher": [
+     "Wikipedia"
+    ],
+    "publisher_family": [
+     "wikimedia"
+    ],
+    "title": [
+     "BNH Hospital"
     ]
    }
   },
@@ -1005,6 +1214,7 @@
   "https://en.wikipedia.org/wiki/Benjakitti_Park": {
    "cited_by": [
     "st.asok",
+    "st.phetchaburi",
     "st.thong-lo"
    ],
    "publisher": "Wikipedia",
@@ -1061,6 +1271,25 @@
     ]
    }
   },
+  "https://en.wikipedia.org/wiki/Central_GR9": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "title": "Central GR9",
+   "variants": {
+    "publisher": [
+     "Wikipedia"
+    ],
+    "publisher_family": [
+     "Wikimedia"
+    ],
+    "title": [
+     "Central GR9"
+    ]
+   }
+  },
   "https://en.wikipedia.org/wiki/Central_Ladprao": {
    "cited_by": [
     "st.ha-yaek-lat-phrao"
@@ -1077,6 +1306,25 @@
     ],
     "title": [
      "Central Ladprao"
+    ]
+   }
+  },
+  "https://en.wikipedia.org/wiki/Charoen_Krung_Road": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "Wikipedia",
+   "publisher_family": "wikimedia",
+   "title": "Charoen Krung Road",
+   "variants": {
+    "publisher": [
+     "Wikipedia"
+    ],
+    "publisher_family": [
+     "wikimedia"
+    ],
+    "title": [
+     "Charoen Krung Road"
     ]
    }
   },
@@ -1104,7 +1352,7 @@
     "st.ha-yaek-lat-phrao",
     "st.mo-chit"
    ],
-   "publisher": "Wikipedia",
+   "publisher": "Wikipedia (English)",
    "publisher_family": "Wikipedia",
    "title": "Chatuchak Park",
    "variants": {
@@ -1114,6 +1362,7 @@
     ],
     "publisher_family": [
      "Wikipedia",
+     "wikimedia",
      "wikipedia"
     ],
     "title": [
@@ -1123,16 +1372,19 @@
   },
   "https://en.wikipedia.org/wiki/Chatuchak_Park_MRT_station": {
    "cited_by": [
-    "st.ha-yaek-lat-phrao"
+    "st.ha-yaek-lat-phrao",
+    "st.mo-chit"
    ],
    "publisher": "Wikipedia",
-   "publisher_family": "wikipedia",
+   "publisher_family": "wikimedia",
    "title": "Chatuchak Park MRT station",
    "variants": {
     "publisher": [
-     "Wikipedia"
+     "Wikipedia",
+     "Wikipedia (English)"
     ],
     "publisher_family": [
+     "wikimedia",
      "wikipedia"
     ],
     "title": [
@@ -1143,7 +1395,8 @@
   "https://en.wikipedia.org/wiki/Chatuchak_Weekend_Market": {
    "cited_by": [
     "chatuchak",
-    "st.ha-yaek-lat-phrao"
+    "st.ha-yaek-lat-phrao",
+    "st.mo-chit"
    ],
    "publisher": "English Wikipedia",
    "publisher_family": "English Wikipedia",
@@ -1151,10 +1404,12 @@
    "variants": {
     "publisher": [
      "English Wikipedia",
-     "Wikipedia"
+     "Wikipedia",
+     "Wikipedia (English)"
     ],
     "publisher_family": [
      "English Wikipedia",
+     "wikimedia",
      "wikipedia"
     ],
     "title": [
@@ -1205,9 +1460,9 @@
     "st.chit-lom",
     "st.phloen-chit"
    ],
-   "publisher": "Wikipedia",
+   "publisher": "Wikipedia (English)",
    "publisher_family": "Wikipedia",
-   "title": "Chit Lom BTS Station",
+   "title": "Chit Lom BTS station",
    "variants": {
     "publisher": [
      "Wikipedia",
@@ -1215,6 +1470,7 @@
     ],
     "publisher_family": [
      "Wikipedia",
+     "wikimedia",
      "wikipedia"
     ],
     "title": [
@@ -1387,7 +1643,7 @@
     "pathum-wan",
     "st.chit-lom"
    ],
-   "publisher": "Wikipedia",
+   "publisher": "Wikipedia (English)",
    "publisher_family": "Wikipedia",
    "title": "Erawan Shrine",
    "variants": {
@@ -1397,6 +1653,7 @@
     ],
     "publisher_family": [
      "Wikipedia",
+     "wikimedia",
      "wikipedia"
     ],
     "title": [
@@ -1453,8 +1710,8 @@
     "st.hua-lamphong",
     "st.wat-mangkon"
    ],
-   "publisher": "Wikipedia",
-   "publisher_family": "Wikipedia",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
    "title": "Hua Lamphong MRT station",
    "variants": {
     "publisher": [
@@ -1462,6 +1719,7 @@
      "Wikipedia (English)"
     ],
     "publisher_family": [
+     "Wikimedia",
      "Wikipedia",
      "wikimedia"
     ],
@@ -1473,17 +1731,19 @@
   "https://en.wikipedia.org/wiki/Hua_Lamphong_railway_station": {
    "cited_by": [
     "samphanthawong",
+    "st.hua-lamphong",
     "st.sam-yan"
    ],
-   "publisher": "Wikipedia",
-   "publisher_family": "Wikipedia",
-   "title": "Bangkok (Hua Lamphong) railway station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
+   "title": "Hua Lamphong railway station",
    "variants": {
     "publisher": [
      "Wikipedia",
      "Wikipedia (English)"
     ],
     "publisher_family": [
+     "Wikimedia",
      "Wikipedia",
      "Wikipedia (Wikimedia)"
     ],
@@ -1633,6 +1893,7 @@
   },
   "https://en.wikipedia.org/wiki/Khlong_Saen_Saep": {
    "cited_by": [
+    "st.hua-lamphong",
     "st.ratchathewi"
    ],
    "publisher": "Wikipedia",
@@ -1640,7 +1901,8 @@
    "title": "Khlong Saen Saep",
    "variants": {
     "publisher": [
-     "Wikipedia"
+     "Wikipedia",
+     "Wikipedia (English)"
     ],
     "publisher_family": [
      "Wikimedia"
@@ -1801,16 +2063,19 @@
   },
   "https://en.wikipedia.org/wiki/Krung_Thep_Aphiwat_Central_Terminal": {
    "cited_by": [
-    "bang-sue"
+    "bang-sue",
+    "st.hua-lamphong"
    ],
    "publisher": "English Wikipedia",
-   "publisher_family": "Wikipedia (EN)",
+   "publisher_family": "Wikimedia",
    "title": "Krung Thep Aphiwat Central Terminal",
    "variants": {
     "publisher": [
-     "English Wikipedia"
+     "English Wikipedia",
+     "Wikipedia (English)"
     ],
     "publisher_family": [
+     "Wikimedia",
      "Wikipedia (EN)"
     ],
     "title": [
@@ -1859,22 +2124,26 @@
   "https://en.wikipedia.org/wiki/Lumphini_Park": {
    "cited_by": [
     "pathum-wan",
+    "st.chit-lom",
     "st.nana",
     "st.phloen-chit",
     "st.ratchadamri",
-    "st.sala-daeng"
+    "st.sala-daeng",
+    "st.siam"
    ],
-   "publisher": "Wikipedia",
+   "publisher": "Wikipedia (English)",
    "publisher_family": "wikipedia",
    "title": "Lumphini Park",
    "variants": {
     "publisher": [
      "Wikipedia",
-     "Wikipedia (English)"
+     "Wikipedia (English)",
+     "Wikipedia (Wikimedia Foundation)"
     ],
     "publisher_family": [
      "Wikimedia",
      "Wikipedia",
+     "wikimedia",
      "wikipedia"
     ],
     "title": [
@@ -1905,16 +2174,19 @@
   },
   "https://en.wikipedia.org/wiki/MRT_Orange_Line": {
    "cited_by": [
-    "ratchathewi"
+    "ratchathewi",
+    "st.phra-ram-9"
    ],
    "publisher": "Wikimedia (Wikipedia EN)",
-   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia",
    "title": "MRT Orange Line",
    "variants": {
     "publisher": [
-     "Wikimedia (Wikipedia EN)"
+     "Wikimedia (Wikipedia EN)",
+     "Wikipedia"
     ],
     "publisher_family": [
+     "Wikimedia",
      "Wikimedia (Wikipedia EN)"
     ],
     "title": [
@@ -1938,6 +2210,44 @@
     ],
     "title": [
      "MahaNakhon"
+    ]
+   }
+  },
+  "https://en.wikipedia.org/wiki/Makkasan_station_(Airport_Rail_Link)": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "title": "Makkasan station (Airport Rail Link)",
+   "variants": {
+    "publisher": [
+     "Wikipedia"
+    ],
+    "publisher_family": [
+     "Wikimedia"
+    ],
+    "title": [
+     "Makkasan station (Airport Rail Link)"
+    ]
+   }
+  },
+  "https://en.wikipedia.org/wiki/Mo_Chit_2_Bus_Terminal": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "title": "Mo Chit 2 Bus Terminal",
+   "variants": {
+    "publisher": [
+     "Wikipedia (English)"
+    ],
+    "publisher_family": [
+     "wikimedia"
+    ],
+    "title": [
+     "Mo Chit 2 Bus Terminal"
     ]
    }
   },
@@ -1966,7 +2276,7 @@
     "st.ha-yaek-lat-phrao",
     "st.mo-chit"
    ],
-   "publisher": "Wikipedia",
+   "publisher": "Wikipedia (English)",
    "publisher_family": "Wikipedia",
    "title": "Mo Chit BTS station",
    "variants": {
@@ -1976,6 +2286,7 @@
     ],
     "publisher_family": [
      "Wikipedia",
+     "wikimedia",
      "wikipedia"
     ],
     "title": [
@@ -2102,6 +2413,25 @@
     ]
    }
   },
+  "https://en.wikipedia.org/wiki/Orange_Line_(Bangkok)": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "title": "Orange Line (Bangkok)",
+   "variants": {
+    "publisher": [
+     "Wikipedia"
+    ],
+    "publisher_family": [
+     "Wikimedia"
+    ],
+    "title": [
+     "Orange Line (Bangkok)"
+    ]
+   }
+  },
   "https://en.wikipedia.org/wiki/Pathum_Wan_district": {
    "cited_by": [
     "pathum-wan"
@@ -2132,7 +2462,8 @@
    "variants": {
     "publisher": [
      "Wikipedia",
-     "Wikipedia (English)"
+     "Wikipedia (English)",
+     "Wikipedia (Wikimedia Foundation)"
     ],
     "publisher_family": [
      "Wikimedia",
@@ -2230,11 +2561,12 @@
    "cited_by": [
     "st.phetchaburi"
    ],
-   "publisher": "Wikipedia (English)",
+   "publisher": "Wikipedia",
    "publisher_family": "Wikimedia",
    "title": "Phetchaburi MRT station",
    "variants": {
     "publisher": [
+     "Wikipedia",
      "Wikipedia (English)"
     ],
     "publisher_family": [
@@ -2325,9 +2657,30 @@
    "cited_by": [
     "st.phra-ram-9"
    ],
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "title": "Phra Ram 9 MRT station",
+   "variants": {
+    "publisher": [
+     "Wikipedia",
+     "Wikipedia (English)"
+    ],
+    "publisher_family": [
+     "Wikimedia",
+     "wikimedia"
+    ],
+    "title": [
+     "Phra Ram 9 MRT station"
+    ]
+   }
+  },
+  "https://en.wikipedia.org/wiki/Platinum_Fashion_Mall": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
    "publisher": "Wikipedia (English)",
    "publisher_family": "wikimedia",
-   "title": "Phra Ram 9 MRT station",
+   "title": "Platinum Fashion Mall",
    "variants": {
     "publisher": [
      "Wikipedia (English)"
@@ -2336,7 +2689,7 @@
      "wikimedia"
     ],
     "title": [
-     "Phra Ram 9 MRT station"
+     "Platinum Fashion Mall"
     ]
    }
   },
@@ -2418,6 +2771,25 @@
     ]
    }
   },
+  "https://en.wikipedia.org/wiki/Pratunam,_Bangkok": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "title": "Pratunam, Bangkok",
+   "variants": {
+    "publisher": [
+     "Wikipedia"
+    ],
+    "publisher_family": [
+     "Wikimedia"
+    ],
+    "title": [
+     "Pratunam, Bangkok"
+    ]
+   }
+  },
   "https://en.wikipedia.org/wiki/Princess_Mother_Memorial_Park": {
    "cited_by": [
     "st.charoen-nakhon"
@@ -2442,7 +2814,7 @@
     "st.ha-yaek-lat-phrao",
     "st.mo-chit"
    ],
-   "publisher": "Wikipedia",
+   "publisher": "Wikipedia (English)",
    "publisher_family": "Wikipedia",
    "title": "Queen Sirikit Park",
    "variants": {
@@ -2452,6 +2824,7 @@
     ],
     "publisher_family": [
      "Wikipedia",
+     "wikimedia",
      "wikipedia"
     ],
     "title": [
@@ -2494,6 +2867,25 @@
     ],
     "title": [
      "Ratchadamri BTS station"
+    ]
+   }
+  },
+  "https://en.wikipedia.org/wiki/Ratchaprasong": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "title": "Ratchaprasong",
+   "variants": {
+    "publisher": [
+     "Wikipedia (English)"
+    ],
+    "publisher_family": [
+     "wikimedia"
+    ],
+    "title": [
+     "Ratchaprasong"
     ]
    }
   },
@@ -2543,10 +2935,11 @@
     "phra-nakhon",
     "pom-prap-sattru-phai",
     "samphanthawong",
+    "st.sam-yot",
     "st.wat-mangkon"
    ],
    "publisher": "Wikipedia",
-   "publisher_family": "Wikipedia (Wikimedia)",
+   "publisher_family": "Wikipedia",
    "title": "Rommaninat Park",
    "variants": {
     "publisher": [
@@ -2560,6 +2953,7 @@
     ],
     "title": [
      "Rommaninat Park",
+     "Rommaninat Park — Wikipedia",
      "Suan Rommaninat park Bangkok former Klong Prem prison area"
     ]
    }
@@ -2637,7 +3031,8 @@
    "variants": {
     "publisher": [
      "Wikipedia",
-     "Wikipedia (English)"
+     "Wikipedia (English)",
+     "Wikipedia (Wikimedia Foundation)"
     ],
     "publisher_family": [
      "Wikimedia",
@@ -2774,7 +3169,7 @@
     "st.victory-monument"
    ],
    "publisher": "Wikimedia (Wikipedia EN)",
-   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "publisher_family": "Wikimedia",
    "title": "Santiphap Park",
    "variants": {
     "publisher": [
@@ -2816,11 +3211,12 @@
    "cited_by": [
     "st.saphan-taksin"
    ],
-   "publisher": "Wikipedia (English)",
+   "publisher": "Wikipedia",
    "publisher_family": "wikimedia",
    "title": "Saphan Taksin BTS station",
    "variants": {
     "publisher": [
+     "Wikipedia",
      "Wikipedia (English)"
     ],
     "publisher_family": [
@@ -2873,11 +3269,12 @@
    "cited_by": [
     "st.saphan-taksin"
    ],
-   "publisher": "Wikipedia (English)",
+   "publisher": "Wikipedia",
    "publisher_family": "wikimedia",
    "title": "Sathorn Unique Tower",
    "variants": {
     "publisher": [
+     "Wikipedia",
      "Wikipedia (English)"
     ],
     "publisher_family": [
@@ -2913,16 +3310,37 @@
    ],
    "publisher": "Wikipedia (English)",
    "publisher_family": "Wikimedia",
-   "title": "Si Lom station",
+   "title": "Si Lom MRT station",
    "variants": {
     "publisher": [
-     "Wikipedia (English)"
+     "Wikipedia (English)",
+     "Wikipedia (Wikimedia Foundation)"
     ],
     "publisher_family": [
      "Wikimedia"
     ],
     "title": [
+     "Si Lom MRT station",
      "Si Lom station"
+    ]
+   }
+  },
+  "https://en.wikipedia.org/wiki/Siam_BTS_station": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "title": "Siam BTS station",
+   "variants": {
+    "publisher": [
+     "Wikipedia (English)"
+    ],
+    "publisher_family": [
+     "Wikipedia"
+    ],
+    "title": [
+     "Siam BTS station"
     ]
    }
   },
@@ -3048,6 +3466,25 @@
     ],
     "title": [
      "Soi Nana (Chinatown)"
+    ]
+   }
+  },
+  "https://en.wikipedia.org/wiki/Sra_Pathum_Palace": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "title": "Sa Pathum Palace",
+   "variants": {
+    "publisher": [
+     "Wikipedia (English)"
+    ],
+    "publisher_family": [
+     "Wikipedia"
+    ],
+    "title": [
+     "Sa Pathum Palace"
     ]
    }
   },
@@ -3191,8 +3628,8 @@
     "ratchathewi",
     "st.victory-monument"
    ],
-   "publisher": "Wikimedia (Wikipedia EN)",
-   "publisher_family": "Wikimedia (Wikipedia EN)",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikimedia",
    "title": "Victory Monument (Bangkok)",
    "variants": {
     "publisher": [
@@ -3200,6 +3637,7 @@
      "Wikipedia (English)"
     ],
     "publisher_family": [
+     "Wikimedia",
      "Wikimedia (Wikipedia EN)",
      "Wikipedia"
     ],
@@ -3232,9 +3670,9 @@
     "st.ha-yaek-lat-phrao",
     "st.mo-chit"
    ],
-   "publisher": "Wikipedia",
+   "publisher": "Wikipedia (English)",
    "publisher_family": "Wikipedia",
-   "title": "Wachirabenchat Park (Rot Fai Park)",
+   "title": "Wachirabenchathat Park (Rot Fai Park)",
    "variants": {
     "publisher": [
      "Wikipedia",
@@ -3242,6 +3680,7 @@
     ],
     "publisher_family": [
      "Wikipedia",
+     "wikimedia",
      "wikipedia"
     ],
     "title": [
@@ -3407,6 +3846,25 @@
     ]
    }
   },
+  "https://en.wikivoyage.org/wiki/Bangkok/Ratchada": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "Wikivoyage",
+   "publisher_family": "Wikimedia",
+   "title": "Bangkok/Ratchada",
+   "variants": {
+    "publisher": [
+     "Wikivoyage"
+    ],
+    "publisher_family": [
+     "Wikimedia"
+    ],
+    "title": [
+     "Bangkok/Ratchada"
+    ]
+   }
+  },
   "https://eqmplatform.onep.go.th/Uploads/Plan/510b888f-dd43-4614-97bf-4665a19387d0.pdf": {
    "cited_by": [
     "phra-nakhon"
@@ -3461,6 +3919,25 @@
     ],
     "title": [
      "แจกพิกัด 50 เขตตลาดสด กทม. 2026"
+    ]
+   }
+  },
+  "https://futuresoutheastasia.com/makkasan/": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "Future Southeast Asia",
+   "publisher_family": "Future Southeast Asia (independent urbanism blog, James Clark)",
+   "title": "Makkasan Train Factory: proposed redevelopment of SRT land in Bangkok",
+   "variants": {
+    "publisher": [
+     "Future Southeast Asia"
+    ],
+    "publisher_family": [
+     "Future Southeast Asia (independent urbanism blog, James Clark)"
+    ],
+    "title": [
+     "Makkasan Train Factory: proposed redevelopment of SRT land in Bangkok"
     ]
    }
   },
@@ -3863,6 +4340,25 @@
     ]
    }
   },
+  "https://journals.open.tudelft.nl/footprint/article/view/764": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "TU Delft OPEN (FOOTPRINT journal)",
+   "publisher_family": "TU Delft",
+   "title": "War, Trade and Desire: Urban Design and the Counter Public Spheres of Bangkok (FOOTPRINT 7(1-12), Spring 2013)",
+   "variants": {
+    "publisher": [
+     "TU Delft OPEN (FOOTPRINT journal)"
+    ],
+    "publisher_family": [
+     "TU Delft"
+    ],
+    "title": [
+     "War, Trade and Desire: Urban Design and the Counter Public Spheres of Bangkok (FOOTPRINT 7(1-12), Spring 2013)"
+    ]
+   }
+  },
   "https://landezine-award.com/chulalongkorn-university-centenary-park/": {
    "cited_by": [
     "st.national-stadium"
@@ -3879,6 +4375,44 @@
     ],
     "title": [
      "Chulalongkorn University Centenary Park (LILA award page)"
+    ]
+   }
+  },
+  "https://lanta.news/articles/14-year-old-paragon-shooter-showing-good-behavior-in-psychiatric-care": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "Lanta News (byline: Khaosod)",
+   "publisher_family": "Lanta/Khaosod",
+   "title": "14-Year-Old Paragon Shooter Showing Good Behavior in Psychiatric Care",
+   "variants": {
+    "publisher": [
+     "Lanta News (byline: Khaosod)"
+    ],
+    "publisher_family": [
+     "Lanta/Khaosod"
+    ],
+    "title": [
+     "14-Year-Old Paragon Shooter Showing Good Behavior in Psychiatric Care"
+    ]
+   }
+  },
+  "https://lebua.com/restaurants/sky": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "lebua Hotels & Resorts",
+   "publisher_family": "lebua",
+   "title": "Sky Bar Bangkok | Rooftop Bar at 247m (The Dome at lebua)",
+   "variants": {
+    "publisher": [
+     "lebua Hotels & Resorts"
+    ],
+    "publisher_family": [
+     "lebua"
+    ],
+    "title": [
+     "Sky Bar Bangkok | Rooftop Bar at 247m (The Dome at lebua)"
     ]
    }
   },
@@ -3917,6 +4451,25 @@
     ],
     "title": [
      "Longdo Map — POI addresses on Phloen Chit Rd (แขวงลุมพินี เขตปทุมวัน); corroborated by SEC company-register and MEA address snippets"
+    ]
+   }
+  },
+  "https://map.uniqlo.com/th/th/detail/11400003": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "UNIQLO Thailand (Fast Retailing)",
+   "publisher_family": "Fast Retailing / UNIQLO",
+   "title": "UNIQLO Store Locator - Central Rama 9",
+   "variants": {
+    "publisher": [
+     "UNIQLO Thailand (Fast Retailing)"
+    ],
+    "publisher_family": [
+     "Fast Retailing / UNIQLO"
+    ],
+    "title": [
+     "UNIQLO Store Locator - Central Rama 9"
     ]
    }
   },
@@ -4015,6 +4568,25 @@
     ]
    }
   },
+  "https://mgronline.com/business/detail/9600000113241": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "MGR Online (Manager Media Group)",
+   "publisher_family": "mgr-online",
+   "title": "คมนาคม ขีดเส้น กทม. ส่งแบบขยาย BTS สถานีตากสิน ธ.ค.นี้",
+   "variants": {
+    "publisher": [
+     "MGR Online (Manager Media Group)"
+    ],
+    "publisher_family": [
+     "mgr-online"
+    ],
+    "title": [
+     "คมนาคม ขีดเส้น กทม. ส่งแบบขยาย BTS สถานีตากสิน ธ.ค.นี้"
+    ]
+   }
+  },
   "https://migrationology.com/siam-square-pratunam-bangkok": {
    "cited_by": [
     "st.national-stadium",
@@ -4070,6 +4642,25 @@
     ],
     "title": [
      "Top 16 Bangkok Street Food Sanctuaries"
+    ]
+   }
+  },
+  "https://moneyandbanking.co.th/2023/70012/": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "Money & Banking Magazine",
+   "publisher_family": "Media Associated (Money & Banking)",
+   "title": "กทม. จัดระเบียบ พ่อค้า-แม่ค้า ถนนเยาวราช [BMA regulates Yaowarat Road vendors]",
+   "variants": {
+    "publisher": [
+     "Money & Banking Magazine"
+    ],
+    "publisher_family": [
+     "Media Associated (Money & Banking)"
+    ],
+    "title": [
+     "กทม. จัดระเบียบ พ่อค้า-แม่ค้า ถนนเยาวราช [BMA regulates Yaowarat Road vendors]"
     ]
    }
   },
@@ -4146,6 +4737,25 @@
     ],
     "title": [
      "Central Rama 9 to Be Renamed; Major Redevelopment Project Launched"
+    ]
+   }
+  },
+  "https://office.centralpattana.co.th/office/central-rama-9": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "Central Pattana (office portfolio site)",
+   "publisher_family": "Central Group / Central Pattana (CPN)",
+   "title": "Central Rama 9 Office",
+   "variants": {
+    "publisher": [
+     "Central Pattana (office portfolio site)"
+    ],
+    "publisher_family": [
+     "Central Group / Central Pattana (CPN)"
+    ],
+    "title": [
+     "Central Rama 9 Office"
     ]
    }
   },
@@ -4285,6 +4895,25 @@
     ]
    }
   },
+  "https://policy.bangkok.go.th/watch/pub-project/legacy?id=63918": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "Bangkok Metropolitan Administration (policy.bangkok.go.th)",
+   "publisher_family": "bangkok.go.th",
+   "title": "ก่อสร้างหลังคาคลุมทางเดินเชื่อม BTS สถานีหมอชิต และ MRT สถานีสวนจตุจักร (ฝั่งสวนจตุจักร)",
+   "variants": {
+    "publisher": [
+     "Bangkok Metropolitan Administration (policy.bangkok.go.th)"
+    ],
+    "publisher_family": [
+     "bangkok.go.th"
+    ],
+    "title": [
+     "ก่อสร้างหลังคาคลุมทางเดินเชื่อม BTS สถานีหมอชิต และ MRT สถานีสวนจตุจักร (ฝั่งสวนจตุจักร)"
+    ]
+   }
+  },
   "https://prasarnmitr.com/ประวัติความเป็นมา": {
    "cited_by": [
     "st.sena-ruam"
@@ -4301,6 +4930,25 @@
     ],
     "title": [
      "ประวัติความเป็นมา — Prasarnmitr Hospital history"
+    ]
+   }
+  },
+  "https://propertyhub.in.th/en/condo-for-rent/project-magnolias-ratchadamri-boulevard": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "PropertyHub.in.th",
+   "publisher_family": "propertyhub",
+   "title": "Magnolias Ratchadamri Boulevard for Rent",
+   "variants": {
+    "publisher": [
+     "PropertyHub.in.th"
+    ],
+    "publisher_family": [
+     "propertyhub"
+    ],
+    "title": [
+     "Magnolias Ratchadamri Boulevard for Rent"
     ]
    }
   },
@@ -4339,6 +4987,25 @@
     ],
     "title": [
      "คอนโดให้เช่า ใกล้ BTS เพลินจิต (Condos for rent near BTS Phloen Chit) — PropertyHub"
+    ]
+   }
+  },
+  "https://propertyscout.co.th/en/bangkok/bts/chit-lom": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "PropertyScout",
+   "publisher_family": "propertyscout",
+   "title": "Property Guide for BTS Chit Lom Station",
+   "variants": {
+    "publisher": [
+     "PropertyScout"
+    ],
+    "publisher_family": [
+     "propertyscout"
+    ],
+    "title": [
+     "Property Guide for BTS Chit Lom Station"
     ]
    }
   },
@@ -4384,6 +5051,25 @@
     ]
    }
   },
+  "https://propertyscout.co.th/en/bangkok/makkasan/rentals/condo": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "PropertyScout",
+   "publisher_family": "PropertyScout (property portal)",
+   "title": "Condos for rent in Makkasan",
+   "variants": {
+    "publisher": [
+     "PropertyScout"
+    ],
+    "publisher_family": [
+     "PropertyScout (property portal)"
+    ],
+    "title": [
+     "Condos for rent in Makkasan"
+    ]
+   }
+  },
   "https://propertyscout.co.th/en/bangkok/phaya-thai/rentals/condo/": {
    "cited_by": [
     "st.phaya-thai"
@@ -4400,6 +5086,25 @@
     ],
     "title": [
      "Condos for Rent in Phaya Thai"
+    ]
+   }
+  },
+  "https://propertyscout.co.th/en/bangkok/phra-ram-9/rentals/condo": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "PropertyScout",
+   "publisher_family": "PropertyScout",
+   "title": "Condos for rent in Phra Ram 9",
+   "variants": {
+    "publisher": [
+     "PropertyScout"
+    ],
+    "publisher_family": [
+     "PropertyScout"
+    ],
+    "title": [
+     "Condos for rent in Phra Ram 9"
     ]
    }
   },
@@ -4441,6 +5146,44 @@
     ]
    }
   },
+  "https://propertyscout.co.th/en/bangkok/talat-noi/rentals": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "PropertyScout",
+   "publisher_family": "PropertyScout",
+   "title": "Talat Noi rentals (listing page)",
+   "variants": {
+    "publisher": [
+     "PropertyScout"
+    ],
+    "publisher_family": [
+     "PropertyScout"
+    ],
+    "title": [
+     "Talat Noi rentals (listing page)"
+    ]
+   }
+  },
+  "https://propertyscout.co.th/en/bangkok/victory-monument/rentals/condo/": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "PropertyScout",
+   "publisher_family": "PropertyScout",
+   "title": "Condos for Rent in Victory Monument. 278 Listings Starting From 10,000 THB",
+   "variants": {
+    "publisher": [
+     "PropertyScout"
+    ],
+    "publisher_family": [
+     "PropertyScout"
+    ],
+    "title": [
+     "Condos for Rent in Victory Monument. 278 Listings Starting From 10,000 THB"
+    ]
+   }
+  },
   "https://propertyscout.co.th/en/location-guides/phloen-chit-area-guide": {
    "cited_by": [
     "st.phloen-chit"
@@ -4476,6 +5219,25 @@
     ],
     "title": [
      "Ratchathewi Area Profile & Information"
+    ]
+   }
+  },
+  "https://propertyscout.co.th/en/location-guides/sathorn-neighborhood-guide": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "PropertyScout",
+   "publisher_family": "propertyscout",
+   "title": "Sathorn Neighborhood Guide",
+   "variants": {
+    "publisher": [
+     "PropertyScout"
+    ],
+    "publisher_family": [
+     "propertyscout"
+    ],
+    "title": [
+     "Sathorn Neighborhood Guide"
     ]
    }
   },
@@ -4533,6 +5295,25 @@
     ],
     "title": [
      "อโศก 2569: คู่มือย่าน (Asok neighborhood guide)"
+    ]
+   }
+  },
+  "https://readthecloud.com/social/public-space/khlong-phadung-krung-kasem/": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "The Cloud (Read the Cloud)",
+   "publisher_family": "Read the Cloud",
+   "title": "คลองผดุงกรุงเกษม พื้นที่สาธารณะแห่งใหม่ [Khlong Phadung Krung Kasem: a new public space]",
+   "variants": {
+    "publisher": [
+     "The Cloud (Read the Cloud)"
+    ],
+    "publisher_family": [
+     "Read the Cloud"
+    ],
+    "title": [
+     "คลองผดุงกรุงเกษม พื้นที่สาธารณะแห่งใหม่ [Khlong Phadung Krung Kasem: a new public space]"
     ]
    }
   },
@@ -4805,6 +5586,82 @@
     ]
    }
   },
+  "https://taraohreilly.com/silom-bangkok-neighbourhood-eat-see-stay-guide/": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "taraohreilly.com",
+   "publisher_family": "Tara O'Reilly",
+   "title": "Silom Bangkok Neighbourhood | Eat, See, Stay Guide (2026)",
+   "variants": {
+    "publisher": [
+     "taraohreilly.com"
+    ],
+    "publisher_family": [
+     "Tara O'Reilly"
+    ],
+    "title": [
+     "Silom Bangkok Neighbourhood | Eat, See, Stay Guide (2026)"
+    ]
+   }
+  },
+  "https://tenarapartners.com/guide-rama9.html": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "Tenara Partners",
+   "publisher_family": "Tenara Partners",
+   "title": "Rama 9, Ratchada & Huai Khwang: Bangkok's Second CBD",
+   "variants": {
+    "publisher": [
+     "Tenara Partners"
+    ],
+    "publisher_family": [
+     "Tenara Partners"
+    ],
+    "title": [
+     "Rama 9, Ratchada & Huai Khwang: Bangkok's Second CBD"
+    ]
+   }
+  },
+  "https://th.usembassy.gov/common-scams-to-avoid/": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "U.S. Embassy & Consulate in Thailand",
+   "publisher_family": "usmission",
+   "title": "Common Scams to Avoid",
+   "variants": {
+    "publisher": [
+     "U.S. Embassy & Consulate in Thailand"
+    ],
+    "publisher_family": [
+     "usmission"
+    ],
+    "title": [
+     "Common Scams to Avoid"
+    ]
+   }
+  },
+  "https://th.wikipedia.org/wiki/%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B9%8C%E0%B8%9E%E0%B8%87%E0%B8%A8%E0%B9%8C": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "วิกิพีเดีย (Wikimedia Foundation)",
+   "publisher_family": "Wikimedia",
+   "title": "ตลาดกลางคืนพัฒน์พงศ์ (Patpong Night Market)",
+   "variants": {
+    "publisher": [
+     "วิกิพีเดีย (Wikimedia Foundation)"
+    ],
+    "publisher_family": [
+     "Wikimedia"
+    ],
+    "title": [
+     "ตลาดกลางคืนพัฒน์พงศ์ (Patpong Night Market)"
+    ]
+   }
+  },
   "https://th.wikipedia.org/wiki/%E0%B8%97%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87": {
    "cited_by": [
     "phra-nakhon"
@@ -4840,6 +5697,25 @@
     ],
     "title": [
      "สถานีรถไฟกรุงเทพ (หัวลำโพง)"
+    ]
+   }
+  },
+  "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B4%E0%B8%94%E0%B8%A5%E0%B8%A1": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikimedia",
+   "title": "สถานีชิดลม (Chit Lom station, Thai Wikipedia)",
+   "variants": {
+    "publisher": [
+     "Wikipedia (Thai)"
+    ],
+    "publisher_family": [
+     "wikimedia"
+    ],
+    "title": [
+     "สถานีชิดลม (Chit Lom station, Thai Wikipedia)"
     ]
    }
   },
@@ -5150,6 +6026,25 @@
     ]
    }
   },
+  "https://th.wikipedia.org/wiki/วังสระปทุม": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "Wikipedia",
+   "title": "วังสระปทุม (Wang Sra Pathum)",
+   "variants": {
+    "publisher": [
+     "Wikipedia (Thai)"
+    ],
+    "publisher_family": [
+     "Wikipedia"
+    ],
+    "title": [
+     "วังสระปทุม (Wang Sra Pathum)"
+    ]
+   }
+  },
   "https://th.wikipedia.org/wiki/วัดหัวลำโพง": {
    "cited_by": [
     "st.sam-yan"
@@ -5204,6 +6099,25 @@
     ],
     "title": [
      "สถานีจตุจักร (SRT Dark Red Line RN02)"
+    ]
+   }
+  },
+  "https://th.wikipedia.org/wiki/สถานีรถไฟกรุงเทพ": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "Wikimedia",
+   "title": "สถานีรถไฟกรุงเทพ (หัวลำโพง) [Bangkok (Hua Lamphong) railway station]",
+   "variants": {
+    "publisher": [
+     "Wikipedia (Thai)"
+    ],
+    "publisher_family": [
+     "Wikimedia"
+    ],
+    "title": [
+     "สถานีรถไฟกรุงเทพ (หัวลำโพง) [Bangkok (Hua Lamphong) railway station]"
     ]
    }
   },
@@ -5301,6 +6215,25 @@
     ],
     "title": [
      "สถานีเสนาร่วม (Sena Ruam station, N6 — planned)"
+    ]
+   }
+  },
+  "https://th.wikipedia.org/wiki/สวนจตุจักร": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikimedia",
+   "title": "สวนจตุจักร (Chatuchak Park, Thai Wikipedia)",
+   "variants": {
+    "publisher": [
+     "Wikipedia (Thai)"
+    ],
+    "publisher_family": [
+     "wikimedia"
+    ],
+    "title": [
+     "สวนจตุจักร (Chatuchak Park, Thai Wikipedia)"
     ]
    }
   },
@@ -5480,6 +6413,25 @@
     ]
    }
   },
+  "https://thepattayanews.com/2025/09/17/revamping-bangkoks-iconic-victory-monument-a-major-upgrade-for-a-historic-hub/": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "The Pattaya News",
+   "publisher_family": "The Pattaya News",
+   "title": "Revamping Bangkok's Iconic Victory Monument: A Major Upgrade for a Historic Hub",
+   "variants": {
+    "publisher": [
+     "The Pattaya News"
+    ],
+    "publisher_family": [
+     "The Pattaya News"
+    ],
+    "title": [
+     "Revamping Bangkok's Iconic Victory Monument: A Major Upgrade for a Historic Hub"
+    ]
+   }
+  },
   "https://thesiamsociety.org/wp-content/uploads/2012/04/JSS_100_0j_ChatriPrakitnonthakan_RattanakosinCharterTheThaiCulturalCharterForConservation.pdf": {
    "cited_by": [
     "phra-nakhon"
@@ -5515,6 +6467,25 @@
     ],
     "title": [
      "Silom District Guide: Cost of Living, Community & Things to Do"
+    ]
+   }
+  },
+  "https://thestandard.co/bangkok-chatuchak-market-rent-fines/": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "THE STANDARD",
+   "publisher_family": "thestandard",
+   "title": "กทม. แจงปมค่าเช่า-ค่าปรับแผง 'ตลาดนัดจตุจักร' ยืนยันโปร่งใส เตรียมปรับปรุง",
+   "variants": {
+    "publisher": [
+     "THE STANDARD"
+    ],
+    "publisher_family": [
+     "thestandard"
+    ],
+    "title": [
+     "กทม. แจงปมค่าเช่า-ค่าปรับแผง 'ตลาดนัดจตุจักร' ยืนยันโปร่งใส เตรียมปรับปรุง"
     ]
    }
   },
@@ -5572,6 +6543,25 @@
     ],
     "title": [
      "สวนเฉลิมพระเกียรติ 80 พรรษา (สาทร) หลังปรับปรุงใหม่"
+    ]
+   }
+  },
+  "https://thestandard.co/makkasan-complex-mega-project/": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "The Standard",
+   "publisher_family": "The Standard (Thai media group)",
+   "title": "มักกะสันคอมเพล็กซ์: เมกะโปรเจกต์ยักษ์ใหญ่ บนพื้นที่อยู่อาศัยคนจนเมือง",
+   "variants": {
+    "publisher": [
+     "The Standard"
+    ],
+    "publisher_family": [
+     "The Standard (Thai media group)"
+    ],
+    "title": [
+     "มักกะสันคอมเพล็กซ์: เมกะโปรเจกต์ยักษ์ใหญ่ บนพื้นที่อยู่อาศัยคนจนเมือง"
     ]
    }
   },
@@ -5633,6 +6623,44 @@
     ]
    }
   },
+  "https://thethaiger.com/news/bangkok/bangkok-greenlights-136m-baht-upgrade-for-victory-monument": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Thaiger",
+   "publisher_family": "Thaiger",
+   "title": "Bangkok greenlights 136m baht upgrade for Victory Monument",
+   "variants": {
+    "publisher": [
+     "Thaiger"
+    ],
+    "publisher_family": [
+     "Thaiger"
+    ],
+    "title": [
+     "Bangkok greenlights 136m baht upgrade for Victory Monument"
+    ]
+   }
+  },
+  "https://thethaiger.com/news/bangkok/bangkoks-historic-hua-lamphong-station-plans-major-events-and-exhibitions": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "The Thaiger",
+   "publisher_family": "Thaiger",
+   "title": "Bangkok's historic Hua Lamphong station plans major exhibitions and celebrations",
+   "variants": {
+    "publisher": [
+     "The Thaiger"
+    ],
+    "publisher_family": [
+     "Thaiger"
+    ],
+    "title": [
+     "Bangkok's historic Hua Lamphong station plans major exhibitions and celebrations"
+    ]
+   }
+  },
   "https://thethaiger.com/news/bangkok/times-up-stallholders-at-chatuchak-weekend-market-told-to-leave": {
    "cited_by": [
     "st.kamphaeng-phet",
@@ -5643,10 +6671,12 @@
    "title": "Time's up: Stallholders at Chatuchak weekend market told to leave",
    "variants": {
     "publisher": [
+     "Thaiger",
      "The Thaiger"
     ],
     "publisher_family": [
-     "Thaiger"
+     "Thaiger",
+     "thaiger"
     ],
     "title": [
      "Time's up: Stallholders at Chatuchak weekend market told to leave"
@@ -5669,6 +6699,44 @@
     ],
     "title": [
      "Walking the talk: Bangkok chief to revamp Asoke footpaths by July"
+    ]
+   }
+  },
+  "https://thethaiger.com/news/national/bangkoks-jodd-fairs-market-is-relocating": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "The Thaiger",
+   "publisher_family": "The Thaiger",
+   "title": "Bangkok's Jodd Fairs market is relocating",
+   "variants": {
+    "publisher": [
+     "The Thaiger"
+    ],
+    "publisher_family": [
+     "The Thaiger"
+    ],
+    "title": [
+     "Bangkok's Jodd Fairs market is relocating"
+    ]
+   }
+  },
+  "https://thethaiger.com/thai-life/property/bangkok-rent-neighbourhood-budget-2026": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "The Thaiger",
+   "publisher_family": "thaiger",
+   "title": "Bangkok rent by neighbourhood: what your budget gets in 2026",
+   "variants": {
+    "publisher": [
+     "The Thaiger"
+    ],
+    "publisher_family": [
+     "thaiger"
+    ],
+    "title": [
+     "Bangkok rent by neighbourhood: what your budget gets in 2026"
     ]
    }
   },
@@ -5918,6 +6986,7 @@
     ],
     "title": [
      "Jodd Fairs Night Market Bangkok 2026 Ratchada Guide",
+     "Jodd Fairs Night Market Bangkok: 2026 Ratchada Guide",
      "Jodd Fairs Night Market Bangkok: A Complete 2026 Guide to the Ratchada Site"
     ]
    }
@@ -5960,9 +7029,29 @@
     ]
    }
   },
+  "https://us.trip.com/travel-guide/attraction/bangkok/saphan-taksin-public-park-137366945": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "Trip.com",
+   "publisher_family": "trip-com",
+   "title": "Saphan Taksin Public Park Tickets [2026] - Bangkok",
+   "variants": {
+    "publisher": [
+     "Trip.com"
+    ],
+    "publisher_family": [
+     "trip-com"
+    ],
+    "title": [
+     "Saphan Taksin Public Park Tickets [2026] - Bangkok"
+    ]
+   }
+  },
   "https://web.codi.or.th/index.php/20240929-57255": {
    "cited_by": [
-    "ratchathewi"
+    "ratchathewi",
+    "st.phetchaburi"
    ],
    "publisher": "CODI (Community Organizations Development Institute)",
    "publisher_family": "CODI (Community Organizations Development Institute)",
@@ -5972,10 +7061,12 @@
      "CODI (Community Organizations Development Institute)"
     ],
     "publisher_family": [
-     "CODI (Community Organizations Development Institute)"
+     "CODI (Community Organizations Development Institute)",
+     "CODI (Thai public development institute)"
     ],
     "title": [
-     "เปิดป้ายชุมชน ชมฟ. ริมบึงมักกะสัน (new Baan Mankong community beside Bueng Makkasan)"
+     "เปิดป้ายชุมชน ชมฟ. ริมบึงมักกะสัน (new Baan Mankong community beside Bueng Makkasan)",
+     "เปิดป้ายชุมชนใหม่ 'ชุมชน ชมฟ. ริมบึงมักกะสัน'"
     ]
    }
   },
@@ -6302,6 +7393,25 @@
     ]
    }
   },
+  "https://www.bangkokbiznews.com/business/business/1194818": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Bangkok Biz News (กรุงเทพธุรกิจ)",
+   "publisher_family": "Bangkok Biz News",
+   "title": "'เซ็นทรัล พาร์ค' ดีเดย์ 4 ก.ย. ปลุกสีสันชอปปิงย่านสีลม",
+   "variants": {
+    "publisher": [
+     "Bangkok Biz News (กรุงเทพธุรกิจ)"
+    ],
+    "publisher_family": [
+     "Bangkok Biz News"
+    ],
+    "title": [
+     "'เซ็นทรัล พาร์ค' ดีเดย์ 4 ก.ย. ปลุกสีสันชอปปิงย่านสีลม"
+    ]
+   }
+  },
   "https://www.bangkokbiznews.com/news/news-update/1209562": {
    "cited_by": [
     "st.sam-yot"
@@ -6318,6 +7428,25 @@
     ],
     "title": [
      "กทม. เร่งสร้างแหล่งท่องเที่ยวใหม่ คลองโอ่งอ่าง พร้อม Water Taxi"
+    ]
+   }
+  },
+  "https://www.bangkokbiznews.com/news/news-update/1213716": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Bangkok Biz News (กรุงเทพธุรกิจ)",
+   "publisher_family": "Bangkok Biz News",
+   "title": "กทม. เคาะเพิ่ม 43 จุดผ่อนผันทำการค้าใหม่ 11 เขต",
+   "variants": {
+    "publisher": [
+     "Bangkok Biz News (กรุงเทพธุรกิจ)"
+    ],
+    "publisher_family": [
+     "Bangkok Biz News"
+    ],
+    "title": [
+     "กทม. เคาะเพิ่ม 43 จุดผ่อนผันทำการค้าใหม่ 11 เขต"
     ]
    }
   },
@@ -6340,6 +7469,25 @@
     ]
    }
   },
+  "https://www.bangkokpost.com/business/general/3098902/central-park-mall-launch-ups-rivalry": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Bangkok Post",
+   "publisher_family": "Bangkok Post",
+   "title": "Central Park mall launch ups rivalry",
+   "variants": {
+    "publisher": [
+     "Bangkok Post"
+    ],
+    "publisher_family": [
+     "Bangkok Post"
+    ],
+    "title": [
+     "Central Park mall launch ups rivalry"
+    ]
+   }
+  },
   "https://www.bangkokpost.com/thailand/general/2909930/three-flyovers-to-be-axed-for-orange-line": {
    "cited_by": [
     "st.ratchathewi"
@@ -6359,6 +7507,25 @@
     ]
    }
   },
+  "https://www.bangkokpost.com/thailand/general/2954112/vendors-evicted-from-profitless-chatuchak-zone": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "Bangkok Post",
+   "publisher_family": "bangkokpost",
+   "title": "Vendors evicted from 'profitless' Chatuchak zone",
+   "variants": {
+    "publisher": [
+     "Bangkok Post"
+    ],
+    "publisher_family": [
+     "bangkokpost"
+    ],
+    "title": [
+     "Vendors evicted from 'profitless' Chatuchak zone"
+    ]
+   }
+  },
   "https://www.bangkokpost.com/thailand/general/2964115/hundreds-of-vendors-at-chatuchak-market-given-deadline-to-move": {
    "cited_by": [
     "st.mo-chit"
@@ -6371,10 +7538,49 @@
      "Bangkok Post"
     ],
     "publisher_family": [
-     "Bangkok Post"
+     "Bangkok Post",
+     "bangkokpost"
     ],
     "title": [
      "Hundreds of vendors at Chatuchak market given deadline to move"
+    ]
+   }
+  },
+  "https://www.bangkokpost.com/thailand/general/3105765/victory-monument-slated-for-overhaul": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Bangkok Post",
+   "publisher_family": "Bangkok Post",
+   "title": "Victory Monument slated for overhaul",
+   "variants": {
+    "publisher": [
+     "Bangkok Post"
+    ],
+    "publisher_family": [
+     "Bangkok Post"
+    ],
+    "title": [
+     "Victory Monument slated for overhaul"
+    ]
+   }
+  },
+  "https://www.bangkokpost.com/thailand/general/3310515/skywalk-to-complete-victory-monument-loop-in-october": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Bangkok Post",
+   "publisher_family": "Bangkok Post",
+   "title": "Skywalk to complete Victory Monument loop in October",
+   "variants": {
+    "publisher": [
+     "Bangkok Post"
+    ],
+    "publisher_family": [
+     "Bangkok Post"
+    ],
+    "title": [
+     "Skywalk to complete Victory Monument loop in October"
     ]
    }
   },
@@ -6394,6 +7600,25 @@
     ],
     "title": [
      "Bangkok flood emergency declared after record rainfall"
+    ]
+   }
+  },
+  "https://www.bbc.com/news/articles/ckg8v51g9lno": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "BBC News",
+   "publisher_family": "bbc",
+   "title": "Thai court sentences two men to death over Bangkok shrine bombing",
+   "variants": {
+    "publisher": [
+     "BBC News"
+    ],
+    "publisher_family": [
+     "bbc"
+    ],
+    "title": [
+     "Thai court sentences two men to death over Bangkok shrine bombing"
     ]
    }
   },
@@ -6530,6 +7755,25 @@
     ]
    }
   },
+  "https://www.bkmagazine.com/city-living/how-to-spend-24-hours-silom-and-sathorn-local/": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "BK Magazine",
+   "publisher_family": "BK Magazine",
+   "title": "How to spend 24 hours in Silom and Sathorn like a local",
+   "variants": {
+    "publisher": [
+     "BK Magazine"
+    ],
+    "publisher_family": [
+     "BK Magazine"
+    ],
+    "title": [
+     "How to spend 24 hours in Silom and Sathorn like a local"
+    ]
+   }
+  },
   "https://www.bkmagazine.com/city-living/should-you-live-sathorns-soi-st-louis/": {
    "cited_by": [
     "st.saint-louis"
@@ -6565,6 +7809,25 @@
     ],
     "title": [
      "Why Lat Phrao hipsters can't stop talking up this neighborhood"
+    ]
+   }
+  },
+  "https://www.bkmagazine.com/food/street-food/restaurants-article-chow-down-charoenkrung": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "BK Magazine",
+   "publisher_family": "bk-magazine",
+   "title": "9 reasons Bangrak-Charoenkrung is a true street food haven",
+   "variants": {
+    "publisher": [
+     "BK Magazine"
+    ],
+    "publisher_family": [
+     "bk-magazine"
+    ],
+    "title": [
+     "9 reasons Bangrak-Charoenkrung is a true street food haven"
     ]
    }
   },
@@ -6606,6 +7869,25 @@
     ]
    }
   },
+  "https://www.centralgroup.com/en/newsroom/corporate-news/713/": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "Central Group newsroom",
+   "publisher_family": "Central Group / Central Pattana (CPN)",
+   "title": "Central Pattana unveils 'A Future-Led Ecosystem' vision ... with a THB 110 billion investment plan",
+   "variants": {
+    "publisher": [
+     "Central Group newsroom"
+    ],
+    "publisher_family": [
+     "Central Group / Central Pattana (CPN)"
+    ],
+    "title": [
+     "Central Pattana unveils 'A Future-Led Ecosystem' vision ... with a THB 110 billion investment plan"
+    ]
+   }
+  },
   "https://www.centralpattana.co.th/en/our-business/shopping-center/1351/the-central": {
    "cited_by": [
     "st.ha-yaek-lat-phrao"
@@ -6641,6 +7923,44 @@
     ],
     "title": [
      "Central Pattana unveils THB 21 Billion mega project \"The Central Phaholyothin\""
+    ]
+   }
+  },
+  "https://www.centralworld.co.th/": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "Central Pattana (CentralWorld)",
+   "publisher_family": "Central Group / Central Pattana",
+   "title": "centralwOrld (official site)",
+   "variants": {
+    "publisher": [
+     "Central Pattana (CentralWorld)"
+    ],
+    "publisher_family": [
+     "Central Group / Central Pattana"
+    ],
+    "title": [
+     "centralwOrld (official site)"
+    ]
+   }
+  },
+  "https://www.chaophrayaexpressboat.com/chaophrayaexpressboat?lang=en": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "Chao Phraya Express Boat Co.",
+   "publisher_family": "chaophraya-express-boat",
+   "title": "Chao Phraya Express Boat Service (routes and fares)",
+   "variants": {
+    "publisher": [
+     "Chao Phraya Express Boat Co."
+    ],
+    "publisher_family": [
+     "chaophraya-express-boat"
+    ],
+    "title": [
+     "Chao Phraya Express Boat Service (routes and fares)"
     ]
    }
   },
@@ -6781,6 +8101,44 @@
     ]
    }
   },
+  "https://www.ddproperty.com/en/condo-for-rent/at-silom-grand-terrace-124": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "DDproperty (PropertyGuru Group)",
+   "publisher_family": "PropertyGuru",
+   "title": "Silom Grand Terrace Condos Rent (19 active listings)",
+   "variants": {
+    "publisher": [
+     "DDproperty (PropertyGuru Group)"
+    ],
+    "publisher_family": [
+     "PropertyGuru"
+    ],
+    "title": [
+     "Silom Grand Terrace Condos Rent (19 active listings)"
+    ]
+   }
+  },
+  "https://www.ddproperty.com/en/condo-for-rent/near-cen-siam-bts-2123": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "DDproperty",
+   "publisher_family": "PropertyGuru Group (DDproperty)",
+   "title": "902 Condos for Rent near CEN Siam BTS Station",
+   "variants": {
+    "publisher": [
+     "DDproperty"
+    ],
+    "publisher_family": [
+     "PropertyGuru Group (DDproperty)"
+    ],
+    "title": [
+     "902 Condos for Rent near CEN Siam BTS Station"
+    ]
+   }
+  },
   "https://www.ddproperty.com/en/condo-for-rent/near-e4-asok-bts-2159": {
    "cited_by": [
     "st.asok"
@@ -6800,6 +8158,25 @@
     ]
    }
   },
+  "https://www.ddproperty.com/en/property/klass-siam-bangkok-for-rent-11808978": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "DDproperty",
+   "publisher_family": "PropertyGuru Group (DDproperty)",
+   "title": "Klass Siam, Bangkok - 1 bedroom, 45 sqm - For Rent ฿30,000/mo",
+   "variants": {
+    "publisher": [
+     "DDproperty"
+    ],
+    "publisher_family": [
+     "PropertyGuru Group (DDproperty)"
+    ],
+    "title": [
+     "Klass Siam, Bangkok - 1 bedroom, 45 sqm - For Rent ฿30,000/mo"
+    ]
+   }
+  },
   "https://www.ddproperty.com/เช่าคอนโด/ใกล้-bts-เพลินจิต-2153": {
    "cited_by": [
     "st.phloen-chit"
@@ -6816,6 +8193,44 @@
     ],
     "title": [
      "DDproperty — rentals near BTS Phloen Chit (search-result data)"
+    ]
+   }
+  },
+  "https://www.demflyers.com/2016/01/18/how-to-survive-a-bangkok-ping-pong-show-without-getting-horribly-scammed": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "DEM Flyers",
+   "publisher_family": "DEM Flyers",
+   "title": "How to survive a Bangkok ping pong show without getting horribly scammed",
+   "variants": {
+    "publisher": [
+     "DEM Flyers"
+    ],
+    "publisher_family": [
+     "DEM Flyers"
+    ],
+    "title": [
+     "How to survive a Bangkok ping pong show without getting horribly scammed"
+    ]
+   }
+  },
+  "https://www.dephanakron.com/chinatown-bangkok-yaowarat": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "Depa Nakron",
+   "publisher_family": "Depa Nakron",
+   "title": "Chinatown Bangkok: What to See, Eat and Do in Yaowarat",
+   "variants": {
+    "publisher": [
+     "Depa Nakron"
+    ],
+    "publisher_family": [
+     "Depa Nakron"
+    ],
+    "title": [
+     "Chinatown Bangkok: What to See, Eat and Do in Yaowarat"
     ]
    }
   },
@@ -6854,6 +8269,44 @@
     ],
     "title": [
      "นั่ง MRT ไปตะลุยกินรอบสถานีวัดมังกร 11 ร้านเด็ด เยาวราช"
+    ]
+   }
+  },
+  "https://www.eeco.or.th/en/high-speed-rail-linking-three-airports/": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "EECO (Eastern Economic Corridor Office of Thailand)",
+   "publisher_family": "EECO (Thai government agency)",
+   "title": "High-Speed Rail Linking Three Airports",
+   "variants": {
+    "publisher": [
+     "EECO (Eastern Economic Corridor Office of Thailand)"
+    ],
+    "publisher_family": [
+     "EECO (Thai government agency)"
+    ],
+    "title": [
+     "High-Speed Rail Linking Three Airports"
+    ]
+   }
+  },
+  "https://www.erawanbangkok.com/en/erawan-shrine/": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "Erawan Bangkok Co., Ltd.",
+   "publisher_family": "erawan-bangkok",
+   "title": "Erawan Shrine (official page)",
+   "variants": {
+    "publisher": [
+     "Erawan Bangkok Co., Ltd."
+    ],
+    "publisher_family": [
+     "erawan-bangkok"
+    ],
+    "title": [
+     "Erawan Shrine (official page)"
     ]
    }
   },
@@ -7016,6 +8469,25 @@
     ]
    }
   },
+  "https://www.feastographyblog.com/blog/boat-noodle-alley": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Feastography",
+   "publisher_family": "Feastography (independent blog)",
+   "title": "Exploring Boat Noodle Alley, The Best Place for Boat Noodles in Bangkok!",
+   "variants": {
+    "publisher": [
+     "Feastography"
+    ],
+    "publisher_family": [
+     "Feastography (independent blog)"
+    ],
+    "title": [
+     "Exploring Boat Noodle Alley, The Best Place for Boat Noodles in Bangkok!"
+    ]
+   }
+  },
   "https://www.fm91bkk.com/newsarticle/44807": {
    "cited_by": [
     "phaya-thai"
@@ -7127,6 +8599,25 @@
     ],
     "title": [
      "Bangkok named top city for pickpocketing/tourist scams 2025; Chatuchak Market flagged"
+    ]
+   }
+  },
+  "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "UK Foreign, Commonwealth & Development Office (GOV.UK)",
+   "publisher_family": "UK Government",
+   "title": "Safety and security - Thailand travel advice",
+   "variants": {
+    "publisher": [
+     "UK Foreign, Commonwealth & Development Office (GOV.UK)"
+    ],
+    "publisher_family": [
+     "UK Government"
+    ],
+    "title": [
+     "Safety and security - Thailand travel advice"
     ]
    }
   },
@@ -7466,7 +8957,8 @@
   },
   "https://www.hipflat.com/condo-for-rent/bangkok/sathon": {
    "cited_by": [
-    "sathon"
+    "sathon",
+    "st.saphan-taksin"
    ],
    "publisher": "HipFlat",
    "publisher_family": "HipFlat",
@@ -7476,10 +8968,12 @@
      "HipFlat"
     ],
     "publisher_family": [
-     "HipFlat"
+     "HipFlat",
+     "hipflat"
     ],
     "title": [
-     "Condos for rent in Sathon, Bangkok"
+     "Condos for rent in Sathon, Bangkok",
+     "Condos for rent in Sathon, Bangkok (price statistics)"
     ]
    }
   },
@@ -7655,6 +9149,25 @@
     ]
    }
   },
+  "https://www.hotels.com/go/thailand/bangkok-pratunam-nightlife": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "Go Guides / Hotels.com",
+   "publisher_family": "Expedia Group (Hotels.com)",
+   "title": "Nightlife in Pratunam - Pratunam travel guide (Go Guides)",
+   "variants": {
+    "publisher": [
+     "Go Guides / Hotels.com"
+    ],
+    "publisher_family": [
+     "Expedia Group (Hotels.com)"
+    ],
+    "title": [
+     "Nightlife in Pratunam - Pratunam travel guide (Go Guides)"
+    ]
+   }
+  },
   "https://www.hotels.com/go/thailand/best-chinatown-nightlife": {
    "cited_by": [
     "pom-prap-sattru-phai"
@@ -7671,6 +9184,25 @@
     ],
     "title": [
      "7 Best Nightlife in Bangkok Chinatown"
+    ]
+   }
+  },
+  "https://www.hotels.com/go/thailand/best-victory-monument-shopping": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Hotels.com Go Guides",
+   "publisher_family": "Expedia Group (Hotels.com)",
+   "title": "5 Best Places to Go Shopping in Victory Monument",
+   "variants": {
+    "publisher": [
+     "Hotels.com Go Guides"
+    ],
+    "publisher_family": [
+     "Expedia Group (Hotels.com)"
+    ],
+    "title": [
+     "5 Best Places to Go Shopping in Victory Monument"
     ]
    }
   },
@@ -7709,6 +9241,25 @@
     ],
     "title": [
      "Getting Here — ICONSIAM"
+    ]
+   }
+  },
+  "https://www.independent.co.uk/news/bangkok-ap-thailand-southeast-asia-china-b2265255.html": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "The Independent (AP wire)",
+   "publisher_family": "Independent (AP)",
+   "title": "Bangkok's new passenger train terminal starts operations",
+   "variants": {
+    "publisher": [
+     "The Independent (AP wire)"
+    ],
+    "publisher_family": [
+     "Independent (AP)"
+    ],
+    "title": [
+     "Bangkok's new passenger train terminal starts operations"
     ]
    }
   },
@@ -7769,6 +9320,25 @@
     ]
    }
   },
+  "https://www.khaosodenglish.com/featured/2024/05/01/bangkok-makes-progress-in-improving-sidewalks-and-sets-10-standards/": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "Khaosod English",
+   "publisher_family": "khaosod",
+   "title": "Bangkok Makes Progress in Improving Sidewalks and Sets 10 Standards",
+   "variants": {
+    "publisher": [
+     "Khaosod English"
+    ],
+    "publisher_family": [
+     "khaosod"
+    ],
+    "title": [
+     "Bangkok Makes Progress in Improving Sidewalks and Sets 10 Standards"
+    ]
+   }
+  },
   "https://www.khaosodenglish.com/featured/2024/07/07/tourist-hotspot-yaowarat-hit-by-major-fire-possible-electrical-cause": {
    "cited_by": [
     "st.wat-mangkon"
@@ -7807,6 +9377,25 @@
     ]
    }
   },
+  "https://www.khaosodenglish.com/life/food/2017/04/28/pride-produce-puts-bangkoks-tor-kor-market-among-worlds-best/": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "Khaosod English",
+   "publisher_family": "khaosodenglish",
+   "title": "Pride in Produce Puts Bangkok's Or Tor Kor Market Among World's Best",
+   "variants": {
+    "publisher": [
+     "Khaosod English"
+    ],
+    "publisher_family": [
+     "khaosodenglish"
+    ],
+    "title": [
+     "Pride in Produce Puts Bangkok's Or Tor Kor Market Among World's Best"
+    ]
+   }
+  },
   "https://www.khaosodenglish.com/news/2025/10/17/bangkok-police-bust-chinese-men-in-three-unrelated-cases-in-single-day/": {
    "cited_by": [
     "din-daeng"
@@ -7823,6 +9412,25 @@
     ],
     "title": [
      "Bangkok Police Bust Chinese Men in Three Unrelated Cases in Single Day"
+    ]
+   }
+  },
+  "https://www.khaosodenglish.com/news/2026/08/15/seven-youths-arrested-over-robbery-of-japanese-tourist-in-bangkok": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "Khaosod English",
+   "publisher_family": "Khaosod",
+   "title": "Seven youths arrested over robbery of Japanese tourist in Bangkok",
+   "variants": {
+    "publisher": [
+     "Khaosod English"
+    ],
+    "publisher_family": [
+     "Khaosod"
+    ],
+    "title": [
+     "Seven youths arrested over robbery of Japanese tourist in Bangkok"
     ]
    }
   },
@@ -7843,6 +9451,25 @@
     ],
     "title": [
      "Riverside Communities Evicted for Chao Phraya Makeover"
+    ]
+   }
+  },
+  "https://www.khaosodenglish.com/news/business/2025/09/06/central-park-the-latest-game-changer-in-bangkoks-downtown-scene/": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Khaosod English",
+   "publisher_family": "Khaosod",
+   "title": "Central Park: The Latest Game-Changer in Bangkok's Downtown Scene",
+   "variants": {
+    "publisher": [
+     "Khaosod English"
+    ],
+    "publisher_family": [
+     "Khaosod"
+    ],
+    "title": [
+     "Central Park: The Latest Game-Changer in Bangkok's Downtown Scene"
     ]
    }
   },
@@ -7903,6 +9530,25 @@
     ]
    }
   },
+  "https://www.linkedin.com/posts/niramon-serisakul_rajavithi-skywalk-opened-today-ahead-of-activity-7511456200883056640-JYrf": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "LinkedIn (Niramon Serisakul, Urban Design and Development Center)",
+   "publisher_family": "LinkedIn (individual professional post)",
+   "title": "Rajavithi Skywalk opened today (post by UDDC/Chulalongkorn University director)",
+   "variants": {
+    "publisher": [
+     "LinkedIn (Niramon Serisakul, Urban Design and Development Center)"
+    ],
+    "publisher_family": [
+     "LinkedIn (individual professional post)"
+    ],
+    "title": [
+     "Rajavithi Skywalk opened today (post by UDDC/Chulalongkorn University director)"
+    ]
+   }
+  },
   "https://www.m2fnews.com/lifestyle/work-and-life/column/travel/53724": {
    "cited_by": [
     "st.sam-yot"
@@ -7957,6 +9603,25 @@
     ],
     "title": [
      "ถึงเวลาเขย่า 'ราคาประเมินใหม่' วิทยุ-เพลินจิต วิ่งฉิว วาละ 2 ล้าน (Matichon)"
+    ]
+   }
+  },
+  "https://www.matichon.co.th/prachachuen/news_5869979": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Matichon",
+   "publisher_family": "Matichon (incl. Prachachat)",
+   "title": "นับถอยหลัง เปิด 'สกายวอล์กราชวิถี' เฟสแรก รีโนเวตใหญ่ใน 2 ทศวรรษ (Countdown: first phase of Rajavithi Skywalk)",
+   "variants": {
+    "publisher": [
+     "Matichon"
+    ],
+    "publisher_family": [
+     "Matichon (incl. Prachachat)"
+    ],
+    "title": [
+     "นับถอยหลัง เปิด 'สกายวอล์กราชวิถี' เฟสแรก รีโนเวตใหญ่ใน 2 ทศวรรษ (Countdown: first phase of Rajavithi Skywalk)"
     ]
    }
   },
@@ -8156,6 +9821,25 @@
     ]
    }
   },
+  "https://www.nationthailand.com/in-focus/30195551": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "The Nation Thailand",
+   "publisher_family": "Nation",
+   "title": "Group urges BMA to clean up Victory Monument area",
+   "variants": {
+    "publisher": [
+     "The Nation Thailand"
+    ],
+    "publisher_family": [
+     "Nation"
+    ],
+    "title": [
+     "Group urges BMA to clean up Victory Monument area"
+    ]
+   }
+  },
   "https://www.nationthailand.com/news/general/40039347": {
    "cited_by": [
     "samphanthawong"
@@ -8172,6 +9856,25 @@
     ],
     "title": [
      "Bangkok's Chinatown paved with flowers as new sidewalk unveiled"
+    ]
+   }
+  },
+  "https://www.nationthailand.com/news/general/40041314": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "The Nation Thailand",
+   "publisher_family": "nationthailand",
+   "title": "Chatuchak Market vendors protest eviction to make way for new venue",
+   "variants": {
+    "publisher": [
+     "The Nation Thailand"
+    ],
+    "publisher_family": [
+     "nationthailand"
+    ],
+    "title": [
+     "Chatuchak Market vendors protest eviction to make way for new venue"
     ]
    }
   },
@@ -8251,22 +9954,121 @@
     ]
    }
   },
-  "https://www.nationthailand.com/thailand/bangkok/40068526": {
+  "https://www.nationthailand.com/thailand/bangkok/40060365": {
    "cited_by": [
-    "sathon"
+    "st.siam"
    ],
    "publisher": "The Nation",
-   "publisher_family": "The Nation",
-   "title": "Bangkok's canal park experiment (Chong Nonsi Canal Park)",
+   "publisher_family": "Nation Group",
+   "title": "Bangkok Countdown 2026: six roads around Centralworld to close Dec 31-Jan 1",
    "variants": {
     "publisher": [
      "The Nation"
     ],
     "publisher_family": [
+     "Nation Group"
+    ],
+    "title": [
+     "Bangkok Countdown 2026: six roads around Centralworld to close Dec 31-Jan 1"
+    ]
+   }
+  },
+  "https://www.nationthailand.com/thailand/bangkok/40068526": {
+   "cited_by": [
+    "sathon",
+    "st.hua-lamphong"
+   ],
+   "publisher": "The Nation",
+   "publisher_family": "Nation Group",
+   "title": "Bangkok's canal park experiment (Chong Nonsi Canal Park)",
+   "variants": {
+    "publisher": [
+     "The Nation",
+     "The Nation Thailand"
+    ],
+    "publisher_family": [
+     "Nation Group",
      "The Nation"
     ],
     "title": [
-     "Bangkok's canal park experiment (Chong Nonsi Canal Park)"
+     "Bangkok's canal park experiment (Chong Nonsi Canal Park)",
+     "Venice of the East, Reborn: Bangkok's Plan to Reclaim Its 1,100 Canals as Linear Parks"
+    ]
+   }
+  },
+  "https://www.nationthailand.com/thailand/bangkok/40070409": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "The Nation Thailand",
+   "publisher_family": "Nation",
+   "title": "Rajavithi Skywalk to complete Victory Monument loop in October",
+   "variants": {
+    "publisher": [
+     "The Nation Thailand"
+    ],
+    "publisher_family": [
+     "Nation"
+    ],
+    "title": [
+     "Rajavithi Skywalk to complete Victory Monument loop in October"
+    ]
+   }
+  },
+  "https://www.nationthailand.com/thailand/general/40028819": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "The Nation Thailand",
+   "publisher_family": "Nation Group",
+   "title": "Historic Bangkok train station to exhibit 7 rare locomotives",
+   "variants": {
+    "publisher": [
+     "The Nation Thailand"
+    ],
+    "publisher_family": [
+     "Nation Group"
+    ],
+    "title": [
+     "Historic Bangkok train station to exhibit 7 rare locomotives"
+    ]
+   }
+  },
+  "https://www.nationthailand.com/thailand/general/40029072": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "The Nation Thailand",
+   "publisher_family": "Nation Group",
+   "title": "Work gets off the ground to give Bangkok's Phadung Krung Kasem Canal a facelift",
+   "variants": {
+    "publisher": [
+     "The Nation Thailand"
+    ],
+    "publisher_family": [
+     "Nation Group"
+    ],
+    "title": [
+     "Work gets off the ground to give Bangkok's Phadung Krung Kasem Canal a facelift"
+    ]
+   }
+  },
+  "https://www.nationthailand.com/thailand/general/40034305": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "The Nation",
+   "publisher_family": "Nation Group",
+   "title": "Siam Paragon shooting suspect to undergo treatment, as court decides to free him",
+   "variants": {
+    "publisher": [
+     "The Nation"
+    ],
+    "publisher_family": [
+     "Nation Group"
+    ],
+    "title": [
+     "Siam Paragon shooting suspect to undergo treatment, as court decides to free him"
     ]
    }
   },
@@ -8286,6 +10088,25 @@
     ],
     "title": [
      "The gentrification of Chulalongkorn University"
+    ]
+   }
+  },
+  "https://www.newswit.com/th/ifpkxsv4fq030van1nzc9dol9n8kjfom": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "Newswit",
+   "publisher_family": "Newswit",
+   "title": "เขตสัมพันธวงศ์กวดขันจัดระเบียบผู้ค้าบนทางเท้าถนนมหาจักรและถนนเยาวราช [Samphanthawong district tightens footpath vendor rules on Mahachai and Yaowarat roads]",
+   "variants": {
+    "publisher": [
+     "Newswit"
+    ],
+    "publisher_family": [
+     "Newswit"
+    ],
+    "title": [
+     "เขตสัมพันธวงศ์กวดขันจัดระเบียบผู้ค้าบนทางเท้าถนนมหาจักรและถนนเยาวราช [Samphanthawong district tightens footpath vendor rules on Mahachai and Yaowarat roads]"
     ]
    }
   },
@@ -8486,6 +10307,25 @@
     ]
    }
   },
+  "https://www.phuket101.net/bangkok/hua-lamphong-railway-station/": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "Phuket 101",
+   "publisher_family": "Phuket 101 (Willy Thuan)",
+   "title": "Hua Lamphong Railway Station - A Historic Landmark In Bangkok",
+   "variants": {
+    "publisher": [
+     "Phuket 101"
+    ],
+    "publisher_family": [
+     "Phuket 101 (Willy Thuan)"
+    ],
+    "title": [
+     "Hua Lamphong Railway Station - A Historic Landmark In Bangkok"
+    ]
+   }
+  },
   "https://www.phyathai.com/th/pytp/about/hospital": {
    "cited_by": [
     "phaya-thai"
@@ -8502,6 +10342,44 @@
     ],
     "title": [
      "โรงพยาบาลพญาไท พหลโยธิน - เกี่ยวกับโรงพยาบาล"
+    ]
+   }
+  },
+  "https://www.pilotguides.com/articles/bangkok-shopping-guide/": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "Pilot Guides",
+   "publisher_family": "pilotguides",
+   "title": "Bangkok Shopping Guide",
+   "variants": {
+    "publisher": [
+     "Pilot Guides"
+    ],
+    "publisher_family": [
+     "pilotguides"
+    ],
+    "title": [
+     "Bangkok Shopping Guide"
+    ]
+   }
+  },
+  "https://www.piyavate.com/en/": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "Piyavate Hospital (Bangpakok Hospital Group)",
+   "publisher_family": "Piyavate / Bangpakok Group",
+   "title": "Piyavate Hospital",
+   "variants": {
+    "publisher": [
+     "Piyavate Hospital (Bangpakok Hospital Group)"
+    ],
+    "publisher_family": [
+     "Piyavate / Bangpakok Group"
+    ],
+    "title": [
+     "Piyavate Hospital"
     ]
    }
   },
@@ -8526,19 +10404,23 @@
   },
   "https://www.platinumfashionmall.com/": {
    "cited_by": [
+    "st.chit-lom",
     "st.ratchaprarop"
    ],
    "publisher": "The Platinum Fashion Mall (official corporate site)",
    "publisher_family": "The Platinum Fashion Mall (official corporate site)",
-   "title": "platinumfashionmall.com homepage",
+   "title": "Platinum Fashion Mall (official site)",
    "variants": {
     "publisher": [
-     "The Platinum Fashion Mall (official corporate site)"
+     "The Platinum Fashion Mall (official corporate site)",
+     "The Platinum Fashion Mall Co., Ltd."
     ],
     "publisher_family": [
-     "The Platinum Fashion Mall (official corporate site)"
+     "The Platinum Fashion Mall (official corporate site)",
+     "platinum"
     ],
     "title": [
+     "Platinum Fashion Mall (official site)",
      "platinumfashionmall.com homepage"
     ]
    }
@@ -8600,6 +10482,44 @@
     ]
    }
   },
+  "https://www.prachachat.net/business/news-1877826": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Prachachat",
+   "publisher_family": "Prachachat (Matichon Group)",
+   "title": "เซ็นทรัล พาร์ค เปิดวันแรก คิวแน่นตั้งแต่ยังไม่เปิดห้าง",
+   "variants": {
+    "publisher": [
+     "Prachachat"
+    ],
+    "publisher_family": [
+     "Prachachat (Matichon Group)"
+    ],
+    "title": [
+     "เซ็นทรัล พาร์ค เปิดวันแรก คิวแน่นตั้งแต่ยังไม่เปิดห้าง"
+    ]
+   }
+  },
+  "https://www.prachachat.net/economic/news-2059265": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Prachachat",
+   "publisher_family": "Matichon (incl. Prachachat)",
+   "title": "สกายวอล์กราชวิถี เชื่อมย่านการแพทย์จากรถไฟฟ้าสู่โรงพยาบาล เปิดเฟสแรก ต.ค.นี้",
+   "variants": {
+    "publisher": [
+     "Prachachat"
+    ],
+    "publisher_family": [
+     "Matichon (incl. Prachachat)"
+    ],
+    "title": [
+     "สกายวอล์กราชวิถี เชื่อมย่านการแพทย์จากรถไฟฟ้าสู่โรงพยาบาล เปิดเฟสแรก ต.ค.นี้"
+    ]
+   }
+  },
   "https://www.prachachat.net/economic/news-2091573": {
    "cited_by": [
     "st.sena-ruam"
@@ -8638,6 +10558,25 @@
     ]
    }
   },
+  "https://www.prachachat.net/hilight-prachachat/news-194941": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "Prachachat",
+   "publisher_family": "prachachat",
+   "title": "ทุบสถิติใหม่ 'หมอชิต-จตุจักร' สกายวอล์กระฟ้าสูงเท่าตึก 5 ชั้น",
+   "variants": {
+    "publisher": [
+     "Prachachat"
+    ],
+    "publisher_family": [
+     "prachachat"
+    ],
+    "title": [
+     "ทุบสถิติใหม่ 'หมอชิต-จตุจักร' สกายวอล์กระฟ้าสูงเท่าตึก 5 ชั้น"
+    ]
+   }
+  },
   "https://www.prd.go.th/th/content/category/detail/id/39/iid/423636": {
    "cited_by": [
     "st.victory-monument"
@@ -8654,6 +10593,25 @@
     ],
     "title": [
      "กทม. เดินหน้าปรับปรุงภูมิทัศน์อนุสาวรีย์ชัยฯ ครั้งใหญ่สุดรอบ 20 ปี"
+    ]
+   }
+  },
+  "https://www.prnewswire.com/ae/news-releases/the-store-of-bangkok-central-chidlom-elevates-retail-experience-as-the-no-1-luxury-department-store-302337219.html": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "PR Newswire (Central Department Store release)",
+   "publisher_family": "prnewswire-central",
+   "title": "The Store of Bangkok: Central Chidlom Elevates Retail Experience as the No. 1 Luxury Department Store",
+   "variants": {
+    "publisher": [
+     "PR Newswire (Central Department Store release)"
+    ],
+    "publisher_family": [
+     "prnewswire-central"
+    ],
+    "title": [
+     "The Store of Bangkok: Central Chidlom Elevates Retail Experience as the No. 1 Luxury Department Store"
     ]
    }
   },
@@ -9002,6 +10960,63 @@
     ]
    }
   },
+  "https://www.siamparagon.co.th/": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "Siam Piwat / Siam Paragon",
+   "publisher_family": "Siam Piwat",
+   "title": "Siam Paragon (official site)",
+   "variants": {
+    "publisher": [
+     "Siam Piwat / Siam Paragon"
+    ],
+    "publisher_family": [
+     "Siam Piwat"
+    ],
+    "title": [
+     "Siam Paragon (official site)"
+    ]
+   }
+  },
+  "https://www.siamparagon.co.th/directory/store/gourmet-market-occupant-927": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "Siam Piwat / Siam Paragon",
+   "publisher_family": "Siam Piwat",
+   "title": "Gourmet Market | Siam Paragon directory",
+   "variants": {
+    "publisher": [
+     "Siam Piwat / Siam Paragon"
+    ],
+    "publisher_family": [
+     "Siam Piwat"
+    ],
+    "title": [
+     "Gourmet Market | Siam Paragon directory"
+    ]
+   }
+  },
+  "https://www.silomcomplex.co.th/en/get-to-know": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Silom Complex (official site)",
+   "publisher_family": "Silom Complex",
+   "title": "Get to know | Silom Complex",
+   "variants": {
+    "publisher": [
+     "Silom Complex (official site)"
+    ],
+    "publisher_family": [
+     "Silom Complex"
+    ],
+    "title": [
+     "Get to know | Silom Complex"
+    ]
+   }
+  },
   "https://www.soidb.com/bangkok/market/market-ladprao1.html": {
    "cited_by": [
     "st.ha-yaek-lat-phrao"
@@ -9018,6 +11033,44 @@
     ],
     "title": [
      "Market - Ladprao Soi 1"
+    ]
+   }
+  },
+  "https://www.soidb.com/bangkok/store/uniqlo-central-rama9.html": {
+   "cited_by": [
+    "st.phra-ram-9"
+   ],
+   "publisher": "SoiDB Thailand",
+   "publisher_family": "SoiDB",
+   "title": "UNIQLO - Central Rama 9",
+   "variants": {
+    "publisher": [
+     "SoiDB Thailand"
+    ],
+    "publisher_family": [
+     "SoiDB"
+    ],
+    "title": [
+     "UNIQLO - Central Rama 9"
+    ]
+   }
+  },
+  "https://www.sonicresidence.com/condo/chatuchak": {
+   "cited_by": [
+    "st.mo-chit"
+   ],
+   "publisher": "Sonic Residence",
+   "publisher_family": "sonicresidence",
+   "title": "คอนโด ย่านจตุจักร-หมอชิต (Chatuchak condo rentals)",
+   "variants": {
+    "publisher": [
+     "Sonic Residence"
+    ],
+    "publisher_family": [
+     "sonicresidence"
+    ],
+    "title": [
+     "คอนโด ย่านจตุจักร-หมอชิต (Chatuchak condo rentals)"
     ]
    }
   },
@@ -9116,6 +11169,25 @@
     ]
    }
   },
+  "https://www.superagent.co/en/blog/bangkok-condo-rental-prices-near-each-bts-station-2025-data": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Superagent",
+   "publisher_family": "Superagent (rental platform content)",
+   "title": "Bangkok Condo Rental Prices Near Each BTS Station 2025 Data",
+   "variants": {
+    "publisher": [
+     "Superagent"
+    ],
+    "publisher_family": [
+     "Superagent (rental platform content)"
+    ],
+    "title": [
+     "Bangkok Condo Rental Prices Near Each BTS Station 2025 Data"
+    ]
+   }
+  },
   "https://www.superagent.co/en/blog/phaya-thai-bangkok-complete-2026-expat-neighborhood-guide": {
    "cited_by": [
     "st.saphan-khwai",
@@ -9174,21 +11246,42 @@
     ]
    }
   },
-  "https://www.superagent.co/en/blog/renting-near-silom-food-street-bangkoks-lunch-district-living-guide": {
+  "https://www.superagent.co/en/blog/renting-near-jj-market-chatuchak-weekend-market-living-guide": {
    "cited_by": [
-    "st.sala-daeng"
+    "st.mo-chit"
    ],
    "publisher": "Superagent",
-   "publisher_family": "real_estate_content",
-   "title": "Silom Food Street Rent - Bangkok Living Guide",
+   "publisher_family": "superagent",
+   "title": "Rent Near JJ Market Chatuchak - Bangkok Living Guide",
    "variants": {
     "publisher": [
      "Superagent"
     ],
     "publisher_family": [
+     "superagent"
+    ],
+    "title": [
+     "Rent Near JJ Market Chatuchak - Bangkok Living Guide"
+    ]
+   }
+  },
+  "https://www.superagent.co/en/blog/renting-near-silom-food-street-bangkoks-lunch-district-living-guide": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Superagent",
+   "publisher_family": "Superagent",
+   "title": "Renting Near Silom Food Street: Bangkok's Lunch District Living Guide",
+   "variants": {
+    "publisher": [
+     "Superagent"
+    ],
+    "publisher_family": [
+     "Superagent",
      "real_estate_content"
     ],
     "title": [
+     "Renting Near Silom Food Street: Bangkok's Lunch District Living Guide",
      "Silom Food Street Rent - Bangkok Living Guide"
     ]
    }
@@ -9247,6 +11340,25 @@
     ],
     "title": [
      "Saladaeng One: Silom Luxury Condo Reviewed for Renters"
+    ]
+   }
+  },
+  "https://www.superagent.co/en/blog/silom-and-bangrak-condo-rental-prices-the-business-district-breakdown": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Superagent",
+   "publisher_family": "Superagent",
+   "title": "Silom & Bangrak Condo Rental Prices: Full Guide",
+   "variants": {
+    "publisher": [
+     "Superagent"
+    ],
+    "publisher_family": [
+     "Superagent"
+    ],
+    "title": [
+     "Silom & Bangrak Condo Rental Prices: Full Guide"
     ]
    }
   },
@@ -9361,6 +11473,44 @@
     ],
     "title": [
      "ทำความรู้จัก ซอยนานา ทำเลดังย่านสุขุมวิท แหล่งเที่ยวในยามราตรี (Get to know Soi Nana, the famous Sukhumvit nightlife location)"
+    ]
+   }
+  },
+  "https://www.thailand-property.com/condos-for-rent/bangkok/ratchathewi/makkasan": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "Thailand-Property.com",
+   "publisher_family": "Thailand-Property (property portal)",
+   "title": "Condos for rent in Makkasan, Ratchathewi, Bangkok",
+   "variants": {
+    "publisher": [
+     "Thailand-Property.com"
+    ],
+    "publisher_family": [
+     "Thailand-Property (property portal)"
+    ],
+    "title": [
+     "Condos for rent in Makkasan, Ratchathewi, Bangkok"
+    ]
+   }
+  },
+  "https://www.thailandplus.tv/archives/548927": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "ThailandPlus.tv",
+   "publisher_family": "thailandplus",
+   "title": "กรมเจ้าท่า เปิดท่าเรือท่าช้าง–ท่าสาทร (Smart Pier: Smart Connection)",
+   "variants": {
+    "publisher": [
+     "ThailandPlus.tv"
+    ],
+    "publisher_family": [
+     "thailandplus"
+    ],
+    "title": [
+     "กรมเจ้าท่า เปิดท่าเรือท่าช้าง–ท่าสาทร (Smart Pier: Smart Connection)"
     ]
    }
   },
@@ -9516,21 +11666,43 @@
     ]
    }
   },
-  "https://www.thaipbs.or.th/news/content/500677": {
+  "https://www.thaipbs.or.th/news/content/343007": {
    "cited_by": [
-    "pathum-wan"
+    "st.phetchaburi"
    ],
    "publisher": "Thai PBS",
-   "publisher_family": "thaipbs",
-   "title": "ปิดการจราจรชั่วคราว 6 เส้นทาง จัดงานเคานต์ดาวน์ Central World 2026 (Thai PBS)",
+   "publisher_family": "Thai PBS (public broadcaster)",
+   "title": "พอช.สร้างบ้านมั่นคงรับ 4 ชุมชนราชเทวี พัฒนาทางเชื่อม 3 สนามบิน",
    "variants": {
     "publisher": [
      "Thai PBS"
     ],
     "publisher_family": [
+     "Thai PBS (public broadcaster)"
+    ],
+    "title": [
+     "พอช.สร้างบ้านมั่นคงรับ 4 ชุมชนราชเทวี พัฒนาทางเชื่อม 3 สนามบิน"
+    ]
+   }
+  },
+  "https://www.thaipbs.or.th/news/content/500677": {
+   "cited_by": [
+    "pathum-wan",
+    "st.siam"
+   ],
+   "publisher": "Thai PBS",
+   "publisher_family": "Thai PBS",
+   "title": "ปิดการจราจรชั่วคราว 6 เส้นทาง จัดงานเคานต์ดาวน์ Central World 2026",
+   "variants": {
+    "publisher": [
+     "Thai PBS"
+    ],
+    "publisher_family": [
+     "Thai PBS",
      "thaipbs"
     ],
     "title": [
+     "ปิดการจราจรชั่วคราว 6 เส้นทาง จัดงานเคานต์ดาวน์ Central World 2026",
      "ปิดการจราจรชั่วคราว 6 เส้นทาง จัดงานเคานต์ดาวน์ Central World 2026 (Thai PBS)"
     ]
    }
@@ -9592,6 +11764,25 @@
     ]
    }
   },
+  "https://www.thaipbsworld.com/climate/worsening-air-quality-in-bangkok,-with-excessive-pm2.5-dust-in-all-districts": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "Thai PBS World",
+   "publisher_family": "Thai PBS (public broadcaster)",
+   "title": "Worsening air quality in Bangkok, with excessive PM2.5 dust in all districts",
+   "variants": {
+    "publisher": [
+     "Thai PBS World"
+    ],
+    "publisher_family": [
+     "Thai PBS (public broadcaster)"
+    ],
+    "title": [
+     "Worsening air quality in Bangkok, with excessive PM2.5 dust in all districts"
+    ]
+   }
+  },
   "https://www.thaipbsworld.com/economy/pratunam,-bo-bae-vendors-hit-hard-by-weak-purchasing-power,-high-rents-and-e-commerce-boom": {
    "cited_by": [
     "pom-prap-sattru-phai"
@@ -9627,6 +11818,25 @@
     ],
     "title": [
      "Ratchathewi overpass to close for three years for Orange Line construction starting tonight"
+    ]
+   }
+  },
+  "https://www.thaipbsworld.com/travel-tourism/rethinking-victory-monument:-bangkok%E2%80%99s-busiest-bus-hub": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Thai PBS World",
+   "publisher_family": "Thai PBS",
+   "title": "Rethinking Victory Monument: Bangkok's busiest bus hub",
+   "variants": {
+    "publisher": [
+     "Thai PBS World"
+    ],
+    "publisher_family": [
+     "Thai PBS"
+    ],
+    "title": [
+     "Rethinking Victory Monument: Bangkok's busiest bus hub"
     ]
    }
   },
@@ -9703,6 +11913,25 @@
     ],
     "title": [
      "Which rail lines carried the most passengers in Thailand during 2025"
+    ]
+   }
+  },
+  "https://www.thaitrainguide.com/2023/01/17/full-list-of-62-trains-remaining-at-hua-lamphong-station/": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "Thai Train Guide (Richard Barrow)",
+   "publisher_family": "Thai Train Guide",
+   "title": "Full List of 62 Trains Remaining at Hua Lamphong Station",
+   "variants": {
+    "publisher": [
+     "Thai Train Guide (Richard Barrow)"
+    ],
+    "publisher_family": [
+     "Thai Train Guide"
+    ],
+    "title": [
+     "Full List of 62 Trains Remaining at Hua Lamphong Station"
     ]
    }
   },
@@ -9784,19 +12013,23 @@
   },
   "https://www.thansettakij.com/general-news/647960": {
    "cited_by": [
-    "pathum-wan"
+    "pathum-wan",
+    "st.siam"
    ],
    "publisher": "Than Settakij",
-   "publisher_family": "thansettakij",
-   "title": "เคาท์ดาวน์ Centralworld 2026 เช็กวิธีเดินทาง เส้นทางเข้า-ออกห้าง (Than Settakij)",
+   "publisher_family": "Nation Group",
+   "title": "เคาท์ดาวน์ Centralworld 2026 เช็กวิธีเดินทาง เส้นทางเข้า-ออกห้าง",
    "variants": {
     "publisher": [
-     "Than Settakij"
+     "Than Settakij",
+     "ฐานเศรษฐกิจ (Thansettakij)"
     ],
     "publisher_family": [
+     "Nation Group",
      "thansettakij"
     ],
     "title": [
+     "เคาท์ดาวน์ Centralworld 2026 เช็กวิธีเดินทาง เส้นทางเข้า-ออกห้าง",
      "เคาท์ดาวน์ Centralworld 2026 เช็กวิธีเดินทาง เส้นทางเข้า-ออกห้าง (Than Settakij)"
     ]
    }
@@ -9806,17 +12039,19 @@
     "st.victory-monument"
    ],
    "publisher": "Thansettakij",
-   "publisher_family": "Thansettakij (Nation group)",
+   "publisher_family": "Amarin",
    "title": "ปรับโฉมใหญ่รอบ 20 ปี กทม. เตรียมเปิด 'สกายวอล์กราชวิถี' เฟสแรก ต.ค. นี้",
    "variants": {
     "publisher": [
      "Thansettakij"
     ],
     "publisher_family": [
+     "Amarin",
      "Thansettakij (Nation group)"
     ],
     "title": [
-     "ปรับโฉมใหญ่รอบ 20 ปี กทม. เตรียมเปิด 'สกายวอล์กราชวิถี' เฟสแรก ต.ค. นี้"
+     "ปรับโฉมใหญ่รอบ 20 ปี กทม. เตรียมเปิด 'สกายวอล์กราชวิถี' เฟสแรก ต.ค. นี้",
+     "ปรับโฉมใหญ่รอบ 20 ปี กทม. เปิด 'สกายวอล์กราชวิถี' เฟสแรก ต.ค. นี้ เชื่อมรอบอนุสาวรีย์ชัย (BMA to open first phase of Rajavithi Skywalk in October)"
     ]
    }
   },
@@ -9877,6 +12112,44 @@
     ]
    }
   },
+  "https://www.thattravelblog.com/blog/chinatown-songwat-talat-noi-bangkok-guide": {
+   "cited_by": [
+    "st.hua-lamphong"
+   ],
+   "publisher": "That Travel Blog",
+   "publisher_family": "That Travel Blog",
+   "title": "Chinatown, Song Wat & Talat Noi: Bangkok Area Guide",
+   "variants": {
+    "publisher": [
+     "That Travel Blog"
+    ],
+    "publisher_family": [
+     "That Travel Blog"
+    ],
+    "title": [
+     "Chinatown, Song Wat & Talat Noi: Bangkok Area Guide"
+    ]
+   }
+  },
+  "https://www.thebangkokinsight.com/news/business/economics/883716": {
+   "cited_by": [
+    "st.saphan-taksin"
+   ],
+   "publisher": "The Bangkok Insight",
+   "publisher_family": "bangkokinsight",
+   "title": "นายกฯ เปิดท่าเรืออัจฉริยะ ท่าช้าง–สาทร ยกระดับมาตรฐานขนส่ง",
+   "variants": {
+    "publisher": [
+     "The Bangkok Insight"
+    ],
+    "publisher_family": [
+     "bangkokinsight"
+    ],
+    "title": [
+     "นายกฯ เปิดท่าเรืออัจฉริยะ ท่าช้าง–สาทร ยกระดับมาตรฐานขนส่ง"
+    ]
+   }
+  },
   "https://www.thefinestthai.com/2026/04/16/soi-convent-and-silom-bangkoks-best-kept-secret-for-lunchtime-street-food": {
    "cited_by": [
     "bang-rak"
@@ -9901,13 +12174,14 @@
     "st.sala-daeng"
    ],
    "publisher": "The Finest Thai",
-   "publisher_family": "lifestyle_blog",
+   "publisher_family": "The Finest Thai",
    "title": "Soi Lalai Sap Market Guide: Silom Lunch Food, Office Crowds and Timing",
    "variants": {
     "publisher": [
      "The Finest Thai"
     ],
     "publisher_family": [
+     "The Finest Thai",
      "lifestyle_blog"
     ],
     "title": [
@@ -9991,6 +12265,25 @@
     ]
    }
   },
+  "https://www.timeout.com/bangkok/bars/best-rooftop-and-sky-high-bars": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "timeout",
+   "title": "The best rooftop bars in Bangkok",
+   "variants": {
+    "publisher": [
+     "Time Out Bangkok"
+    ],
+    "publisher_family": [
+     "timeout"
+    ],
+    "title": [
+     "The best rooftop bars in Bangkok"
+    ]
+   }
+  },
   "https://www.timeout.com/bangkok/news/golden-mount-temple-fair-102026": {
    "cited_by": [
     "pom-prap-sattru-phai"
@@ -10026,6 +12319,25 @@
     ],
     "title": [
      "Jodd Fairs to relocate to Ratchada and branch out to former theme park Dan Neramit"
+    ]
+   }
+  },
+  "https://www.timeout.com/bangkok/news/rajavithi-skywalk-victory-monument-083126": {
+   "cited_by": [
+    "st.victory-monument"
+   ],
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "Time Out",
+   "title": "Rajavithi Skywalk opens this October at Victory Monument",
+   "variants": {
+    "publisher": [
+     "Time Out Bangkok"
+    ],
+    "publisher_family": [
+     "Time Out"
+    ],
+    "title": [
+     "Rajavithi Skywalk opens this October at Victory Monument"
     ]
    }
   },
@@ -10083,6 +12395,25 @@
     ],
     "title": [
      "The best bars in Soi Nana, Chinatown"
+    ]
+   }
+  },
+  "https://www.timeout.com/bangkok/restaurants/the-50-best-restaurants-in-bangkok": {
+   "cited_by": [
+    "st.chit-lom"
+   ],
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "timeout",
+   "title": "The 50 best restaurants in Bangkok",
+   "variants": {
+    "publisher": [
+     "Time Out Bangkok"
+    ],
+    "publisher_family": [
+     "timeout"
+    ],
+    "title": [
+     "The 50 best restaurants in Bangkok"
     ]
    }
   },
@@ -10148,7 +12479,8 @@
   },
   "https://www.timeout.com/bangkok/things-to-do/chatuchak-weekend-market-guide": {
    "cited_by": [
-    "chatuchak"
+    "chatuchak",
+    "st.mo-chit"
    ],
    "publisher": "Time Out Bangkok",
    "publisher_family": "Time Out Bangkok",
@@ -10158,10 +12490,12 @@
      "Time Out Bangkok"
     ],
     "publisher_family": [
-     "Time Out Bangkok"
+     "Time Out Bangkok",
+     "timeout"
     ],
     "title": [
-     "Chatuchak Weekend Market guide"
+     "Chatuchak Weekend Market guide",
+     "Chatuchak weekend market guide"
     ]
    }
   },
@@ -10181,6 +12515,25 @@
     ],
     "title": [
      "Where to unwind in the bustling neighborhood of Silom"
+    ]
+   }
+  },
+  "https://www.timeout.com/bangkok/things-to-do/siam-square-your-ultimate-neighbourhood-guide": {
+   "cited_by": [
+    "st.siam"
+   ],
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "Time Out",
+   "title": "The best things to do in Siam Square, Bangkok",
+   "variants": {
+    "publisher": [
+     "Time Out Bangkok"
+    ],
+    "publisher_family": [
+     "Time Out"
+    ],
+    "title": [
+     "The best things to do in Siam Square, Bangkok"
     ]
    }
   },
@@ -10298,6 +12651,25 @@
     ]
    }
   },
+  "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/1456": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Travelfish",
+   "publisher_family": "Travelfish",
+   "title": "Street food around Sala Daeng",
+   "variants": {
+    "publisher": [
+     "Travelfish"
+    ],
+    "publisher_family": [
+     "Travelfish"
+    ],
+    "title": [
+     "Street food around Sala Daeng"
+    ]
+   }
+  },
   "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/2417": {
    "cited_by": [
     "st.ratchathewi"
@@ -10314,6 +12686,25 @@
     ],
     "title": [
      "Street food: Phetchaburi Soi 10"
+    ]
+   }
+  },
+  "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/3133": {
+   "cited_by": [
+    "st.sala-daeng"
+   ],
+   "publisher": "Travelfish",
+   "publisher_family": "Travelfish",
+   "title": "Lalai Sap market",
+   "variants": {
+    "publisher": [
+     "Travelfish"
+    ],
+    "publisher_family": [
+     "Travelfish"
+    ],
+    "title": [
+     "Lalai Sap market"
     ]
    }
   },
@@ -10488,6 +12879,25 @@
     ]
    }
   },
+  "https://www.wongnai.com/restaurants?regions=174&categories=3": {
+   "cited_by": [
+    "st.phetchaburi"
+   ],
+   "publisher": "Wongnai",
+   "publisher_family": "Wongnai (restaurant-review platform, LINE group)",
+   "title": "ร้าน อาหารไทย ยอดนิยม ในมักกะสัน (popular Thai restaurants in Makkasan)",
+   "variants": {
+    "publisher": [
+     "Wongnai"
+    ],
+    "publisher_family": [
+     "Wongnai (restaurant-review platform, LINE group)"
+    ],
+    "title": [
+     "ร้าน อาหารไทย ยอดนิยม ในมักกะสัน (popular Thai restaurants in Makkasan)"
+    ]
+   }
+  },
   "https://www.wongnai.com/reviews/257e00572c09499e9efa0d8802d0b7c3": {
    "cited_by": [
     "st.sam-yot"
@@ -10604,14 +13014,14 @@
   }
  },
  "date": "2026-11-08",
- "generated_at": "2026-11-08T00:21:26Z",
+ "generated_at": "2026-11-08T18:01:34Z",
  "generator": "kit/tools/build_source_registry.py v1 (B-11)",
  "note": "Reference registry for merged citation views. Bundle provenance is never rewritten; the adapter consults this file at build time.",
  "rule": "canonical attribution = most frequent exact string per field; ties lexicographic",
  "stats": {
-  "publisher_family_inconsistent": 54,
-  "publisher_inconsistent": 39,
-  "title_inconsistent": 32
+  "publisher_family_inconsistent": 70,
+  "publisher_inconsistent": 52,
+  "title_inconsistent": 42
  },
- "url_count": 543
+ "url_count": 666
 }

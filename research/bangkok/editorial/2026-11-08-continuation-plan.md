@@ -18,9 +18,7 @@ workstreams so nothing lives in an appendix. Review history:
 
 ## 0. State snapshot
 
-- **183/183 entities** carry a schema-valid bundle: 22 tier A (full),
-  24 tier B (light), 137 tier C (data-only placeholders, `draft` by design).
-  Master index: [`2026-11-08-tier-plan.md`](2026-11-08-tier-plan.md).
+- **183/183 entities** carry a schema-valid bundle: **31 tier A (full), 15 tier B (light), 137 tier C** (data-only placeholders, `draft` by design) after the D-1 batch-5 upgrades (9 entities keep their superseded tier-B bundles as history; precedence = highest tier). Master index: [`2026-11-08-tier-plan.md`](2026-11-08-tier-plan.md).
 - **Independent agent review executed (A-1 agent pass, 2026-11-08)**:
   **22 approved / 24 blocked**; tier C **137/137 PASS** independently
   reproduced. Recorded in `review.reviewer` as `agent-review:*` — **not a
@@ -33,9 +31,9 @@ workstreams so nothing lives in an appendix. Review history:
   ([`2026-11-08-gate-verification.md`](2026-11-08-gate-verification.md));
   after the fix + a logged contract-repair pass, ALL OK ×5 (schema +
   semantic) and audit zero-P1 ×5 stand for real.
-- Program totals (tiers A+B): 668 sources (527 body-read, 547 distinct URLs as
-  researched — 543 after the contract-repair merges, 299 publisher families),
-  667 claims — 422 corroborated / 205 proposed /
+- Program totals (all researched bundles incl. the 9 superseded tier-B records):
+  830 sources (693 body-read), **819 claims, 666 distinct URLs**; the authoritative
+  per-entity record follows tier precedence (batch 5 over batch 4 for the 9 upgraded). — 422 corroborated / 205 proposed /
   40 conflicted as researched; **399 / 228 / 40 after the executed B-10
   canonical relabel (2026-11-08; deterministic rule set, 23 relabels —
   [`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md))**.
@@ -364,6 +362,7 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
 - **2026-11-08 (plan v2.4):** header + rows refreshed to the post-rework state — A-7 covered by the review; A-9 added (F8 findings files owed — A-8 did not include them); B-13 caveat resolved; B-9 test count 33; G6 closed properly; G7/A-9 split; sequencing: human sign-off ∥ A-9.
 - **2026-11-08 (autonomous continuation, final AG sweep):** A-9 findings files written · C-5 script + registry (530 items) · C-1 wave executed early · B-15 contract checklist (30 clauses; 3 ❌) · A-6 AG half (census 238/117; 9 verified; 2 flagged) · E-7 sweep (3 corridors clean). Gates green after each bundle-touching step. Remaining: human sign-off (DEC-2) ∥ A-5/A-6 human halves ∥ PL items (B-1/B-2/B-4-corrected, B-9 CI) ∥ WS-E (gated on A-1).
 - **2026-11-08 (D-1 EXECUTED — batch 5 complete):** all 9 tier-B→A full bundles delivered, assembled, gated: 164 sources (159 body-read) / 156 claims / 298 log entries; assembly normalizations ZERO (first fully contract-clean batch); gates ALL OK ×9, audit zero-P1 (23 documented P2s), G20/G17 clean, kit tests 33 green; one mid-batch strip (chit-lom inline refs ×17, logged). Notable: 3 brief leads contradicted by evidence (chit-lom bike protest, saphan-taksin 'cancelled' tower → on-hold, phetchaburi CODI name) — recorded as findings; new top risk found (S6 single-platform 3-year closure risk); C-1 skywalk note sharpened by body-reads; findings.md written AT CLOSE (F8 lesson applied). Tier plan: 9 rows B→A, counts 31/15/137, stale rows fixed. All nine bundles `ready_for_review` — the human A-1 gate covers batch 5 like every earlier batch. Quota interruption (2 agents) recovered same day. Manifest window 13:15→15:27Z.
+- **2026-11-08 (fourth review — superseded-bundle handling was the gap):** batch 5 created 9 duplicate bundle-pairs with no declared precedence; downstream aggregations silently double-counted. FIXED: recheck-due.py `--supersede` precedence flag (registry 668 → **603**; 65 stale rows dropped), B-11 registry rebuilt with batch 5 (543 → **666 URLs**), link-health wave 2 over batch-5 sources (162 checked: 152 OK, zero dead). Stale §0/final-review counts corrected; E-7 marked stale-for-9-upgraded (re-sweep queued pre-integration); siam palace-precinct + sala-daeng new-park receipts routed to pipeline notes; integration review amended (precedence rule, recheck_due UI rendering, data_date/as_of relationship, CI coupling). Doc: [`2026-11-08-fourth-review.md`](2026-11-08-fourth-review.md).
 - **2026-11-08 (integration review):** detailed DB/UI integration review written ([`2026-11-08-integration-review.md`](2026-11-08-integration-review.md)), grounded in the actual components — key discovery: the UI already implements the hard patterns (per-category evidence rows in AreaGuide.tsx, confidence taxonomy strong/moderate/estimate/editorial, score-basis disclosure panel, rent provenance enum, server-side slim adapter), so integration is incremental: two generated artifacts (editorial-index ~120KB + on-demand chunks), one adapter field, two new components (EditorialGuide + EvidenceDrawer), card additions (preview line / data-only label / freshness chip / copy-eligibility gating), ~10 chrome i18n keys; zero changes to ratings/geometry/rents/existing copy keys. Phased P0–P3 with the sign-off key and tier-C anti-laundering as CI fixture tests; P0 exporter skeleton can start without user-visible change, P1+ gated on A-1.
 - **2026-11-08 (approval #2 executed):** the user approved the four-unlock map — the agent-executable item (#4: B-2 anchor-audit receipts + B-4 PIP case-documentation table) is being executed now; DEC-2/A-1 (needs a NAMED reviewer — a blanket approval cannot name a person), the sena-ruam replay (needs the build machine) and TG handles (needs real handles) remain open as mapped.
 - **2026-11-08 (post-batch-5 closeout):** C-5 registry regenerated including batch 5 → **668 items** (269 flags + 399 open issues); reviewer packet §3c added (batch-5 stakes for the human pass); pipeline notes carry batch-5 ticket candidates (S6 bottleneck, VM straddle/cell-edge, Section-30/GR9/Orange-Line rechecks); B-2 drift classification: all 4 offset cases are same-station displacements — the app never anchors the wrong station. B-13 note: batch-5 conflicts_with = 0 (all conflicts source-level, corpus convention holds).

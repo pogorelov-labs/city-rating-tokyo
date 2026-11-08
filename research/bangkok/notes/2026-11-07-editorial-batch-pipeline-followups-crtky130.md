@@ -162,4 +162,11 @@ The tiered program completed all 183 entities (`editorial/2026-11-08-tier-plan.m
 7. **Mo Chit 2 / park areas:** Mo Chit 2 confirmed ~2 km out (outside both
    catchments); four-park totals conflict (753 rai ≈ 120 ha vs app
    149.2/167.1) — joins the B-3/B-4 green/polygon family.
+8. **Siam green decomposition (batch 5):** the app's ~6 ha unnamed green at Siam
+   decomposes to the Sra Pathum palace precinct + Wat Pathum Wanaram temple grounds
+   (royal/religious — not public-park credit); joins the B-3 green-basis family.
+9. **Sala Daeng new park (batch 5):** Suan Dusit Arun, a free 7-rai rooftop park,
+   opened 2025-09-03 in the unit — partially offsets the edge-only Lumphini green
+   basis; recheck-able fact for the honesty notes.
+
 

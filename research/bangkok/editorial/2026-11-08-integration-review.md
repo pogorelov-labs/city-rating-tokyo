@@ -171,6 +171,27 @@ narrative fields — exporter + component test both.
 | P2 | EditorialGuide + EvidenceDrawer components | A-1 + A-5/A-6 (Thai/legal pass on surfaced copy) |
 | P3 | WS-F guide translations (JA/RU chunks), WS-G gallery | separate gates |
 
+## 6b. Amendments (fourth review, same day)
+
+1. **Entity precedence (the miss):** 9 upgraded entities have two researched
+   bundles (superseded tier-B + tier-A). The exporter takes the highest tier
+   per entity (see E-1 §2 amendment); without this rule every aggregation
+   (recheck registry, B-11, evidence drawer) would double-count. The recheck
+   registry and B-11 registry were already regenerated under the rule
+   (603 items; 666 URLs).
+2. **`recheck_due` must render**, not just exist: when `recheck_due` ≤ now,
+   the card/guide shows a "facts due recheck" chip (existing date-chip
+   pattern) — added to the §3 card table.
+3. **`data_date` vs `as_of`:** the app's `data_date` (snapshot build, 2026-10)
+   and the editorial `as_of` (research observation, 2026-11) are different
+   clocks; the UI must label them separately ("scores as of" / "editorial as
+   of") — conflating them would imply scores moved when only research moved.
+4. **CI coupling:** the exporter reads `research/bangkok/editorial/…` at app
+   build time — same repo, but CI must not break when research artifacts are
+   mid-write: the exporter is deterministic + refuses partial inputs
+   (digest-verified manifest), and the flag keeps the app buildable even if
+   the exporter is skipped (empty index = pre-research UI).
+
 ## 7. Answers to "are there changes needed?" — the short list
 
 - **DB**: two new generated artifacts (index + chunks); exporter step; zero

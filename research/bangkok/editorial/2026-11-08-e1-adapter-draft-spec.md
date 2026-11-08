@@ -20,8 +20,11 @@ follow.**
 
 ## 2. Input contract
 
-- Inputs: the 46 researched bundles at `ready_for_review`/`approved` + tier-C
-  identities from the current app snapshot.
+- Inputs: the researched bundles at `ready_for_review`/`approved` + tier-C identities
+  from the current app snapshot. **Precedence rule (fourth review):** 9 entities
+  carry both a tier-B (batch 4, superseded) and tier-A (batch 5) bundle — the
+  exporter takes the **highest tier** per entity and records the superseded
+  batch as provenance (`superseded_by` in the index).
 - `schema_version 1.0` only; the exporter refuses unknown versions (migration
   policy: additive — bump + migration notes in the exporter, never in-place
   rewrites of research artifacts).
