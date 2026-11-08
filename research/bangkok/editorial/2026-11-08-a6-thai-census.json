@@ -1,0 +1,1454 @@
+{
+ "generated": "2026-11-08",
+ "purpose": "A-6 human Thai-verification census (copy-bearing claims citing Thai-language sources)",
+ "totals": {
+  "claims": 238,
+  "sources": 117
+ },
+ "verified_in_session": [
+  {
+   "url": "https://propertysights.com/th/blog/อโศก",
+   "how": "curl fetch 2026-11-08; 'อโศก'+'2569' matched"
+  },
+  {
+   "url": "https://tiewgan.com/travel-around-mrt-samyot-station/",
+   "how": "A-8 fetch; 'สามยอด'+'ชิโน' matched"
+  },
+  {
+   "url": "https://www.thaipost.net/x-cite-news/25108/",
+   "how": "A-8 fetch; 'ประชาธิปไตย' matched"
+  },
+  {
+   "url": "https://room.baanlaesuan.com/357147/commercial/cafe/piccolo-vicolo-cafeat-wang-burapha-samyot",
+   "how": "A-8 fetch; 'โทน'/'50 ปี' matched"
+  },
+  {
+   "url": "https://www.aroundonline.com/bangkok-news-18/",
+   "how": "A-8 fetch; 'คลองถม'+'สามยอด' matched"
+  },
+  {
+   "url": "https://thipsamai.com/thai/padthai-song-krueng/",
+   "how": "A-8 fetch; 'มหาไชย' matched"
+  },
+  {
+   "url": "https://www.wongnai.com/reviews/257e00572c09499e9efa0d8802d0b7c3",
+   "how": "A-8 fetch; content matched"
+  }
+ ],
+ "flagged_js_shell": [
+  {
+   "url": "https://www.thaihometown.com/knowledge/ทำเลดังซอยนานา-แหล่งท่องเที่ยวยามราตรี",
+   "why": "200 but terms absent — likely JS shell; human check needed"
+  },
+  {
+   "url": "https://chaophrayaexpressboat.com",
+   "why": "200 but terms absent — SPA shell; human check needed"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%94",
+   "uses": 9,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "เขตบางพลัด",
+   "id": "src_536e5ff1e01b",
+   "claims": [
+    "bang-phlat-c01",
+    "bang-phlat-c02",
+    "bang-phlat-c05",
+    "bang-phlat-c06",
+    "bang-phlat-c08",
+    "bang-phlat-c09"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%99",
+   "uses": 7,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "เขตคลองสาน",
+   "id": "src_d39878d0d7b4",
+   "claims": [
+    "khlong-san-c01",
+    "khlong-san-c02",
+    "khlong-san-c09",
+    "khlong-san-st-c03",
+    "khlong-san-st-c04",
+    "khlong-san-st-c10",
+    "khlong-san-st-c11"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%81%E0%B8%AA%E0%B8%B4%E0%B8%99",
+   "uses": 7,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "สถานีรถไฟฟ้า BTS สะพานตากสิน",
+   "id": "src_ee99d8440689",
+   "claims": [
+    "saphan-taksin-c01",
+    "saphan-taksin-c02",
+    "saphan-taksin-c03",
+    "saphan-taksin-c04",
+    "saphan-taksin-c05",
+    "saphan-taksin-c08",
+    "saphan-taksin-c09"
+   ]
+  },
+  {
+   "url": "https://propertysights.com/th/blog/อโศก",
+   "uses": 6,
+   "publisher": "PropertySights",
+   "body_read": true,
+   "title": "อโศก 2569: คู่มือย่าน (Asok neighborhood guide)",
+   "id": "src_4807525fec70",
+   "claims": [
+    "asok-c11",
+    "asok-c13",
+    "asok-c14",
+    "asok-c15",
+    "asok-c18",
+    "asok-c19"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3",
+   "uses": 6,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "เขตสาทร",
+   "id": "src_e206266bf9bc",
+   "claims": [
+    "sathon-c01",
+    "sathon-c02",
+    "sathon-c03",
+    "sathon-c08",
+    "sathon-c09",
+    "sathon-c12"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/สถานีสวนจตุจักร",
+   "uses": 6,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "สถานีสวนจตุจักร (MRT Chatuchak Park)",
+   "id": "src_001aa18f4a35",
+   "claims": [
+    "kamphaeng-phet-c03",
+    "kamphaeng-phet-c09",
+    "mo-chit-c01",
+    "mo-chit-c02",
+    "mo-chit-c08",
+    "mo-chit-c10"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%98%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5",
+   "uses": 6,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "เขตธนบุรี",
+   "id": "src_983a048a65d8",
+   "claims": [
+    "thon-buri-c01",
+    "thon-buri-c03",
+    "thon-buri-c04",
+    "thon-buri-c08",
+    "thon-buri-c09",
+    "thon-buri-c12"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/เขตพญาไท",
+   "uses": 5,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "เขตพญาไท",
+   "id": "src_83d19094630c",
+   "claims": [
+    "phaya-thai-c03",
+    "phaya-thai-c05",
+    "phaya-thai-c06",
+    "phaya-thai-c08",
+    "phaya-thai-c13"
+   ]
+  },
+  {
+   "url": "https://www.thaihometown.com/knowledge/ทำเลดังซอยนานา-แหล่งท่องเที่ยวยามราตรี",
+   "uses": 5,
+   "publisher": "ThaiHometown",
+   "body_read": true,
+   "title": "ทำความรู้จัก ซอยนานา ทำเลดังย่านสุขุมวิท แหล่งเที่ยวในยามราตรี (Get to know Soi Nana, the famous Suk",
+   "id": "src_ca92238a93f3",
+   "claims": [
+    "nana-c02",
+    "nana-c06",
+    "nana-c07",
+    "nana-c08",
+    "nana-c18"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B8%B7%E0%B9%88%E0%B8%AD",
+   "uses": 5,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "เขตบางซื่อ",
+   "id": "src_33f47b97ca63",
+   "claims": [
+    "bang-sue-c04",
+    "bang-sue-c05",
+    "bang-sue-c08",
+    "bang-sue-c09"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%94%E0%B8%B8%E0%B8%AA%E0%B8%B4%E0%B8%95",
+   "uses": 5,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "เขตดุสิต",
+   "id": "src_f8ea14a23139",
+   "claims": [
+    "dusit-c01",
+    "dusit-c02",
+    "dusit-c05",
+    "dusit-c06",
+    "dusit-c09"
+   ]
+  },
+  {
+   "url": "https://chaophrayaexpressboat.com",
+   "uses": 5,
+   "publisher": "Chao Phraya Express Boat Co.",
+   "body_read": true,
+   "title": "เรือด่วนเจ้าพระยา (Chao Phraya Express Boat) — official site",
+   "id": "src_064256ef3365",
+   "claims": [
+    "saphan-taksin-c01",
+    "saphan-taksin-c02",
+    "saphan-taksin-c03",
+    "saphan-taksin-c04",
+    "saphan-taksin-c08"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%88%E0%B8%95%E0%B8%B8%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3",
+   "uses": 4,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "เขตจตุจักร",
+   "id": "src_57eb4385ff80",
+   "claims": [
+    "chatuchak-c01",
+    "chatuchak-c02",
+    "chatuchak-c10",
+    "chatuchak-c12"
+   ]
+  },
+  {
+   "url": "https://today.line.me/th/v3/article/zNB08Kj",
+   "uses": 4,
+   "publisher": "Thairath Money (via LINE Today)",
+   "body_read": true,
+   "title": "รู้จักถนนวิทยุ ย่านไฮโซเมืองไทย (Getting to know Witthayu Road, Bangkok's hi-so district) — Thairath",
+   "id": "src_e14f74c64d20",
+   "claims": [
+    "phloen-chit-c05",
+    "phloen-chit-c13",
+    "phloen-chit-c14",
+    "phloen-chit-c17"
+   ]
+  },
+  {
+   "url": "https://webportal.bangkok.go.th/pranakorn/page/sub/22135",
+   "uses": 4,
+   "publisher": "BMA Phra Nakhon district office",
+   "body_read": false,
+   "title": "คลองโอ่งอ่าง - สำนักงานเขตพระนคร",
+   "id": "src_6e6ef058d5b4",
+   "claims": [
+    "sam-yot-c02",
+    "sam-yot-c07",
+    "sam-yot-c10",
+    "sam-yot-c14"
+   ]
+  },
+  {
+   "url": "https://www.thaipost.net/economy-news/889411",
+   "uses": 4,
+   "publisher": "Thai Post",
+   "body_read": true,
+   "title": "'SRTA' กางแผนปั้นสถานีกลางบางซื่อ ฮับระบบรางใหญ่สุดในอาเซียน",
+   "id": "src_4a3e136e9650",
+   "claims": [
+    "bang-sue-c05",
+    "bang-sue-c06",
+    "bang-sue-c09",
+    "bang-sue-c10"
+   ]
+  },
+  {
+   "url": "https://themomentum.co/urban-victory-monument/",
+   "uses": 4,
+   "publisher": "THE MOMENTUM",
+   "body_read": true,
+   "title": "ห่วง สก.ปัดตกงบปรับปรุงอนุสาวรีย์ชัยฯ เกาะพญาไท-เกาะดินแดง",
+   "id": "src_a13484e59b77",
+   "claims": [
+    "victory-monument-c04",
+    "victory-monument-c05",
+    "victory-monument-c07",
+    "victory-monument-c12"
+   ]
+  },
+  {
+   "url": "https://www.fm91bkk.com/newsarticle/44807",
+   "uses": 3,
+   "publisher": "FM91 Traffic Radio",
+   "body_read": true,
+   "title": "8 ก.พ. 68 หลีกเลี่ยงเส้นทาง! แยกสะพานควาย-พหลโยธิน ธ.ออมสิน สำนักงานใหญ่ จัดประชุมใหญ่สามัญประจำปี",
+   "id": "src_29052a7eb6c9",
+   "claims": [
+    "phaya-thai-c09",
+    "phaya-thai-c12",
+    "phaya-thai-c14"
+   ]
+  },
+  {
+   "url": "https://www.edtguide.com/travel-detail/นั่ง-mrt-ไปตะลุยกิน-รอบสถานีวัดมังกร-11-ร้านเด็ด-เยาวราช",
+   "uses": 3,
+   "publisher": "EDT Guide",
+   "body_read": true,
+   "title": "นั่ง MRT ไปตะลุยกินรอบสถานีวัดมังกร 11 ร้านเด็ด เยาวราช",
+   "id": "src_0712f6dd702f",
+   "claims": [
+    "wat-mangkon-c04",
+    "wat-mangkon-c05",
+    "wat-mangkon-c17"
+   ]
+  },
+  {
+   "url": "https://moneyandbanking.co.th/2024/136644/",
+   "uses": 3,
+   "publisher": "Money & Banking",
+   "body_read": false,
+   "title": "One Bangkok ประเดิมเปิดรีเทล 2 ตึก จ่อลอนช์ 3 โรงแรมในโครงการ (Money & Banking)",
+   "id": "src_88332c78a462",
+   "claims": [
+    "pathum-wan-c04",
+    "pathum-wan-c10",
+    "pathum-wan-c15"
+   ]
+  },
+  {
+   "url": "https://overpass-api.de/api/interpreter",
+   "uses": 3,
+   "publisher": "OpenStreetMap via Overpass API",
+   "body_read": true,
+   "title": "way 23630232 'สนามหลวง' Sanam Luang",
+   "id": "src_891755a79d60",
+   "claims": [
+    "phra-nakhon-c03",
+    "phra-nakhon-c09",
+    "phra-nakhon-c15"
+   ]
+  },
+  {
+   "url": "https://propertyhub.in.th/เช่าคอนโด/bts-เพลินจิต",
+   "uses": 3,
+   "publisher": "PropertyHub.in.th",
+   "body_read": true,
+   "title": "คอนโดให้เช่า ใกล้ BTS เพลินจิต (Condos for rent near BTS Phloen Chit) — PropertyHub",
+   "id": "src_4e8e833cb6c3",
+   "claims": [
+    "phloen-chit-c06",
+    "phloen-chit-c07",
+    "phloen-chit-c12"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/สถานีเสนาร่วม",
+   "uses": 3,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "สถานีเสนาร่วม (Sena Ruam station, N6 — planned)",
+   "id": "src_58aecca92297",
+   "claims": [
+    "sena-ruam-c01",
+    "sena-ruam-c02",
+    "sena-ruam-c12"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%94%E0%B8%87",
+   "uses": 3,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "เขตดินแดง",
+   "id": "src_724a8ef73cc8",
+   "claims": [
+    "din-daeng-c01",
+    "din-daeng-c02",
+    "din-daeng-c08"
+   ]
+  },
+  {
+   "url": "https://marketeeronline.co/archives/436271",
+   "uses": 3,
+   "publisher": "Marketeer",
+   "body_read": true,
+   "title": "7 ปี 'ไอคอนสยาม' เปลี่ยนทุกวิกฤติเป็นชัยชนะ",
+   "id": "src_be017484865c",
+   "claims": [
+    "khlong-san-c03",
+    "khlong-san-c06",
+    "khlong-san-c09"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E",
+   "uses": 3,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "สถานีรถไฟกรุงเทพ (หัวลำโพง)",
+   "id": "src_6026765dee40",
+   "claims": [
+    "hua-lamphong-c03",
+    "hua-lamphong-c04",
+    "hua-lamphong-c10"
+   ]
+  },
+  {
+   "url": "https://thestandard.co/hua-lamphong-big-changes-for-railway",
+   "uses": 3,
+   "publisher": "The Standard",
+   "body_read": true,
+   "title": "หัวลำโพง พื้นที่ชีวิต และโจทย์ใหญ่ความเปลี่ยนแปลง",
+   "id": "src_b24763198e7f",
+   "claims": [
+    "hua-lamphong-c03",
+    "hua-lamphong-c04",
+    "hua-lamphong-c10"
+   ]
+  },
+  {
+   "url": "https://www.lemon8-app.com/@travelista08/7507266749637739016?region=th",
+   "uses": 3,
+   "publisher": "Lemon8 (@travelista08)",
+   "body_read": true,
+   "title": "พิพิธภัณฑ์รถไฟไทย หัวลำโพง (visitor review)",
+   "id": "src_68c887c1ad88",
+   "claims": [
+    "hua-lamphong-c04",
+    "hua-lamphong-c05",
+    "hua-lamphong-c10"
+   ]
+  },
+  {
+   "url": "https://metro.bemplc.co.th/Line-Maps?Line=1&Station=12",
+   "uses": 3,
+   "publisher": "Bangkok Expressway and Metro (BEM)",
+   "body_read": true,
+   "title": "สถานีกำแพงเพชร (BL12) — BEM line map / station page",
+   "id": "src_c511ccfdb273",
+   "claims": [
+    "kamphaeng-phet-c02",
+    "kamphaeng-phet-c03",
+    "kamphaeng-phet-c05"
+   ]
+  },
+  {
+   "url": "https://theactive.thaipbs.or.th/news/urban-housing-20240929",
+   "uses": 3,
+   "publisher": "The Active (Thai PBS)",
+   "body_read": true,
+   "title": "\"ชุมชน ชมฟ.ริมบึงมักกะสัน\" ความสำเร็จอีกขั้น แก้ไขปัญหาที่อยู่อาศัยคนจนเมือง",
+   "id": "src_567f93e8f711",
+   "claims": [
+    "phaya-thai-st-c11",
+    "phetchaburi-c04",
+    "phetchaburi-c12"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/สวนสาธารณะคลองช่องนนทรี",
+   "uses": 2,
+   "publisher": "Wikipedia (TH)",
+   "body_read": true,
+   "title": "สวนสาธารณะคลองช่องนนทรี (Khlong Chong Nonsi Public Park)",
+   "id": "src_7aafd725b869",
+   "claims": [
+    "chong-nonsi-c05",
+    "chong-nonsi-c06"
+   ]
+  },
+  {
+   "url": "https://www.facebook.com/ThaiArmyClubViphavadi/",
+   "uses": 2,
+   "publisher": "Royal Thai Army Club (Vibhavadi)",
+   "body_read": false,
+   "title": "สโมสรทหารบก - วิภาวดี (Thai Army Club Vibhavadi) page info",
+   "id": "src_ce47b695ed71",
+   "claims": [
+    "phaya-thai-c06",
+    "phaya-thai-c08"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/ถนนประดิพัทธ์",
+   "uses": 2,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "ถนนประดิพัทธ์ (Thanon Pradiphat)",
+   "id": "src_d2046e72643b",
+   "claims": [
+    "phaya-thai-c06",
+    "phaya-thai-c10"
+   ]
+  },
+  {
+   "url": "https://www.thansettakij.com/economy/mega-project/536321",
+   "uses": 2,
+   "publisher": "Thansettakij",
+   "body_read": false,
+   "title": "ปิดตำนาน \"ที่ดินตลาดคลองสาน\" 839 ล้าน ลุ้น รฟท. ปรับโฉม",
+   "id": "src_995203b6f5d5",
+   "claims": [
+    "charoen-nakhon-c08",
+    "charoen-nakhon-c12"
+   ]
+  },
+  {
+   "url": "https://www.thaipbs.or.th/news/content/308078",
+   "uses": 2,
+   "publisher": "Thai PBS",
+   "body_read": true,
+   "title": "ปิดตำนาน \"ตลาดคลองสานพลาซ่า\" ส่งคืนพื้นที่ให้การรถไฟฯ (Khlong San Plaza hands land back to SRT)",
+   "id": "src_a77791355331",
+   "claims": [
+    "charoen-nakhon-c12",
+    "charoen-nakhon-c17"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/เขตปทุมวัน",
+   "uses": 2,
+   "publisher": "Wikipedia (TH)",
+   "body_read": true,
+   "title": "เขตปทุมวัน (Wikipedia TH)",
+   "id": "src_e5ce949ca696",
+   "claims": [
+    "pathum-wan-c01",
+    "pathum-wan-c02"
+   ]
+  },
+  {
+   "url": "https://www.posttoday.com/general-news/735729",
+   "uses": 2,
+   "publisher": "Post Today",
+   "body_read": false,
+   "title": "นครบาล ปิดจราจร 6 เส้นทาง รอบราชประสงค์ จัดเคานท์ดาวน์ Central World 2026 (Post Today)",
+   "id": "src_fb9e2e4d243e",
+   "claims": [
+    "pathum-wan-c11",
+    "pathum-wan-c12"
+   ]
+  },
+  {
+   "url": "https://www.thansettakij.com/general-news/647960",
+   "uses": 2,
+   "publisher": "Than Settakij",
+   "body_read": false,
+   "title": "เคาท์ดาวน์ Centralworld 2026 เช็กวิธีเดินทาง เส้นทางเข้า-ออกห้าง (Than Settakij)",
+   "id": "src_2f9254300e24",
+   "claims": [
+    "pathum-wan-c11",
+    "pathum-wan-c13"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%84%E0%B8%A3",
+   "uses": 2,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "เขตพระนคร",
+   "id": "src_e5475d8e1301",
+   "claims": [
+    "phra-nakhon-c01",
+    "phra-nakhon-c02"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B5",
+   "uses": 2,
+   "publisher": "Wikimedia (Wikipedia TH)",
+   "body_read": true,
+   "title": "เขตราชเทวี (Khet Ratchathewi, Thai Wikipedia)",
+   "id": "src_567d0a1dc7b9",
+   "claims": [
+    "ratchathewi-d-c01",
+    "ratchathewi-d-c06"
+   ]
+  },
+  {
+   "url": "https://greener.bangkok.go.th/park/suan-somdet-ya-84",
+   "uses": 2,
+   "publisher": "Bangkok Metropolitan Administration (BMA), Environment Department",
+   "body_read": true,
+   "title": "สวนสมเด็จย่า 84 (Somdet Ya Park 84) — Greener Bangkok",
+   "id": "src_b4f1d3352a6f",
+   "claims": [
+    "ha-yaek-c08",
+    "ha-yaek-c16"
+   ]
+  },
+  {
+   "url": "https://www.renthub.in.th/อพาร์ทเม้นท์-ห้องพัก-หอพัก/bts-ห้าแยกลาดพร้าว",
+   "uses": 2,
+   "publisher": "RentHub.in.th",
+   "body_read": true,
+   "title": "อพาร์ทเม้นท์ หอพัก ใกล้ BTS ห้าแยกลาดพร้าว (RentHub)",
+   "id": "src_396aa1e938aa",
+   "claims": [
+    "ha-yaek-c11",
+    "ha-yaek-c12"
+   ]
+  },
+  {
+   "url": "https://www.wongnai.com/beauty-tips/shopping-guide-night-pratunam",
+   "uses": 2,
+   "publisher": "Wongnai (LINE Wongnai)",
+   "body_read": true,
+   "title": "คู่มือเดิน \"ประตูน้ำตี 5\" ซื้อเสื้อผ้าราคาส่งอย่างไรให้คุ้ม (Pratunam 5 AM wholesale market guide)",
+   "id": "src_a46712848c7c",
+   "claims": [
+    "ratchaprarop-c07",
+    "ratchaprarop-c09"
+   ]
+  },
+  {
+   "url": "https://www.aroundonline.com/bangkok-news-18/",
+   "uses": 2,
+   "publisher": "Around magazine",
+   "body_read": true,
+   "title": "เที่ยวย่านสามยอด",
+   "id": "src_cc1f601fb847",
+   "claims": [
+    "sam-yot-c13",
+    "sam-yot-c16"
+   ]
+  },
+  {
+   "url": "https://www.mrta.co.th/th/rat-burana",
+   "uses": 2,
+   "publisher": "MRTA",
+   "body_read": true,
+   "title": "โครงการ MRT สายสีม่วง เตาปูน-ราษฎร์บูรณะ",
+   "id": "src_e7f47cd6e7d1",
+   "claims": [
+    "bang-sue-c10",
+    "dusit-c06"
+   ]
+  },
+  {
+   "url": "https://greener.bangkok.go.th/park/suan-chaloem-phra-kian-80-phansa-phra-bat-somdet-phra-jao-yu-hua-sathorn",
+   "uses": 2,
+   "publisher": "BMA greener.bangkok.go.th (via search aggregation)",
+   "body_read": false,
+   "title": "สวนเฉลิมพระเกียรติ 80 พรรษา (สาทร) - BMA Greener Bangkok registry",
+   "id": "src_ddd9ae0eaf64",
+   "claims": [
+    "sathon-c04",
+    "sathon-c05"
+   ]
+  },
+  {
+   "url": "https://www.tcijthai.com/news/2026/8/article/15258",
+   "uses": 2,
+   "publisher": "Thai Citizens Journal (TCIJ)",
+   "body_read": true,
+   "title": "'ห้วยขวาง ไชน่าทาวน์แห่งใหม่' (Huai Khwang, The New Chinatown)",
+   "id": "src_f77abe236f78",
+   "claims": [
+    "phra-ram-9-c03",
+    "phra-ram-9-c04"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/สถานีเซนต์หลุยส์",
+   "uses": 2,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "สถานีเซนต์หลุยส์ (Saint Louis station)",
+   "id": "src_f7b5c3011ef2",
+   "claims": [
+    "saint-louis-c01",
+    "saint-louis-c09"
+   ]
+  },
+  {
+   "url": "https://readthecloud.com/social/public-space/victory-monument-renovation/",
+   "uses": 2,
+   "publisher": "Read the Cloud",
+   "body_read": true,
+   "title": "แผนปรับปรุงอนุสาวรีย์ชัยในวาระครบ 84 ปี",
+   "id": "src_06967db5d7e3",
+   "claims": [
+    "victory-monument-c05",
+    "victory-monument-c12"
+   ]
+  },
+  {
+   "url": "https://www.thansettakij.com/general-news/667739",
+   "uses": 2,
+   "publisher": "Thansettakij",
+   "body_read": true,
+   "title": "ปรับโฉมใหญ่รอบ 20 ปี กทม. เตรียมเปิด 'สกายวอล์กราชวิถี' เฟสแรก ต.ค. นี้",
+   "id": "src_92948746137a",
+   "claims": [
+    "victory-monument-c06",
+    "victory-monument-c11"
+   ]
+  },
+  {
+   "url": "https://www.sanook.com/news/9907531/",
+   "uses": 1,
+   "publisher": "Sanook News",
+   "body_read": true,
+   "title": "วันศุกร์วุ่นๆ! BTS ขัดข้องช่วงเลิกงาน สายสุขุมวิทคนล้นหลายสถานี (BTS fails at evening rush; Sukhumvi",
+   "id": "src_f6a1287ecb31",
+   "claims": [
+    "asok-c09"
+   ]
+  },
+  {
+   "url": "https://www.genie-property.com/blog/คลองช่องนนทรี-สวนสาธารณะเปิดใหม่ใกล้-bts-ช่องนนทรี-พอดแห่งใหม่ของชาวกรุง-2022-99",
+   "uses": 1,
+   "publisher": "Genie Property",
+   "body_read": true,
+   "title": "คลองช่องนนทรี สวนสาธารณะเปิดใหม่ใกล้ BTS ช่องนนทรี",
+   "id": "src_82a9bd4857e8",
+   "claims": [
+    "chong-nonsi-c06"
+   ]
+  },
+  {
+   "url": "https://thestandard.co/chong-nonsi-canal-phase-2",
+   "uses": 1,
+   "publisher": "THE STANDARD",
+   "body_read": true,
+   "title": "สำรวจคลองช่องนนทรี เฟส 2 อีกพื้นที่ปลุกปั้นให้เป็นแลนด์มาร์กกรุงเทพฯ",
+   "id": "src_d7f4a11502db",
+   "claims": [
+    "chong-nonsi-c06"
+   ]
+  },
+  {
+   "url": "https://www.isranews.org/article/isranews-news/106144-bkk-chong-nonsi-canal-park-Phase-3-e-bidding-news.html",
+   "uses": 1,
+   "publisher": "Isranews",
+   "body_read": true,
+   "title": "งบปรับภูมิทัศน์คลองช่องนนทรี 1.5 พันล้าน เฟส 3 e-bidding (Chong Nonsi canal landscape budget, phase ",
+   "id": "src_58eb0e6ca31c",
+   "claims": [
+    "chong-nonsi-c06"
+   ]
+  },
+  {
+   "url": "https://www.ryt9.com/s/prg/3502535",
+   "uses": 1,
+   "publisher": "RYT9 / ThaiPR.net",
+   "body_read": true,
+   "title": "เขตวัฒนาประสาน สน.ทองหล่อ กวดขันการจอดรถริมถนน-เร่งปรับปรุงทางเท้าในซอยสุขุมวิท 23 (Watthana distric",
+   "id": "src_35dd438da083",
+   "claims": [
+    "thong-lo-c08"
+   ]
+  },
+  {
+   "url": "https://dp.bangkok.go.th/plans70/frontend/web/index.php?r=site%2Fprojectviewun&ID=5520",
+   "uses": 1,
+   "publisher": "Bangkok Metropolitan Administration, Department of Public Works (สำนักการโยธา)",
+   "body_read": true,
+   "title": "โครงการปรับปรุงทางเท้าถนนสุขุมวิท 55 (ซอยทองหล่อ) ช่วงจากถนนสุขุมวิท ถึงคลองแสนแสบ พื้นที่เขตวัฒนา (",
+   "id": "src_2be18167bbae",
+   "claims": [
+    "thong-lo-c09"
+   ]
+  },
+  {
+   "url": "https://greener.bangkok.go.th/district/khet-phaya-thai/",
+   "uses": 1,
+   "publisher": "Bangkok Metropolitan Administration, Greener Bangkok",
+   "body_read": true,
+   "title": "เขตพญาไท Archives - Greener Bangkok (BMA Environmental Office)",
+   "id": "src_e574614c33da",
+   "claims": [
+    "phaya-thai-c07"
+   ]
+  },
+  {
+   "url": "https://www.thaipbs.or.th/news/content/30116",
+   "uses": 1,
+   "publisher": "Thai PBS",
+   "body_read": true,
+   "title": "เปิดตัว 'พญาไทภิรมย์' สวนสาธารณะแห่งใหม่บนถ.สามเสน",
+   "id": "src_c908c2ddc9f2",
+   "claims": [
+    "phaya-thai-c07"
+   ]
+  },
+  {
+   "url": "https://mapcarta.com/W167534432",
+   "uses": 1,
+   "publisher": "Mapcarta (OpenStreetMap-derived)",
+   "body_read": false,
+   "title": "สวนพญาไทภิรมย์ - Map / OSM way 167534432",
+   "id": "src_4a90ae7694a8",
+   "claims": [
+    "phaya-thai-c07"
+   ]
+  },
+  {
+   "url": "https://www.phyathai.com/th/pytp/about/hospital",
+   "uses": 1,
+   "publisher": "Phyathai Hospitals (Thongtang Group)",
+   "body_read": true,
+   "title": "โรงพยาบาลพญาไท พหลโยธิน - เกี่ยวกับโรงพยาบาล",
+   "id": "src_501c9f61021b",
+   "claims": [
+    "phaya-thai-c13"
+   ]
+  },
+  {
+   "url": "https://www.marketingoops.com/news/biz-news/paolo-hospital-rebrand-to-phyathai/",
+   "uses": 1,
+   "publisher": "Marketing Oops",
+   "body_read": true,
+   "title": "เปาโลเมมโมเรียล รีแบรนด์ใหม่เป็น รพ.พญาไท พหลโยธิน",
+   "id": "src_6f300730c243",
+   "claims": [
+    "phaya-thai-c13"
+   ]
+  },
+  {
+   "url": "https://www.thaipbs.or.th/news/content/510039",
+   "uses": 1,
+   "publisher": "Thai PBS",
+   "body_read": true,
+   "title": "ไฟไหม้คลองถมเซ็นเตอร์ คุมเพลิงได้ตอนตี 5 (Khlong Thom Center fire brought under control at 5am)",
+   "id": "src_4c86b8ca98ec",
+   "claims": [
+    "pom-prap-sattru-phai-c10"
+   ]
+  },
+  {
+   "url": "https://www.facebook.com/UrbanJourneyByMalilee/posts/1515594696657836",
+   "uses": 1,
+   "publisher": "Urban Journey by Malilee",
+   "body_read": false,
+   "title": "สายสีทองส่วนต่อขยายจะได้สร้างต่อไหม? (Will the Gold Line extension be built?)",
+   "id": "src_0832ae003a83",
+   "claims": [
+    "charoen-nakhon-c13"
+   ]
+  },
+  {
+   "url": "https://www.home.co.th/living/topic-4579",
+   "uses": 1,
+   "publisher": "home.co.th (Home Buyers Guide)",
+   "body_read": true,
+   "title": "รีวิว MRT สถานีวัดมังกร",
+   "id": "src_1c60559b940d",
+   "claims": [
+    "wat-mangkon-c09"
+   ]
+  },
+  {
+   "url": "https://today.line.me/th/v3/article/D56mqo",
+   "uses": 1,
+   "publisher": "Prachachart Business (via LINE Today)",
+   "body_read": true,
+   "title": "ลัดเลาะกินเที่ยวย่านเยาวราช รอบสถานี MRT วัดมังกร (ประชาชาติธุรกิจ)",
+   "id": "src_36047c26bbb9",
+   "claims": [
+    "wat-mangkon-c09"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%A7%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B9%80%E0%B8%9A%E0%B8%8D%E0%B8%88%E0%B8%97%E0%B8%B1%E0%B8%A8",
+   "uses": 1,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "สวนวชิรเบญจทัศ",
+   "id": "src_914171c529a4",
+   "claims": [
+    "chatuchak-c07"
+   ]
+  },
+  {
+   "url": "https://jatujakliving.com/living-guide/dogs-in-chatuchak-parks-rules",
+   "uses": 1,
+   "publisher": "Jatujak Living",
+   "body_read": true,
+   "title": "พาสุนัขเข้าสวน Pet Park สวนรถไฟ จตุจักร ต้องรู้อะไรบ้าง",
+   "id": "src_c135d7e77f0b",
+   "claims": [
+    "chatuchak-c07"
+   ]
+  },
+  {
+   "url": "https://www.srtet.co.th/upload_fm/%E0%B8%82%E0%B8%B1%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3/Passenger%202025_Web%2010-09.pdf",
+   "uses": 1,
+   "publisher": "SRTEt (บริษัท รถไฟฟ้า ร.ฟ.ท.)",
+   "body_read": true,
+   "title": "สถิติผู้ใช้บริการ (สายสีแดง) ต.ค. 2567 - ก.ย. 2568 (Passenger 2025_Web 10-09.pdf)",
+   "id": "src_7900c47b27f3",
+   "claims": [
+    "chatuchak-c11"
+   ]
+  },
+  {
+   "url": "https://www.srtet.co.th/th/single-page/38",
+   "uses": 1,
+   "publisher": "SRTEt (บริษัท รถไฟฟ้า ร.ฟ.ท.)",
+   "body_read": true,
+   "title": "ข้อมูลเชิงสถิติการให้บริการ (statistics page)",
+   "id": "src_6442ef342afb",
+   "claims": [
+    "chatuchak-c11"
+   ]
+  },
+  {
+   "url": "https://www.google.com/search?q=%E0%B8%AD%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%97%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C",
+   "uses": 1,
+   "publisher": "Thai directory via search aggregation",
+   "body_read": false,
+   "title": "ตลาด อ.ต.ก. (ออร์ทอร์กอร์) listing",
+   "id": "src_019bc04929d8",
+   "claims": [
+    "chatuchak-c13"
+   ]
+  },
+  {
+   "url": "https://tna.mcot.net/tna/-/news/list/86232",
+   "uses": 1,
+   "publisher": "MCOT / OPT News / NBT / BMA (via search aggregation)",
+   "body_read": false,
+   "title": "ตลาดนัดจตุจักร ค่าเช่า-ค่าปรับ โปร่งใส; ผู้ค้าประท้วง; รฟท. เผยค้างจ่าย 1,250 ล้านบาท",
+   "id": "src_d20fd4d64db4",
+   "claims": [
+    "chatuchak-c15"
+   ]
+  },
+  {
+   "url": "https://www.pptvhd36.com/news/สังคม/235282",
+   "uses": 1,
+   "publisher": "PPTV HD36",
+   "body_read": false,
+   "title": "วัน แบงค็อก แนะนำวิธีเดินทางร่วมงานเปิดตัว (PPTV HD36)",
+   "id": "src_251cf14c43d7",
+   "claims": [
+    "pathum-wan-c04"
+   ]
+  },
+  {
+   "url": "https://www.prachachat.net/hilight-prachachat/news-1169415",
+   "uses": 1,
+   "publisher": "Prachachat",
+   "body_read": false,
+   "title": "เปิด 4 ทำเลกลางกรุง ราคาประเมิน 'แพงสุด' ตารางวาละ 1 ล้านบาท (Prachachat)",
+   "id": "src_18848fec89c3",
+   "claims": [
+    "pathum-wan-c07"
+   ]
+  },
+  {
+   "url": "https://www.matichon.co.th/economy/news_3761834",
+   "uses": 1,
+   "publisher": "Matichon",
+   "body_read": false,
+   "title": "ถึงเวลาเขย่า 'ราคาประเมินใหม่' วิทยุ-เพลินจิต วิ่งฉิว วาละ 2 ล้าน (Matichon)",
+   "id": "src_584421528e03",
+   "claims": [
+    "pathum-wan-c07"
+   ]
+  },
+  {
+   "url": "https://www.tidlor.com/th/article/financial/investment/bangkok-land-prices",
+   "uses": 1,
+   "publisher": "Tidlor (NGERN TID LOR)",
+   "body_read": false,
+   "title": "ราคาที่ดินในกรุงเทพ 2567 เขตที่เจริญที่สุดในกรุงเทพมีโซนไหนบ้าง (Tidlor)",
+   "id": "src_960f4af7cb9a",
+   "claims": [
+    "pathum-wan-c07"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%97%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87",
+   "uses": 1,
+   "publisher": "Thai Wikipedia",
+   "body_read": true,
+   "title": "ท้องสนามหลวง",
+   "id": "src_60b5fdbacc73",
+   "claims": [
+    "phra-nakhon-c03"
+   ]
+  },
+  {
+   "url": "https://www.thanakom.co.th",
+   "uses": 1,
+   "publisher": "BMA / KT-Thanakom (via search aggregation)",
+   "body_read": false,
+   "title": "เรือไฟฟ้าคลองผดุงกรุงเกษม service status 2566-2568",
+   "id": "src_18a7ce85c38f",
+   "claims": [
+    "phra-nakhon-c09"
+   ]
+  },
+  {
+   "url": "https://innews.news/news.php?n=77707",
+   "uses": 1,
+   "publisher": "inNews",
+   "body_read": true,
+   "title": "'ประเสริฐ' ประชุมบอร์ดเกาะรัตนโกสินทร์ฯ อนุมัติ 4 เรื่อง",
+   "id": "src_d90d6bc566d2",
+   "claims": [
+    "phra-nakhon-c10"
+   ]
+  },
+  {
+   "url": "https://www.policehospital.org",
+   "uses": 1,
+   "publisher": "Official hospital listing (via search aggregation)",
+   "body_read": false,
+   "title": "โรงพยาบาลตำรวจ address check",
+   "id": "src_68c5644105fd",
+   "claims": [
+    "phra-nakhon-c15"
+   ]
+  },
+  {
+   "url": "https://guide.michelin.com/th/th/bangkok-region/bangkok/restaurant/wana-yook",
+   "uses": 1,
+   "publisher": "Michelin Guide",
+   "body_read": true,
+   "title": "วรรณยุค (Wana Yook) - guide.michelin.com TH page",
+   "id": "src_5dde3562770f",
+   "claims": [
+    "ratchathewi-d-c15"
+   ]
+  },
+  {
+   "url": "https://web.codi.or.th/index.php/20240929-57255",
+   "uses": 1,
+   "publisher": "CODI (Community Organizations Development Institute)",
+   "body_read": true,
+   "title": "เปิดป้ายชุมชน ชมฟ. ริมบึงมักกะสัน (new Baan Mankong community beside Bueng Makkasan)",
+   "id": "src_90b1de01f36f",
+   "claims": [
+    "ratchathewi-d-c16"
+   ]
+  },
+  {
+   "url": "https://www.infoquest.co.th/2026/563924",
+   "uses": 1,
+   "publisher": "InfoQuest",
+   "body_read": false,
+   "title": "เซ็นทรัลฯทุ่มกว่า 4.2 หมื่นลบ.ต่อสัญญาเช่าที่ดินย่านลาดพร้าวอีก 30 ปี-พร้อมลงทุนรีโนเวทเพิ่ม",
+   "id": "src_a8dfefe68e9a",
+   "claims": [
+    "ha-yaek-c05"
+   ]
+  },
+  {
+   "url": "https://www.facebook.com/fm91trafficpro",
+   "uses": 1,
+   "publisher": "FM91 Trafficpro (traffic radio)",
+   "body_read": false,
+   "title": "FM91 TrafficPro — traffic reports referencing ห้าแยกลาดพร้าว",
+   "id": "src_cb3e209153d1",
+   "claims": [
+    "ha-yaek-c07"
+   ]
+  },
+  {
+   "url": "https://map.longdo.com/poilist/32",
+   "uses": 1,
+   "publisher": "Longdo / SEC / Metropolitan Electricity Authority (address snippets)",
+   "body_read": false,
+   "title": "Longdo Map — POI addresses on Phloen Chit Rd (แขวงลุมพินี เขตปทุมวัน); corroborated by SEC company-r",
+   "id": "src_09e2a584448e",
+   "claims": [
+    "phloen-chit-c02"
+   ]
+  },
+  {
+   "url": "https://www.lad.co.th/post/วิเคราะห์-ที่ดินสถานทูตเนเธอร์แลนด์",
+   "uses": 1,
+   "publisher": "LAD (lad.co.th)",
+   "body_read": false,
+   "title": "วิเคราะห์ ที่ดินสถานทูตเนเธอร์แลนด์ 20 ไร่ ถนนวิทยุ (Analysis: Netherlands Embassy land, 20 rai, Wit",
+   "id": "src_cafe3bb0674a",
+   "claims": [
+    "phloen-chit-c05"
+   ]
+  },
+  {
+   "url": "https://www.ddproperty.com/เช่าคอนโด/ใกล้-bts-เพลินจิต-2153",
+   "uses": 1,
+   "publisher": "DDproperty",
+   "body_read": false,
+   "title": "DDproperty — rentals near BTS Phloen Chit (search-result data)",
+   "id": "src_819de919079b",
+   "claims": [
+    "phloen-chit-c06"
+   ]
+  },
+  {
+   "url": "https://pmcu.co.th/chula-centenary-park",
+   "uses": 1,
+   "publisher": "Property Management of Chulalongkorn University (PMCU)",
+   "body_read": true,
+   "title": "อุทยาน 100 ปี จุฬาลงกรณ์มหาวิทยาลัย (Chula Centenary Park)",
+   "id": "src_617f9aa6dafa",
+   "claims": [
+    "sam-yan-c07"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/วัดหัวลำโพง",
+   "uses": 1,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "วัดหัวลำโพง (Wat Hua Lamphong)",
+   "id": "src_db96d7abc7cb",
+   "claims": [
+    "sam-yan-c08"
+   ]
+  },
+  {
+   "url": "https://stat.bora.dopa.go.th/new_stat/file/67/stat_t67.txt",
+   "uses": 1,
+   "publisher": "Department of Provincial Administration (stat.bora.dopa.go.th)",
+   "body_read": false,
+   "title": "สถิติประชากร พ.ศ. 2567 (2024 registry year file)",
+   "id": "src_56132ff15f5a",
+   "claims": [
+    "sam-yot-c02"
+   ]
+  },
+  {
+   "url": "https://www.thairath.co.th/scoop/theissue/2810629",
+   "uses": 1,
+   "publisher": "Thairath",
+   "body_read": false,
+   "title": "'คลองโอ่งอ่าง' แม้เวลาอาจหยุดนิ่ง แต่ขอบคุณที่พยายาม",
+   "id": "src_30ea51155463",
+   "claims": [
+    "sam-yot-c07"
+   ]
+  },
+  {
+   "url": "https://www.wongnai.com/reviews/257e00572c09499e9efa0d8802d0b7c3",
+   "uses": 1,
+   "publisher": "Wongnai (user reviews)",
+   "body_read": true,
+   "title": "รีวิว ถนนคนเดินคลองโอ่งอ่าง",
+   "id": "src_81bdb6772d92",
+   "claims": [
+    "sam-yot-c07"
+   ]
+  },
+  {
+   "url": "https://www.timeout.com/bangkok/th/news/rattanakosin-walk-market-072326",
+   "uses": 1,
+   "publisher": "Time Out Bangkok",
+   "body_read": false,
+   "title": "ชมของดีพระนคร ถนนคนเดิน 4 คลองรอบรัตนโกสินทร์",
+   "id": "src_342655576e45",
+   "claims": [
+    "sam-yot-c07"
+   ]
+  },
+  {
+   "url": "https://food.trueid.net/detail/03nwM0BkoZA5",
+   "uses": 1,
+   "publisher": "TrueID Food",
+   "body_read": true,
+   "title": "แจกพิกัด 50 เขตตลาดสด กทม. 2026",
+   "id": "src_b33a4c226bb5",
+   "claims": [
+    "sam-yot-c13"
+   ]
+  },
+  {
+   "url": "https://localthailand.net/muat/khlinik/bangkok/phra-nakhon",
+   "uses": 1,
+   "publisher": "LocalThailand (Google-review aggregation)",
+   "body_read": false,
+   "title": "คลินิกและศูนย์การแพทย์ในเขตพระนคร",
+   "id": "src_c3cdeaf0a45f",
+   "claims": [
+    "sam-yot-c13"
+   ]
+  },
+  {
+   "url": "https://hdmall.co.th/c/nearby-mrt-samyod-pkg-massage",
+   "uses": 1,
+   "publisher": "HDmall",
+   "body_read": false,
+   "title": "รวมโรงพยาบาลและคลินิกใกล้ MRT สามยอด (massage/clinic list)",
+   "id": "src_7aeb5ef4ff17",
+   "claims": [
+    "sam-yot-c13"
+   ]
+  },
+  {
+   "url": "https://thipsamai.com/thai/padthai-song-krueng/",
+   "uses": 1,
+   "publisher": "Thipsamai (official site)",
+   "body_read": true,
+   "title": "ผัดไทยทรงเครื่อง - ทิพย์สมัย",
+   "id": "src_8933c9df2c51",
+   "claims": [
+    "sam-yot-c14"
+   ]
+  },
+  {
+   "url": "https://www.ryoiireview.com/article/7-restaurants-open-over-midnight/",
+   "uses": 1,
+   "publisher": "Ryoii Review",
+   "body_read": false,
+   "title": "31 ร้านปิดดึก ... ทิพย์สมัย ผัดไทยประตูผี",
+   "id": "src_6ed497f75898",
+   "claims": [
+    "sam-yot-c14"
+   ]
+  },
+  {
+   "url": "https://www.wongnai.com/restaurants/kruaapsorn-dinsor",
+   "uses": 1,
+   "publisher": "Wongnai",
+   "body_read": false,
+   "title": "ร้าน ครัวอัปษร ถนนดินสอ",
+   "id": "src_1d559bac61d0",
+   "claims": [
+    "sam-yot-c14"
+   ]
+  },
+  {
+   "url": "https://www.ryoiireview.com/restaurant/view/19256",
+   "uses": 1,
+   "publisher": "Ryoii Review",
+   "body_read": false,
+   "title": "KruaApsorn สาขาถนนดินสอ",
+   "id": "src_ff8bfe999ad1",
+   "claims": [
+    "sam-yot-c14"
+   ]
+  },
+  {
+   "url": "https://www.wongnai.com/restaurants?categories=15&domain=1&regions=54015",
+   "uses": 1,
+   "publisher": "Wongnai",
+   "body_read": false,
+   "title": "ร้านกึ่งผับ/ร้านเหล้า/บาร์ ยอดนิยม ท่าพระจันทร์-วังบูรพา",
+   "id": "src_abe1712453aa",
+   "claims": [
+    "sam-yot-c15"
+   ]
+  },
+  {
+   "url": "https://readthecloud.com/travel/have-a-nice-stay/poco-house-bangkok/",
+   "uses": 1,
+   "publisher": "ReadtheCloud",
+   "body_read": true,
+   "title": "Poco House ... Piccolo Vicolo Cafe ย่านวังบูรพา",
+   "id": "src_24420031c460",
+   "claims": [
+    "sam-yot-c15"
+   ]
+  },
+  {
+   "url": "https://www.timeout.com/bangkok/th/bars/best-opening-bars-in-2025",
+   "uses": 1,
+   "publisher": "Time Out Bangkok",
+   "body_read": true,
+   "title": "รวมบาร์เปิดใหม่ 2568",
+   "id": "src_32526e3d6c80",
+   "claims": [
+    "sam-yot-c15"
+   ]
+  },
+  {
+   "url": "https://urbanally.org/article/Walk.Bike.Commute.Samyoddistrict",
+   "uses": 1,
+   "publisher": "Urban Ally (Chulalongkorn University Urban Lab program)",
+   "body_read": false,
+   "title": "เดิน. ปั่น. สัญจร ย่านสถานีสามยอด Walk. Bike. Commute. Samyod district",
+   "id": "src_1d5819ffd932",
+   "claims": [
+    "sam-yot-c16"
+   ]
+  },
+  {
+   "url": "https://www.prachachat.net/economic/news-2091573",
+   "uses": 1,
+   "publisher": "Prachachat Business (Matichon Group)",
+   "body_read": true,
+   "title": "20 ปีไม่คืบหน้า จี้ กทม.สร้าง \"สถานีเสนาร่วม\" สายสีเขียว",
+   "id": "src_d79b30c6590c",
+   "claims": [
+    "sena-ruam-c03"
+   ]
+  },
+  {
+   "url": "https://hcode.moph.go.th/code/3407",
+   "uses": 1,
+   "publisher": "Ministry of Public Health (Thailand)",
+   "body_read": false,
+   "title": "รหัสหน่วยงานบริการสุขภาพ HCode 3407 — โรงพยาบาลประสานมิตร (ชื่อเดิม โรงพยาบาลโรคปอด กรุงเทพ)",
+   "id": "src_351b9c8737f4",
+   "claims": [
+    "sena-ruam-c12"
+   ]
+  },
+  {
+   "url": "https://today.line.me/th/v3/article/JPyDxYy",
+   "uses": 1,
+   "publisher": "Mumkhao via LINE TODAY",
+   "body_read": true,
+   "title": "ทหาร กองทัพภาคที่ 1 ลุยน้ำช่วยผู้ประสบภัยน้ำท่วม พื้นที่ พหลโยธิน-อารีย์ (Mumkhao via LINE TODAY)",
+   "id": "src_d8f622b80f22",
+   "claims": [
+    "sena-ruam-c16"
+   ]
+  },
+  {
+   "url": "https://www.thaipbs.or.th/news/content/281469",
+   "uses": 1,
+   "publisher": "Thai PBS",
+   "body_read": true,
+   "title": "ถนนดินแดง แชมป์เสียงดังเกินมาตรฐานใน กทม.",
+   "id": "src_cd7699c7ba7b",
+   "claims": [
+    "din-daeng-c03"
+   ]
+  },
+  {
+   "url": "https://www.tnnthailand.com/tnnexclusive/238186",
+   "uses": 1,
+   "publisher": "TNN Thailand",
+   "body_read": false,
+   "title": "'เขตดินแดง' รั้งท้าย กทม. น่าอยู่น้อยที่สุด (TNN exclusive)",
+   "id": "src_ee4c43c8d5a9",
+   "claims": [
+    "din-daeng-c04"
+   ]
+  },
+  {
+   "url": "https://www.thaipbs.or.th/news/content/273852",
+   "uses": 1,
+   "publisher": "Thai PBS",
+   "body_read": true,
+   "title": "สวนสัตว์ดุสิตปิดทำการสิ้นเดือน ส.ค. นี้",
+   "id": "src_0665ccb856b2",
+   "claims": [
+    "dusit-c04"
+   ]
+  },
+  {
+   "url": "https://isranews.org/article/isranews-scoop/137982-isra-news-zoo.html",
+   "uses": 1,
+   "publisher": "Isranews",
+   "body_read": true,
+   "title": "สวนสัตว์เฉลิมพระเกียรติ ร.10 (เขาดิน 2) ปทุมธานี",
+   "id": "src_edb9ab169444",
+   "claims": [
+    "dusit-c04"
+   ]
+  },
+  {
+   "url": "https://www.thansettakij.com/real-estate/496715",
+   "uses": 1,
+   "publisher": "Thansettakij",
+   "body_read": true,
+   "title": "ปิดฉาก ตลาดคลองสาน พลาซ่า จับตาการรถไฟฯ เปิดประมูลพื้นที่ใหม่",
+   "id": "src_45f7e7113946",
+   "claims": [
+    "khlong-san-c04"
+   ]
+  },
+  {
+   "url": "https://thestandard.co/life/new-sathorn-royal-park",
+   "uses": 1,
+   "publisher": "THE STANDARD",
+   "body_read": true,
+   "title": "สวนเฉลิมพระเกียรติ 80 พรรษา (สาทร) หลังปรับปรุงใหม่",
+   "id": "src_eba87fa72be3",
+   "claims": [
+    "sathon-c05"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/สถานีจตุจักร",
+   "uses": 1,
+   "publisher": "Wikipedia (Thai)",
+   "body_read": true,
+   "title": "สถานีจตุจักร (SRT Dark Red Line RN02)",
+   "id": "src_8fd02d1790b8",
+   "claims": [
+    "kamphaeng-phet-c01"
+   ]
+  },
+  {
+   "url": "https://www.bangkokbiznews.com/business/1009342",
+   "uses": 1,
+   "publisher": "BangkokBizNews",
+   "body_read": false,
+   "title": "รฟท.เร่งเคลียร์มักกะสัน สร้างที่พักรองรับย้ายชุมชน",
+   "id": "src_e2d0f3f86a94",
+   "claims": [
+    "phetchaburi-c04"
+   ]
+  },
+  {
+   "url": "https://thestandard.co/one-bangkok-the-heart-of-bangkok-2",
+   "uses": 1,
+   "publisher": "THE STANDARD",
+   "body_read": true,
+   "title": "One Bangkok เนรมิตค่ำคืนประวัติศาสตร์ (One Bangkok stages a historic night)",
+   "id": "src_6d7ad5e97ec4",
+   "claims": [
+    "ratchadamri-c06"
+   ]
+  },
+  {
+   "url": "https://www.dailynews.co.th/news/5437935/",
+   "uses": 1,
+   "publisher": "Daily News",
+   "body_read": false,
+   "title": "เริ่มพรุ่งนี้ปิดปรับปรุง จุดจอดรถเมล์อนุสาวรีย์ชัยฯ ฝั่งพหลโยธิน–ราชวิถี (เฟส 1)",
+   "id": "src_f9260d7ddbf5",
+   "claims": [
+    "victory-monument-c06"
+   ]
+  },
+  {
+   "url": "https://greener.bangkok.go.th",
+   "uses": 1,
+   "publisher": "BMA greener.bangkok.go.th (via search aggregation)",
+   "body_read": false,
+   "title": "สวนสมเด็จย่า 84 - BMA Greener Bangkok registry",
+   "id": "src_7e9420006e34",
+   "claims": [
+    "thon-buri-c06"
+   ]
+  }
+ ]
+}
