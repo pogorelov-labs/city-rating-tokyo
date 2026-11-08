@@ -124,6 +124,14 @@ gated (`validate` ALL OK ×5; `audit` zero P1):
    as archived-citation status (source-record limitations). Reviewers should
    treat those limitation lines as machine-generated provenance notes, not
    researcher claims.
+5. **A-8 rework (same day, after the review):** all 24 blocked bundles were
+   cleared per the review's §9 protocol — editorial rebuilt from raw, 49
+   limitation arrays joined, inline refs stripped, 17 claims body-read
+   (fetch + term-match ledger), 4 claims removed with substance preserved,
+   khlong-san/wat-mangkon/voice/QA-notes fixes applied. You are reviewing the
+   **post-rework** bundles: see the review's addendum and
+   [`../2026-11-08-a8-rework-log.jsonl`](../2026-11-08-a8-rework-log.jsonl);
+   dispositions are agent-review provenance only.
 
 
 ## 4. After the review
