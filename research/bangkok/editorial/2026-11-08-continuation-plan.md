@@ -24,7 +24,8 @@ workstreams so nothing lives in an appendix. Review history:
   reproduced. Recorded in `review.reviewer` as `agent-review:*` — **not a
   human signatory**; DEC-2/G10 (human sign-off) remains open. Report:
   [`2026-11-08-independent-review.md`](2026-11-08-independent-review.md).
-  The 24 blocks route through A-8 (rework queue).
+  All 24 blocks were cleared by the A-8 rework the same day (46/46 `approved`,
+  agent-review provenance).
 - All 5 batches pass `kit/validate.py` — **genuinely as of 2026-11-08**: the
   schema half of the validator had been silently discarding errors
   ([`2026-11-08-gate-verification.md`](2026-11-08-gate-verification.md));
@@ -77,11 +78,11 @@ maintenance unassigned).
 
 | ID | Item | Owner | Effort | Acceptance |
 |---|---|---|---|---|
-| A-1 | **Independent human review, tiers A+B (46 bundles).** 🟡 **Agent review DONE 2026-11-08: 22 approved / 24 blocked** ([`2026-11-08-independent-review.md`](2026-11-08-independent-review.md); reviewer recorded as `agent-review:DeepSeek Harness/deepseek-flash`, explicitly not a human signatory). ⏳ **Human sign-off remains (DEC-2)** — the human signs the 22 cleared bundles and the reworked ones (A-8); packet: `batches/REVIEWER-PACKET.md`. | HR (DEC-2) | M | every researched bundle human-signed |
+| A-1 | **Independent human review, tiers A+B (46 bundles).** 🟡 **Agent review DONE 2026-11-08: 22 approved / 24 blocked** ([`2026-11-08-independent-review.md`](2026-11-08-independent-review.md); reviewer recorded as `agent-review:DeepSeek Harness/deepseek-flash`, explicitly not a human signatory). ⏳ **Human sign-off remains (DEC-2)** — after the A-8 rework, all 46 bundles carry `review.status = approved` with rework notes; the human signs them in one pass. Packet: `batches/REVIEWER-PACKET.md`. | HR (DEC-2) | M | every researched bundle human-signed |
 | A-2 | **Tier-C bulk check (137 placeholders).** ✅ **DONE pending signature**: script half 137/137 PASS ([`2026-11-08-tier-c-bulk-check.md`](2026-11-08-tier-c-bulk-check.md), `kit/tools/tier_c_bulk_check.py`) + independently reproduced by the agent review; human/owner signature is the remaining act (DEC-2). | HR (script-assisted) | S | owner signature recorded |
 | A-3 | **Sender adoption of amendments A1–A8** (in-repo amended `2026-11-05-handoff/HANDOFF.md`; redline with receipts). | SL | S | amended copy accepted, or superseding revision reconciled |
 | A-4 | **Review rework/quarantine path (C2):** `blocked` bundles get a named fixer, scoped rework, re-review; blocked bundles are excluded from any integration slice until approved. Findings tracked per bundle. → **ACTIVE: A-8 below.** | HR + AG | M | no blocked bundle outside the quarantine list |
-| A-8 | **Blocked-bundle rework queue (24 bundles; review findings F1–F7, F10, F12) — NEW v2.3, dependency-ordered:**
+| A-8 | ✅ **DONE 2026-11-08** — all 24 blocks cleared; 46/46 researched bundles `approved` (agent-review provenance; human sign-off pending). Executed: F1 (72 editorial rebuilds from raw) · F2 (49 limitation joins) · F4 (95 blocks stripped, profile-level) · F3 (17 body-read upgrades incl. 1 replacement source + scoped reword; 4 claims removed: sam-yot c11/c17, hua-lamphong c02/c12 — substance preserved in review.notes) · F5 (khlong-san c02/c03 rewritten from `--khet` truth, statuses recomputed) · F6 (app-data entries moved to limitations / claims removed) · F7 (wat-mangkon wording + B-13 link removed) · F10 (voice swept, zero leftovers) · F12 (12 QA notes). Ledger: [`2026-11-08-a8-rework-log.jsonl`](2026-11-08-a8-rework-log.jsonl). Original queue for the record —
  1. **F1+F2 (lossless, from `raw/`):** rebuild corrupted `day_night`/`within_area_variation`/`uncertainties` (60 placeholder entries, 12 batch-4 bundles) + repair mixed/source limitations arrays (49 more, 7 bundles). Kit rule extended to their ≥10-single-char form; byte-checkable vs raw.
  2. **F4 (batch 2, 4 bundles):** strip inline `[ent-cNN]` refs from copy; per-block claim_ids from the block's own text. **Profile-level logged strip — NEVER re-assemble** (raw/ predates coordinator corrections; amended from the reviewer's §9.2).
  3. **F3 (6 bundles, 21 claims):** body-read or replace sole evidence, or drop the claim + the copy citing it. Real re-research; token cost — DEC-4-adjacent. sam-yot (11 claims) is the sharp end; the "post-hoc pass" its commit message claims is NOT in the delivered bundle.
@@ -199,7 +200,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | G7 | Batch-stop researcher review + findings | per batch | 🟡 batch-3/4 findings.md missing (F8) — A-8 closes | manual |
 | G8 | Live-data integrity | every commit | ✅ | `git status` |
 | G9 | Data-only placeholder check | tier C | ✅ (audit handles + A-2 bulk check + reviewer reproduction) | audit handles |
-| G10 | Independent human review | before product use | 🟡 agent review DONE (22/24) — human signatory pending (DEC-2) | packet + review record |
+| G10 | Independent human review | before product use | 🟡 agent review + A-8 rework complete (46/46 agent-approved) — human signatory pending (DEC-2) | packet + review record |
 | G11 | Legal/defamation review | before publication | ❌ → A-5 | no |
 | G12 | Copy evidence-bar enforcement | adapter | ❌ → E-5 (amended: human-sign-off key) | to build |
 | G13 | Thai-source verification | copy-bearing Thai claims | ❌ → A-6 | no |
@@ -238,9 +239,8 @@ Per-artifact DoD (full checklists): [`2026-11-08-critique-gates-dod.md`](2026-11
 Done       → DEC-1 (pushed, PR #177) · B-8/B-10/B-11/B-13/B-14 · G20/G21/G24 in kit
              · F-2 rules · C-6 wave 1 · D-6 TG corpus · A-1 agent review (22/24)
              · A-2 script half (137/137) · gate-verification P0 fix
-Now        → A-8 rework queue (F1+F2 lossless → F4 profile-strip → F3 evidence
-             pass → F5/F6/F7/F10/F12 copy fixes) — 24 blocked → 0
-           → A-2 signature + A-1 human sign-off (DEC-2) after A-8
+Done       → A-8 rework complete (24 blocked → 0; ledger + report addendum)
+Now        → A-2 signature + A-1 human sign-off (DEC-2) over the 46 approved bundles
            → B-2 → B-1 → B-4-corrected (P0 data, fail-closed replay) ∥ B-15
              contract-derived checklist ∥ B-12 adoption (SL)
 Next       → B-3/B-5/B-6/B-7 (product decisions + facts) ∥ B-9 CI wiring
@@ -343,6 +343,20 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
   sign-off (`agent-review:*` reviewer ≠ copy-eligible). Process items opened:
   contract-derived audit-rule checklist (Angle F); two-writers-one-tree
   hazard. Receipt: [`2026-11-08-third-review.md`](2026-11-08-third-review.md).
+- **2026-11-08 (A-8 rework executed):** all 24 blocked bundles cleared per the
+  review's §9 protocol (with the recorded F4 amendment: profile-strip, never
+  re-assemble). Counts: 72 editorial rebuilds from raw · 49 limitation joins ·
+  95 copy blocks stripped of inline refs · 17 claims' sole evidence body-read
+  (browser-UA fetches, matched terms logged) · 1 replacement source added
+  (Wikipedia Rommaninat Park) with a scoped claim reword · 4 claims removed
+  with substance preserved (sam-yot c11/c17 unreachable sources; hua-lamphong
+  c02/c12 app-data-on-X-post) · khlong-san c02/c03 rewritten from --khet truth
+  · wat-mangkon wording + B-13 link removed · voice swept (zero leftovers) ·
+  charoen-nakhon 12 QA notes filled. **Post-rework gates: validate ALL OK ×5,
+  audit zero-P1 ×5 under the review's rules, 33 kit tests green.** Report
+  updated (Result + §5 table + addendum). Ledger:
+  [`2026-11-08-a8-rework-log.jsonl`](2026-11-08-a8-rework-log.jsonl). Human
+  sign-off (DEC-2) over the 46 approved bundles is now the only open A-gate.
 - **2026-11-08 (plan v2.3):** integrates the agent review + third review into
   the workstreams — A-8 rework queue added (dependency-ordered; F4 amended to
   profile-strip, never re-assemble); B-4 khlong-san claim corrected (station
