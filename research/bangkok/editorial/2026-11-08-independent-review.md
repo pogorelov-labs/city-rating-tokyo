@@ -18,7 +18,7 @@ approval.
 **137/137 PASS** (identity + zero web claims + draft status, independently
 reproduced). The blocks are concentrated in batch 4 (18 of 24) and are mostly
 mechanical normalize damage plus one provenance class — not a rejection of the
-research. Five substantive corpus/program findings are listed first.
+research. The P1 findings (F1–F6) are listed first.
 
 ---
 
@@ -245,7 +245,7 @@ Examples: `st.saint-louis` preview/lead "Note the brief's anchor coordinate …
 needs re-checking"; `st.victory-monument` lead "… that the coordinator must
 settle"; `st.national-stadium` lead "… the batch's lowest". Also "the batch" /
 "this batch" inside guide sections of bang-sue, dusit, sathon, thon-buri,
-phaya-ram-9, phetchaburi, sala-daeng. `st.ratchaprarop`'s "the app's ARL-only
+phra-ram-9, phetchaburi, sala-daeng. `st.ratchaprarop`'s "the app's ARL-only
 control" is research jargon (P3). **Fix:** rewrite in product voice; keep the
 process notes in `review.notes`/`open_issues`.
 
@@ -319,7 +319,7 @@ pass.
 | `samphanthawong` | **A** | clean on the checklist |
 | `st.ari` | **A** | accepted green residual (app 5.1 ha unmatched); copy clean |
 | `st.asok` | **A** | clean; c04's contrast-source locator is a P3 wording note |
-| `st.chong-nonsi` | **A** | accepted F4 resident "10-minute walk" quote; F1 correction verified |
+| `st.chong-nonsi` | **A** | accepted pilot-review F4 resident "10-minute walk" quote; pilot-review F1 catchment correction verified |
 | `st.thong-lo` | **A** | 3 snippet corroboration-only sources, no sole reliance; accepted |
 
 ### Batch 2 (1/6 approved)
@@ -434,8 +434,8 @@ its tests only because the suite is shared.
 
 ## 9. Recommended order after this pass
 
-1. Fix F1/F2 mechanically from `raw/` (lossless), add the new audit rules,
-   re-run validate+audit, re-review the 12 batch-4 bundles.
+1. Fix F1/F2 mechanically from `raw/` (lossless), re-run the new audit rules,
+   re-review the 12 batch-4 bundles.
 2. Fix F4 (strip inline refs, per-block claim IDs) and re-assemble batch 2;
    re-review 4 bundles.
 3. Fix F3 (body-read/replace sole evidence, or drop the claims and the copy
