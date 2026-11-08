@@ -1666,10 +1666,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1690,7 +1690,8 @@
    "open issue: Track implementation status of the 2024 Yaowarat pedestrian-zone days and 2026 vendor-relocation policy for Chinatown specifically.",
    "open issue: Geocode Soi Nana bars and Talat Noi/Song Wat edges to settle partial-vs-inside relations against the real app polygons.",
    "open issue: Reconcile the task brief's clip-direction labels ('hua-lamphong north', 'itsaraphap south') with coordinate geometry (Hua Lamphong SE ~1.0 km; Itsaraphap ~2.7 km, non-clipping).",
-   "open issue: Quantify festival-period crowding (Lunar New Year, vegetarian festival) if the crowd score is to be defended."
+   "open issue: Quantify festival-period crowding (Lunar New Year, vegetarian festival) if the crowd score is to be defended.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F7 A8 overstatement: pilot khet note is correct; temple is Pom Prap and in catchment. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

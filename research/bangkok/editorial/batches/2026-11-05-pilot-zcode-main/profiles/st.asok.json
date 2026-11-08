@@ -1314,10 +1314,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 parallel research subagents), 2026-11-05",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1339,7 +1339,8 @@
    "open issue: Confirm whether Srinakharinwirot University's campus edge falls inside the 800 m catchment (representative OSM point ~990 m).",
    "open issue: Find signed-rent or transaction data for the catchment to complement asking-rent medians (app n=30/18).",
    "open issue: Source evidence for safety-related perception (app safety=6) and gym/sports facilities (app gym_sports=10) — none collected this session.",
-   "open issue: Resident-perspective sources: Reddit threads on living in Asoke (noise, why live there) could not be fetched (HTTP 403); retry via a logged-in or alternative route."
+   "open issue: Resident-perspective sources: Reddit threads on living in Asoke (noise, why live there) could not be fetched (HTTP 403); retry via a logged-in or alternative route.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

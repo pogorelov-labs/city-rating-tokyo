@@ -931,10 +931,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -954,7 +954,8 @@
    "open issue: Confirm which railway-corridor communities (if any) fall inside the unit and whether clearance works touch the unit's edge (phetchaburi-c04).",
    "open issue: Obtain a body-read rent median for the Makkasan catchment (all current medians are highlight-level) (phetchaburi-c07).",
    "open issue: Verify the MRT Phetchaburi station's opening year from a stronger source (extract omitted it; context implies the 2004 original line) (phetchaburi-c01).",
-   "open issue: DooAsset's Makkasan page lists some 'nearest project' stock on the Asok side; if the app's Voronoi splits west of the walkway, several of those listings belong to other cells - polygon audit needed (phetchaburi-c02)."
+   "open issue: DooAsset's Makkasan page lists some 'nearest project' stock on the Asok side; if the app's Voronoi splits west of the walkway, several of those listings belong to other cells - polygon audit needed (phetchaburi-c02).",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c05/c07); F10 'this batch' in tradeoffs. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

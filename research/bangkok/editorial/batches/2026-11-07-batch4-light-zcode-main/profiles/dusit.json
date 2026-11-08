@@ -1197,10 +1197,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1220,7 +1220,8 @@
    "open issue: Old Dusit Zoo site: no body-level source on reuse plans (Nation-TV March-2024 'small public park' lead and July-2024 park/hospital debate remain snippet-level). Recheck when the royal estate office publishes.",
    "open issue: Corroborate the Sep-2025 Samsen sinkhole specifics (dimensions, closure status, repair estimate) against Reuters/Thai-language news bodies before editorial publication - the Wikipedia article is LLM-flagged.",
    "open issue: Nang Loeng market: not covered in bodies read; if the app credits food/daily-life points to it, verify its khwaeng (Si Yaek Maha Nak) and trading status separately.",
-   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 day_night/within placeholders + uncertainties char-explosion. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

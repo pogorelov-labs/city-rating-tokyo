@@ -1315,10 +1315,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1338,7 +1338,8 @@
    "open issue: Thai Wikipedia's five-station MRT list includes 'Ratchadaphisek', which is not an operating Blue Line station name; treated as a slip - PIP-verified set is four stations.",
    "open issue: Brief's 'st.phra-ram-9 catchment majority din-daeng (52.9%)' taken from batch-4 sibling bundle; not re-derived here.",
    "open issue: App polygon excludes MRT Phetchaburi/ARL Makkasan at the southern tip while the brief credits them to the khet's edge - coordinator should reconcile transit-adjacency vs polygon membership for the transport score.",
-   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 + F2 (2 claim limitation arrays). See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

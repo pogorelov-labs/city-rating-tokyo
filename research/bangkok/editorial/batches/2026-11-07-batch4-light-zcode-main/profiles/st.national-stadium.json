@@ -854,10 +854,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -875,7 +875,8 @@
    "open issue: Park-clip geometry: app park_ha=4.3 implies nearly all of Centenary Park (~4.45-4.8 ha) in-unit, but the OSM centroid sits 955 m out - coordinator polygon check decides between 'partial tip' and 'app uses a different park dataset' (national-stadium-c07).",
    "open issue: gym_sports=9 should separate scheduled-venue access (stadium) from fitness-venue counts (national-stadium-c03).",
    "open issue: No station-area 2024-2026 public-works source found; a BMA-targeted pass could close it.",
-   "open issue: Reddit/TripAdvisor 403 and Bangkok Post paywall blocked perception-side corroboration."
+   "open issue: Reddit/TripAdvisor 403 and Bangkok Post paywall blocked perception-side corroboration.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F10 'the batch's lowest' in guide lead. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

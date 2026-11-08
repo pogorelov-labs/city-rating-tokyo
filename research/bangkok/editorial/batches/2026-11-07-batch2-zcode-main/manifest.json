@@ -64,7 +64,7 @@
    "model_score_default": 7.96,
    "cohort_rank": 2,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "blocked"
   },
   {
    "key": "st.ratchathewi",
@@ -76,7 +76,7 @@
    "model_score_default": 7.92,
    "cohort_rank": 3,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "blocked"
   },
   {
    "key": "st.nana",
@@ -88,7 +88,7 @@
    "model_score_default": 7.86,
    "cohort_rank": 4,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "blocked"
   },
   {
    "key": "st.wat-mangkon",
@@ -100,7 +100,7 @@
    "model_score_default": 7.7,
    "cohort_rank": 10,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "blocked"
   },
   {
    "key": "pom-prap-sattru-phai",
@@ -112,7 +112,7 @@
    "model_score_default": 8.16,
    "cohort_rank": 3,
    "cohort_size": 50,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "phaya-thai",
@@ -124,7 +124,7 @@
    "model_score_default": 8.0,
    "cohort_rank": 4,
    "cohort_size": 50,
-   "review_status": "ready_for_review"
+   "review_status": "blocked"
   }
  ],
  "validation": {
@@ -142,5 +142,15 @@
  "updated_at": "2026-11-08T00:00:00Z",
  "research_started_at": "2026-11-07T11:44:13Z",
  "research_completed_at": "2026-11-07T14:54:45Z",
- "research_time_basis": "raw-write-mtimes"
+ "research_time_basis": "raw-write-mtimes",
+ "review": {
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "status": {
+   "approved": 1,
+   "blocked": 5
+  },
+  "report": "research/bangkok/editorial/2026-11-08-independent-review.md",
+  "note": "Agent review, not the human signatory (DEC-2 open)."
+ }
 }

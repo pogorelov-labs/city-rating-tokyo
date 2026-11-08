@@ -844,10 +844,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -868,7 +868,8 @@
    "open issue: Safety 7: no district statistics in EN or TH; untested, not contradicted.",
    "open issue: Thai PBS Locals community story (Masjid Suwannaphum, 'last mosque of Charoen Nakhon') is JS-rendered and could not be body-read; used only as a lead for future deep passes.",
    "open issue: claim khlong-san-c12 removed: no surviving web evidence after cleanup",
-   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 + F5 false ICONSIAM/G2 polygon claim (station cell mistaken for khet). See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

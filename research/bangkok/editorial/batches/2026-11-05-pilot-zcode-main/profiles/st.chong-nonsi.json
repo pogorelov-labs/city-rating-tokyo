@@ -1591,10 +1591,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 parallel research subagents), 2026-11-05",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1616,7 +1616,8 @@
    "open issue: Confirm current grocery anchor inside the unit (is the Empire Tower Tops operating?).",
    "open issue: Find platform-level BTS crowding data (morning peak at Chong Nonsi) to test the crowd=1 score properly.",
    "open issue: Verify current status of Ojo rooftop bar and MahaNakhon SkyWalk operations (names/ticketing) from an operator source.",
-   "open issue: Obtain resident-written (non-agent) accounts of living specifically within 800 m of BTS Chong Nonsi — Reddit retrieval failed in this session."
+   "open issue: Obtain resident-written (non-agent) accounts of living specifically within 800 m of BTS Chong Nonsi — Reddit retrieval failed in this session.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 residual: accepted resident-quote walking time. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

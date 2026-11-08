@@ -873,10 +873,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -894,7 +894,8 @@
    "open issue: park_ha=8.0 source polygon unconfirmed (Lumphini clip assumed); RBSC contribution to any green metric needs the app's policy decision - members-only land is not public amenity (ratchadamri-c04/c05).",
    "open issue: One Bangkok unit membership (outside-leaning, possible partial) requires the app polygon check (ratchadamri-c06).",
    "open issue: No unit-level footway or crossing audit source; BMA Rama-I prototype only snippet-level (ratchadamri-c10).",
-   "open issue: Bangkok Post, Reddit, TripAdvisor accesses failed (paywall/403) - no bypass attempted."
+   "open issue: Bangkok Post, Reddit, TripAdvisor accesses failed (paywall/403) - no bypass attempted.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 'brief' only in uncertainties; P3 'live page 2026' date. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

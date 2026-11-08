@@ -1760,10 +1760,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1786,7 +1786,8 @@
    "open issue: {'id': 'OI-6', 'issue': \"App's 102.7-ha green figure cannot be decomposed from published data.\", 'notes': 'Best reconstruction: Lumphini 57.6 + RBSC 36.3 + Centenary Park 4.5 + One Bangkok green 1.1-8 + Suphachalasai 3.4 = 99.5-106.9 ha. Lumphini itself splits 57.6 official vs 52.3 OSM. Polygon-level reconciliation is a coordinator check.'}",
    "open issue: {'id': 'OI-7', 'issue': 'No experiential sources for heat/shade/noise on the walking network.', 'notes': 'Reddit/TripAdvisor 403 (known); no published microclimate study found for the Siam plaza canyons this round. Walkability claim (c13) is infrastructure-based; do not upgrade to experience claims without new sources.'}",
    "open issue: {'id': 'OI-8', 'issue': 'Crowd 1 evidence is daily-average operator data plus event closures; no weekend-specific counts.', 'notes': \"RSTA's 600k/day is peak-era (2015-2019) association citation found only at search level. If a weekend-representative count is needed, BMA event filings or mall-operator disclosures are the likeliest sources.\"}",
-   "open issue: {'id': 'OI-9', 'issue': \"Boundary-straddlers: MRT Si Lom node sits on the khet side of Rama IV while serving Bang Rak's Silom corridor; two Pratunam piers straddle the Saen Saep line.\", 'notes': 'Counted in-khet by node PIP for the station/transport claims; flag for any future polygon-level scoring so the transport-10 attribution does not double-count with bang-rak.'}"
+   "open issue: {'id': 'OI-9', 'issue': \"Boundary-straddlers: MRT Si Lom node sits on the khet side of Rama IV while serving Bang Rak's Silom corridor; two Pratunam piers straddle the Saen Saep line.\", 'notes': 'Counted in-khet by node PIP for the station/transport claims; flag for any future polygon-level scoring so the transport-10 attribution does not double-count with bang-rak.'}",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2: 15 snippet-only corroboration sources; no sole reliance. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

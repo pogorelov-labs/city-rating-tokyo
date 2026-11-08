@@ -1398,10 +1398,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1424,7 +1424,8 @@
    "open issue: Army Club Vibhavadi: confirm public-access rules (golf/driving range, stadium events) and any 2026+ reuse plans from Army sources; snippet-level only (phaya-thai-c06, c15).",
    "open issue: App '23 temples' vs wiki 'Wat Phai Tan only temple in the khet' - determine the app's counting rule (includes shrines/churches?) before publishing anything about religious sites.",
    "open issue: Samsen Nai/Inthamara community texture and Sanam Pao's Sri Supharaj Arcade were only lightly sourced (Thai wiki lists) - a Thai-language community-source pass would strengthen Q02/Q05 for these subareas.",
-   "open issue: Access failures to log against: greener.bangkok.go.th (403 direct; Exa workaround used), webportal.bangkok.go.th district page (403), webReader on Thai URLs (MCP -400), Overpass API (406/timeout/malformed from sandbox), th.wikipedia สนามกีฬาทหารบก (404, wrong title), one WebSearch timeout (Army Stadium EN query)."
+   "open issue: Access failures to log against: greener.bangkok.go.th (403 direct; Exa workaround used), webportal.bangkok.go.th district page (403), webReader on Thai URLs (MCP -400), Overpass API (406/timeout/malformed from sandbox), th.wikipedia สนามกีฬาทหารบก (404, wrong title), one WebSearch timeout (Army Stadium EN query).",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs in preview/lead/guide items; union preview claim_ids. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

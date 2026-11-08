@@ -50,7 +50,7 @@
    "model_score_default": 7.68,
    "cohort_rank": 11,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "st.chong-nonsi",
@@ -62,7 +62,7 @@
    "model_score_default": 8.0,
    "cohort_rank": 1,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "samphanthawong",
@@ -74,7 +74,7 @@
    "model_score_default": 8.56,
    "cohort_rank": 1,
    "cohort_size": 50,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "bang-rak",
@@ -86,7 +86,7 @@
    "model_score_default": 8.3,
    "cohort_rank": 2,
    "cohort_size": 50,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "st.thong-lo",
@@ -98,7 +98,7 @@
    "model_score_default": 6.46,
    "cohort_rank": 51,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "st.ari",
@@ -110,7 +110,7 @@
    "model_score_default": 7.28,
    "cohort_rank": 29,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   }
  ],
  "validation": {
@@ -128,5 +128,15 @@
  "updated_at": "2026-11-08T00:00:00Z",
  "research_started_at": "2026-11-04T22:17:48Z",
  "research_completed_at": "2026-11-04T23:49:58Z",
- "research_time_basis": "raw-write-mtimes"
+ "research_time_basis": "raw-write-mtimes",
+ "review": {
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "status": {
+   "approved": 6,
+   "blocked": 0
+  },
+  "report": "research/bangkok/editorial/2026-11-08-independent-review.md",
+  "note": "Agent review, not the human signatory (DEC-2 open)."
+ }
 }

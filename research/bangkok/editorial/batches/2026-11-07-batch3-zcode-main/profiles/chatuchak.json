@@ -1413,10 +1413,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1444,7 +1444,8 @@
    "open issue: Thai Wikipedia counts Light Red Line as '1 station' in the khet (= Krung Thep Aphiwat shared terminus) - inferred from station role, not separately verified.",
    "open issue: Resident voice is one neighborhood guide (Jatujak Living); no market-vendor or long-term-resident testimony was body-read - Q02's subarea split rests on administrative and venue evidence.",
    "open issue: Red Line Chatuchak station node identity (OSM node 7787093471 at 13.8266,100.5495) sits between the MRT Chatuchak Park area and Kasetsart - khwaeng attribution not pinned; harmless for khet-level claims.",
-   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2: 8 snippet-only corroboration sources; no sole reliance. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

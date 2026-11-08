@@ -1317,10 +1317,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1344,7 +1344,8 @@
    "open issue: Bang Rak 25% district share matches the east-bank pier strip inside the 800 m circle (researcher_inference from OSM distances); app clip geometry unpublished, so membership of cross-river ground is probable but not provable",
    "open issue: Flood exposure: no catchment-specific 2011 evidence found (Wikipedia 2011 floods body never mentions Khlong San/Thonburi-side inundation); do not infer safety or risk either way",
    "open issue: No full-service hospital, gym names, or sidewalk-quality descriptions located inside the catchment — gaps, not negative findings",
-   "open issue: Access failures logged: Bangkok Post 2036319 (tollbit paywall), bangkok-spirit.com via WebFetch (403, succeeded via web_reader), old.reddit.com (403; URL also unconfirmed), ddproperty.com district pages (404 x2), chaophrayaexpressboat.com/en/services (404), Overpass third query (timeout x2)"
+   "open issue: Access failures logged: Bangkok Post 2036319 (tollbit paywall), bangkok-spirit.com via WebFetch (403, succeeded via web_reader), old.reddit.com (403; URL also unconfirmed), ddproperty.com district pages (404 x2), chaophrayaexpressboat.com/en/services (404), Overpass third query (timeout x2)",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs; F12 empty QA notes. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

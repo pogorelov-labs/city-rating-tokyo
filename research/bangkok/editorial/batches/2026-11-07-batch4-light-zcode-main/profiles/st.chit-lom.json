@@ -827,10 +827,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -849,7 +849,8 @@
    "open issue: Park_ha 4.2 has no named-polygon source; Lumphini north lobe vs unnamed Langsuan-area polygon unresolved (chit-lom-c05).",
    "open issue: CentralWorld/Pathumwananurak seam with st.siam needs the polygon check.",
    "open issue: Reddit/TripAdvisor 403 and Bangkok Post paywall blocked perception-side and news-side corroboration.",
-   "open issue: claim chit-lom-c06 removed during assembly: its only evidence was a non-web app-data anchor (limitation recorded on neighboring claims)"
+   "open issue: claim chit-lom-c06 removed during assembly: its only evidence was a non-web app-data anchor (limitation recorded on neighboring claims)",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 c06 removed at assembly (documented); P3 'live page 2026' date. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

@@ -1003,10 +1003,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1024,7 +1024,8 @@
    "open issue: Coordinator to audit the app polygon for the Lumphini Park split: 37.2 ha in-unit implies the boundary runs through the park between the Sala Daeng cell and ratchadamri/lumphini cells (sala-daeng-c07).",
    "open issue: Whether Dusit Central Park's green is publicly accessible (and how much is park vs hotel podium) is unverified (sala-daeng-c08).",
    "open issue: Rent claims rest on exa-highlight-only portal sources; Dot Property's rendered stats were unreachable via curl (client-side rendering) - a body-read rent source would firm up Q08.",
-   "open issue: TripAdvisor/Reddit complaint threads returned 403 and were not read; scam-claim evidence is guide-level plus flagged snippets (sala-daeng-c05)."
+   "open issue: TripAdvisor/Reddit complaint threads returned 403 and were not read; scam-claim evidence is guide-level plus flagged snippets (sala-daeng-c05).",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c11/c12); F10 'this batch' in strengths. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

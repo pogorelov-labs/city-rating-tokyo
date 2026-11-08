@@ -1,5 +1,13 @@
 # Reviewer packet — editorial batches 1–2 (12 bundles)
 
+> **Executed 2026-11-08** by an independent agent review: 22 approved / 24
+> blocked of the 46 researched bundles; tier C 137/137 PASS. Bundle statuses
+> are no longer `ready_for_review`. Results, finding IDs and the re-review
+> path: [`../2026-11-08-independent-review.md`](../2026-11-08-independent-review.md).
+> The human signatory (DEC-2) remains open. This packet is kept as the
+> instruction record; several of its counts/pointers are stale by design and
+> are listed in the report's F15.
+
 For the independent review the handoff requires. Every bundle sits at
 `ready_for_review` with `reviewer: null`; this packet makes the pass cheap and
 specific. **Researcher self-checks are not this review.**

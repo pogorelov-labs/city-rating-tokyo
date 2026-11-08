@@ -1134,10 +1134,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1159,7 +1159,8 @@
    "open issue: ARL operator data gap: srtet.or.th timetable/fares page was not fetched; frequency (10-11/12-13 min) rests on a full Wikipedia read plus snippet corroboration. Baiyoke II height also shows a 304 vs 309 m source discrepancy (ratchaprarop-c07, c16).",
    "open issue: No verified 2024-2026 Pratunam/Platinum redevelopment decision found; livestream-reseller market disruption is documented only at news-snippet level (ratchaprarop-c14).",
    "open issue: Rent evidence is district-level (FazWaz Ratchathewi feed); no listing explicitly on Ratchaprarop Rd appeared on the page read, so 'own stock' rents are inferred from adjacent-road examples (ratchaprarop-c11).",
-   "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record."
+   "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 'ARL-only control' jargon in copy. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

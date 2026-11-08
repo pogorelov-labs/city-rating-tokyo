@@ -1310,10 +1310,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 parallel research subagents), 2026-11-05",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1335,7 +1335,8 @@
    "open issue: Weekday vs weekend rhythm of Sampeng wholesale trade - conflicting snippet-level hours (some sources say Mon-Fri/Sat patterns, one says daily); unresolved.",
    "open issue: MRT Blue Line full-loop completion date and any 2025-2026 service changes not verified in body-read sources.",
    "open issue: Healthcare mapping: BEM exit-list 'hospital' entries (Kwong Siew Foundation Hospital, BMA hospital) not independently verified; nearest verified tertiary hospital is Chulalongkorn Memorial (~3 km, inference from coordinates).",
-   "open issue: 2026 CNY festival cancellation and 2027 festival plans unverified."
+   "open issue: 2026 CNY festival cancellation and 2027 festival plans unverified.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

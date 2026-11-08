@@ -1026,10 +1026,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1047,7 +1047,8 @@
    "open issue: Confirm by app polygon which khwaeng the Charansanitwong and Bang Ramat SRT halts fall in (khet Bangkok Noi vs Bang Phlat) - matters for transport-crediting on the corridor.",
    "open issue: Current Thonburi timetable: TrueID page (updated Sep 2025) was not machine-readable; body-level confirmation of the 07:45 departure relies on search snippets and should be re-verified against railway.co.th.",
    "open issue: No English or Thai body found describing Bangkok Noi nightlife venues; the 46-count stays app-only.",
-   "open issue: Wang Lang market is blog-documented; a Thai-language or newspaper feature would harden the food-7 anchor."
+   "open issue: Wang Lang market is blog-documented; a Thai-language or newspaper feature would harden the food-7 anchor.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 day_night/within placeholders + uncertainties char-explosion. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

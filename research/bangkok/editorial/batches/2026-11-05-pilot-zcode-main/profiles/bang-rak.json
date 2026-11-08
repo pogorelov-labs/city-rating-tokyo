@@ -1554,10 +1554,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 parallel research subagents), 2026-11-05",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1579,7 +1579,8 @@
    "open issue: Reddit and TripAdvisor resident/visitor threads unreadable via fetch (403); resident-perception evidence base is thinner than ideal and skews commercial.",
    "open issue: Chong Nonsi Canal Park post-2021 phase status and any Bang Rak-side section unresolved; also whether later phases touch Surawong-to-Sathorn (phase 1) inside the khet.",
    "open issue: Expressway noise near Saphan Taksin/Taksin Bridge and sidewalk-width measurements unverified.",
-   "open issue: Embassies (app: 3 within 800 m) and Asiatique/River City locations not independently verified in this pass."
+   "open issue: Embassies (app: 3 within 800 m) and Asiatique/River City locations not independently verified in this pass.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 residual: G24 plain-http source, documented. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

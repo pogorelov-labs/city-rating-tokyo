@@ -858,10 +858,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -878,7 +878,8 @@
    "3 claim(s) carry explicit recheck_by flags for volatile facts.",
    "open issue: Coordinator must reconcile the app anchor for st.saint-louis with the OSM station node (13.72082, 100.52669) and re-run polygon-dependent facts (hospital/park memberships) (saint-louis-c02).",
    "open issue: No current rent medians for the Saint Louis pocket from a raw-body portal source; BK's listings are 2019 vintage (saint-louis-c08).",
-   "open issue: Thai-language coverage of ย่านเซนต์หลุยส์ beyond the station article was not searched in this pass - possible missing local sources."
+   "open issue: Thai-language coverage of ย่านเซนต์หลุยส์ beyond the station article was not searched in this pass - possible missing local sources.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c10/c12) + F10 'brief ... needs re-checking' in preview/lead. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

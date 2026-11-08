@@ -1837,5 +1837,12 @@
  },
  "normalizations_applied": {},
  "search_log": "none — no web research performed (tier C data-only placeholders)",
- "live_app_data_changed": false
+ "live_app_data_changed": false,
+ "review": {
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "status": "137/137 PASS (identity + zero web claims + draft)",
+  "report": "research/bangkok/editorial/batches/2026-11-08-tail-data-only/review/REVIEW-2026-11-08-independent.md",
+  "note": "Tier-C placeholders stay draft; A-2 reviewer-verification recorded, owner signature separate."
+ }
 }

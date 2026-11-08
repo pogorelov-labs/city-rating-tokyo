@@ -1641,10 +1641,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1669,7 +1669,8 @@
    "open issue: {'id': 'OI-8', 'issue': 'Snippet-only evidence items (corroboration only, never sole support).', 'notes': \"DDproperty Noble Ploenchit 1BR average ~43k; LAD Dutch-embassy land analysis; Park Hyatt covered-bridge-to-two-stations claim (hotel marketing); Reddit Ploenchit-Nana skywalk gap; Nai Lert garden area (~14-15 rai); Witthayu running-loop ~2.5-3 km; 'quiet, secure' embassy-quarter guide language; khwaeng-boundary (Saen Saep = Lumphini/Makkasan-Ratchathewi) statements.\"}",
    "open issue: {'id': 'OI-9', 'issue': 'Access failures encountered.', 'notes': 'centralembassy.com/en/about-us HTTP 404; timeout.com Open House page HTTP 404; Reddit/TripAdvisor 403 (policy); Overpass blocked (policy); Bangkok Post paywalled (One Bangkok visitor article not read; figure sourced to Nation Thailand body-read instead).'}",
    "open issue: {'id': 'OI-10', 'issue': 'App facts left unverified.', 'notes': '351 food, 53 cafes, 33 nightlife venues, 2 piers, 10.7 ha park area, 1.07 km2 unit area — no accessible independent source could confirm any count; Overpass blocked. The 1.07 km2 unit vs named-green ~2.2-2.4 ha (~20-22% if all mapped green were Nai Lert, which it cannot be at 10.7 ha) — decomposition pending.'}",
-   "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record."
+   "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 legacy AI-summary source; 5 snippet-only sources. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

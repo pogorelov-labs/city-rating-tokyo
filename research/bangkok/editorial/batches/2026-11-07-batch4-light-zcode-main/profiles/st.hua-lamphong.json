@@ -2010,10 +2010,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -2034,7 +2034,8 @@
    "open issue: Rent 2-bed blend (62,500) vs Rong Muang listing mean (~43.2-43.6k) — document the premium-Pathum-Wan component or revisit.",
    "open issue: Khet/khwaeng assignment: batch-3 pathum-wan placed the station in khwaeng Rong Mueang; app district mix starts at Pathum Wan 47.4% — consistent, but khwaeng-level mapping should be confirmed by the coordinator's polygon pass.",
    "open issue: Claim-ID prefix note: this bundle uses hua-lamphong-cNN; no collision detected with earlier batches.",
-   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 + F2 (1 claim + 10 source arrays) + F3 (c02/c12) + F6. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

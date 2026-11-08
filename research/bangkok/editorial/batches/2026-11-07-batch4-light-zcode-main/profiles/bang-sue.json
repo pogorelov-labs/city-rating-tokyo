@@ -1037,10 +1037,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1060,7 +1060,8 @@
    "open issue: Body-level KTW ridership data (SRT monthly stats) not found in this pass; 'underused' narrative rests on capacity comparison + snippet-level 2023 coverage.",
    "open issue: Platform count discrepancy (EN wiki 26 vs Thai Train Guide 24) needs one authoritative figure before editorial publication.",
    "open issue: SRTA Feb-2026 land auction (plots A/B, ~100bn THB) was seen only in search summaries - verify against a body before citing.",
-   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 day_night/within placeholders + uncertainties char-explosion. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

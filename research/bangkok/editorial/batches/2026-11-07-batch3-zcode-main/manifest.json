@@ -70,7 +70,7 @@
    "model_score_default": 7.82,
    "cohort_rank": 5,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "st.phloen-chit",
@@ -82,7 +82,7 @@
    "model_score_default": 7.78,
    "cohort_rank": 6,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "st.sam-yan",
@@ -94,7 +94,7 @@
    "model_score_default": 7.78,
    "cohort_rank": 7,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "st.sam-yot",
@@ -106,7 +106,7 @@
    "model_score_default": 7.74,
    "cohort_rank": 8,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "blocked"
   },
   {
    "key": "st.sena-ruam",
@@ -118,7 +118,7 @@
    "model_score_default": 7.7,
    "cohort_rank": 9,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "st.ratchaprarop",
@@ -130,7 +130,7 @@
    "model_score_default": 7.68,
    "cohort_rank": 12,
    "cohort_size": 133,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "ratchathewi",
@@ -142,7 +142,7 @@
    "model_score_default": 7.96,
    "cohort_rank": 5,
    "cohort_size": 50,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "phra-nakhon",
@@ -154,7 +154,7 @@
    "model_score_default": 7.86,
    "cohort_rank": 6,
    "cohort_size": 50,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "chatuchak",
@@ -166,7 +166,7 @@
    "model_score_default": 7.7,
    "cohort_rank": 7,
    "cohort_size": 50,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   },
   {
    "key": "pathum-wan",
@@ -178,7 +178,7 @@
    "model_score_default": 7.68,
    "cohort_rank": 8,
    "cohort_size": 50,
-   "review_status": "ready_for_review"
+   "review_status": "approved"
   }
  ],
  "validation": {
@@ -207,5 +207,15 @@
  "updated_at": "2026-11-08T00:00:00Z",
  "research_started_at": "2026-11-07T19:58:14Z",
  "research_completed_at": "2026-11-07T20:11:08Z",
- "research_time_basis": "raw-write-mtimes"
+ "research_time_basis": "raw-write-mtimes",
+ "review": {
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
+  "status": {
+   "approved": 9,
+   "blocked": 1
+  },
+  "report": "research/bangkok/editorial/2026-11-08-independent-review.md",
+  "note": "Agent review, not the human signatory (DEC-2 open)."
+ }
 }

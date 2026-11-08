@@ -283,3 +283,19 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
   discoverable handles rejected after content inspection** (masquerading /
   spam / bot-promo channels) and official sites carry no `t.me` links —
   channel discovery is the open work; registry verdicts prevent any misuse.
+- **2026-11-08 (independent review executed):** A-1 agent-review pass over all
+  46 researched bundles + A-2 tier-C reviewer verification. **22 approved /
+  24 blocked**; tier C **137/137 PASS** (independently reproduced). Six
+  finding classes: batch-4 normalize damage in `day_night` /
+  `within_area_variation` / `uncertainties` (12 bundles); incomplete
+  limitations repair (49 claim + source arrays in 7 bundles); 21 claims
+  resting solely on snippet-only sources (6 bundles); batch-2 inline claim
+  refs in user copy (4 bundles); the khlong-san **station cell mistaken for
+  the khet** polygon error (also in the final review §2.4); app-data locators
+  attached to unrelated web sources (4 claims). `kit/audit.py` gained six gate
+  rules + 9 tests (suite 32 green); every approved bundle has zero P1 under
+  the new rules. Report:
+  [`2026-11-08-independent-review.md`](2026-11-08-independent-review.md).
+  **DEC-2 (human signatory) remains open** — this is an agent review.
+  Next: fix F1/F2 mechanically from `raw/`, re-assemble batch 2 (F4), run the
+  F3 evidence pass, then human sign-off.

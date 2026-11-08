@@ -1447,10 +1447,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1474,7 +1474,8 @@
    "open issue: Woeng Nakhon Kasem: verified only via snippets as Samphanthawong-side (outside this khet) and as demolished/redeveloping for a 16.5 bn THB AWC project (Jan 2025, opening 2029). Body-read a Bangkok Post/Nation piece before using it as redevelopment-pressure context.",
    "open issue: Khlong Thom Center fire aftermath (cause findings, vendor relocations, rebuilding) was open at the Aug 2026 Thai PBS publication; follow up before any statement about the market's current operating state.",
    "open issue: Bobae 'closed during BMA renovation' (Wikipedia, undated): renovation timing and completion unknown; also whether Bobae Tower vs Bobae Market are separately affected.",
-   "open issue: Khlong Ong Ang Fri-Sun 16:00-22:00 walking-street schedule is 2021-era; confirm current operation and days before publishing schedule language."
+   "open issue: Khlong Ong Ang Fri-Sun 16:00-22:00 walking-street schedule is 2021-era; confirm current operation and days before publishing schedule language.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. 24,000 2-bed below observed asks is pipeline CRTKY-141, not a copy fix. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

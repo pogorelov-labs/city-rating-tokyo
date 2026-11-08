@@ -827,10 +827,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -849,7 +849,8 @@
    "open issue: Identify the 0.7 ha mapped park parcel; OSM shows no named public park within 850 m of the station node (saphan-khwai-c08).",
    "open issue: Safety 8 unverified — needs either local-crime data or an explicit 'perception, not documented' label.",
    "open issue: No resident-report sources accessible (Reddit/TripAdvisor 403 per brief); lived-experience claims rest on two editorial guides with different voices.",
-   "open issue: Station article is an unsourced stub — ridership and surroundings would benefit from a BTS official page cross-check."
+   "open issue: Station article is an unsourced stub — ridership and surroundings would benefit from a BTS official page cross-check.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 source-date annotations. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

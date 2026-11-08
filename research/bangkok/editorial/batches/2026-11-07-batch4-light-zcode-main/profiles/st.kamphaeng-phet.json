@@ -834,10 +834,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -856,7 +856,8 @@
    "open issue: Decide whether green 9 stands on buffer adjacency; if so, label it as such in copy (kamphaeng-phet-c04).",
    "open issue: Identify what the app's 0.1 ha mapped park parcel is (no named OSM park inside the band).",
    "open issue: Find a readable source with vendor-side detail on the 2025 market eviction; social-post-only so far.",
-   "open issue: Station article is an unsourced stub; BEM page corroborates exits but not ridership."
+   "open issue: Station article is an unsourced stub; BEM page corroborates exits but not ridership.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 source-date annotations. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

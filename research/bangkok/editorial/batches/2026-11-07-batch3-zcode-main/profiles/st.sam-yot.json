@@ -1810,10 +1810,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1837,7 +1837,8 @@
    "open issue: No general/24-hour hospital verified inside the 1.4 km2 unit; nearest public general hospitals 2-4 km (researcher estimate). Also no branded supermarket or gym chain verified in-unit; Rommaninat park fitness is the main sports facility (sam-yot-c13, sam-yot-c10).",
    "open issue: Democracy Monument is ~1.1 km north and outside the unit; it was a batch lead and is documented as outside with closure-spillover effects only (sam-yot-c08).",
    "open issue: Wat Ratchanatdaram/Loha Prasat khet attribution conflict noted by batch 2 is consistent with its position at this unit's northern fringe (Mahachai Rd, Bang Khun Phrom side); not fully resolved here (sam-yot-c03).",
-   "open issue: Publisher-domain fetch limits encountered: webportal.bangkok.go.th, greener.bangkok.go.th, thairath.co.th (403); urbanally.org (JS shell). Claims relying on those pages rest on search-index extracts and are marked body_read=false with independent corroboration."
+   "open issue: Publisher-domain fetch limits encountered: webportal.bangkok.go.th, greener.bangkok.go.th, thairath.co.th (403); urbanally.org (JS shell). Claims relying on those pages rest on search-index extracts and are marked body_read=false with independent corroboration.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3: 11 claims sole-unread; false 'corroboration only' source limitation; checks fail. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

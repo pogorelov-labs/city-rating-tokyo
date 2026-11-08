@@ -958,10 +958,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -980,7 +980,8 @@
    "open issue: Confirm the app's 3.5 ha park parcel equals Santiphap Park (3.2 ha verified) and whether island-garden polygons add the rest (victory-monument-c08).",
    "open issue: Find a post-September-2025 source on the BMA council's budget decision for the Phaya Thai/Din Daeng islands (victory-monument-c07).",
    "open issue: Re-read the Daily News and PRD pages when accessible (403/DNS failures) to upgrade the bus-stop closure and eight-hospital claims from snippet corroboration.",
-   "open issue: No resident-report sources accessible (Reddit/TripAdvisor 403 per brief); safety 6 remains unverified in either direction."
+   "open issue: No resident-report sources accessible (Reddit/TripAdvisor 403 per brief); safety 6 remains unverified in either direction.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F10 'coordinator must settle' in guide lead. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

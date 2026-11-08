@@ -1752,10 +1752,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1777,7 +1777,8 @@
    "open issue: {'id': 'OI-5', 'issue': 'Lease money figures differ across sources.', 'notes': \"SRT's own return ~33bn THB vs total compensation to SRTA ~42.5bn THB (incl. 2.7bn fees). Both cited with attribution; do not average.\"}",
    "open issue: {'id': 'OI-6', 'issue': 'App facts left unverified.', 'notes': '560 food venues, 109 cafes, 39 nightlife venues, 13 temples, 2.29 km2 area — no independent source could confirm counts; temple identification inside the unit not achieved.'}",
    "open issue: {'id': 'OI-7', 'issue': 'District blend vs station evidence for rent.', 'notes': \"16,000/33,000 THB is a district-weighted editorial blend; station-level room stock asks far less. Whether the app's rent 8 should absorb this is an editorial decision, not a factual one.\"}",
-   "open issue: {'id': 'OI-8', 'issue': 'Access failures encountered.', 'notes': 'web_reader MCP 500 errors (2 calls); urbanrail.net/as/thai/ 404 (correct path used); greener.bangkok.go.th 403 via WebFetch (read via exa fetch); Reddit/TripAdvisor/Overpass blocked by policy; Bangkok Post paywalled and not bypassed.'}"
+   "open issue: {'id': 'OI-8', 'issue': 'Access failures encountered.', 'notes': 'web_reader MCP 500 errors (2 calls); urbanrail.net/as/thai/ 404 (correct path used); greener.bangkok.go.th 403 via WebFetch (read via exa fetch); Reddit/TripAdvisor/Overpass blocked by policy; Bangkok Post paywalled and not bypassed.'}",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 short claim prefix; 5 snippet-only sources. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

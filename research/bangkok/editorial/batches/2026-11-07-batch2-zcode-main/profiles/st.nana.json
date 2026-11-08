@@ -1484,10 +1484,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1511,7 +1511,8 @@
    "open issue: Washington Square (Soi 22-24 area, south side) was assumed st.phrom-phong territory from general references but no source in this batch located it - mark unknown.",
    "open issue: Wongnai item 'bar opens near BTS Nana, 3 floors 3 feels' (snippet, Thai) suggests recent venue churn on the frontage; not pursued - could add to Q11 with a body read.",
    "open issue: No signed-rent or historical rent series for the station area; app's 28,000/60,000 station-override remains tested only against asking-rent portals (consistent at lower-middle of range).",
-   "open issue: Sukhumvit skywalk continuity toward Chidlom/Phloen Chit is search-level info only (visitthailandtoday/royalivory snippets); confirm before claiming walkable elevated access from Nana."
+   "open issue: Sukhumvit skywalk continuity toward Chidlom/Phloen Chit is search-level info only (visitthailandtoday/royalivory snippets); confirm before claiming walkable elevated access from Nana.",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs; F14 reviewer green candidate note (non-blocking). See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

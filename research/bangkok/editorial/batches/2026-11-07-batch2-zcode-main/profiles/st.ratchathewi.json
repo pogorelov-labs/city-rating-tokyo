@@ -1383,10 +1383,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "blocked",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -1408,7 +1408,8 @@
    "open issue: BMTA bus route numbers serving the intersection not verified from a body-read source; only stop locations (OSM) and one snippet frequency figure.",
    "open issue: Santiphap Park distance corrected to ~1.4-1.5 km NNE (task lead said ~1.2 km NW); Baiyoke Tower II located ~1.0 km ENE, not merely 'far north' - both outside the unit.",
    "open issue: 13 mapped temples and 224 food places not individually verified; Nang Loeng market location (Pom Prap Sattru Phai) unverified.",
-   "open issue: Overpass POST endpoint returned 406 on first attempts; all OSM figures come from successful GET queries on 2026-11-07 (base timestamp 2026-11-07T13:13Z)."
+   "open issue: Overpass POST endpoint returned 406 on first attempts; all OSM figures come from successful GET queries on 2026-11-07 (base timestamp 2026-11-07T13:13Z).",
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs in guide items (preview/lead clean). See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }

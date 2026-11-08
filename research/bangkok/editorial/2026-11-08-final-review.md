@@ -130,3 +130,27 @@ smoothed. The strongest deliverable is not the copy — it is the set of
 **provable score-context facts** (buffer effects, anchor offsets, ghost
 station, polygon coarseness) that the product team can now act on with
 receipts.
+
+## Post-review correction (2026-11-08, independent review)
+
+The independent review ([`2026-11-08-independent-review.md`](2026-11-08-independent-review.md))
+corrects three statements above and records the sign-off state:
+
+1. **§2.4 / khlong-san is wrong.** The "10-vertex khet polygon" that
+   PIP-OUTs ICONSIAM is the **station cell**
+   (`station-geometry.json["khlong-san"]`), not the khet. The 50-vertex
+   district polygon **contains** ICONSIAM and G2 Charoen Nakhon and excludes
+   River City. The batch-4 `khlong-san` bundle repeats the error and is
+   blocked (F5).
+2. **§5 / sam-yot "34 bodies opened post-hoc" is not reflected in the
+   delivered bundle.** 40 of 43 sources remain `body_read: false`; 11 claims
+   rest solely on them. The bundle is blocked (F3).
+3. **§1 and §7 "no bundle independently approved" is superseded** by the
+   agent-review statuses: 22 approved / 24 blocked, with the caveat that this
+   is an **agent review, not a human signatory** — DEC-2/G10 remains open.
+   Also: "zero P1" was true only under the rules then shipped; the review's
+   new rules find 97 + 126 P1s in batches 2 and 4 (normalize damage,
+   provenance, inline copy).
+
+The program verdict otherwise stands: the five systemic findings remain the
+program's real product, with the khlong-san detail corrected as above.

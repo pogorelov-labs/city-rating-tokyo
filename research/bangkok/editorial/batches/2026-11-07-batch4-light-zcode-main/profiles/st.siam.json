@@ -885,10 +885,10 @@
  },
  "images": [],
  "review": {
-  "status": "ready_for_review",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
-  "reviewer": null,
-  "reviewed_at": null,
+  "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
+  "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
@@ -905,7 +905,8 @@
    "open issue: App park_ha=6.0 has no verified single-polygon source; Pathumwananurak + Park @ Siam + untagged Wat Pathum green is the best candidate set (siam-c05).",
    "open issue: CentralWorld is served by both Siam and Chit Lom; its polygon split between units is a coordinator decision (siam-c02).",
    "open issue: No 2024-2026 Siam-area infrastructure or mall-renovation list surfaced in this light pass; a targeted pass on Siam Piwat/Central announcements would close it.",
-   "open issue: Bangkok Post, Reddit and TripAdvisor accesses failed (paywall/403); Thai-language evidence is snippet-level only for crowd perception."
+   "open issue: Bangkok Post, Reddit and TripAdvisor accesses failed (paywall/403); Thai-language evidence is snippet-level only for crowd perception.",
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 claim refs/coordinator only in uncertainties. See research/bangkok/editorial/2026-11-08-independent-review.md."
   ]
  }
 }
