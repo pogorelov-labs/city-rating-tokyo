@@ -16,6 +16,7 @@ import { GUIDE_CATEGORIES, guideMoney, guideTraits, rentDefinitionKey, withGuide
 import type { Locale } from '@/i18n/routing';
 const EDITORIAL_DISCLOSURE_KEYS = ['disclosure.greenBuffer1km', 'disclosure.transportMechanism'] as const;
 import styles from './area-guide.module.css';
+import EditorialGuide from './EditorialGuide';
 
 const LoadedMap = dynamic(() => import('./AreaGuideMap'), { ssr: false });
 
@@ -368,6 +369,7 @@ export default function AreaGuide({ area, children }: { area: AreaGuideData; chi
                 : <Link key={`${source.href}-${index}`} href={source.href}>{source.label} ↗</Link>)}</div>
             </div>
           </details>
+          <EditorialGuide areaId={area.key} chunkHref={area.editorial_chunk ?? null} />
           <details className={styles.disclosure}><summary>{t('score.basis')}<span aria-hidden="true">+</span></summary>
             <div className={styles.disclosureBody}><p>{t('score.explain')}</p>
               {(EDITORIAL_DISCLOSURE_KEYS.filter(k => (area.editorial_disclosures ?? []).includes(k))).map(key => <p key={key}>{t(key)}</p>)}
