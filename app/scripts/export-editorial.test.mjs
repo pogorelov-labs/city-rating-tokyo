@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { selectBundles, copyEligible, buildIndexEntity, buildChunk, claimsForGuide, buildIndex } from './export-editorial.mjs';
+import { selectBundles, copyEligible, buildIndexEntity, buildChunk, claimsForGuide } from './export-editorial.mjs';
 
 const base = over => ({
   schema_version: '1.0',

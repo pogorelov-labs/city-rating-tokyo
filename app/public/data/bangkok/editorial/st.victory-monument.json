@@ -1,0 +1,618 @@
+{
+ "key": "st.victory-monument",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Victory Monument is the city's working interchange: more than 100,000 people a day change between buses, vans, motorcycle taxis and the BTS across four traffic islands that have evolved by improvisation rather than plan. Two 2025-2026 projects are rebuilding it around that reality - a 136M-baht bus-stop and landscape overhaul and the 1.3 km Rajavithi Skywalk, whose first phase was announced to open in early October 2026 and finally completes the pedestrian loop. Away from the crush, the same 800 m catchment holds the boat-noodle alleys along a Khlong Samsen branch, the roughly 3.2 ha Santiphap Park on the Rang Nam side, and a Tops supermarket in Century The Movie Plaza. The trade-off is constant: the reach is the point, and the crowds, double-parked buses and construction are the cost.",
+   "claims": [
+    "victory-monument-c03",
+    "victory-monument-c04",
+    "victory-monument-c05",
+    "victory-monument-c06",
+    "victory-monument-c07",
+    "victory-monument-c08",
+    "victory-monument-c09",
+    "victory-monument-c10",
+    "victory-monument-c11",
+    "victory-monument-c12",
+    "victory-monument-c13",
+    "victory-monument-c14",
+    "victory-monument-c15",
+    "victory-monument-c16",
+    "victory-monument-c17"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Interchange reach few stations match: buses, suburban vans, motorcycle taxis, ride-hailing and BTS N3 in one node, with stops deliberately re-zoned by destination to cut double parking.",
+     "claims": [
+      "victory-monument-c03",
+      "victory-monument-c06"
+     ]
+    },
+    {
+     "en": "A sheltered, universal-design elevated loop now connects the station to the medical district's hospitals, built wide enough for wheelchairs, gurneys and even a small ambulance.",
+     "claims": [
+      "victory-monument-c04",
+      "victory-monument-c05"
+     ]
+    },
+    {
+     "en": "The boat-noodle alleys are a real food anchor, not a marketing label: canal-side shops dating to the 1980s resettlement still sell 16-20-baht bowls a short distance from the skywalk's end.",
+     "claims": [
+      "victory-monument-c10"
+     ]
+    },
+    {
+     "en": "Santiphap Park gives the Rang Nam side a genuine 3.2 ha green space with 05:00-21:00 hours, 30-plus bird species and thousands of daily users.",
+     "claims": [
+      "victory-monument-c11"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The hub's core experience is crowding and improvised infrastructure: design research documents double-parked buses hiding waiting passengers, blind corners and surfaces that fail wheelchair and elderly users.",
+     "claims": [
+      "victory-monument-c08"
+     ]
+    },
+    {
+     "en": "The van network's convenience comes with a published safety caveat from an independent guide ('somewhat spotty safety record'), and 2012 reporting showed van queues once blocked Rajavithi Hospital's ambulance entrance.",
+     "claims": [
+      "victory-monument-c09",
+      "victory-monument-c08"
+     ]
+    },
+    {
+     "en": "Rents are bimodal: new towers beside the BTS ask 26,000-30,000 THB for a one-bed while older and mid-ring stock runs 13,000-21,000, so the same 'Victory Monument' label spans very different budgets.",
+     "claims": [
+      "victory-monument-c12",
+      "victory-monument-c13"
+     ]
+    },
+    {
+     "en": "The monument circle is an episodic protest stage, with five-figure gatherings, teargas and road blockages documented between 2020 and 2022.",
+     "claims": [
+      "victory-monument-c15"
+     ]
+    },
+    {
+     "en": "Redevelopment pressure cuts both ways: the hub redesign reduces island food-stall retail, and the March 2025 heritage registration legally constrains changes to the landmark itself.",
+     "claims": [
+      "victory-monument-c06",
+      "victory-monument-c16"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Weekday peaks are island-specific: Ratchawithi island crowds at 07:00 (333 per half hour), Din Daeng at midday (378), Phahonyothin at 19:00-19:30 (467) - the evening crush is the day's heaviest.",
+     "claims": [
+      "victory-monument-c07"
+     ]
+    },
+    {
+     "en": "After sunset the retail polarity flips: the bazaar stalls quiet down while makeshift bars at Victory Point under the skywalk pour cheap drinks, and Santiphap Park empties at its 21:00 close after evening aerobics crowds.",
+     "claims": [
+      "victory-monument-c17",
+      "victory-monument-c11"
+     ]
+    },
+    {
+     "en": "Once the skywalk's first phase is operating, the station-to-island and station-to-hospital walk runs on a roofed deck rather than the narrow street-level pavement, day and night.",
+     "claims": [
+      "victory-monument-c05",
+      "victory-monument-c12"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The four islands are interchange-only space (no gardens, retail being reduced), while green and quiet sit one block west at Santiphap Park between Ratchawithi and Rang Nam.",
+     "claims": [
+      "victory-monument-c06",
+      "victory-monument-c11"
+     ]
+    },
+    {
+     "en": "Rents stratify by block: Ideo Q Victory beside the station asks roughly double the older Rajvithi City Resort stock a few hundred metres out.",
+     "claims": [
+      "victory-monument-c13"
+     ]
+    },
+    {
+     "en": "The boat-noodle lane is cramped, roofed and wet-floored - deliberately chaotic - while the duty-free King Power complex on Soi Rang Nam is glass-and-steel formal, both within the same catchment.",
+     "claims": [
+      "victory-monument-c10",
+      "victory-monument-c17"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Strong fit for car-free commuters on a budget: the interchange's reach and one-bedroom asking rents from the mid-teens (older stock) make living here primarily a transport decision.",
+     "claims": [
+      "victory-monument-c03",
+      "victory-monument-c14"
+     ]
+    },
+    {
+     "en": "Strong fit for hospital workers, patients and visitors: the new skywalk leg links the BTS directly toward five medical-district hospitals on a sheltered, bed-friendly deck.",
+     "claims": [
+      "victory-monument-c05"
+     ]
+    },
+    {
+     "en": "Poor fit for quiet-residential or big-park preferences: the only real park is about 3.2 ha and the core is a working interchange with documented crowd, noise and safety frictions.",
+     "claims": [
+      "victory-monument-c11",
+      "victory-monument-c08",
+      "victory-monument-c14"
+     ]
+    },
+    {
+     "en": "Good fit for street-food-first households: decades-old boat-noodle shops, mall food courts and bazaars cover everyday eating cheaply, though big-catchment grocery upgrades (La Villa's Villa Market) sit about 1.7 km north, outside the catchment.",
+     "claims": [
+      "victory-monument-c10",
+      "victory-monument-c17"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "The skywalk phase-1 opening itself is announced for early October 2026 and reported as opened in a 1 Oct 2026 university-director post, but no dated news confirmation of operation was found; recheck by end of 2026 (victory-monument-c04).",
+   "The district label conflicts: encyclopedias and the heritage registration place the monument in Ratchathewi while the app polygon says phaya-thai; the coordinator's polygon check should settle it (victory-monument-c02).",
+   "About 62% of the Rajavithi Skywalk corridor remained under construction with no published revised completion date despite the original contract ending 13 April 2026 (victory-monument-c04).",
+   "All rent figures are asking prices from portals retrieved 2026-11-08; signed-rent data was not found, so the app's 18,000/38,000 blend cannot be validated against contracts (victory-monument-c12, victory-monument-c13).",
+   "Commuter-count figures come from the redesign team's own single-Friday study and have not been independently audited (victory-monument-c07)."
+  ],
+  "attribution_required": [
+   "victory-monument-c01",
+   "victory-monument-c07",
+   "victory-monument-c11",
+   "victory-monument-c12",
+   "victory-monument-c14",
+   "victory-monument-c15",
+   "victory-monument-c16"
+  ]
+ },
+ "claims": [
+  {
+   "id": "victory-monument-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1941-06",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Wikipedia infobox completion date (24 June 1942) differs from the June 1941 erection statement in the lead; both derive from cited sources",
+    "Monument also used as a distance marker for Bangkok in Thai road mapping per travel guides"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c02",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026 publications",
+    "recheck": null
+   },
+   "limitations": [
+    "Decision rule is the app polygon, which this subagent cannot inspect; both attributions reported for the coordinator",
+    "Khwaeng names ('Thanon Phaya Thai' subdistrict of Ratchathewi vs Phaya Thai district) collide, which is the likely source of the app polygon label"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Daily-user figure is an official estimate repeated across outlets, not a counted audit"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "2026-12-31"
+   },
+   "limitations": [
+    "Actual public opening not confirmed by a dated news source in this bundle; strongest post-dated signal is a 2026-10-01 LinkedIn post (snippet-only)",
+    "Contract end (13 Apr 2026) predates the reported 38.31% progress on 27 Aug 2026, implying schedule overrun; no public restatement of a revised completion date found"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026 project reporting",
+    "recheck": "2026-12-31"
+   },
+   "limitations": [
+    "Design intent from BMA briefings; real-world coverage of each hospital entrance depends on later per-institution links still to be built",
+    "One article's lift count (4) covers the full corridor, not only the two first-phase islands"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-09-15",
+    "observed": null,
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "All descriptions are project-side promises at approval stage; delivered outcome unverified",
+    "Budget-cut discussions at subcommittee level (Thaiger) are the kernel of the 'half-funded islands' renovation-stall risk; no evidence of actual funding shortfall found in this bundle"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c07",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "one typical Friday, 06:00-21:00 (study reported March 2026)",
+    "recheck": null
+   },
+   "limitations": [
+    "Data produced by the project's own research team (Urban Ally), one weekday only",
+    "Phaya Thai island peak not reported numerically"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c08",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2012 complaints; 2025-2026 design-research findings",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "2012 hospital-access accounts are historical; conditions changed with later van reorganisations, and current obstruction levels are not independently documented",
+    "Primary evidence (Thai PBS World) is body-read; the 2012 Nation article is snippet-only corroboration"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c09",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Guide undated and tourist-oriented; intercity van departures have been partially reorganised in recent years, so which routes remain at the monument needs a recheck",
+    "Used as the substantive counter-view on the interchange's reach"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c10",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "history to 1985; prices observed 2024",
+    "recheck": null
+   },
+   "limitations": [
+    "Prices and taste verdicts from a 2024 personal blog visit; individual shops' hours and menus change",
+    "Blogger's cleanliness complaints are one visitor's impression"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c11",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1998-08-18",
+    "observed": "park-office figures retrieved 2009 via Wikipedia",
+    "recheck": null
+   },
+   "limitations": [
+    "Visitor counts trace to the BMA park office as of a 2009 retrieval and may be dated",
+    "A nearby directory page mistakenly lists the park as 8 hectares; 8 acres (approx 3.2 ha) is the encyclopedic figure and matches the brief's 3.2 ha lead"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c12",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "live listings retrieved 2026-11-08",
+    "recheck": "2027-05-08"
+   },
+   "limitations": [
+    "Asking, not signed, rents; range extremes (10,000-145,000) stretch the average's meaning",
+    "Commercial portal data used for comparison only"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c13",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "listings 2025-2026 retrieved 2026-11-08",
+    "recheck": "2027-05-08"
+   },
+   "limitations": [
+    "All figures are asking prices from listing pages with changing availability",
+    "Superagent figures are its own 2025 listing scrape on a marketing blog"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c14",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2025 data, published 2026-04-17",
+    "recheck": null
+   },
+   "limitations": [
+    "Commercial content marketing; characterization is the platform's editorial summary, not resident survey data"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c15",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2020-2022 events; earlier red-shirt gatherings 2009-2010",
+    "recheck": null
+   },
+   "limitations": [
+    "Encyclopedia summary of press reports; no events since 2022 documented in this bundle",
+    "Protest frequency is episodic, not a constant condition"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c16",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-03-12",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Registration text itself not read from the Royal Gazette; date taken from press accounts",
+    "Practical effect on the interchange redesign is untested in the reporting"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "victory-monument-c17",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Tourism-commercial source (labelled commercial_context); undated",
+    "Directory snippets indicate a Lotus's express at Center One, but that point was not verified on an opened page"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_69a9406bfabc",
+   "url": "https://www.bangkokpost.com/thailand/general/3105765/victory-monument-slated-for-overhaul",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Post",
+    "family": "Bangkok Post"
+   }
+  },
+  {
+   "id": "src_2ca3047d36d0",
+   "url": "https://www.bangkokpost.com/thailand/general/3310515/skywalk-to-complete-victory-monument-loop-in-october",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Post",
+    "family": "Bangkok Post"
+   }
+  },
+  {
+   "id": "src_bf26193eb432",
+   "url": "https://www.nationthailand.com/thailand/bangkok/40070409",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation Thailand",
+    "family": "Nation"
+   }
+  },
+  {
+   "id": "src_adbe37496e12",
+   "url": "https://www.thaipbsworld.com/travel-tourism/rethinking-victory-monument:-bangkok%E2%80%99s-busiest-bus-hub",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS World",
+    "family": "Thai PBS"
+   }
+  },
+  {
+   "id": "src_23811c7cbb06",
+   "url": "https://thethaiger.com/news/bangkok/bangkok-greenlights-136m-baht-upgrade-for-victory-monument",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thaiger",
+    "family": "Thaiger"
+   }
+  },
+  {
+   "id": "src_f3ce12d17b0b",
+   "url": "https://en.wikipedia.org/wiki/Victory_Monument_(Bangkok)",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_66b1411bd411",
+   "url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_92948746137a",
+   "url": "https://www.thansettakij.com/general-news/667739",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thansettakij",
+    "family": "Amarin"
+   }
+  },
+  {
+   "id": "src_6f7647b883bb",
+   "url": "https://www.feastographyblog.com/blog/boat-noodle-alley",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Feastography",
+    "family": "Feastography (independent blog)"
+   }
+  },
+  {
+   "id": "src_7664172a7cbf",
+   "url": "https://bangkokforvisitors.com/districts/victory-monument/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok for Visitors",
+    "family": "Bangkok for Visitors (independent site)"
+   }
+  },
+  {
+   "id": "src_8e36e87e4d81",
+   "url": "https://propertyscout.co.th/en/bangkok/victory-monument/rentals/condo/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyScout",
+    "family": "PropertyScout"
+   }
+  },
+  {
+   "id": "src_f222ab825c99",
+   "url": "https://www.hotels.com/go/thailand/best-victory-monument-shopping",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Hotels.com Go Guides",
+    "family": "Expedia Group (Hotels.com)"
+   }
+  },
+  {
+   "id": "src_37ad558091ff",
+   "url": "https://asianews.network/bangkok-car-free-2026-encourages-residents-to-switch-travel-modes/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Asia News Network",
+    "family": "Nation (Asia News Network syndication of a Nation byline)"
+   }
+  },
+  {
+   "id": "src_b4772ee37908",
+   "url": "https://www.superagent.co/en/blog/bangkok-condo-rental-prices-near-each-bts-station-2025-data",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Superagent",
+    "family": "Superagent (rental platform content)"
+   }
+  },
+  {
+   "id": "src_6401889f33c5",
+   "url": "https://www.timeout.com/bangkok/news/rajavithi-skywalk-victory-monument-083126",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out"
+   }
+  },
+  {
+   "id": "src_2dab7fd1cc6c",
+   "url": "https://www.nationthailand.com/in-focus/30195551",
+   "body_read": false,
+   "attribution": {
+    "publisher": "The Nation Thailand",
+    "family": "Nation"
+   }
+  },
+  {
+   "id": "src_d44f8317e70d",
+   "url": "https://www.linkedin.com/posts/niramon-serisakul_rajavithi-skywalk-opened-today-ahead-of-activity-7511456200883056640-JYrf",
+   "body_read": false,
+   "attribution": {
+    "publisher": "LinkedIn (Niramon Serisakul, Urban Design and Development Center)",
+    "family": "LinkedIn (individual professional post)"
+   }
+  },
+  {
+   "id": "src_ffafd30c8871",
+   "url": "https://www.matichon.co.th/prachachuen/news_5869979",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Matichon",
+    "family": "Matichon (incl. Prachachat)"
+   }
+  },
+  {
+   "id": "src_171237a84c7f",
+   "url": "https://www.prachachat.net/economic/news-2059265",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Prachachat",
+    "family": "Matichon (incl. Prachachat)"
+   }
+  },
+  {
+   "id": "src_cfb308d58f79",
+   "url": "https://thepattayanews.com/2025/09/17/revamping-bangkoks-iconic-victory-monument-a-major-upgrade-for-a-historic-hub/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "The Pattaya News",
+    "family": "The Pattaya News"
+   }
+  }
+ ]
+}

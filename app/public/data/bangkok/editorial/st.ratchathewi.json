@@ -1,0 +1,575 @@
+{
+ "key": "st.ratchathewi",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Ratchathewi is the point where the Sukhumvit line's tourist Bangkok thins out into a district of Phetchaburi Road apartments, hotel rows and neighborhood eating streets. The station sits just south of the Ratchathewi intersection; escalators drop onto Co-Co Walk's inexpensive bars, a skybridge reaches the Asia Hotel, and the Saen Saep express boat leaves from a pier 305 m away toward Pratunam and the Golden Mount. Two food streets anchor the evenings: Soi 5 (16:00-23:00, rice boxes at 25-30 baht) and Soi 10 (18:00 until 01:00-02:00, closed Mondays) in lanes of old two-storey shophouses. Independent 2025-2026 rent data brackets the app's 21,500/38,000 THB figures, below neighboring Siam. The tradeoffs are concrete: no named public park inside the catchment on the maps we checked, a broad arterial to cross on footbridges, and the intersection's flyover gone since January 2025 for the MRT Orange Line, due back around 2028.",
+   "claims": [
+    "ratchathewi-c01",
+    "ratchathewi-c02",
+    "ratchathewi-c03",
+    "ratchathewi-c04",
+    "ratchathewi-c05",
+    "ratchathewi-c06",
+    "ratchathewi-c07",
+    "ratchathewi-c08",
+    "ratchathewi-c09",
+    "ratchathewi-c10",
+    "ratchathewi-c11",
+    "ratchathewi-c13",
+    "ratchathewi-c15",
+    "ratchathewi-c16"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Transport stack exceeds the single BTS line: bus stops at the exits (19-52 m), canal boat pier at 305 m, Airport Rail Link one stop north, planned Orange Line interchange ~2030",
+     "claims": [
+      "ratchathewi-c02",
+      "ratchathewi-c08"
+     ]
+    },
+    {
+     "en": "Distinctly local food streets with documented hours and prices: Soi 5 dinner street 16:00-23:00, Soi 10 night market to 01:00-02:00",
+     "claims": [
+      "ratchathewi-c05",
+      "ratchathewi-c06"
+     ]
+    },
+    {
+     "en": "Rents consistently bracketed below neighboring rated areas by three independent 2025-2026 datasets",
+     "claims": [
+      "ratchathewi-c07"
+     ]
+    },
+    {
+     "en": "Station-base nightlife for locals rather than tourists at Co-Co Walk",
+     "claims": [
+      "ratchathewi-c03"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Flyover demolition at the core intersection from January 2025, reconstruction due by April 2028, with BMA-flagged congestion and mainly-night works",
+     "claims": [
+      "ratchathewi-c09"
+     ]
+    },
+    {
+     "en": "No named public park inside the clipped catchment on OSM; the app's 1.0 ha park is unverified and nearest named parks sit 810 m-1.45 km out",
+     "claims": [
+      "ratchathewi-c13"
+     ]
+    },
+    {
+     "en": "Phetchaburi Road is a broad, busy arterial where crossing relies on footbridges; pedestrian-risk data not found",
+     "claims": [
+      "ratchathewi-c15"
+     ]
+    },
+    {
+     "en": "Petty-crime complaints (alleged bag-slashing, tuk-tuk commission scams) cluster on the adjacent Pratunam belt, not inside the unit",
+     "claims": [
+      "ratchathewi-c10"
+     ]
+    },
+    {
+     "en": "Repeated cleanliness/rat complaints at Soi 5 food street, per its own reviewers",
+     "claims": [
+      "ratchathewi-c05"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Daytime: corridor commerce and apartment/hotel rows between small eating clusters on Phetchaburi Road",
+     "claims": [
+      "ratchathewi-c15"
+     ]
+    },
+    {
+     "en": "Evening from 16:00: Soi 5 dinner street; Co-Co Walk bars at the station base",
+     "claims": [
+      "ratchathewi-c05",
+      "ratchathewi-c03"
+     ]
+    },
+    {
+     "en": "Late night: Soi 10 trades to 01:00-02:00 (Mondays off), while night construction works run on the corridor through ~2028",
+     "claims": [
+      "ratchathewi-c06",
+      "ratchathewi-c09"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Station core: densest mix - exits, skybridge hotel, Co-Co Walk, bus stops, pier within 305 m",
+     "claims": [
+      "ratchathewi-c02",
+      "ratchathewi-c03",
+      "ratchathewi-c04",
+      "ratchathewi-c08"
+     ]
+    },
+    {
+     "en": "West/Soi 10 side: old shophouse lanes with the after-dark food market, quieter by day",
+     "claims": [
+      "ratchathewi-c06"
+     ]
+    },
+    {
+     "en": "East edge toward Siam: eating clusters thin out and the clip hands ground to the Siam unit (Pantip Plaza and Platinum Mall sit at/beyond the boundary)",
+     "claims": [
+      "ratchathewi-c01"
+     ]
+    },
+    {
+     "en": "North edge: hospitals, Phyathai-side development and Suan Pakkad Palace fall into the Phaya Thai unit, not this one",
+     "claims": [
+      "ratchathewi-c11",
+      "ratchathewi-c16"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Good for car-free commuters: BTS plus boat plus buses plus ARL one stop north",
+     "claims": [
+      "ratchathewi-c08"
+     ]
+    },
+    {
+     "en": "Good for budget-conscious professionals and grad students priced out of Siam",
+     "claims": [
+      "ratchathewi-c07"
+     ]
+    },
+    {
+     "en": "Poor for green-space seekers: no named park inside; canal walkway and small pitches are the usable green",
+     "claims": [
+      "ratchathewi-c13"
+     ]
+    },
+    {
+     "en": "Poor for light sleepers until ~2028: night construction works and intersection congestion",
+     "claims": [
+      "ratchathewi-c09"
+     ]
+    },
+    {
+     "en": "Weak for families needing international schools or hospital access inside the unit",
+     "claims": [
+      "ratchathewi-c16"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "The identity of the app's 1.0 ha park is unresolved; OSM shows no named public park inside the clipped unit (ratchathewi-c13)",
+   "The basis for safety 5 is unexplained: no unit-specific crime pattern found in EN/TH searches; adjacent-Pratunam incidents should not be inherited as a label (ratchathewi-c10)",
+   "Bus frequency (29+/hour) and SHUSH Ratchathewi completion rest on snippet-only sources (ratchathewi-c08, ratchathewi-c17)",
+   "Inside/partial status of Soi 5 and Pantip Plaza depends on the app's exact clip geometry and could not be settled (ratchathewi-c05)",
+   "Reddit comment sentiment was inaccessible; the resident-experience record rests on one post body plus search summaries (ratchathewi-c10 context, source 13)"
+  ],
+  "attribution_required": [
+   "ratchathewi-c01",
+   "ratchathewi-c05",
+   "ratchathewi-c06",
+   "ratchathewi-c09"
+  ]
+ },
+ "claims": [
+  {
+   "id": "ratchathewi-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c05",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Inside/partial status unresolved pending the app's clip geometry"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c06",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c07",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "No signed-contract or catchment-specific rent data found",
+    "DDproperty figure is snippet-only corroboration"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "MRTA schedule as of Nov 2024; later slippage reported in 2026 snippets for related works"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c10",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Expat 'safe' consensus is snippet-only and cannot be a claim's sole evidence",
+    "No incident found inside the unit itself"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c13",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Overture data not directly accessible; identity unknown",
+    "Pocket parks opened by BMA in the khet (Nov 2023 '15-minute park' at a Phetchaburi intersection, per district office posts, snippet-level) could not be located precisely"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c14",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c15",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "No quantitative road-safety data located in EN/TH searches"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c16",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Clinics, pharmacies and supermarkets inside the unit were not exhaustively mapped",
+    "Big C Extra's position relative to the clip boundary unknown"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchathewi-c17",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "SHUSH details rest on a snippet-only search summary",
+    "Completion dates subject to slippage"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap contributors",
+    "family": "OpenStreetMap"
+   }
+  },
+  {
+   "id": "src_edb40b68d0f9",
+   "url": "https://en.wikipedia.org/wiki/Ratchathewi_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_4b8e15dea6d8",
+   "url": "https://en.wikipedia.org/wiki/Ratchathewi_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_6c851769cf57",
+   "url": "https://en.wikipedia.org/wiki/Baiyoke_Tower_II",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_66b1411bd411",
+   "url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_e9c44e3a4de6",
+   "url": "https://en.wikipedia.org/wiki/Suan_Pakkad_Palace",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_30535a266299",
+   "url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_1a6b606223cc",
+   "url": "https://www.thefinestthai.com/2026/07/23/phetchaburi-road-soi-5-street-food-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Finest Thai",
+    "family": "The Finest Thai"
+   }
+  },
+  {
+   "id": "src_135a30cc5596",
+   "url": "https://www.visitthailandtoday.com/restaurants/bangkok/petchaburi-soi-5-food-street",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Visit Thailand Today",
+    "family": "Visit Thailand Today"
+   }
+  },
+  {
+   "id": "src_e957708d48fc",
+   "url": "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/2417",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Travelfish",
+    "family": "Travelfish"
+   }
+  },
+  {
+   "id": "src_262bedce284b",
+   "url": "https://propertyscout.co.th/en/location-guides/ratchathewi-area-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyScout",
+    "family": "PropertyScout"
+   }
+  },
+  {
+   "id": "src_b7cebe51353e",
+   "url": "https://www.superagent.co/en/blog/ratchathewi-bangkok-complete-2026-expat-neighborhood-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Superagent blog",
+    "family": "Superagent"
+   }
+  },
+  {
+   "id": "src_809cf118e5ae",
+   "url": "https://www.bangkokpost.com/thailand/general/2909930/three-flyovers-to-be-axed-for-orange-line",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Post",
+    "family": "Bangkok Post"
+   }
+  },
+  {
+   "id": "src_0caea8beef5f",
+   "url": "https://www.reddit.com/r/Bangkok/comments/1tnv99x/hows_ratchathewi_nowadays/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Reddit",
+    "family": "Reddit"
+   }
+  },
+  {
+   "id": "src_11d0afa11d99",
+   "url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/ratchathewi",
+   "body_read": true,
+   "attribution": {
+    "publisher": "FazWaz",
+    "family": "FazWaz"
+   }
+  },
+  {
+   "id": "src_eaf0e1b2770c",
+   "url": "https://says.com/my/news/woman-warns-of-pickpockets-at-bangkok-after-her-bag-gets-allegedly-sliced-open",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SAYS",
+    "family": "SAYS"
+   }
+  },
+  {
+   "id": "src_84e7fb7e57c6",
+   "url": "https://www.rome2rio.com/Bus/Bus-Stop-BTS-Ratchathewi/Phaya-Thai-BTS-station",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Rome2Rio",
+    "family": "Rome2Rio"
+   }
+  },
+  {
+   "id": "src_bb03f936b519",
+   "url": "https://www.ddproperty.com/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "DDproperty",
+    "family": "DDproperty"
+   }
+  }
+ ]
+}

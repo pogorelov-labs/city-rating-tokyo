@@ -1,0 +1,722 @@
+{
+ "key": "st.ha-yaek-lat-phrao",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Ha Yaek Lat Phrao is what central-adjacent Bangkok looks like when it is built for the people who live there: two rail lines meeting over a five-way intersection, a 1982 shopping complex bolted to the stations by a walkway, sois of walk-up apartments renting from a few thousand baht, and a small 24-hour park with exercise bars where the green score says '10' mostly on borrowed parks one MRT stop north-west. Traffic runs the ground floor of daily life here; the skywalk runs the second.",
+   "claims": [
+    "ha-yaek-c01",
+    "ha-yaek-c02",
+    "ha-yaek-c03",
+    "ha-yaek-c04",
+    "ha-yaek-c05",
+    "ha-yaek-c06",
+    "ha-yaek-c07",
+    "ha-yaek-c08",
+    "ha-yaek-c09",
+    "ha-yaek-c10",
+    "ha-yaek-c11",
+    "ha-yaek-c12",
+    "ha-yaek-c13",
+    "ha-yaek-c14",
+    "ha-yaek-c15",
+    "ha-yaek-c16",
+    "ha-yaek-c17"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "A true dual-network interchange: BTS Sukhumvit (N9, 2019) and MRT Blue (BL14, 2004) at one junction, 300-434 m apart, joined by an elevated walkway into the malls — roughly 8.4 million combined passengers in the 2021 snapshot.",
+     "claims": [
+      "ha-yaek-c01",
+      "ha-yaek-c02",
+      "ha-yaek-c03"
+     ]
+    },
+    {
+     "en": "Central Ladprao puts a 1982-vintage full-service mall (295 stores, department store, 10-screen cinema, hotel, convention hall) directly on the station skywalk — essentials, rain cover and air-con without crossing traffic.",
+     "claims": [
+      "ha-yaek-c04"
+     ]
+    },
+    {
+     "en": "Street-level rent value is real: 104 live listings near the BTS station, mostly 4,000-10,000 THB walk-up rooms, with 1BR condos from ~14,000 THB — below the app's district blend.",
+     "claims": [
+      "ha-yaek-c11",
+      "ha-yaek-c12"
+     ]
+    },
+    {
+     "en": "Cheap, dense everyday food: 50-70 THB stall plates, the Soi Lat Phrao 1 market 209 m from the MRT exit, mall food courts, and a small cafe scene at the junction.",
+     "claims": [
+      "ha-yaek-c13"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The junction is a chronic congestion node — ~337,000 vehicles/day on the corridor roads, hard peaks twice a weekday, and signal failures that stall all five approaches.",
+     "claims": [
+      "ha-yaek-c07"
+     ]
+    },
+    {
+     "en": "Green 10 is borrowed: the 30-60 ha parks sit ~1.0-1.8 km away around Mo Chit (one MRT stop); the unit's own green is a small 24h exercise park.",
+     "claims": [
+      "ha-yaek-c08",
+      "ha-yaek-c09"
+     ]
+    },
+    {
+     "en": "Nightlife and international dining are thin at the junction; the documented bar cluster is ~2 km east in Lat Phrao district.",
+     "claims": [
+      "ha-yaek-c14"
+     ]
+    },
+    {
+     "en": "The area is proudly unpolished — Thai-first daily life, spread-out sois, main roads hostile to walking; exactly why vibe scores lowest.",
+     "claims": [
+      "ha-yaek-c15",
+      "ha-yaek-c16"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Morning: trains from ~06:00, stall breakfasts at the soi mouths, coffee at junction cafes from 08:00; Somdet Ya Park runs 24h for early walkers.",
+     "claims": [
+      "ha-yaek-c17",
+      "ha-yaek-c13",
+      "ha-yaek-c08"
+     ]
+    },
+    {
+     "en": "Day: the skywalk corridor between stations, malls and the park loop carries most movement without street crossings.",
+     "claims": [
+      "ha-yaek-c01",
+      "ha-yaek-c16"
+     ]
+    },
+    {
+     "en": "Evening: after-work stall dinners (packing up ~21:00 corridor-wide), mall hours to 22:00; night owls ride east to the Nak Niwat/Soi 71 bars.",
+     "claims": [
+      "ha-yaek-c17",
+      "ha-yaek-c14"
+     ]
+    },
+    {
+     "en": "Weekend: family malls, then the 200k-visitor Chatuchak Weekend Market one MRT stop away — the district's crowd drains there, not to the junction.",
+     "claims": [
+      "ha-yaek-c10",
+      "ha-yaek-c17"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Junction core (stations, skywalk, Central Ladprao, Union Mall): dense, loud, most convenient; everything rated lives here.",
+     "claims": [
+      "ha-yaek-c01",
+      "ha-yaek-c04"
+     ]
+    },
+    {
+     "en": "Soi Lat Phrao 1 strip (209-650 m): the quiet local layer — market, walk-up apartments, a slow-bar cafe; the cheapest beds in the unit.",
+     "claims": [
+      "ha-yaek-c13",
+      "ha-yaek-c11"
+     ]
+    },
+    {
+     "en": "Somdet Ya Park corner (adjacent to Central Ladprao): the unit's only real green sitting room, 24h, exercise bars, skywalk onward toward Rot Fai Park.",
+     "claims": [
+      "ha-yaek-c08"
+     ]
+    },
+    {
+     "en": "North along Phahonyothin toward Phahonyothin 24 (~1 km) and the Central Phaholyothin site: construction zone for the 2026 megamall; outside the merge scope but shaping the unit's future crowding.",
+     "claims": [
+      "ha-yaek-c06"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Pick it if you are a budget renter or family who wants space, family-townhouse living and two train lines, and can live with traffic noise — room rents from ~4,000 THB, townhouses ~18,000-40,000.",
+     "claims": [
+      "ha-yaek-c11",
+      "ha-yaek-c12",
+      "ha-yaek-c01"
+     ]
+    },
+    {
+     "en": "Pick it if your week is mall-and-street-food shaped and you read Thai or are happy pointing at menus.",
+     "claims": [
+      "ha-yaek-c13",
+      "ha-yaek-c15"
+     ]
+    },
+    {
+     "en": "Skip it if you want nightlife at the door (bars are ~2 km east), a park out the front (big parks are a train stop away), or tourist-zone polish and English-first services.",
+     "claims": [
+      "ha-yaek-c14",
+      "ha-yaek-c09",
+      "ha-yaek-c15"
+     ]
+    },
+    {
+     "en": "Factor in 2029-2033: the anchor mall will be under a 4-year, 4.5bn-THB renovation from the new lease; expect hoardings in the core.",
+     "claims": [
+      "ha-yaek-c05"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Park-cluster geometry is coordinate-derived, not polygon-verified (OSM blocked); Wikipedia geocodes disagree internally by up to ~500 m; coordinator polygon check pending.",
+   "The app's 38.1-ha green polygon matches none of the published park areas (30.4/22/60 ha); provenance unknown.",
+   "App venue counts (560 food, 109 cafes, 39 nightlife, 13 temples) not independently verified; no named temple inside the unit surfaced in accessible sources.",
+   "Ridership figures are 2021 (post-COVID); escalator-reliability and the 25 Apr 2025 signal failure rest on snippet-only reports.",
+   "Somdet Ya Park area unpublished; skywalk-to-Rot-Fai-Park route length unstated by BMA.",
+   "Safety had no unit-specific incident evidence in accessible sources; the 7 rests on district blend.",
+   "Corridor flood claims (2026 Lat Phrao Road event) come from a single guide.",
+   "CPN's 'next CBD', catchment and purchasing-power figures are developer marketing."
+  ],
+  "attribution_required": [
+   "ha-yaek-c03",
+   "ha-yaek-c08",
+   "ha-yaek-c09",
+   "ha-yaek-c10"
+  ]
+ },
+ "claims": [
+  {
+   "id": "ha-yaek-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "stable since 2019-08 (BTS opening)",
+    "recheck": null
+   },
+   "limitations": [
+    "BTS article infobox coordinates are garbled (see source 0); app center used instead.",
+    "The three distance measurements (300 m / 350 m / 434 m) differ; all fall inside the merge threshold."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2019-08-09",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c03",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2021",
+    "recheck": "2027-01-01"
+   },
+   "limitations": [
+    "Figures are 2021 (post-COVID)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1982-12-25",
+    "observed": null,
+    "recheck": "2029-01-01"
+   },
+   "limitations": [
+    "Wikipedia store counts may lag the current tenant mix."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2026-01-15",
+    "observed": null,
+    "recheck": "2029-01-01"
+   },
+   "limitations": [
+    "Sources distinguish SRT's own return (~33bn) from total compensation to SRTA (~42.5bn); do not conflate.",
+    "Renovation start tied to the lease taking effect (Dec 2028)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "construction 2025-2026",
+    "recheck": "2027-01-01"
+   },
+   "limitations": [
+    "Catchment, traffic and purchasing-power figures are developer-supplied.",
+    "The per-line daily passenger figures quoted by CPN (15,600 / 35,100) are inconsistent with system-wide totals and are probably segment- or station-level; not used for any rating."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-04-25",
+    "observed": "recurring; peak hours",
+    "recheck": null
+   },
+   "limitations": [
+    "FM91 detail rests on a search summary (Facebook page unfetchable); the congestion picture is independently supported by sources 17, 19 and 22.",
+    "Vehicle count is a developer figure."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c08",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current BMA listing (retrieved 2026-11-07)",
+    "recheck": null
+   },
+   "limitations": [
+    "No area figure published by BMA.",
+    "The skywalk link's route and length are not quantified by the source."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current",
+    "recheck": "2026-12-01"
+   },
+   "limitations": [
+    "Wikipedia geocoding noise: the Chatuchak Park MRT coordinate and the park-article coordinate disagree by ~500 m though the station is 'under the park'; treat distances as approximate.",
+    "OSM/Overpass blocked, so inside/outside vs the actual clipped polygon is unresolved; coordinator to run the polygon check.",
+    "Somdet Ya Park returned no coordinate via API."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "weekends; vendor counts 2019",
+    "recheck": null
+   },
+   "limitations": [
+    "No total area figure; coordinate noise as elsewhere."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "listings retrieved 2026-11-07; guides dated Feb-Oct 2026",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Aggregator rents are advertised asks, not transacted.",
+    "Condo ranges are zone-wide guides, not polygon-specific.",
+    "The 16,000/33,000 app blend is a district-weighted editorial figure; station-level evidence suggests cheaper floors."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c12",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2026 guides and live listings",
+    "recheck": null
+   },
+   "limitations": [
+    "No car-ownership or tenure data located; the 'car-owning families' framing stays an inference from housing mix and guide descriptions.",
+    "Guide evidence partly covers areas east of the unit."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2026 guides; directory 2013 for the market",
+    "recheck": null
+   },
+   "limitations": [
+    "560-food/109-cafe counts are app facts, not verified here.",
+    "SoiDB entry dated 2013; existence corroborated by listing pages (source 18 references บ้านซอย 1 etc. on Soi Lat Phrao 1)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c14",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2019 article; 2026 guides",
+    "recheck": "2027-01-01"
+   },
+   "limitations": [
+    "BK Magazine article is from 2019; venue survival not verified.",
+    "39-venue app count unverified; may include mall bars/karaoke not covered by English guides."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c15",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2019-2026 publications",
+    "recheck": null
+   },
+   "limitations": [
+    "Evidence is publication-based perception, not survey data; several sources cover the wider Lat Phrao zone.",
+    "The vibe-7 interpretation (local-first, low tourist polish) is the researcher's synthesis of these accounts."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c16",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2026 guides; escalator reports undated reviews",
+    "recheck": null
+   },
+   "limitations": [
+    "Escalator-reliability detail is snippet-only review corroboration.",
+    "No pedestrian-count data found."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c17",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Stall-rhythm evidence is from the adjacent Lat Phrao Road corridor, not the junction sois themselves."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ha-yaek-c18",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Renaming claim is tagged [citation needed] on Wikipedia."
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_24eee2249302",
+   "url": "https://en.wikipedia.org/wiki/Ha_Yaek_Lat_Phrao_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_7ed5b38fb47e",
+   "url": "https://en.wikipedia.org/wiki/Phahon_Yothin_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_e49ad843e5a1",
+   "url": "https://en.wikipedia.org/wiki/Central_Ladprao",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_57aaf8f26051",
+   "url": "https://en.wikipedia.org/wiki/Lat_Phrao_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_53a89f59fa15",
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_59000fbbc8a7",
+   "url": "https://en.wikipedia.org/wiki/Wachirabenchathat_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_9ef38b83da10",
+   "url": "https://en.wikipedia.org/wiki/Queen_Sirikit_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_b983ac3c6af6",
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Park_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_55f4700620dd",
+   "url": "https://en.wikipedia.org/wiki/Mo_Chit_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_4f2339bc6726",
+   "url": "https://en.wikipedia.org/wiki/Kamphaeng_Phet_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_398714d2c425",
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Weekend_Market",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_bd15144f42c4",
+   "url": "https://www.urbanrail.net/as/bang/bangkok.htm",
+   "body_read": true,
+   "attribution": {
+    "publisher": "UrbanRail.Net (Robert Schwandl)",
+    "family": "urbanrail"
+   }
+  },
+  {
+   "id": "src_b4f1d3352a6f",
+   "url": "https://greener.bangkok.go.th/park/suan-somdet-ya-84",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Metropolitan Administration (BMA), Environment Department",
+    "family": "bma_government"
+   }
+  },
+  {
+   "id": "src_1c18a3e47cb3",
+   "url": "https://www.nationthailand.com/business/property/40061262",
+   "body_read": false,
+   "attribution": {
+    "publisher": "The Nation (nationthailand.com)",
+    "family": "nation_group"
+   }
+  },
+  {
+   "id": "src_0f248d1aea50",
+   "url": "https://en.thairath.co.th/news/governmentpolicy/2908041",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thairath (English edition)",
+    "family": "thairath"
+   }
+  },
+  {
+   "id": "src_a8dfefe68e9a",
+   "url": "https://www.infoquest.co.th/2026/563924",
+   "body_read": false,
+   "attribution": {
+    "publisher": "InfoQuest",
+    "family": "infoquest"
+   }
+  },
+  {
+   "id": "src_b3b1e1696e97",
+   "url": "https://www.centralpattana.co.th/en/shopping/shopping-update/lifestyle-activities/1501/central-pattana-unveils-thb-21-billion-mega-project-the-central-phaholyothin-the-flagship-of-the-future-set-to-become-the-landmark-of-northern-bangkok",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Central Pattana plc (CPN)",
+    "family": "central_group"
+   }
+  },
+  {
+   "id": "src_975fa3aa3e48",
+   "url": "https://www.khaosodenglish.com/news/business/2025/10/10/central-phahonyothin-aims-to-create-bangkoks-new-business-hub/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Khaosod English",
+    "family": "khaosod"
+   }
+  },
+  {
+   "id": "src_396aa1e938aa",
+   "url": "https://www.renthub.in.th/อพาร์ทเม้นท์-ห้องพัก-หอพัก/bts-ห้าแยกลาดพร้าว",
+   "body_read": true,
+   "attribution": {
+    "publisher": "RentHub.in.th",
+    "family": "renthub"
+   }
+  },
+  {
+   "id": "src_65ea218db5d4",
+   "url": "https://www.bkkoracle.com/area/lat-phrao",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BKK Oracle",
+    "family": "bkkoracle"
+   }
+  },
+  {
+   "id": "src_5057510b3411",
+   "url": "https://home-and-travel.com/home/living-in-lat-phrao-bangkok-expat-guide/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Home & Travel",
+    "family": "homeandtravel"
+   }
+  },
+  {
+   "id": "src_5c144f209166",
+   "url": "https://www.thailandstarterkit.com/moving/living-in-lat-phrao/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thailand Starter Kit",
+    "family": "thailandstarterkit"
+   }
+  },
+  {
+   "id": "src_e649eeda5e55",
+   "url": "https://thailandaddict.com/en/ladprao-half-day-plan",
+   "body_read": true,
+   "attribution": {
+    "publisher": "ThailandAddict",
+    "family": "thailandaddict"
+   }
+  },
+  {
+   "id": "src_3b2ed64b6482",
+   "url": "https://www.bkmagazine.com/city-living/why-lat-phrao-hipsters-cant-stop-talking-neighborhood/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BK Magazine",
+    "family": "bkmagazine"
+   }
+  },
+  {
+   "id": "src_e71fe3dbc4b3",
+   "url": "https://www.ajarn.com/help-and-guides/my-bangkok-suburb/lat-phrao",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Ajarn.com",
+    "family": "ajarn"
+   }
+  },
+  {
+   "id": "src_50156cb37107",
+   "url": "https://www.soidb.com/bangkok/market/market-ladprao1.html",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SoiDB Thailand",
+    "family": "soidb"
+   }
+  },
+  {
+   "id": "src_6df5e14a90ca",
+   "url": "https://en.wikipedia.org/w/api.php?action=query&titles=Ha%20Yaek%20Lat%20Phrao%20BTS%20station%7CPhahon%20Yothin%20MRT%20station%7CChatuchak%20Park%7CQueen%20Sirikit%20Park%7CRot%20Fai%20Park%7CSomdet%20Ya%20Park%7CLat%20Phrao%20district&prop=coordinates&format=json",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (MediaWiki API)",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_33ea6021fcb1",
+   "url": "https://www.centralpattana.co.th/en/our-business/shopping-center/1351/the-central",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Central Pattana plc (CPN)",
+    "family": "central_group"
+   }
+  },
+  {
+   "id": "src_cb3e209153d1",
+   "url": "https://www.facebook.com/fm91trafficpro",
+   "body_read": false,
+   "attribution": {
+    "publisher": "FM91 Trafficpro (traffic radio)",
+    "family": "fm91"
+   }
+  }
+ ]
+}

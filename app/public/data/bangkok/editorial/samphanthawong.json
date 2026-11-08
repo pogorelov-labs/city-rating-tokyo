@@ -1,0 +1,581 @@
+{
+ "key": "samphanthawong",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Samphanthawong is the 1.42 km2 khet that contains the core of Bangkok's Chinatown: Yaowarat Road, the Sampeng wholesale lane, the Song Wat riverside strip and three khwaeng of shophouses that have traded since the 1782 Sampheng settlement. It is the city's smallest and least populous district yet among its densest, and the app's #1 rank rides on that commerce - hundreds of food venues, boat piers, three MRT exits and 130-plus gold shops packed inside walking distance. Living here is a different proposition from eating here: housing is mostly shophouse floors above working shops, the nearest real park is across the boundary in Phra Nakhon, and the district's defining street turns, by its own guide's account, uncomfortable at midday and loudest after dark. Rent data is thin - a 16-listing asking-rent sample puts older in-khet 1-beds around 12,000-17,000 THB - consistent with the app's 14,000 estimate but far from statistical proof.",
+   "claims": [
+    "samphanthawong-c03",
+    "samphanthawong-c04",
+    "samphanthawong-c06",
+    "samphanthawong-c07",
+    "samphanthawong-c08",
+    "samphanthawong-c10",
+    "samphanthawong-c11",
+    "samphanthawong-c12",
+    "samphanthawong-c13",
+    "samphanthawong-c14",
+    "samphanthawong-c15",
+    "samphanthawong-c16",
+    "samphanthawong-c17",
+    "samphanthawong-c18"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Errands and meals are walkable to an unusual degree: the MRT operator lists Yaowarat, Phadung Dao, the Old Market and the Itsaranuphap market lane as Exit 1-2 destinations, and the orange-flag commuter boats leave from Ratchawong pier at the foot of the district.",
+     "claims": [
+      "samphanthawong-c04",
+      "samphanthawong-c06"
+     ]
+    },
+    {
+     "en": "The food economy is a working system, not just a dinner strip - morning dim sum and market trade upstairs-and-downstairs in the same lanes that wholesale into the night street.",
+     "claims": [
+      "samphanthawong-c07",
+      "samphanthawong-c10"
+     ]
+    },
+    {
+     "en": "Older in-khet stock rents cheap for central Bangkok: verified asking prices of 12,000-17,000 THB for studios and 1-beds in Talat Noi condos line up with the app's 14,000 estimate.",
+     "claims": [
+      "samphanthawong-c16"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "There is effectively no park inside the khet; the nearest sizeable green space, 4.5-hectare Rommaninat, sits across the boundary in Phra Nakhon near Sam Yot MRT.",
+     "claims": [
+      "samphanthawong-c18"
+     ]
+    },
+    {
+     "en": "Residential life rides on precarious ground: the century-old Charoen Chai community was already facing monthly-lease eviction pressure in 2016 as metro-driven land values rose, and the district's heritage protection covered just 26 buildings by that count.",
+     "claims": [
+      "samphanthawong-c13"
+     ]
+    },
+    {
+     "en": "The river edge, not the market core, is the flood-exposed part - in 2011 tide-driven water reached Chinatown and receded within hours while the commercial drag stayed largely dry.",
+     "claims": [
+      "samphanthawong-c14"
+     ]
+    },
+    {
+     "en": "The street-food economy that anchors the district's scores is under active citywide policy pressure: a May 2026 vendor crackdown is relocating kerbside sellers in packed commercial districts.",
+     "claims": [
+      "samphanthawong-c17"
+     ]
+    },
+    {
+     "en": "Even after the 2024 peony-tile sidewalk rebuild, residents were complaining about uneven pavements and hazards from street furniture, vendors and motorbikes.",
+     "claims": [
+      "samphanthawong-c11"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Before 9am the Sampeng wholesale lane is described as workable only for restocking merchants and early dim-sum buyers; by mid-afternoon vendors are icing seafood on Yaowarat; around 21:00 the main road is 'at full volume' and it thins from about 22:30.",
+     "claims": [
+      "samphanthawong-c07"
+     ]
+    },
+    {
+     "en": "Festival nights rewrite the schedule entirely: ahead of Lunar New Year 2025 the road was packed enough that visitors warned each other to carry water, and the festival ran nightly to 9 February.",
+     "claims": [
+      "samphanthawong-c15"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Song Wat is the district's quieter riverside face - spice wholesalers and family shops trading beside the cafes and galleries that joined a Made in Song Wat collective that grew from 10 businesses in 2022 to over 60 - while Yaowarat's frontage carries the noise and crowds.",
+     "claims": [
+      "samphanthawong-c12",
+      "samphanthawong-c07"
+     ]
+    },
+    {
+     "en": "Parts of the 'Chinatown' experience are not in the khet at all: the Soi Nana bar strip sits in Pom Prap Sattru Phai, the temple the MRT station is named for lies just outside the boundary, and the priciest nearby 'Chinatown' condo rental found (30,000 THB) is across the line too.",
+     "claims": [
+      "samphanthawong-c03",
+      "samphanthawong-c04",
+      "samphanthawong-c16"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Fits people whose week runs on foot - food-trade workers, market-dependent households, anyone who wants a cheap in-khet room above working commerce with boats and two MRT stations at the edges.",
+     "claims": [
+      "samphanthawong-c04",
+      "samphanthawong-c06",
+      "samphanthawong-c08",
+      "samphanthawong-c16"
+     ]
+    },
+    {
+     "en": "Poor fit for households that need parkland, quiet evenings near the main road, a car, or a large modern flat - the stock is shophouse-dominated, the green space is across the canal, and the loudest hours are exactly when the district earns its food reputation.",
+     "claims": [
+      "samphanthawong-c07",
+      "samphanthawong-c08",
+      "samphanthawong-c18"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "No district-level crime statistics were found in body-readable sources; the app's safety 6 could not be independently corroborated or contradicted.",
+   "The current status of the Charoen Chai community after 2016 is unknown; eviction outcomes were not found.",
+   "Rent evidence is a 16-listing asking-price sample from one portal, condos only; shophouse and walk-up apartment rents (likely the modal housing) were not verifiable in this pass.",
+   "Whether Yaowarat Road currently runs any recurring full-road walking-street closure (2024-2026) could not be pinned to a body-read source; the documented Fri-Sun pilot dates to Dec 2019.",
+   "The reported 2026 cancellation of the CNY street festival (royal mourning) is snippet-only and unverified.",
+   "The app's 6 piers could not be fully reconciled - Ratchawong, River City and Si Phraya are documented; a Marine Department pier near Talat Noi appears only in snippets.",
+   "Phadung Dao canal alignment/status and the Khlong Ong Ang walkway condition were not verified; 'green 8' mechanisms remain inference."
+  ],
+  "attribution_required": [
+   "samphanthawong-c01",
+   "samphanthawong-c03",
+   "samphanthawong-c05",
+   "samphanthawong-c06",
+   "samphanthawong-c07",
+   "samphanthawong-c08",
+   "samphanthawong-c09",
+   "samphanthawong-c10",
+   "samphanthawong-c11",
+   "samphanthawong-c12",
+   "samphanthawong-c13",
+   "samphanthawong-c14",
+   "samphanthawong-c15",
+   "samphanthawong-c16",
+   "samphanthawong-c17",
+   "samphanthawong-c18"
+  ]
+ },
+ "claims": [
+  {
+   "id": "samphanthawong-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "Dec 2023 registered population",
+    "recheck": null
+   },
+   "limitations": [
+    "Registered population understates daytime crowds massively",
+    "infobox and table use different base years"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1782",
+    "observed": "1782-1892 road construction (SAC: commissioned 1891-1892, ~8 years)",
+    "recheck": null
+   },
+   "limitations": [
+    "Exact founding-year details vary slightly between the two sources"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c03",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current",
+    "recheck": null
+   },
+   "limitations": [
+    "Soi Nana district attribution rests on Wikipedia category tags, not prose",
+    "confirms the app's note that the bar strip is outside the khet"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2019-07-29",
+    "observed": "operating as of retrieval",
+    "recheck": null
+   },
+   "limitations": [
+    "Operator lists include cross-boundary walkable destinations (e.g. BMA hospital) without flagging which district they are in",
+    "hospital status of 'Kwong Siew Foundation Hospital' and 'BMA hospital' entries not independently verified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c05",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-01-19",
+    "observed": "2023-2026",
+    "recheck": "2027-01-01"
+   },
+   "limitations": [
+    "Station-to-khet walking distance not stated in source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c06",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current schedule as described by Travelfish (undated page)",
+    "recheck": null
+   },
+   "limitations": [
+    "Marine Department pier (near Talat Noi) appears only in search snippets, not body-verified",
+    "app's count of 6 piers not independently confirmed"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c07",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide as retrieved 2026 (undated)",
+    "recheck": null
+   },
+   "limitations": [
+    "Commercial tourism publisher (luggage company) - promotional enthusiasm; treat exact times as a guide's approximation, not measured data",
+    "no weekday/weekend distinction given for the street itself"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c08",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "undated community profile (post-2010s)",
+    "recheck": null
+   },
+   "limitations": [
+    "Undated profile; no unit counts",
+    "does not quantify how much floorspace is residential vs commercial"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "as of undated SAC profile",
+    "recheck": null
+   },
+   "limitations": [
+    "Single-source observation without dates or counts"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "as of undated SAC profile",
+    "recheck": null
+   },
+   "limitations": [
+    "Figures unsourced within the community page"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c11",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-07-03",
+    "observed": "announced July 2024",
+    "recheck": "2027-07-01"
+   },
+   "limitations": [
+    "Tourism-frame article; seven-road scope only from snippets",
+    "no before/after pedestrian-safety data"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c12",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "collective 2022 to guide publication (undated, retrieved 2026)",
+    "recheck": "2027-11-01"
+   },
+   "limitations": [
+    "Time Out is a listings-led publisher; named venues may be promotional picks",
+    "gentrification pressure on existing trade not analysed by the source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c13",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2016-05-04",
+    "observed": "as reported 2016",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Ten years old - current status unknown",
+    "does not confirm whether evictions ultimately occurred"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c14",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2011-10-27",
+    "observed": "Oct 2011 event",
+    "recheck": null
+   },
+   "limitations": [
+    "Single 2011 event; no depth figures for the district; current drainage status unknown"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c15",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-01-29",
+    "observed": "festival to 2025-02-09",
+    "recheck": null
+   },
+   "limitations": [
+    "No visitor counts in body",
+    "annual event; 2026 pattern unverified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c16",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "live listings retrieved 2026-11-05",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Tiny sample (16 listings), condos only, asking rents, no time-on-market data",
+    "shophouse/apartment rent segment not captured (FazWaz snippet showed shophouses from ~35,000 - not body-read)",
+    "commercial property portal"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c17",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2026-05-03",
+    "observed": "reported May 2026, ongoing",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Paywalled beyond the lede",
+    "district-specific enforcement details not verifiable in this pass"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "samphanthawong-c18",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current",
+    "recheck": null
+   },
+   "limitations": [
+    "No measured walking distance from the khet boundary (roughly one MRT stop or a 10-20 min walk by map, unverified)",
+    "in-district greenery claim relies on absence of coverage in sources plus app data"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_49e0ab85d8a2",
+   "url": "https://en.wikipedia.org/wiki/Samphanthawong_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_6a81746cd492",
+   "url": "https://en.wikipedia.org/wiki/Wat_Mangkon_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_16e9d620d61b",
+   "url": "https://metro.bemplc.co.th/Line-Maps?Line=1&Station=29&lang=en",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Expressway and Metro PLC (BEM)",
+    "family": "BEM (official operator)"
+   }
+  },
+  {
+   "id": "src_560570f882de",
+   "url": "https://en.wikipedia.org/wiki/Hua_Lamphong_railway_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_83aca51fc800",
+   "url": "https://www.travelfish.org/transport_detail/thailand/bangkok_and_surrounds/bangkok/bangkok/57",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Travelfish",
+    "family": "Travelfish (independent travel publisher)"
+   }
+  },
+  {
+   "id": "src_fdecbd7de460",
+   "url": "https://www.nationthailand.com/news/general/40039347",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation Thailand",
+    "family": "Nation Group"
+   }
+  },
+  {
+   "id": "src_96c7dcbf272c",
+   "url": "https://www.nationthailand.com/thailand/bangkok/40045626",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation Thailand",
+    "family": "Nation Group"
+   }
+  },
+  {
+   "id": "src_de4672674f51",
+   "url": "https://www.straitstimes.com/asia/se-asia/developers-zero-in-on-bangkoks-historic-chinatown",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Straits Times",
+    "family": "Straits Times (SPH Media); AFP wire copy"
+   }
+  },
+  {
+   "id": "src_6a5840476c0c",
+   "url": "https://www.cnn.com/2011/10/27/world/asia/thailand-flood",
+   "body_read": true,
+   "attribution": {
+    "publisher": "CNN",
+    "family": "CNN (Warner Bros. Discovery)"
+   }
+  },
+  {
+   "id": "src_461e8d4de13f",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/samphanthawong",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat (property portal)"
+   }
+  },
+  {
+   "id": "src_a00a17e264d4",
+   "url": "https://www.airportels.asia/destinations-in-thailand/yaowarat-bangkok-chinatown-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "AIRPORTELs",
+    "family": "AIRPORTELs (luggage-delivery company content)"
+   }
+  },
+  {
+   "id": "src_efdea81fb162",
+   "url": "https://en.wikipedia.org/wiki/Soi_Nana_(Chinatown)",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_de089c27dc46",
+   "url": "https://www.timeout.com/bangkok/attractions/your-ultimate-guide-to-song-wat-road",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out Group"
+   }
+  },
+  {
+   "id": "src_aa636fd17c13",
+   "url": "https://wikicommunity.sac.or.th/community/2065",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Princess Maha Chakri Sirindhorn Anthropology Centre (SAC)",
+    "family": "SAC (Thai public anthropology institute)"
+   }
+  },
+  {
+   "id": "src_f3fbd53250ec",
+   "url": "https://en.wikipedia.org/wiki/Rommaninat_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_f8408ca07a27",
+   "url": "https://www.scmp.com/news/asia/southeast-asia/article/3352255/bangkoks-beloved-street-food-culture-risk-vendor-crackdown-widens",
+   "body_read": true,
+   "attribution": {
+    "publisher": "South China Morning Post",
+    "family": "SCMP (Alibaba-owned); AFP wire copy"
+   }
+  },
+  {
+   "id": "src_224254de4a77",
+   "url": "https://en.wikipedia.org/wiki/King_Chulalongkorn_Memorial_Hospital",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  }
+ ]
+}

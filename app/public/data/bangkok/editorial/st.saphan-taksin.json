@@ -1,0 +1,576 @@
+{
+ "key": "st.saphan-taksin",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Saphan Taksin is Bangkok's river-rail hinge: BTS Silom Line S6 stands on a single track between Taksin Bridge's carriageways, and directly beneath it Sathorn Pier funnels weekday commuter boats from Nonthaburi and Pakkret into the station staircase. The 2022 Smart Pier rebuild formalised the boat-rail link, but the promised double-track expansion - about one billion baht and 40 months on paper - still had not started as of August 2026, leaving the unit's core amenity carrying a known capacity bottleneck. Around the ramps, Charoen Krung's block of century-old street-food houses and a vacant-lot history sits one block from the 247 m rooftops of State Tower, with the derelict Sathorn Unique tower looming over the southern frontage. Green space is the thinnest part of the story: only small under-bridge pocket parks are verifiable inside the catchment, and the app's 5.2 ha park claim matches no named public park in public sources.",
+   "claims": [
+    "saphan-taksin-c02",
+    "saphan-taksin-c03",
+    "saphan-taksin-c04",
+    "saphan-taksin-c05",
+    "saphan-taksin-c06",
+    "saphan-taksin-c07",
+    "saphan-taksin-c08",
+    "saphan-taksin-c09",
+    "saphan-taksin-c10",
+    "saphan-taksin-c11",
+    "saphan-taksin-c12",
+    "saphan-taksin-c13",
+    "saphan-taksin-c14",
+    "saphan-taksin-c15",
+    "saphan-taksin-c16"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "The interchange is genuinely stacked, not adjacent: commuter boat lines terminate at Sathorn Pier directly below the platform, with Mine Smart Ferry, a cross-river ferry and ICONSIAM shuttles in the same pier complex - a staircase, not a street crossing, between boat and train.",
+     "claims": [
+      "saphan-taksin-c02",
+      "saphan-taksin-c03"
+     ]
+    },
+    {
+     "en": "The pier was upgraded rather than merely maintained: 1,364 sqm of works, five boarding floats (two more planned) and accessibility provisions completed March 2022, opened 8 June 2022 as part of a 29-pier river program.",
+     "claims": [
+      "saphan-taksin-c04"
+     ]
+    },
+    {
+     "en": "Food runs deep and cheap: a 2015 guide documents century-old Prachak roast duck, rival fish-ball stalls, an 80-year-old dessert shop and a fried-oyster cart within a short stretch of Charoen Krung south of the station, open daily from early morning into the evening.",
+     "claims": [
+      "saphan-taksin-c10",
+      "saphan-taksin-c16"
+     ]
+    },
+    {
+     "en": "The high end has a fixed address: State Tower's Dome complex (Sky Bar at 247 m, walk-in bars, river-view NYE programming) anchors the unit's nightlife without depending on scattered venues.",
+     "claims": [
+      "saphan-taksin-c08",
+      "saphan-taksin-c09"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The station is the line's bottleneck: its single track restricts capacity on the entire Silom Line, and the double-track rebuild (order placed 2017; ~1B THB, ~40 months) had still not begun by August 2026 - a live risk that this unit's core amenity could close for over three years with little notice.",
+     "claims": [
+      "saphan-taksin-c05"
+     ]
+    },
+    {
+     "en": "Volumes outrun the infrastructure: ~15,236 pier users/day (2022), over 1.59 million station riders in a COVID-suppressed 2021, and rush-hour congestion flagged on Sathorn Road - the app's crowd score of 2 has a factual basis even if the figures are dated.",
+     "claims": [
+      "saphan-taksin-c14"
+     ]
+    },
+    {
+     "en": "Rent transparency is poor at exactly this station: no portal publishes a Saphan Taksin aggregate, district indexes are softening (-5.8% since January 2026), and all figures are asking rents - so the app's 24,000/52,500 references should be treated as directional.",
+     "claims": [
+      "saphan-taksin-c12"
+     ]
+    },
+    {
+     "en": "Park access is the weak dimension: only small under-bridge pocket parks are verifiable inside the catchment (one carries a score with zero reviews), while every sizeable green found sits beyond 800 m or across the river.",
+     "claims": [
+      "saphan-taksin-c13"
+     ]
+    },
+    {
+     "en": "The ghost tower is not just scenery: Sathorn Unique carries a 2014 death, 2015 trespassing charges and 2025 reports of paid-guard access, a standing safety and image cost for the blocks it shadows.",
+     "claims": [
+      "saphan-taksin-c07"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Weekday mornings and evenings are the commuter crush: Mon-Fri boat lines (Yellow, Green-Yellow, Red) feed the single-platform station while tourists queue separately for the all-day services.",
+     "claims": [
+      "saphan-taksin-c03",
+      "saphan-taksin-c14"
+     ]
+    },
+    {
+     "en": "Daytime belongs to the river: tourist boats and ICONSIAM shuttles turn the pier plaza into a boarding zone, while the Charoen Krung food houses keep morning-to-evening hours on the next block.",
+     "claims": [
+      "saphan-taksin-c03",
+      "saphan-taksin-c10",
+      "saphan-taksin-c15"
+     ]
+    },
+    {
+     "en": "After dark the unit splits in two: the 247 m rooftops of State Tower run walk-in bars with a dress code above, while the street-level evening offer winds down with the food stalls and the lit-up shell of the abandoned tower next door.",
+     "claims": [
+      "saphan-taksin-c09",
+      "saphan-taksin-c10",
+      "saphan-taksin-c07"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The pier plaza and station stairs are the loud core; the under-bridge pocket park a few steps away is the quiet pole - but its quality is unverified (a listing score with zero reviews), so 'quiet' here means small and unvetted, not proven pleasant.",
+     "claims": [
+      "saphan-taksin-c02",
+      "saphan-taksin-c13"
+     ]
+    },
+    {
+     "en": "Charoen Krung's southern blocks carry the area's working past: a documented stretch of commercial vacancy (20% in 2013) sits within sight of State Tower's serviced towers, making the unit's frontage visibly uneven rather than uniformly gentrified.",
+     "claims": [
+      "saphan-taksin-c11",
+      "saphan-taksin-c08"
+     ]
+    },
+    {
+     "en": "The Sathorn Unique tower (Sois 51-53, opposite Wat Yannawa) marks where the food street's low-rise fabric meets derelict high-rise; the State Tower end of the corridor is polished hotel territory instead.",
+     "claims": [
+      "saphan-taksin-c06",
+      "saphan-taksin-c10"
+     ]
+    },
+    {
+     "en": "Rent varies with distance from the interchange, but no station-level aggregate exists: district averages blend Chong Nonsi towers with pier-area stock, so block-level asking prices (e.g. riverside listings at 85,000+ THB on the opposite bank) say more than the published indexes.",
+     "claims": [
+      "saphan-taksin-c12"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Strong fit for river commuters: anyone working along the Chao Phraya piers or needing boat+train in one stop benefits from the stacked interchange more than from any other feature of the unit.",
+     "claims": [
+      "saphan-taksin-c03",
+      "saphan-taksin-c04"
+     ]
+    },
+    {
+     "en": "Workable for hospitality workers and river-view seekers: the food street's cheap meals and the hotel-district rooftops sit in the same 800 m, at the cost of pier-crowd flows between them.",
+     "claims": [
+      "saphan-taksin-c10",
+      "saphan-taksin-c09",
+      "saphan-taksin-c14"
+     ]
+    },
+    {
+     "en": "Poor fit for park-dependent households: with no verifiable sizeable park inside the catchment and full-service healthcare ~2.2 km away, families anchored to green space or clinics should look elsewhere.",
+     "claims": [
+      "saphan-taksin-c13",
+      "saphan-taksin-c16"
+     ]
+    },
+    {
+     "en": "Poor fit for disruption-averse commuters until the rebuild question settles: if the 40-month double-track works start, the unit's defining amenity closes; as of the latest check it had not, but nothing prevents a start date appearing.",
+     "claims": [
+      "saphan-taksin-c05"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "The app's 5.2 ha park parcel is unidentifiable from citable sources; if it maps to the west-bank forest park, it is across the river and outside the unit (brief lead 1 unresolved by design).",
+   "Crowd and ridership evidence is 2021-2022 vintage and partly COVID-suppressed; current magnitudes are likely higher but unmeasured in this pass.",
+   "Rent comparisons use district-level asking indexes in USD with no on-page exchange rate; the 2-bed comparison is rate-sensitive and no signed-lease data was found.",
+   "The station rebuild (1B THB / 40 months) has no announced start; its timing is the single largest transport risk to recheck.",
+   "Sidewalk and crossing quality at the Charoen Krung/Sathorn intersection, groceries, gyms and clinics inside the catchment were not sourced this pass.",
+   "The BK food guide is from 2015; venue survival and hours need a refresh before being quoted as current."
+  ],
+  "attribution_required": [
+   "saphan-taksin-c01",
+   "saphan-taksin-c02",
+   "saphan-taksin-c06",
+   "saphan-taksin-c08",
+   "saphan-taksin-c09",
+   "saphan-taksin-c10",
+   "saphan-taksin-c11",
+   "saphan-taksin-c15",
+   "saphan-taksin-c17"
+  ]
+ },
+ "claims": [
+  {
+   "id": "saphan-taksin-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1999-12-05",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the single-track layout restricts capacity on the whole line (handled in saphan-taksin-c05)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2026 fare/service listing",
+    "recheck": "2027-05-31"
+   },
+   "limitations": [
+    "commuter lines are listed Monday-Friday; weekend pattern is only implied by the Mon-Sun banner and not detailed on the readable page",
+    "ferry lines were cited as 'the first rapid-transit station with river interchange' (Wikipedia) - an encyclopedic characterization, not an operator claim"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2022-06-08",
+    "observed": "2022 usage statistic",
+    "recheck": null
+   },
+   "limitations": [
+    "budget and ridership-projection figures are program-level government statements, not audited outcomes",
+    "15,236/day is a pre-upgrade 2022 statistic quoted at the opening ceremony"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2017-2026 policy record",
+    "recheck": "2027-12-31"
+   },
+   "limitations": [
+    "no post-2017 primary announcement opened confirming a formal go/no-go; 'not begun' rests on the Wikipedia revision dated 2026-08-23",
+    "the 40-month closure would hit the unit's core amenity; timing risk is unresolved"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c06",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1997-01-01",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "completion percentage varies by source section (80-90%)",
+    "tower's exact polygon membership pending coordinator check"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-03-28",
+    "observed": "status checked through Oct 2026 encyclopedia revision",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "brief lead 2 said 'rebuild cancelled' - sources only support 'on hold, no plans announced', which is weaker and less final",
+    "access incidents are historical (2014-2015) except the 2025 paid-access report",
+    "no 2024-2026 owner statement found"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c08",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2026 (blog/NYE dates on page)",
+    "recheck": null
+   },
+   "limitations": [
+    "tower height/height-in-rank claims not cross-checked; page is promotional",
+    "inside/outside determination is the app's own description, not an independent source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2026",
+    "recheck": null
+   },
+   "limitations": [
+    "operator marketing; no independent quality or price verification",
+    "rooftop prices were not stated on the page"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c10",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2015 guide snapshot",
+    "recheck": "2027-11-08"
+   },
+   "limitations": [
+    "guide opinion from 2015 - not a verified 2024-2026 state of the scene",
+    "Michelin's Charoen Krung article and Time Out guides could not be opened (404/empty) to corroborate current venues"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c11",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1864-03-16",
+    "observed": "vacancy statistic dated 2013",
+    "recheck": null
+   },
+   "limitations": [
+    "vacancy figure is a 2013 statistic and may be stale; no newer corridor-level vacancy data found in this pass",
+    "counter-view: this source tempers creative-district marketing narratives about the area"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c12",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "HipFlat index Oct 2026; PropertyScout guide updated 2025-04-30",
+    "recheck": "2027-05-31"
+   },
+   "limitations": [
+    "asking rents only; no signed-lease data found in this pass",
+    "USD figures were not converted on-page; the 1-bed comparison direction holds across plausible 2025-2026 USD/THB rates, while the 2-bed comparison is rate-sensitive (near-average either way)",
+    "brief lead 4 verified in spirit: the PropertyScout aggregate the app could be checked against does not exist at station level"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c13",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "searches 2026-11-08",
+    "recheck": "2027-05-31"
+   },
+   "limitations": [
+    "decomposition of brief lead 1: the 5.2 ha is unidentifiable from citable sources; a west-bank forest park (สวนป่าเฉลิมพระเกียรติสะพานตากสิน) surfaced only in non-citable snippets and sits on the opposite bank in any case",
+    "park quality is unverifiable (zero reviews); absence of a verifiable park does not equal absence of greenery - street trees and riverside planting were not separately sourced",
+    "search-summary text about the parks was treated as discovery only and never cited"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c14",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2021-2022 volume figures",
+    "recheck": "2027-05-31"
+   },
+   "limitations": [
+    "no experiential crowd source (reviews/forum) could be opened; perception claim not separately evidenced",
+    "ridership figure is a suppressed-COVID year; direction of the inference (busy hub) is robust but magnitude is not current"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c15",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "shuttle frequency/fare and free-vs-paid status not verified from the operator page this pass",
+    "ICONSIAM polygon membership expected outside - coordinator check pending"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c16",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "2.2 km is a straight-line computation from two Wikipedia coordinate pairs, not a walked or routed distance",
+    "no clinic/pharmacy or grocery source at catchment level was opened; gym/fitness provision likewise unsourced this pass"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-taksin-c17",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2026-10-06",
+    "observed": null,
+    "recheck": "2027-02-28"
+   },
+   "limitations": [
+    "banner graphic not machine-readable; only the effective date and the N1 closure were extractable",
+    "no news article on the N1 renovation opened"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_11f831e4787f",
+   "url": "https://en.wikipedia.org/wiki/Saphan_Taksin_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_ea832e84a6db",
+   "url": "https://en.wikipedia.org/wiki/Sathorn_Unique_Tower",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_be087b06599e",
+   "url": "https://en.wikipedia.org/wiki/Charoen_Krung_Road",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_a2abe00b7c8b",
+   "url": "https://en.wikipedia.org/wiki/BNH_Hospital",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_ca2627292abc",
+   "url": "https://www.chaophrayaexpressboat.com/chaophrayaexpressboat?lang=en",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Chao Phraya Express Boat Co.",
+    "family": "chaophraya-express-boat"
+   }
+  },
+  {
+   "id": "src_97d2d8e75b1f",
+   "url": "https://lebua.com/restaurants/sky",
+   "body_read": true,
+   "attribution": {
+    "publisher": "lebua Hotels & Resorts",
+    "family": "lebua"
+   }
+  },
+  {
+   "id": "src_771fa8d8650f",
+   "url": "https://propertyscout.co.th/en/location-guides/sathorn-neighborhood-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyScout",
+    "family": "propertyscout"
+   }
+  },
+  {
+   "id": "src_61fdbe70837a",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/sathon",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "hipflat"
+   }
+  },
+  {
+   "id": "src_a070c36fdd51",
+   "url": "https://mgronline.com/business/detail/9600000113241",
+   "body_read": true,
+   "attribution": {
+    "publisher": "MGR Online (Manager Media Group)",
+    "family": "mgr-online"
+   }
+  },
+  {
+   "id": "src_6859b0442cce",
+   "url": "https://www.thailandplus.tv/archives/548927",
+   "body_read": true,
+   "attribution": {
+    "publisher": "ThailandPlus.tv",
+    "family": "thailandplus"
+   }
+  },
+  {
+   "id": "src_8be1d67ffbda",
+   "url": "https://www.thebangkokinsight.com/news/business/economics/883716",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Bangkok Insight",
+    "family": "bangkokinsight"
+   }
+  },
+  {
+   "id": "src_c303df59b16a",
+   "url": "https://e.vnexpress.net/news/travel/places/49-storey-ghost-tower-in-bangkok-goes-viral-after-surviving-powerful-earthquake-4869103.html",
+   "body_read": true,
+   "attribution": {
+    "publisher": "VnExpress International",
+    "family": "vnexpress"
+   }
+  },
+  {
+   "id": "src_3cb9dbda2976",
+   "url": "https://www.bkmagazine.com/food/street-food/restaurants-article-chow-down-charoenkrung",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BK Magazine",
+    "family": "bk-magazine"
+   }
+  },
+  {
+   "id": "src_2e40b5753247",
+   "url": "https://us.trip.com/travel-guide/attraction/bangkok/saphan-taksin-public-park-137366945",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Trip.com",
+    "family": "trip-com"
+   }
+  }
+ ]
+}

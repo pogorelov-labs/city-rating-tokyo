@@ -1,0 +1,365 @@
+{
+ "key": "st.ratchadamri",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Ratchadamri is the quiet half of Pathum Wan's headline scores: the same 9-10s for transport, gym and green as its neighbors, but with a fifth of their food stock - because this is club land, hotel land and condo land, not mall land. Its two green masses tell the unit's real story: a racecourse you can enter a dozen Sundays a year, and a park that starts a few hundred meters from the platform.",
+   "claims": [
+    "ratchadamri-c01",
+    "ratchadamri-c03",
+    "ratchadamri-c04",
+    "ratchadamri-c07"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Green adjacency with genuine scale: Lumphini Park's west edge (57.6 ha total, 04:30-22:00) opens a few hundred meters from the station, and the RBSC's 36.3 ha of turf define the streetscape even when its gates are closed.",
+     "claims": [
+      "ratchadamri-c04",
+      "ratchadamri-c03"
+     ]
+    },
+    {
+     "en": "Quiet luxury infrastructure: S1 station with a concourse skyway to the St Regis, the 354-room Anantara Siam at street level, and One Bangkok's phased opening pushing the district's luxury center to the unit's edge.",
+     "claims": [
+      "ratchadamri-c01",
+      "ratchadamri-c02",
+      "ratchadamri-c06"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The green=10 headline overstates usable green: the RBSC admits the public only on alternate-Sunday race days, and Lumphini's verified in-unit share is a clipped fraction - the park you can actually use is smaller than the score implies.",
+     "claims": [
+      "ratchadamri-c05",
+      "ratchadamri-c04"
+     ]
+    },
+    {
+     "en": "Food and nightlife run at a quarter to a fifth of Siam's density (160/25/17 vs 676/98/36): everyday eating means hotel prices or a walk to the seam with Ratchaprasong.",
+     "claims": [
+      "ratchadamri-c07"
+     ]
+    },
+    {
+     "en": "The 38,000/85,000 rent blend understates the strip: district 2-bed asks average 99,600 and specific Ratchadamri buildings list far higher - the number is a district average, not this street's market.",
+     "claims": [
+      "ratchadamri-c08"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Dawn starts at Lumphini's 04:30 gate with the jogging crowd; weekdays hum quietly on hotel and office schedules; alternate Sundays bring race-day crowds to the Henri Dunant corner; after dark the unit reverts to residential-hotel quiet, one skywalk away from Ratchaprasong's lights.",
+     "claims": [
+      "ratchadamri-c11",
+      "ratchadamri-c03",
+      "ratchadamri-c04"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Three bands: the Ratchaprasong seam at the north (skywalks, mall spillover, CentralWorld's edge), the hotel-club middle (St Regis, Anantara, RBSC fencing), and the Rama IV approach at the south where One Bangkok's hoardings and new plazas are actively rewriting the streetscape.",
+     "claims": [
+      "ratchadamri-c01",
+      "ratchadamri-c03",
+      "ratchadamri-c06"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Fit for quiet-luxury renters, runners and race-day regulars who want park access and hotel services without Siam's crowds - and who are comfortable with the district-blend rent number understating their actual building.",
+     "claims": [
+      "ratchadamri-c11",
+      "ratchadamri-c04",
+      "ratchadamri-c08"
+     ]
+    },
+    {
+     "en": "Poor fit for budget diners and nightlife-first residents: the in-unit food layer is thin, the best green is partly private, and the quiet is the product being sold.",
+     "claims": [
+      "ratchadamri-c07",
+      "ratchadamri-c05"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "8.0 ha park figure assumed to be the Lumphini west-edge clip - polygon verification pending (ratchadamri-c04).",
+   "One Bangkok membership: site edge ~790-960 m from the unit center, mostly outside with a possible NW-tip graze (ratchadamri-c06).",
+   "Anantara Siam 2024-2026 renovation cost/scope is snippet-level only (ratchadamri-c12).",
+   "Quieter-nights characterization is inference anchored on crowd=3, not a measurement (ratchadamri-c11).",
+   "Dispatch brief's '@13.7339' coordinate contradicts batch.json/Wikipedia (13.73947); app data internally consistent."
+  ],
+  "attribution_required": [
+   "ratchadamri-c02",
+   "ratchadamri-c03",
+   "ratchadamri-c07",
+   "ratchadamri-c08",
+   "ratchadamri-c09"
+  ]
+ },
+ "claims": [
+  {
+   "id": "ratchadamri-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1999-12-05",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2015-03-01 (rebrand)",
+    "observed": "1978-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Dispatch's implied 2024 rebrand was wrong - the 2024-2026 event is a renovation (snippet-level only)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c03",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1901 (founding)",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Land value and fee figures are 'reportedly' claims"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c04",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": "1925 (created)",
+    "observed": "OSM snapshot 2026-11-07",
+    "recheck": null
+   },
+   "limitations": [
+    "The 8.0 ha = Lumphini-clip equation is inference; polygon verification pending",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c05",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Inference tying score mechanism to access policy; app does not expose its green-access weighting",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-03-18; 2024-10-25",
+    "observed": "2024-2031 build-out",
+    "recheck": "2027"
+   },
+   "limitations": [
+    "Straight-line edge distances are the researcher's computation from OSM geometry, not an app polygon result"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c07",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "app snapshot 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Mechanism is inference; no in-unit food-business census independently performed",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c08",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "app 2026-09 blend vs live FazWaz 2026-11",
+    "recheck": null
+   },
+   "limitations": [
+    "Snippet-level penthouse datum; asking rents",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri); Snippets: Anantara Siam 2024-2026 renovation; Ratchadamri penthouse at 500,000/month"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c09",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "app snapshot 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "No independent temple census in this pass",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c10",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026 construction period",
+    "recheck": null
+   },
+   "limitations": [
+    "No footway-width or crossing-audit source; hoarding observation is reported-level",
+    "app-data anchor (not a web source): Snippets: Anantara Siam 2024-2026 renovation; Ratchadamri penthouse at 500,000/month"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c11",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "recurring 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Quieter-night characterization is inference",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.ratchadamri)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "ratchadamri-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-03-18; 2024-10-25",
+    "observed": "2024-2026",
+    "recheck": "2027"
+   },
+   "limitations": [
+    "Renovation cost and scope are snippet-level; not corroborated at body level",
+    "app-data anchor (not a web source): Snippets: Anantara Siam 2024-2026 renovation; Ratchadamri penthouse at 500,000/month"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_11e7736e1c10",
+   "url": "https://en.wikipedia.org/wiki/Ratchadamri_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_f92ac4c6141c",
+   "url": "https://en.wikipedia.org/wiki/Royal_Bangkok_Sports_Club",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_76f044a3f831",
+   "url": "https://en.wikipedia.org/wiki/Anantara_Siam_Bangkok_Hotel",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_4f56f5ecff20",
+   "url": "https://en.wikipedia.org/wiki/One_Bangkok",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap contributors via Overpass API",
+    "family": "OpenStreetMap"
+   }
+  },
+  {
+   "id": "src_6d7ad5e97ec4",
+   "url": "https://thestandard.co/one-bangkok-the-heart-of-bangkok-2",
+   "body_read": true,
+   "attribution": {
+    "publisher": "THE STANDARD",
+    "family": "the_standard"
+   }
+  },
+  {
+   "id": "src_b38dcba39aeb",
+   "url": "https://www.onebangkok.com/en/press-media/one-bangkok-officially-opens-welcoming-the-world-to-bangkok",
+   "body_read": true,
+   "attribution": {
+    "publisher": "One Bangkok (Frasers Property / TCC Assets)",
+    "family": "onebangkok_developer"
+   }
+  },
+  {
+   "id": "src_571a6b283ae6",
+   "url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/pathum-wan",
+   "body_read": true,
+   "attribution": {
+    "publisher": "FazWaz",
+    "family": "fazwaz"
+   }
+  }
+ ]
+}

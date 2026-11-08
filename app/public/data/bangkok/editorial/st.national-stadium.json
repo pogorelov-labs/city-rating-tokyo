@@ -1,0 +1,348 @@
+{
+ "key": "st.national-stadium",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "National Stadium is Siam's practical back door: same skywalk network, same food density in the app's top tier, but rents that start where the student khwaeng begins (app blend 36,500/82,000, the researched comparison set's lowest). The trade is precision - the stadium gives the unit its name and its event nights, and the park its green score leans on sits mostly beyond the 800-meter line.",
+   "claims": [
+    "national-stadium-c01",
+    "national-stadium-c10"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Skybridge-connected everyday logistics: MBK (Tops supermarket, 40-stall food court, Don Don Donki) plus BACC and Siam Discovery on one covered spine from the W1 platform.",
+     "claims": [
+      "national-stadium-c01",
+      "national-stadium-c05"
+     ]
+    },
+    {
+     "en": "A real sports-and-culture anchor pair: a 19,793-seat national stadium with a packed 2024-2026 concert calendar, and the Jim Thompson House museum one block away.",
+     "claims": [
+      "national-stadium-c02",
+      "national-stadium-c04",
+      "national-stadium-c06"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "gym_sports=9 blends two different things: a scheduled-event stadium (not a drop-in gym) and the app's fitness-venue count - the score is defensible but the mechanism should be separated.",
+     "claims": [
+      "national-stadium-c03"
+     ]
+    },
+    {
+     "en": "Event-night crush: bookings for 50,000-person shows in 2026 mean the unit's crowd experience can flip overnight without any change to its score.",
+     "claims": [
+      "national-stadium-c04"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Daytime runs on campus and MBK errands - food courts, phone stalls, faculty buildings; evenings lean on the Siam seam's food strip; concert nights (Dec 2024, Mar and May 2026 bookings) flood Rama I with tens of thousands, while non-event nights keep the hostel-and-student layer as the main late activity.",
+     "claims": [
+      "national-stadium-c04",
+      "national-stadium-c11"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The Rama I retail spine (MBK, Discovery, skybridge) is loud and continuous; north across the canal-side blocks toward Phetchaburi it thins to the Charoenpol pier lanes; east past Phaya Thai Road the campus gardens (Chamchuri 10) and pocket parks take over - three units of texture inside one scorecard.",
+     "claims": [
+      "national-stadium-c01",
+      "national-stadium-c09",
+      "national-stadium-c08"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Fit for students, event-goers and budget-leaning renters who want Siam's food reach at the researched comparison set's lowest rent blend and can live with concert-night crowds.",
+     "claims": [
+      "national-stadium-c10",
+      "national-stadium-c11",
+      "national-stadium-c04"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "park_ha=4.3 vs Centenary Park partial-membership geometry unresolved; park size sources conflict (11 acres vs 30 rai) (national-stadium-c07).",
+   "gym_sports method (venue count vs stadium access) not exposed (national-stadium-c03).",
+   "No 2024-2026 station-area infrastructure change found - explicit gap (national-stadium-c12).",
+   "Pier assignment (Charoenpol in-cell, Hua Chang out) is the researcher's straight-line Voronoi check (national-stadium-c09).",
+   "2026 concert attendances are source-listed estimates, not realized counts."
+  ],
+  "attribution_required": [
+   "national-stadium-c02",
+   "national-stadium-c03",
+   "national-stadium-c04",
+   "national-stadium-c06",
+   "national-stadium-c08",
+   "national-stadium-c09",
+   "national-stadium-c10",
+   "national-stadium-c12"
+  ]
+ },
+ "claims": [
+  {
+   "id": "national-stadium-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1999-12-05",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1938 (opened)",
+    "observed": "1938-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Current operating arrangement stated only in outline by the source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c03",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "app snapshot 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "App gym-count method not exposed; inference flagged as such",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.national-stadium)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c04",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-01-07; 2024-12-14; 2026-03-07; 2026-03-14; 2026-05-16",
+    "observed": "2023-2026 calendar",
+    "recheck": "2026-06"
+   },
+   "limitations": [
+    "2026 shows are announced bookings; attendance figures are listed/estimated by the source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1985-02-07",
+    "observed": "1985-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Shop count and visitor mix are source-level claims"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c06",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1959 (house built); 1967 (disappearance)",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Admission/hours not stated in the source (guide mentions 100 baht)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c07",
+   "status": "conflicted",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": "2017-08 (per OSM description: built and opened Aug 2560 BE)",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Park size figures conflict (11 acres vs 30 rai); no body-level source for the 30 rai figure",
+    "app-data anchor (not a web source): Centenary Park size snippet (30 rai); City-rating app dataset (entity st.national-stadium)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c08",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "OSM snapshot 2026-11-07",
+    "recheck": null
+   },
+   "limitations": [
+    "Small-park areas not returned by the query"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c09",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "OSM snapshot 2026-11-07",
+    "recheck": null
+   },
+   "limitations": [
+    "Voronoi assignment is the researcher's straight-line computation, not the app's polygon output",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.national-stadium)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c10",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "app 2026-09 blend vs live FazWaz 2026-11",
+    "recheck": null
+   },
+   "limitations": [
+    "Khwaeng-level data is not unit-level; asking rents",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.national-stadium)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c11",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide-era + app snapshot 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Spillover dynamics are perception-level; no footflow measurement",
+    "app-data anchor (not a web source): City-rating app dataset (entity st.national-stadium)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "national-stadium-c12",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "No station-area public-works source found; absence of evidence is not evidence of absence"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_bf993f889fd3",
+   "url": "https://en.wikipedia.org/wiki/National_Stadium_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_c237d8a0625e",
+   "url": "https://en.wikipedia.org/wiki/Suphachalasai_Stadium",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_4d78899188f5",
+   "url": "https://en.wikipedia.org/wiki/MBK_Center",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_cf3ea6dbf8da",
+   "url": "https://en.wikipedia.org/wiki/Jim_Thompson_House",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap contributors via Overpass API",
+    "family": "OpenStreetMap"
+   }
+  },
+  {
+   "id": "src_deaf80d00799",
+   "url": "https://landezine-award.com/chulalongkorn-university-centenary-park/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Landezine International Landscape Award",
+    "family": "landezine"
+   }
+  },
+  {
+   "id": "src_ed6fc16d4eda",
+   "url": "https://migrationology.com/siam-square-pratunam-bangkok",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Migrationology (Mark Wiens)",
+    "family": "personal_blog"
+   }
+  },
+  {
+   "id": "src_571a6b283ae6",
+   "url": "https://www.fazwaz.com/property-for-rent/thailand/bangkok/pathum-wan",
+   "body_read": true,
+   "attribution": {
+    "publisher": "FazWaz",
+    "family": "fazwaz"
+   }
+  },
+  {
+   "id": "src_199eef7634fd",
+   "url": "https://en.wikipedia.org/wiki/Siam_Square",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  }
+ ]
+}

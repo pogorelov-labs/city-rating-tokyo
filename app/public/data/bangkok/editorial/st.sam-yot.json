@@ -1,0 +1,682 @@
+{
+ "key": "st.sam-yot",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Sam Yot is the old town's quiet rail corner — an underground Blue-line station beneath Charoen Krung at the Sam Yot junction, straddling Phra Nakhon, Pom Prap Sattru Phai and Samphanthawong. The Khlong Ong Ang promenade (Friday-Sunday walking street, kayaks, street art) runs beside the station, and listings put 11,000-13,000 THB studios and 14,000-15,000 THB 1-bedrooms at the door. The trade-offs: safety 5 has no visible unit-specific basis, evening life is event-driven rather than street-level, and the district's registered population is shrinking. Purple Line interchange targeted November 2030.",
+   "claims": [
+    "sam-yot-c07",
+    "sam-yot-c13",
+    "sam-yot-c15",
+    "sam-yot-c16",
+    "sam-yot-c14"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Khlong Ong Ang promenade — restored moat canal, verified inside the catchment — gives daily waterside walking plus a Fri-Sun 16:00-22:00 walking street.",
+     "claims": [
+      "sam-yot-c07"
+     ]
+    },
+    {
+     "en": "Market density (Trok Mo dawn market, Khlong Thom, Mega Plaza) supports daily_essentials 9 for a car-free household.",
+     "claims": [
+      "sam-yot-c13"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Safety 5 has no visible unit-specific evidence base — only generic old-town night emptiness after ~22:00 and the tourist-fringe scam genre.",
+     "claims": [
+      "sam-yot-c15"
+     ]
+    },
+    {
+     "en": "Vibe 10 / nightlife 9 are event- and heritage-driven: the 17 small bars and the Fri-Sun walking street carry it, and the canal's revival has stagnated between festivals.",
+     "claims": [
+      "sam-yot-c16"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Daytime is a government-office and market quarter; evenings depend on the Fri-Sun walking street and small bars, with backstreets dim after ~22:00.",
+     "claims": [
+      "sam-yot-c14"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The station quarter (Wang Burapha, Dinso) differs from the canal-frontage blocks and from the Pom Prap and Samphanthawong fringes the catchment touches.",
+     "claims": [
+      "sam-yot-c02"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Poor fit: park-dependent households — Rommaninat Park computes outside the catchment (st.sanam-chai side) despite facing Exit 1.",
+     "claims": [
+      "sam-yot-c10"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "safety 5: No unit-specific evidence for the 5 was found in EN or TH sources; keep the rating but pair it with an explicit 'basis: generic old-town night emptiness + tourist-friction genre; nothing local documented' note. The quarter has a staffed MRT station, government offices and a park open to 21:00 — a plain safety deficit is not evidenced. Recommend the app label this rating low-confidence for this unit.",
+   "vibe 10 + nightlife 9 with 17 venues: Vibe 10 is defensible as heritage identity (three-peaked-gate story, tone-controlled streets, adaptive reuse) plus event evenings; nightlife 9 with 17 mapped venues only makes sense as small in-unit bars plus immediate access to Chinatown's Soi Nana and the old-town tourist edge. State that mechanism explicitly; do not imply a club district.",
+   "green 9: Supported by Rommaninat Park (free, to ~21:00, fitness/skate/basketball) and the always-open canal promenade; caveat that the 4.4 ha park figure is app-only (BMA page 403) and walking-street operation on the canal is intermittent — the promenade, not the market, is the dependable green asset. | Coordinator correction 2026-11-07: Rommaninat Park computes OUTSIDE the catchment polygon (st.sanam-chai side); the in-unit green case rests on Khlong Ong Ang, temple and institutional grounds.",
+   "rent 8: Listings corroborate the blend: 11,000-13,000 THB studios steps from the station, 14,000-15,000 THB 1BR condos, 20,000 THB aged shophouse; whole-shophouse asks are much higher, so 'cheap' applies to rooms and small units. Portal asks, not transacted rents.",
+   "daily_essentials 9: Market density is real (dawn wet markets, market malls, 553 food venues); the soft spot is hospitals — none verified inside the unit, nearest general hospitals several km. Consider reflecting that in the essentials narrative rather than the score.",
+   "crowd 2 / transport 7: Crowd 2 matches shrinking registered population (Wang Burapha 10,414 to 8,344, 2019-2025) and a daytime-office swell pattern. Transport 7 matches MRT+bus strength, no BTS, and car-priority streets between station and Dinso (2025 pilot programme exists)."
+  ],
+  "attribution_required": []
+ },
+ "claims": [
+  {
+   "id": "sam-yot-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c03",
+   "status": "conflicted",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "app-data anchor (not a web source): coordinate deltas to Democracy Monument (~13.7573, 100.5027), Wat Ratchanatdaram (~13.7534, 100.5046), Giant Swing (~13.7497, 100.5043), Thipsamai (~13.7448, 100.5003), Rattanakosin Exhibition Hall (~13.7549, 100.5019)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c06",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c07",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "app-data anchor (not a web source): station-to-monument distance",
+    "Verification pass 2026-11-07: source contradiction found — Body read. The 2 Aug 2025 (2 ส.ค. 2568) 'รวมพลังแผ่นดินปกป้องอธิปไตย' rally in this article was at VICTORY Monument ('ณ อนุสาวรีย์ชัยสมรภูมิ เขตราชเทวี'), not D"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c09",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "app-data anchor (not a web source): absence finding after EN+TH queries"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c10",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Coordinator polygon check 2026-11-07: the park's mapped point (~13.7546, 100.5048) falls OUTSIDE the st.sam-yot catchment polygon — it sits on the st.sanam-chai side of the boundary despite facing MRT Sam Yot Exit 1 across Mahachai Road. Khet attribution (Phra Nakhon) unchanged. An earlier batch-2 inference placed it 'in the Sam Yot unit' — superseded by this check."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c14",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c15",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c16",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sam-yot-c18",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "app-data anchor (not a web source): Purple line southern extension progress and target"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_d548ea979a92",
+   "url": "https://th.wikipedia.org/wiki/สถานีสามยอด",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_dfa4b2f003ee",
+   "url": "https://metro.bemplc.co.th/Line-Maps?Line=1&Station=30",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Bangkok Expressway and Metro (BEM)",
+    "family": "Bangkok Expressway and Metro (BEM)"
+   }
+  },
+  {
+   "id": "src_dc676d04afb7",
+   "url": "https://en.wikipedia.org/wiki/Sam_Yot",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_6e6ef058d5b4",
+   "url": "https://webportal.bangkok.go.th/pranakorn/page/sub/22135",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BMA Phra Nakhon district office",
+    "family": "BMA Phra Nakhon district office"
+   }
+  },
+  {
+   "id": "src_56132ff15f5a",
+   "url": "https://stat.bora.dopa.go.th/new_stat/file/67/stat_t67.txt",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Department of Provincial Administration (stat.bora.dopa.go.th)",
+    "family": "Department of Provincial Administration (stat.bora.dopa.go.th)"
+   }
+  },
+  {
+   "id": "src_6f8275133838",
+   "url": "https://today.line.me/th/v3/article/peqejlG",
+   "body_read": false,
+   "attribution": {
+    "publisher": "tripgether via LINE TODAY",
+    "family": "tripgether via LINE TODAY"
+   }
+  },
+  {
+   "id": "src_0dd0e7a3d521",
+   "url": "https://th.wikipedia.org/wiki/แยกสามยอด",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_772df56d4c71",
+   "url": "https://www.ryt9.com/s/prg/3585943",
+   "body_read": false,
+   "attribution": {
+    "publisher": "RYT9 (DPU Tourism Faculty press)",
+    "family": "RYT9 (DPU Tourism Faculty press)"
+   }
+  },
+  {
+   "id": "src_4f338ef6a112",
+   "url": "https://www.m2fnews.com/lifestyle/work-and-life/column/travel/53724",
+   "body_read": false,
+   "attribution": {
+    "publisher": "M2F / Museum Siam archives",
+    "family": "M2F / Museum Siam archives"
+   }
+  },
+  {
+   "id": "src_50203d4ac31d",
+   "url": "https://room.baanlaesuan.com/357147/commercial/cafe/piccolo-vicolo-cafeat-wang-burapha-samyot",
+   "body_read": true,
+   "attribution": {
+    "publisher": "room magazine (Baan Lae Suan)",
+    "family": "room magazine (Baan Lae Suan)"
+   }
+  },
+  {
+   "id": "src_24420031c460",
+   "url": "https://readthecloud.com/travel/have-a-nice-stay/poco-house-bangkok/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "ReadtheCloud",
+    "family": "ReadtheCloud"
+   }
+  },
+  {
+   "id": "src_f99799e8d9b8",
+   "url": "https://tiewgan.com/travel-around-mrt-samyot-station/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "tiewgan / aroundonline",
+    "family": "tiewgan / aroundonline"
+   }
+  },
+  {
+   "id": "src_152e10fe9931",
+   "url": "https://www.tatnews.org/2021/03/award-winning-khlong-ong-ang-walking-street-isnt-your-average-walking-street/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "TAT Newsroom",
+    "family": "TAT Newsroom"
+   }
+  },
+  {
+   "id": "src_30ea51155463",
+   "url": "https://www.thairath.co.th/scoop/theissue/2810629",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thairath",
+    "family": "Thairath"
+   }
+  },
+  {
+   "id": "src_81bdb6772d92",
+   "url": "https://www.wongnai.com/reviews/257e00572c09499e9efa0d8802d0b7c3",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wongnai (user reviews)",
+    "family": "Wongnai (user reviews)"
+   }
+  },
+  {
+   "id": "src_342655576e45",
+   "url": "https://www.timeout.com/bangkok/th/news/rattanakosin-walk-market-072326",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out Bangkok"
+   }
+  },
+  {
+   "id": "src_f5d59d796127",
+   "url": "https://www.naewna.com/politic/903954",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Naewna",
+    "family": "Naewna"
+   }
+  },
+  {
+   "id": "src_a710e00c8455",
+   "url": "https://www.thansettakij.com/thailand-elections/election-monitor/571157",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thansettakij",
+    "family": "Thansettakij"
+   }
+  },
+  {
+   "id": "src_af77786021e0",
+   "url": "https://www.thaipost.net/x-cite-news/25108/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Post",
+    "family": "Thai Post"
+   }
+  },
+  {
+   "id": "src_f08cb44dc3a0",
+   "url": "https://taejai.com/th/project/OT-democracyPARK",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Taejai",
+    "family": "Taejai"
+   }
+  },
+  {
+   "id": "src_90bcb0682680",
+   "url": "https://www.thailandwanderlust.com/blog/khao-san-road-bangkok",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thailand Wanderlust (travel guide)",
+    "family": "Thailand Wanderlust (travel guide)"
+   }
+  },
+  {
+   "id": "src_4aa9c0ef6c05",
+   "url": "https://greener.bangkok.go.th/en/park/suan-romanee-nat",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BMA Greener Bangkok (official parks portal)",
+    "family": "BMA Greener Bangkok (official parks portal)"
+   }
+  },
+  {
+   "id": "src_e89d4455c9b3",
+   "url": "https://www.tourismthailand.org/Attraction/romaneenart-park",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Tourism Authority of Thailand",
+    "family": "Tourism Authority of Thailand"
+   }
+  },
+  {
+   "id": "src_8706b217e47b",
+   "url": "https://thailandlife.info/rommaninat-park-bangkok",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thailand Life",
+    "family": "Thailand Life"
+   }
+  },
+  {
+   "id": "src_3cb4e16dcbcf",
+   "url": "https://www.baanfinder.com/th/property/ติดmrtสามยอด-พระนคร--52688826",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BaanFinder (listing)",
+    "family": "BaanFinder (listing)"
+   }
+  },
+  {
+   "id": "src_d256d8d55fe0",
+   "url": "https://propertyscout.co.th/กรุงเทพ/วังบูรพาภิรมย์/ให้เช่า/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "PropertyScout",
+    "family": "PropertyScout"
+   }
+  },
+  {
+   "id": "src_05b65f5b148a",
+   "url": "https://piece.onlineoops.com/2016276",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Piece/OnlineOops (listing)",
+    "family": "Piece/OnlineOops (listing)"
+   }
+  },
+  {
+   "id": "src_c83c248185e4",
+   "url": "https://propertyhub.in.th/en/shophouse-for-rent/phra-nakhon",
+   "body_read": false,
+   "attribution": {
+    "publisher": "PropertyHub via WebSearch summary",
+    "family": "PropertyHub via WebSearch summary"
+   }
+  },
+  {
+   "id": "src_4c008522c053",
+   "url": "https://webportal.bangkok.go.th/pranakorn/page/sub/17385",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BMA Phra Nakhon district office",
+    "family": "BMA Phra Nakhon district office"
+   }
+  },
+  {
+   "id": "src_b449e54d2162",
+   "url": "https://www.9apartment.com/ไทย-โคซี่-เฮ้าส์-Thai-Cozy-House-พระนคร-กรุงเทพ",
+   "body_read": false,
+   "attribution": {
+    "publisher": "9apartment",
+    "family": "9apartment"
+   }
+  },
+  {
+   "id": "src_b33a4c226bb5",
+   "url": "https://food.trueid.net/detail/03nwM0BkoZA5",
+   "body_read": true,
+   "attribution": {
+    "publisher": "TrueID Food",
+    "family": "TrueID Food"
+   }
+  },
+  {
+   "id": "src_cc1f601fb847",
+   "url": "https://www.aroundonline.com/bangkok-news-18/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Around magazine",
+    "family": "Around magazine"
+   }
+  },
+  {
+   "id": "src_c3cdeaf0a45f",
+   "url": "https://localthailand.net/muat/khlinik/bangkok/phra-nakhon",
+   "body_read": false,
+   "attribution": {
+    "publisher": "LocalThailand (Google-review aggregation)",
+    "family": "LocalThailand (Google-review aggregation)"
+   }
+  },
+  {
+   "id": "src_7aeb5ef4ff17",
+   "url": "https://hdmall.co.th/c/nearby-mrt-samyod-pkg-massage",
+   "body_read": false,
+   "attribution": {
+    "publisher": "HDmall",
+    "family": "HDmall"
+   }
+  },
+  {
+   "id": "src_1fdf3dddacff",
+   "url": "https://www.thansettakij.com/health-wellness/wellbeing/648943",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thansettakij",
+    "family": "Thansettakij"
+   }
+  },
+  {
+   "id": "src_8933c9df2c51",
+   "url": "https://thipsamai.com/thai/padthai-song-krueng/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thipsamai (official site)",
+    "family": "Thipsamai (official site)"
+   }
+  },
+  {
+   "id": "src_6ed497f75898",
+   "url": "https://www.ryoiireview.com/article/7-restaurants-open-over-midnight/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Ryoii Review",
+    "family": "Ryoii Review"
+   }
+  },
+  {
+   "id": "src_1d559bac61d0",
+   "url": "https://www.wongnai.com/restaurants/kruaapsorn-dinsor",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Wongnai",
+    "family": "Wongnai"
+   }
+  },
+  {
+   "id": "src_ff8bfe999ad1",
+   "url": "https://www.ryoiireview.com/restaurant/view/19256",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Ryoii Review",
+    "family": "Ryoii Review"
+   }
+  },
+  {
+   "id": "src_abe1712453aa",
+   "url": "https://www.wongnai.com/restaurants?categories=15&domain=1&regions=54015",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Wongnai",
+    "family": "Wongnai"
+   }
+  },
+  {
+   "id": "src_32526e3d6c80",
+   "url": "https://www.timeout.com/bangkok/th/bars/best-opening-bars-in-2025",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out Bangkok"
+   }
+  },
+  {
+   "id": "src_1d5819ffd932",
+   "url": "https://urbanally.org/article/Walk.Bike.Commute.Samyoddistrict",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Urban Ally (Chulalongkorn University Urban Lab program)",
+    "family": "Urban Ally (Chulalongkorn University Urban Lab program)"
+   }
+  },
+  {
+   "id": "src_7c51f971abdc",
+   "url": "https://www.bangkokbiznews.com/news/news-update/1209562",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Bangkok Biznews",
+    "family": "Bangkok Biznews"
+   }
+  },
+  {
+   "id": "src_f3fbd53250ec",
+   "url": "https://en.wikipedia.org/wiki/Rommaninat_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia"
+   }
+  }
+ ]
+}

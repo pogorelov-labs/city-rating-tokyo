@@ -54,6 +54,7 @@ export interface AreaGuideData {
     lineIds: string[];
   };
   noise: { day: number; night: number; date: string; transferred: boolean } | null;
+  editorial_disclosures?: string[];
   mapHref: string;
   mapsHref: string;
   methodologyHref: string;

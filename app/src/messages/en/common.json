@@ -1008,6 +1008,17 @@
       "nightlife": "Evening options score below typical.",
       "crowd": "The ranking indicates more crowding than typical."
     },
-    "photoAlt": "Photo: {name}"
+    "photoAlt": "Photo: {name}",
+    "editorial": {
+      "dataOnly": "Scores only — editorial guide pending",
+      "asOf": "Editorial research as of {date}",
+      "recheckDue": "Facts due recheck: {date}",
+      "greenBuffer1km": "Green score counts park hectares within 1 km of the area's grid points — parks beyond the boundary count too.",
+      "transportMechanism": "Transport counts rail stations, bus stops and boat piers around the area — not only rail."
+    },
+    "disclosure": {
+      "greenBuffer1km": "Green score counts park hectares within 1 km of the area's grid points — parks beyond the boundary count too.",
+      "transportMechanism": "Transport counts rail stations, bus stops and boat piers around the area — not only rail."
+    }
   }
 }

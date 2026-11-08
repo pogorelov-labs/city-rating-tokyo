@@ -1,0 +1,289 @@
+{
+ "key": "bangkok-noi",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Bangkok Noi is the west bank at its most working: Thailand's first western hospital, Siriraj, owns the riverfront, the old 1903 Bangkok Noi terminus survives as the Siriraj Bimuksthan museum, and the operating Thonburi station still sends two local trains a day toward Kanchanaburi - a 750-metre walk from the MRT. Wang Lang market runs daily at the pier; Central Pinklao anchors the retail. Two Blue Line stations (Fai Chai, Bang Khun Non) plus boat piers carry the commute. Rents track the Charan Sanitwong corridor (about 11k-23k in listed 2026 stock). The honest trade-offs: the green is riverside-and-temple rather than parkland, and convenience thins quickly inland.",
+   "claims": [
+    "bangkok-noi-c02",
+    "bangkok-noi-c03",
+    "bangkok-noi-c04",
+    "bangkok-noi-c05",
+    "bangkok-noi-c07",
+    "bangkok-noi-c10"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "A rare working heritage-rail link: Thonburi station (khwaeng Siriraj) still runs the daily Kanchanaburi/Nam Tok locals, 750 m from MRT Bang Khun Non - verified in two independent rail sources.",
+     "claims": [
+      "bangkok-noi-c03"
+     ]
+    },
+    {
+     "en": "Food economy with a real anchor: Wang Lang market's daily 08:00-18:00 worker trade at the Siriraj pier, plus Pran Nok, Bang Khun Si and Chaitit markets and Central Pinklao for everything else.",
+     "claims": [
+      "bangkok-noi-c04",
+      "bangkok-noi-c06"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Conveniences cluster on the river/MRT corner: largest khwaeng Bang Khun Si holds no MRT station in the data read - inland daily life leans on buses and SRT halts.",
+     "claims": [
+      "bangkok-noi-c08"
+     ]
+    },
+    {
+     "en": "Park share is 0.8% (9.4 ha); green means the riverbank, khlong rims and temple grounds rather than a destination park.",
+     "claims": [
+      "bangkok-noi-c10"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Days run on Siriraj's clock - Wang Lang fills 08:00-18:00 with hospital and student trade; nights quiet down fast on the khwaeng lanes, with the Charan strip and Central Pinklao carrying the late errands.",
+     "claims": [
+      "bangkok-noi-c04",
+      "bangkok-noi-c06"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The Siriraj/Wang Lang river corner (khwaeng Siri Rat) is dense with institutions and food; the Charan/Fai Chai corridor (Ban Chang Lo side) is the condo belt; Bang Khun Si inland is the quietest and least rail-served corner.",
+     "claims": [
+      "bangkok-noi-c02",
+      "bangkok-noi-c07",
+      "bangkok-noi-c08"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Strong fit for medical/students tied to Siriraj and for renters who want 1BRs around 11-16k with MRT-plus-boat commutes.",
+     "claims": [
+      "bangkok-noi-c02",
+      "bangkok-noi-c07",
+      "bangkok-noi-c05"
+     ]
+    },
+    {
+     "en": "Weak fit if you need park-rich weekends or evening scenes - nightlife count is modest (46) and the big green is the river itself.",
+     "claims": [
+      "bangkok-noi-c10",
+      "bangkok-noi-c08"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "No body-read source describes nightlife composition or street walkability; hours/prices at Wang Lang are blog-sourced and could drift; park areas per OSM ways unmeasured; TrueID timetable (07:45 train 257) is snippet-level only; population vintages differ (2017 EN wiki vs app)."
+  ],
+  "attribution_required": [
+   "bangkok-noi-c01",
+   "bangkok-noi-c02",
+   "bangkok-noi-c05",
+   "bangkok-noi-c06",
+   "bangkok-noi-c07",
+   "bangkok-noi-c08",
+   "bangkok-noi-c10"
+  ]
+ },
+ "claims": [
+  {
+   "id": "bangkok-noi-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "on next DOPA cycle"
+   },
+   "limitations": [
+    "2017 population vintage differs from app value"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bangkok-noi-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2013-01-01",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "bangkok-noi-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "SRT timetable changes"
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "bangkok-noi-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "blog source; hours could drift seasonally"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bangkok-noi-c05",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "bangkok-noi-c06",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "score-fit judgment is researcher inference over sourced venue facts"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bangkok-noi-c07",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "October 2026",
+    "recheck": "quarterly"
+   },
+   "limitations": [
+    "portal bias to marketed stock; conversion approximate"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bangkok-noi-c08",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "inference; no source read measures within-khet access times",
+    "halts' khwaeng membership unresolved in OSM read"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bangkok-noi-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "rhythm statement is an inference anchored in the sourced facts cited"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bangkok-noi-c10",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no ha figures per park in sources read; overpass names only, some names ambiguous across khets"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_c533384ef2bb",
+   "url": "https://en.wikipedia.org/wiki/Bangkok_Noi_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "Wikipedia (EN)"
+   }
+  },
+  {
+   "id": "src_640da85af313",
+   "url": "https://en.wikipedia.org/wiki/Bangkok_Noi_railway_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "Wikipedia (EN)"
+   }
+  },
+  {
+   "id": "src_9379b83e0acd",
+   "url": "https://en.wikipedia.org/wiki/Thon_Buri_railway_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "Wikipedia (EN)"
+   }
+  },
+  {
+   "id": "src_35f27a0d9be0",
+   "url": "https://www.seat61.com/Thailand.htm",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Seat 61",
+    "family": "Seat 61 (rail guide)"
+   }
+  },
+  {
+   "id": "src_b9a0557f9cec",
+   "url": "https://yourthaiguide.com/wang-lang-market-a-true-thai-street-market",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Your Thai Guide",
+    "family": "Your Thai Guide (travel blog)"
+   }
+  },
+  {
+   "id": "src_1acba57907fb",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/bangkok-noi",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  }
+ ]
+}
