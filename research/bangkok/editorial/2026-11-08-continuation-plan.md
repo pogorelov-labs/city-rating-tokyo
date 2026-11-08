@@ -17,9 +17,11 @@ workstreams so nothing lives in an appendix. Review history:
 - **183/183 entities** carry a schema-valid bundle: 22 tier A (full),
   24 tier B (light), 137 tier C (data-only placeholders, `draft` by design).
   Master index: [`2026-11-08-tier-plan.md`](2026-11-08-tier-plan.md).
-- All 5 batches pass `kit/validate.py` (ALL OK); audits have zero open P1s;
-  P2s are documented snippet-corroboration flags (re-confirmed 2026-11-08
-  with the upgraded audit).
+- All 5 batches pass `kit/validate.py` — **genuinely as of 2026-11-08**: the
+  schema half of the validator had been silently discarding errors
+  ([`2026-11-08-gate-verification.md`](2026-11-08-gate-verification.md));
+  after the fix + a logged contract-repair pass, ALL OK ×5 (schema +
+  semantic) and audit zero-P1 ×5 stand for real.
 - Program totals (tiers A+B): 668 sources (527 body-read, 547 distinct URLs,
   299 publisher families), 667 claims — 422 corroborated / 205 proposed /
   40 conflicted as researched; **399 / 228 / 40 after the executed B-10
@@ -87,7 +89,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | B-9 | **Kit unit tests + CI (G16).** ✅ Tests DONE 2026-11-08: `kit/tests/` (18 green: canonical rules, assemble corroboration, audit gate behavior). ⏳ Remaining: wire into CI beside the repo's existing checks; jsonschema cross-check when available. | PL | S | kit tests green in CI; validator cross-checked; changes fail closed |
 | B-10 | ✅ **DONE 2026-11-08** — canonical family mapping (`kit/canonical.py`), relabel pass, re-gates: **23 of 422 corroborated → proposed (399/228/40)**; deterministic count supersedes the deep review's 27; 71 batch-4 limitations arrays repaired by the new audit rule (byte-exact vs raw). Ledger: [`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md). | AG | S | relabel applied; gates green; corrected counts in manifests |
 | B-11 | ✅ **DONE 2026-11-08** — canonical source registry committed (`kit/registry/source-attributions.json`; deterministic stats: 54 family-inconsistent / 39 publisher-inconsistent / 32 title-inconsistent). Adapter to reference it in E-1/E-2. | PL/AG | S | registry committed; adapter uses it |
-| B-12 | **Source-type taxonomy refinement.** 58% of sources sit in the collapsed `other` bucket (encyclopedia/OSM/datasets swallowed); refine the enum or add subtypes; report source-mix per bundle. | SL/AG | S | taxonomy v1.1 or documented decision |
+| B-12 | **Source-type taxonomy refinement.** 58% of sources sit in the collapsed `other` bucket (encyclopedia/OSM/datasets swallowed); refine the enum or add subtypes; report source-mix per bundle. 🟡 **Measured proposal ready 2026-11-08** ([`2026-11-08-source-taxonomy-v1.1-proposal.md`](2026-11-08-source-taxonomy-v1.1-proposal.md): additive enum + migration policy; adoption = SL decision). | SL/AG | S | taxonomy v1.1 or documented decision |
 | B-13 | ✅ **DONE 2026-11-08** — validator + audit check `conflicts_with` integrity (dangling/self); reviewer-derived links applied (`wat-mangkon-c06`→c02/c04, the only intra-bundle claim-vs-claim contradiction). Honest corpus finding: source-level conflicts live inside single claims by design; going-forward agents declare claim-vs-claim conflicts via the prompt-template rule. | AG | S | conflicts_with populated where detectable; validator checks links |
 | B-14 | ✅ **DONE 2026-11-08** — all 5 manifests carry `research_started_at`/`research_completed_at` (raw-write mtimes; profile-mtime fallback for the scripted tail) — and the tail batch, which had **no manifest at all** (batch-DoD gap), gained one. | AG | S | manifests carry start/end; batch DoD updated |
 
@@ -242,3 +244,18 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
   All gates re-run green: `validate.py` ALL OK ×5, `audit.py` zero P1.
   Next unblocked: owner decisions DEC-1…10; A-1/A-2 review gates;
   pipeline-team B-1/B-2/B-4 (app-data, not agent-executable); CI wiring.
+- **2026-11-08 (gate verification, same day later):** P0 found — validate.py
+  discarded schema errors in every run (semantic-checks-only ALL OKs) +
+  anyOf no-rollback; **both fixed**; contract repair pass over all bundles
+  (18 URL annotations split incl. sam-yan Overpass ×4→1 merge with
+  annotations preserved, 134 null notes, 32 bool commercial_context, 34 dict
+  uncertainties); assemble normalizes all classes going forward; tests at 20
+  green; **validate ALL OK ×5 + audit zero-P1 ×5 now genuine** ·
+  C-6/G14 wave 1 run (543 URLs: 485 OK, 4 dead flagged archived-citation,
+  33 access-limited, rest transient). Receipts:
+  [`2026-11-08-gate-verification.md`](2026-11-08-gate-verification.md),
+  [`2026-11-08-contract-repair-log.jsonl`](2026-11-08-contract-repair-log.jsonl),
+  [`2026-11-08-link-health-wave1.json`](2026-11-08-link-health-wave1.json).
+  B-12 taxonomy proposal and C-7 content-recheck for the closed batches
+  remain open (C-7's first-content-recheck route: reviewer spot-checks +
+  wave C-1).
