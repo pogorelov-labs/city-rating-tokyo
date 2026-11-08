@@ -112,7 +112,7 @@ def main():
         unpref = key.replace("st.", "")
         area = areas.get(unpref) or {}
         stakes = STAKES.get(key, {})
-        prefix = unpref + "-"
+        prefix = unpref  # template appends "-cNN" itself — double dash otherwise
         prompt = (TEMPLATE
                   .replace("{{KEY}}", key)
                   .replace("{{KIND_LABEL}}", "station area" if e["kind"] == "station_area" else "district")

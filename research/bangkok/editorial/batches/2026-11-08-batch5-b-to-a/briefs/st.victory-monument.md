@@ -87,14 +87,14 @@ exactly this shape:
   "entity_key": "st.victory-monument",
   "search_log": [{"query":"...","tool":"...","when":"...","outcome":"used|rejected|failed|no_results","note":"..."}],
   "sources": [{"index":0,"canonical_url":"...","retrieved_url":"...","title":"...","publisher":"...","publisher_family":"...","author":"..."|null,"published_at":"YYYY-MM-DD"|null,"updated_at":null,"retrieved_at":"2026-11-08T..","body_read":true,"type":"official_operator|government|tourism_publisher|editorial_guide|expat_publication|news|commercial_property|resident_report|academic|other","commercial_context":"...","limitations":["..."]}],
-  "claims": [{"claim_id":"victory-monument--c01","text_en":"one-sentence claim","kind":"...","topics":[...],"polarity":"strength|tradeoff|mixed|neutral","geography":{"scope":"...","place_name":"...","relation_to_entity":"...","notes":"..."},"temporal_scope":{"event_date":null,"observed_period":null,"recheck_by":null,"notes":"..."},"evidence":[{"source_index":0,"locator":"...","paraphrase":"..."}],"limitations":["..."],"conflicts_with":[]}],
-  "question_answers": [{"id":"Q01","status":"...","claim_ids":["victory-monument--c01"],"notes":"..."}],
-  "editorial": {"preview":"1 concrete card sentence","guide_lead":"3-5 sentences","strengths":[{"text_en":"...","claim_ids":["victory-monument--c01"]}],"tradeoffs":[...],"day_night":[...],"within_area_variation":[...],"conditional_fit":[...],"uncertainties":["..."]},
+  "claims": [{"claim_id":"victory-monument-c01","text_en":"one-sentence claim","kind":"...","topics":[...],"polarity":"strength|tradeoff|mixed|neutral","geography":{"scope":"...","place_name":"...","relation_to_entity":"...","notes":"..."},"temporal_scope":{"event_date":null,"observed_period":null,"recheck_by":null,"notes":"..."},"evidence":[{"source_index":0,"locator":"...","paraphrase":"..."}],"limitations":["..."],"conflicts_with":[]}],
+  "question_answers": [{"id":"Q01","status":"...","claim_ids":["victory-monument-c01"],"notes":"..."}],
+  "editorial": {"preview":"1 concrete card sentence","guide_lead":"3-5 sentences","strengths":[{"text_en":"...","claim_ids":["victory-monument-c01"]}],"tradeoffs":[...],"day_night":[...],"within_area_variation":[...],"conditional_fit":[...],"uncertainties":["..."]},
   "open_issues": ["..."]
 }
 All 12 question_answers required; every `answered`/`conflicting` question
 cites ≥1 existing claim. Editorial items must cite existing claim_ids
-victory-monument--cNN (never inline shorthand). Banned words in editorial: "vibrant",
+victory-monument-cNN (never inline shorthand). Banned words in editorial: "vibrant",
 "hidden gem", "something for everyone", unqualified superlatives; never state
 walking durations derived from the 800 m radius — state distances. Prefer
 concrete contrasts (busy corridor vs quiet side street, restaurants vs
