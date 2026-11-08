@@ -186,7 +186,14 @@ same conflation; both need correction. The rest of the "polygon coarseness"
 finding (sathon Sathorn-road edge, Victory Monument attribution) still stands;
 sathon's boundary is metres-sensitive (app anchors for Surasak/Saint Louis sit
 on the line), so "all three BTS nodes outside" holds for the app anchors but
-should be phrased as boundary-sensitive.
+should be phrased as boundary-sensitive. — **CORRECTED 2026-11-08 (B-4
+receipts, probes with the true app anchors from stations.json): the sathon
+clause is overturned — all three BTS-line anchors (Surasak, Chong Nonsi,
+Saint Louis) are INSIDE the sathon khet ring; the original probe coordinates
+did not match the app's anchors. The sathon transport-7 mechanism returns to
+unexplained (measurement-buffer family), not polygon edge.**
+[`2026-11-08-b2-b4-pipeline-receipts.md`](2026-11-08-b2-b4-pipeline-receipts.md)
+§2 case 4 / §3.
 
 **Fix:** rewrite c02/c03/scope_notes with `--khet` results, downgrade to a
 genuine "district polygon vs khwaeng/administration" note if one remains, and
