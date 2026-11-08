@@ -293,8 +293,7 @@
     "mochit": 17
    },
    "neighbors": [
-    "sanam-pao",
-    "sena-ruam"
+    "sanam-pao"
    ],
    "facts": {
     "area_km2": 1.2,
@@ -16153,8 +16152,7 @@
     "mochit": 11
    },
    "neighbors": [
-    "mo-chit",
-    "sena-ruam"
+    "mo-chit"
    ],
    "facts": {
     "area_km2": 1.04,
@@ -16664,151 +16662,6 @@
     "th": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B4%E0%B8%84%E0%B8%A1"
    },
    "hotels_800m": 3,
-   "attractions_800m": 2,
-   "tourist_badge": false
-  },
-  {
-   "id": "sena-ruam",
-   "name_en": "Sena Ruam",
-   "name_th": "เสนาร่วม",
-   "name_jp": "セーナールワム",
-   "lat": 13.78594,
-   "lng": 100.54686,
-   "station_ids": [
-    "sena-ruam"
-   ],
-   "line_ids": [
-    "bts_sukhumvit"
-   ],
-   "district": "phaya-thai",
-   "districts": [
-    {
-     "slug": "phaya-thai",
-     "share": 1.0
-    }
-   ],
-   "ratings": {
-    "transport": 8,
-    "rent": 7,
-    "daily_essentials": 8,
-    "safety": 8,
-    "food": 8,
-    "green": 8,
-    "gym_sports": 8,
-    "vibe": 8,
-    "nightlife": 9,
-    "crowd": 3
-   },
-   "confidence": {
-    "food": "strong",
-    "nightlife": "strong",
-    "daily_essentials": "strong",
-    "gym_sports": "moderate",
-    "vibe": "moderate",
-    "transport": "moderate",
-    "rent": "editorial",
-    "safety": "editorial",
-    "green": "moderate",
-    "crowd": "moderate"
-   },
-   "sources": {
-    "food": [
-     "overture",
-     "osm"
-    ],
-    "nightlife": [
-     "overture",
-     "osm"
-    ],
-    "daily_essentials": [
-     "overture",
-     "osm"
-    ],
-    "gym_sports": [
-     "overture"
-    ],
-    "vibe": [
-     "overture"
-    ],
-    "transport": [
-     "osm_rail",
-     "transit_model"
-    ],
-    "rent": [
-     "listing_research"
-    ],
-    "safety": [
-     "ai_research"
-    ],
-    "green": [
-     "osm"
-    ],
-    "crowd": [
-     "overture"
-    ]
-   },
-   "data_date": "2026-10",
-   "rent": {
-    "one_bed": 18000,
-    "two_bed": 37000,
-    "source": "listing_research",
-    "updated": "2026-09",
-    "as_of": "2026-09",
-    "confidence": "editorial",
-    "metric": "typical_asking",
-    "provenance": "district_blend",
-    "definition": "Typical asking rent for a ~30-35 m² 1-bedroom condo (rent_1br) and a ~60-70 m² 2-bedroom condo (rent_2br) in the district's main residential corridors. Not a statistical median.",
-    "method": "Resident-weighted district rent blend, rounded to 500 THB. Researcher estimate calibrated by hand against the public sources listed below. The 2026-10-25 source audit does not establish statistical district medians for the reference size bands; it preserves every district value and documents separately labeled station-level proxies.",
-    "sample_size": null,
-    "sources": [],
-    "limitations": [
-     "All 50 district values remain editorial estimates; no public source in the audit isolates both reference size/tenure cohorts by khet.",
-     "Published station-bedroom medians cover all floor areas and cannot silently replace fixed-size district estimates.",
-     "Grid rent remains district-level; non-overridden station areas retain the resident-weighted district blend."
-    ],
-    "audited_at": "2026-10-25",
-    "source_audit": "research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md",
-    "editorial_baseline": {
-     "rent_1br": 18000,
-     "rent_2br": 37000
-    }
-   },
-   "transit_minutes": {
-    "siam": 13,
-    "asok": 19,
-    "silom": 21,
-    "rama9": 24,
-    "mochit": 7
-   },
-   "min_transit": 7,
-   "resident_minutes": {
-    "siam": 21,
-    "asok": 27,
-    "silom": 29,
-    "rama9": 24,
-    "mochit": 14
-   },
-   "neighbors": [
-    "ari",
-    "saphan-khwai"
-   ],
-   "facts": {
-    "area_km2": 1.26,
-    "food": 334,
-    "cafes": 57,
-    "nightlife": 49,
-    "convenience": 12,
-    "markets": 0,
-    "essentials": 100,
-    "sports": 13,
-    "culture": 11,
-    "temples": 0,
-    "park_ha": 1.8,
-    "piers": 0
-   },
-   "image": null,
-   "wikipedia": {},
-   "hotels_800m": 18,
    "attractions_800m": 2,
    "tourist_badge": false
   },
