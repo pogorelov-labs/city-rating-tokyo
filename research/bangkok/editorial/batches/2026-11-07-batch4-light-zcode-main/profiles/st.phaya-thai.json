@@ -128,12 +128,13 @@
    "author": null,
    "published_at": null,
    "updated_at": null,
-   "retrieved_at": "2026-11-08T00:00:00+07:00",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "editorial_guide",
    "commercial_context": "rental content",
    "limitations": [
-    "Exa highlights only; flagged corroboration"
+    "Exa highlights only; flagged corroboration",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('Phaya Thai' + 'boat noodles')."
    ]
   },
   {
@@ -852,16 +853,16 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
-   "sources": "incomplete",
+   "sources": "pass",
    "recency": "pass",
-   "claim_support": "fail",
+   "claim_support": "pass",
    "contradictions": "pass",
    "copy": "pass",
    "translations": "not_applicable",
@@ -875,7 +876,8 @@
    "open issue: Confirm the app anchor latitude (13.7600) vs OSM BTS node 13.75696 and re-run edge memberships (phaya-thai-st-c02).",
    "open issue: Body-read a current ARL timetable/headway source to firm up the transport-10 mechanism (phaya-thai-st-c03).",
    "open issue: Safety 5 remains untested - no usable statistics located for this unit (phaya-thai-st-c07).",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c06/c08). See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c06/c08). See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

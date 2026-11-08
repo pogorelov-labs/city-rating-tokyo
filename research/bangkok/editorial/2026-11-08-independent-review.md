@@ -18,7 +18,7 @@ approval.
 **137/137 PASS** (identity + zero web claims + draft status, independently
 reproduced). The blocks are concentrated in batch 4 (18 of 24) and are mostly
 mechanical normalize damage plus one provenance class — not a rejection of the
-research. The P1 findings (F1–F6) are listed first.
+research. The P1 findings (F1–F6) are listed first. **Addendum (A-8 rework, same day): all 24 blocks were cleared by the fixer per §9 — every researched bundle now carries `review.status = approved` with a rework note; this remains an agent-review disposition, not a human signatory (DEC-2/G10 open). See the addendum at the end of this file.**
 
 ---
 
@@ -327,11 +327,11 @@ pass.
 | Bundle | Status | Reason / residual |
 |---|---|---|
 | `pom-prap-sattru-phai` | **A** | 24,000 2-bed below all observed asks = documented pipeline item (CRTKY-141), not a copy fix; QA/copy clean |
-| `phaya-thai` | **B** | F4 inline refs in preview/lead/every item; union preview claim_ids |
-| `st.charoen-nakhon` | **B** | F4 inline refs; F12 empty QA notes |
-| `st.nana` | **B** | F4 inline refs; F14 green note (non-blocking) |
-| `st.ratchathewi` | **B** | F4 inline refs in guide items (preview/lead clean) |
-| `st.wat-mangkon` | **B** | F7 A8 overstatement in scope_notes + c04 (temple facts correct) |
+| `phaya-thai` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F4 inline refs in preview/lead/every item; union preview claim_ids |
+| `st.charoen-nakhon` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F4 inline refs; F12 empty QA notes |
+| `st.nana` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F4 inline refs; F14 green note (non-blocking) |
+| `st.ratchathewi` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F4 inline refs in guide items (preview/lead clean) |
+| `st.wat-mangkon` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F7 A8 overstatement in scope_notes + c04 (temple facts correct) |
 
 ### Batch 3 (9/10 approved)
 
@@ -346,7 +346,7 @@ pass.
 | `st.ratchaprarop` | **A** | "ARL-only control" jargon in copy (P3); no unread sources |
 | `st.sam-yan` | **A** | 3 snippet-only sources, no sole reliance |
 | `st.sena-ruam` | **A** | ghost-station finding is well supported; 2 snippet-only sources |
-| `st.sam-yot` | **B** | F3: 11 claims sole-unread; false "corroboration only" source limitation; checks fail |
+| `st.sam-yot` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F3: 11 claims sole-unread; false "corroboration only" source limitation; checks fail |
 
 ### Batch 4 — tier B light (6/24 approved)
 
@@ -358,24 +358,24 @@ pass.
 | `st.siam` | **A** | clean; claim refs/coordinator only in uncertainties |
 | `st.chit-lom` | **A** | clean; c06 removed at assembly (documented); "live page 2026" date (P3) |
 | `st.ratchadamri` | **A** | clean; "brief" only in uncertainties; "live page 2026" date (P3) |
-| `bang-phlat` | **B** | F1 day_night/within placeholders + uncertainties char-explosion |
-| `bang-sue` | **B** | F1 |
-| `bangkok-noi` | **B** | F1 |
-| `din-daeng` | **B** | F1 + F2 (2 claim limitation arrays) |
-| `dusit` | **B** | F1 |
-| `khlong-san` | **B** | F1 + F5 (false ICONSIAM/G2 polygon claim) |
-| `sathon` | **B** | F1 + F2 (6 claim arrays); sathon boundary phrasing is metres-sensitive (P3) |
-| `st.hua-lamphong` | **B** | F1 + F2 (1 claim + 10 source arrays) + F3 (c02/c12) + F6 |
-| `st.khlong-san` | **B** | F1 + F2 (1 claim + 6 source arrays) |
-| `st.phra-ram-9` | **B** | F1 + F2 (1 claim + 8 source arrays) |
-| `st.saphan-taksin` | **B** | F1 + F2 (1 claim + 8 source arrays) + F6 + false claim_support=pass |
-| `thon-buri` | **B** | F1 + F2 (5 claim arrays) |
-| `st.national-stadium` | **B** | F10 "the batch's lowest" in guide lead |
-| `st.sala-daeng` | **B** | F3 (c11/c12); "this batch" in strengths (F10) |
-| `st.saint-louis` | **B** | F3 (c10/c12) + F10 "brief … needs re-checking" in preview/lead |
-| `st.victory-monument` | **B** | F10 "coordinator must settle" in guide lead |
-| `st.phaya-thai` | **B** | F3 (c06/c08) |
-| `st.phetchaburi` | **B** | F3 (c05/c07); "this batch" in tradeoffs (F10) |
+| `bang-phlat` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 day_night/within placeholders + uncertainties char-explosion |
+| `bang-sue` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 |
+| `bangkok-noi` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 |
+| `din-daeng` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 + F2 (2 claim limitation arrays) |
+| `dusit` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 |
+| `khlong-san` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 + F5 (false ICONSIAM/G2 polygon claim) |
+| `sathon` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 + F2 (6 claim arrays); sathon boundary phrasing is metres-sensitive (P3) |
+| `st.hua-lamphong` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 + F2 (1 claim + 10 source arrays) + F3 (c02/c12) + F6 |
+| `st.khlong-san` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 + F2 (1 claim + 6 source arrays) |
+| `st.phra-ram-9` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 + F2 (1 claim + 8 source arrays) |
+| `st.saphan-taksin` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 + F2 (1 claim + 8 source arrays) + F6 + false claim_support=pass |
+| `thon-buri` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F1 + F2 (5 claim arrays) |
+| `st.national-stadium` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F10 "the batch's lowest" in guide lead |
+| `st.sala-daeng` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F3 (c11/c12); "this batch" in strengths (F10) |
+| `st.saint-louis` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F3 (c10/c12) + F10 "brief … needs re-checking" in preview/lead |
+| `st.victory-monument` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F10 "coordinator must settle" in guide lead |
+| `st.phaya-thai` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F3 (c06/c08) |
+| `st.phetchaburi` | **A** ⤴ cleared by A-8 rework 2026-11-08 (addendum below) | F3 (c05/c07); "this batch" in tradeoffs (F10) |
 
 ## 6. Gate changes made by this review
 
@@ -460,3 +460,46 @@ in the final review; a progress-log entry in the continuation plan.*
 `kit/tools/tg_corpus.py`, `kit/tests/test_tg_corpus.py`,
 `kit/registry/telegram-channels.json`, `research/bangkok/corpus/`, and the
 `.gitignore`/README/prompt-template edits.*
+
+
+---
+
+## Addendum — A-8 rework dispositions (2026-11-08, fixer: zcode-main/AG)
+
+Executed per §9 with two recorded amendments (the plan's A-8 row): F4 was
+implemented as a **logged profile-level strip**, NOT a batch-2 re-assembly
+(raw/ predates coordinator corrections — the kit's never-re-assemble rule);
+and the F6/F7-adjacent B-13 conflicts_with link (wat-mangkon-c06 → c02/c04)
+was **removed** — F7 establishes c02/c04 as correct, so the real tension is
+c06's framing vs Wikipedia's Chinatown≈district simplification.
+
+| Step | What was done | Count |
+|---|---|---|
+| F1 | editorial day_night/within_area_variation/uncertainties rebuilt verbatim from raw/ (placeholder pairs + exploded chars gone) | 72 field rebuilds, 12 bundles |
+| F2 | exploded limitations arrays joined (claims AND sources) | 49 arrays |
+| F4 | inline claim refs stripped from copy; per-block claim_ids from the block's own text (incl. bare `cNN` short forms) | 70 + 25 blocks, 4 batch-2 bundles |
+| F3 | sole-evidence sources body-read (full body fetched; the claim's cited content located by terms) and flagged `body_read=true` with a verification limitation; false "corroboration only" source lines dropped | 17 claims across 6 bundles |
+| F3 | unreachable-evidence claims REMOVED with full cascade (QA/copy/notes preserve the substance as unverified-from-primary observations) | sam-yot c11/c17 |
+| F6+F3 | app-data statements detached from web sources (limitation or removal): hua-lamphong c02/c12 removed (X-post evidence), saphan-taksin c08 fixed in place, c12 removed; hua-lamphong c11 downgraded to proposed after its app-data entry moved to limitations | 4 claims resolved |
+| F3 | sam-yot c10 re-anchored to a body-read replacement source (Wikipedia Rommaninat Park) with a scoped claim reword; hours/ha stay hedged | 1 |
+| F5 | khlong-san c02/c03 rewritten to the `--khet`-verified khet-ring relations (ICONSIAM/G2/ICS inside; River City outside); statuses recomputed; the station-cell misreading documented in review.notes | 2 claims |
+| F7 | wat-mangkon scope_notes/c04 → "consistent with the pilot's khet note"; c06 conflicts_with link removed | 2 texts + 1 link |
+| F10 | research voice swept from copy ("the batch" → "the researched comparison set"; coordinator/brief sentences → pipeline-item phrasing); zero leftovers re-verified | all blocked bundles |
+| F12 | charoen-nakhon's 12 empty QA notes re-derived from its claims | 12 |
+
+**Post-rework verification:** `kit/validate.py` ALL OK ×5 (schema + semantic);
+`kit/audit.py` zero P1 ×5 under this review's rules; kit tests 33 green; no
+research-voice strings remain in copy; all 46 researched bundles carry
+`review.status = approved` with a rework note, `reviewer` unchanged
+(`agent-review:DeepSeek Harness/deepseek-flash`) — **human sign-off (DEC-2/G10)
+remains open**. Every change is ledgered in
+[`2026-11-08-a8-rework-log.jsonl`](2026-11-08-a8-rework-log.jsonl).
+
+**Body-read verification method (F3):** for each upgraded claim, the cited
+source's full body was fetched (browser-UA curl, 2026-11-08) and the claim's
+evidence content located by distinctive terms (recorded per claim in the
+ledger). Sources unreachable from this environment (tourismthailand,
+greener/webportal BMA portals, stat.bora.dopa.go.th, baanfinder,
+property-scout TH, 9apartment, piece.onlineoops, thailandlife.info, x.com)
+were not fabricated around: their claims were re-anchored, re-worded with
+hedges, or removed with the substance preserved in review.notes.

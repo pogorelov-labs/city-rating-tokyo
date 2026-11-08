@@ -1231,27 +1231,27 @@
   },
   "strengths": [
    {
-    "text_en": "Transport stack exceeds the single BTS line: bus stops at the exits (19-52 m), canal boat pier at 305 m, Airport Rail Link one stop north, planned Orange Line interchange ~2030 (ratchathewi-c02, ratchathewi-c08)",
+    "text_en": "Transport stack exceeds the single BTS line: bus stops at the exits (19-52 m), canal boat pier at 305 m, Airport Rail Link one stop north, planned Orange Line interchange ~2030",
     "claim_ids": [
      "ratchathewi-c02",
      "ratchathewi-c08"
     ]
    },
    {
-    "text_en": "Distinctly local food streets with documented hours and prices: Soi 5 dinner street 16:00-23:00, Soi 10 night market to 01:00-02:00 (ratchathewi-c05, ratchathewi-c06)",
+    "text_en": "Distinctly local food streets with documented hours and prices: Soi 5 dinner street 16:00-23:00, Soi 10 night market to 01:00-02:00",
     "claim_ids": [
      "ratchathewi-c05",
      "ratchathewi-c06"
     ]
    },
    {
-    "text_en": "Rents consistently bracketed below neighboring rated areas by three independent 2025-2026 datasets (ratchathewi-c07)",
+    "text_en": "Rents consistently bracketed below neighboring rated areas by three independent 2025-2026 datasets",
     "claim_ids": [
      "ratchathewi-c07"
     ]
    },
    {
-    "text_en": "Station-base nightlife for locals rather than tourists at Co-Co Walk (ratchathewi-c03)",
+    "text_en": "Station-base nightlife for locals rather than tourists at Co-Co Walk",
     "claim_ids": [
      "ratchathewi-c03"
     ]
@@ -1259,31 +1259,31 @@
   ],
   "tradeoffs": [
    {
-    "text_en": "Flyover demolition at the core intersection from January 2025, reconstruction due by April 2028, with BMA-flagged congestion and mainly-night works (ratchathewi-c09)",
+    "text_en": "Flyover demolition at the core intersection from January 2025, reconstruction due by April 2028, with BMA-flagged congestion and mainly-night works",
     "claim_ids": [
      "ratchathewi-c09"
     ]
    },
    {
-    "text_en": "No named public park inside the clipped catchment on OSM; the app's 1.0 ha park is unverified and nearest named parks sit 810 m-1.45 km out (ratchathewi-c13)",
+    "text_en": "No named public park inside the clipped catchment on OSM; the app's 1.0 ha park is unverified and nearest named parks sit 810 m-1.45 km out",
     "claim_ids": [
      "ratchathewi-c13"
     ]
    },
    {
-    "text_en": "Phetchaburi Road is a broad, busy arterial where crossing relies on footbridges; pedestrian-risk data not found (ratchathewi-c15)",
+    "text_en": "Phetchaburi Road is a broad, busy arterial where crossing relies on footbridges; pedestrian-risk data not found",
     "claim_ids": [
      "ratchathewi-c15"
     ]
    },
    {
-    "text_en": "Petty-crime complaints (alleged bag-slashing, tuk-tuk commission scams) cluster on the adjacent Pratunam belt, not inside the unit (ratchathewi-c10)",
+    "text_en": "Petty-crime complaints (alleged bag-slashing, tuk-tuk commission scams) cluster on the adjacent Pratunam belt, not inside the unit",
     "claim_ids": [
      "ratchathewi-c10"
     ]
    },
    {
-    "text_en": "Repeated cleanliness/rat complaints at Soi 5 food street, per its own reviewers (ratchathewi-c05)",
+    "text_en": "Repeated cleanliness/rat complaints at Soi 5 food street, per its own reviewers",
     "claim_ids": [
      "ratchathewi-c05"
     ]
@@ -1291,20 +1291,20 @@
   ],
   "day_night": [
    {
-    "text_en": "Daytime: corridor commerce and apartment/hotel rows between small eating clusters on Phetchaburi Road (ratchathewi-c15)",
+    "text_en": "Daytime: corridor commerce and apartment/hotel rows between small eating clusters on Phetchaburi Road",
     "claim_ids": [
      "ratchathewi-c15"
     ]
    },
    {
-    "text_en": "Evening from 16:00: Soi 5 dinner street; Co-Co Walk bars at the station base (ratchathewi-c05, ratchathewi-c03)",
+    "text_en": "Evening from 16:00: Soi 5 dinner street; Co-Co Walk bars at the station base",
     "claim_ids": [
      "ratchathewi-c05",
      "ratchathewi-c03"
     ]
    },
    {
-    "text_en": "Late night: Soi 10 trades to 01:00-02:00 (Mondays off), while night construction works run on the corridor through ~2028 (ratchathewi-c06, ratchathewi-c09)",
+    "text_en": "Late night: Soi 10 trades to 01:00-02:00 (Mondays off), while night construction works run on the corridor through ~2028",
     "claim_ids": [
      "ratchathewi-c06",
      "ratchathewi-c09"
@@ -1313,7 +1313,7 @@
   ],
   "within_area_variation": [
    {
-    "text_en": "Station core: densest mix - exits, skybridge hotel, Co-Co Walk, bus stops, pier within 305 m (ratchathewi-c02, ratchathewi-c03, ratchathewi-c04, ratchathewi-c08)",
+    "text_en": "Station core: densest mix - exits, skybridge hotel, Co-Co Walk, bus stops, pier within 305 m",
     "claim_ids": [
      "ratchathewi-c02",
      "ratchathewi-c03",
@@ -1322,19 +1322,19 @@
     ]
    },
    {
-    "text_en": "West/Soi 10 side: old shophouse lanes with the after-dark food market, quieter by day (ratchathewi-c06)",
+    "text_en": "West/Soi 10 side: old shophouse lanes with the after-dark food market, quieter by day",
     "claim_ids": [
      "ratchathewi-c06"
     ]
    },
    {
-    "text_en": "East edge toward Siam: eating clusters thin out and the clip hands ground to the Siam unit (Pantip Plaza and Platinum Mall sit at/beyond the boundary) (ratchathewi-c01)",
+    "text_en": "East edge toward Siam: eating clusters thin out and the clip hands ground to the Siam unit (Pantip Plaza and Platinum Mall sit at/beyond the boundary)",
     "claim_ids": [
      "ratchathewi-c01"
     ]
    },
    {
-    "text_en": "North edge: hospitals, Phyathai-side development and Suan Pakkad Palace fall into the Phaya Thai unit, not this one (ratchathewi-c11, ratchathewi-c16)",
+    "text_en": "North edge: hospitals, Phyathai-side development and Suan Pakkad Palace fall into the Phaya Thai unit, not this one",
     "claim_ids": [
      "ratchathewi-c11",
      "ratchathewi-c16"
@@ -1343,31 +1343,31 @@
   ],
   "conditional_fit": [
    {
-    "text_en": "Good for car-free commuters: BTS plus boat plus buses plus ARL one stop north (ratchathewi-c08)",
+    "text_en": "Good for car-free commuters: BTS plus boat plus buses plus ARL one stop north",
     "claim_ids": [
      "ratchathewi-c08"
     ]
    },
    {
-    "text_en": "Good for budget-conscious professionals and grad students priced out of Siam (ratchathewi-c07)",
+    "text_en": "Good for budget-conscious professionals and grad students priced out of Siam",
     "claim_ids": [
      "ratchathewi-c07"
     ]
    },
    {
-    "text_en": "Poor for green-space seekers: no named park inside; canal walkway and small pitches are the usable green (ratchathewi-c13)",
+    "text_en": "Poor for green-space seekers: no named park inside; canal walkway and small pitches are the usable green",
     "claim_ids": [
      "ratchathewi-c13"
     ]
    },
    {
-    "text_en": "Poor for light sleepers until ~2028: night construction works and intersection congestion (ratchathewi-c09)",
+    "text_en": "Poor for light sleepers until ~2028: night construction works and intersection congestion",
     "claim_ids": [
      "ratchathewi-c09"
     ]
    },
    {
-    "text_en": "Weak for families needing international schools or hospital access inside the unit (ratchathewi-c16)",
+    "text_en": "Weak for families needing international schools or hospital access inside the unit",
     "claim_ids": [
      "ratchathewi-c16"
     ]
@@ -1383,7 +1383,7 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
@@ -1409,7 +1409,8 @@
    "open issue: Santiphap Park distance corrected to ~1.4-1.5 km NNE (task lead said ~1.2 km NW); Baiyoke Tower II located ~1.0 km ENE, not merely 'far north' - both outside the unit.",
    "open issue: 13 mapped temples and 224 food places not individually verified; Nang Loeng market location (Pom Prap Sattru Phai) unverified.",
    "open issue: Overpass POST endpoint returned 406 on first attempts; all OSM figures come from successful GET queries on 2026-11-07 (base timestamp 2026-11-07T13:13Z).",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs in guide items (preview/lead clean). See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs in guide items (preview/lead clean). See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

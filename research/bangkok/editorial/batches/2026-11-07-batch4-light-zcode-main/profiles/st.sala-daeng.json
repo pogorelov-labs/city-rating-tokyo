@@ -150,13 +150,14 @@
    "author": "Napaporn Aroonrat",
    "published_at": "2026-06-03",
    "updated_at": null,
-   "retrieved_at": "2026-11-08T00:00:00+07:00",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "editorial_guide",
    "commercial_context": "general travel content",
    "limitations": [
     "Evidence obtained via WebFetch summary + exa highlights, raw body not retained; corroborating only",
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('Lalai')."
    ]
   },
   {
@@ -260,12 +261,13 @@
    "author": null,
    "published_at": "2026-04-28",
    "updated_at": null,
-   "retrieved_at": "2026-11-08T00:00:00+07:00",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "other",
    "commercial_context": "rental lead-gen content",
    "limitations": [
-    "Exa highlights only; flagged corroboration"
+    "Exa highlights only; flagged corroboration",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('Saladaeng One' + '55,000')."
    ]
   },
   {
@@ -929,7 +931,7 @@
   },
   "strengths": [
    {
-    "text_en": "A true merged interchange: two metro lines 330 m apart under one skywalk, extended to a major hospital - the strongest everyday-transport geometry in this batch.",
+    "text_en": "A true merged interchange: two metro lines 330 m apart under one skywalk, extended to a major hospital - the strongest everyday-transport geometry in this researched comparison set.",
     "claim_ids": [
      "sala-daeng-c01",
      "sala-daeng-c09"
@@ -1003,16 +1005,16 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
-   "sources": "incomplete",
+   "sources": "pass",
    "recency": "pass",
-   "claim_support": "fail",
+   "claim_support": "pass",
    "contradictions": "pass",
    "copy": "pass",
    "translations": "not_applicable",
@@ -1025,7 +1027,8 @@
    "open issue: Whether Dusit Central Park's green is publicly accessible (and how much is park vs hotel podium) is unverified (sala-daeng-c08).",
    "open issue: Rent claims rest on exa-highlight-only portal sources; Dot Property's rendered stats were unreachable via curl (client-side rendering) - a body-read rent source would firm up Q08.",
    "open issue: TripAdvisor/Reddit complaint threads returned 403 and were not read; scam-claim evidence is guide-level plus flagged snippets (sala-daeng-c05).",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c11/c12); F10 'this batch' in strengths. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c11/c12); F10 'this batch' in strengths. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

@@ -1278,74 +1278,58 @@
  ],
  "editorial": {
   "preview": {
-   "text_en": "A station-front hotel-and-entertainment quarter on lower Sukhumvit: the Soi 4 bar strip and Nana Plaza on one side, the Soi 3/1 Arab quarter's shisha cafes and late kitchens on the other, Bumrungrad hospital up the soi, and almost no mapped green inside the clipped catchment [nana-c17, nana-c06, nana-c09, nana-c14].",
+   "text_en": "A station-front hotel-and-entertainment quarter on lower Sukhumvit: the Soi 4 bar strip and Nana Plaza on one side, the Soi 3/1 Arab quarter's shisha cafes and late kitchens on the other, Bumrungrad hospital up the soi, and almost no mapped green inside the clipped catchment.",
    "claim_ids": [
-    "nana-c02",
-    "nana-c03",
-    "nana-c04",
-    "nana-c06",
-    "nana-c07",
-    "nana-c08",
-    "nana-c09",
-    "nana-c10",
-    "nana-c11",
-    "nana-c12",
-    "nana-c14",
-    "nana-c15",
-    "nana-c16",
     "nana-c17",
-    "nana-c18"
+    "nana-c06",
+    "nana-c09",
+    "nana-c14"
    ]
   },
   "guide_lead": {
-   "text_en": "Nana (BTS E3, opened 1999) is the name for a stretch of lower Sukhumvit between roughly Soi 1 and Soi 9 whose odd and even sides 'are like two different worlds' [nana-c03, nana-c08]: to the north, Soi Nana (Soi 4) carries the bar strip and the three-floor Nana Plaza complex of about two dozen go-go bars [nana-c04, nana-c17], while Soi 3/3/1 - 'Soi Arab' - has anchored a Middle Eastern community of restaurants and shisha cafes since Shahrazad opened in 1983 [nana-c06]. Daytime it reads as a business-and-hotel lane; the same blocks run late [nana-c07]. Daily-life support is unusually strong for a nightlife district: a 24-hour supermarket block at Soi 5 (snippet-level), Villa Market walking distance, and Bumrungrad hospital 350-500 m up Soi 3 with its own shuttle [nana-c16, nana-c09]. Rents in the surrounding subdistrict average 37,429 THB for 1-bed and 60,855 THB for 2-bed asking, bracketing the app's 28,000/60,000 estimate [nana-c10]. What the unit lacks is quiet and green: the nearest big parks - Benchasiri at Phrom Phong and Lumphini across Rama IV - sit outside the clipped catchment, and only 1.4 ha of park is mapped inside [nana-c14].",
+   "text_en": "Nana (BTS E3, opened 1999) is the name for a stretch of lower Sukhumvit between roughly Soi 1 and Soi 9 whose odd and even sides 'are like two different worlds': to the north, Soi Nana (Soi 4) carries the bar strip and the three-floor Nana Plaza complex of about two dozen go-go bars, while Soi 3/3/1 - 'Soi Arab' - has anchored a Middle Eastern community of restaurants and shisha cafes since Shahrazad opened in 1983. Daytime it reads as a business-and-hotel lane; the same blocks run late. Daily-life support is unusually strong for a nightlife district: a 24-hour supermarket block at Soi 5 (snippet-level), Villa Market walking distance, and Bumrungrad hospital 350-500 m up Soi 3 with its own shuttle. Rents in the surrounding subdistrict average 37,429 THB for 1-bed and 60,855 THB for 2-bed asking, bracketing the app's 28,000/60,000 estimate. What the unit lacks is quiet and green: the nearest big parks - Benchasiri at Phrom Phong and Lumphini across Rama IV - sit outside the clipped catchment, and only 1.4 ha of park is mapped inside.",
    "claim_ids": [
-    "nana-c02",
     "nana-c03",
+    "nana-c08",
     "nana-c04",
+    "nana-c17",
     "nana-c06",
     "nana-c07",
-    "nana-c08",
+    "nana-c16",
     "nana-c09",
     "nana-c10",
-    "nana-c11",
-    "nana-c12",
-    "nana-c14",
-    "nana-c15",
-    "nana-c16",
-    "nana-c17",
-    "nana-c18"
+    "nana-c14"
    ]
   },
   "strengths": [
    {
-    "text_en": "Transit centrality: E3 on the Sukhumvit Line, described as one of the busiest BTS stations, with three exits covering the Soi 3 (Arab quarter + pier), Soi 4 (bar strip) and south-side frontage [nana-c03]",
+    "text_en": "Transit centrality: E3 on the Sukhumvit Line, described as one of the busiest BTS stations, with three exits covering the Soi 3 (Arab quarter + pier), Soi 4 (bar strip) and south-side frontage",
     "claim_ids": [
      "nana-c03"
     ]
    },
    {
-    "text_en": "Two distinct food communities within 300 m of the exits: the Soi 3/1 Arab quarter (Yemeni, Egyptian, Lebanese kitchens since 1983-86) and the Sukhumvit frontage's tourist-and-hotel dining [nana-c06, nana-c17]",
+    "text_en": "Two distinct food communities within 300 m of the exits: the Soi 3/1 Arab quarter (Yemeni, Egyptian, Lebanese kitchens since 1983-86) and the Sukhumvit frontage's tourist-and-hotel dining",
     "claim_ids": [
      "nana-c06",
      "nana-c17"
     ]
    },
    {
-    "text_en": "Healthcare at the doorstep: Bumrungrad at 33 Soi Nana Nuea with a free shuttle from BTS Nana - a rare in-catchment amenity [nana-c09]",
+    "text_en": "Healthcare at the doorstep: Bumrungrad at 33 Soi Nana Nuea with a free shuttle from BTS Nana - a rare in-catchment amenity",
     "claim_ids": [
      "nana-c09"
     ]
    },
    {
-    "text_en": "24-hour service economy including the Soi 5 Foodland block (snippet-level) and late-night Arab-quarter kitchens that 'run past midnight' [nana-c16, nana-c07]",
+    "text_en": "24-hour service economy including the Soi 5 Foodland block (snippet-level) and late-night Arab-quarter kitchens that 'run past midnight'",
     "claim_ids": [
      "nana-c16",
      "nana-c07"
     ]
    },
    {
-    "text_en": "Consistent rent reality: independent portal data brackets the app's 28,000/60,000 asking estimate, with ordinary 1-bed stock found at 27,000 THB ~400 m from the station [nana-c10]",
+    "text_en": "Consistent rent reality: independent portal data brackets the app's 28,000/60,000 asking estimate, with ordinary 1-bed stock found at 27,000 THB ~400 m from the station",
     "claim_ids": [
      "nana-c10"
     ]
@@ -1353,33 +1337,33 @@
   ],
   "tradeoffs": [
    {
-    "text_en": "Nightlife is the load-bearing feature and the main cost: noise 'until very late' near Soi 4 (and Soi 11, though that block sits on the st.asok side of the clip) [nana-c11, nana-c08]",
+    "text_en": "Nightlife is the load-bearing feature and the main cost: noise 'until very late' near Soi 4 (and Soi 11, though that block sits on the st.asok side of the clip)",
     "claim_ids": [
      "nana-c11",
      "nana-c08"
     ]
    },
    {
-    "text_en": "A scam/tout environment is repeatedly reported around the plaza and Soi 4 frontage - padded bills, touts, spiking warnings - even though the same sources call it 'generally safe' beyond that [nana-c12, nana-c11]",
+    "text_en": "A scam/tout environment is repeatedly reported around the plaza and Soi 4 frontage - padded bills, touts, spiking warnings - even though the same sources call it 'generally safe' beyond that",
     "claim_ids": [
      "nana-c12",
      "nana-c11"
     ]
    },
    {
-    "text_en": "Green inside the clipped unit is minimal: 1.4 ha mapped on 0.97 sq km, with Benchasiri outside at Phrom Phong and Lumphini's nearest edge a ~0.7-0.8 km boundary case requiring an arterial-road crossing [nana-c14]",
+    "text_en": "Green inside the clipped unit is minimal: 1.4 ha mapped on 0.97 sq km, with Benchasiri outside at Phrom Phong and Lumphini's nearest edge a ~0.7-0.8 km boundary case requiring an arterial-road crossing",
     "claim_ids": [
      "nana-c14"
     ]
    },
    {
-    "text_en": "Space-per-baht is poor: 'you often pay more for less space than further-out Bangkok neighborhoods', and Sukhumvit traffic is heavy for car users [nana-c11]",
+    "text_en": "Space-per-baht is poor: 'you often pay more for less space than further-out Bangkok neighborhoods', and Sukhumvit traffic is heavy for car users",
     "claim_ids": [
      "nana-c11"
     ]
    },
    {
-    "text_en": "Identity confusion is real editorial work: three registers of 'Nana' (station area / Soi 4 / intersection) plus the separate Chinatown Soi Nana mean guides attribute venues to the wrong unit [nana-c18, nana-c02]",
+    "text_en": "Identity confusion is real editorial work: three registers of 'Nana' (station area / Soi 4 / intersection) plus the separate Chinatown Soi Nana mean guides attribute venues to the wrong unit",
     "claim_ids": [
      "nana-c18",
      "nana-c02"
@@ -1388,20 +1372,20 @@
   ],
   "day_night": [
    {
-    "text_en": "Day: 'fairly quiet business/residential lane' on Soi Nana itself; hospital, office and errand traffic on the Sukhumvit frontage; hotel breakfast-and-tour circuit [nana-c07]",
+    "text_en": "Day: 'fairly quiet business/residential lane' on Soi Nana itself; hospital, office and errand traffic on the Sukhumvit frontage; hotel breakfast-and-tour circuit",
     "claim_ids": [
      "nana-c07"
     ]
    },
    {
-    "text_en": "Evening: Arab-quarter kitchens peak ('come hungry, come late', Al Hussain runs past midnight) while the bar strip and Nana Plaza light up from 19:00 [nana-c07, nana-c04]",
+    "text_en": "Evening: Arab-quarter kitchens peak ('come hungry, come late', Al Hussain runs past midnight) while the bar strip and Nana Plaza light up from 19:00",
     "claim_ids": [
      "nana-c07",
      "nana-c04"
     ]
    },
    {
-    "text_en": "Late night: plaza closes 02:00-03:00 (operator vs Wikipedia conflict); the 24-hour Foodland block and late shisha cafes take over the residual demand [nana-c04, nana-c16]",
+    "text_en": "Late night: plaza closes 02:00-03:00 (operator vs Wikipedia conflict); the 24-hour Foodland block and late shisha cafes take over the residual demand",
     "claim_ids": [
      "nana-c04",
      "nana-c16"
@@ -1410,28 +1394,28 @@
   ],
   "within_area_variation": [
    {
-    "text_en": "Odd/even split: Soi 3/3/1 Arab community quarter vs Soi 4/5 hotel-bar strip - 'like two completely different worlds' [nana-c08, nana-c06]",
+    "text_en": "Odd/even split: Soi 3/3/1 Arab community quarter vs Soi 4/5 hotel-bar strip - 'like two completely different worlds'",
     "claim_ids": [
      "nana-c08",
      "nana-c06"
     ]
    },
    {
-    "text_en": "Soi-by-soi noise gradient: frontage and Soi 4 loud until late; deeper residential pockets 'quieter by day'; guide names Soi 10/12 as quieter but that sits beyond the east clip [nana-c08, nana-c15]",
+    "text_en": "Soi-by-soi noise gradient: frontage and Soi 4 loud until late; deeper residential pockets 'quieter by day'; guide names Soi 10/12 as quieter but that sits beyond the east clip",
     "claim_ids": [
      "nana-c08",
      "nana-c15"
     ]
    },
    {
-    "text_en": "West/east clip asymmetry: the Soi 9-13 hotel cluster (Marriott, Hyatt Regency Sukhumvit, Sofitel/Ramada) falls outside or borderline into st.asok's catchment, though station guides list it under Nana exits [nana-c15, nana-c03]",
+    "text_en": "West/east clip asymmetry: the Soi 9-13 hotel cluster (Marriott, Hyatt Regency Sukhumvit, Sofitel/Ramada) falls outside or borderline into st.asok's catchment, though station guides list it under Nana exits",
     "claim_ids": [
      "nana-c15",
      "nana-c03"
     ]
    },
    {
-    "text_en": "South-of-Sukhumvit even-soi blocks are the residential face, with their far southern depth clipped off by st.lumphini's catchment [nana-c15]",
+    "text_en": "South-of-Sukhumvit even-soi blocks are the residential face, with their far southern depth clipped off by st.lumphini's catchment",
     "claim_ids": [
      "nana-c15"
     ]
@@ -1439,34 +1423,34 @@
   ],
   "conditional_fit": [
    {
-    "text_en": "Good fit: long-stay expats and remote workers who want centrality, transit, food diversity and hospital access and can accept noise - 'single professionals, couples, and even families who want central access' per the residential guide [nana-c11, nana-c09]",
+    "text_en": "Good fit: long-stay expats and remote workers who want centrality, transit, food diversity and hospital access and can accept noise - 'single professionals, couples, and even families who want central access' per the residential guide",
     "claim_ids": [
      "nana-c11",
      "nana-c09"
     ]
    },
    {
-    "text_en": "Good fit: Arab-community and Muslim travellers using the Soi 3/1 quarter's kitchens, groceries and halal infrastructure [nana-c06, nana-c07]",
+    "text_en": "Good fit: Arab-community and Muslim travellers using the Soi 3/1 quarter's kitchens, groceries and halal infrastructure",
     "claim_ids": [
      "nana-c06",
      "nana-c07"
     ]
    },
    {
-    "text_en": "Poor fit: light sleepers or families prioritizing green and quiet - the nearest major parks are outside the clipped unit [nana-c14, nana-c11]",
+    "text_en": "Poor fit: light sleepers or families prioritizing green and quiet - the nearest major parks are outside the clipped unit",
     "claim_ids": [
      "nana-c14",
      "nana-c11"
     ]
    },
    {
-    "text_en": "Poor fit: budget renters wanting space and car-dependent residents - higher cost per sqm and heavy Sukhumvit traffic [nana-c11]",
+    "text_en": "Poor fit: budget renters wanting space and car-dependent residents - higher cost per sqm and heavy Sukhumvit traffic",
     "claim_ids": [
      "nana-c11"
     ]
    },
    {
-    "text_en": "Poor fit (situational): first-time tourists averse to touts and bill-padding around the plaza; the same area is rated 'generally safe' for alert residents [nana-c12, nana-c11]",
+    "text_en": "Poor fit (situational): first-time tourists averse to touts and bill-padding around the plaza; the same area is rated 'generally safe' for alert residents",
     "claim_ids": [
      "nana-c12",
      "nana-c11"
@@ -1484,7 +1468,7 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
@@ -1512,7 +1496,8 @@
    "open issue: Wongnai item 'bar opens near BTS Nana, 3 floors 3 feels' (snippet, Thai) suggests recent venue churn on the frontage; not pursued - could add to Q11 with a body read.",
    "open issue: No signed-rent or historical rent series for the station area; app's 28,000/60,000 station-override remains tested only against asking-rent portals (consistent at lower-middle of range).",
    "open issue: Sukhumvit skywalk continuity toward Chidlom/Phloen Chit is search-level info only (visitthailandtoday/royalivory snippets); confirm before claiming walkable elevated access from Nana.",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs; F14 reviewer green candidate note (non-blocking). See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs; F14 reviewer green candidate note (non-blocking). See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

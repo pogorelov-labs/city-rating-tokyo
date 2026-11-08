@@ -206,7 +206,7 @@
   },
   {
    "id": "khlong-san-c02",
-   "text_en": "Transit serving the khet (both wikis' lists): BTS Silom Line's Krung Thon Buri and Wongwian Yai stations, and the BTS Gold Line's three stops (Krung Thon Buri, Charoen Nakhon, Khlong San). Per the sibling st.khlong-san bundle, Gold Line G3 'Khlong San' (opened 16 Dec 2020, in front of Taksin Hospital) is the line's terminus and its OSM node sits inside the app district polygon; G2 Charoen Nakhon - the ICONSIAM stop - falls OUTSIDE the app district polygon, as does BTS Krung Thon Buri. Tha Din Daeng, Khlong San, Si Phraya (two gates), ICONSIAM 2/4 and other named ferry terminals are mapped along the khet's river frontage; both wikis list Tha Din Daeng and the Chao Phraya express-boat stops.",
+   "text_en": "Transit serving the khet (both wikis' lists): BTS Silom Line's Krung Thon Buri and Wongwian Yai stations, and the BTS Gold Line's three stops (Krung Thon Buri, Charoen Nakhon, Khlong San). Per the sibling st.khlong-san bundle, Gold Line G3 'Khlong San' (opened 16 Dec 2020, in front of Taksin Hospital) is the line's terminus. Tha Din Daeng, Khlong San, Si Phraya (two gates), ICONSIAM 2/4 and other named ferry terminals are mapped along the khet's river frontage; both wikis list Tha Din Daeng and the Chao Phraya express-boat stops.",
    "kind": "factual_report",
    "topics": [
     "boundaries",
@@ -245,13 +245,14 @@
    "supporting_claim_ids": [],
    "conflicts_with": [],
    "limitations": [
-    "app khlong-san polygon is too coarse to contain most of these points (only G3 + Talat Tha Din Daeng PIP-IN); coordinator polygon audit recommended"
+    "app khlong-san polygon is too coarse to contain most of these points (only G3 + Talat Tha Din Daeng PIP-IN); coordinator polygon audit recommended",
+    "app polygon relations re-verified with --khet (2026-11-08, A-8 F5 fix): G3 Khlong San, G2 Charoen Nakhon and ICONSIAM PIP-IN the khet ring; River City PIP-OUT (Bang Rak); BTS Krung Thon Buri's edge position not independently settled — app-data anchors are score context, not web evidence. The earlier 'falls OUTSIDE' statement measured the station cell under the documented key-shadowing trap, not the khet ring."
    ],
    "review_status": "corroborated"
   },
   {
    "id": "khlong-san-c03",
-   "text_en": "ICONSIAM is the district's economic anchor: opened 9 November 2018 on a 30-rai riverside plot with roughly 50 billion THB invested, revenues reported at ~2,000M THB (2020-21), 3,747M (2022) and 5,385M (2024), with 51 new brands committing ~1,500M THB around the 2025 anniversary and an 'ICONSIAM 2' project teased. The mall sits in khwaeng Wat Kanlaya, Khet Khlong San (batch-3 found it inside st.charoen-nakhon's catchment within this district), but the app's khlong-san district polygon EXCLUDES the ICONSIAM/ICS/River Park points (PIP-verified) - a polygon-vs-administration conflict the coordinator must resolve.",
+   "text_en": "ICONSIAM is the district's economic anchor: opened 9 November 2018 on a 30-rai riverside plot with roughly 50 billion THB invested, revenues reported at ~2,000M THB (2020-21), 3,747M (2022) and 5,385M (2024), with 51 new brands committing ~1,500M THB around the 2025 anniversary and an 'ICONSIAM 2' project teased. The mall sits in khwaeng Wat Kanlaya, Khet Khlong San (batch-3 found it inside st.charoen-nakhon's catchment within this district), point-in-polygon against the app's khet ring (--khet, 2026-11-08) places ICONSIAM and ICS INSIDE it and River City outside (River City is Bang Rak) — the earlier 'polygon excludes ICONSIAM' statement had measured the station cell under the documented key-shadowing trap.",
    "kind": "factual_report",
    "topics": [
     "boundaries",
@@ -774,49 +775,19 @@
   ],
   "day_night": [
    {
-    "text_en": "text",
+    "text_en": "Mornings run on hospital, school and ferry commutes; ICONSIAM's evenings and weekends draw the crowds the sois never see; after midnight the khet is residential again - the Gold Line and mall both shut early.",
     "claim_ids": [
-     "khlong-san-c02",
-     "khlong-san-c03",
-     "khlong-san-c04",
-     "khlong-san-c05",
-     "khlong-san-c06",
-     "khlong-san-c07"
-    ]
-   },
-   {
-    "text_en": "claim_ids",
-    "claim_ids": [
-     "khlong-san-c02",
-     "khlong-san-c03",
-     "khlong-san-c04",
-     "khlong-san-c05",
-     "khlong-san-c06",
-     "khlong-san-c07"
+     "khlong-san-c09",
+     "khlong-san-c02"
     ]
    }
   ],
   "within_area_variation": [
    {
-    "text_en": "text",
+    "text_en": "Three Khlong Sans: the quiet khwaeng-Khlong San/Bang Lamphu Lang inland core around the district office, the Somdet Chao Phraya temple-and-market north, and the Wat Kanlaya riverfront where ICONSIAM sets a downtown register - administratively one khet, split by the app polygon.",
     "claim_ids": [
-     "khlong-san-c02",
-     "khlong-san-c03",
-     "khlong-san-c04",
-     "khlong-san-c05",
-     "khlong-san-c06",
-     "khlong-san-c07"
-    ]
-   },
-   {
-    "text_en": "claim_ids",
-    "claim_ids": [
-     "khlong-san-c02",
-     "khlong-san-c03",
-     "khlong-san-c04",
-     "khlong-san-c05",
-     "khlong-san-c06",
-     "khlong-san-c07"
+     "khlong-san-c01",
+     "khlong-san-c03"
     ]
    }
   ],
@@ -838,13 +809,12 @@
    }
   ],
   "uncertainties": [
-   "text",
-   "claim_ids"
+   "Unresolved: ICONSIAM's polygon membership vs its khwaeng Wat Kanlaya address; the 5.3-ha park counting rule; pier-count rule (OSM shows 11+ named terminals); status of the former plaza plot; safety 7 rests on no located statistics."
   ]
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
@@ -869,7 +839,9 @@
    "open issue: Thai PBS Locals community story (Masjid Suwannaphum, 'last mosque of Charoen Nakhon') is JS-rendered and could not be body-read; used only as a lead for future deep passes.",
    "open issue: claim khlong-san-c12 removed: no surviving web evidence after cleanup",
    "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 + F5 false ICONSIAM/G2 polygon claim (station cell mistaken for khet). See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 + F5 false ICONSIAM/G2 polygon claim (station cell mistaken for khet). See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): F5 fixed: c02/c03 rewritten to the --khet-verified khet-ring relations (ICONSIAM/G2/ICS inside; River City outside); the 10-vertex object in the earlier statements was the station cell (key-shadowing trap).",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

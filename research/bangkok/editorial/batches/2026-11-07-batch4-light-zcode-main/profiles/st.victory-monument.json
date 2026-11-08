@@ -869,7 +869,7 @@
    ]
   },
   "guide_lead": {
-   "text_en": "Victory Monument is the city's great bus-van-BTS interchange: more than 4,500 bus trips a day through four islands that a 2025-2026 BMA programme is reorganising around how people actually move (destination-clustered stops, doubled crosswalks, a 1,300 m Rajavithi skywalk reaching the BTS, phase 1 opening October 2026). Food runs deep — the area tops a well-known street-food list on the strength of its boat-noodle alleys, with Rangnam Road's evening row beside it — and rents sit mid-corridor (doorstep listings 20,000-42,000 baht against the app's 18,000/38,000 blend). The frictions are equally documented: a renovation that could stall half-funded on two of the four islands, dangerous island-to-island crossings in the interim, a modest 3.2 ha green space as the only real park, and a district attribution (Ratchathewi in the encyclopedias and district portal; phaya-thai in the app polygon) that the coordinator must settle.",
+   "text_en": "Victory Monument is the city's great bus-van-BTS interchange: more than 4,500 bus trips a day through four islands that a 2025-2026 BMA programme is reorganising around how people actually move (destination-clustered stops, doubled crosswalks, a 1,300 m Rajavithi skywalk reaching the BTS, phase 1 opening October 2026). Food runs deep — the area tops a well-known street-food list on the strength of its boat-noodle alleys, with Rangnam Road's evening row beside it — and rents sit mid-corridor (doorstep listings 20,000-42,000 baht against the app's 18,000/38,000 blend). The frictions are equally documented: a renovation that could stall half-funded on two of the four islands, dangerous island-to-island crossings in the interim, a modest 3.2 ha green space as the only real park, and a district attribution (Ratchathewi in the encyclopedias and district portal; phaya-thai in the app polygon) — an open data-layer item.",
    "claim_ids": [
     "victory-monument-c01",
     "victory-monument-c04",
@@ -958,7 +958,7 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
@@ -981,7 +981,8 @@
    "open issue: Find a post-September-2025 source on the BMA council's budget decision for the Phaya Thai/Din Daeng islands (victory-monument-c07).",
    "open issue: Re-read the Daily News and PRD pages when accessible (403/DNS failures) to upgrade the bus-stop closure and eight-hospital claims from snippet corroboration.",
    "open issue: No resident-report sources accessible (Reddit/TripAdvisor 403 per brief); safety 6 remains unverified in either direction.",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F10 'coordinator must settle' in guide lead. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F10 'coordinator must settle' in guide lead. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

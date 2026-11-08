@@ -1201,58 +1201,44 @@
  ],
  "editorial": {
   "preview": {
-   "text_en": "Phaya Thai is a 9.6 km2 district whose three BTS stations (Ari, Sanam Pao, Saphan Khwai) straddle the Phahonyothin corridor, but the daily experience splits between Ari's low-rise cafe sois, Saphan Khwai's dense commercial blocks, and a Vibhavadi-Pradiphat band of Army and state compounds that holds most of the mapped green. The namesake BTS/ARL station is actually across the boundary in Ratchathewi [phaya-thai-c03, c06, c08, c09].",
+   "text_en": "Phaya Thai is a 9.6 km2 district whose three BTS stations (Ari, Sanam Pao, Saphan Khwai) straddle the Phahonyothin corridor, but the daily experience splits between Ari's low-rise cafe sois, Saphan Khwai's dense commercial blocks, and a Vibhavadi-Pradiphat band of Army and state compounds that holds most of the mapped green. The namesake BTS/ARL station is actually across the boundary in Ratchathewi.",
    "claim_ids": [
     "phaya-thai-c03",
-    "phaya-thai-c05",
     "phaya-thai-c06",
-    "phaya-thai-c07",
     "phaya-thai-c08",
-    "phaya-thai-c09",
-    "phaya-thai-c10",
-    "phaya-thai-c11",
-    "phaya-thai-c12",
-    "phaya-thai-c13",
-    "phaya-thai-c14"
+    "phaya-thai-c09"
    ]
   },
   "guide_lead": {
-   "text_en": "Phaya Thai khet is best read as three districts in one [phaya-thai-c14]. Along Phahonyothin, Ari's Soi 1-7 grid pairs mid-rise condos with cafe-filled quiet sois, while Saphan Khwai two stops north concentrates shops, apartments and a junction that police close for major events [phaya-thai-c08, c09]. Between them, Pradiphat still carries its military-institutional character, and along Vibhavadi the Army Club and stadium occupy the largest green block - land you can see but not freely use [phaya-thai-c06, c10]. Rents reflect the split: portal asks from the 12,000s in older stock to 35,000+ in Ari's newer buildings [phaya-thai-c11].",
+   "text_en": "Phaya Thai khet is best read as three districts in one. Along Phahonyothin, Ari's Soi 1-7 grid pairs mid-rise condos with cafe-filled quiet sois, while Saphan Khwai two stops north concentrates shops, apartments and a junction that police close for major events. Between them, Pradiphat still carries its military-institutional character, and along Vibhavadi the Army Club and stadium occupy the largest green block - land you can see but not freely use. Rents reflect the split: portal asks from the 12,000s in older stock to 35,000+ in Ari's newer buildings.",
    "claim_ids": [
-    "phaya-thai-c03",
-    "phaya-thai-c05",
-    "phaya-thai-c06",
-    "phaya-thai-c07",
     "phaya-thai-c08",
     "phaya-thai-c09",
-    "phaya-thai-c10",
-    "phaya-thai-c11",
-    "phaya-thai-c12",
-    "phaya-thai-c13",
-    "phaya-thai-c14"
+    "phaya-thai-c06",
+    "phaya-thai-c10"
    ]
   },
   "strengths": [
    {
-    "text_en": "Three BTS stations inside the khet plus the ARL interchange one stop south - the district's core transit promise [phaya-thai-c03]",
+    "text_en": "Three BTS stations inside the khet plus the ARL interchange one stop south - the district's core transit promise",
     "claim_ids": [
      "phaya-thai-c03"
     ]
    },
    {
-    "text_en": "Ari's walkable cafe sois one soi off the arterial, with street-food-priced eating on Soi Phahonyothin 7 [phaya-thai-c08]",
+    "text_en": "Ari's walkable cafe sois one soi off the arterial, with street-food-priced eating on Soi Phahonyothin 7",
     "claim_ids": [
      "phaya-thai-c08"
     ]
    },
    {
-    "text_en": "Deep everyday healthcare: five private/military hospitals in-district plus Phramongkutklao across the boundary [phaya-thai-c13]",
+    "text_en": "Deep everyday healthcare: five private/military hospitals in-district plus Phramongkutklao across the boundary",
     "claim_ids": [
      "phaya-thai-c13"
     ]
    },
    {
-    "text_en": "Wide rent ladder (roughly 12,000-45,000 THB asking) letting budget and mid-market renters live within walking distance of the same line [phaya-thai-c11]",
+    "text_en": "Wide rent ladder (roughly 12,000-45,000 THB asking) letting budget and mid-market renters live within walking distance of the same line",
     "claim_ids": [
      "phaya-thai-c11"
     ]
@@ -1260,33 +1246,33 @@
   ],
   "tradeoffs": [
    {
-    "text_en": "Phahonyothin rush-hour congestion and the Saphan Khwai junction chokepoint, which police advise avoiding city-wide on big-event days [phaya-thai-c09, c12]",
+    "text_en": "Phahonyothin rush-hour congestion and the Saphan Khwai junction chokepoint, which police advise avoiding city-wide on big-event days",
     "claim_ids": [
      "phaya-thai-c09",
      "phaya-thai-c12"
     ]
    },
    {
-    "text_en": "Public green is pocket-scale: BMA's named parks here are expressway-margin leftovers of ~1-2 ha, while the big green is restricted military land [phaya-thai-c06, c07]",
+    "text_en": "Public green is pocket-scale: BMA's named parks here are expressway-margin leftovers of ~1-2 ha, while the big green is restricted military land",
     "claim_ids": [
      "phaya-thai-c06",
      "phaya-thai-c07"
     ]
    },
    {
-    "text_en": "Flood exposure on some low sois in heavy rain, per the district guide's own cons list [phaya-thai-c12]",
+    "text_en": "Flood exposure on some low sois in heavy rain, per the district guide's own cons list",
     "claim_ids": [
      "phaya-thai-c12"
     ]
    },
    {
-    "text_en": "Evening quiet: the area is cafe-daytime oriented and 'sleepy' after dark for those wanting nightlife [phaya-thai-c12]",
+    "text_en": "Evening quiet: the area is cafe-daytime oriented and 'sleepy' after dark for those wanting nightlife",
     "claim_ids": [
      "phaya-thai-c12"
     ]
    },
    {
-    "text_en": "Identity confusion is structural: Phaya Thai Road, BTS Phaya Thai, Phaya Thai Palace and Victory Monument are all outside the khet they appear to name [phaya-thai-c03, c05]",
+    "text_en": "Identity confusion is structural: Phaya Thai Road, BTS Phaya Thai, Phaya Thai Palace and Victory Monument are all outside the khet they appear to name",
     "claim_ids": [
      "phaya-thai-c03",
      "phaya-thai-c05"
@@ -1295,27 +1281,27 @@
   ],
   "day_night": [
    {
-    "text_en": "Weekday mornings: school and office flows concentrate on Phahonyothin; Saphan Khwai junction backs up toward the sois [phaya-thai-c09, c12]",
+    "text_en": "Weekday mornings: school and office flows concentrate on Phahonyothin; Saphan Khwai junction backs up toward the sois",
     "claim_ids": [
      "phaya-thai-c09",
      "phaya-thai-c12"
     ]
    },
    {
-    "text_en": "Daytime: Ari's cafes and the PRD garden at the end of Soi Ari Samphan absorb the district's leisure foot traffic [phaya-thai-c07, c08]",
+    "text_en": "Daytime: Ari's cafes and the PRD garden at the end of Soi Ari Samphan absorb the district's leisure foot traffic",
     "claim_ids": [
      "phaya-thai-c07",
      "phaya-thai-c08"
     ]
    },
    {
-    "text_en": "Event days: junction-level closures around GSB head office can cut the crossing for a full day (06:00-18:00 advisories) [phaya-thai-c09]",
+    "text_en": "Event days: junction-level closures around GSB head office can cut the crossing for a full day (06:00-18:00 advisories)",
     "claim_ids": [
      "phaya-thai-c09"
     ]
    },
    {
-    "text_en": "Evenings: commercial energy drains; the guide describes Ari as sleepier than Sukhumvit-side districts [phaya-thai-c12]",
+    "text_en": "Evenings: commercial energy drains; the guide describes Ari as sleepier than Sukhumvit-side districts",
     "claim_ids": [
      "phaya-thai-c12"
     ]
@@ -1323,31 +1309,31 @@
   ],
   "within_area_variation": [
    {
-    "text_en": "Ari (Soi Ari 1-7, Ari Samphan): cafe-residential, the guide's most expensive and most walkable band [phaya-thai-c08]",
+    "text_en": "Ari (Soi Ari 1-7, Ari Samphan): cafe-residential, the guide's most expensive and most walkable band",
     "claim_ids": [
      "phaya-thai-c08"
     ]
    },
    {
-    "text_en": "Saphan Khwai: denser, 'grittier, more local', cheapest stock, district's most concentrated population [phaya-thai-c09]",
+    "text_en": "Saphan Khwai: denser, 'grittier, more local', cheapest stock, district's most concentrated population",
     "claim_ids": [
      "phaya-thai-c09"
     ]
    },
    {
-    "text_en": "Pradiphat-Sanam Pao: military plots between residential conversions; history visible in street fabric [phaya-thai-c10]",
+    "text_en": "Pradiphat-Sanam Pao: military plots between residential conversions; history visible in street fabric",
     "claim_ids": [
      "phaya-thai-c10"
     ]
    },
    {
-    "text_en": "Vibhavadi edge: Army Club/stadium, Channel 5, Veterans' Hospital - green without public access [phaya-thai-c06]",
+    "text_en": "Vibhavadi edge: Army Club/stadium, Channel 5, Veterans' Hospital - green without public access",
     "claim_ids": [
      "phaya-thai-c06"
     ]
    },
    {
-    "text_en": "Sam Sen Nai-Inthamara: plain townhouse/apartment grid, few named amenities, no BMA park on its own streets [phaya-thai-c07, c14]",
+    "text_en": "Sam Sen Nai-Inthamara: plain townhouse/apartment grid, few named amenities, no BMA park on its own streets",
     "claim_ids": [
      "phaya-thai-c07",
      "phaya-thai-c14"
@@ -1356,33 +1342,33 @@
   ],
   "conditional_fit": [
    {
-    "text_en": "Fit: cafe-culture workers and remote workers priced out of Thonglor/Asoke who want calm sois near BTS [phaya-thai-c08, c11]",
+    "text_en": "Fit: cafe-culture workers and remote workers priced out of Thonglor/Asoke who want calm sois near BTS",
     "claim_ids": [
      "phaya-thai-c08",
      "phaya-thai-c11"
     ]
    },
    {
-    "text_en": "Fit: budget renters targeting Saphan Khwai's apartment stock who work locally or tolerate junction traffic [phaya-thai-c09, c11]",
+    "text_en": "Fit: budget renters targeting Saphan Khwai's apartment stock who work locally or tolerate junction traffic",
     "claim_ids": [
      "phaya-thai-c09",
      "phaya-thai-c11"
     ]
    },
    {
-    "text_en": "Poor fit: nightlife-first residents and anyone whose commute crosses town daily (30+ min to Silom/Sathorn per the guide) [phaya-thai-c12]",
+    "text_en": "Poor fit: nightlife-first residents and anyone whose commute crosses town daily (30+ min to Silom/Sathorn per the guide)",
     "claim_ids": [
      "phaya-thai-c12"
     ]
    },
    {
-    "text_en": "Poor fit: households that need daily park access - the khet's public parks are pocket-scale and unevenly placed [phaya-thai-c07]",
+    "text_en": "Poor fit: households that need daily park access - the khet's public parks are pocket-scale and unevenly placed",
     "claim_ids": [
      "phaya-thai-c07"
     ]
    },
    {
-    "text_en": "Watch item: monsoon-season flooding on specific low sois; ask street-by-street, not district-wide [phaya-thai-c12]",
+    "text_en": "Watch item: monsoon-season flooding on specific low sois; ask street-by-street, not district-wide",
     "claim_ids": [
      "phaya-thai-c12"
     ]
@@ -1398,7 +1384,7 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
@@ -1425,7 +1411,8 @@
    "open issue: App '23 temples' vs wiki 'Wat Phai Tan only temple in the khet' - determine the app's counting rule (includes shrines/churches?) before publishing anything about religious sites.",
    "open issue: Samsen Nai/Inthamara community texture and Sanam Pao's Sri Supharaj Arcade were only lightly sourced (Thai wiki lists) - a Thai-language community-source pass would strengthen Q02/Q05 for these subareas.",
    "open issue: Access failures to log against: greener.bangkok.go.th (403 direct; Exa workaround used), webportal.bangkok.go.th district page (403), webReader on Thai URLs (MCP -400), Overpass API (406/timeout/malformed from sandbox), th.wikipedia สนามกีฬาทหารบก (404, wrong title), one WebSearch timeout (Army Stadium EN query).",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs in preview/lead/guide items; union preview claim_ids. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs in preview/lead/guide items; union preview claim_ids. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

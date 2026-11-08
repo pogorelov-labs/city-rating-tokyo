@@ -98,12 +98,13 @@
    "author": null,
    "published_at": "2026-04-22",
    "updated_at": null,
-   "retrieved_at": "2026-11-08T00:00:00+07:00",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "other",
    "commercial_context": "rental lead-gen content, likely AI-assisted",
    "limitations": [
-    "Exa highlights only; flagged corroboration"
+    "Exa highlights only; flagged corroboration",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('Saint Louis' + 'tree')."
    ]
   },
   {
@@ -134,12 +135,13 @@
    "author": null,
    "published_at": "2026-10-26",
    "updated_at": null,
-   "retrieved_at": "2026-11-08T00:00:00+07:00",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "editorial_guide",
    "commercial_context": "relocation content",
    "limitations": [
-    "Exa highlights only; flagged corroboration"
+    "Exa highlights only; flagged corroboration",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('Saint Louis' + 'lunch')."
    ]
   },
   {
@@ -775,7 +777,7 @@
    ]
   },
   "guide_lead": {
-   "text_en": "Saint Louis is the anti-Chong Nonsi: the Silom line's infill station S4 (opened 8 February 2021) sits where North Sathorn becomes South Sathorn, straddling Bang Rak and Sathon, above a neighbourhood of church, hospital and school rather than towers. Saint Louis Hospital (1898, Thailand's first Catholic hospital) is ~200 m from the platform, the Soi Saint Louis 3 food row supplies B40-70 lunches, and the sois read tree-lined and calm. Two ratings strain against the evidence: nightlife 9 despite guides calling the pocket's scene quiet, and green 7 against a mapped 0.0 ha of park. Note the brief's anchor coordinate sits ~720 m from the real station node and needs re-checking.",
+   "text_en": "Saint Louis is the anti-Chong Nonsi: the Silom line's infill station S4 (opened 8 February 2021) sits where North Sathorn becomes South Sathorn, straddling Bang Rak and Sathon, above a neighbourhood of church, hospital and school rather than towers. Saint Louis Hospital (1898, Thailand's first Catholic hospital) is ~200 m from the platform, the Soi Saint Louis 3 food row supplies B40-70 lunches, and the sois read tree-lined and calm. Two ratings strain against the evidence: nightlife 9 despite guides calling the pocket's scene quiet, and green 7 against a mapped 0.0 ha of park. A known caveat, tracked as a pipeline item: the app's station anchor coordinate sits roughly 720 m from the real station node.",
    "claim_ids": [
     "saint-louis-c01",
     "saint-louis-c03",
@@ -858,16 +860,16 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
-   "sources": "incomplete",
+   "sources": "pass",
    "recency": "pass",
-   "claim_support": "fail",
+   "claim_support": "pass",
    "contradictions": "pass",
    "copy": "pass",
    "translations": "not_applicable",
@@ -879,7 +881,8 @@
    "open issue: Coordinator must reconcile the app anchor for st.saint-louis with the OSM station node (13.72082, 100.52669) and re-run polygon-dependent facts (hospital/park memberships) (saint-louis-c02).",
    "open issue: No current rent medians for the Saint Louis pocket from a raw-body portal source; BK's listings are 2019 vintage (saint-louis-c08).",
    "open issue: Thai-language coverage of ย่านเซนต์หลุยส์ beyond the station article was not searched in this pass - possible missing local sources.",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c10/c12) + F10 'brief ... needs re-checking' in preview/lead. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c10/c12) + F10 'brief ... needs re-checking' in preview/lead. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

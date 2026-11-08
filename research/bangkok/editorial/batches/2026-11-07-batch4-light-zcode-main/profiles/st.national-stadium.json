@@ -763,7 +763,7 @@
    ]
   },
   "guide_lead": {
-   "text_en": "National Stadium is Siam's practical back door: same skywalk network, same food density in the app's top tier, but rents that start where the student khwaeng begins (app blend 36,500/82,000, the batch's lowest). The trade is precision - the stadium gives the unit its name and its event nights, and the park its green score leans on sits mostly beyond the 800-meter line.",
+   "text_en": "National Stadium is Siam's practical back door: same skywalk network, same food density in the app's top tier, but rents that start where the student khwaeng begins (app blend 36,500/82,000, the researched comparison set's lowest). The trade is precision - the stadium gives the unit its name and its event nights, and the park its green score leans on sits mostly beyond the 800-meter line.",
    "claim_ids": [
     "national-stadium-c01",
     "national-stadium-c10",
@@ -829,7 +829,7 @@
   ],
   "conditional_fit": [
    {
-    "text_en": "Fit for students, event-goers and budget-leaning renters who want Siam's food reach at the batch's lowest rent blend and can live with concert-night crowds.",
+    "text_en": "Fit for students, event-goers and budget-leaning renters who want Siam's food reach at the researched comparison set's lowest rent blend and can live with concert-night crowds.",
     "claim_ids": [
      "national-stadium-c10",
      "national-stadium-c11",
@@ -854,7 +854,7 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
@@ -876,7 +876,8 @@
    "open issue: gym_sports=9 should separate scheduled-venue access (stadium) from fitness-venue counts (national-stadium-c03).",
    "open issue: No station-area 2024-2026 public-works source found; a BMA-targeted pass could close it.",
    "open issue: Reddit/TripAdvisor 403 and Bangkok Post paywall blocked perception-side corroboration.",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F10 'the batch's lowest' in guide lead. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F10 'the batch's lowest' in guide lead. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

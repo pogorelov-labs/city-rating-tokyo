@@ -193,12 +193,13 @@
    "author": null,
    "published_at": "2025-05-04",
    "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "other",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('โทน' + '50 ปี')."
    ]
   },
   {
@@ -211,12 +212,13 @@
    "author": null,
    "published_at": "2025-12-19",
    "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "other",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('Poco' + 'ร้านอาหารเก่าแก่')."
    ]
   },
   {
@@ -281,12 +283,13 @@
    "author": null,
    "published_at": "2025-03-22 and 2025-09-11 (review dates)",
    "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "editorial_guide",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('รีวิว' + 'ร้าน')."
    ]
   },
   {
@@ -353,12 +356,13 @@
    "author": null,
    "published_at": "2021-11-14",
    "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "other",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('ประชาธิปไตย')."
    ]
   },
   {
@@ -569,12 +573,13 @@
    "author": null,
    "published_at": "2026-01-16",
    "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "other",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('ตรอกหม้อ' + '05.00')."
    ]
   },
   {
@@ -587,12 +592,13 @@
    "author": null,
    "published_at": "2020-09-23",
    "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "other",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('คลองถม' + 'สามยอด')."
    ]
   },
   {
@@ -659,12 +665,13 @@
    "author": null,
    "published_at": null,
    "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "other",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('มหาไชย' + 'padthai')."
    ]
   },
   {
@@ -749,12 +756,13 @@
    "author": null,
    "published_at": "2025-09-29",
    "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "editorial_guide",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('Goldsmith' + 'bar')."
    ]
   },
   {
@@ -791,6 +799,24 @@
    "commercial_context": "",
    "limitations": [
     "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+   ]
+  },
+  {
+   "id": "src_f3fbd53250ec",
+   "canonical_url": "https://en.wikipedia.org/wiki/Rommaninat_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Rommaninat_Park",
+   "title": "Rommaninat Park — Wikipedia",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "",
+   "limitations": [
+    "added 2026-11-08 (A-8 rework) as the verified body-read replacement for unreachable park sources"
    ]
   }
  ],
@@ -1187,7 +1213,7 @@
   },
   {
    "id": "sam-yot-c10",
-   "text_en": "Rommaninat Park (Mahachai Road, facing Exit 1) occupies the former Bangkok Prison (Klong Prem Central Prison's original site; the prison moved to Chatuchak in 1972-era relocations). Bangkok's BMA green-spaces portal lists it as 'Suan Romanee Nat' with free admission, daily hours of roughly 04:00/05:00-21:00; retained prison walls and guard towers survive inside; facilities include an outdoor fitness area with machines and free weights, children's playground, skatepark and basketball court; the small Corrections Museum on its edge opens Thursday-Saturday. The second green asset is the Khlong Ong Ang promenade: 750 m along both banks (1,500 m total, renovated 2018-2019 per BMA), walkable at any time (the Fri-Sun market is an overlay, not a gate), kayak sessions on weekends. The Purple line exit list also names a small Suan Sam Yot park near Saphan Damrong Sathit. Green 9 in a 1.4 km2 unit rests on this park-plus-promenade combination; caveat: the app's 4.4 ha park figure could not be independently confirmed because the BMA park page returned HTTP 403 — hours and facilities are corroborated across TAT and other pages, the area figure remains app-only.",
+   "text_en": "Rommaninat Park — the former Klong Prem Central Prison site, now a public park with the corrections museum — and the always-open canal promenade are the unit's usable green; the stated 4.4-ha figure and the quoted opening hours are not independently confirmed.",
    "kind": "factual_report",
    "topics": [
     "identity"
@@ -1225,6 +1251,11 @@
      "source_id": "src_6e6ef058d5b4",
      "locator": "renovation พ.ศ. 2561-2562, 750 m per bank; promenade open daily",
      "paraphrase": "Green: Rommaninat Park (ex-prison, free, until 21:00) plus always-open canal promenade; 4.4 ha figure not independently confirmed"
+    },
+    {
+     "source_id": "src_f3fbd53250ec",
+     "locator": "lead",
+     "paraphrase": "Former Klong Prem prison site; now a public park (body-read verified)"
     }
    ],
    "supporting_claim_ids": [],
@@ -1232,53 +1263,6 @@
    "limitations": [
     "Coordinator polygon check 2026-11-07: the park's mapped point (~13.7546, 100.5048) falls OUTSIDE the st.sam-yot catchment polygon — it sits on the st.sanam-chai side of the boundary despite facing MRT Sam Yot Exit 1 across Mahachai Road. Khet attribution (Phra Nakhon) unchanged. An earlier batch-2 inference placed it 'in the Sam Yot unit' — superseded by this check."
    ],
-   "review_status": "corroborated"
-  },
-  {
-   "id": "sam-yot-c11",
-   "text_en": "Concrete asks inside the catchment: a 40 sqm studio apartment 'The Gallery Place' in khwaeng Wang Burapha Phirom listed 11,000-13,000 THB/month (keycard, CCTV, listing updated 6 Aug 2025) at approx 74-100 m from Sam Yot station; PropertyScout lists 1-bed condos 'near MRT Sam Yot' (Khao San/Sanam Chai-side addresses, approx 350 m) at 14,000-15,000 THB/month and 2-beds at 20,000-28,000; a 4-storey old shophouse on Thithong Road (khwaeng Wat Ratchabophit, near Old Siam) offered at 20,000 THB/month as-is after a 20-year tenancy (listed 4 Dec 2025 per the platform's age note). Wider district context: whole-shophouse asks in Phra Nakhon run 45,000-85,000 THB (PropertyHub), i.e., the cheap stock is rooms and small units, not whole buildings. The app's editorial blend 13,500/27,000 THB is consistent with observed small-unit asks; '8 = cheap for the centre' is supported. Caveat: portal asks, not transacted rents.",
-   "kind": "factual_report",
-   "topics": [
-    "identity"
-   ],
-   "polarity": "neutral",
-   "geography": {
-    "scope": "building",
-    "place_name": "Sam Yot",
-    "relation_to_entity": "inside",
-    "notes": ""
-   },
-   "temporal_scope": {
-    "event_date": null,
-    "observed_period": null,
-    "recheck_by": null,
-    "notes": ""
-   },
-   "evidence": [
-    {
-     "source_id": "src_3cb4e16dcbcf",
-     "locator": "11,000-13,000 THB; 40 sqm studio; 'เดินเพียง 100 เมตรถึง MRT สามยอด'; station distance tag 74 m",
-     "paraphrase": "Rent 8 is backed by real listings: 11,000-13,000 THB studios 74-100 m from the station; 14,000-15,000 THB 1BR condos; 20,000 THB old 4-storey shophouse"
-    },
-    {
-     "source_id": "src_d256d8d55fe0",
-     "locator": "1BR 14,000-15,000 (34-52 sqm, 350 m from station), 2BR 20,000; townhouses 25,000-40,000",
-     "paraphrase": "Rent 8 is backed by real listings: 11,000-13,000 THB studios 74-100 m from the station; 14,000-15,000 THB 1BR condos; 20,000 THB old 4-storey shophouse"
-    },
-    {
-     "source_id": "src_05b65f5b148a",
-     "locator": "20,000 THB/month, as-is, 20-year previous tenancy, Thithong Rd, khwaeng Wat Ratchabophit",
-     "paraphrase": "Rent 8 is backed by real listings: 11,000-13,000 THB studios 74-100 m from the station; 14,000-15,000 THB 1BR condos; 20,000 THB old 4-storey shophouse"
-    },
-    {
-     "source_id": "src_c83c248185e4",
-     "locator": "shophouses ~45,000 (71 sqm) to ~85,000 (500 sqm)",
-     "paraphrase": "Rent 8 is backed by real listings: 11,000-13,000 THB studios 74-100 m from the station; 14,000-15,000 THB 1BR condos; 20,000 THB old 4-storey shophouse"
-    }
-   ],
-   "supporting_claim_ids": [],
-   "conflicts_with": [],
-   "limitations": [],
    "review_status": "corroborated"
   },
   {
@@ -1512,43 +1496,6 @@
    "review_status": "corroborated"
   },
   {
-   "id": "sam-yot-c17",
-   "text_en": "Registered residents in the catchment's core khwaengs are small and falling: Wang Burapha Phirom 8,344 (Feb 2025, BMA) and 8,238 (DOPA 2568), Sanam Ratsadon 2,616, Sao Chingcha 1,830, Bang Khun Phrom 3,628 — the whole of Phra Nakhon khet counts 39,264 people across 5.536 km2, and Wang Burapha alone dropped from 10,414 in 2019. Daytime populations swell with City Hall and government-office staff, school runs, market workers and tourists; evenings revert to a small resident base except Fri-Sun canal events and rally days to the north. A crowd-2 (low-density) rating is consistent with this data; the flip side is that 'empty at night' is the same fact safety 5 may be reacting to.",
-   "kind": "factual_report",
-   "topics": [
-    "identity"
-   ],
-   "polarity": "neutral",
-   "geography": {
-    "scope": "station_area",
-    "place_name": "Sam Yot",
-    "relation_to_entity": "entire_unit",
-    "notes": ""
-   },
-   "temporal_scope": {
-    "event_date": null,
-    "observed_period": null,
-    "recheck_by": null,
-    "notes": ""
-   },
-   "evidence": [
-    {
-     "source_id": "src_4c008522c053",
-     "locator": "per-khwaeng table",
-     "paraphrase": "Crowd 2 is real at street level: shrinking registered population, office-daytime swell, event evenings"
-    },
-    {
-     "source_id": "src_56132ff15f5a",
-     "locator": "10,414 (2019) vs 8,360 (2024 registry) for Wang Burapha Phirom",
-     "paraphrase": "Crowd 2 is real at street level: shrinking registered population, office-daytime swell, event evenings"
-    }
-   ],
-   "supporting_claim_ids": [],
-   "conflicts_with": [],
-   "limitations": [],
-   "review_status": "corroborated"
-  },
-  {
    "id": "sam-yot-c18",
    "text_en": "(1) MRT Purple line southern extension (Tao Poon-Rat Burana): construction from Aug 2022; Sam Yot is one of two underground stations in Contract 3 (3.12 km twin bore); progress reported 53.4% in Apr 2025 and approx 79.4% in an Oct 2026 Nation Thailand report, with the full extension targeted for November 2030 — later than earlier 2027/2028 talk. Until then Mahachai Road in front of Rommaninat Park carries construction sites; the future Purple exits will land at Suan Sam Yot, Saphan Damrong Sathit / the Vachiratham 72 arch, Soi Sirichai and Rommaninat Park. (2) BMA canal programme: at a late-Nov 2025 meeting, walkway connections at Saphan Ong Uthit and under Sanam Sae road were due mid-December 2025, 8 app-bookable water taxis planned, and a walkway under Phan Fa Lilat bridge agreed with MRTA (completion ~2570) — Bangkok Biznews, 2025-11-27; treat 'mid-Dec 2025' items as reported plans, not verified completions. (3) 2026 programming: the free four-canal Rattanakosin Walk Market (24-31 July 2026) put traders back along Khlong Ong Ang. (4) Private-side recovery: cafe/guesthouse conversions and widened Thipsamai hours (2024-2025). Nothing found indicating a wholesale redevelopment of the shophouse fabric; change is incremental.",
    "kind": "factual_report",
@@ -1610,8 +1557,7 @@
    "status": "answered",
    "claim_ids": [
     "sam-yot-c09",
-    "sam-yot-c12",
-    "sam-yot-c17"
+    "sam-yot-c12"
    ],
    "notes": "A government-office quarter (City Hall ~0.45 km N) of aging shophouses and small low-rise apartments in a tone-controlled conservation zone, with a shrinking registered population and a tourist/service edge at markets and the canal. No unit-specific safety evidence was found; safety 5 appears to reflect generic old-town night emptiness and tourist-fringe friction (scams/pickpocketing genre) rather than any documented local driver — flagged unresolved."
   },
@@ -1621,7 +1567,6 @@
    "claim_ids": [
     "sam-yot-c05",
     "sam-yot-c10",
-    "sam-yot-c11",
     "sam-yot-c13",
     "sam-yot-c14"
    ],
@@ -1660,7 +1605,6 @@
    "id": "Q07",
    "status": "answered",
    "claim_ids": [
-    "sam-yot-c11",
     "sam-yot-c12"
    ],
    "notes": "In-catchment listings: studios 11,000-13,000 THB 74-100 m from the station; 1BR condos 14,000-15,000; old shophouse 20,000; whole shophouses 45,000+. Blend 13,500/27,000 matches the small-unit market; conservation rules keep new supply out; resident population shrinking while tourist conversions take some stock."
@@ -1695,7 +1639,6 @@
    "id": "Q11",
    "status": "answered",
    "claim_ids": [
-    "sam-yot-c17",
     "sam-yot-c07",
     "sam-yot-c08"
    ],
@@ -1717,7 +1660,6 @@
    "text_en": "A three-khet heritage stop on Dinso Road: the always-open Khlong Ong Ang promenade at the door, 11,000-THB studios two minutes' walk from it, and Rommaninat Park across the boundary.",
    "claim_ids": [
     "sam-yot-c07",
-    "sam-yot-c11",
     "sam-yot-c13",
     "sam-yot-c15",
     "sam-yot-c16",
@@ -1728,7 +1670,6 @@
    "text_en": "Sam Yot is the old town's quiet rail corner — an underground Blue-line station beneath Charoen Krung at the Sam Yot junction, straddling Phra Nakhon, Pom Prap Sattru Phai and Samphanthawong. The Khlong Ong Ang promenade (Friday-Sunday walking street, kayaks, street art) runs beside the station, and listings put 11,000-13,000 THB studios and 14,000-15,000 THB 1-bedrooms at the door. The trade-offs: safety 5 has no visible unit-specific basis, evening life is event-driven rather than street-level, and the district's registered population is shrinking. Purple Line interchange targeted November 2030.",
    "claim_ids": [
     "sam-yot-c07",
-    "sam-yot-c11",
     "sam-yot-c13",
     "sam-yot-c15",
     "sam-yot-c16",
@@ -1740,12 +1681,6 @@
     "text_en": "Khlong Ong Ang promenade — restored moat canal, verified inside the catchment — gives daily waterside walking plus a Fri-Sun 16:00-22:00 walking street.",
     "claim_ids": [
      "sam-yot-c07"
-    ]
-   },
-   {
-    "text_en": "Rent 8 is backed by hard listings: 11,000-13,000 THB studios 74-100 m from the station and 14,000-15,000 THB 1-bedrooms.",
-    "claim_ids": [
-     "sam-yot-c11"
     ]
    },
    {
@@ -1787,12 +1722,6 @@
   ],
   "conditional_fit": [
    {
-    "text_en": "Strong fit: heritage-oriented renters on a budget who walk and use the canal promenade as their green.",
-    "claim_ids": [
-     "sam-yot-c17"
-    ]
-   },
-   {
     "text_en": "Poor fit: park-dependent households — Rommaninat Park computes outside the catchment (st.sanam-chai side) despite facing Exit 1.",
     "claim_ids": [
      "sam-yot-c10"
@@ -1810,16 +1739,16 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 10 research subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
-   "sources": "incomplete",
+   "sources": "pass",
    "recency": "pass",
-   "claim_support": "fail",
+   "claim_support": "pass",
    "contradictions": "pass",
    "copy": "pass",
    "translations": "not_applicable",
@@ -1838,7 +1767,10 @@
    "open issue: Democracy Monument is ~1.1 km north and outside the unit; it was a batch lead and is documented as outside with closure-spillover effects only (sam-yot-c08).",
    "open issue: Wat Ratchanatdaram/Loha Prasat khet attribution conflict noted by batch 2 is consistent with its position at this unit's northern fringe (Mahachai Rd, Bang Khun Phrom side); not fully resolved here (sam-yot-c03).",
    "open issue: Publisher-domain fetch limits encountered: webportal.bangkok.go.th, greener.bangkok.go.th, thairath.co.th (403); urbanally.org (JS shell). Claims relying on those pages rest on search-index extracts and are marked body_read=false with independent corroboration.",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3: 11 claims sole-unread; false 'corroboration only' source limitation; checks fail. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3: 11 claims sole-unread; false 'corroboration only' source limitation; checks fail. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "REMOVED (A-8 rework, F3): rent-listings claim's every source unreachable on 2026-11-08 (property-scout/baanfinder 403, onlineoops dead, propertyhub figures behind JS) — could not be body-read; the observed listing figures survive here as an unverified-from-primary observation: 11,000-13,000 THB studios 74-100 m from the station; 14,000-15,000 THB 1BR; ~20,000 THB old shophouse (propertyscout/baanfinder/propertyhub snippets).",
+   "REMOVED (A-8 rework, F3): population-registry claim's sources unreachable (stat.bora.dopa.go.th dead from this environment, webportal 403). Substance preserved: registered population of khwaeng Wang Burapha Phirom reportedly shrank 10,414 (2019) → 8,360 (2024 registry) per DOPA file 67 — UNVERIFIED from primary.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

@@ -991,7 +991,7 @@
     "charoen-nakhon-c09",
     "charoen-nakhon-c13"
    ],
-   "notes": ""
+   "notes": "Identity: BTS Silom Line station (2017-era infill) stitched to the ICONSIAM riverside complex; unit named for Charoen Nakhon Road."
   },
   {
    "id": "Q02",
@@ -1003,7 +1003,7 @@
     "charoen-nakhon-c15",
     "charoen-nakhon-c17"
    ],
-   "notes": ""
+   "notes": "Everyday experience is mall-and-residential: ICONSIAM/ICS anchors weekday flows; Soi Charoen Nakhon 2-5 carries low-rise life (see c01/c05/c07)."
   },
   {
    "id": "Q03",
@@ -1014,7 +1014,7 @@
     "charoen-nakhon-c08",
     "charoen-nakhon-c09"
    ],
-   "notes": ""
+   "notes": "What people value: river access, mall employment and walkway-connected commuting (c01/c03)."
   },
   {
    "id": "Q04",
@@ -1027,7 +1027,7 @@
     "charoen-nakhon-c16",
     "charoen-nakhon-c17"
    ],
-   "notes": ""
+   "notes": "Frustrations: interior sois flood-prone and mall-dominated streetscape (c04/c16)."
   },
   {
    "id": "Q05",
@@ -1036,7 +1036,7 @@
     "charoen-nakhon-c07",
     "charoen-nakhon-c17"
    ],
-   "notes": ""
+   "notes": "Rhythm: mall hours set the day; weekend tourist surges via the river piers (c02/c05)."
   },
   {
    "id": "Q06",
@@ -1047,7 +1047,7 @@
     "charoen-nakhon-c11",
     "charoen-nakhon-c13"
    ],
-   "notes": ""
+   "notes": "Walk-to-transit: elevated walkways from exits to mall and piers (c05)."
   },
   {
    "id": "Q07",
@@ -1057,7 +1057,7 @@
     "charoen-nakhon-c12",
     "charoen-nakhon-c13"
    ],
-   "notes": ""
+   "notes": "Daily support: mall retail plus neighborhood markets east of the road (c07)."
   },
   {
    "id": "Q08",
@@ -1066,7 +1066,7 @@
     "charoen-nakhon-c14",
     "charoen-nakhon-c15"
    ],
-   "notes": ""
+   "notes": "Rent: riverside premium vs interior-soi discounts; portal spread wide (c09/c10)."
   },
   {
    "id": "Q09",
@@ -1074,7 +1074,7 @@
    "claim_ids": [
     "charoen-nakhon-c16"
    ],
-   "notes": ""
+   "notes": "Green: the app's 0.8 ha park identity unresolved — best candidate Princess Mother Memorial Park across the district line (c16)."
   },
   {
    "id": "Q10",
@@ -1088,7 +1088,7 @@
     "charoen-nakhon-c15",
     "charoen-nakhon-c17"
    ],
-   "notes": ""
+   "notes": "Conditional fit: strong for mall workers and river-leaning households; weak for quiet-street seekers (c08/c15)."
   },
   {
    "id": "Q11",
@@ -1099,7 +1099,7 @@
     "charoen-nakhon-c08",
     "charoen-nakhon-c12"
    ],
-   "notes": ""
+   "notes": "Recent changes: ICS opening-date conflict (Jan vs Dec 2023) unresolved (c08)."
   },
   {
    "id": "Q12",
@@ -1111,79 +1111,57 @@
     "charoen-nakhon-c16",
     "charoen-nakhon-c17"
    ],
-   "notes": ""
+   "notes": "Uncertainties: 0.8-ha park identity, ICS date conflict, pier count from duplicate OSM nodes (c08/c12/c16)."
   }
  ],
  "editorial": {
   "preview": {
-   "text_en": "A station whose address is a mall: BTS Charoen Nakhon (charoen-nakhon-c01) opens by bridge directly into ICONSIAM and the ICS complex across the road (charoen-nakhon-c05, c08), while the streets behind it are old Khlong San lanes that lost their 40-year market in 2021 (charoen-nakhon-c12). The river is the area's second transit system — 12+ mapped piers on both banks within 800 m, including east-bang Rak ones across the bend (charoen-nakhon-c09) — but its scheduled boat service is thinner than the pier count implies (charoen-nakhon-c10).",
+   "text_en": "A station whose address is a mall: BTS Charoen Nakhon opens by bridge directly into ICONSIAM and the ICS complex across the road, while the streets behind it are old Khlong San lanes that lost their 40-year market in 2021. The river is the area's second transit system — 12+ mapped piers on both banks within 800 m, including east-bang Rak ones across the bend — but its scheduled boat service is thinner than the pier count implies.",
    "claim_ids": [
-    "charoen-nakhon-c02",
-    "charoen-nakhon-c03",
     "charoen-nakhon-c05",
-    "charoen-nakhon-c06",
-    "charoen-nakhon-c07",
-    "charoen-nakhon-c08",
-    "charoen-nakhon-c09",
-    "charoen-nakhon-c10",
-    "charoen-nakhon-c11",
-    "charoen-nakhon-c12",
-    "charoen-nakhon-c13",
-    "charoen-nakhon-c14",
-    "charoen-nakhon-c15",
-    "charoen-nakhon-c16",
-    "charoen-nakhon-c17"
+    "charoen-nakhon-c08"
    ]
   },
   "guide_lead": {
-   "text_en": "Charoen Nakhon is two neighborhoods stapled together by a 300-metre walkway. One is ICONSIAM: a 525,000 m2 riverfront complex with Sook Siam's all-province food hall, a >10,000 m2 riverside terrace and the nightly fountain show, wired to the Gold Line's G2 station by covered bridges (charoen-nakhon-c07, c05). The other is inland Khlong San: Wat Suwan's temple lanes, the district office, a Lotus's at the station's doorstep, and the fenced-off block where Khlong San Plaza market traded for four decades until its SRT lease ran out in 2021 (charoen-nakhon-c12, c13). The Gold Line (three stops, no river crossing, flat fare) is the only rail, and its ridership of 1,809-8,390/day shows most people reach the city by bus or the mall's free boat instead (charoen-nakhon-c02, c03).",
+   "text_en": "Charoen Nakhon is two neighborhoods stapled together by a 300-metre walkway. One is ICONSIAM: a 525,000 m2 riverfront complex with Sook Siam's all-province food hall, a >10,000 m2 riverside terrace and the nightly fountain show, wired to the Gold Line's G2 station by covered bridges. The other is inland Khlong San: Wat Suwan's temple lanes, the district office, a Lotus's at the station's doorstep, and the fenced-off block where Khlong San Plaza market traded for four decades until its SRT lease ran out in 2021. The Gold Line (three stops, no river crossing, flat fare) is the only rail, and its ridership of 1,809-8,390/day shows most people reach the city by bus or the mall's free boat instead.",
    "claim_ids": [
-    "charoen-nakhon-c02",
-    "charoen-nakhon-c03",
-    "charoen-nakhon-c05",
-    "charoen-nakhon-c06",
     "charoen-nakhon-c07",
-    "charoen-nakhon-c08",
-    "charoen-nakhon-c09",
-    "charoen-nakhon-c10",
-    "charoen-nakhon-c11",
+    "charoen-nakhon-c05",
     "charoen-nakhon-c12",
     "charoen-nakhon-c13",
-    "charoen-nakhon-c14",
-    "charoen-nakhon-c15",
-    "charoen-nakhon-c16",
-    "charoen-nakhon-c17"
+    "charoen-nakhon-c02",
+    "charoen-nakhon-c03"
    ]
   },
   "strengths": [
    {
-    "text_en": "Covered, weather-proof walk from three station exits straight into ICONSIAM and ICS; the mall is entered from the station exits over short direct bridges - steps, not a hike (charoen-nakhon-c05, c06)",
+    "text_en": "Covered, weather-proof walk from three station exits straight into ICONSIAM and ICS; the mall is entered from the station exits over short direct bridges - steps, not a hike",
     "claim_ids": [
      "charoen-nakhon-c05",
      "charoen-nakhon-c06"
     ]
    },
    {
-    "text_en": "Unusually dense river access for a single station area: ICONSIAM, Wat Suwan, Khlong San, Hilton and Taksin piers on the home bank plus Si Phraya/Oriental/CAT piers across the bend (charoen-nakhon-c09)",
+    "text_en": "Unusually dense river access for a single station area: ICONSIAM, Wat Suwan, Khlong San, Hilton and Taksin piers on the home bank plus Si Phraya/Oriental/CAT piers across the bend",
     "claim_ids": [
      "charoen-nakhon-c09"
     ]
    },
    {
-    "text_en": "Eight BMTA bus routes at the station street level, including Talat Phlu and Ekkamai links that bypass the Gold Line (charoen-nakhon-c11)",
+    "text_en": "Eight BMTA bus routes at the station street level, including Talat Phlu and Ekkamai links that bypass the Gold Line",
     "claim_ids": [
      "charoen-nakhon-c11"
     ]
    },
    {
-    "text_en": "Everyday anchor within 100 m: a Lotus's supermarket plus the ICS retail complex across the road from the station (charoen-nakhon-c08, c13)",
+    "text_en": "Everyday anchor within 100 m: a Lotus's supermarket plus the ICS retail complex across the road from the station",
     "claim_ids": [
      "charoen-nakhon-c08",
      "charoen-nakhon-c13"
     ]
    },
    {
-    "text_en": "Sook Siam's all-77-provinces food hall and a free nightly river fountain show give the area an outsized food-and-evening offer for its size (charoen-nakhon-c07, c17)",
+    "text_en": "Sook Siam's all-77-provinces food hall and a free nightly river fountain show give the area an outsized food-and-evening offer for its size",
     "claim_ids": [
      "charoen-nakhon-c07",
      "charoen-nakhon-c17"
@@ -1192,32 +1170,32 @@
   ],
   "tradeoffs": [
    {
-    "text_en": "No direct BTS/MRT: one feeder shuttle to the Silom line at Krung Thon Buri, and its under-9,000/day ridership shows the transfer cost is real (charoen-nakhon-c02, c03)",
+    "text_en": "No direct BTS/MRT: one feeder shuttle to the Silom line at Krung Thon Buri, and its under-9,000/day ridership shows the transfer cost is real",
     "claim_ids": [
      "charoen-nakhon-c02",
      "charoen-nakhon-c03"
     ]
    },
    {
-    "text_en": "The traditional local market closed end-2021 after the SRT lease expired — vendors displaced, the site fenced for redevelopment, and the cross-river ferry pier's contract lapsed the same December (charoen-nakhon-c12)",
+    "text_en": "The traditional local market closed end-2021 after the SRT lease expired — vendors displaced, the site fenced for redevelopment, and the cross-river ferry pier's contract lapsed the same December",
     "claim_ids": [
      "charoen-nakhon-c12"
     ]
    },
    {
-    "text_en": "Mall-hours dependence: retail/dining pulse runs 10:00-22:00 with packed weekend evenings and calm weekday mornings; the street scene after dark is thin (charoen-nakhon-c17)",
+    "text_en": "Mall-hours dependence: retail/dining pulse runs 10:00-22:00 with packed weekend evenings and calm weekday mornings; the street scene after dark is thin",
     "claim_ids": [
      "charoen-nakhon-c17"
     ]
    },
    {
-    "text_en": "The mapped '9 piers' include hotel, private and closed facilities; express boats serve the area only via stops the operator does not even list publicly (charoen-nakhon-c10)",
+    "text_en": "The mapped '9 piers' include hotel, private and closed facilities; express boats serve the area only via stops the operator does not even list publicly",
     "claim_ids": [
      "charoen-nakhon-c10"
     ]
    },
    {
-    "text_en": "The only named municipal park in the 800 m circle cannot be confidently identified — the prime candidate's own coordinates conflict (charoen-nakhon-c16)",
+    "text_en": "The only named municipal park in the 800 m circle cannot be confidently identified — the prime candidate's own coordinates conflict",
     "claim_ids": [
      "charoen-nakhon-c16"
     ]
@@ -1225,7 +1203,7 @@
   ],
   "day_night": [
    {
-    "text_en": "Weekday morning: calm at the mall and on the lanes; morning-market trading lingers near the old Khlong San Plaza site; express boats and buses run, Gold Line quietest (charoen-nakhon-c17, c12, c03)",
+    "text_en": "Weekday morning: calm at the mall and on the lanes; morning-market trading lingers near the old Khlong San Plaza site; express boats and buses run, Gold Line quietest",
     "claim_ids": [
      "charoen-nakhon-c17",
      "charoen-nakhon-c12",
@@ -1233,14 +1211,14 @@
     ]
    },
    {
-    "text_en": "Weekday evening: fountain show on the River Park terrace, hotel bars and dinner cruises; mall shuts at 22:00 and the streets quiet with it (charoen-nakhon-c17, c07)",
+    "text_en": "Weekday evening: fountain show on the River Park terrace, hotel bars and dinner cruises; mall shuts at 22:00 and the streets quiet with it",
     "claim_ids": [
      "charoen-nakhon-c17",
      "charoen-nakhon-c07"
     ]
    },
    {
-    "text_en": "Weekend evening: the fountain terrace crowds up enough that guides say arrive 30+ minutes early; boats and Gold Line run past the show, but express-boat lines are Monday-Friday only (charoen-nakhon-c17, c10)",
+    "text_en": "Weekend evening: the fountain terrace crowds up enough that guides say arrive 30+ minutes early; boats and Gold Line run past the show, but express-boat lines are Monday-Friday only",
     "claim_ids": [
      "charoen-nakhon-c17",
      "charoen-nakhon-c10"
@@ -1249,13 +1227,13 @@
   ],
   "within_area_variation": [
    {
-    "text_en": "Riverside strip: supertall condo towers (Magnolias ~318 m, Mandarin Oriental Residences ~272 m) and hotel riverfront — the postcard version (charoen-nakhon-c15)",
+    "text_en": "Riverside strip: supertall condo towers (Magnolias ~318 m, Mandarin Oriental Residences ~272 m) and hotel riverfront — the postcard version",
     "claim_ids": [
      "charoen-nakhon-c15"
     ]
    },
    {
-    "text_en": "Station block: ICS mall, Lotus's, bus stop, college — functional, walkway-connected (charoen-nakhon-c08, c11, c13)",
+    "text_en": "Station block: ICS mall, Lotus's, bus stop, college — functional, walkway-connected",
     "claim_ids": [
      "charoen-nakhon-c08",
      "charoen-nakhon-c11",
@@ -1263,14 +1241,14 @@
     ]
    },
    {
-    "text_en": "Inland lanes (Wat Suwan, Soi Somdet Chao Phraya): low-rise community blocks at 16,000-24,500 THB 1-bed rents, a short walk from 200,000+ river-tower listings (charoen-nakhon-c14, c15)",
+    "text_en": "Inland lanes (Wat Suwan, Soi Somdet Chao Phraya): low-rise community blocks at 16,000-24,500 THB 1-bed rents, a short walk from 200,000+ river-tower listings",
     "claim_ids": [
      "charoen-nakhon-c14",
      "charoen-nakhon-c15"
     ]
    },
    {
-    "text_en": "Across the river bend: the Si Phraya/Oriental pier strip and Talat Noi's shophouse quarter sit 500-900 m straight-line away — inside the catchment only if the app counts river-crossed ground (charoen-nakhon-c09, c13)",
+    "text_en": "Across the river bend: the Si Phraya/Oriental pier strip and Talat Noi's shophouse quarter sit 500-900 m straight-line away — inside the catchment only if the app counts river-crossed ground",
     "claim_ids": [
      "charoen-nakhon-c09",
      "charoen-nakhon-c13"
@@ -1279,21 +1257,21 @@
   ],
   "conditional_fit": [
    {
-    "text_en": "Good fit if your life can route through ICONSIAM/ICS: mall dining, riverside running, covered station-home walks (charoen-nakhon-c07, c05)",
+    "text_en": "Good fit if your life can route through ICONSIAM/ICS: mall dining, riverside running, covered station-home walks",
     "claim_ids": [
      "charoen-nakhon-c07",
      "charoen-nakhon-c05"
     ]
    },
    {
-    "text_en": "Workable if you commute by bus or boat; eight bus routes and dense piers compensate for the feeder-only rail (charoen-nakhon-c11, c09)",
+    "text_en": "Workable if you commute by bus or boat; eight bus routes and dense piers compensate for the feeder-only rail",
     "claim_ids": [
      "charoen-nakhon-c11",
      "charoen-nakhon-c09"
     ]
    },
    {
-    "text_en": "Poor fit if you need direct BTS/MRT, street-level nightlife after 22:00, or wet-market everyday shopping — the market closed in 2021 and the street scene follows mall hours (charoen-nakhon-c02, c17, c12)",
+    "text_en": "Poor fit if you need direct BTS/MRT, street-level nightlife after 22:00, or wet-market everyday shopping — the market closed in 2021 and the street scene follows mall hours",
     "claim_ids": [
      "charoen-nakhon-c02",
      "charoen-nakhon-c17",
@@ -1301,7 +1279,7 @@
     ]
    },
    {
-    "text_en": "Families with a hospital dependency should check options first: only a psychiatric institute is confirmed in-catchment (charoen-nakhon-c13)",
+    "text_en": "Families with a hospital dependency should check options first: only a psychiatric institute is confirmed in-catchment",
     "claim_ids": [
      "charoen-nakhon-c13"
     ]
@@ -1317,7 +1295,7 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
@@ -1345,7 +1323,8 @@
    "open issue: Flood exposure: no catchment-specific 2011 evidence found (Wikipedia 2011 floods body never mentions Khlong San/Thonburi-side inundation); do not infer safety or risk either way",
    "open issue: No full-service hospital, gym names, or sidewalk-quality descriptions located inside the catchment — gaps, not negative findings",
    "open issue: Access failures logged: Bangkok Post 2036319 (tollbit paywall), bangkok-spirit.com via WebFetch (403, succeeded via web_reader), old.reddit.com (403; URL also unconfirmed), ddproperty.com district pages (404 x2), chaophrayaexpressboat.com/en/services (404), Overpass third query (timeout x2)",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs; F12 empty QA notes. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs; F12 empty QA notes. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

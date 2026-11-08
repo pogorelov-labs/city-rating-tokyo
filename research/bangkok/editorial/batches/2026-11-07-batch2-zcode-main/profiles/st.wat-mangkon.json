@@ -10,7 +10,7 @@
    "MRT Wat Mangkon (Blue Line)",
    "Chinatown MRT station"
   ],
-  "scope_notes": "800 m nearest-stop catchment around MRT Wat Mangkon (Blue Line, opened 2019), straddling Pom Prap Sattru Phai 51.4% / Samphanthawong 48.6%. Note for reviewers: Wikipedia attributes the station itself to Samphanthawong while the app's district split gives Pom Prap the majority. Research-verified inside: Wat Mangkon Kamalawat temple (~54 m to geotag, Pom Prap side — refuting a pilot note that placed it 'just outside the khet') and the northwestern end of the Chinatown Soi Nana bar strip (~414–447 m; the lane straddles the boundary). Research-verified outside: Wat Traimit and Odean Circle (st.hua-lamphong side), Khlong Ong Ang and Rommaninat Park (st.sam-yot side), Golden Mount (~0.91 km)."
+  "scope_notes": "800 m nearest-stop catchment around MRT Wat Mangkon (Blue Line, opened 2019), straddling Pom Prap Sattru Phai 51.4% / Samphanthawong 48.6%. Note for reviewers: Wikipedia attributes the station itself to Samphanthawong while the app's district split gives Pom Prap the majority. Research-verified inside: Wat Mangkon Kamalawat temple (~54 m to geotag, Pom Prap side — consistent with the pilot's khet note (Wikipedia places the temple in Pom Prap Sattru Phai, outside the Samphanthawong khet, while it sits inside this catchment — the A8 two-question rule)) and the northwestern end of the Chinatown Soi Nana bar strip (~414–447 m; the lane straddles the boundary). Research-verified outside: Wat Traimit and Odean Circle (st.hua-lamphong side), Khlong Ong Ang and Rommaninat Park (st.sam-yot side), Golden Mount (~0.91 km)."
  },
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
@@ -659,7 +659,7 @@
   },
   {
    "id": "wat-mangkon-c04",
-   "text_en": "Wat Mangkon Kamalawat (Leng Noei Yi), described as the largest and most important Chinese Buddhist temple in Bangkok, sits about 185-250 m north of the station between Soi Charoen Krung 19 and 21 and is therefore inside this catchment — and it is attributed to Pom Prap Sattru Phai, contradicting any 'just outside the Samphanthawong khet' framing.",
+   "text_en": "Wat Mangkon Kamalawat (Leng Noei Yi), described as the largest and most important Chinese Buddhist temple in Bangkok, sits about 185-250 m north of the station between Soi Charoen Krung 19 and 21 and is therefore inside this catchment — and it is attributed to Pom Prap Sattru Phai, outside the Samphanthawong khet yet inside this catchment — consistent with the pilot's khet note (A8 two-question rule).",
    "kind": "factual_report",
    "topics": [
     "daily_life",
@@ -776,13 +776,10 @@
     }
    ],
    "supporting_claim_ids": [],
-   "conflicts_with": [
-    "wat-mangkon-c02",
-    "wat-mangkon-c04"
-   ],
+   "conflicts_with": [],
    "limitations": [
     "Talat Noi/Song Wat inside-outside split computed from coordinates, not from the app polygon",
-    "Wikipedia's claim that Chinatown 'roughly coincides with Samphanthawong District' is a popular simplification conflicting with venue-level khet facts (c02, c04)"
+    "Wikipedia's claim that Chinatown 'roughly coincides with Samphanthawong District' is a popular simplification; the venue-level khet facts recorded in c02/c04 are the precise picture"
    ],
    "review_status": "conflicted"
   },
@@ -1666,7 +1663,7 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + coverage-scan and 6 research subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
@@ -1691,7 +1688,9 @@
    "open issue: Geocode Soi Nana bars and Talat Noi/Song Wat edges to settle partial-vs-inside relations against the real app polygons.",
    "open issue: Reconcile the task brief's clip-direction labels ('hua-lamphong north', 'itsaraphap south') with coordinate geometry (Hua Lamphong SE ~1.0 km; Itsaraphap ~2.7 km, non-clipping).",
    "open issue: Quantify festival-period crowding (Lunar New Year, vegetarian festival) if the crowd score is to be defended.",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F7 A8 overstatement: pilot khet note is correct; temple is Pom Prap and in catchment. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F7 A8 overstatement: pilot khet note is correct; temple is Pom Prap and in catchment. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): F7 fixed: scope_notes/c04 re-worded to 'consistent with the pilot's khet note'; c06's conflicts_with link to c02/c04 removed (the real tension is with Wikipedia's district simplification).",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }

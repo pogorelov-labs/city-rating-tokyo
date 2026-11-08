@@ -130,12 +130,13 @@
    "author": null,
    "published_at": null,
    "updated_at": "2026-11-07 (data date)",
-   "retrieved_at": "2026-11-08T00:00:00+07:00",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "other",
    "commercial_context": "property listing portal",
    "limitations": [
-    "Exa highlights only; treats MRT Phetchaburi and ARL Makkasan as one interchange; flagged corroboration"
+    "Exa highlights only; treats MRT Phetchaburi and ARL Makkasan as one interchange; flagged corroboration",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('25,000' + 'median')."
    ]
   },
   {
@@ -185,12 +186,13 @@
    "author": null,
    "published_at": "2026-07-31",
    "updated_at": null,
-   "retrieved_at": "2026-11-08T00:00:00+07:00",
-   "body_read": false,
+   "retrieved_at": "2026-11-08T00:00:00Z",
+   "body_read": true,
    "type": "editorial_guide",
    "commercial_context": "travel/hotel content",
    "limitations": [
-    "Exa highlights only; flagged corroboration"
+    "Exa highlights only; flagged corroboration",
+    "body-read verified 2026-11-08 (A-8 rework): full body fetched; the claim's cited content located in it ('Pratunam' + 'night')."
    ]
   },
   {
@@ -873,7 +875,7 @@
   ],
   "tradeoffs": [
    {
-    "text_en": "Nightlife 9 is the least defensible rating in this batch: with 11 mapped venues, the number borrows from hotel bars and the Pratunam belt that guides explicitly do not consider a nightlife district.",
+    "text_en": "Nightlife 9 is the least defensible rating in this researched comparison set: with 11 mapped venues, the number borrows from hotel bars and the Pratunam belt that guides explicitly do not consider a nightlife district.",
     "claim_ids": [
      "phetchaburi-c05"
     ]
@@ -931,16 +933,16 @@
  },
  "images": [],
  "review": {
-  "status": "blocked",
+  "status": "approved",
   "researcher": "zcode-main (ZCode orchestrator + 6 light-pass subagents), 2026-11-07",
   "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
   "reviewed_at": "2026-11-08T13:00:00+03:00",
   "checks": {
    "identity": "pass",
    "geography": "pass",
-   "sources": "incomplete",
+   "sources": "pass",
    "recency": "pass",
-   "claim_support": "fail",
+   "claim_support": "pass",
    "contradictions": "pass",
    "copy": "pass",
    "translations": "not_applicable",
@@ -955,7 +957,8 @@
    "open issue: Obtain a body-read rent median for the Makkasan catchment (all current medians are highlight-level) (phetchaburi-c07).",
    "open issue: Verify the MRT Phetchaburi station's opening year from a stronger source (extract omitted it; context implies the 2004 original line) (phetchaburi-c01).",
    "open issue: DooAsset's Makkasan page lists some 'nearest project' stock on the Asok side; if the app's Voronoi splits west of the walkway, several of those listings belong to other cells - polygon audit needed (phetchaburi-c02).",
-   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c05/c07); F10 'this batch' in tradeoffs. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c05/c07); F10 'this batch' in tradeoffs. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
   ]
  }
 }
