@@ -7,7 +7,7 @@ import { areaPath, type CityId } from './cities';
 import { stationDisplayName } from './station-name';
 import { stationAreaKey } from './area-key';
 import { getQuietness } from './quietness';
-import { editorialDisclosures } from './editorial-research';
+import { editorialDisclosures, editorialChunkHref } from './editorial-research';
 import { isStationLevelRent } from './scoring';
 import { getGoogleMapsAreaUrl } from './types';
 import { GUIDE_CATEGORIES, type AreaGuideData, type GuideKind, type GuidePeer, type MapPoint } from './area-guide';
@@ -164,6 +164,7 @@ export async function buildAreaGuide(city: CityId, kind: GuideKind, slug: string
     },
     noise: kind === 'station' ? outdoorNoise(city, slug) : null,
     editorial_disclosures: editorialDisclosures(key),
+    editorial_chunk: editorialChunkHref(key),
     mapHref: `/bangkok?lv=${kind}&s=${encodeURIComponent(key)}`,
     mapsHref: getGoogleMapsAreaUrl(area.lat, area.lng), methodologyHref: '/methodology#bangkok',
   };

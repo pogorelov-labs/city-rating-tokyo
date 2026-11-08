@@ -73,6 +73,14 @@ export function permitsCopy(rec: EditorialRecord | null): boolean {
   return Boolean(EDITORIAL_ENABLED && rec?.copy_eligible && rec.tier !== 'C');
 }
 
+/** Chunk href for an area — dark while the flag is off or not copy-eligible. */
+export function editorialChunkHref(areaId: string): string | null {
+  if (!EDITORIAL_ENABLED) return null;
+  const rec = editorialRecord(areaId);
+  if (!rec || rec.tier === 'C' || !rec.copy_eligible) return null;
+  return rec.chunk;
+}
+
 /** Pure: disclosure keys for an area (empty while dark). */
 export function editorialDisclosures(areaId: string): string[] {
   if (!EDITORIAL_ENABLED) return [];

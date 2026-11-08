@@ -1,0 +1,60 @@
+.guide {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+}
+
+.lead {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.attribution {
+  color: #64748b;
+  font-size: 0.8125rem;
+}
+
+.guide section {
+  margin: 0.75rem 0;
+}
+
+.guide h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.guide ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.guide li {
+  margin: 0.25rem 0;
+}
+
+.uncertainties,
+.evidence {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.guide summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.guide dl div {
+  margin: 0.5rem 0;
+}
+
+.guide dt {
+  font-weight: 600;
+}
+
+.sources {
+  padding-left: 1.25rem;
+  list-style: circle;
+}
