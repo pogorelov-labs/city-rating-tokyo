@@ -56,11 +56,9 @@ research/snapshots/2026-10-14/cleanliness-bangkok/wayback-*
 research/snapshots/2026-10-14/cleanliness-bangkok/*.html
 research/snapshots/2026-10-14/cleanliness-bangkok/gdcatalog-mnre-resource.json
 .playwright-mcp/
-<<<<<<< HEAD
 
 # Telegram corpus: bulk third-party content stays local (see research/bangkok/corpus/README.md)
 research/bangkok/corpus/telegram/
-=======
 # Generated from the pinned MapLibre package by app/scripts/prepare-maplibre.mjs.
 app/public/bangkok/prototype/assets/
 app/public/map-assets/
@@ -73,4 +71,3 @@ research/bangkok/notes/renderer-benchmark/
 research/bangkok/notes/2026-10-30-map-colors.md
 research/bangkok/notes/2026-10-30-maplibre-prototype.md
 research/bangkok/notes/2026-10-30-rendering-stages.md
->>>>>>> origin/main
