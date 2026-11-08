@@ -414,7 +414,7 @@
     "event_date": "1782",
     "observed_period": "1782-1892 road construction (SAC: commissioned 1891-1892, ~8 years)",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -645,7 +645,7 @@
     "event_date": null,
     "observed_period": "undated community profile (post-2010s)",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -675,13 +675,13 @@
     "scope": "district",
     "place_name": "Yaowarat community",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "as of undated SAC profile",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -711,7 +711,7 @@
     "scope": "corridor",
     "place_name": "Yaowarat Rd goldshops and market lanes",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -753,7 +753,7 @@
     "event_date": "2024-07-03",
     "observed_period": "announced July 2024",
     "recheck_by": "2027-07-01",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -790,7 +790,7 @@
     "event_date": null,
     "observed_period": "collective 2022 to guide publication (undated, retrieved 2026)",
     "recheck_by": "2027-11-01",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1008,7 +1008,7 @@
     "event_date": null,
     "observed_period": "current",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {

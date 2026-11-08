@@ -1748,55 +1748,14 @@
    }
   ],
   "uncertainties": [
-   {
-    "text": "One Bangkok hotel status conflicted: pre-opening coverage targeted Ritz-Carlton Nov 2024 and Andaz 2025, other reporting dates the openings Dec 2024 and 19 Dec 2025, while a Sep 2026 business report still lists both in the 2027 build-out — needs operator confirmation.",
-    "claim_ids": [
-     "pathum-wan-c04",
-     "pathum-wan-c16"
-    ]
-   },
-   {
-    "text": "One Bangkok site size differs inside the operator's own releases (104 rai PPTV vs 108 rai TH release vs ~17 ha EN).",
-    "claim_ids": [
-     "pathum-wan-c04"
-    ]
-   },
-   {
-    "text": "App's 55 temples vs 6 named Buddhist worship sites in OSM inside the khet — the app category is likely broader (shrines, spirit houses); definition unknown.",
-    "claim_ids": [
-     "pathum-wan-c01"
-    ]
-   },
-   {
-    "text": "District rent blend inconsistency across app data: this brief carries 38,000/85,000 THB while a sibling batch-3 file describes the district blend as 33,500/74,000 — reconcile downstream; Hipflat percentiles support ~37k/84k.",
-    "claim_ids": [
-     "pathum-wan-c07"
-    ]
-   },
-   {
-    "text": "Weekend-specific crowd counts do not exist publicly; crowd 1 rests on daily operator figures and police closures, not weekend measurements.",
-    "claim_ids": [
-     "pathum-wan-c11"
-    ]
-   },
-   {
-    "text": "Heat/shade and walking comfort on the plaza canyons: no source found (Reddit/TripAdvisor 403); walkability claims rest on infrastructure only.",
-    "claim_ids": [
-     "pathum-wan-c13"
-    ]
-   },
-   {
-    "text": "Lumphini Park's area: 57.6 ha official (360 rai) vs 52.3 ha computed from the OSM polygon; the app's 102.7-ha green selection is unpublished, so the composition is our reconstruction.",
-    "claim_ids": [
-     "pathum-wan-c08"
-    ]
-   },
-   {
-    "text": "Whether Pathum Wan's USD23/sqm district mean is the highest of all 50 khet was not verified district-by-district; 'most expensive district' is anchored on land appraisals + city-center rent comparisons instead.",
-    "claim_ids": [
-     "pathum-wan-c07"
-    ]
-   }
+   "One Bangkok hotel status conflicted: pre-opening coverage targeted Ritz-Carlton Nov 2024 and Andaz 2025, other reporting dates the openings Dec 2024 and 19 Dec 2025, while a Sep 2026 business report still lists both in the 2027 build-out — needs operator confirmation.",
+   "One Bangkok site size differs inside the operator's own releases (104 rai PPTV vs 108 rai TH release vs ~17 ha EN).",
+   "App's 55 temples vs 6 named Buddhist worship sites in OSM inside the khet — the app category is likely broader (shrines, spirit houses); definition unknown.",
+   "District rent blend inconsistency across app data: this brief carries 38,000/85,000 THB while a sibling batch-3 file describes the district blend as 33,500/74,000 — reconcile downstream; Hipflat percentiles support ~37k/84k.",
+   "Weekend-specific crowd counts do not exist publicly; crowd 1 rests on daily operator figures and police closures, not weekend measurements.",
+   "Heat/shade and walking comfort on the plaza canyons: no source found (Reddit/TripAdvisor 403); walkability claims rest on infrastructure only.",
+   "Lumphini Park's area: 57.6 ha official (360 rai) vs 52.3 ha computed from the OSM polygon; the app's 102.7-ha green selection is unpublished, so the composition is our reconstruction.",
+   "Whether Pathum Wan's USD23/sqm district mean is the highest of all 50 khet was not verified district-by-district; 'most expensive district' is anchored on land appraisals + city-center rent comparisons instead."
   ]
  },
  "images": [],

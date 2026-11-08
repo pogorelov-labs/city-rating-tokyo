@@ -524,7 +524,7 @@
     "event_date": null,
     "observed_period": "guides 2025-2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -731,7 +731,7 @@
     "scope": "venue",
     "place_name": "bars on Soi Ari Samphan and adjacent sois",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -831,13 +831,13 @@
     "scope": "station_area",
     "place_name": "Ari around BTS Ari",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "guides 2025-2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1015,7 +1015,7 @@
     "event_date": null,
     "observed_period": "address current 2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1051,13 +1051,13 @@
     "scope": "station_area",
     "place_name": "cafes on the inner sois vs BTS platform and Phahonyothin",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "guides 2025-2026; time-of-day patterns recurring",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {

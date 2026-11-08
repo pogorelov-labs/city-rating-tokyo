@@ -1740,55 +1740,14 @@
    }
   ],
   "uncertainties": [
-   {
-    "text": "Park-cluster geometry is coordinate-derived, not polygon-verified (OSM blocked); Wikipedia geocodes disagree internally by up to ~500 m; coordinator polygon check pending.",
-    "claim_ids": [
-     "ha-yaek-c09"
-    ]
-   },
-   {
-    "text": "The app's 38.1-ha green polygon matches none of the published park areas (30.4/22/60 ha); provenance unknown.",
-    "claim_ids": [
-     "ha-yaek-c09"
-    ]
-   },
-   {
-    "text": "App venue counts (560 food, 109 cafes, 39 nightlife, 13 temples) not independently verified; no named temple inside the unit surfaced in accessible sources.",
-    "claim_ids": [
-     "ha-yaek-c13",
-     "ha-yaek-c14"
-    ]
-   },
-   {
-    "text": "Ridership figures are 2021 (post-COVID); escalator-reliability and the 25 Apr 2025 signal failure rest on snippet-only reports.",
-    "claim_ids": [
-     "ha-yaek-c03",
-     "ha-yaek-c16",
-     "ha-yaek-c07"
-    ]
-   },
-   {
-    "text": "Somdet Ya Park area unpublished; skywalk-to-Rot-Fai-Park route length unstated by BMA.",
-    "claim_ids": [
-     "ha-yaek-c08"
-    ]
-   },
-   {
-    "text": "Safety had no unit-specific incident evidence in accessible sources; the 7 rests on district blend.",
-    "claim_ids": []
-   },
-   {
-    "text": "Corridor flood claims (2026 Lat Phrao Road event) come from a single guide.",
-    "claim_ids": [
-     "ha-yaek-c16"
-    ]
-   },
-   {
-    "text": "CPN's 'next CBD', catchment and purchasing-power figures are developer marketing.",
-    "claim_ids": [
-     "ha-yaek-c06"
-    ]
-   }
+   "Park-cluster geometry is coordinate-derived, not polygon-verified (OSM blocked); Wikipedia geocodes disagree internally by up to ~500 m; coordinator polygon check pending.",
+   "The app's 38.1-ha green polygon matches none of the published park areas (30.4/22/60 ha); provenance unknown.",
+   "App venue counts (560 food, 109 cafes, 39 nightlife, 13 temples) not independently verified; no named temple inside the unit surfaced in accessible sources.",
+   "Ridership figures are 2021 (post-COVID); escalator-reliability and the 25 Apr 2025 signal failure rest on snippet-only reports.",
+   "Somdet Ya Park area unpublished; skywalk-to-Rot-Fai-Park route length unstated by BMA.",
+   "Safety had no unit-specific incident evidence in accessible sources; the 7 rests on district blend.",
+   "Corridor flood claims (2026 Lat Phrao Road event) come from a single guide.",
+   "CPN's 'next CBD', catchment and purchasing-power figures are developer marketing."
   ]
  },
  "images": [],

@@ -134,7 +134,9 @@
    "body_read": true,
    "type": "other",
    "commercial_context": "",
-   "limitations": []
+   "limitations": [
+    "2026-11-08 C-6 wave 1: URL recorded without page-title parameters — dead endpoint as recorded; archived-citation status; coordinates used here are already flagged for the B-2 anchor audit (Chit Lom / Victory Monument displacement)."
+   ]
   },
   {
    "id": "src_13ffd9d3912f",
@@ -1156,7 +1158,8 @@
    "open issue: gym_sports 9: mechanism undocumented in open sources; likely hotel-gym driven (inference). Recommend checking the app's POI class definitions (editorial item gym_sports).",
    "open issue: ARL operator data gap: srtet.or.th timetable/fares page was not fetched; frequency (10-11/12-13 min) rests on a full Wikipedia read plus snippet corroboration. Baiyoke II height also shows a 304 vs 309 m source discrepancy (ratchaprarop-c07, c16).",
    "open issue: No verified 2024-2026 Pratunam/Platinum redevelopment decision found; livestream-reseller market disruption is documented only at news-snippet level (ratchaprarop-c14).",
-   "open issue: Rent evidence is district-level (FazWaz Ratchathewi feed); no listing explicitly on Ratchaprarop Rd appeared on the page read, so 'own stock' rents are inferred from adjacent-road examples (ratchaprarop-c11)."
+   "open issue: Rent evidence is district-level (FazWaz Ratchathewi feed); no listing explicitly on Ratchaprarop Rd appeared on the page read, so 'own stock' rents are inferred from adjacent-road examples (ratchaprarop-c11).",
+   "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record."
   ]
  }
 }

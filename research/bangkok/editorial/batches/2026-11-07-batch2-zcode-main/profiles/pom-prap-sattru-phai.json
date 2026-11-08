@@ -1439,31 +1439,10 @@
    }
   ],
   "uncertainties": [
-   {
-    "text_en": "The green 9 vs 0.7 ha tension is resolved here as a mechanism claim (temple compound + canal promenade + outside parks), not a measurement - no canopy data or park-boundary reproduction was possible; treat the score as editorial, and recheck if the app's park polygon changes.",
-    "claim_ids": [
-     "pom-prap-sattru-phai-c15"
-    ]
-   },
-   {
-    "text_en": "Both nearby MRT stations are administratively outside the khet (Wat Mangkon per Wikipedia in Samphanthawong; Sam Yot in Phra Nakhon), which conflicts with the pilot bundle's 'straddling' note for Wat Mangkon - the transport 8 should not be phrased as 'station inside the district'.",
-    "claim_ids": [
-     "pom-prap-sattru-phai-c02"
-    ]
-   },
-   {
-    "text_en": "Rent evidence is a ~11-unit asking-price sample; the app's 24,000 THB 2-bed reference sits below every observed 2-bed listing (25,000-32,000), and the 12,000 THB 1-bed matches the observed floor - neither figure is a median of the district's real housing stock.",
-    "claim_ids": [
-     "pom-prap-sattru-phai-c13"
-    ]
-   },
-   {
-    "text_en": "The Michelin star/Bib identifications (Potong, Bunloet) and the 2025 fair dates rest on search snippets because the Michelin and some Thai pages were not body-readable; verify against the next printed guide before repeating the pair in published copy.",
-    "claim_ids": [
-     "pom-prap-sattru-phai-c17",
-     "pom-prap-sattru-phai-c05"
-    ]
-   }
+   "The green 9 vs 0.7 ha tension is resolved here as a mechanism claim (temple compound + canal promenade + outside parks), not a measurement - no canopy data or park-boundary reproduction was possible; treat the score as editorial, and recheck if the app's park polygon changes.",
+   "Both nearby MRT stations are administratively outside the khet (Wat Mangkon per Wikipedia in Samphanthawong; Sam Yot in Phra Nakhon), which conflicts with the pilot bundle's 'straddling' note for Wat Mangkon - the transport 8 should not be phrased as 'station inside the district'.",
+   "Rent evidence is a ~11-unit asking-price sample; the app's 24,000 THB 2-bed reference sits below every observed 2-bed listing (25,000-32,000), and the 12,000 THB 1-bed matches the observed floor - neither figure is a median of the district's real housing stock.",
+   "The Michelin star/Bib identifications (Potong, Bunloet) and the 2025 fair dates rest on search snippets because the Michelin and some Thai pages were not body-readable; verify against the next printed guide before repeating the pair in published copy."
   ]
  },
  "images": [],

@@ -343,7 +343,7 @@
   {
    "id": "src_bb03f936b519",
    "canonical_url": "https://www.ddproperty.com/",
-   "retrieved_url": "https://www.ddproperty.com/ (Ratchathewi/The Line Ratchathewi rental stats via search summary)",
+   "retrieved_url": "https://www.ddproperty.com/",
    "title": "DDproperty rental statistics for Ratchathewi (search summary)",
    "publisher": "DDproperty",
    "publisher_family": "DDproperty",
@@ -356,7 +356,8 @@
    "commercial_context": "property listings portal",
    "limitations": [
     "SNIPPET-ONLY via search summary; page not opened; used only as corroboration in c07 alongside body-read sources",
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(Ratchathewi/The Line Ratchathewi rental stats via search summary)'"
    ]
   }
  ],

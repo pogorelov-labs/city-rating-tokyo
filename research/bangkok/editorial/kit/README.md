@@ -66,14 +66,16 @@ python3 kit/briefs.py    --batch-dir <batch>            # derived views
 | `canonical.py` | canonical publisher-family mapping for corroboration independence (B-10/G21): Wikipedia language editions/Wikimedia projects = one family; OSM/Overpass = one; portal casing variants merge; agent-generic buckets never merged |
 | `check_geometry.py` | point-in-polygon + haversine against the app polygons (single point, `--file` batches, `--info`, `--khet` to bypass station-key shadowing — B-8) |
 | `assemble.py` | normalize raw agent JSON → schema bundles; driven by `batch.json`; logs every normalization; corroboration computed over canonical families; passes through `conflicts_with` (filtered to same-bundle ids); writes `search-log.jsonl` + `manifest.json` |
-| `validate.py` | Draft-2020-12-subset schema validation + semantic reference closure incl. `conflicts_with` link integrity → must print `ALL OK` |
+| `validate.py` | Draft-2020-12-subset schema validation + semantic reference closure incl. `conflicts_with` link integrity → must print `ALL OK`. Schema errors were silently discarded + anyOf didn't roll back failed variants until 2026-11-08 (see `../2026-11-08-gate-verification.md`) — both fixed; schema path pinned in-repo |
 | `audit.py` | independent recomputation audit (source IDs, canonical corroboration, body-read reliance, dates, banned words, radius→time, ref closure, checks honesty) + standing **G20** injection/HTML sweep, **G24** URL-scheme/AI-summary checks, limitations-integrity rule |
 | `briefs.py` | derived markdown briefs from profiles |
 | `tools/relabel_canonical.py` | B-10 one-off pass: canonicalize corroboration labels in closed batches in place (never re-assemble closed batches) |
 | `tools/build_source_registry.py` | B-11: build `registry/source-attributions.json` (canonical attribution per canonical URL) |
 | `tools/populate_conflicts.py` | B-13: apply reviewer-derived claim↔claim conflict links |
 | `tools/manifest_times.py` | B-14: stamp manifests with research start/end (mtime-derived) |
-| `tests/` | unit tests (`python3 -m unittest discover -s kit/tests`) — canonical rules, assemble corroboration, audit gate behavior |
+| `tools/contract_repair.py` | 2026-11-08 one-off: make closed bundles schema-conformant (URL annotation splits, null notes, bool commercial_context, dict uncertainties) — logged, idempotent |
+| `tools/link_health.py` | C-6/G14: quarterly link-health wave over all canonical URLs (resolution only; dead → archived-citation flags) |
+| `tests/` | unit tests (`python3 -m unittest discover -s kit/tests`) — canonical rules, assemble corroboration + normalizations, audit gate behavior |
 
 `registry/source-attributions.json` — 547 canonical URLs → canonical
 publisher/title + variants + citing entities; the adapter consults it for

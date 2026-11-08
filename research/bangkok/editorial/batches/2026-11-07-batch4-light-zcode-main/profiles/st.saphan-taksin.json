@@ -33,7 +33,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "p",
     "l",
@@ -117,7 +117,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "e",
     "x",
@@ -202,7 +202,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "T",
     "h",
@@ -320,7 +320,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "n",
     "o",
@@ -415,7 +415,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": true,
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
    "limitations": [
     "p",
     "a",
@@ -600,7 +600,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": false,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "U",
     "R",
@@ -785,7 +785,8 @@
     "i",
     "t",
     "y",
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "2026-11-08 C-6 wave 1: URL returns 404 (dead) — archived-citation status; content survives in evidence paraphrases (the 'CNN 4th-best rank' was already excluded from claims, B-6)."
    ]
   },
   {
@@ -801,7 +802,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "t",
     "w",
@@ -874,7 +875,7 @@
    "retrieved_at": "2026-11-08T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "n",
     "o",
@@ -1136,7 +1137,7 @@
     "scope": "venue",
     "place_name": "Sathorn (Central) Pier",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1391,7 +1392,7 @@
     "scope": "station_area",
     "place_name": "Saphan Taksin station / Sathorn pier nexus",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1430,7 +1431,7 @@
     "scope": "corridor",
     "place_name": "Charoen Krung / Silom riverside edge",
     "relation_to_entity": "partial",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1470,7 +1471,7 @@
     "scope": "station_area",
     "place_name": "Saphan Taksin catchment incl. west-bank slice",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1504,7 +1505,7 @@
     "scope": "station_area",
     "place_name": "Saphan Taksin catchment",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1811,7 +1812,8 @@
    "open issue: Rent: no body-readable aggregate for Sathon khet; app 24,000/52,500 is editorial — recommend the rent-audit follow-up add a Sathon-specific source.",
    "open issue: Brief-vs-app district mismatch: brief said 'Bang Rak blend', app says primary district sathon (47.1%) — coordinator should confirm which blend the rent figure encodes.",
    "open issue: Orange-flag boat service: operator site lists Nonthaburi-Wat Rajsingkorn (Mon-Fri) and does not show Sathorn as a stop; historical/wiki sources say orange serves Sathorn — route status needs confirmation.",
-   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record."
   ]
  }
 }

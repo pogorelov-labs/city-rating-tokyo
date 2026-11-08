@@ -171,8 +171,8 @@
    ]
   },
   {
-   "id": "src_fa86a895e51b",
-   "canonical_url": "https://greener.bangkok.go.th (Somdet Ya 84 park entry, via search aggregation)",
+   "id": "src_7e9420006e34",
+   "canonical_url": "https://greener.bangkok.go.th",
    "retrieved_url": "https://greener.bangkok.go.th",
    "title": "สวนสมเด็จย่า 84 - BMA Greener Bangkok registry",
    "publisher": "BMA greener.bangkok.go.th (via search aggregation)",
@@ -185,7 +185,8 @@
    "type": "government",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "2026-11-08 contract repair: canonical_url carried a verbatim annotation after the URL and was split off: '(Somdet Ya 84 park entry, via search aggregation)'"
    ]
   }
  ],
@@ -515,7 +516,7 @@
      "paraphrase": "no district-scale named park inside the khet; nearest named parks fall outside the polygon"
     },
     {
-     "source_id": "src_fa86a895e51b",
+     "source_id": "src_7e9420006e34",
      "locator": "search-excerpt summary",
      "paraphrase": "Suan Somdet Ya 84 described as a ~10-rai pocket park in the khet"
     },

@@ -22,9 +22,9 @@ def raw_bundle(fam_a, fam_b, conflicts=None):
             "claim_id": "testx-c01", "text_en": "A test claim.",
             "kind": "factual_report", "topics": ["test"], "polarity": "neutral",
             "geography": {"scope": "station_area", "place_name": "Test",
-                          "relation_to_entity": "inside", "notes": ""},
+                          "relation_to_entity": "inside", "notes": None},
             "temporal_scope": {"event_date": None, "observed_period": None,
-                               "recheck_by": None, "notes": ""},
+                               "recheck_by": None, "notes": None},
             "evidence": [{"source_index": 0, "locator": "s1", "paraphrase": "a"},
                          {"source_index": 1, "locator": "s2", "paraphrase": "b"}],
             "limitations": [], "conflicts_with": conflicts or [],
@@ -38,7 +38,7 @@ def raw_bundle(fam_a, fam_b, conflicts=None):
                       "guide_lead": {"text_en": "L", "claim_ids": ["testx-c01"]},
                       "strengths": [], "tradeoffs": [], "day_night": [],
                       "within_area_variation": [], "conditional_fit": [],
-                      "uncertainties": []},
+                      "uncertainties": [{"text": "U", "claim_ids": ["testx-c01"]}]},
         "open_issues": [],
     }
 
@@ -77,6 +77,28 @@ class TestAssembleCorroboration(unittest.TestCase):
         b = assemble.assemble("st.testx", ENT,
                               raw_bundle("English Wikipedia", "OpenStreetMap"), BATCH, {})
         self.assertEqual(b["claims"][0]["conflicts_with"], [])
+
+    def test_null_notes_coerced_and_uncertainties_flattened(self):
+        b = assemble.assemble("st.testx", ENT,
+                              raw_bundle("English Wikipedia", "OpenStreetMap"), BATCH, {})
+        self.assertEqual(b["claims"][0]["geography"]["notes"], "")
+        self.assertEqual(b["claims"][0]["temporal_scope"]["notes"], "")
+        self.assertEqual(b["editorial"]["uncertainties"], ["U"])
+
+    def test_url_annotation_split_and_bool_commercial_context(self):
+        raw = raw_bundle("English Wikipedia", "OpenStreetMap")
+        raw["sources"][0]["canonical_url"] = "https://a.example/x (fetched via mirror)"
+        raw["sources"][1]["retrieved_url"] = "https://b.example/y"
+        raw["sources"][1]["commercial_context"] = True
+        counts = {}
+        b = assemble.assemble("st.testx", ENT, raw, BATCH, counts)
+        s0 = b["sources"][0]
+        self.assertEqual(s0["canonical_url"], "https://a.example/x")
+        self.assertTrue(any("annotation split off" in l for l in s0["limitations"]))
+        self.assertEqual(b["sources"][1]["commercial_context"],
+                         "commercial (boolean flag normalized)")
+        self.assertEqual(counts["url_annotation_split"], 1)
+        self.assertEqual(counts["commercial_context_bool"], 1)
 
 
 if __name__ == "__main__":

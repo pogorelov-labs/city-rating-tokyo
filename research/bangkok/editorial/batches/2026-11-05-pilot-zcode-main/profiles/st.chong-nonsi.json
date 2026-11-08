@@ -648,7 +648,7 @@
     "event_date": null,
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -800,7 +800,7 @@
     "event_date": null,
     "observed_period": "guide texts updated 2026-08 to 2026-10",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1007,7 +1007,7 @@
     "event_date": null,
     "observed_period": "2025–2026 guide editions",
     "recheck_by": "2027-01-31",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1116,7 +1116,7 @@
     "event_date": null,
     "observed_period": "2021 criticism; guide texts 2025–2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1206,7 +1206,7 @@
     "event_date": null,
     "observed_period": "accounts 2015–2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1263,7 +1263,7 @@
     "event_date": null,
     "observed_period": "guide texts 2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {

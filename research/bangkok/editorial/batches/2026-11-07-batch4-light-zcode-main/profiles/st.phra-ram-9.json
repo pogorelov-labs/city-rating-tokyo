@@ -33,7 +33,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "2",
     "0",
@@ -100,7 +100,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": true,
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
    "limitations": [
     "p",
     "u",
@@ -222,7 +222,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": true,
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
    "limitations": [
     "r",
     "e",
@@ -345,7 +345,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "o",
     "p",
@@ -469,7 +469,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "a",
     "n",
@@ -547,7 +547,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": true,
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
    "limitations": [
     "a",
     "f",
@@ -657,7 +657,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": true,
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
    "limitations": [
     "U",
     "S",
@@ -838,7 +838,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "t",
     "w",
@@ -1052,7 +1052,7 @@
     "scope": "venue",
     "place_name": "CentralPlaza Grand Rama 9 / Fortune Town",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1315,7 +1315,7 @@
     "scope": "corridor",
     "place_name": "MRT Blue Line / Rama IX interchange",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1356,7 +1356,7 @@
     "scope": "station_area",
     "place_name": "Phra Ram 9 catchment",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1425,7 +1425,7 @@
     "scope": "station_area",
     "place_name": "Phra Ram 9 catchment",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,

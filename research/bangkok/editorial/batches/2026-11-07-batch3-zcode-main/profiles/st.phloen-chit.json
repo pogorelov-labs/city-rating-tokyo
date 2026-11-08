@@ -391,7 +391,8 @@
    "type": "other",
    "commercial_context": "Thai property-market analysis site",
    "limitations": [
-    "Snippet-only (Thai search summary): 20 rai, assessed 625k THB/sq.wa vs market up to 3.8M; corroborates source 8's Dutch-embassy sale figure (>20bn THB, 'reported, not confirmed'); never sole support."
+    "Snippet-only (Thai search summary): 20 rai, assessed 625k THB/sq.wa vs market up to 3.8M; corroborates source 8's Dutch-embassy sale figure (>20bn THB, 'reported, not confirmed'); never sole support.",
+    "2026-11-08 C-6 wave 1: URL returns 404 (dead) — archived-citation status; the conflicting rai/figure survives in evidence paraphrases and the claim already cites both sides."
    ]
   },
   {
@@ -1628,64 +1629,14 @@
    }
   ],
   "uncertainties": [
-   {
-    "text": "Polygon relations unresolved (OSM blocked): clip lines at Chit Lom/Nana, the southern boundary against the lumphini unit, whether any Lumphini tip or One Bangkok green edge falls inside, and which 2 piers the app mapped (Wireless pier confident; Chidlom vs Nana Nuea ambiguous).",
-    "claim_ids": [
-     "phloen-chit-c01",
-     "phloen-chit-c03",
-     "phloen-chit-c08"
-    ]
-   },
-   {
-    "text": "The 10.7-ha mapped green cannot be decomposed from published data — Nai Lert (~2.2-2.4 ha) is the only named in-unit green; its area figure itself is snippet-sourced.",
-    "claim_ids": [
-     "phloen-chit-c08"
-    ]
-   },
-   {
-    "text": "App counts (351 food, 53 cafes, 33 nightlife) unverified; the nightlife-10 mechanism (hotel-bar quality + Nana adjacency) is researcher inference from documented supply.",
-    "claim_ids": [
-     "phloen-chit-c04",
-     "phloen-chit-c11"
-    ]
-   },
-   {
-    "text": "Rent evidence is asking-only (portals and guides); no signed-rent source found; the 33,500/74,000 blend's construction is editorial and unpublished.",
-    "claim_ids": [
-     "phloen-chit-c06",
-     "phloen-chit-c07"
-    ]
-   },
-   {
-    "text": "Safety 7 has no unit-level evidence at all in accessible sources — the score reads as district-blend default.",
-    "claim_ids": [
-     "phloen-chit-c15"
-    ]
-   },
-   {
-    "text": "Conflicting British Embassy figures (23 vs 25 rai; 2017 vs 2018) and an unconfirmed 'Central Embassy 2' programme; the Dutch-embassy sale is 'reported, not confirmed'.",
-    "claim_ids": [
-     "phloen-chit-c10",
-     "phloen-chit-c18"
-    ]
-   },
-   {
-    "text": "Snippet-only corroborations used, never sole support: DDproperty 1BR average, LAD land analysis, Park Hyatt dual-station bridge claim, Reddit skywalk gap, 'quiet, secure' guide language, Witthayu loop distance.",
-    "claim_ids": [
-     "phloen-chit-c06",
-     "phloen-chit-c03",
-     "phloen-chit-c17",
-     "phloen-chit-c15",
-     "phloen-chit-c13"
-    ]
-   },
-   {
-    "text": "The 2016 BK Magazine Wireless Road piece is sponsored ('Brought to you by' GROVE) and used only for history and framing; One Bangkok visitor figures are management-supplied.",
-    "claim_ids": [
-     "phloen-chit-c14",
-     "phloen-chit-c09"
-    ]
-   }
+   "Polygon relations unresolved (OSM blocked): clip lines at Chit Lom/Nana, the southern boundary against the lumphini unit, whether any Lumphini tip or One Bangkok green edge falls inside, and which 2 piers the app mapped (Wireless pier confident; Chidlom vs Nana Nuea ambiguous).",
+   "The 10.7-ha mapped green cannot be decomposed from published data — Nai Lert (~2.2-2.4 ha) is the only named in-unit green; its area figure itself is snippet-sourced.",
+   "App counts (351 food, 53 cafes, 33 nightlife) unverified; the nightlife-10 mechanism (hotel-bar quality + Nana adjacency) is researcher inference from documented supply.",
+   "Rent evidence is asking-only (portals and guides); no signed-rent source found; the 33,500/74,000 blend's construction is editorial and unpublished.",
+   "Safety 7 has no unit-level evidence at all in accessible sources — the score reads as district-blend default.",
+   "Conflicting British Embassy figures (23 vs 25 rai; 2017 vs 2018) and an unconfirmed 'Central Embassy 2' programme; the Dutch-embassy sale is 'reported, not confirmed'.",
+   "Snippet-only corroborations used, never sole support: DDproperty 1BR average, LAD land analysis, Park Hyatt dual-station bridge claim, Reddit skywalk gap, 'quiet, secure' guide language, Witthayu loop distance.",
+   "The 2016 BK Magazine Wireless Road piece is sponsored ('Brought to you by' GROVE) and used only for history and framing; One Bangkok visitor figures are management-supplied."
   ]
  },
  "images": [],
@@ -1717,7 +1668,8 @@
    "open issue: {'id': 'OI-7', 'issue': 'Station code discrepancy.', 'notes': \"Wikipedia gives E2 for Phloen Chit (E1 = Chit Lom). Some older secondary materials and the research brief's neighborhood of codes may say E1. E2 used per the body-read source.\"}",
    "open issue: {'id': 'OI-8', 'issue': 'Snippet-only evidence items (corroboration only, never sole support).', 'notes': \"DDproperty Noble Ploenchit 1BR average ~43k; LAD Dutch-embassy land analysis; Park Hyatt covered-bridge-to-two-stations claim (hotel marketing); Reddit Ploenchit-Nana skywalk gap; Nai Lert garden area (~14-15 rai); Witthayu running-loop ~2.5-3 km; 'quiet, secure' embassy-quarter guide language; khwaeng-boundary (Saen Saep = Lumphini/Makkasan-Ratchathewi) statements.\"}",
    "open issue: {'id': 'OI-9', 'issue': 'Access failures encountered.', 'notes': 'centralembassy.com/en/about-us HTTP 404; timeout.com Open House page HTTP 404; Reddit/TripAdvisor 403 (policy); Overpass blocked (policy); Bangkok Post paywalled (One Bangkok visitor article not read; figure sourced to Nation Thailand body-read instead).'}",
-   "open issue: {'id': 'OI-10', 'issue': 'App facts left unverified.', 'notes': '351 food, 53 cafes, 33 nightlife venues, 2 piers, 10.7 ha park area, 1.07 km2 unit area — no accessible independent source could confirm any count; Overpass blocked. The 1.07 km2 unit vs named-green ~2.2-2.4 ha (~20-22% if all mapped green were Nai Lert, which it cannot be at 10.7 ha) — decomposition pending.'}"
+   "open issue: {'id': 'OI-10', 'issue': 'App facts left unverified.', 'notes': '351 food, 53 cafes, 33 nightlife venues, 2 piers, 10.7 ha park area, 1.07 km2 unit area — no accessible independent source could confirm any count; Overpass blocked. The 1.07 km2 unit vs named-green ~2.2-2.4 ha (~20-22% if all mapped green were Nai Lert, which it cannot be at 10.7 ha) — decomposition pending.'}",
+   "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record."
   ]
  }
 }

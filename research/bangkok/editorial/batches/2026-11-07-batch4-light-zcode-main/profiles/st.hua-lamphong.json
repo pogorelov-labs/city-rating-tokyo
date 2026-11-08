@@ -33,7 +33,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "c",
     "o",
@@ -100,7 +100,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "n",
     "o",
@@ -192,7 +192,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "t",
     "r",
@@ -273,7 +273,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "p",
     "r",
@@ -365,7 +365,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "s",
     "i",
@@ -442,7 +442,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "s",
     "i",
@@ -566,7 +566,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": true,
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
    "limitations": [
     "n",
     "o",
@@ -756,7 +756,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "t",
     "w",
@@ -881,7 +881,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": false,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "s",
     "n",
@@ -1000,7 +1000,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": false,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "s",
     "n",
@@ -1434,7 +1434,7 @@
     "scope": "venue",
     "place_name": "Bangkok (Hua Lamphong) railway station",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1474,7 +1474,7 @@
     "scope": "venue",
     "place_name": "Thai Railway Museum, Bangkok (Hua Lamphong) railway station",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1639,7 +1639,7 @@
     "scope": "station_area",
     "place_name": "Hua Lamphong station forecourt and Rama IV frontage",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1723,7 +1723,7 @@
     "scope": "station_area",
     "place_name": "Hua Lamphong catchment",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,

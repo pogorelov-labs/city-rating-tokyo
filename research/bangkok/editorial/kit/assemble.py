@@ -70,6 +70,19 @@ def repo_root(start):
 def src_id_for(url):
     return "src_" + hashlib.sha256(url.encode("utf-8")).hexdigest()[:12]
 
+URL_TOKEN = re.compile(r"^(https?://\S+)")
+
+def split_url_annotation(val):
+    """(url, annotation|None): agents sometimes append notes after a URL."""
+    if not isinstance(val, str):
+        return val, None
+    m = URL_TOKEN.match(val.strip())
+    if not m:
+        return val, None
+    token = m.group(1)
+    rest = val.strip()[len(token):].strip()
+    return token, (rest or None)
+
 def norm_datetime(s):
     if not s:
         return None
@@ -135,16 +148,27 @@ def assemble(key, ent_meta, raw, batch, counts):
 
     sources_out, url_seen = [], {}
     for i, s in enumerate(raw["sources"]):
-        curl = s["canonical_url"].strip()
+        curl, ann = split_url_annotation(s["canonical_url"])
+        rurl, rann = split_url_annotation(s.get("retrieved_url") or curl)
+        lims = list(s.get("limitations") or [])
+        for field, a in (("canonical_url", ann), ("retrieved_url", rann)):
+            if a:
+                lims.append(f"agent appended a note after {field}; annotation split off: '{a}'")
+                counts["url_annotation_split"] = counts.get("url_annotation_split", 0) + 1
+        curl = curl.strip()
         sid = src_id_for(curl)
         if curl in url_seen:
             counts["source_url_dedup"] += 1
             continue
         url_seen[curl] = sid
+        cc = s.get("commercial_context", "")
+        if isinstance(cc, bool):
+            cc = "" if cc is False else "commercial (boolean flag normalized)"
+            counts["commercial_context_bool"] = counts.get("commercial_context_bool", 0) + 1
         sources_out.append({
             "id": sid,
             "canonical_url": curl,
-            "retrieved_url": s.get("retrieved_url") or curl,
+            "retrieved_url": rurl,
             "title": s["title"],
             "publisher": s["publisher"],
             "publisher_family": s.get("publisher_family") or s["publisher"],
@@ -154,8 +178,8 @@ def assemble(key, ent_meta, raw, batch, counts):
             "retrieved_at": norm_datetime(s.get("retrieved_at")) or "1970-01-01T00:00:00Z",
             "body_read": bool(s.get("body_read", False)),
             "type": norm_type(s["type"], counts),
-            "commercial_context": s.get("commercial_context", ""),
-            "limitations": list(s.get("limitations") or []),
+            "commercial_context": cc,
+            "limitations": lims,
         })
     fam_by_sid = {s["id"]: s["publisher_family"] for s in sources_out}
     sid_by_index = {i: src_id_for(s["canonical_url"].strip()) for i, s in enumerate(raw["sources"])}
@@ -191,16 +215,20 @@ def assemble(key, ent_meta, raw, batch, counts):
             status = "corroborated"
         else:
             status = "proposed"
+        if isinstance(c.get("temporal_scope"), dict):
+            ts = dict(c["temporal_scope"])
+            ts["notes"] = ts.get("notes") or ""
+        else:
+            ts = {"event_date": None, "observed_period": None, "recheck_by": None,
+                  "notes": str(c.get("temporal_scope") or "")}
         claims_out.append({
             "id": c["claim_id"], "text_en": c["text_en"], "kind": ckind,
             "topics": sorted(set(c.get("topics") or [])),
             "polarity": norm_polarity(c["polarity"], counts),
             "geography": {"scope": scope, "place_name": geo["place_name"],
                           "relation_to_entity": geo["relation_to_entity"],
-                          "notes": geo.get("notes", "")},
-            "temporal_scope": (c["temporal_scope"] if isinstance(c.get("temporal_scope"), dict) else
-                               {"event_date": None, "observed_period": None, "recheck_by": None,
-                                "notes": str(c.get("temporal_scope") or "")}),
+                          "notes": geo.get("notes") or ""},
+            "temporal_scope": ts,
             "evidence": ev_out, "supporting_claim_ids": [],
             "conflicts_with": [c for c in dict.fromkeys(c.get("conflicts_with") or [])
                                if c in claim_ids],
@@ -227,7 +255,9 @@ def assemble(key, ent_meta, raw, batch, counts):
                  "day_night": ed_items(ed.get("day_night")),
                  "within_area_variation": ed_items(ed.get("within_area_variation")),
                  "conditional_fit": ed_items(ed.get("conditional_fit")),
-                 "uncertainties": list(ed.get("uncertainties") or [])}
+                 "uncertainties": [(it.get("text_en") or it.get("text") or "")
+                                   if isinstance(it, dict) else (it or "")
+                                   for it in (ed.get("uncertainties") or [])]}
 
     def as_block(v, fallback):
         if isinstance(v, dict):
@@ -330,7 +360,8 @@ def main():
     batch = json.load(open(os.path.join(args.batch_dir, "batch.json"), encoding="utf-8"))
     counts = {"polarity": 0, "source_type": 0, "geo_scope": 0, "claim_kind": 0,
               "qa_field": 0, "qa_status_partial": 0, "qa_inline_refs": 0,
-              "editorial_string": 0, "source_url_dedup": 0, "canonical_family_merge": 0}
+              "editorial_string": 0, "source_url_dedup": 0, "canonical_family_merge": 0,
+              "url_annotation_split": 0, "commercial_context_bool": 0}
     manifest_entities, all_logs = [], []
     for ent in batch["entities"]:
         key = ent["key"]

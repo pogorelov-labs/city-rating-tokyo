@@ -8,9 +8,10 @@ import os
 import re
 import sys
 
-SCHEMA_DEFAULT = ("/Users/ruslan/.codex/worktrees/bangkok-filters/city-rating/"
-                  "research/bangkok/editorial/2026-11-05-handoff/entity-research.schema.json")
-SCHEMA_FALLBACK = "research/bangkok/editorial/2026-11-05-handoff/entity-research.schema.json"
+# In-repo handoff schema is authoritative (a stale external copy was silently
+# preferred before 2026-11-08 — see 2026-11-08-gate-verification.md).
+SCHEMA_DEFAULT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                              "2026-11-05-handoff", "entity-research.schema.json")
 
 URI_RE = re.compile(r"^https?://\S+$")
 DT_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:?\d{2})$")
@@ -32,6 +33,7 @@ def validate(v, schema, path, errors):
             validate(v, opt, path, errors)
             if len(errors) == pre:
                 return
+            del errors[pre:]  # discard this variant's errors before trying the next
         errors.append(f"{path}: does not match any allowed variant")
         return
     if "const" in schema and v != schema["const"]:
@@ -128,7 +130,7 @@ def main():
     ap.add_argument("--batch-dir", default=os.getcwd())
     ap.add_argument("--schema", default=None)
     args = ap.parse_args()
-    schema_path = args.schema or (SCHEMA_DEFAULT if os.path.exists(SCHEMA_DEFAULT) else SCHEMA_FALLBACK)
+    schema_path = args.schema or SCHEMA_DEFAULT
     schema = json.load(open(schema_path, encoding="utf-8"))
     profiles_dir = os.path.join(args.batch_dir, "profiles")
     all_ok = True
@@ -138,7 +140,7 @@ def main():
         p = os.path.join(profiles_dir, fn)
         b = json.load(open(p, encoding="utf-8"))
         errors = []
-        validate(b, schema, fn, [])
+        validate(b, schema, fn, errors)
         semantic_checks(b, fn, errors)
         status = "PASS" if not errors else "FAIL"
         n_claims = len(b["claims"]); n_src = len(b["sources"])

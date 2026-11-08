@@ -1330,43 +1330,12 @@
    }
   ],
   "uncertainties": [
-   {
-    "text": "The 49-venue nightlife count (Overture) could not be decomposed; OSM maps 11 named bars, so whatever sits behind the difference (shophouse pubs, lounges, karaokes) is unverified.",
-    "claim_ids": [
-     "sena-ruam-c08"
-    ]
-   },
-   {
-    "text": "The app's rent figures are a district blend; BAANLYY's indicative 2-bed floor (38,000) sits above the blend's 37,000, and no signed-rent data exists for the cell's own stock.",
-    "claim_ids": [
-     "sena-ruam-c14"
-    ]
-   },
-   {
-    "text": "The Public Relations Department park's public-access status and hours were not verified, and its centroid lies outside the scored polygon.",
-    "claim_ids": [
-     "sena-ruam-c11"
-    ]
-   },
-   {
-    "text": "BK Magazine's 2018 venue list may be partly stale; only Craftsman Bangkok's survival is corroborated for 2026.",
-    "claim_ids": [
-     "sena-ruam-c15"
-    ]
-   },
-   {
-    "text": "Bus route numbers serving the soi-mouth stops were not sourced, and khlong-boat access was not checked (app fact: piers 0).",
-    "claim_ids": [
-     "sena-ruam-c07"
-    ]
-   },
-   {
-    "text": "Whether N6 construction ever starts is genuinely open: the infobox says construction expected 2026 and service 2032, the same article's history says cancelled, and the BMA said in November 2026 only that it will coordinate.",
-    "claim_ids": [
-     "sena-ruam-c02",
-     "sena-ruam-c03"
-    ]
-   }
+   "The 49-venue nightlife count (Overture) could not be decomposed; OSM maps 11 named bars, so whatever sits behind the difference (shophouse pubs, lounges, karaokes) is unverified.",
+   "The app's rent figures are a district blend; BAANLYY's indicative 2-bed floor (38,000) sits above the blend's 37,000, and no signed-rent data exists for the cell's own stock.",
+   "The Public Relations Department park's public-access status and hours were not verified, and its centroid lies outside the scored polygon.",
+   "BK Magazine's 2018 venue list may be partly stale; only Craftsman Bangkok's survival is corroborated for 2026.",
+   "Bus route numbers serving the soi-mouth stops were not sourced, and khlong-boat access was not checked (app fact: piers 0).",
+   "Whether N6 construction ever starts is genuinely open: the infobox says construction expected 2026 and service 2032, the same article's history says cancelled, and the BMA said in November 2026 only that it will coordinate."
   ]
  },
  "images": [],

@@ -102,6 +102,16 @@ gated (`validate` ALL OK ×5; `audit` zero P1):
 4. Every manifest now carries `research_started_at`/`research_completed_at`
    (mtime-derived) and a `canonical_family_relabel` stamp; the tail batch
    gained the manifest it was missing.
+5. **Same-day gate verification** ([`../2026-11-08-gate-verification.md`](../2026-11-08-gate-verification.md)):
+   the schema half of `kit/validate.py` had been silently discarding errors —
+   after the fix, a logged contract-repair pass made all bundles conform for
+   real: URL-field annotations split to `limitations` (sam-yan's four
+   Overpass records merged into one session record, annotations preserved),
+   null `notes` coerced, boolean `commercial_context` normalized,
+   `uncertainties` dicts flattened. Also: C-6 wave 1 flagged **4 dead URLs**
+   as archived-citation status (source-record limitations). Reviewers should
+   treat those limitation lines as machine-generated provenance notes, not
+   researcher claims.
 
 
 ## 4. After the review

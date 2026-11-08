@@ -284,8 +284,8 @@
    ]
   },
   {
-   "id": "src_a6d6384f5349",
-   "canonical_url": "https://overpass-api.de/api/interpreter (leisure=park|garden, around:800 of 13.73206,100.53012)",
+   "id": "src_891755a79d60",
+   "canonical_url": "https://overpass-api.de/api/interpreter",
    "retrieved_url": "https://overpass-api.de/api/interpreter",
    "title": "OpenStreetMap via Overpass API — park/garden polygons",
    "publisher": "OpenStreetMap contributors (Overpass API)",
@@ -299,61 +299,17 @@
    "commercial_context": "ODbL community data",
    "limitations": [
     "Polygon areas not computed (centers only); app's own green polygon not directly inspected",
-    "Crowd-sourced tagging — campus lawns may be tagged/omitted inconsistently"
-   ]
-  },
-  {
-   "id": "src_dd1c65b378cf",
-   "canonical_url": "https://overpass-api.de/api/interpreter (leisure=pitch|track|stadium|sports_centre|fitness_centre|swimming_pool, around:800)",
-   "retrieved_url": "https://overpass-api.de/api/interpreter",
-   "title": "OpenStreetMap via Overpass API — sports facilities",
-   "publisher": "OpenStreetMap contributors (Overpass API)",
-   "publisher_family": "OpenStreetMap / Overpass",
-   "author": null,
-   "published_at": null,
-   "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": true,
-   "type": "other",
-   "commercial_context": "ODbL community data",
-   "limitations": [
-    "No access rules or operators tagged; public-versus-member use unverified"
-   ]
-  },
-  {
-   "id": "src_80e81bc8e803",
-   "canonical_url": "https://overpass-api.de/api/interpreter (railway=station|halt, around:2500)",
-   "retrieved_url": "https://overpass-api.de/api/interpreter",
-   "title": "OpenStreetMap via Overpass API — station nodes",
-   "publisher": "OpenStreetMap contributors (Overpass API)",
-   "publisher_family": "OpenStreetMap / Overpass",
-   "author": null,
-   "published_at": null,
-   "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": true,
-   "type": "other",
-   "commercial_context": "ODbL community data",
-   "limitations": [
-    "Distances are station-node to app-coordinate straight lines computed by the researcher, not official measurements"
-   ]
-  },
-  {
-   "id": "src_be285a3ce286",
-   "canonical_url": "https://overpass-api.de/api/interpreter (nwr name~อุเทนถวาย, around:1500)",
-   "retrieved_url": "https://overpass-api.de/api/interpreter",
-   "title": "OpenStreetMap via Overpass API — Uthenthawai elements",
-   "publisher": "OpenStreetMap contributors (Overpass API)",
-   "publisher_family": "OpenStreetMap / Overpass",
-   "author": null,
-   "published_at": null,
-   "updated_at": null,
-   "retrieved_at": "2026-11-07T00:00:00Z",
-   "body_read": true,
-   "type": "other",
-   "commercial_context": "ODbL community data",
-   "limitations": [
-    "Single polygon center; campus may span several ways"
+    "Crowd-sourced tagging — campus lawns may be tagged/omitted inconsistently",
+    "2026-11-08 contract repair: canonical_url carried a verbatim annotation after the URL and was split off: '(leisure=park|garden, around:800 of 13.73206,100.53012)'",
+    "No access rules or operators tagged; public-versus-member use unverified",
+    "2026-11-08 contract repair: canonical_url carried a verbatim annotation after the URL and was split off: '(leisure=pitch|track|stadium|sports_centre|fitness_centre|swimming_pool, around:800)'",
+    "2026-11-08 contract repair: duplicate record (identical canonical URL) merged into this one; its title was 'OpenStreetMap via Overpass API — sports facilities'",
+    "Distances are station-node to app-coordinate straight lines computed by the researcher, not official measurements",
+    "2026-11-08 contract repair: canonical_url carried a verbatim annotation after the URL and was split off: '(railway=station|halt, around:2500)'",
+    "2026-11-08 contract repair: duplicate record (identical canonical URL) merged into this one; its title was 'OpenStreetMap via Overpass API — station nodes'",
+    "Single polygon center; campus may span several ways",
+    "2026-11-08 contract repair: canonical_url carried a verbatim annotation after the URL and was split off: '(nwr name~อุเทนถวาย, around:1500)'",
+    "2026-11-08 contract repair: duplicate record (identical canonical URL) merged into this one; its title was 'OpenStreetMap via Overpass API — Uthenthawai elements'"
    ]
   },
   {
@@ -411,9 +367,9 @@
    ]
   },
   {
-   "id": "src_3cd81bff27c1",
-   "canonical_url": "https://www.hipflat.com/projects/chapter-chula-samyan (unretrieved; figures from WebSearch summaries of property pages)",
-   "retrieved_url": "https://www.hipflat.com/projects/chapter-chula-samyan (unretrieved; figures from WebSearch summaries of property pages)",
+   "id": "src_2694bcd7dc25",
+   "canonical_url": "https://www.hipflat.com/projects/chapter-chula-samyan",
+   "retrieved_url": "https://www.hipflat.com/projects/chapter-chula-samyan",
    "title": "Chapter Chula-Samyan rental statistics (search-result summaries)",
    "publisher": "Hipflat / property portals (snippet only)",
    "publisher_family": "Hipflat / property portals",
@@ -425,13 +381,16 @@
    "type": "commercial_property",
    "commercial_context": "listing platform",
    "limitations": [
-    "Snippet-only: average ~30,795 THB/mo across 22 rental listings, range 20,000-40,000, ~689-724 THB/sqm; project page URL 404 on direct fetch; corroborative, not sole evidence"
+    "Snippet-only: average ~30,795 THB/mo across 22 rental listings, range 20,000-40,000, ~689-724 THB/sqm; project page URL 404 on direct fetch; corroborative, not sole evidence",
+    "2026-11-08 contract repair: canonical_url carried a verbatim annotation after the URL and was split off: '(unretrieved; figures from WebSearch summaries of property pages)'",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(unretrieved; figures from WebSearch summaries of property pages)'",
+    "2026-11-08 C-6 wave 1: URL returns 404 (dead) — archived-citation status; figures were never retrieved from the page (search-summary provenance, F-2 class)."
    ]
   },
   {
-   "id": "src_25dbfff310a2",
-   "canonical_url": "https://www.reg.chula.ac.th (calendar pages)",
-   "retrieved_url": "https://www.reg.chula.ac.th (calendar pages)",
+   "id": "src_42b0f10b4a85",
+   "canonical_url": "https://www.reg.chula.ac.th",
+   "retrieved_url": "https://www.reg.chula.ac.th",
    "title": "Chulalongkorn University academic calendar (search-result summaries of reg.chula.ac.th)",
    "publisher": "Chulalongkorn University Office of the Registrar",
    "publisher_family": "Chulalongkorn University",
@@ -443,7 +402,9 @@
    "type": "other",
    "commercial_context": "none",
    "limitations": [
-    "Snippet-only: semester 1 ~Aug-Dec, semester 2 ~Jan-May, summer ~mid-May-Jun; exact current-year dates not opened"
+    "Snippet-only: semester 1 ~Aug-Dec, semester 2 ~Jan-May, summer ~mid-May-Jun; exact current-year dates not opened",
+    "2026-11-08 contract repair: canonical_url carried a verbatim annotation after the URL and was split off: '(calendar pages)'",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(calendar pages)'"
    ]
   }
  ],
@@ -477,7 +438,7 @@
      "paraphrase": "Four-way junction of Rama IV with Phaya Thai (north) and Si Phraya (south-west) in Pathum Wan next to the Bang Rak border; Thai-Japan flyover built 1992; name means 'neighbourhood of three'; Chula owns the north-west corner land."
     },
     {
-     "source_id": "src_80e81bc8e803",
+     "source_id": "src_891755a79d60",
      "locator": "Overpass result row 'Sam Yan subway BL27 node 12803915078'",
      "paraphrase": "OSM station node at 13.7320608, 100.5301206 — identical to the app coordinate."
     },
@@ -524,7 +485,7 @@
    },
    "evidence": [
     {
-     "source_id": "src_80e81bc8e803",
+     "source_id": "src_891755a79d60",
      "locator": "Overpass rows: Si Lom BL26 (13.7291982,100.5370702), Hua Lamphong BL28 (13.7375708,100.5171350), Lumphini BL25 (13.7256066,100.5457249), Sala Daeng S2 (13.7285677,100.5343416), Bangkok railway station (13.7393113,100.5166499)",
      "paraphrase": "Neighbour station nodes and coordinates used for straight-line distances."
     },
@@ -715,12 +676,12 @@
      "paraphrase": "41,611 students; 637-rai main campus in Pathum Wan within 1,153 rai; Property Management Office runs commercial/mixed-use developments including Siam Square and areas around Sam Yan; Chamchuri Square a university-owned building at MRT Sam Yan Exit 2."
     },
     {
-     "source_id": "src_a6d6384f5349",
+     "source_id": "src_891755a79d60",
      "locator": "Overpass rows for Lan Chakrabongse, Suan Sathiramaithri, unnamed gardens",
      "paraphrase": "Campus garden polygons ~0.44-0.77 km north of the station."
     },
     {
-     "source_id": "src_dd1c65b378cf",
+     "source_id": "src_891755a79d60",
      "locator": "Overpass rows for CU Stadium (13.73737,100.52575) and campus pitches",
      "paraphrase": "Stadium ~0.76 km NNW; soccer fields ~0.58 km; courts closer in."
     }
@@ -757,7 +718,7 @@
    },
    "evidence": [
     {
-     "source_id": "src_a6d6384f5349",
+     "source_id": "src_891755a79d60",
      "locator": "Overpass element list (10 ways with names and centers)",
      "paraphrase": "All park/garden polygons within 800 m, none individually documented at 3.2 ha."
     },
@@ -947,7 +908,7 @@
      "paraphrase": "Decades-long dispute; Chula holds legal ownership; student fights in Aug-Sep 2026; four urgent measures including at least 3-month closure of the site and relocation planning."
     },
     {
-     "source_id": "src_be285a3ce286",
+     "source_id": "src_891755a79d60",
      "locator": "Overpass result (way 31972720)",
      "paraphrase": "RMUT Uthenthawai campus polygon center 13.7418147, 100.5311981 (~1.1 km north)."
     }
@@ -1030,7 +991,7 @@
    },
    "evidence": [
     {
-     "source_id": "src_dd1c65b378cf",
+     "source_id": "src_891755a79d60",
      "locator": "Overpass element list (19 ways)",
      "paraphrase": "CU Stadium (stadium), CU Sports Complex (sports_centre), MDCU basketball court, named soccer Fields 1-2 (private), tennis and basketball pitches, private swimming pools, with coordinates."
     }
@@ -1071,7 +1032,7 @@
      "paraphrase": "Station-filtered page dominated by Pathum Wan/Sathon premium rentals (95,000-490,000 THB examples); no station-level median shown; 8,942 listings total."
     },
     {
-     "source_id": "src_3cd81bff27c1",
+     "source_id": "src_2694bcd7dc25",
      "locator": "search-result summaries",
      "paraphrase": "Chapter Chula-Samyan ~30,795 THB average rent (22 listings, 20-40k, ~690-720 THB/sqm); Culture Chula from 7.59M; Wisdom Craft from 9.9M (snippet-only)."
     }
@@ -1113,7 +1074,7 @@
      "paraphrase": "Coolest-neighbourhood case rests on food, cafes, redevelopment and the 24/7 study complex — no bar-scene claim."
     },
     {
-     "source_id": "src_80e81bc8e803",
+     "source_id": "src_891755a79d60",
      "locator": "Overpass station nodes (Si Lom 0.8 km; Sala Daeng 0.6 km)",
      "paraphrase": "One-stop geometry to the Silom corridor."
     },
@@ -1171,7 +1132,7 @@
      "paraphrase": "3,542,328 passengers 2021."
     },
     {
-     "source_id": "src_25dbfff310a2",
+     "source_id": "src_42b0f10b4a85",
      "locator": "search summaries of reg.chula.ac.th",
      "paraphrase": "Semester structure Aug-Dec / Jan-May / summer mid-May-Jun (snippet-only)."
     }
@@ -1614,7 +1575,8 @@
    "open issue: Verify the 2026 Thai Red Cross Fair dates and whether Dec 2026 crowding measurably affects the unit.",
    "open issue: Read the paywalled Bangkok Post 2024-2026 pieces (tollbit gateway) if access is granted — Chula 2037 master plan details and heritage-loss arguments are headline-level only.",
    "open issue: Research CU Bike bike-share status (brief lead left unexplored).",
-   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger."
+   "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
+   "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record."
   ]
  }
 }

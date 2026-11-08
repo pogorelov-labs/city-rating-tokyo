@@ -33,7 +33,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "f",
     "a",
@@ -123,7 +123,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "a",
     "r",
@@ -250,7 +250,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "p",
     "o",
@@ -317,7 +317,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "n",
     "o",
@@ -393,7 +393,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": true,
+   "commercial_context": "commercial (boolean flag normalized 2026-11-08)",
    "limitations": [
     "F",
     "A",
@@ -605,7 +605,7 @@
    "retrieved_at": "2026-11-07T00:00:00Z",
    "body_read": true,
    "type": "other",
-   "commercial_context": false,
+   "commercial_context": "",
    "limitations": [
     "t",
     "w",
@@ -902,7 +902,7 @@
     "scope": "corridor",
     "place_name": "BTS Gold Line (Krung Thon Buri–Khlong San)",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -935,7 +935,7 @@
     "scope": "corridor",
     "place_name": "BTS Gold Line",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -970,7 +970,7 @@
     "scope": "corridor",
     "place_name": "BTS Gold Line",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1186,7 +1186,7 @@
     "scope": "station_area",
     "place_name": "Khlong San G3 catchment",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1220,7 +1220,7 @@
     "scope": "corridor",
     "place_name": "BTS Gold Line / Krung Thon Buri interchange",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -1254,7 +1254,7 @@
     "scope": "station_area",
     "place_name": "Khlong San G3 catchment",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,

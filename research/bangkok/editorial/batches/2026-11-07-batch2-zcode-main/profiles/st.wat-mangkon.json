@@ -588,7 +588,7 @@
     "event_date": null,
     "observed_period": "current administrative boundaries",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -943,7 +943,7 @@
     "event_date": null,
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1176,7 +1176,7 @@
     "event_date": null,
     "observed_period": "2017 census",
     "recheck_by": "next census release",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1217,7 +1217,7 @@
     "event_date": null,
     "observed_period": "2026-11-07 check",
     "recheck_by": "with OSM/Overpass access",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -1307,7 +1307,7 @@
     "event_date": null,
     "observed_period": null,
     "recheck_by": "verify nearest hospital with routing data",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {

@@ -95,7 +95,7 @@
   {
    "id": "src_891755a79d60",
    "canonical_url": "https://overpass-api.de/api/interpreter",
-   "retrieved_url": "https://overpass-api.de/api/interpreter (POST query, bbox 13.726,100.524,13.754,100.558)",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
    "title": "OpenStreetMap elements: stations, ferry terminals, piers, parks",
    "publisher": "OpenStreetMap contributors via Overpass API",
    "publisher_family": "OpenStreetMap",
@@ -109,7 +109,8 @@
    "limitations": [
     "Straight-line distances computed by researcher",
     "CU Centennial Park OSM description confirms Aug 2017 opening (Thai: built and opened Aug 2560 BE)",
-    "Park polygon areas not returned"
+    "Park polygon areas not returned",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(POST query, bbox 13.726,100.524,13.754,100.558)'"
    ]
   },
   {
@@ -205,7 +206,7 @@
     "event_date": "1999-12-05",
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -237,13 +238,13 @@
     "scope": "venue",
     "place_name": "Suphachalasai Stadium, National Stadium complex",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": "1938 (opened)",
     "observed_period": "1938-2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -278,7 +279,7 @@
     "event_date": null,
     "observed_period": "app snapshot 2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -309,13 +310,13 @@
     "scope": "venue",
     "place_name": "Suphachalasai Stadium",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": "2023-01-07; 2024-12-14; 2026-03-07; 2026-03-14; 2026-05-16",
     "observed_period": "2023-2026 calendar",
     "recheck_by": "2026-06",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -345,13 +346,13 @@
     "scope": "venue",
     "place_name": "MBK Center",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": "1985-02-07",
     "observed_period": "1985-2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -385,13 +386,13 @@
     "scope": "venue",
     "place_name": "Jim Thompson House, Soi Kasemsan 2",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": "1959 (house built); 1967 (disappearance)",
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -426,7 +427,7 @@
     "event_date": "2017-08 (per OSM description: built and opened Aug 2560 BE)",
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -460,13 +461,13 @@
     "scope": "station_area",
     "place_name": "Suan Chaloem Loa; Chamchuri 10 Garden",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "OSM snapshot 2026-11-07",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -501,7 +502,7 @@
     "event_date": null,
     "observed_period": "OSM snapshot 2026-11-07",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -537,7 +538,7 @@
     "event_date": null,
     "observed_period": "app 2026-09 blend vs live FazWaz 2026-11",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -568,13 +569,13 @@
     "scope": "station_area",
     "place_name": "MBK / Siam Square seam",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "guide-era + app snapshot 2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -614,7 +615,7 @@
     "event_date": null,
     "observed_period": "2024-2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {

@@ -27,7 +27,7 @@
   {
    "id": "src_3d5cfc5d8426",
    "canonical_url": "https://www.openstreetmap.org/way/1306732424",
-   "retrieved_url": "https://overpass-api.de/api/interpreter + https://api.openstreetmap.org/api/0.6/way/{1306732424,864170465,23487144}/full.json + Nominatim queries",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
    "title": "OpenStreetMap: Benjakitti Park (way 1306732424), Benchakitti Forest Park (way 864170465), Benchasiri Park (way 23487144), Soi Cowboy (way 156261355), Sukhumvit soi ways, POI extract r=800 m",
    "publisher": "OpenStreetMap contributors",
    "publisher_family": "OpenStreetMap",
@@ -41,7 +41,8 @@
    "limitations": [
     "Park/soi polygons are coarse (14-40 nodes): min-distance figures carry roughly +/-20-50 m error.",
     "Road-to-interchange distances use bbox corners/center, not true vertex distance: coarser (+/-50-100 m).",
-    "POI counts depend on OSM completeness; unnamed entries included in counts."
+    "POI counts depend on OSM completeness; unnamed entries included in counts.",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '+ https://api.openstreetmap.org/api/0.6/way/{1306732424,864170465,23487144}/full.json + Nominatim queries'"
    ]
   },
   {
@@ -275,7 +276,7 @@
     "event_date": null,
     "observed_period": "bar cluster first formed early 1970s; still mapped 2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -317,7 +318,7 @@
     "event_date": null,
     "observed_period": "operating as of 2025-2026 sources",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -404,7 +405,7 @@
     "event_date": null,
     "observed_period": "geometry extracted 2026-11-05",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -440,7 +441,7 @@
     "event_date": null,
     "observed_period": "OSM extract 2026-11-05",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -476,7 +477,7 @@
     "event_date": null,
     "observed_period": "corridor state as described by 2026 sources",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -634,7 +635,7 @@
     "event_date": null,
     "observed_period": "guides 2025-09 to 2025-12",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -717,7 +718,7 @@
     "event_date": null,
     "observed_period": "guides 2025-12 to 2026-09",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -794,13 +795,13 @@
     "scope": "station_area",
     "place_name": "Asok area",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "guides 2025-12 to 2026-09",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -840,7 +841,7 @@
     "event_date": null,
     "observed_period": "OSM extract 2026-11-05",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -881,7 +882,7 @@
     "event_date": null,
     "observed_period": "OSM extract 2026-11-05; guide updated 2025-12-31",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -970,13 +971,13 @@
     "scope": "station_area",
     "place_name": "Asok catchment",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "guides 2025-12 to 2026-09",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {

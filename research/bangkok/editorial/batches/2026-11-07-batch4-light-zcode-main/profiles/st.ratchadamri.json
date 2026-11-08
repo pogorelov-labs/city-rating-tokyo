@@ -113,7 +113,7 @@
   {
    "id": "src_891755a79d60",
    "canonical_url": "https://overpass-api.de/api/interpreter",
-   "retrieved_url": "https://overpass-api.de/api/interpreter (POST query, bbox 13.726,100.524,13.754,100.558)",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
    "title": "OpenStreetMap elements: stations, ferry terminals, piers, parks",
    "publisher": "OpenStreetMap contributors via Overpass API",
    "publisher_family": "OpenStreetMap",
@@ -126,7 +126,8 @@
    "commercial_context": "none",
    "limitations": [
     "Straight-line distances computed by researcher; park polygon areas not returned",
-    "Lumphini Park opening hours (04:30-22:00) from OSM tags"
+    "Lumphini Park opening hours (04:30-22:00) from OSM tags",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(POST query, bbox 13.726,100.524,13.754,100.558)'"
    ]
   },
   {
@@ -204,7 +205,7 @@
     "event_date": "1999-12-05",
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -236,13 +237,13 @@
     "scope": "venue",
     "place_name": "Anantara Siam Bangkok Hotel, 155 Ratchadamri Rd",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": "2015-03-01 (rebrand)",
     "observed_period": "1978-2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -283,7 +284,7 @@
     "event_date": "1901 (founding)",
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -317,7 +318,7 @@
     "event_date": "1925 (created)",
     "observed_period": "OSM snapshot 2026-11-07",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -358,7 +359,7 @@
     "event_date": null,
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -444,7 +445,7 @@
     "event_date": null,
     "observed_period": "app snapshot 2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -474,13 +475,13 @@
     "scope": "district",
     "place_name": "Pathum Wan district / Ratchadamri strip",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "app 2026-09 blend vs live FazWaz 2026-11",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -510,13 +511,13 @@
     "scope": "district",
     "place_name": "Pathum Wan khwaengs",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "app snapshot 2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -551,7 +552,7 @@
     "event_date": null,
     "observed_period": "2024-2026 construction period",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -586,13 +587,13 @@
     "scope": "station_area",
     "place_name": "RBSC, Lumphini edge, Ratchadamri strip",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
     "observed_period": "recurring 2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -632,7 +633,7 @@
     "event_date": "2024-03-18; 2024-10-25",
     "observed_period": "2024-2026",
     "recheck_by": "2027",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {

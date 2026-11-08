@@ -135,8 +135,8 @@
    ]
   },
   {
-   "id": "src_b894c19fc971",
-   "canonical_url": "https://www.mrta-purplelinesouth.com + BMA public-space registry entries (via search aggregation)",
+   "id": "src_384fd24dd5a1",
+   "canonical_url": "https://www.mrta-purplelinesouth.com",
    "retrieved_url": "https://www.mrta-purplelinesouth.com",
    "title": "Chong Nonsi Canal Park phase 3 progress / BMA registry (58 Narathiwas Rd)",
    "publisher": "BMA/press via search aggregation",
@@ -149,7 +149,8 @@
    "type": "government",
    "commercial_context": "",
    "limitations": [
-    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source."
+    "Content used only via search-engine highlight excerpts, not a full page read; corroboration only - every claim citing it also cites at least one fully read source.",
+    "2026-11-08 contract repair: canonical_url carried a verbatim annotation after the URL and was split off: '+ BMA public-space registry entries (via search aggregation)'"
    ]
   },
   {
@@ -749,7 +750,7 @@
      "paraphrase": "4.5 km canal park, LANDPROCESS/Kotchakorn, nature-based treatment, improvements slower than anticipated, part of BMA Blue & Green Network"
     },
     {
-     "source_id": "src_b894c19fc971",
+     "source_id": "src_384fd24dd5a1",
      "locator": "search-excerpt summary",
      "paraphrase": "Phase 3 ~1.6 km, ~472M THB, construction through 2025, end-2025 completion target, odor complaints, registry address 58 Narathiwas Rd"
     }

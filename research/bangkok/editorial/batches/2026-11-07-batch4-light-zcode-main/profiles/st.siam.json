@@ -133,7 +133,7 @@
   {
    "id": "src_891755a79d60",
    "canonical_url": "https://overpass-api.de/api/interpreter",
-   "retrieved_url": "https://overpass-api.de/api/interpreter (POST query, bbox 13.726,100.524,13.754,100.558)",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
    "title": "OpenStreetMap elements: stations, ferry terminals, piers, parks",
    "publisher": "OpenStreetMap contributors via Overpass API",
    "publisher_family": "OpenStreetMap",
@@ -147,7 +147,8 @@
    "limitations": [
     "Straight-line distances computed by the researcher from node/centroid coords",
     "Park polygon areas not returned; identities of unnamed polygons unverified",
-    "OSM completeness varies"
+    "OSM completeness varies",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(POST query, bbox 13.726,100.524,13.754,100.558)'"
    ]
   },
   {
@@ -249,7 +250,7 @@
     "event_date": null,
     "observed_period": "mall openings 1985-2007",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -336,7 +337,7 @@
     "event_date": "1857 (founding); 2010-05-19 (incident)",
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -370,7 +371,7 @@
     "event_date": null,
     "observed_period": "OSM snapshot 2026-11-07",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -405,7 +406,7 @@
     "event_date": null,
     "observed_period": "app snapshot 2026; guide observations undated",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -477,7 +478,7 @@
     "event_date": null,
     "observed_period": "2009 visitor-mix datum; 2026 guide and snippets",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -558,7 +559,7 @@
     "event_date": "2023-10-03; 2010-05-19",
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -598,7 +599,7 @@
     "event_date": null,
     "observed_period": "guide-era observations (2020s)",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -638,7 +639,7 @@
     "event_date": "2023-10-03; 2024-03-18; 2024-10-25",
     "observed_period": "2023-2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {

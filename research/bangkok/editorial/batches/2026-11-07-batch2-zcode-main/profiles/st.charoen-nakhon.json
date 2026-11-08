@@ -100,7 +100,7 @@
   {
    "id": "src_891755a79d60",
    "canonical_url": "https://overpass-api.de/api/interpreter",
-   "retrieved_url": "https://overpass-api.de/api/interpreter (two around: queries centered 13.72646,100.50907, radii 800 m and 1200 m; base snapshot 2026-11-07T14:05:51Z)",
+   "retrieved_url": "https://overpass-api.de/api/interpreter",
    "title": "OpenStreetMap via Overpass API: parks, piers, ferry terminals, named landmarks around BTS Charoen Nakhon",
    "publisher": "OpenStreetMap contributors",
    "publisher_family": "OpenStreetMap",
@@ -113,7 +113,8 @@
    "commercial_context": "none",
    "limitations": [
     "third query (park/temple/railway search, 2.2-2.5 km) timed out on both Overpass instances",
-    "OSM completeness in this area is good for piers/roads but market/landuse tags may lag reality (e.g., ตลาดคลองสาน tagged 'construction')"
+    "OSM completeness in this area is good for piers/roads but market/landuse tags may lag reality (e.g., ตลาดคลองสาน tagged 'construction')",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: '(two around: queries centered 13.72646,100.50907, radii 800 m and 1200 m; base snapshot 2026-11-07T14:05:51Z)'"
    ]
   },
   {
@@ -194,7 +195,7 @@
   {
    "id": "src_e9d9cf464f79",
    "canonical_url": "https://chaophrayaexpressboat.com/en/home",
-   "retrieved_url": "https://chaophrayaexpressboat.com/en/home and https://chaophrayaexpressboat.com/chaophrayaexpressboat?lang=en",
+   "retrieved_url": "https://chaophrayaexpressboat.com/en/home",
    "title": "Chao Phraya Express Boat — routes and fares",
    "publisher": "Chao Phraya Express Boat Co.",
    "publisher_family": "Chao Phraya Express Boat (operator)",
@@ -207,7 +208,8 @@
    "commercial_context": "commercial_context: boat operator",
    "limitations": [
     "official pages list line endpoints and flat fares but NOT per-pier stop lists",
-    "note on routes page: 'Oriental Pier (N1) - Close for renovation'"
+    "note on routes page: 'Oriental Pier (N1) - Close for renovation'",
+    "2026-11-08 contract repair: retrieved_url carried a verbatim annotation after the URL and was split off: 'and https://chaophrayaexpressboat.com/chaophrayaexpressboat?lang=en'"
    ]
   },
   {
@@ -445,7 +447,7 @@
     "event_date": "2020-12-16",
     "observed_period": null,
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -521,13 +523,13 @@
     "scope": "venue",
     "place_name": "ICONSIAM complex",
     "relation_to_entity": "inside",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": "2018-11-09",
     "observed_period": "2018-2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -685,7 +687,7 @@
     "scope": "venue",
     "place_name": "BTS Charoen Nakhon bus stop, Charoen Nakhon Rd",
     "relation_to_entity": "entire_unit",
-    "notes": null
+    "notes": ""
    },
    "temporal_scope": {
     "event_date": null,
@@ -772,7 +774,7 @@
     "event_date": null,
     "observed_period": "OSM snapshot 2026-11-07",
     "recheck_by": "2027-11-01",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -852,7 +854,7 @@
     "event_date": null,
     "observed_period": "2018-2026",
     "recheck_by": null,
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {
@@ -949,7 +951,7 @@
     "event_date": null,
     "observed_period": "guide published 2026-07-09; mall hours as displayed 2026-11-07",
     "recheck_by": "2027-06-01",
-    "notes": null
+    "notes": ""
    },
    "evidence": [
     {

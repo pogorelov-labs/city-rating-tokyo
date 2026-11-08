@@ -3464,7 +3464,7 @@
     ]
    }
   },
-  "https://greener.bangkok.go.th (Somdet Ya 84 park entry, via search aggregation)": {
+  "https://greener.bangkok.go.th": {
    "cited_by": [
     "thon-buri"
    ],
@@ -4173,6 +4173,7 @@
     "st.ratchathewi",
     "st.saint-louis",
     "st.sala-daeng",
+    "st.sam-yan",
     "st.saphan-khwai",
     "st.saphan-taksin",
     "st.siam",
@@ -4187,12 +4188,14 @@
      "OpenStreetMap",
      "OpenStreetMap (Overpass API)",
      "OpenStreetMap contributors",
+     "OpenStreetMap contributors (Overpass API)",
      "OpenStreetMap contributors via Overpass API",
      "OpenStreetMap via Overpass",
      "OpenStreetMap via Overpass API"
     ],
     "publisher_family": [
      "OpenStreetMap",
+     "OpenStreetMap / Overpass",
      "OpenStreetMap via Overpass API",
      "openstreetmap",
      "osm-overpass"
@@ -4209,6 +4212,7 @@
      "OpenStreetMap via Overpass API - Sathon bbox parks/stations/markets + park area computation",
      "OpenStreetMap via Overpass API - Thon Buri bbox stations/markets/parks",
      "OpenStreetMap via Overpass API — khwaeng relations 3320984/3320986/3320987/3320991 (admin_level=8) inside khet relation 92063",
+     "OpenStreetMap via Overpass API — park/garden polygons",
      "OpenStreetMap via Overpass API: parks, piers, ferry terminals, named landmarks around BTS Charoen Nakhon",
      "Overpass API — OSM railway station nodes (Bangkok bbox)",
      "Queries: BTS stations within 3 km of 13.7273,100.5430; Saint Louis-named objects around 13.7215,100.5350",
@@ -4219,82 +4223,6 @@
      "Relations 92064 (Khet Ratchathewi), 11487351-54 (khwaeng Makkasan / Thanon Phaya Thai / Thung Phaya Thai / Thanon Phetchaburi), 3320987 (Rong Mueang, Pathum Wan) - full boundary geometry",
      "khet/khwaeng boundary relations query (relation 1639286; admin_level=8 khwaeng relations 11507757-11507761)",
      "way 23630232 'สนามหลวง' Sanam Luang"
-    ]
-   }
-  },
-  "https://overpass-api.de/api/interpreter (leisure=park|garden, around:800 of 13.73206,100.53012)": {
-   "cited_by": [
-    "st.sam-yan"
-   ],
-   "publisher": "OpenStreetMap contributors (Overpass API)",
-   "publisher_family": "OpenStreetMap / Overpass",
-   "title": "OpenStreetMap via Overpass API — park/garden polygons",
-   "variants": {
-    "publisher": [
-     "OpenStreetMap contributors (Overpass API)"
-    ],
-    "publisher_family": [
-     "OpenStreetMap / Overpass"
-    ],
-    "title": [
-     "OpenStreetMap via Overpass API — park/garden polygons"
-    ]
-   }
-  },
-  "https://overpass-api.de/api/interpreter (leisure=pitch|track|stadium|sports_centre|fitness_centre|swimming_pool, around:800)": {
-   "cited_by": [
-    "st.sam-yan"
-   ],
-   "publisher": "OpenStreetMap contributors (Overpass API)",
-   "publisher_family": "OpenStreetMap / Overpass",
-   "title": "OpenStreetMap via Overpass API — sports facilities",
-   "variants": {
-    "publisher": [
-     "OpenStreetMap contributors (Overpass API)"
-    ],
-    "publisher_family": [
-     "OpenStreetMap / Overpass"
-    ],
-    "title": [
-     "OpenStreetMap via Overpass API — sports facilities"
-    ]
-   }
-  },
-  "https://overpass-api.de/api/interpreter (nwr name~อุเทนถวาย, around:1500)": {
-   "cited_by": [
-    "st.sam-yan"
-   ],
-   "publisher": "OpenStreetMap contributors (Overpass API)",
-   "publisher_family": "OpenStreetMap / Overpass",
-   "title": "OpenStreetMap via Overpass API — Uthenthawai elements",
-   "variants": {
-    "publisher": [
-     "OpenStreetMap contributors (Overpass API)"
-    ],
-    "publisher_family": [
-     "OpenStreetMap / Overpass"
-    ],
-    "title": [
-     "OpenStreetMap via Overpass API — Uthenthawai elements"
-    ]
-   }
-  },
-  "https://overpass-api.de/api/interpreter (railway=station|halt, around:2500)": {
-   "cited_by": [
-    "st.sam-yan"
-   ],
-   "publisher": "OpenStreetMap contributors (Overpass API)",
-   "publisher_family": "OpenStreetMap / Overpass",
-   "title": "OpenStreetMap via Overpass API — station nodes",
-   "variants": {
-    "publisher": [
-     "OpenStreetMap contributors (Overpass API)"
-    ],
-    "publisher_family": [
-     "OpenStreetMap / Overpass"
-    ],
-    "title": [
-     "OpenStreetMap via Overpass API — station nodes"
     ]
    }
   },
@@ -7631,7 +7559,7 @@
     ]
    }
   },
-  "https://www.hipflat.com/projects/chapter-chula-samyan (unretrieved; figures from WebSearch summaries of property pages)": {
+  "https://www.hipflat.com/projects/chapter-chula-samyan": {
    "cited_by": [
     "st.sam-yan"
    ],
@@ -8070,7 +7998,7 @@
     ]
    }
   },
-  "https://www.mrta-purplelinesouth.com + BMA public-space registry entries (via search aggregation)": {
+  "https://www.mrta-purplelinesouth.com": {
    "cited_by": [
     "sathon"
    ],
@@ -8805,7 +8733,7 @@
     ]
    }
   },
-  "https://www.reg.chula.ac.th (calendar pages)": {
+  "https://www.reg.chula.ac.th": {
    "cited_by": [
     "st.sam-yan"
    ],
@@ -10676,7 +10604,7 @@
   }
  },
  "date": "2026-11-08",
- "generated_at": "2026-11-07T23:56:15Z",
+ "generated_at": "2026-11-08T00:21:26Z",
  "generator": "kit/tools/build_source_registry.py v1 (B-11)",
  "note": "Reference registry for merged citation views. Bundle provenance is never rewritten; the adapter consults this file at build time.",
  "rule": "canonical attribution = most frequent exact string per field; ties lexicographic",
@@ -10685,5 +10613,5 @@
   "publisher_inconsistent": 39,
   "title_inconsistent": 32
  },
- "url_count": 547
+ "url_count": 543
 }
