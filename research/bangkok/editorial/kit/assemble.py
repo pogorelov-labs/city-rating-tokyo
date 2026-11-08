@@ -175,7 +175,7 @@ def assemble(key, ent_meta, raw, batch, counts):
             fams.add(fam_by_sid.get(sid, sid))
         fams_canon = canon_families(fams)
         if len(fams_canon) < len(fams):
-            counts["canonical_family_merge"] += 1
+            counts["canonical_family_merge"] = counts.get("canonical_family_merge", 0) + 1
         ckind = c["kind"]
         if ckind not in {"factual_report", "reported_perception", "estimate", "researcher_inference"}:
             ckind = "researcher_inference"
@@ -201,7 +201,9 @@ def assemble(key, ent_meta, raw, batch, counts):
             "temporal_scope": (c["temporal_scope"] if isinstance(c.get("temporal_scope"), dict) else
                                {"event_date": None, "observed_period": None, "recheck_by": None,
                                 "notes": str(c.get("temporal_scope") or "")}),
-            "evidence": ev_out, "supporting_claim_ids": [], "conflicts_with": [],
+            "evidence": ev_out, "supporting_claim_ids": [],
+            "conflicts_with": [c for c in dict.fromkeys(c.get("conflicts_with") or [])
+                               if c in claim_ids],
             "limitations": lims, "review_status": status,
         })
 

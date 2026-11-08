@@ -85,7 +85,12 @@ two independent families. Canonical mapping relabels **27 of 422
 bang-sue-c01, thon-buri-c01/c04/c09/c12, dusit-c02/c05/c10 — mostly EN+TH
 Wikipedia pairs). → new plan item B-10: canonical family mapping in the kit
 + relabel pass + re-gates. The adapter's evidence bar (E-5) must use
-*canonical* families.
+*canonical* families. **Reconciliation (B-10 executed 2026-11-08):** the
+committed deterministic rule set ([`kit/canonical.py`](kit/canonical.py))
+relabels **23** (→ 399/228/40) — this review's in-session 27 came from an
+unrecorded broader mapping and is superseded;
+[`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md) is
+authoritative.
 
 **C-ep3. Distance claims inherit anchor ambiguity.** Bundle distances were
 measured from app anchors (per the research briefs). Where anchors are wrong

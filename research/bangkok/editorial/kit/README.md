@@ -43,21 +43,41 @@ python3 kit/briefs.py    --batch-dir <batch>            # derived views
   valuable output.
 - **Snippet-only sources** may corroborate but never be a claim's sole
   evidence, and carry a limitation string on the source record.
+- **AI/search-summary provenance is banned** (F-2, standing): no AI answers or
+  search summaries as evidence or even corroboration; every citation needs a
+  stable https canonical URL (G24).
+- **Corroboration is publisher-independent**: computed over canonical families
+  (`canonical.py`), so English+Thai Wikipedia or OSM+Overpass never count as
+  two publishers. Stored `publisher_family` strings stay raw.
 - **Normalization is logged, not silent** — `assemble.py` prints a counts
   summary; `audit.py` recomputes corroboration/refs/banned-words/walk-time
-  independently. P1 = fix before review; P2 = document in findings.
+  independently, sweeps user-facing text for injection/HTML (G20), and checks
+  limitations integrity. P1 = fix before review; P2 = document in findings.
+- **Never re-run `assemble.py` over a closed batch** — raw/ predates the
+  coordinator corrections applied to profiles/ after assembly; post-assembly
+  edits go through tools like `relabel_canonical.py` (in place, logged).
 
 ## Files
 
 | File | Purpose |
 |---|---|
 | `scaffold.py` | create a unique batch skeleton + `batch.json` template (prefills scores from the handoff's `priority-seed.json` when given) |
-| `agent-prompt-template.md` | per-entity subagent prompt with placeholders (embeds the enum contract, leads-are-hypotheses, access limits) |
-| `check_geometry.py` | point-in-polygon + haversine against the app polygons (single point, `--file` batches, `--info`) |
-| `assemble.py` | normalize raw agent JSON → schema bundles; driven by `batch.json`; logs every normalization; writes `search-log.jsonl` + `manifest.json` |
-| `validate.py` | Draft-2020-12-subset schema validation + semantic reference closure → must print `ALL OK` |
-| `audit.py` | independent recomputation audit (source IDs, corroboration, body-read reliance, dates, banned words, radius→time, ref closure, checks honesty) |
+| `agent-prompt-template.md` | per-entity subagent prompt with placeholders (embeds the enum contract, leads-are-hypotheses, access limits, F-2 AI-summary ban, conflicts_with rule) |
+| `canonical.py` | canonical publisher-family mapping for corroboration independence (B-10/G21): Wikipedia language editions/Wikimedia projects = one family; OSM/Overpass = one; portal casing variants merge; agent-generic buckets never merged |
+| `check_geometry.py` | point-in-polygon + haversine against the app polygons (single point, `--file` batches, `--info`, `--khet` to bypass station-key shadowing — B-8) |
+| `assemble.py` | normalize raw agent JSON → schema bundles; driven by `batch.json`; logs every normalization; corroboration computed over canonical families; passes through `conflicts_with` (filtered to same-bundle ids); writes `search-log.jsonl` + `manifest.json` |
+| `validate.py` | Draft-2020-12-subset schema validation + semantic reference closure incl. `conflicts_with` link integrity → must print `ALL OK` |
+| `audit.py` | independent recomputation audit (source IDs, canonical corroboration, body-read reliance, dates, banned words, radius→time, ref closure, checks honesty) + standing **G20** injection/HTML sweep, **G24** URL-scheme/AI-summary checks, limitations-integrity rule |
 | `briefs.py` | derived markdown briefs from profiles |
+| `tools/relabel_canonical.py` | B-10 one-off pass: canonicalize corroboration labels in closed batches in place (never re-assemble closed batches) |
+| `tools/build_source_registry.py` | B-11: build `registry/source-attributions.json` (canonical attribution per canonical URL) |
+| `tools/populate_conflicts.py` | B-13: apply reviewer-derived claim↔claim conflict links |
+| `tools/manifest_times.py` | B-14: stamp manifests with research start/end (mtime-derived) |
+| `tests/` | unit tests (`python3 -m unittest discover -s kit/tests`) — canonical rules, assemble corroboration, audit gate behavior |
+
+`registry/source-attributions.json` — 547 canonical URLs → canonical
+publisher/title + variants + citing entities; the adapter consults it for
+merged citation views. Bundle provenance is never rewritten.
 
 ## Batch layout produced
 

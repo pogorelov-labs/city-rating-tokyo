@@ -80,6 +80,30 @@ review (see `research/bangkok/notes/2026-11-07-editorial-batch-pipeline-followup
 - Resident-voice thinner than ideal (Reddit/TripAdvisor 403) — noted in
   bundle review notes.
 
+## 3a. 2026-11-08 canonicalization — what changed after the batches closed (B-10/G21)
+
+Before you review, read [`../2026-11-08-canonical-relabel.md`](../2026-11-08-canonical-relabel.md).
+Two machine passes edited bundles in place on 2026-11-08, both logged and
+gated (`validate` ALL OK ×5; `audit` zero P1):
+
+1. **Corroboration relabel under canonical publisher families.** 23 claims
+   moved `corroborated → proposed` (mostly EN+TH Wikipedia pairs; full list in
+   `../2026-11-08-canonical-relabel-log.jsonl`). Corpus counts are now
+   **399 corroborated / 228 proposed / 40 conflicted**. If you reviewed
+   earlier snapshots, statuses may differ — the canonical rule set is the
+   authoritative one.
+2. **71 batch-4 limitations arrays repaired** (a normalize bug had exploded
+   them into single characters; reconstructions verified byte-exact against
+   raw/). Spot-check a few batch-4 claims' `limitations` against their cited
+   sources during your pass.
+3. `wat-mangkon-c06` now carries structured `conflicts_with` links to
+   c02/c04 (the only intra-bundle claim-vs-claim contradiction; source-level
+   conflicts remain inside single claims by design).
+4. Every manifest now carries `research_started_at`/`research_completed_at`
+   (mtime-derived) and a `canonical_family_relabel` stamp; the tail batch
+   gained the manifest it was missing.
+
+
 ## 4. After the review
 
 - Approved bundles → the integration adapter proposal (small localized

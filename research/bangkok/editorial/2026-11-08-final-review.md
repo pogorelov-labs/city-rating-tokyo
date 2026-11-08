@@ -12,8 +12,12 @@ gate remains open (see §7).
 ## 1. Volume and provenance (researched tiers A+B, 46 bundles)
 
 668 sources cited / 527 body-read / 547 distinct canonical URLs across 299
-publisher families; 667 claims — 422 corroborated (≥2 publisher families),
-205 proposed (single-source), 40 conflicted. Every researched bundle passed
+publisher families; 667 claims — **422 corroborated / 205 proposed / 40
+conflicted as researched; 399 / 228 / 40 after the 2026-11-08 canonical
+publisher-family relabel (B-10/G21)**, which merged Wikipedia language
+editions/Wikimedia projects, OSM/Overpass, and portal casing variants into
+single publisher families ([`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md)).
+Every researched bundle passed
 `kit/validate.py` (ALL OK ×5 batches) and `kit/audit.py` with zero open P1s;
 P2s are documented snippet-corroboration flags or audit-rule notes. Search
 logs: ~700 logged queries including rejections and failures. No paywall was
@@ -85,7 +89,10 @@ explicit prompts, which is why the machine gates, not prose rules, are the
 load-bearing control. Agents also corrected the coordinator four times
 (wrong leads), which is the system working. The sam-yot verification pass
 (34 bodies opened post-hoc) rescued a below-contract bundle rather than
-hiding it.
+hiding it. Post-close re-gates kept proving the same point: the 2026-11-08
+audit upgrade caught **71 batch-4 limitations arrays exploded into single
+characters** by the normalize step (repaired, verified byte-exact against
+raw) — invisible to the gates as they stood at batch close.
 
 ## 6. What this program did NOT do (unchanged boundaries)
 

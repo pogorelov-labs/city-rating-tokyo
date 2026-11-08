@@ -1,4 +1,6 @@
-# Continuation plan & detailed backlog — Bangkok editorial research (v2.1, 2026-11-08)
+# Continuation plan & detailed backlog — Bangkok editorial research (v2.2, 2026-11-08)
+
+**v2.2 — the agent-executable lane is DONE (2026-11-08, commits 28805ad…): B-8, B-10, B-11, B-13, B-14 executed; G20/G21/G24 live in the kit; F-2 standing rules in the prompt template; kit unit tests green (B-9 local part). Corroboration relabel landed at the deterministic 23 (→ 399/228/40), superseding the deep review's 27; 71 batch-4 limitations arrays repaired (new audit rule); tail-batch manifest gap fixed. Remaining: owner decisions (DEC-1…10), human review gates (A-1/A-2), pipeline-team items (B-1..B-7, B-9 CI wiring), WS-C/D/E/F/G.**
 
 **v2.1 — fully integrates both review passes AND the handoff-compliance sweep (2026-11-08): six misses against the original HANDOFF.md fixed — end-of-batch volatile recheck (C-7), structured conflicts_with links (B-13), manifest start/end times (B-14), validator cross-check (in B-9), guide section order + localized preview index + existing short-copy reconciliation (E-1/E-2), and mention-breadth with date window (D-5).**
 
@@ -16,15 +18,18 @@ workstreams so nothing lives in an appendix. Review history:
   24 tier B (light), 137 tier C (data-only placeholders, `draft` by design).
   Master index: [`2026-11-08-tier-plan.md`](2026-11-08-tier-plan.md).
 - All 5 batches pass `kit/validate.py` (ALL OK); audits have zero open P1s;
-  P2s are documented snippet-corroboration flags.
+  P2s are documented snippet-corroboration flags (re-confirmed 2026-11-08
+  with the upgraded audit).
 - Program totals (tiers A+B): 668 sources (527 body-read, 547 distinct URLs,
   299 publisher families), 667 claims — 422 corroborated / 205 proposed /
-  40 conflicted **pre-canonicalization**; B-10 relabels 27 → **395/205/40**.
+  40 conflicted as researched; **399 / 228 / 40 after the executed B-10
+  canonical relabel (2026-11-08; deterministic rule set, 23 relabels —
+  [`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md))**.
 - Snapshot `bkk-d6499618507e7561` throughout; **no live app data, scoring,
   filters, geometry, translations, image registries or application code were
   touched** (git-verified per commit).
 - Everything lives on local branch `research/editorial-batches-1-2`
-  (7 commits) — push/PR is DEC-1.
+  (unpushed) — push/PR is DEC-1.
 
 ## 1. How to read this plan
 
@@ -78,13 +83,13 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | B-5 | **Rent semantics cleanup (P1).** Dual "Pathum Wan blends" (phloen-chit record 33,500/74,000 vs district record 38,000/85,000); chit-lom 120,000 2-bed override is top-decile luxury, not a median (FazWaz Pathum Wan 2-bed avg 99,600, n=1,114; corridor median ~40k); pom-prap 2-bed 24,000 sits below all 14 observed asks (25,000–32,000) → recalibrate via CRTKY-141. Keep `blend`/`override`/`median` labels visible in ComparePanel. | PL | M | one blend per district; labels verified; pom-prap recalibrated |
 | B-6 | **Fact corrections (P1, quick).** ratchathewi "1 Michelin star" → two one-star venues verify in-khet (Signature at VIE, Wana Yook); chit-lom "5 piers" → 2 distinct (4 duplicate OSM nodes); ratchathewi "0 piers" vs Pratunam pier nodes PIP-in-khet; hua-lamphong "2 piers" = canal (Khlong Phadung Krung Kasem), not river; Four Seasons Bangkok = 2015 rebrand, not 2024; OTK "CNN 4th best" rank unverifiable (URL 404) — already excluded from claims. | PL | S | corrections via fail-closed build replay |
 | B-7 | **Counter-evidence → labeling policy (P2; DEC-7).** Dated events with receipts: Or Tor Kor shooting 2025-07-28 (5 dead); din-daeng = noisiest PCD station (71.6–81.6 dB(A), 182/182 days over) + Rocket Media rank 50/50; BTS Asok rush failure 2025-09-25; 529-stallholder clock-tower eviction 2025; Jodd Fairs Rama 9 demolished 2025-01; Khlong San Plaza closed 2021. Decide product visibility; **never** let a single incident become a persistent area label (handoff rule). | product (DEC-7) | S | policy recorded |
-| B-8 | **Kit TODO (P2).** `check_geometry.py --khet` flag (station-geometry `chatuchak` key shadows the district key — found by the batch-3 chatuchak agent). | AG | S | flag added + tested |
-| B-9 | **Kit unit tests + CI (G16).** assemble/validate/audit are load-bearing, patched ≥6 times under pressure. Fixture bundles + expected outputs, wired beside the repo's existing checks; when `jsonschema` is available, cross-check the kit validator against the real Draft-2020-12 validator on the fixture set (the handoff requires validation against `entity-research.schema.json` proper). | PL | S | kit tests green in CI; validator cross-checked; changes fail closed |
-| B-10 | **Canonical family mapping + corroboration relabel (G21).** Exact family-string matching let "English Wikipedia"+"Thai Wikipedia" count as two families: canonical mapping relabels **27 of 422 corroborated claims to proposed (422→395)** — affected list produced (bang-sue, thon-buri, dusit, bang-phlat EN+TH pairs). Implement canon mapping in `kit/assemble.py`, re-label, re-gate. | AG | S | relabel applied; gates green; corrected counts in manifests |
-| B-11 | **Canonical source registry (G21 companion).** 49 URLs are cited with inconsistent publisher/title across bundles ("Wikipedia" vs "Wikipedia (English)"; per-claim Overpass titles). Build URL → canonical publisher/title registry; adapter references it so merged citation views show one attribution. | PL/AG | S | registry committed; adapter uses it |
+| B-8 | ✅ **DONE 2026-11-08** — `check_geometry.py --khet` flag (station-geometry `chatuchak` key shadows the district key); verified station catchment (33-vertex) vs khet ring (143-vertex). | AG | S | flag added + tested |
+| B-9 | **Kit unit tests + CI (G16).** ✅ Tests DONE 2026-11-08: `kit/tests/` (18 green: canonical rules, assemble corroboration, audit gate behavior). ⏳ Remaining: wire into CI beside the repo's existing checks; jsonschema cross-check when available. | PL | S | kit tests green in CI; validator cross-checked; changes fail closed |
+| B-10 | ✅ **DONE 2026-11-08** — canonical family mapping (`kit/canonical.py`), relabel pass, re-gates: **23 of 422 corroborated → proposed (399/228/40)**; deterministic count supersedes the deep review's 27; 71 batch-4 limitations arrays repaired by the new audit rule (byte-exact vs raw). Ledger: [`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md). | AG | S | relabel applied; gates green; corrected counts in manifests |
+| B-11 | ✅ **DONE 2026-11-08** — canonical source registry committed (`kit/registry/source-attributions.json`; deterministic stats: 54 family-inconsistent / 39 publisher-inconsistent / 32 title-inconsistent). Adapter to reference it in E-1/E-2. | PL/AG | S | registry committed; adapter uses it |
 | B-12 | **Source-type taxonomy refinement.** 58% of sources sit in the collapsed `other` bucket (encyclopedia/OSM/datasets swallowed); refine the enum or add subtypes; report source-mix per bundle. | SL/AG | S | taxonomy v1.1 or documented decision |
-| B-13 | **Populate `conflicts_with` (handoff: every claim needs its conflicts).** Conflicts are currently captured via `conflicted` status + limitations + QA notes, but the schema's structured claim-to-claim link field is empty everywhere. Where two claims in one bundle conflict (e.g. chit-lom opening dates, sala-daeng Lalai Sap schedule), link them; extend `kit/validate.py` to check link integrity. | AG | S | conflicts_with populated where detectable; validator checks links |
-| B-14 | **Manifest completeness (handoff: manifest records start/end times).** Manifests currently stamp only `created_at`. Emit research start/end times (first/last raw-write mtimes per batch). | AG | S | manifests carry start/end; batch DoD updated |
+| B-13 | ✅ **DONE 2026-11-08** — validator + audit check `conflicts_with` integrity (dangling/self); reviewer-derived links applied (`wat-mangkon-c06`→c02/c04, the only intra-bundle claim-vs-claim contradiction). Honest corpus finding: source-level conflicts live inside single claims by design; going-forward agents declare claim-vs-claim conflicts via the prompt-template rule. | AG | S | conflicts_with populated where detectable; validator checks links |
+| B-14 | ✅ **DONE 2026-11-08** — all 5 manifests carry `research_started_at`/`research_completed_at` (raw-write mtimes; profile-mtime fallback for the scripted tail) — and the tail batch, which had **no manifest at all** (batch-DoD gap), gained one. | AG | S | manifests carry start/end; batch DoD updated |
 
 ## 5. WS-C — Re-verification calendar (P1 · AG · quarterly waves)
 
@@ -131,7 +136,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | ID | Item | Owner | Effort | Acceptance |
 |---|---|---|---|---|
 | F-1 | JA/RU rendering of approved editorial per `description-rules.md` §7: native writing, not translationese; preserve unit, qualifiers, uncertainty, money/date meaning, conditional fit; reviewed **in the actual UI**; locale fallback defined for units without approved copy. Rubric = G18. | product+translators | M | G18 sign-off in real UI |
-| F-2 | **Method amendment (standing rule): AI-summary provenance banned** in all future research (6 exist today — flagged, never sole evidence). Every citation requires a stable canonical URL; AI/search-summary sources may not be added even as corroboration. | AG | — | prompt template updated; G24 sweep enforces |
+| F-2 | ✅ **DONE 2026-11-08 (standing rule active)** — AI-summary provenance banned; prompt template rules 10–11 added; every citation requires a stable https canonical URL; assemble passes through claim-vs-claim `conflicts_with`. G24 sweep enforces at every audit (currently flags 8 source records as AI-summary-marked or snippet-summary-titled, all legacy and documented). | AG | — | prompt template updated; G24 sweep enforces |
 
 ## 9. WS-G — Image rights pass (P2 · parallel-safe after A-1)
 
@@ -169,15 +174,15 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | G13 | Thai-source verification | copy-bearing Thai claims | ❌ → A-6 | no |
 | G14 | Link-rot check | quarterly | ❌ → C-6 | to build |
 | G15 | Bundle re-anchor after app-data change | every snapshot change | ❌ → D-4 | to build |
-| G16 | Kit tests / CI | every kit change | ❌ → B-9 | to build |
+| G16 | Kit tests / CI | every kit change | 🟡 tests green locally (18); CI wiring pending (B-9) | tests done |
 | G17 | Personal-data audit | before publication | ❌ → A-5 | no |
 | G18 | Translation QA rubric | WS-F | ❌ rubric undefined → F-1 | no |
 | G19 | Image rights per image | WS-G | ✅ defined | manual |
-| G20 | Injection/HTML sweep over user-facing text | every assembly | ✅ today (0 hits) — promote to kit | scripted |
-| G21 | Canonical family mapping in corroboration | assembly | ❌ → B-10 | to build |
+| G20 | Injection/HTML sweep over user-facing text | every assembly | ✅ in `kit/audit.py` (0 hits corpus-wide) | yes |
+| G21 | Canonical family mapping in corroboration | assembly | ✅ `kit/canonical.py` in assemble+audit (B-10 done) | yes |
 | G22 | Cross-bundle coherence pass | before integration | ❌ → E-7 | agent pass |
 | G23 | Voice/length normalization + time-boxing | adapter build | ❌ → E-8 | to build |
-| G24 | Citation URL-scheme + AI-summary ban | assembly | ❌ → F-2/G24 | trivial check |
+| G24 | Citation URL-scheme + AI-summary ban | assembly | ✅ in `kit/audit.py` (1 http P2; AI-summary markers flagged) | yes |
 
 ## 12. Program Definition of Done (C1)
 
@@ -190,7 +195,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 5. Integration slice merged with the app's own checks green; disclosures (E-3) live; tier-C card UX decided (E-6/DEC-8).
 6. Bundle re-anchoring current with the shipped app snapshot (D-4/G15).
 7. Recheck calendar owned (DEC-3) and current; link-rot waves scheduled (C-6/G14).
-8. Kit under tests in CI (B-9/G16).
+8. Kit under tests in CI (B-9/G16 — tests exist and are green locally; CI wiring remains).
 9. Honest status surface: which entities are copy-bearing (A/B approved) vs data-only (C) — no laundering.
 10. End-of-batch volatile rechecks (C-7) performed and recorded for every researched batch (handoff method rule).
 
@@ -222,4 +227,18 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
 - Final program review: [`2026-11-08-final-review.md`](2026-11-08-final-review.md)
 - Critique + gates + DoD: [`2026-11-08-critique-gates-dod.md`](2026-11-08-critique-gates-dod.md)
 - Deep review (five angles, empirical): [`2026-11-08-deep-review.md`](2026-11-08-deep-review.md)
-- Kit: [`kit/`](kit/README.md) (scaffold · prompt template · geometry checker · assembler · validator · audit · briefs)
+- Kit: [`kit/`](kit/README.md) (scaffold · prompt template · canonical families · geometry checker · assembler · validator · audit · briefs · tools · tests · registry)
+
+## 15. Progress log
+
+- **2026-11-08 (AG lane executed, commits 28805ad…d40c83c + this one):**
+  B-10 canonical relabel (23 claims; 399/228/40; 71 batch-4 limitations
+  repairs caught by the new audit rule; deep-review 27 superseded) ·
+  B-11 source-attribution registry (547 URLs; 54/39/32 inconsistent fields) ·
+  B-13 conflicts_with (validator+audit checks; wat-mangkon-c06 link set) ·
+  B-14 manifest research times (+ tail-batch manifest gap fixed) ·
+  B-8 `--khet` · G20/G24 in `kit/audit.py` · F-2 prompt rules ·
+  B-9 kit tests (18 green; CI wiring pending).
+  All gates re-run green: `validate.py` ALL OK ×5, `audit.py` zero P1.
+  Next unblocked: owner decisions DEC-1…10; A-1/A-2 review gates;
+  pipeline-team B-1/B-2/B-4 (app-data, not agent-executable); CI wiring.

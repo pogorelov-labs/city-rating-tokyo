@@ -67,6 +67,12 @@ METHOD RULES:
    Wikipedia coordinates or official pages and mark unverifiable points
    "unknown". The coordinator runs polygon checks against the app's own
    geometry afterwards.
+10. (F-2, standing) AI/search-summary provenance is BANNED — never cite an AI
+    answer or search-engine summary, not even as corroboration. Every citation
+    needs a stable canonical URL (https). The kit's G24 sweep flags violations.
+11. If two of YOUR claims in this bundle contradict each other (not just their
+    sources), set `conflicts_with` on both to each other's claim_id.
+    Source-level disagreements stay inside a single claim's `limitations`.
 
 OUTPUT: write a single UTF-8 JSON file to {{BATCH_DIR}}/raw/{{KEY}}.json with
 exactly this shape:
@@ -74,7 +80,7 @@ exactly this shape:
   "entity_key": "{{KEY}}",
   "search_log": [{"query":"...","tool":"...","when":"...","outcome":"used|rejected|failed|no_results","note":"..."}],
   "sources": [{"index":0,"canonical_url":"...","retrieved_url":"...","title":"...","publisher":"...","publisher_family":"...","author":"..."|null,"published_at":"YYYY-MM-DD"|null,"updated_at":null,"retrieved_at":"{{DATE}}T..","body_read":true,"type":"official_operator|government|tourism_publisher|editorial_guide|expat_publication|news|commercial_property|resident_report|academic|other","commercial_context":"...","limitations":["..."]}],
-  "claims": [{"claim_id":"{{PREFIX}}-c01","text_en":"one-sentence claim","kind":"...","topics":[...],"polarity":"strength|tradeoff|mixed|neutral","geography":{"scope":"...","place_name":"...","relation_to_entity":"...","notes":"..."},"temporal_scope":{"event_date":null,"observed_period":null,"recheck_by":null,"notes":"..."},"evidence":[{"source_index":0,"locator":"...","paraphrase":"..."}],"limitations":["..."]}],
+  "claims": [{"claim_id":"{{PREFIX}}-c01","text_en":"one-sentence claim","kind":"...","topics":[...],"polarity":"strength|tradeoff|mixed|neutral","geography":{"scope":"...","place_name":"...","relation_to_entity":"...","notes":"..."},"temporal_scope":{"event_date":null,"observed_period":null,"recheck_by":null,"notes":"..."},"evidence":[{"source_index":0,"locator":"...","paraphrase":"..."}],"limitations":["..."],"conflicts_with":[]}],
   "question_answers": [{"id":"Q01","status":"...","claim_ids":["{{PREFIX}}-c01"],"notes":"..."}],
   "editorial": {"preview":"1 concrete card sentence","guide_lead":"3-5 sentences","strengths":[{"text_en":"...","claim_ids":["{{PREFIX}}-c01"]}],"tradeoffs":[...],"day_night":[...],"within_area_variation":[...],"conditional_fit":[...],"uncertainties":["..."]},
   "open_issues": ["..."]
