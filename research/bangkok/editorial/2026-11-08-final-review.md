@@ -17,8 +17,12 @@ conflicted as researched; 399 / 228 / 40 after the 2026-11-08 canonical
 publisher-family relabel (B-10/G21)**, which merged Wikipedia language
 editions/Wikimedia projects, OSM/Overpass, and portal casing variants into
 single publisher families ([`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md)).
-Every researched bundle passed
-`kit/validate.py` (ALL OK ×5 batches) and `kit/audit.py` with zero open P1s;
+**Gate correction (2026-11-08):** the schema half of `kit/validate.py` was
+silently discarding errors — earlier "ALL OK" runs verified semantic checks
+only. After the fix and a logged contract-repair pass, all five batches are
+now genuinely **ALL OK** (schema + semantic) and `kit/audit.py` is at zero
+open P1s
+([`2026-11-08-gate-verification.md`](2026-11-08-gate-verification.md));
 P2s are documented snippet-corroboration flags or audit-rule notes. Search
 logs: ~700 logged queries including rejections and failures. No paywall was
 bypassed and no proxy mirror used anywhere in the program.

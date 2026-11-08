@@ -29,7 +29,11 @@ speculative.
 
 ## Re-gate results (post-relabel)
 
-- `kit/validate.py`: **ALL OK ×5 batches**.
+- `kit/validate.py`: **ALL OK ×5 batches** — note: at relabel time this still
+  ran with the discarded-schema-errors bug (see
+  [`2026-11-08-gate-verification.md`](2026-11-08-gate-verification.md)); the
+  ALL OK was re-verified genuinely later the same day after the contract
+  repair pass.
 - `kit/audit.py` (now canon-aware + G20/G24): **zero P1 across all five
   batches**; findings are the documented P2 classes (snippet-corroboration
   `body_read=false` flags, ha-yaek claim-prefix advisories, 1 radius→time
