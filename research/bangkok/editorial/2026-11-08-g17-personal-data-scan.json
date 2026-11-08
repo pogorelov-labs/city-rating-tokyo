@@ -1,0 +1,53 @@
+{
+ "generated": "2026-11-08",
+ "findings": [
+  {
+   "entity": "bang-rak",
+   "where": "claim bang-rak-c02",
+   "pattern": "street-address",
+   "severity": "P2",
+   "fragment": "399/3 Soi",
+   "context": "1054 Charoen Krung 26 Road and Le Du at 399/3 Soi Si Lom 7; the name 'Bang Rak' has dispu"
+  },
+  {
+   "entity": "st.ari",
+   "where": "qa Q05",
+   "pattern": "house-number-soi",
+   "severity": "P2",
+   "fragment": "Soi Ari 2/3",
+   "context": " with schedule variability; evenings on Soi Ari 2/3 area shift to small bars closing early;"
+  },
+  {
+   "entity": "phaya-thai",
+   "where": "claim phaya-thai-c08",
+   "pattern": "street-address",
+   "severity": "P2",
+   "fragment": "24/2 Soi",
+   "context": "ANA Coffee Roasters' Ari branch sits at 24/2 Soi Ari 4 adjacent to the Public Relations "
+  },
+  {
+   "entity": "st.phloen-chit",
+   "where": "claim phloen-chit-c04",
+   "pattern": "street-address",
+   "severity": "P2",
+   "fragment": "1041/38 Ploenchit Rd",
+   "context": "nnon's at Rosewood Bangkok (30th floor, 1041/38 Ploenchit Rd, Lumpini, Pathumwan — an award-winning "
+  },
+  {
+   "entity": "st.phra-ram-9",
+   "where": "review.note",
+   "pattern": "quoted-resident",
+   "severity": "P2",
+   "fragment": "said 'Huai Khwang",
+   "context": ": Brief-vs-app district mismatch: brief said 'Huai Khwang blend', app says primary district din-d"
+  },
+  {
+   "entity": "st.saphan-taksin",
+   "where": "review.note",
+   "pattern": "quoted-resident",
+   "severity": "P2",
+   "fragment": "said 'Bang Rak",
+   "context": ": Brief-vs-app district mismatch: brief said 'Bang Rak blend', app says primary district satho"
+  }
+ ]
+}
