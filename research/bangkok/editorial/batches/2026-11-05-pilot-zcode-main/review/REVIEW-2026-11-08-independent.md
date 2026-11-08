@@ -3,7 +3,7 @@
 Reviewer: **agent review** (DeepSeek Harness / deepseek-flash), `reviewed_at`
 2026-11-08T13:00:00+03:00. This is not the human signatory (DEC-2/G10 remains
 open). Full report and finding IDs:
-[`../../2026-11-08-independent-review.md`](../../2026-11-08-independent-review.md).
+[`../../../2026-11-08-independent-review.md`](../../../2026-11-08-independent-review.md).
 
 ## Verdict — 6/6 approved
 

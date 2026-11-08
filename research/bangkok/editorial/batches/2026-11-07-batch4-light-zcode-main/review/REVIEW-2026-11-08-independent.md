@@ -2,7 +2,7 @@
 
 Reviewer: **agent review** (DeepSeek Harness / deepseek-flash), `reviewed_at`
 2026-11-08T13:00:00+03:00. Not the human signatory (DEC-2/G10 open). Full
-report: [`../../2026-11-08-independent-review.md`](../../2026-11-08-independent-review.md).
+report: [`../../../2026-11-08-independent-review.md`](../../../2026-11-08-independent-review.md).
 
 **Note on the missing batch record.** This batch has no `review/findings.md`
 and no `selection.md`, although the packet/tier plan refer to batch findings.

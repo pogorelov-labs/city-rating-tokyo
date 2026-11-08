@@ -15,7 +15,7 @@ bundle edits.
 1. `kit/tools/tier_c_bulk_check.py` → **checked 137, PASS 137, FAIL 0**.
 2. Independent re-check (this review):
    - the 137 profile keys are exactly the tier-C rows of
-     [`../../2026-11-08-tier-plan.md`](../../2026-11-08-tier-plan.md) — no
+     [`../../../2026-11-08-tier-plan.md`](../../../2026-11-08-tier-plan.md) — no
      missing, no extras;
    - `kind`, `name_en`, `name_th` match the current
      `app/src/data/bangkok/{stations,districts}.json`;
