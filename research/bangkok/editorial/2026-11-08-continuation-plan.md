@@ -268,7 +268,7 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
   remain open (C-7's first-content-recheck route: reviewer spot-checks +
   wave C-1).
 - **2026-11-08 (decisions):** user approval recorded → DEC-1 executed (branch
-  pushed to origin, PR opened to `main`); DEC-5/6/7/8/10 adopted at
+  pushed to origin, **PR #177** opened to `main`); DEC-5/6/7/8/10 adopted at
   recommended defaults; DEC-2/3/4/9 remain open (need named people/budget).
   A-2 script half run: **137/137 placeholders PASS** against current app data
   ([`2026-11-08-tier-c-bulk-check.md`](2026-11-08-tier-c-bulk-check.md));
