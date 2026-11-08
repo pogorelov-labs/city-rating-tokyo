@@ -1,0 +1,1361 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.siam",
+  "kind": "station_area",
+  "name_en": "Siam",
+  "name_th": "สยาม",
+  "aliases": [],
+  "scope_notes": ""
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.56,
+  "cohort_rank": 17,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
+  "popularity_source_ids": [],
+  "selection_rationale": ""
+ },
+ "sources": [
+  {
+   "id": "src_9cc5a0d27851",
+   "canonical_url": "https://en.wikipedia.org/wiki/Siam_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Siam_BTS_station",
+   "title": "Siam BTS station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:05:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Encyclopedia; last-revision date not captured at fetch",
+    "Ridership figure (40,000-50,000/day) is cited within the article, not from BTSC directly"
+   ]
+  },
+  {
+   "id": "src_aee8b2f4e383",
+   "canonical_url": "https://en.wikipedia.org/wiki/Sra_Pathum_Palace",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Sra_Pathum_Palace",
+   "title": "Sa Pathum Palace",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:08:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "No grounds/garden size described",
+    "One citation-needed tag on residence claim"
+   ]
+  },
+  {
+   "id": "src_7344bbc1662b",
+   "canonical_url": "https://th.wikipedia.org/wiki/วังสระปทุม",
+   "retrieved_url": "https://th.wikipedia.org/wiki/วังสระปทุม",
+   "title": "วังสระปทุม (Wang Sra Pathum)",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:35:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "No numeric area figure for the precinct or its gardens",
+    "Named on-site guarding by the Royal Household and police is as stated in the article, not independently verified"
+   ]
+  },
+  {
+   "id": "src_5dc0b7783311",
+   "canonical_url": "https://en.wikipedia.org/wiki/Wat_Pathum_Wanaram",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Wat_Pathum_Wanaram",
+   "title": "Wat Pathum Wanaram",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:10:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Article does not describe pond/greenery extent",
+    "2010 death toll stated as six killed inside the temple"
+   ]
+  },
+  {
+   "id": "src_2b0f73ced838",
+   "canonical_url": "https://www.siamparagon.co.th/",
+   "retrieved_url": "https://www.siamparagon.co.th/",
+   "title": "Siam Paragon (official site)",
+   "publisher": "Siam Piwat / Siam Paragon",
+   "publisher_family": "Siam Piwat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:25:00+07:00",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "mall operator promoting its own tenants and visitor card",
+   "limitations": [
+    "Homepage only; no capacity, address block or Gourmet Market detail on this page",
+    "NEXTOPIA 'Open Daily 10 AM - 12 PM' read as noon-to-midnight window; phrasing on page is '12 PM'"
+   ]
+  },
+  {
+   "id": "src_770f25df6ee1",
+   "canonical_url": "https://www.siamparagon.co.th/directory/store/gourmet-market-occupant-927",
+   "retrieved_url": "https://www.siamparagon.co.th/directory/store/gourmet-market-occupant-927",
+   "title": "Gourmet Market | Siam Paragon directory",
+   "publisher": "Siam Piwat / Siam Paragon",
+   "publisher_family": "Siam Piwat",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:52:00+07:00",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "mall operator directory entry",
+   "limitations": [
+    "Directory entry does not describe assortment; supermarket character corroborated by third-party guides only"
+   ]
+  },
+  {
+   "id": "src_3596fd7c45ac",
+   "canonical_url": "https://www.centralworld.co.th/",
+   "retrieved_url": "https://www.centralworld.co.th/",
+   "title": "centralwOrld (official site)",
+   "publisher": "Central Pattana (CentralWorld)",
+   "publisher_family": "Central Group / Central Pattana",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:28:00+07:00",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "mall operator promoting events and promotions",
+   "limitations": [
+    "Homepage only; no store count or event-space capacity stated",
+    "Event dates are operator-posted and may change"
+   ]
+  },
+  {
+   "id": "src_a75bdd8987d5",
+   "canonical_url": "https://en.wikipedia.org/wiki/CentralWorld",
+   "retrieved_url": "https://en.wikipedia.org/wiki/CentralWorld",
+   "title": "CentralWorld",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:42:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "CentralWorld Square area figure in the article is an evident error (8 sq km)",
+    "Ninth-largest-in-world ranking is carried without a current source"
+   ]
+  },
+  {
+   "id": "src_ea06589d1d4f",
+   "canonical_url": "https://www.nationthailand.com/thailand/bangkok/40060365",
+   "retrieved_url": "https://www.nationthailand.com/thailand/bangkok/40060365",
+   "title": "Bangkok Countdown 2026: six roads around Centralworld to close Dec 31-Jan 1",
+   "publisher": "The Nation",
+   "publisher_family": "Nation Group",
+   "author": null,
+   "published_at": "2025-12-26",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:14:00+07:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Royal Gazette order summarized second-hand; Gazette text not read directly"
+   ]
+  },
+  {
+   "id": "src_89785f5327ef",
+   "canonical_url": "https://www.thaipbs.or.th/news/content/500677",
+   "retrieved_url": "https://www.thaipbs.or.th/news/content/500677",
+   "title": "ปิดการจราจรชั่วคราว 6 เส้นทาง จัดงานเคานต์ดาวน์ Central World 2026",
+   "publisher": "Thai PBS",
+   "publisher_family": "Thai PBS",
+   "author": null,
+   "published_at": "2025-12-31",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:16:00+07:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Public-broadcaster restatement of a police announcement; original บช.น. notice not read directly"
+   ]
+  },
+  {
+   "id": "src_98274b348693",
+   "canonical_url": "https://www.nationthailand.com/thailand/general/40034305",
+   "retrieved_url": "https://www.nationthailand.com/thailand/general/40034305",
+   "title": "Siam Paragon shooting suspect to undergo treatment, as court decides to free him",
+   "publisher": "The Nation",
+   "publisher_family": "Nation Group",
+   "author": null,
+   "published_at": "2024-01-01",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:12:00+07:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Casualty count (three dead, four wounded) reflects later reporting; early-day reports differed",
+    "Case status as of publication date"
+   ]
+  },
+  {
+   "id": "src_44aaf2b0c83c",
+   "canonical_url": "https://lanta.news/articles/14-year-old-paragon-shooter-showing-good-behavior-in-psychiatric-care",
+   "retrieved_url": "https://lanta.news/articles/14-year-old-paragon-shooter-showing-good-behavior-in-psychiatric-care",
+   "title": "14-Year-Old Paragon Shooter Showing Good Behavior in Psychiatric Care",
+   "publisher": "Lanta News (byline: Khaosod)",
+   "publisher_family": "Lanta/Khaosod",
+   "author": null,
+   "published_at": "2025-08-07",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:13:00+07:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Syndicated translation of a Khaosod report; the original khaosodenglish.com URL was not located",
+    "Institute name rendered 'Kanlayaraj Nakhon' (elsewhere Galya Rajanagarindra)"
+   ]
+  },
+  {
+   "id": "src_c4a72821ead7",
+   "canonical_url": "https://www.timeout.com/bangkok/things-to-do/siam-square-your-ultimate-neighbourhood-guide",
+   "retrieved_url": "https://www.timeout.com/bangkok/things-to-do/siam-square-your-ultimate-neighbourhood-guide",
+   "title": "The best things to do in Siam Square, Bangkok",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "Time Out",
+   "author": "Iga Siemieniec",
+   "published_at": "2026-10-06",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:38:00+07:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "consumer media with venue listings and affiliate-adjacent recommendations",
+   "limitations": [
+    "Guide opinion, not measurement; 'coolest kids' framing is editorial voice",
+    "Venue details (hours, prices) can drift"
+   ]
+  },
+  {
+   "id": "src_9c4f64774f88",
+   "canonical_url": "https://www.ddproperty.com/en/condo-for-rent/near-cen-siam-bts-2123",
+   "retrieved_url": "https://www.ddproperty.com/en/condo-for-rent/near-cen-siam-bts-2123",
+   "title": "902 Condos for Rent near CEN Siam BTS Station",
+   "publisher": "DDproperty",
+   "publisher_family": "PropertyGuru Group (DDproperty)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:30:00+07:00",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "listing portal; agents pay for placement and 'verified' badges",
+   "limitations": [
+    "'Near station' radius (~1.0-1.5 km per listed distances) is wider than the app's 800 m catchment",
+    "Rendered listing cards carried March 2025 repost dates while an October 2026 crawl of the same URL showed different counts/prices - cached mixed-vintage content",
+    "Asking rents, not signed leases"
+   ]
+  },
+  {
+   "id": "src_500457d48add",
+   "canonical_url": "https://www.ddproperty.com/en/property/klass-siam-bangkok-for-rent-11808978",
+   "retrieved_url": "https://www.ddproperty.com/en/property/klass-siam-bangkok-for-rent-11808978",
+   "title": "Klass Siam, Bangkok - 1 bedroom, 45 sqm - For Rent ฿30,000/mo",
+   "publisher": "DDproperty",
+   "publisher_family": "PropertyGuru Group (DDproperty)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:32:00+07:00",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "listing portal; agent-posted ask",
+   "limitations": [
+    "Listed 16 Aug 2025 (an Oct/Nov 2026 repost of the same listing shows the same ask); asking price marked 'Negotiable'",
+    "Single unit, not a market sample"
+   ]
+  },
+  {
+   "id": "src_aaa8dca8c1a5",
+   "canonical_url": "https://journals.open.tudelft.nl/footprint/article/view/764",
+   "retrieved_url": "https://journals.open.tudelft.nl/footprint/article/view/764",
+   "title": "War, Trade and Desire: Urban Design and the Counter Public Spheres of Bangkok (FOOTPRINT 7(1-12), Spring 2013)",
+   "publisher": "TU Delft OPEN (FOOTPRINT journal)",
+   "publisher_family": "TU Delft",
+   "author": "Brian McGrath",
+   "published_at": "2013-01-01",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:48:00+07:00",
+   "body_read": true,
+   "type": "academic",
+   "commercial_context": "none",
+   "limitations": [
+    "Landing page/abstract read in full; the PDF full text (with the Rama I land-ownership passage) could not be machine-read in this environment and was corroborated from the search index snippet only",
+    "Historical (2013) analysis"
+   ]
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "canonical_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "title": "Lumphini Park",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "Wikipedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:46:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Distance to the Siam unit computed by this agent from infobox coordinates, not stated in a source"
+   ]
+  },
+  {
+   "id": "src_83c91465a1c8",
+   "canonical_url": "https://bangkokvenues.com/areas/siam/",
+   "retrieved_url": "https://bangkokvenues.com/areas/siam/",
+   "title": "Siam Nightlife - Best Bars, Clubs & Rooftops in Siam, Bangkok",
+   "publisher": "Bangkok Venues",
+   "publisher_family": "Bangkok Venues",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:55:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "venue-listing aggregator; venues self-promoted",
+   "limitations": [
+    "Six venues listed; not an exhaustive census of Siam nightlife",
+    "Opening dates (e.g., Human Friendly July 2026) and rankings are self- or operator-reported",
+    "Philtration's exact street address not given"
+   ]
+  },
+  {
+   "id": "src_2f9254300e24",
+   "canonical_url": "https://www.thansettakij.com/general-news/647960",
+   "retrieved_url": "https://www.thansettakij.com/general-news/647960",
+   "title": "เคาท์ดาวน์ Centralworld 2026 เช็กวิธีเดินทาง เส้นทางเข้า-ออกห้าง",
+   "publisher": "ฐานเศรษฐกิจ (Thansettakij)",
+   "publisher_family": "Nation Group",
+   "author": "จุฑามาศ ไชยวรรณ์",
+   "published_at": "2025-12-31",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T16:58:00+07:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Transport guidance for the countdown day; parking capacity (6,000 cars) is the mall's own figure as reported"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "siam-c01",
+   "text_en": "BTS Siam (CEN), opened 5 December 1999 on Rama I Road at about 13.7456 N, 100.5342 E, is the only cross-platform interchange between the BTS Sukhumvit and Silom lines and the network's busiest station at roughly 40,000-50,000 passengers a day, with ticket-level exits 1-6, a tourist service centre and BMTA, Smart Bus and CU Pop bus routes at street level.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Siam station (CEN), Rama I Road, Pathum Wan",
+    "relation_to_entity": "entire_unit",
+    "notes": "Station node is the app unit's centre; Wikipedia coordinates 13.7456194, 100.5342278."
+   },
+   "temporal_scope": {
+    "event_date": "1999-12-05",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Ridership is a Wikipedia-cited figure; no BTSC official statistic captured."
+   },
+   "evidence": [
+    {
+     "source_id": "src_9cc5a0d27851",
+     "locator": "lead paragraph + infobox",
+     "paraphrase": "Cross-platform interchange of Sukhumvit and Silom lines, code CEN, opened 5 Dec 1999, Rama I Road, 40,000-50,000 passengers/day, 6,160,924 in 2021."
+    },
+    {
+     "source_id": "src_9cc5a0d27851",
+     "locator": "Station layout / Facilities / Bus connections",
+     "paraphrase": "Island platforms on two levels, ticket floor with exits 1-6 and tourist centre, BMTA routes 15/16/21/25/54/73/79/141/204/501/508, Smart Bus 40/48, CU Pop Bus 1/4."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Busiest-station claim rests on the article's cited figure, not on BTSC data read directly"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "siam-c02",
+   "text_en": "The unit's retail core is one mega-block: Siam Paragon (991 Rama I) and CentralWorld (999/9 Rama I, Pathumwan 10330) face each other across the Wat Pathum Wanaram temple compound, and both are reached from BTS Siam by skybridges and the elevated Sky Walk that continues to CentralWorld Plaza and the Ratchaprasong junction toward Chit Lom.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "retail",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Siam Paragon - Wat Pathum Wanaram - CentralWorld block, Rama I Road",
+    "relation_to_entity": "entire_unit",
+    "notes": "Paragon ~991 Rama I; CentralWorld 999/9 Rama I; temple at 13.7458 N, 100.5369 E between them."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_9cc5a0d27851",
+     "locator": "Facilities / Nearby landmarks",
+     "paraphrase": "Skybridges link the station to Siam Square One, Siam Paragon, Siam Center; Sky Walk continues to CentralWorld Plaza, Ratchaprasong junction and Chit Lom."
+    },
+    {
+     "source_id": "src_5dc0b7783311",
+     "locator": "lead",
+     "paraphrase": "Temple sits between the two shopping malls Siam Paragon and CentralWorld, across from Siam Square."
+    },
+    {
+     "source_id": "src_3596fd7c45ac",
+     "locator": "header/address block",
+     "paraphrase": "CentralWorld address 999/9 Rama 1 Rd, Pathumwan, Bangkok 10330; daily 10:00-22:00; 'largest lifestyle shopping destination'; operated by Central Pattana."
+    },
+    {
+     "source_id": "src_a75bdd8987d5",
+     "locator": "Public transit / address",
+     "paraphrase": "Served by Siam and Chit Lom BTS stations; 2016-2018 renovations enhanced the BTS linkage."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Exact walkway alignment and entrances not verified bay-by-bay (OSM APIs blocked); coordinator polygon check pending"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "siam-c03",
+   "text_en": "The Siam-Ratchaprasong block is built largely on institutional land: CentralWorld stands on Crown Property Bureau land held by Central Pattana under a new 30-year lease, and a second part of the Sra Pathum Palace estate is leased to Siam Piwat, on which the One Siam malls (Siam Discovery, Siam Center, Siam Paragon) were built.",
+   "kind": "factual_report",
+   "topics": [
+    "governance",
+    "identity",
+    "land"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Rama I Road mega-block (CentralWorld site and Sra Pathum Palace estate)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Palace precinct at 13.748191, 100.532230, opposite Siam Square, per Thai Wikipedia."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Lease terms as reported; renewal status not verified."
+   },
+   "evidence": [
+    {
+     "source_id": "src_a75bdd8987d5",
+     "locator": "History - Original name",
+     "paraphrase": "Site on leased Crown Property Bureau land; Central Pattana secured a new 30-year lease; mall opened 1989 as World Trade Center."
+    },
+    {
+     "source_id": "src_7344bbc1662b",
+     "locator": "ผู้อาศัยและการแบ่งพื้นที่ (residents and land division)",
+     "paraphrase": "วังสระปทุม is divided into the royal residence part and a second part leased to Siam Piwat for the One Siam mall group (Siam Discovery, Siam Center, Siam Paragon)."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Parcel boundaries not mapped here (OSM query APIs blocked); coordinator overlay required",
+    "FOOTPRINT (S15) describes the Rama I frontage lots as owned by a public university, the Crown Property, the Wat Pathum Wanaram monastery and the Royal Thai Police - that passage is in the PDF and was corroborated only at snippet level"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "siam-c04",
+   "text_en": "In the 2010 crackdown, six people were killed by gunfire inside the Wat Pathum Wanaram grounds on 19 May 2010, the day the red-shirt camp around Ratchaprasong was cleared, and CentralWorld closed after severe arson damage, with its Zen wing not reopening until 6 January 2012.",
+   "kind": "factual_report",
+   "topics": [
+    "history",
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Wat Pathum Wanaram and CentralWorld, Ratchaprasong",
+    "relation_to_entity": "entire_unit",
+    "notes": "Both sites inside the station catchment."
+   },
+   "temporal_scope": {
+    "event_date": "2010-05-19",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Historical event; shapes the district's security posture and memory."
+   },
+   "evidence": [
+    {
+     "source_id": "src_5dc0b7783311",
+     "locator": "Incident",
+     "paraphrase": "On 19 May 2010 six people were killed by bullets shot from outside the temple, which had served as a safe zone with first aid during the crackdown."
+    },
+    {
+     "source_id": "src_a75bdd8987d5",
+     "locator": "2010 fire damage",
+     "paraphrase": "CentralWorld closed 19 May 2010 after severe arson damage; adjoining Zen section suffered massive damage; large part reopened 28 Sep 2010, Zen on 6 Jan 2012."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Death toll and circumstances remain politically contested in Thai public discourse; article wording used as stated"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "siam-c05",
+   "text_en": "Urban-design scholarship reads the Siam-Ratchaprasong malls as the symbolic heart of a privatized consumption landscape whose spectacle the urban and rural working poor experienced as exclusionary - protesters in 2010 occupied the intersection precisely because the 'palaces of consumption' stood for a city they felt shut out of.",
+   "kind": "reported_perception",
+   "topics": [
+    "governance",
+    "history",
+    "vibe"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprasong intersection and Central Shopping District (Rama I Road)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Interpretive frame from academic literature, offered as the deliberate counter-view to lifestyle-guide praise."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2013",
+    "recheck_by": null,
+    "notes": "Analysis published 2013, referring to the 2010 occupation."
+   },
+   "evidence": [
+    {
+     "source_id": "src_aaa8dca8c1a5",
+     "locator": "Abstract (landing page)",
+     "paraphrase": "Demonstrations shifted from Ratchadamnoen to Ratchaprasong, the heart of the shopping district; malls became protest sites driven by the urban and rural working poor who sensed they could not afford to partake in Bangkok's phantasmagorical splendours."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Single scholarly voice; full PDF not machine-readable here so the Rama I land-ownership detail inside it is snippet-corroborated only",
+    "Historical framing, not a current-conditions survey"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "siam-c06",
+   "text_en": "On 3 October 2023 a 14-year-old opened fire inside Siam Paragon, killing three people (one Thai, one Chinese, one Myanmar) and wounding four; prosecution stalled over his psychiatric assessment and, as of August 2025, he remains in court-ordered psychiatric care on a 3-5 year training term with possible release from 2027.",
+   "kind": "factual_report",
+   "topics": [
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Siam Paragon, Rama I Road",
+    "relation_to_entity": "entire_unit",
+    "notes": "Shooting inside the anchor mall itself, not the street around it."
+   },
+   "temporal_scope": {
+    "event_date": "2023-10-03",
+    "observed_period": "2023-10-03 to 2025-08-07",
+    "recheck_by": "2027-06-30",
+    "notes": "Recheck around the earliest possible release year (2027) and any court review."
+   },
+   "evidence": [
+    {
+     "source_id": "src_98274b348693",
+     "locator": "article body",
+     "paraphrase": "1 Jan 2024: court ordered the boy freed from juvenile detention after investigators missed the deadline; he stays at Galya Rajanagarindra Institute for psychiatric care; three killed (one Thai, one Chinese, one Myanmar), four wounded; OAG rejected the police report as procedurally defective."
+    },
+    {
+     "source_id": "src_44aaf2b0c83c",
+     "locator": "article body",
+     "paraphrase": "7 Aug 2025: Juvenile Observation and Protection Department director says the boy shows good conduct, sentence is 3-5 years of training, two years served, eligible for a release petition at the three-year minimum in 2027."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Early reports (Reuters, 4 Oct 2023) initially counted two dead and five wounded before the toll was revised upward - outlet-level disagreement noted, not a contradiction of the final count",
+    "Syndicated source for the 2025 update"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "siam-c07",
+   "text_en": "For the CentralWorld Bangkok Countdown 2026, a Royal Gazette order by the city's chief traffic officer closed six roads around Ratchaprasong - including Rama I Road from Chaloem Phao junction to Ratchaprasong, the stretch past BTS Siam and Siam Paragon - from midday or 4pm on 31 December 2025 into the early hours of 1 January 2026, with the Metropolitan Police Bureau publishing the same closures.",
+   "kind": "factual_report",
+   "topics": [
+    "crowd",
+    "events",
+    "transport"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprasong intersection and Rama I / Ratchadamri / Phloen Chit / Phetchaburi / Ratchaprarop road closures",
+    "relation_to_entity": "entire_unit",
+    "notes": "The closed Rama I section runs directly in front of the unit's core."
+   },
+   "temporal_scope": {
+    "event_date": "2025-12-31",
+    "observed_period": "2025-12-31 to 2026-01-01",
+    "recheck_by": "2026-12-25",
+    "notes": "Annual event; expect a similar order each late December."
+   },
+   "evidence": [
+    {
+     "source_id": "src_ea06589d1d4f",
+     "locator": "article body",
+     "paraphrase": "Royal Gazette order published 25 Dec 2025 closes six roads for the countdown; large crowds of residents and tourists expected; closures 12:00-05:00 (Ratchadamri Pratunam-Ratchaprasong) and 16:00-02:00 for five more sections including Rama I (Chaloem Phao-Ratchaprasong)."
+    },
+    {
+     "source_id": "src_89785f5327ef",
+     "locator": "article body",
+     "paraphrase": "Metropolitan Police Bureau (บช.น.) announces the same six temporary closures for the CentralWorld 2026 countdown at Ratchaprasong, 31 Dec 2568 - 1 Jan 2569, with hotline 191 guidance."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Two different closure windows apply to different roads",
+    "The order is annual and recurring - this documents the 2025/2026 instance"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "siam-c08",
+   "text_en": "CentralWorld's official calendar keeps the Ratchaprasong plaza event-dense in ordinary weeks as well: a street-dance event 23-24 October 2026, a Thai craft-beverage gathering 26-31 October, a finance-literacy series 10-11 November and a Gourmet Foodie Fest 18-21 November 2026, within a season-long 'Celebration of Wonders' running to 2 January 2027.",
+   "kind": "factual_report",
+   "topics": [
+    "events",
+    "retail",
+    "rhythm"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "CentralWorld, Rama I Road",
+    "relation_to_entity": "entire_unit",
+    "notes": "Operator-posted calendar on the mall's official homepage."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026-10-23 to 2027-01-02",
+    "recheck_by": "2026-12-01",
+    "notes": "Dates are as posted on 2026-11-08 and may change."
+   },
+   "evidence": [
+    {
+     "source_id": "src_3596fd7c45ac",
+     "locator": "Events and Promotions lists",
+     "paraphrase": "imoo Street Dance 2026 (23-24 Oct), ทรงคราฟต์ x จิบไทย craft beverage event (26-31 Oct), Finance Forward (10-11 Nov), Gourmet Foodie Fest 2026 (18-21 Nov), A Celebration of Wonders 2027 (31 Oct 2026 - 2 Jan 2027)."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Operator-published programme; cancellations and additions possible"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "siam-c09",
+   "text_en": "No large public park lies inside the unit: the sizeable green areas nearest BTS Siam are the guarded, private Sra Pathum Palace precinct (official residence of Princess Sirindhorn, museum visits by prior phone appointment only) and the Wat Pathum Wanaram temple compound, while Lumphini Park (57.6 ha) centres about 1.9 km south-east near Sala Daeng station - so the app's unnamed green hectares are most plausibly palace and temple grounds, which are not park access.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "identity"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Sra Pathum Palace precinct (~350-400 m NW of station), Wat Pathum Wanaram (~300 m E), Lumphini Park (~1.9 km SE)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Distances computed from Wikipedia infobox coordinates; the app's ~6 ha polygon could not be inspected (OSM query APIs blocked) - coordinator overlay required."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Palace grounds area is not published in the sources read; the ~6 ha figure cannot be decomposed further here."
+   },
+   "evidence": [
+    {
+     "source_id": "src_7344bbc1662b",
+     "locator": "ที่ตั้งและอาณาเขต / การเข้าถึง",
+     "paraphrase": "วังสระปทุม bounded by Khlong Saen Saeb, Khlong Orachon, Rama I and Phayathai roads; private royal precinct guarded 24 hours by Royal Household and police; museum entry by appointment only."
+    },
+    {
+     "source_id": "src_aee8b2f4e383",
+     "locator": "lead + Museum",
+     "paraphrase": "Official residence of Princess Sirindhorn; Queen Savang Vadhana Museum opens mid-December to March."
+    },
+    {
+     "source_id": "src_5dc0b7783311",
+     "locator": "lead",
+     "paraphrase": "Wat Pathum Wanaram founded 1857 by King Mongkut, between Siam Paragon and CentralWorld."
+    },
+    {
+     "source_id": "src_94e88a6dbde1",
+     "locator": "infobox + lead",
+     "paraphrase": "Lumphini Park 360 rai (~57.6 ha), bounded by Rama IV/Ratchadamri/Witthayu/Sarasin, opened 1925, nearest BTS Sala Daeng; centre coordinates 13.73056 N, 100.54167 E."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Inference, not an observed decomposition: which polygons the app counts as its ~6 ha green is unverifiable from open sources here",
+    "Neither the palace precinct nor the temple compound has a published area figure in the sources read",
+    "Lumphini's northern edge is closer than its centre but still beyond the 800 m nearest-stop catchment"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "siam-c10",
+   "text_en": "Asking rents around the unit are strongly bimodal rather than uniformly top-of-market: a 1-bedroom 45 sqm at Klass Siam on the Wang Mai edge asks ฿30,000 negotiable (listed 16 Aug 2025, still posted in Nov 2026), DDproperty's near-Siam board shows roughly ฿19,000-฿45,000 for 1-2 bedroom units (mostly 1.0-1.5 km out on the Phetchaburi/Ratchathewi side), while Ratchadamri luxury towers about 1.1 km from the station asked ฿50,000-฿60,000 for a 1-bedroom (56-58 sqm) and ฿90,000-฿120,000 for 2-bedrooms across March 2025 and October 2026 captures - the app's blended ฿37,000/฿82,500 sits between these clusters, and the brief's ฿45,000/฿95,000 lead matches only the luxury-tower end.",
+   "kind": "estimate",
+   "topics": [
+    "rent"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Rental projects around Siam: Wang Mai edge (Klass Siam), Phetchaburi/Ratchathewi board, Ratchadamri towers (Magnolias)",
+    "relation_to_entity": "partial",
+    "notes": "Klass Siam (790 m from CEN Siam per board, 660 m from National Stadium BTS per listing) and the Ratchadamri towers bracket the unit; most board listings sit 1.0-1.5 km out and fall outside the 800 m catchment."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-03 to 2026-11",
+    "recheck_by": "2027-02-28",
+    "notes": "Asking rents observed at two capture dates; signed rents not observable from listings."
+   },
+   "evidence": [
+    {
+     "source_id": "src_500457d48add",
+     "locator": "Property details table",
+     "paraphrase": "Klass Siam, Rama I Road, Wang Mai, Pathum Wan: ฿30,000/mo negotiable, 1 bed, 45 sqm, listed 16 Aug 2025, completed 2016, 660 m from W1 National Stadium BTS."
+    },
+    {
+     "source_id": "src_9c4f64774f88",
+     "locator": "listing cards",
+     "paraphrase": "Near-CEN-Siam board: ฿19,000 studio (Villa Ratchatewi), ฿22,000-23,000 1-beds, ฿28,000-45,000 2-beds (Wish Signature, IDEO Q, The Line, The Address, Grand Diamond), Magnolias Ratchadamri ฿60,000 1-bed 58 sqm and ฿120,000 2-bed 108 sqm on the March 2025 render."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Asking, not signed, rents; portal sample skews to agent-listed condos",
+    "DDproperty's 'near station' radius exceeds the app's 800 m catchment, so part of the sample is outside the unit",
+    "Board render mixed vintages (March 2025 cards; an October 2026 crawl of the same URL showed Magnolias at ฿50,000/฿90,000), so tower asks moved between captures",
+    "Snippet-level corroboration only: The Address Siam-Ratchathewi project page averages (1-bed ฿33K, 2-bed ฿63K) and Seed Memories Siam asks (฿19-25K) were seen in search snippets, not body-read"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "siam-c11",
+   "text_en": "Siam's after-dark scene is hotel-rooftop and mall-internal rather than a club district: three bars stack in Centara Grand at CentralWorld (Red Sky 55-56F, COCOA XO 57F, CRU 59F, all 17:00-01:00), Siam@Siam adds a 25th-floor rooftop bar, a speakeasy (Philtration) runs in a Siam basement, and Siam Paragon itself keeps two late venues - Blue Moon in EATELIER (to midnight) and the Human Friendly live-music bar in NEXTOPIA, opened July 2026, daily 17:30-02:00.",
+   "kind": "factual_report",
+   "topics": [
+    "nightlife"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Centara Grand at CentralWorld, Siam@Siam Design Hotel, Siam Paragon NEXTOPIA/EATELIER, Philtration (Siam area)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Philtration's exact parcel not verified; coordinator polygon check recommended. Hotel rooftops are inside the Rama I/Ratchaprasong core."
+   },
+   "temporal_scope": {
+    "event_date": "2026-07-01",
+    "observed_period": "2026",
+    "recheck_by": null,
+    "notes": "Human Friendly opening month as reported by the venue directory."
+   },
+   "evidence": [
+    {
+     "source_id": "src_83c91465a1c8",
+     "locator": "venue entries",
+     "paraphrase": "Red Sky (55-56F Centara Grand, 17:00-01:00), CRU (59F, champagne bar), Philtration (basement speakeasy beneath a century-old house), Paradise Lost (25F Siam@Siam, 17:00-01:00), Human Friendly (5F NEXTOPIA Siam Paragon, opened July 2026, 17:30-02:00, live band nightly from 8pm), Blue Moon (EATELIER 4F, 10:00-00:00)."
+    },
+    {
+     "source_id": "src_2b0f73ced838",
+     "locator": "zones",
+     "paraphrase": "Siam Paragon homepage lists NEXTOPIA open daily 10 AM-12 PM (midnight) and the EATELIER dining zone on the 4th floor, consistent with mall-internal late venues."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Venue directory is a commercial aggregator; listings can lapse and opening dates are self-reported",
+    "Not an exhaustive census; small Siam Square bar-cafes outside malls are not systematically listed",
+    "Siam Discovery venue additions unverified"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "siam-c12",
+   "text_en": "Daily-life support inside the unit runs through the malls and Siam Square's sois: a Gourmet Market supermarket on Siam Paragon's ground floor (10:00-22:00 daily) with the food hall beside it, student-priced Siam Square eating (Somtam Nua queueing since 2003, OHKAJHU, Yuzu Suki, After You), and the Police General Hospital among the station's listed nearby landmarks.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "food",
+    "health"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Siam Paragon ground floor, Siam Square sois, Police General Hospital (Ratchawithi/Rama I corner)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Hospital is listed as a nearby landmark in the station article; its catchment edge within the 800 m radius is plausible but not polygon-verified."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_770f25df6ee1",
+     "locator": "directory entry",
+     "paraphrase": "Gourmet Market, GF, 10:00-22:00 Mon-Sun, official Siam Paragon directory."
+    },
+    {
+     "source_id": "src_c4a72821ead7",
+     "locator": "Food and drinks sections",
+     "paraphrase": "Siam Square guide lists Somtam Nua (queues since 2003), OHKAJHU, Yuzu Suki (Soi 9), After You (Siam Square One), plus CHAGÔ and KOK KOK drink stops."
+    },
+    {
+     "source_id": "src_9cc5a0d27851",
+     "locator": "Nearby landmarks",
+     "paraphrase": "Police General Hospital and Royal Thai Police Headquarters listed among nearby landmarks."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No wet market or ordinary-neighbourhood grocer appears in the sources read - provisioning is mall-priced",
+    "Hospital is cited as a landmark only, not as a care-quality assessment",
+    "Time Out notes the Paragon ground-floor food hall as the value option inside an otherwise premium-priced mall"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "siam-c13",
+   "text_en": "Time Out's October 2026 neighbourhood guide frames Siam Square as the hangout of 'the city's coolest kids' that becomes 'a little like Bangkok's very own Times Square' after dark - neon, crowds and busking performers - and recommends arriving with no plan, calling it a place visitors and locals keep returning to.",
+   "kind": "reported_perception",
+   "topics": [
+    "food",
+    "rhythm",
+    "vibe"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Siam Square sois",
+    "relation_to_entity": "entire_unit",
+    "notes": "Guide opinion about the open-air retail sois west of the station, not a measurement."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026-10",
+    "recheck_by": "2027-10-06",
+    "notes": "Guide dated Tuesday 6 October 2026 on page."
+   },
+   "evidence": [
+    {
+     "source_id": "src_c4a72821ead7",
+     "locator": "intro and night description",
+     "paraphrase": "Once it gets dark, neon signs, crowds, buskers and pop-up giveaways make it feel like Bangkok's own Times Square; a favourite hangout for the city's coolest kids; best visited with no plan."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Editorial voice with commercial listing interests (Time Out)",
+    "Not representative of resident or non-shopper experience"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "siam-c14",
+   "text_en": "Everyday movement is skywalk-first: station exits 1-6 sit on the ticket level with a street-level bus stop, skybridges connect directly into Siam Square One, Siam Paragon and Siam Center, elevated walkways continue to CentralWorld and Chit Lom (about 250 m from Chit Lom exit 6 to Ratchaprasong), and during the countdown authorities routed arrivals via Siam station exit 6 with a Khlong Saen Saeb boat option landing about 100 m from Ratchaprasong.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Siam exits and the Siam-Chit Lom skywalk spine",
+    "relation_to_entity": "entire_unit",
+    "notes": "Distances (250 m, 100 m) are as stated in the countdown transport guidance, not radius-derived."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-12-31 guidance",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_9cc5a0d27851",
+     "locator": "Station layout / Facilities",
+     "paraphrase": "Floor 2 ticket booths with exits 1-6 and tourist centre; street-level bus stop; skybridges to Siam Square One, Siam Paragon, Siam Center; Sky Walk to CentralWorld Plaza, Ratchaprasong and Chit Lom."
+    },
+    {
+     "source_id": "src_c4a72821ead7",
+     "locator": "Getting around",
+     "paraphrase": "BTS Sukhumvit line drops you at Siam Station with skywalk access through Siam Square One; walking is best; elevated walkways connect to Siam Center, Siam Discovery and centralwOrld without traffic below."
+    },
+    {
+     "source_id": "src_2f9254300e24",
+     "locator": "BTS / boat sections",
+     "paraphrase": "Countdown guidance: BTS Siam exit 6; Chit Lom E1 exit 6 then about 250 m along the skywalk to Ratchaprasong; Khlong Saen Saeb boat to Pratunam pier, about 100 m to Ratchaprasong after the footbridge."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Street-level walking on Rama I itself (crossings, pavement width, heat) is not described in the sources read - the skywalk bias of the evidence is real",
+    "Exit numbering per the sources at fetch time"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "siam-c15",
+   "text_en": "The unit fits car-free students, young shoppers and professionals who want the two-line interchange and dense retail, and misfits households, quiet-seekers and budget renters: the only sizeable nearby green is a guarded royal precinct plus temple grounds, public parkland starts beyond the catchment, and core-side 1-bedroom asks of ฿50,000-60,000 stand against ฿30,000 at the block's eastern edge.",
+   "kind": "researcher_inference",
+   "topics": [
+    "conditional_fit",
+    "crowd",
+    "green",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Siam-Ratchaprasong station area as a whole",
+    "relation_to_entity": "entire_unit",
+    "notes": "Synthesis of c09, c10, c13 evidence; no stereotypes asserted beyond observable trade-offs."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_7344bbc1662b",
+     "locator": "การเข้าถึง",
+     "paraphrase": "Private royal precinct, 24-hour guarding - grounds are not public green."
+    },
+    {
+     "source_id": "src_94e88a6dbde1",
+     "locator": "infobox",
+     "paraphrase": "Lumphini Park, the nearest large public park, is about 1.9 km from the station centre."
+    },
+    {
+     "source_id": "src_500457d48add",
+     "locator": "price block",
+     "paraphrase": "Klass Siam 1-bed ฿30,000 negotiable on the Wang Mai edge."
+    },
+    {
+     "source_id": "src_9c4f64774f88",
+     "locator": "listing cards",
+     "paraphrase": "Magnolias Ratchadamri 1-bed asks ฿50,000-60,000 in recent captures."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Fit statements are inferences from sourced facts, not survey data",
+    "Crowd tolerance is personal; the evidence base is event-and-station counts, not resident interviews"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "siam-c16",
+   "text_en": "Visible 2024-2026 changes cluster in retail and safety oversight rather than streetscape: Siam Paragon added the 5,000 sqm MELAND play space, SCBX Next Tech and two new bar venues (Blue Moon; Human Friendly, opened July 2026), Paragon Hall was redesigned in 2024 around an events concept, and the Paragon shooter's possible release from 2027 keeps mall security in the news cycle.",
+   "kind": "factual_report",
+   "topics": [
+    "recent_changes",
+    "retail",
+    "safety"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Siam Paragon (NEXTOPIA, EATELIER, Paragon Hall)",
+    "relation_to_entity": "entire_unit",
+    "notes": "All inside the anchor mall block."
+   },
+   "temporal_scope": {
+    "event_date": "2026-07-01",
+    "observed_period": "2024-2026",
+    "recheck_by": "2027-06-30",
+    "notes": "Recheck shooter release status and any further mall expansion announcements."
+   },
+   "evidence": [
+    {
+     "source_id": "src_2b0f73ced838",
+     "locator": "Editor's pick / zones",
+     "paraphrase": "MELAND 5,000 sqm indoor playground (first flagship outside China), SCBX NEXT TECH space, SEA LIFE 10,000 sqm, EATELIER 4F dining zone listed on the official homepage."
+    },
+    {
+     "source_id": "src_83c91465a1c8",
+     "locator": "venue entries",
+     "paraphrase": "Human Friendly Bar opened July 2026 in NEXTOPIA; Blue Moon in EATELIER listed as new."
+    },
+    {
+     "source_id": "src_44aaf2b0c83c",
+     "locator": "article body",
+     "paraphrase": "August 2025 status: shooter in court-ordered care, earliest possible release 2027."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Paragon Hall's 2024 'Extraordinary Eventainment' redesign and its ~12,500 sqm / 5,500-standing capacity were seen only as search snippets of paragonhall.com - not body-read, so treated here as unverified context rather than claim evidence",
+    "MELAND/SCBX opening dates not individually dated on the homepage"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c01",
+    "siam-c02",
+    "siam-c03"
+   ],
+   "notes": "Identity: Thai สยาม; BTS code CEN; the only Sukhumvit/Silom cross-platform interchange on Rama I Road. Inside the unit (pending app-polygon confirmation): Siam Paragon, Siam Center, Siam Discovery, Siam Square sois, Wat Pathum Wanaram, Sra Pathum Palace precinct, CentralWorld and the Ratchaprasong corners. Partly/edge: Klass Siam and Cooper Siam on the Wang Mai/Rong Muang side. Outside: Lumphini Park (~1.9 km), the Ratchathewi-district 'Siam'-named condos (The Address Siam, IDEO Q, Wish Signature on Phetchaburi, 1.0-1.4 km per DDproperty distances). The app polygon decides; coordinator to run the check."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c13",
+    "siam-c12",
+    "siam-c14"
+   ],
+   "notes": "The distinctive everyday experience, per Time Out (Oct 2026), is Siam Square's student-shopper maze by day that turns neon-bright with buskers and crowds at night - whose: young Bangkokians, students (Chulalongkorn next door) and tourists; when: afternoons to late evening, intensifying on event nights."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c02",
+    "siam-c14",
+    "siam-c08",
+    "siam-c13"
+   ],
+   "notes": "What people value and why: the two-line interchange plus skywalk spine (mechanism: cross-platform transfer and elevated, traffic-free retail access) and the anchor-mall event programme. Value claims from guides are opinion (flagged); the transit and calendar facts are verified."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c05",
+    "siam-c04",
+    "siam-c06",
+    "siam-c07"
+   ],
+   "notes": "Deliberate counter-evidence: scholarship reads the district as privatized consumption excluding the working class; the ground itself saw 2010 killings at the temple and 2010 arson at CentralWorld; 2023 mass shooting inside Paragon; and six road closures every New Year's Eve show the crowd burden residents absorb."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c08",
+    "siam-c07",
+    "siam-c11",
+    "siam-c13"
+   ],
+   "notes": "Rhythm: malls 10:00-22:00 daily (NEXTOPIA to midnight), event-dense CentralWorld calendar through late 2026, New Year countdown as the annual peak with road closures, hotel rooftops 17:00-01:00, one mall live-music bar to 02:00. Season: wet-season rooftop closures noted only for rooftops generally (Time Out rooftop piece), not Siam-specific."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c01",
+    "siam-c14"
+   ],
+   "notes": "Walk-to-transit reality is skywalk-first: exits 1-6 on the ticket level, skybridges into three malls and onward to CentralWorld/Chit Lom (~250 m from Chit Lom exit 6 to Ratchaprasong); boats land ~100 m away at Pratunam on countdown days. Street-level pavement quality on Rama I itself is not documented in the sources read - a genuine gap."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c12"
+   ],
+   "notes": "Daily-life support is mall-mediated: Gourmet Market supermarket (GF Paragon, 10:00-22:00) plus food hall; student-priced eating in Siam Square sois; Police General Hospital among nearby landmarks. Gyms: condo facilities are listed in rentals, but no gym/fitness-specific source was read this session (app gym_sports 10 not independently verified)."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c10"
+   ],
+   "notes": "Affordability: asking rents only (signed rents unobservable). Bimodal asks: ฿30,000 1-bed at the Wang Mai edge (Aug 2025 listing, still live), ฿19,000-45,000 across the near-Siam board (mostly 1.0-1.5 km out), ฿50,000-120,000 at Ratchadamri towers. Sample limits: portal listings, mixed capture vintages (Mar 2025 render vs Oct 2026 crawl), no small-landlord segment."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c09"
+   ],
+   "notes": "Usable green: none of park status inside the unit. Candidates for the app's ~6 ha unnamed green are the Sra Pathum Palace precinct (private, guarded 24h) and the Wat Pathum Wanaram compound (public, religious). Lumphini Park (57.6 ha) is ~1.9 km out. Tree cover is not park access; polygon overlay needed to decompose the app's hectares."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c15"
+   ],
+   "notes": "Conditional fit: strong for car-free students, shoppers and interchange-dependent workers who tolerate crowds and premium prices; poor for households, quiet-seekers, park users and sub-฿30,000 renters. No universal 'best' claim made."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c16",
+    "siam-c08"
+   ],
+   "notes": "Recent changes (2024-2026): Paragon additions (MELAND 5,000 sqm, SCBX Next Tech, Blue Moon, Human Friendly July 2026), Paragon Hall 2024 events redesign (snippet-level, unverified), CentralWorld calendar booked through Nov 2026 and a season programme to Jan 2027; Paragon shooter possible release from 2027 as a pending safety story."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "siam-c09",
+    "siam-c05",
+    "siam-c10"
+   ],
+   "notes": "Uncertainties: the app's ~6 ha green cannot be named from open sources (palace vs temple grounds, or a mix); the concert-capacity-dispute lead found no mainstream support (forum-only sound complaints, not citable); rent references blend tower and edge asks across different vintages; street-level pedestrian experience on Rama I is under-documented; Paragon Hall capacity figures remain unverified. No contradiction between this bundle's own claims; outlet-level disagreements are recorded inside claims."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "Two mega-malls and a guarded palace share one BTS interchange: at Siam the skywalk replaces the sidewalk, the nearest real park sits about 1.9 km away, and New Year's Eve closes Rama I itself.",
+   "claim_ids": [
+    "siam-c01",
+    "siam-c02",
+    "siam-c04",
+    "siam-c05",
+    "siam-c06",
+    "siam-c07",
+    "siam-c08",
+    "siam-c09",
+    "siam-c10",
+    "siam-c11",
+    "siam-c12",
+    "siam-c13",
+    "siam-c14",
+    "siam-c15"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Siam is Bangkok's transit hinge and retail maximum at once: BTS Siam is the only place the Sukhumvit and Silom lines swap platforms, and its skybridges drop you into Siam Paragon, Siam Center and the Siam Square sois, with the Sky Walk running on to CentralWorld and Chit Lom. The mega-block sits on institutional land - crown leases at CentralWorld, a slice of the Sra Pathum Palace estate leased to Siam Piwat - with Wat Pathum Wanaram, founded 1857, holding the ground between the two malls. The trade-offs are structural rather than incidental: 40,000-50,000 daily passengers through one station, six roads closed around Ratchaprasong every New Year's Eve, a 2023 mass shooting inside Paragon, and greenery you can look at but not picnic in. Rents are bimodal, not uniformly top-of-market: ฿30,000 1-bedrooms at the Wang Mai edge against ฿50,000-120,000 at the Ratchadamri towers.",
+   "claim_ids": [
+    "siam-c01",
+    "siam-c02",
+    "siam-c04",
+    "siam-c05",
+    "siam-c06",
+    "siam-c07",
+    "siam-c08",
+    "siam-c09",
+    "siam-c10",
+    "siam-c11",
+    "siam-c12",
+    "siam-c13",
+    "siam-c14",
+    "siam-c15"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "The network's only cross-platform BTS interchange, with skybridges straight into Siam Square One, Siam Paragon and Siam Center and an elevated Sky Walk on to CentralWorld and Chit Lom - transfers and mall access without street crossings.",
+    "claim_ids": [
+     "siam-c01",
+     "siam-c14"
+    ]
+   },
+   {
+    "text_en": "Mall-scale daily provisioning in one block: a ground-floor supermarket open 10:00-22:00, a value-priced food hall, student-priced sois in Siam Square, and the Police General Hospital among the station's nearby landmarks.",
+    "claim_ids": [
+     "siam-c12"
+    ]
+   },
+   {
+    "text_en": "An event-led calendar that fills ordinary weeks, not just holidays: street dance, craft-beverage fairs and a Gourmet Foodie Fest at CentralWorld between October and November 2026.",
+    "claim_ids": [
+     "siam-c08"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Crowd is the baseline condition, not a peak: 40,000-50,000 daily passengers through one interchange, a guide describing the square after dark as Bangkok's own Times Square, and six central roads - including Rama I in front of Paragon - closed for the annual countdown.",
+    "claim_ids": [
+     "siam-c01",
+     "siam-c13",
+     "siam-c07"
+    ]
+   },
+   {
+    "text_en": "The green score leans on greenery without access: a 24-hour-guarded royal precinct and temple grounds, with Lumphini Park, the nearest public park, about 1.9 km away near Sala Daeng.",
+    "claim_ids": [
+     "siam-c09"
+    ]
+   },
+   {
+    "text_en": "The safety record inside the core is heavy: six killed by gunfire in Wat Pathum Wanaram's grounds in the 2010 crackdown, CentralWorld burned the same day, and three shoppers killed in a mass shooting inside Siam Paragon in 2023 with the perpetrator's release possible from 2027.",
+    "claim_ids": [
+     "siam-c04",
+     "siam-c06"
+    ]
+   },
+   {
+    "text_en": "Scholarship offers the counterweight to the lifestyle guides: the district's malls have been read as the symbolic face of a consumption landscape from which the working class felt shut out - the reason the 2010 protest camp chose this intersection.",
+    "claim_ids": [
+     "siam-c05"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Daytime runs on shopping-and-campus rhythm (malls 10:00-22:00, students in the Siam Square sois); after dark the neon-and-busker square takes over, hotel rooftops pour from 17:00 to 01:00, and Paragon's NEXTOPIA keeps a live-music bar going to 02:00.",
+    "claim_ids": [
+     "siam-c13",
+     "siam-c11"
+    ]
+   },
+   {
+    "text_en": "Once a year the area inverts: on New Year's Eve the streets belong to pedestrians, with Ratchadamri, Rama I, Phloen Chit, Phetchaburi and Ratchaprarop sections closed to vehicles while the crowd converges on CentralWorld.",
+    "claim_ids": [
+     "siam-c07"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Siam Square's low sois are student-priced and guide-anointed; the Rama I frontage is flagship-luxury territory; and the quietest open ground in the core is Wat Pathum Wanaram - a temple, not a park - wedged between the two malls.",
+    "claim_ids": [
+     "siam-c13",
+     "siam-c02",
+     "siam-c09"
+    ]
+   },
+   {
+    "text_en": "Rents fall fast across the block: ฿50,000-60,000 1-bedroom asks at the Ratchadamri towers, ฿30,000 at Klass Siam on the Wang Mai edge, and a ฿19,000-45,000 band across the near-Siam board whose cheaper entries sit 1.0-1.5 km out towards Ratchathewi.",
+    "claim_ids": [
+     "siam-c10"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Strong fit for car-free students, shoppers and professionals who want the two-line interchange and will tolerate crowds and premium provisioning; poor fit for households, park users, quiet-seekers or anyone needing a sub-฿30,000 one-bedroom near the core.",
+    "claim_ids": [
+     "siam-c15",
+     "siam-c10",
+     "siam-c09"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "The app's ~6 ha unnamed green cannot be named from open sources; the plausible candidates are the Sra Pathum Palace precinct (private) and the Wat Pathum Wanaram compound (temple), and a polygon overlay is needed to decompose it.",
+   "No mainstream report of a concert-capacity dispute at Paragon Hall was found; only forum-level sound complaints and venue promo pages, which are not citable. The brief lead stays unresolved.",
+   "Paragon Hall's 2024 redesign and its capacity figures rest on snippet-level material (paragonhall.com) and were not body-read.",
+   "DDproperty's near-station board mixed March 2025 and October 2026 capture vintages; all rent figures are asking, not signed.",
+   "Street-level walking on Rama I (pavements, crossings, heat) is under-documented relative to the skywalk network.",
+   "Nightlife density: the venue base found is hotel rooftops plus mall-internal bars; whether that supports the app's nightlife 9 is an editorial calibration question, not settled by evidence here."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "ready_for_review",
+  "researcher": "zcode-main (D-1 dispatch; ≤2 concurrent subagents)",
+  "reviewer": null,
+  "reviewed_at": null,
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "6 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Coordinator: overlay the app's ~6 ha green polygon against the Sra Pathum Palace precinct and Wat Pathum Wanaram compound to confirm the green-score decomposition (OSM query APIs were blocked in this session).",
+   "open issue: Verify Paragon Hall capacity and the 2024 'Extraordinary Eventainment' redesign directly on paragonhall.com; current evidence is snippet-only.",
+   "open issue: Re-capture the DDproperty near-CEN-Siam board with a current render (the body-read render carried March 2025 repost dates while an October 2026 crawl showed different counts), and log signed-rent data if any transaction source becomes available.",
+   "open issue: Confirm Philtration's exact address and whether it falls inside the 800 m polygon; the venue directory gives no street address.",
+   "open issue: The brief's concert-capacity-dispute lead is unresolved (no mainstream coverage found); the 'parade closures' element is partially addressed by annual countdown road closures on Rama I (see siam--c07).",
+   "open issue: Bangkok Post was inaccessible in this environment (307 redirect to TollBit paywall gateway) and thailand.prd.go.th failed DNS; both were logged once and equivalents were used.",
+   "open issue: App rent references (฿37,000 / ฿82,500) sit between the observed edge-block and Ratchadamri-tower ask clusters; the ฿45,000/฿95,000 lead matches only the luxury end (see siam--c10). No score changes proposed."
+  ]
+ }
+}
