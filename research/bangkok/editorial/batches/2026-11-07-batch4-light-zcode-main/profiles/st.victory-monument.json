@@ -982,7 +982,8 @@
    "open issue: Re-read the Daily News and PRD pages when accessible (403/DNS failures) to upgrade the bus-stop closure and eight-hospital claims from snippet corroboration.",
    "open issue: No resident-report sources accessible (Reddit/TripAdvisor 403 per brief); safety 6 remains unverified in either direction.",
    "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F10 'coordinator must settle' in guide lead. See research/bangkok/editorial/2026-11-08-independent-review.md.",
-   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
+   "C-1 recheck 2026-11-08 (web search, aggregated listings): Rajavithi Skywalk phase 1 OPENED 1 October 2026, ahead of schedule — full circle around the monument walkable; phase 2 (to Tuek Chai) still under construction as of late Oct 2026. Matches c06's 'phase 1 opening October 2026'. Body-read confirmation pending; no claim change."
   ]
  }
 }
