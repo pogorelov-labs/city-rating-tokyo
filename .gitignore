@@ -56,3 +56,6 @@ research/snapshots/2026-10-14/cleanliness-bangkok/wayback-*
 research/snapshots/2026-10-14/cleanliness-bangkok/*.html
 research/snapshots/2026-10-14/cleanliness-bangkok/gdcatalog-mnre-resource.json
 .playwright-mcp/
+
+# Telegram corpus: bulk third-party content stays local (see research/bangkok/corpus/README.md)
+research/bangkok/corpus/telegram/

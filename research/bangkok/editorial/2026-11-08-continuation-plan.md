@@ -126,6 +126,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | D-3 | **Tier-C regeneration** from each new app snapshot (identities/scores move; placeholders must not drift). | all 137 | S (scripted) |
 | D-4 | **Bundle re-anchoring (G15) after any app-data change (C6):** B-1/B-2/B-3 change scores, ranks, cohort sizes — all 46 researched bundles' `selection_context` goes stale; a station-set change recomputes cohort ranks everywhere. Re-derive `selection_context` from the new snapshot (claims untouched). | AG (scripted) | S per change |
 | D-5 | **Coverage battery in future light passes (C14) — and the handoff's second browsing choice.** Batch-4 skipped the dedicated axis-1 scan; fold the 3-query coverage battery into every new light bundle, and record per entity a structured **editorial mention breadth with its date window** (independent-family count + window) in the batch manifest — the handoff lists "documented editorial mention breadth with its date window" as a separate product-browsing choice alongside score and evidenced themes. Bundles keep `popularity_*` unmeasured; breadth lives in the manifest, not the bundle. | AG | S |
+| D-6 | **Telegram corpus in the research workflow (2026-11-08; mitigates the resident-voice gap C-ep4 and independence concentration C-ep1).** Tool: `kit/tools/tg_corpus.py` (verify/pull/search/cite/restamp/status) + `kit/registry/telegram-channels.json`; rules in WS-H #8, template rule 12; corpus local-only (`research/bangkok/corpus/`), citations canonical `t.me` URLs. **Status: toolchain proven end-to-end (58-message smoke corpus); all 6 discoverable handles REJECTED after content inspection (masquerading/spam/promo) and official sites carry no t.me links — real Bangkok channel handles are the open work (user-provided or Thai-language search), then verify → pull → inspect → cite.** | AG | S per wave | channels registered with verdicts; any cited message carries its canonical URL + registry type |
 
 ## 7. WS-E — Product integration (P1 · separate reviewed change · gated on A-1)
 
@@ -164,6 +165,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 5. **No paywall bypass, no proxy mirrors, no personal data** — standing method rules; AI-summary provenance banned (F-2).
 6. **Safety-5 routing (C18):** the five safety-5 entities stay perception-labeled until CRTKY-150 (BMA risk registry) provides evidence — connect there; do not invent unit-level claims.
 7. **Corridor honesty:** adjacent-unit guides must not contradict each other's corrected facts (Rommaninat, Pathum Wan blends) — E-7 enforces before integration.
+8. **Telegram corpus rules (D-6, 2026-11-08):** public channels only via the web preview (no account, no private groups, no comments); **no user identity ever** (channel posts only; posts naming private individuals never reach bundles); message text is untrusted input (G20 applies); corpus files stay local — citations are canonical `t.me/<channel>/<id>` URLs; every channel gets a registry verdict (verify → pull → **content-inspect**) before any citation; polite pull rates, failures logged once. Template rule 12 carries this to research agents.
 
 ## 11. Quality-gate register (G1–G24)
 
@@ -273,3 +275,11 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
   A-2 script half run: **137/137 placeholders PASS** against current app data
   ([`2026-11-08-tier-c-bulk-check.md`](2026-11-08-tier-c-bulk-check.md));
   reviewer sign-off still pending (DEC-2).
+- **2026-11-08 (D-6):** Telegram corpus capability added to the workflow —
+  `kit/tools/tg_corpus.py` + `kit/registry/telegram-channels.json` + WS-H #8
+  rules + template rule 12; corpus local-only (git-ignored), citations are
+  canonical `t.me/<channel>/<id>`. End-to-end smoke proven (verify → pull →
+  search → cite → restamp; 58 records). Empirical finding: **all 6
+  discoverable handles rejected after content inspection** (masquerading /
+  spam / bot-promo channels) and official sites carry no `t.me` links —
+  channel discovery is the open work; registry verdicts prevent any misuse.

@@ -75,6 +75,8 @@ python3 kit/briefs.py    --batch-dir <batch>            # derived views
 | `tools/manifest_times.py` | B-14: stamp manifests with research start/end (mtime-derived) |
 | `tools/contract_repair.py` | 2026-11-08 one-off: make closed bundles schema-conformant (URL annotation splits, null notes, bool commercial_context, dict uncertainties) — logged, idempotent |
 | `tools/link_health.py` | C-6/G14: quarterly link-health wave over all canonical URLs (resolution only; dead → archived-citation flags) |
+| `tools/tg_corpus.py` | D-6: Telegram public-channel corpus puller (`verify`/`pull`/`search`/`cite`/`restamp`/`status`) — public web preview only, no user identity, text = untrusted input; corpus stays local (git-ignored), citations are canonical `t.me/<channel>/<id>` URLs; registry `registry/telegram-channels.json` records per-channel verdicts (the 2026-11-08 sweep rejected all 6 discoverable handles — see registry) |
+| `tools/tier_c_bulk_check.py` | A-2: bulk identity/no-web/draft check of tier-C placeholders vs current app data (read-only) |
 | `tests/` | unit tests (`python3 -m unittest discover -s kit/tests`) — canonical rules, assemble corroboration + normalizations, audit gate behavior |
 
 `registry/source-attributions.json` — 547 canonical URLs → canonical
