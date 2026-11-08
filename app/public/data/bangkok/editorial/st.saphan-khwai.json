@@ -1,0 +1,333 @@
+{
+ "key": "st.saphan-khwai",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Saphan Khwai is the working corridor between Ari's cafe rows and the Chatuchak market edge: BTS N7 over a wide, fast Phahonyothin Road, Pradiphat Road as the dense food spine, Or Tor Kor market at the unit's north-west corner, and 39 bars still pouring past 9 pm. Rents run below the app's Phaya Thai blend at station-adjacent buildings (12,000-23,000 baht studios and one-beds captured), while the two-bed blend of 36,500 matches district ranges. The frictions: 'almost no green space' by the neighbourhood guide's own account, a road you can only cross at spaced points, early closing by southern-Bangkok standards, and a safety score with no unit-specific evidence behind it.",
+   "claims": [
+    "saphan-khwai-c01",
+    "saphan-khwai-c05",
+    "saphan-khwai-c06",
+    "saphan-khwai-c07",
+    "saphan-khwai-c08",
+    "saphan-khwai-c09"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Density of everyday food and drink: 175 restaurants and 149 cafés in the neighbourhood dataset, a named food spine on Pradiphat Road, and premium daily shopping at Or Tor Kor at the unit's edge.",
+     "claims": [
+      "saphan-khwai-c05"
+     ]
+    },
+    {
+     "en": "Value rents with boardable rush-hour trains: station-adjacent one-beds captured at 12,000-23,000 baht, below the district blend, and morning trains you can actually board.",
+     "claims": [
+      "saphan-khwai-c07",
+      "saphan-khwai-c10"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The road dominates: wide, fast, viaduct-noisy, crossable only at spaced points, with no centre — 'an intersection, not a square'.",
+     "claims": [
+      "saphan-khwai-c04"
+     ]
+    },
+    {
+     "en": "Green and late hours are thin: 'almost no green space' (Chatuchak Park 'a trip, not a stroll'), closing earlier than Ari, and no park centroid within 850 m in OSM.",
+     "claims": [
+      "saphan-khwai-c08",
+      "saphan-khwai-c09"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Mornings start before 7 am around the markets; evenings wind down by Ari's standards — 163 of 445 timed places still open at 9 pm, 39 bars past 9 pm, and post-midnight movement by taxi or motorbike taxi once BTS stops.",
+     "claims": [
+      "saphan-khwai-c09",
+      "saphan-khwai-c06"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The west side (Pradiphat band, market approaches) carries the density; the east side beyond the railway is the quiet residential pocket (Saliratthawiphak), and the south fringe toward Ari holds most of the 2 am bars.",
+     "claims": [
+      "saphan-khwai-c02",
+      "saphan-khwai-c06",
+      "saphan-khwai-c11"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Fit for value-seeking renters and food-first residents who accept road noise and early closing; the hostels and craft-beer arrivals suit a young, mobile crowd.",
+     "claims": [
+      "saphan-khwai-c05",
+      "saphan-khwai-c07",
+      "saphan-khwai-c11"
+     ]
+    },
+    {
+     "en": "Poor fit for green-space daily users and late-night rail commuters — the park is a trip, not a stroll, and the BTS stops before the last bars do.",
+     "claims": [
+      "saphan-khwai-c08",
+      "saphan-khwai-c09"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Nightlife count basis: app 15 venues vs the neighbourhood dataset's 49 bars in a wider 1.2 km boundary — polygon decides (saphan-khwai-c06).",
+   "The app's 0.7 ha mapped park has no identified OSM counterpart; green 6 may be generous (saphan-khwai-c08).",
+   "Safety 8 has no unit-specific evidence in any read source (saphan-khwai-c11).",
+   "App anchor 13.7914 vs OSM station node 13.79382 — reconcile as unit centroid vs node (saphan-khwai-c01).",
+   "Primary station article is a flagged unsourced stub; ridership figure uncorroborated."
+  ],
+  "attribution_required": [
+   "saphan-khwai-c02",
+   "saphan-khwai-c03",
+   "saphan-khwai-c04",
+   "saphan-khwai-c09"
+  ]
+ },
+ "claims": [
+  {
+   "id": "saphan-khwai-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "ridership year 2021",
+    "recheck": null
+   },
+   "limitations": [
+    "Underlying article is unsourced; ridership figure not corroborated by a second read source."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c03",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "dataset as of 2 Aug 2026",
+    "recheck": "2027-08"
+   },
+   "limitations": [
+    "Counts cover food/drink/personal-services places, not all amenities (the site says services categories are too thin to count honestly)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c04",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "dataset as of 2 Aug 2026",
+    "recheck": "2027-08"
+   },
+   "limitations": [
+    "Dataset excludes most services and vendors inside markets; venue longevity not verified."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "dataset as of 2 Aug 2026",
+    "recheck": "2027-08"
+   },
+   "limitations": [
+    "The app's 15 nightlife venues cannot be reconciled to the site's 49-bar boundary figure without the polygon; venue hours change often per the source."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c07",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "HipFlat Oct 2026; guide dated 4 May 2026",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "HipFlat averages in USD without stated conversion; Superagent is content-marketing with anecdotal figures."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c08",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "OSM completeness for small pocket parks is imperfect; a 0.7 ha parcel could exist untagged or tagged differently."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "dataset as of 2 Aug 2026",
+    "recheck": "2027-08"
+   },
+   "limitations": [
+    "Hours are business-listing data that the source says change often."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c10",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "ridership year 2021",
+    "recheck": null
+   },
+   "limitations": [
+    "2021 ridership reflects COVID-era levels; relative ranking more meaningful than absolutes."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saphan-khwai-c11",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2020s gentrification; dataset Aug 2026",
+    "recheck": "2027-08"
+   },
+   "limitations": [
+    "Safety 8 unverified — no crime data or resident reports accessible (Reddit/TripAdvisor 403 per brief); travel guide undated."
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_0284b262d168",
+   "url": "https://en.wikipedia.org/wiki/Saphan_Khwai_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_997b5a5c52ae",
+   "url": "https://saphankwai.com/guides/getting-around/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SaphanKwai.com",
+    "family": "SaphanKwai.com"
+   }
+  },
+  {
+   "id": "src_5ce04fd4c491",
+   "url": "https://saphankwai.com/guides/moving-to-saphan-kwai/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SaphanKwai.com",
+    "family": "SaphanKwai.com"
+   }
+  },
+  {
+   "id": "src_8817a5981ee2",
+   "url": "https://saphankwai.com/bars/late-night",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SaphanKwai.com",
+    "family": "SaphanKwai.com"
+   }
+  },
+  {
+   "id": "src_091b14f27c86",
+   "url": "https://travelhappy.info/saphan-khwai-bangkok-a-quick-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Travel Happy",
+    "family": "Travel Happy"
+   }
+  },
+  {
+   "id": "src_21df7e2e12d1",
+   "url": "https://www.hipflat.co.th/en/condo-for-rent/bangkok/phaya-thai",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  },
+  {
+   "id": "src_424db67fdd31",
+   "url": "https://www.superagent.co/en/blog/phaya-thai-bangkok-complete-2026-expat-neighborhood-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Superagent",
+    "family": "Superagent"
+   }
+  },
+  {
+   "id": "src_5a7ce177c60b",
+   "url": "https://saphankwai.com/guides/or-tor-kor-market/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SaphanKwai.com",
+    "family": "SaphanKwai.com"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap (Overpass API)",
+    "family": "OpenStreetMap"
+   }
+  }
+ ]
+}

@@ -1,0 +1,1406 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.phetchaburi",
+  "kind": "station_area",
+  "name_en": "Phetchaburi / Makkasan",
+  "name_th": "เพชรบุรี / มักกะสัน",
+  "aliases": [],
+  "scope_notes": ""
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.42,
+  "cohort_rank": 23,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
+  "popularity_source_ids": [],
+  "selection_rationale": ""
+ },
+ "sources": [
+  {
+   "id": "src_ba9e28e1c05f",
+   "canonical_url": "https://en.wikipedia.org/wiki/Phetchaburi_MRT_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Phetchaburi_MRT_station",
+   "title": "Phetchaburi MRT station",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:20:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none - volunteer-written reference work; no ad incentives",
+   "limitations": [
+    "Wikipedia: no publication/last-revision date captured in this read",
+    "claims about district/subdistrict boundaries reflect the article's wording, not an official gazetteer"
+   ]
+  },
+  {
+   "id": "src_a6b92e872ce9",
+   "canonical_url": "https://en.wikipedia.org/wiki/Makkasan_station_(Airport_Rail_Link)",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Makkasan_station_(Airport_Rail_Link)",
+   "title": "Makkasan station (Airport Rail Link)",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:21:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none - volunteer-written reference work",
+   "limitations": [
+    "Wikipedia: undated in this read",
+    "no walking distance between ARL Makkasan and MRT Phetchaburi is given on the page"
+   ]
+  },
+  {
+   "id": "src_2f2f6a256d18",
+   "canonical_url": "https://en.wikipedia.org/wiki/Orange_Line_(Bangkok)",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Orange_Line_(Bangkok)",
+   "title": "Orange Line (Bangkok)",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:22:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none - volunteer-written reference work",
+   "limitations": [
+    "Wikipedia: undated in this read",
+    "opening dates are moving targets; page itself carries both a Nov 2028 target and a July 2030 projection for the western section"
+   ]
+  },
+  {
+   "id": "src_168b589d7cea",
+   "canonical_url": "https://en.wikipedia.org/wiki/Benjakitti_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Benjakitti_Park",
+   "title": "Benjakitti Park",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T10:40:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none - volunteer-written reference work",
+   "limitations": [
+    "Wikipedia: undated in this read",
+    "used for coordinates/size only; distance computed by researcher"
+   ]
+  },
+  {
+   "id": "src_90b1de01f36f",
+   "canonical_url": "https://web.codi.or.th/index.php/20240929-57255",
+   "retrieved_url": "https://web.codi.or.th/index.php/20240929-57255",
+   "title": "เปิดป้ายชุมชนใหม่ 'ชุมชน ชมฟ. ริมบึงมักกะสัน'",
+   "publisher": "CODI (Community Organizations Development Institute)",
+   "publisher_family": "CODI (Thai public development institute)",
+   "author": null,
+   "published_at": "2024-09-29",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:35:00+07:00",
+   "body_read": true,
+   "type": "government",
+   "commercial_context": "none - state-affiliated institute reporting its own program; institutional self-interest in presenting the scheme positively",
+   "limitations": [
+    "program-owner perspective: eviction-cause framing is official",
+    "Thai-language source, paraphrased by researcher"
+   ]
+  },
+  {
+   "id": "src_debdacfa2ee9",
+   "canonical_url": "https://www.thaipbs.or.th/news/content/343007",
+   "retrieved_url": "https://www.thaipbs.or.th/news/content/343007",
+   "title": "พอช.สร้างบ้านมั่นคงรับ 4 ชุมชนราชเทวี พัฒนาทางเชื่อม 3 สนามบิน",
+   "publisher": "Thai PBS",
+   "publisher_family": "Thai PBS (public broadcaster)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:40:00+07:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none - public broadcaster",
+   "limitations": [
+    "publication date rendered inconsistently between retrievals (12 vs 13 Aug 2024), so published_at left null; content itself dated Aug 2024",
+    "names only two of the four communities explicitly",
+    "Thai-language source, paraphrased by researcher"
+   ]
+  },
+  {
+   "id": "src_2c1a2f6a5ec4",
+   "canonical_url": "https://www.khaosodenglish.com/news/2026/08/15/seven-youths-arrested-over-robbery-of-japanese-tourist-in-bangkok",
+   "retrieved_url": "https://www.khaosodenglish.com/news/2026/08/15/seven-youths-arrested-over-robbery-of-japanese-tourist-in-bangkok",
+   "title": "Seven youths arrested over robbery of Japanese tourist in Bangkok",
+   "publisher": "Khaosod English",
+   "publisher_family": "Khaosod",
+   "author": null,
+   "published_at": "2026-08-15",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T10:05:00+07:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none - independent news outlet",
+   "limitations": [
+    "single incident; not a crime-rate statistic",
+    "suspects' and victim's accounts differ on weapons use",
+    "article places the site in Din Daeng district near the station"
+   ]
+  },
+  {
+   "id": "src_1dd09808380f",
+   "canonical_url": "https://www.thailand-property.com/condos-for-rent/bangkok/ratchathewi/makkasan",
+   "retrieved_url": "https://www.thailand-property.com/condos-for-rent/bangkok/ratchathewi/makkasan",
+   "title": "Condos for rent in Makkasan, Ratchathewi, Bangkok",
+   "publisher": "Thailand-Property.com",
+   "publisher_family": "Thailand-Property (property portal)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:50:00+07:00",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "portal marketing listings; aggregate stats partly dated (averages cited 'on 1 May 2023'); area definition loose - many 'Makkasan' listings cluster around MRT Phra Ram 9 and Asoke",
+   "limitations": [
+    "asking rents only, not signed leases",
+    "no polygon filtering of listings to the app's catchment",
+    "median based on portal's own sample"
+   ]
+  },
+  {
+   "id": "src_6d29083e0d8e",
+   "canonical_url": "https://propertyscout.co.th/en/bangkok/makkasan/rentals/condo",
+   "retrieved_url": "https://propertyscout.co.th/en/bangkok/makkasan/rentals/condo",
+   "title": "Condos for rent in Makkasan",
+   "publisher": "PropertyScout",
+   "publisher_family": "PropertyScout (property portal)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T10:55:00+07:00",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "portal marketing listings; most-popular sub-areas are Phra Ram 9 (1,875 of 3,312 listings) and Ratchaprarop (101)",
+   "limitations": [
+    "asking rents only, not signed leases",
+    "area definition spans multiple corridors beyond the 800 m catchment",
+    "no explicit data-as-of date; copyright year 2026"
+   ]
+  },
+  {
+   "id": "src_ee6a044b698f",
+   "canonical_url": "https://www.wongnai.com/restaurants?regions=174&categories=3",
+   "retrieved_url": "https://www.wongnai.com/restaurants?regions=174&categories=3",
+   "title": "ร้าน อาหารไทย ยอดนิยม ในมักกะสัน (popular Thai restaurants in Makkasan)",
+   "publisher": "Wongnai",
+   "publisher_family": "Wongnai (restaurant-review platform, LINE group)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T10:30:00+07:00",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "review/ranking platform with restaurant-listing incentives; region boundary = district-level, not the app polygon",
+   "limitations": [
+    "ranking is popularity-based, not editorial verification",
+    "several page-1 venues show no street address on the page",
+    "venue set straddles Phetchaburi Rd, Ratchaprarop and Pratunam edges"
+   ]
+  },
+  {
+   "id": "src_866c18114227",
+   "canonical_url": "https://thestandard.co/makkasan-complex-mega-project/",
+   "retrieved_url": "https://thestandard.co/makkasan-complex-mega-project/",
+   "title": "มักกะสันคอมเพล็กซ์: เมกะโปรเจกต์ยักษ์ใหญ่ บนพื้นที่อยู่อาศัยคนจนเมือง",
+   "publisher": "The Standard",
+   "publisher_family": "The Standard (Thai media group)",
+   "author": "Plus Seven",
+   "published_at": "2023-02-28",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T11:10:00+07:00",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none - critical explainer piece; explicitly counter-view on community impacts",
+   "limitations": [
+    "reports the situation as of Feb 2023; later 2024-2026 developments (CODI deal) covered by newer sources",
+    "parts 2-4 land division flagged in the article itself as estimates",
+    "Thai-language source, paraphrased by researcher"
+   ]
+  },
+  {
+   "id": "src_c957c1c3837b",
+   "canonical_url": "https://futuresoutheastasia.com/makkasan/",
+   "retrieved_url": "https://futuresoutheastasia.com/makkasan/",
+   "title": "Makkasan Train Factory: proposed redevelopment of SRT land in Bangkok",
+   "publisher": "Future Southeast Asia",
+   "publisher_family": "Future Southeast Asia (independent urbanism blog, James Clark)",
+   "author": "James Clark",
+   "published_at": "2023-07-02",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T11:12:00+07:00",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "none - independent urban-affairs blog; advocates heritage/environmental framing",
+   "limitations": [
+    "aggregates older news items (2013-2023) with their own dates; not all items independently verified",
+    "advocacy-leaning (cites Makkasan Hope campaign sympathetically)"
+   ]
+  },
+  {
+   "id": "src_4f4d96e3d16e",
+   "canonical_url": "https://www.eeco.or.th/en/high-speed-rail-linking-three-airports/",
+   "retrieved_url": "https://www.eeco.or.th/en/high-speed-rail-linking-three-airports/",
+   "title": "High-Speed Rail Linking Three Airports",
+   "publisher": "EECO (Eastern Economic Corridor Office of Thailand)",
+   "publisher_family": "EECO (Thai government agency)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T11:15:00+07:00",
+   "body_read": true,
+   "type": "government",
+   "commercial_context": "project-owning agency; promotes the project; timeline statements are official targets, not guarantees",
+   "limitations": [
+    "no explicit last-updated date; freshest figures reference June and October 2025",
+    "minor internal inconsistency in investment figures on the page",
+    "project timeline has slipped repeatedly in the past"
+   ]
+  },
+  {
+   "id": "src_a472c82d31f6",
+   "canonical_url": "https://www.hotels.com/go/thailand/bangkok-pratunam-nightlife",
+   "retrieved_url": "https://www.hotels.com/go/thailand/bangkok-pratunam-nightlife",
+   "title": "Nightlife in Pratunam - Pratunam travel guide (Go Guides)",
+   "publisher": "Go Guides / Hotels.com",
+   "publisher_family": "Expedia Group (Hotels.com)",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T11:25:00+07:00",
+   "body_read": true,
+   "type": "tourism_publisher",
+   "commercial_context": "OTA content marketing - steers travelers toward bookings; still an independent voice on area character",
+   "limitations": [
+    "undated page (footer references 2022)",
+    "covers Pratunam corridor, which lies beyond the app's 800 m catchment; used as the nearest-adjacent-character source, not as inside-unit evidence"
+   ]
+  },
+  {
+   "id": "src_6d1108631b9b",
+   "canonical_url": "https://en.wikipedia.org/wiki/Pratunam,_Bangkok",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Pratunam,_Bangkok",
+   "title": "Pratunam, Bangkok",
+   "publisher": "Wikipedia",
+   "publisher_family": "Wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T11:35:00+07:00",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none - volunteer-written reference work",
+   "limitations": [
+    "Wikipedia: undated in this read",
+    "covers the Pratunam intersection area (Thanon Phaya Thai subdistrict, Ratchathewi), beyond the app's 800 m catchment; used as adjacent-corridor context and for the Orange Line overpass demolition fact"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "phetchaburi-c01",
+   "text_en": "MRT Phetchaburi (code BL21) is an underground Blue Line station opened on 3 July 2004 beneath the Asok Montri-New Phetchaburi Road junction, spanning the Makkasan subdistrict of Ratchathewi and the Bang Kapi subdistrict of Huai Khwang, with a MetroMall on its B1 level and step-free access.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "MRT Phetchaburi station (BL21), Asok Montri / New Phetchaburi junction",
+    "relation_to_entity": "inside",
+    "notes": "the unit's western anchor; district straddle matches the brief's Ratchathewi/Huai Khwang framing (Phaya Thai edge not independently confirmed by this source)"
+   },
+   "temporal_scope": {
+    "event_date": "2004-07-03",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "fixed historical fact"
+   },
+   "evidence": [
+    {
+     "source_id": "src_ba9e28e1c05f",
+     "locator": "Infobox and lead section",
+     "paraphrase": "Blue Line station BL21, opened 3 July 2004, underground, at Asok Montri/New Phetchaburi junction, spanning Makkasan subdistrict (Ratchathewi) and Bang Kapi subdistrict (Huai Khwang)"
+    },
+    {
+     "source_id": "src_ba9e28e1c05f",
+     "locator": "Station layout / Exits section",
+     "paraphrase": "MetroMall on B1 with exits 1-3; station is wheelchair accessible"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Wikipedia wording for subdistrict boundaries not cross-checked against BMA records"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phetchaburi-c02",
+   "text_en": "ARL Makkasan (code CAT) opened in August 2010 in Ratchathewi district as the Airport Rail Link's largest station, purpose-built as a City Air Terminal whose Thai Airways in-city check-in saw little use and ended when the airport express service was suspended in September 2014.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transport"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "ARL Makkasan station (CAT), Ratchathewi",
+    "relation_to_entity": "inside",
+    "notes": "the unit's eastern anchor; coordinates 13.7510, 100.5613 per infobox"
+   },
+   "temporal_scope": {
+    "event_date": "2010-08-23",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "express suspension event dated September 2014"
+   },
+   "evidence": [
+    {
+     "source_id": "src_a6b92e872ce9",
+     "locator": "Infobox and lead section",
+     "paraphrase": "opened August 2010 (23 August), Ratchathewi district, largest station on the ARL, designed for in-city flight check-in"
+    },
+    {
+     "source_id": "src_a6b92e872ce9",
+     "locator": "City Air Terminal section",
+     "paraphrase": "THAI City Air Terminal check-in operated until September 2014; terminal rarely used due to inconvenient location and lack of connections; express line suspended September 2014"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phetchaburi-c03",
+   "text_en": "An elevated skywalk with escalators and elevators links ARL Makkasan to MRT Phetchaburi (roughly 0.3 km apart straight-line per the stations' Wikipedia coordinates), but the two systems' fares and ticketing remain unintegrated.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "walkability"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "ARL Makkasan - MRT Phetchaburi interchange",
+    "relation_to_entity": "inside",
+    "notes": "the transfer is physically covered but commercially split; distance is a researcher computation from the two infobox coordinates, not a published figure"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "fare integration could change; recheck if MRTA/SRT announce unified ticketing"
+   },
+   "evidence": [
+    {
+     "source_id": "src_a6b92e872ce9",
+     "locator": "Connections section",
+     "paraphrase": "station has a skywalk, accessible by escalators and elevator, connecting it to Phetchaburi MRT station on the Blue Line"
+    },
+    {
+     "source_id": "src_ba9e28e1c05f",
+     "locator": "Connections section",
+     "paraphrase": "transfer at Makkasan via a covered elevated footpath; fare and ticket systems between the two lines are not integrated"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "interstation distance computed by researcher from coordinates (13.7491,100.5630 vs 13.7510,100.5613), stated as straight-line only",
+    "skywalk condition/lighting not assessed in sources"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phetchaburi-c04",
+   "text_en": "Makkasan is designated the EEC Gateway stop of the Don Mueang-Suvarnabhumi-U-Tapao high-speed rail - a 50-year BOT concession over 140.8 rai with a minimum 850,000 sq m of construction - with ARL upgrades reported 96% complete as of June 2025 and full high-speed service targeted around 2031.",
+   "kind": "factual_report",
+   "topics": [
+    "planning",
+    "transport"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "ARL Makkasan / Makkasan TOD site",
+    "relation_to_entity": "inside",
+    "notes": "planned interchange strengthens the long-term transport case; project timeline has repeatedly slipped"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2025-2026 official status",
+    "recheck_by": "2027-06-30",
+    "notes": "NTP for construction scheduled 2026; service target 2031 per EECO"
+   },
+   "evidence": [
+    {
+     "source_id": "src_4f4d96e3d16e",
+     "locator": "Makkasan TOD section",
+     "paraphrase": "development area 140.8 rai, TOD and Smart City concepts, 50-year duration, minimum construction area 850,000 sq m, SRT ownership under BOT; Makkasan designated EEC Gateway"
+    },
+    {
+     "source_id": "src_4f4d96e3d16e",
+     "locator": "Status and timeline section",
+     "paraphrase": "ARL upgrades 96% complete (June 2025 data); NTP scheduled for 2026; full high-speed service expected to commence operations in 2031"
+    },
+    {
+     "source_id": "src_a6b92e872ce9",
+     "locator": "Connections - proposed section",
+     "paraphrase": "Makkasan listed as a stop on the planned High-Speed Rail Linking Three Airports between Krung Thep Aphiwat and Suvarnabhumi"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "official targets have slipped historically (handover disputes, COVID amendments)",
+    "2031 opening is a projection, not a contracted certainty"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phetchaburi-c05",
+   "text_en": "The MRT Orange Line's western section tunnels from Thailand Cultural Centre under Ratchaprarop and Phetchaburi roads past Pratunam toward Lan Luang, with civil works begun July 2024 at about 14% completion by end-July 2025 and announced openings that still conflict (a November 2028 target versus mid-2030 projections); its nearest stations, Pratunam (OR09) and Ratchaprarop (OR10, an ARL interchange), sit toward the unit's western edge and no Orange Line station is planned at Makkasan itself.",
+   "kind": "factual_report",
+   "topics": [
+    "construction",
+    "transport"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phetchaburi / Ratchaprarop road corridor",
+    "relation_to_entity": "partial",
+    "notes": "tunneling passes beneath the unit's corridor, but the two nearest stations and the interchanges lie west of it; polygon check for OR09/OR10 pending"
+   },
+   "temporal_scope": {
+    "event_date": "2024-07-01",
+    "observed_period": "2024-2025 progress reporting",
+    "recheck_by": "2027-06-30",
+    "notes": "eastern section (east of the unit) reported 100% civil works June 2023 with a late-2027 opening announcement, but it does not serve this stretch"
+   },
+   "evidence": [
+    {
+     "source_id": "src_2f2f6a256d18",
+     "locator": "Route section",
+     "paraphrase": "western alignment runs along Ratchaprarop Road toward Pratunam then follows Phetchaburi Road and Lan Luang Road; no station named Makkasan or Phetchaburi on the Orange Line"
+    },
+    {
+     "source_id": "src_2f2f6a256d18",
+     "locator": "Stations table",
+     "paraphrase": "OR09 Pratunam (stacked platforms near Platinum Fashion Mall) and OR10 Ratchaprarop connecting to the Airport Rail Link and SRT lines"
+    },
+    {
+     "source_id": "src_2f2f6a256d18",
+     "locator": "Construction section",
+     "paraphrase": "western section construction began July 2024; civil construction 14.06% at end-July 2025; opening targets of November 2028 (July 2024 statement) and July 2030 (projection) coexist; eastern section announced late-2027 by MRTA on 6 Aug 2025"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "source itself carries two incompatible opening dates; treated as conflicting, not resolved",
+    "station-by-station traffic-management impacts on Phetchaburi Rd not detailed in this source"
+   ],
+   "review_status": "conflicted"
+  },
+  {
+   "id": "phetchaburi-c06",
+   "text_en": "Orange Line construction has already produced friction near the unit: resident protests over station footprints and compulsory land acquisition at Pratunam, Ratchaprarop, Pracha Songkhro and Soesim forced a roughly 12-month redesign, and a worker died after falling into a 19-metre excavation shaft at Lan Luang station on 19 May 2025.",
+   "kind": "factual_report",
+   "topics": [
+    "construction",
+    "safety"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Pratunam, Ratchaprarop, Pracha Songkhro, Soesim, Lan Luang work fronts",
+    "relation_to_entity": "outside",
+    "notes": "named work sites are at or beyond the unit's western/northwestern edge; corridor-wide traffic and dust effects likely spill into the unit but are not separately documented"
+   },
+   "temporal_scope": {
+    "event_date": "2025-05-19",
+    "observed_period": "2020-2025 redesign and construction",
+    "recheck_by": "2027-06-30",
+    "notes": "worker fatality prompted an MRTA investigation per the source"
+   },
+   "evidence": [
+    {
+     "source_id": "src_2f2f6a256d18",
+     "locator": "Construction - residents and traffic subsection",
+     "paraphrase": "residents protested regarding station footprint and compulsory land acquisition at Pratunam, Ratchaprarop, Pracha Songkhro and Soesim, forcing a roughly 12-month redesign"
+    },
+    {
+     "source_id": "src_2f2f6a256d18",
+     "locator": "Incidents subsection",
+     "paraphrase": "on 19 May 2025 a worker died after falling into a 19-metre-deep excavation shaft at Lan Luang station; body recovered 24 May; MRTA investigation launched"
+    },
+    {
+     "source_id": "src_6d1108631b9b",
+     "locator": "Transportation hub paragraph",
+     "paraphrase": "Bangkok's first overpass (the Pratunam overpass) is slated for demolition in March 2026 for MRT Orange Line construction, with rebuilding expected that same year"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "disruption specific to the inside-unit stretch of Phetchaburi Rd (lane closures, vibration) not documented in sources used; documented demolition works (Pratunam overpass, March 2026) sit at the corridor's western edge"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phetchaburi-c07",
+   "text_en": "The State Railway of Thailand's 497-rai Makkasan estate is being carved up under CP affiliate Asia Era One's 50-year concession (about 50 billion baht rent, roughly 1 billion baht a year): 140 rai around the station as the mixed-use Makkasan Complex with a revived City Air Terminal, roughly 180 rai of the former rail factory slated for offices, commerce and data centres, about 38 rai for museums, and about 150 rai offered for private real estate such as a hospital, condominiums and an international school, with parts 2-4 still estimates as of early 2023.",
+   "kind": "factual_report",
+   "topics": [
+    "land_use",
+    "planning"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "SRT Makkasan estate (497 rai) around ARL Makkasan",
+    "relation_to_entity": "partial",
+    "notes": "the estate abuts and overlaps the catchment; the 140-rai concession zone is the EEC Gateway TOD; polygon check pending for which parts fall inside the 800 m unit"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "plan status as of 2023-02-28",
+    "recheck_by": "2027-06-30",
+    "notes": "zone boundaries and uses remain provisional; EECO's 140.8-rai TOD figure matches part 1"
+   },
+   "evidence": [
+    {
+     "source_id": "src_866c18114227",
+     "locator": "Land division section",
+     "paraphrase": "497 rai total split into four parts: 140 rai station/complex (concessioned), ~180 rai factory land to offices/commerce/data centres, ~38 rai museums, ~150 rai private real estate; parts 2-4 estimates"
+    },
+    {
+     "source_id": "src_866c18114227",
+     "locator": "Concession terms section",
+     "paraphrase": "Asia Era One (CP group) won part 1; ~224 billion baht project; annual rent ~1,000 million baht totalling 50,000 million over the 50-year concession ending BE 2618, assets reverting to SRT; City Air Terminal check-in and 500-car parking planned"
+    },
+    {
+     "source_id": "src_4f4d96e3d16e",
+     "locator": "Makkasan TOD section",
+     "paraphrase": "140.8 rai TOD/Smart City development, 850,000 sq m minimum construction, BOT model, Makkasan as EEC Gateway"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "2023 plan detail; later adjustments possible",
+    "whether the promised public green space survives detailed design remains contested (see c17)"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phetchaburi-c08",
+   "text_en": "Early-2023 reporting counted five informal railway communities with roughly 3,000 households and about 10,000 residents living on the 497-rai SRT Makkasan estate - the largest, Rim Thang Rotfai Makkasan, about 500 households on 18 rai settled for a century - who faced eviction pressure before replacement housing was ready.",
+   "kind": "factual_report",
+   "topics": [
+    "community",
+    "housing"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Makkasan railway communities (Rim Thang Rotfai Makkasan, Nikhom Makkasan, Lang Wat Makkasan, Lang Rongphyaban Decha, Rot Chae Makkasan)",
+    "relation_to_entity": "partial",
+    "notes": "communities sit on SRT land adjacent to and within the station edge; precise footprint vs the app polygon unknown"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "as reported 2023-02-28",
+    "recheck_by": "2027-06-30",
+    "notes": "household counts and eviction status change as relocation progresses"
+   },
+   "evidence": [
+    {
+     "source_id": "src_866c18114227",
+     "locator": "Communities section",
+     "paraphrase": "5 communities, 3,000+ households, ~10,000 people on the 150-rai plot; Rim Thang Rotfai Makkasan itself 18 rai, ~500 households, ~2,050 people, settled over 100 years; SRT pushed evictions before replacement housing was complete"
+    },
+    {
+     "source_id": "src_866c18114227",
+     "locator": "Communities section - network organizing",
+     "paraphrase": "communities formed the ChamF. (rail-affected urban poor) network with CODI; government ordered the NHA to build housing at Soi Mo Leng and Bueng Makkasan; community asked to stay until new buildings finished"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "counts are the article's, sourced from community leadership",
+    "2023 snapshot; see c10 for the 2024 CODI lease resolution"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phetchaburi-c09",
+   "text_en": "As of February 2023 the concessionaire had received contractual relief - an installment plan for its 10,671-million-baht payment, a term-extension proposal and more time to pay - while equivalent remediation, agreements or demolition delays for the communities had not materialized.",
+   "kind": "factual_report",
+   "topics": [
+    "community",
+    "governance"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "SRT Makkasan estate",
+    "relation_to_entity": "partial",
+    "notes": "asymmetry framed by the source; later CODI deal (c10) partially addresses housing but this governance gap is the documented baseline"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "as reported 2023-02-28",
+    "recheck_by": "2027-06-30",
+    "notes": "contract amendments continued after publication"
+   },
+   "evidence": [
+    {
+     "source_id": "src_866c18114227",
+     "locator": "Contract amendment section",
+     "paraphrase": "MOU of 20 Oct 2021 allowed 6 installments of 1,067M baht plus a final 4,269M with interest, proposed extending the 50-year term and shortening the state's payment window from 10 to 7 years; the article notes remediation, agreements and demolition-delay extensions for community residents had not happened"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "single-source characterization of the asymmetry",
+    "situation as of Feb 2023"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phetchaburi-c10",
+   "text_en": "In 2024 the relocation acquired a concrete mechanism: five track-side communities totalling 644 households displaced by the three-airport rail project received a 30-year SRT lease on 12,000 sq m at Bueng Makkasan (25 baht/sq m/yr, about 300,000 baht a year, an average 1,775 baht per household per year), with a 169-unit first phase funded by a 23.1-million-baht CODI Baan Mankong grant, the housing cooperative registered 20 May 2024 and the community formally named 'ChamF. Rim Bueng Makkasan' on 29 September 2024.",
+   "kind": "factual_report",
+   "topics": [
+    "community",
+    "housing"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "ChamF. Rim Bueng Makkasan community site, Soi Mo Leng, next to Suan Ratchathewi Phirom park",
+    "relation_to_entity": "unknown",
+    "notes": "site likely falls within or at the edge of the catchment; polygon check pending"
+   },
+   "temporal_scope": {
+    "event_date": "2024-09-29",
+    "observed_period": "2024 lease-and-design phase",
+    "recheck_by": "2027-06-30",
+    "notes": "construction of the 169 units follows design; move-in timeline not fixed in source"
+   },
+   "evidence": [
+    {
+     "source_id": "src_90b1de01f36f",
+     "locator": "Lease terms section",
+     "paraphrase": "SRT lease of 12,000 sq m (7.32 rai): 300,000 baht/year total, 30-year lease, 25 baht/sq m/yr with 5% increases every 5 years, average 1,775 baht per household per year"
+    },
+    {
+     "source_id": "src_90b1de01f36f",
+     "locator": "Households and budget section",
+     "paraphrase": "five affected communities with 644 households; phase-1 pilot 169 households with three shared house designs; CODI funding 23,110,750 baht under Baan Mankong; cooperative registered 20 May 2024; naming ceremony 29 September 2024 with Deputy Governor and CODI officials attending"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "program-owner perspective; delivery risk unassessed",
+    "which five communities (of the wider set) enter phase 1 not itemized beyond the network description"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phetchaburi-c11",
+   "text_en": "Thai PBS reported in August 2024 that the four relocating Ratchathewi communities - including Daeng Bunga, already demolished with residents in temporary housing at Bun Rom Sai - had occupied SRT land for more than 60 years, expected the full move to take over a year, and consented to move while describing real hardship (a resident undergoing cancer treatment cited losing nearby work and a frequently visited hospital).",
+   "kind": "reported_perception",
+   "topics": [
+    "community",
+    "housing"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchathewi track-side communities relocating to Bueng Makkasan",
+    "relation_to_entity": "unknown",
+    "notes": "origin communities are along the ARL corridor in Ratchathewi/Phaya Thai; destination is Bueng Makkasan at the unit edge; polygon check pending"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2024-08 reporting",
+    "recheck_by": "2027-06-30",
+    "notes": "'over a year' from Aug 2024 implies moves continuing into 2026"
+   },
+   "evidence": [
+    {
+     "source_id": "src_debdacfa2ee9",
+     "locator": "Article body - communities and timeline",
+     "paraphrase": "residents affected by land reclamation after 60+ years of informal settlement; Daeng Bunga already demolished, residents in temporary housing at Bun Rom Sai; leader presented project plan 12 Aug 2024; quote expects more than a year before all residents can move"
+    },
+    {
+     "source_id": "src_debdacfa2ee9",
+     "locator": "Article body - resident quotes",
+     "paraphrase": "resident (former Daeng Bunga, 60+ years, in cancer treatment) admits it is hard to move, citing nearby work selling fruit and sweets and a hospital visited several times a month; residents state they are not obstructing development but it should not leave people behind"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "two of four communities unnamed in the article",
+    "Thai-language source, paraphrased"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phetchaburi-c12",
+   "text_en": "The research brief's 'Nimit Lang Ruea' lead could not be corroborated: no source found in English or Thai connects any project of that name to Phetchaburi/Makkasan, and the documented CODI-related displacement here is the Rim Bueng Makkasan / Baan Mankong rehousing of track-side communities (c10-c11), suggesting the lead name is a mislabel.",
+   "kind": "researcher_inference",
+   "topics": [
+    "identity",
+    "research_process"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "entity-wide",
+    "relation_to_entity": "entire_unit",
+    "notes": "searches for 'Nimit Lang Ruea' returned only the unrelated Nimit Langsuan condominium; recorded as a lead-contradiction finding, not a positive identification"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "searches run 2026-11-08",
+    "recheck_by": null,
+    "notes": "if the coordinator's prior batches carry a source using that name, this inference should be revisited"
+   },
+   "evidence": [
+    {
+     "source_id": "src_90b1de01f36f",
+     "locator": "Whole article",
+     "paraphrase": "the only CODI rehousing scheme documented for this area is ChamF. Rim Bueng Makkasan at Bueng Makkasan/Soi Mo Leng"
+    },
+    {
+     "source_id": "src_debdacfa2ee9",
+     "locator": "Article body",
+     "paraphrase": "the displacement-rehousing story is framed entirely around the four Ratchathewi communities and Bueng Makkasan, with no mention of any 'Nimit Lang Ruea' project"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "evidence-of-absence from searches, inherently weaker than a positive identification; possible the lead refers to a different district's CODI project"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phetchaburi-c13",
+   "text_en": "Portal asking rents around the stations sit near the app's references: PropertyScout's Makkasan page averages 1-bed at about 22,800 and 2-bed at about 36,600 baht/month (2026 page) while Thailand-Property's median condo rent for its Makkasan area is 24,966 baht, with page samples running roughly 17,000-52,500 baht and 2-bed examples at 31,300-52,500 baht (Lumpini Suite Phetchaburi at 40,000).",
+   "kind": "estimate",
+   "topics": [
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "portal-defined 'Makkasan' area (Ratchathewi and neighbouring corridors)",
+    "relation_to_entity": "partial",
+    "notes": "both portals' areas are loosely drawn: PropertyScout's most-popular sub-area is Phra Ram 9 (1,875 of 3,312 listings) and many listings reference Asoke and Rama 9 towers"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "listings seen 2026-11-08; one aggregate figure dated 1 May 2023 on the Thailand-Property page",
+    "recheck_by": "2027-06-30",
+    "notes": "listing-based, volatile"
+   },
+   "evidence": [
+    {
+     "source_id": "src_6d29083e0d8e",
+     "locator": "Average rents table and FAQ",
+     "paraphrase": "1 bedroom 22,795 baht/month; 2 bedrooms 36,646 baht/month; FAQ variant 22,444 and 36,296 with ranges from 10,000 to 200,000 (1-bed) and 16,000-700,000 (2-bed); 3,312 condo rentals; sub-area counts Phra Ram 9 1,875, Ratchaprarop 101"
+    },
+    {
+     "source_id": "src_6d29083e0d8e",
+     "locator": "Sample listings",
+     "paraphrase": "Villa Asoke 180,000 (4BR, 260m to MRT Phetchaburi); Life Asoke Hype 2BR 31,300 (420m to ARL Makkasan); Rhythm Asoke 1BR 17,000; Q Asoke 1BR 30,000 (160m to MRT Phetchaburi); The Address Asoke 1BR 25,000 (160m to ARL Makkasan)"
+    },
+    {
+     "source_id": "src_1dd09808380f",
+     "locator": "Market insight block and listings",
+     "paraphrase": "median condo rent 24,966 baht; gross yield 4.2%; page-1 1-bed rents 18,000-28,000; 2-bed examples: Lumpini Suite Phetchaburi 40,000, Villa Asoke 43,000-52,500; average figure noted 'on 1 May 2023'"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "asking rents only - no signed-lease data found",
+    "portal areas mix Rama IX/Asoke corridor stock outside the unit polygon",
+    "premium outliers (180,000) skew simple averages"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phetchaburi-c14",
+   "text_en": "The app's rent references are consistent with mid-market asking rents - 1-bed 21,000 baht near the portals' 1-bed averages and 2-bed 45,500 baht in the premium band above typical 2-bed asks - but because portal 'Makkasan' data blends the Rama IX and Asoke corridors, both figures read as corridor-level blends rather than rents inside the 800 m unit.",
+   "kind": "researcher_inference",
+   "topics": [
+    "method",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "entity-wide rent reference",
+    "relation_to_entity": "entire_unit",
+    "notes": "supports the brief's 'ratchathewi blend, not unit-level' lead directionally; unit-level polygon-filtered listings were not obtainable without the blocked Overpass/OSM APIs"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "2026-11-08 retrieval",
+    "recheck_by": "2027-06-30",
+    "notes": "should be re-derived from polygon-filtered asking rents once geometry checks run"
+   },
+   "evidence": [
+    {
+     "source_id": "src_6d29083e0d8e",
+     "locator": "Average rents table",
+     "paraphrase": "1-bed average ~22.8k and 2-bed ~36.6k baht/month with wide ranges"
+    },
+    {
+     "source_id": "src_1dd09808380f",
+     "locator": "Listings",
+     "paraphrase": "2-bed asks at 30,500-52,500 baht, with only the premium Asoke-edge stock at the app's 45,500 level"
+    },
+    {
+     "source_id": "src_6d29083e0d8e",
+     "locator": "Sub-area counts",
+     "paraphrase": "most listings in the portal area belong to Phra Ram 9, not the stations' immediate surroundings"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "inference, not measurement; no signed-lease benchmark",
+    "the 2-bed reference sits well above the modal 2-bed ask in available samples"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phetchaburi-c15",
+   "text_en": "The adjacent Pratunam corridor is shopping-first rather than a nightlife district - Go Guides states that if it is a night of hardcore partying you are after, you are in the wrong part of town, since Pratunam is all about shopping, and after dark the area offers mainly hotel bars and lounges while directing partiers to Silom or Sukhumvit - and nothing located inside the 800 m Phetchaburi/Makkasan unit itself emerged as a bar district in any source used.",
+   "kind": "reported_perception",
+   "topics": [
+    "nightlife",
+    "vibe"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Pratunam hotel corridor (adjacent, beyond the catchment) and unit interior",
+    "relation_to_entity": "outside",
+    "notes": "supports the brief's lead that the nightlife 9 rating likely borrows from the adjacent Pratunam hotel strip and one-stop Sukhumvit access rather than venues inside the unit; polygon check for individual venues pending"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "guide content undated (footer 2022)",
+    "recheck_by": "2027-06-30",
+    "notes": "venue-level claims would need an aggregator pass inside the polygon"
+   },
+   "evidence": [
+    {
+     "source_id": "src_a472c82d31f6",
+     "locator": "Intro paragraph",
+     "paraphrase": "the Pratunam nightlife scene might be outshined by Bangkok's other bar-hopping spots; if it's a night of hardcore partying you're after, you're in the wrong part of town; Pratunam is all about shopping, all day long and well into the night; easy to catch a cab to Silom or Sukhumvit Road"
+    },
+    {
+     "source_id": "src_a472c82d31f6",
+     "locator": "Best nightlife in Pratunam section",
+     "paraphrase": "even if there isn't much to do in Pratunam once the sun sets, the area is not completely dead: many hotels offer bars and lounges with live music, plus sky-high restaurants"
+    },
+    {
+     "source_id": "src_6d1108631b9b",
+     "locator": "Economy and development sections",
+     "paraphrase": "Pratunam is one of the largest wholesale and retail clothing centers in Thailand, with hotel and shopping-center development on the Ratchaprarop side; the article contains no nightlife content, consistent with a shopping-led corridor"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "OTA content marketing source, undated",
+    "covers the adjacent corridor, not the unit interior; absence of inside-unit venues is an inference from all searches run, not a venue census",
+    "TripAdvisor listing pages could not be opened (403) to count venues"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phetchaburi-c16",
+   "text_en": "On the night of 12 August 2026 a Japanese tourist looking for the Makkasan ARL entrance wandered into an overgrown area near the station and was robbed and assaulted by seven youths aged 13-17 (some reportedly carrying knives, which the suspects denied using), who were arrested on 13 August.",
+   "kind": "factual_report",
+   "topics": [
+    "safety",
+    "walkability"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "overgrown land beside ARL Makkasan station, near Soi Asoke-Din Daeng 30",
+    "relation_to_entity": "inside",
+    "notes": "the article places the site in Din Daeng district by the station edge; illustrates the wayfinding and lighting risk of the fallow SRT land surrounding the station cluster"
+   },
+   "temporal_scope": {
+    "event_date": "2026-08-12",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "single incident; charges pending as of the 14 Aug 2026 questioning date"
+   },
+   "evidence": [
+    {
+     "source_id": "src_2c1a2f6a5ec4",
+     "locator": "Article body",
+     "paraphrase": "incident late on 12 Aug 2026 near Makkasan ARL station; tourist got lost looking for the station entrance and wandered into an overgrown area; youths demanded money saying 'Money, money', struck him with a rock per his account; seven arrests about 19:20 on 13 Aug; suspects found in flats near Din Daeng police station; police noted some suspects carried knives while youths denied weapons use"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "one incident, not a trend statistic",
+    "victim and suspect accounts differ on weapons"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "phetchaburi-c17",
+   "text_en": "The nearest large public park, Benjakitti (72 hectares), lies about 2.2 km straight-line south of MRT Phetchaburi - outside the 800 m unit - while nearby green is limited to small expressway-void gardens (such as the 24-hour Ratchathewi Phirom garden beside the Baan Mankong site) and the fallow, partly wetland SRT rail estate whose future as park versus towers has been contested since at least 2013, with the SRT governor stating in July 2023 that the redevelopment will include a public park and museum.",
+   "kind": "researcher_inference",
+   "topics": [
+    "green",
+    "planning"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Benjakitti Park (outside); Suan Ratchathewi Phirom and SRT estate green (edge)",
+    "relation_to_entity": "partial",
+    "notes": "distance computed from Wikipedia coordinates (Benjakitti 13.7294,100.5586 vs MRT Phetchaburi 13.7491,100.5630); distinction matters because the app's green 6 may be reading tree cover on the vacant rail land rather than public park access"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "park debate 2013-2023 documented; status 2026 unverified",
+    "recheck_by": "2027-06-30",
+    "notes": "whether Zone B-type green space is delivered is a live planning question"
+   },
+   "evidence": [
+    {
+     "source_id": "src_168b589d7cea",
+     "locator": "Infobox and Location section",
+     "paraphrase": "72 hectares in Khlong Toei on Ratchadapisek Rd between Rama IV and Sukhumvit, coordinates 13.7294,100.5586; forest-park expansion fully opened 2022"
+    },
+    {
+     "source_id": "src_90b1de01f36f",
+     "locator": "Site description",
+     "paraphrase": "new community located at Bueng Makkasan, Soi Mo Leng, next to Suan Ratchathewi Phiiram (Ratchathewi Phirom) park"
+    },
+    {
+     "source_id": "src_c957c1c3837b",
+     "locator": "Current state and timeline sections",
+     "paraphrase": "the depot land is described as one of the last large open/green spaces in central Bangkok with fallow areas, lakes and wetlands; Makkasan Hope has campaigned since at least 2013 for an urban park; SRT governor Nirut Maneephan (02/07/23) said the area becomes a mixed-use complex - a public park, SRT museum, and a city station for the high-speed rail"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "straight-line distance, not a walking-route distance and no walking time stated",
+    "inside-unit park access was not field-verified; small garden size not documented numerically",
+    "park commitment is a statement of intent, not a completed facility"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "phetchaburi-c18",
+   "text_en": "Everyday eating around the stations is cheap and ordinary rather than destination dining: Wongnai's Makkasan listing ranks 742 Thai restaurants in Ratchathewi, and its page-one venues are budget single-dish places along Phetchaburi Road and Ratchaprarop - boat noodles at Soi Phetchaburi 32, crispy-pork rice, duck noodles on Ratchaprarop 4, mookata and curry-rice buffets - alongside hotel dining such as The Berkeley.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "food"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phetchaburi Rd / Ratchaprarop corridor venues",
+    "relation_to_entity": "partial",
+    "notes": "platform region is district-level; some listed venues (Pratunam intersection) likely fall outside the 800 m polygon; polygon check pending"
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "listing state 2026-11-08",
+    "recheck_by": "2027-06-30",
+    "notes": "most page-1 venues were marked closed at the moment of the snapshot (typical daytime listing behavior); counts are platform-derived"
+   },
+   "evidence": [
+    {
+     "source_id": "src_ee6a044b698f",
+     "locator": "Listing page 'ร้าน อาหารไทย ยอดนิยม ในมักกะสัน'",
+     "paraphrase": "10 venues on page 1 of a 742-restaurant Ratchathewi ranking; budget price tiers dominate (boat noodles at Tha Ruea Pratunam pier, Soi Phetchaburi 32; Moo Krob Tuu; Wanida duck noodles Ratchaprarop 4; Family Mookata Phetchaburi; Ban Karaket on Phetchaburi Rd; Prathip chicken rice at Pratunam intersection; The Berkeley Dining Room as the hotel-dining outlier)"
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "commercial review platform; ranking popularity-based",
+    "venue count covers the district, not the polygon"
+   ],
+   "review_status": "proposed"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c01",
+    "phetchaburi-c02",
+    "phetchaburi-c05"
+   ],
+   "notes": "Identity: two rail anchors - MRT Phetchaburi BL21 (2004, Asok Montri/New Phetchaburi junction, Makkasan subdistrict Ratchathewi + Bang Kapi subdistrict Huai Khwang) and ARL Makkasan CAT (2010, Ratchathewi) - linked by skywalk, joined by the MetroMall and the SRT Eastern line Asok halt. Aliases: 'Phetchaburi station' also denotes a separate SRT railway station (per Wikipedia disambiguation note), and 'Makkasan station' disambiguates ARL vs railway namesakes. Orange Line runs beneath Phetchaburi Rd but has no station here; Pratunam OR09 and Ratchaprarop OR10 sit toward the western edge. Whether Pratunam venues, Ratchaprarop ARL, Bueng Makkasan/Baan Mankong site and Suan Ratchathewi Phirom fall inside is a polygon question left for the coordinator; sources document a Ratchathewi/Huai Khwang straddle, the Phaya Thai edge is not independently confirmed."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c18",
+    "phetchaburi-c15",
+    "phetchaburi-c08"
+   ],
+   "notes": "Whose everyday experience: commuters and hotel/shopping-corridor workers by day (budget single-dish eating, wholesale-adjacent Pratunam traffic), railway-community residents living inside one of central Bangkok's last big vacant estates, and transit users passing through the skywalk; the nightlife-first visitor experience the app's rating implies is documented only in the adjacent corridors, not here."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c03",
+    "phetchaburi-c04",
+    "phetchaburi-c18",
+    "phetchaburi-c13"
+   ],
+   "notes": "What people value, with mechanism: covered two-rail interchange plus airport access (ARL City Line; HSR EEC Gateway planned) removes car dependence; cheap everyday food keeps daily costs low; rents near regional averages make central-Bangkok location attainable. Guide opinion (value) vs verified fact (stations, skywalk, listings) is separated per claim."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c15",
+    "phetchaburi-c16",
+    "phetchaburi-c03",
+    "phetchaburi-c05",
+    "phetchaburi-c17"
+   ],
+   "notes": "Deliberate counter-evidence: no bar district in or around the unit (only hotel bars in adjacent Pratunam); a 2026 robbery in the overgrown land beside the station shows edge zones can be poorly surveilled; MRT/ARL fares not integrated; roughly half a decade of Orange Line tunneling under the corridor ahead; no large park within the unit."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c15",
+    "phetchaburi-c18",
+    "phetchaburi-c08"
+   ],
+   "notes": "Rhythm: shopping-and-office daytime pattern with the Pratunam corridor peaking through the evening markets; after dark the documented activity is hotel bars/lounges and rooftop dining, with guides pointing partiers elsewhere - i.e., quieter nights than Sukhumvit; weekday-led employment corridor, with the rail estate and communities a constant backdrop. No seasonal source found."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c03",
+    "phetchaburi-c16"
+   ],
+   "notes": "Walk-to-transit reality: a covered, escalator-and-elevator skywalk connects the two stations (about 0.3 km straight-line by coordinates), but ticketing is split and the surrounding fallow rail land has documented wayfinding failures - a visitor in August 2026 could not find the station entrance and was robbed in an overgrown patch. No sidewalk-quality audit found; no walking durations stated, distances only."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c18",
+    "phetchaburi-c01",
+    "phetchaburi-c13"
+   ],
+   "notes": "Daily-life support: abundant cheap single-dish food along the corridor; MetroMall at the MRT station; condo common facilities in listings regularly include pools/gyms. Gaps: groceries (supermarket names), healthcare sites and public sports facilities inside the unit were not verifiable from sources used - left as open issues rather than asserted."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c13",
+    "phetchaburi-c14"
+   ],
+   "notes": "Affordability: only asking rents available (medians ~24.9k; 1-bed averages ~22.8k; 2-bed ~36.6k with premium examples to 52.5k). Signed-lease data absent; period limits documented (one aggregate dated 1 May 2023, listings 2026); samples blend Rama IX/Asoke corridors, so treat app references as corridor blends."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c17",
+    "phetchaburi-c10"
+   ],
+   "notes": "Usable green/quiet: nearest major park (Benjakitti, 72 ha) is ~2.2 km straight-line south, outside the unit; inside/edge green is small expressway-void gardens (Ratchathewi Phirom beside the Baan Mankong site, 24 h) and the fallow SRT estate - visible tree cover, but public park access hinges on the contested park commitment. Tree cover vs park access distinction is explicit in c17."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c04",
+    "phetchaburi-c18",
+    "phetchaburi-c15",
+    "phetchaburi-c17",
+    "phetchaburi-c13"
+   ],
+   "notes": "Conditional fit: strong for airport-linked shift workers, car-free commuters, and budget-minded renters who value central location and cheap food; poor fit for nightlife-first renters (no bar district), park-first households (large park outside), and anyone needing integrated MRT/ARL fares; mid-market rents suit dual-income households rather than premium seekers who get more polish at Asoke."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c04",
+    "phetchaburi-c05",
+    "phetchaburi-c06",
+    "phetchaburi-c07",
+    "phetchaburi-c10",
+    "phetchaburi-c11",
+    "phetchaburi-c16"
+   ],
+   "notes": "Recent changes with event dates: Orange Line western civil works began July 2024 (14.06% by end-July 2025); worker fatality 19 May 2025 at Lan Luang; CODI lease/cooperative May-Sep 2024 with 169-unit phase 1 pending; community relocation ongoing since Aug 2024 (Daeng Bunga already demolished before that); ARL upgrades 96% complete June 2025 with HSR NTP scheduled 2026 and service targeted 2031; robbery incident 12-13 Aug 2026. SRT land plan documented as of 2023."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "phetchaburi-c05",
+    "phetchaburi-c14",
+    "phetchaburi-c12",
+    "phetchaburi-c17"
+   ],
+   "notes": "Uncertainties: Orange Line western opening dates conflict within the source itself (Nov 2028 vs Jul 2030) and the project has slipped before; app's nightlife 9 has no venue-level support in any source used (counter-view c15); rent references appear to be corridor blends, not polygon-filtered (c14); the 'Nimit Lang Ruea' lead name is unverified (c12); the promised Makkasan park is a stated intent, not a built fact (c17); HSR timeline (NTP 2026, service 2031) is official projection only. Outside the score: the railway communities' relocation experience and the park-vs-towers fight over the SRT estate."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "Two rail stations, a covered airport shortcut and 20-baht boat noodles - wrapped around 497 rai of fallow railway land that is half building site, half unfinished argument about a park.",
+   "claim_ids": [
+    "phetchaburi-c01",
+    "phetchaburi-c03",
+    "phetchaburi-c04",
+    "phetchaburi-c05",
+    "phetchaburi-c06",
+    "phetchaburi-c07",
+    "phetchaburi-c10",
+    "phetchaburi-c11",
+    "phetchaburi-c13",
+    "phetchaburi-c15",
+    "phetchaburi-c16",
+    "phetchaburi-c17",
+    "phetchaburi-c18"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Phetchaburi-Makkasan is a transit unit first: MRT Phetchaburi (Blue Line, 2004) and ARL Makkasan (2010) stand about 0.3 km apart, joined by an escalator-and-elevator skywalk, with airport trains on the City Line today and the three-airport high-speed rail designated to make this the EEC Gateway by around 2031. Everyday life here is budget-priced - a 742-restaurant Ratchathewi ranking led by boat-noodle, crispy-pork and duck-noodle shops along Phetchaburi Road - and asking rents near the portals' mid-market averages rather than Asoke premiums. What the unit does not have, on the evidence read: a nightlife district (guides send partiers from the adjacent Pratunam strip to Silom or Sukhumvit), a large public park inside the 800 m (Benjakitti is about 2.2 km south), or integrated MRT/ARL fares. Around the stations, the dominant fact is the State Railway's 497-rai estate - part construction zone for the Orange Line tunnels and high-speed rail works, part home to railway communities now moving into CODI-built Baan Mankong housing at Bueng Makkasan, and part of it promised back as a park.",
+   "claim_ids": [
+    "phetchaburi-c01",
+    "phetchaburi-c03",
+    "phetchaburi-c04",
+    "phetchaburi-c05",
+    "phetchaburi-c06",
+    "phetchaburi-c07",
+    "phetchaburi-c10",
+    "phetchaburi-c11",
+    "phetchaburi-c13",
+    "phetchaburi-c15",
+    "phetchaburi-c16",
+    "phetchaburi-c17",
+    "phetchaburi-c18"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Dual-rail hub with covered transfer: skywalk-linked MRT and ARL stations put Suvarnabhumi airport trains, the Blue Line loop and (planned, ~2031) the three-airport HSR EEC Gateway within one stop cluster - the strongest transport hand a Bangkok unit can hold on paper.",
+    "claim_ids": [
+     "phetchaburi-c03",
+     "phetchaburi-c04"
+    ]
+   },
+   {
+    "text_en": "Eating out is a daily default, not a treat: district-wide cheap single-dish staples (boat noodles at Soi Phetchaburi 32, crispy pork, duck noodles) keep food costs low without relying on malls.",
+    "claim_ids": [
+     "phetchaburi-c18"
+    ]
+   },
+   {
+    "text_en": "Central location at mid-market money: 1-bed asks cluster in the high-teens to mid-20s of thousands of baht, at or below the averages of pricier neighbours, with condos routinely including pool and gym facilities in their listings.",
+    "claim_ids": [
+     "phetchaburi-c13"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "The nightlife 9 the app shows is not visible on the ground here: sources describe the adjacent Pratunam corridor as shopping-first - 'you're in the wrong part of town' for partying - with hotel bars as the after-dark default and no bar district found inside the unit.",
+    "claim_ids": [
+     "phetchaburi-c15"
+    ]
+   },
+   {
+    "text_en": "A decade-scale construction horizon: Orange Line tunneling under Phetchaburi Road only started in July 2024 (about 14% of civil works by mid-2025) with opening dates still announced inconsistently, plus resident displacement fights and a 2025 construction fatality on the alignment.",
+    "claim_ids": [
+     "phetchaburi-c05",
+     "phetchaburi-c06"
+    ]
+   },
+   {
+    "text_en": "Green means tree cover, not parks: no large public park sits inside the catchment - Benjakitti is about 2.2 km away - and the big green idea for the neighbouring railway estate remains a contested promise.",
+    "claim_ids": [
+     "phetchaburi-c17",
+     "phetchaburi-c07"
+    ]
+   },
+   {
+    "text_en": "Edge-zone safety and wayfinding: in August 2026 a visitor circling the station could not find the entrance, wandered into overgrown railway land and was robbed by a group of teenagers; the fallow estate that makes the area quiet also makes parts of it dim and unpoliced.",
+    "claim_ids": [
+     "phetchaburi-c16"
+    ]
+   },
+   {
+    "text_en": "Two rails, one wallet each: the MRT-ARL skywalk is covered but fares and ticketing are not integrated, an everyday friction for anyone mixing the systems.",
+    "claim_ids": [
+     "phetchaburi-c03"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Daytime is function-first: station commuters through the MetroMall, cheap single-dish lunch crowds along Phetchaburi Road, and shopping-corridor traffic bleeding over from Pratunam.",
+    "claim_ids": [
+     "phetchaburi-c01",
+     "phetchaburi-c18"
+    ]
+   },
+   {
+    "text_en": "After dark the documented scene is hotel bars, lounges and rooftop dining in the adjacent corridor, with guides explicitly redirecting partiers to Silom or Sukhumvit - nights here are quiet, and the overgrown rail land adds an edge after late hours.",
+    "claim_ids": [
+     "phetchaburi-c15",
+     "phetchaburi-c16"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Station cluster vs rail estate: hard urban fabric and transit crowds at the two stations, then an abrupt break into the State Railway's 497 rai of depots, fallow ground and wetland on the doorstep.",
+    "claim_ids": [
+     "phetchaburi-c01",
+     "phetchaburi-c07"
+    ]
+   },
+   {
+    "text_en": "New housing amid displacement: at Bueng Makkasan/Soi Mo Leng, displaced railway households are building 169 Baan Mankong units on a 30-year SRT lease beside the small Ratchathewi Phirom garden - a low-rise, community-scale pocket unlike the surrounding towers plan.",
+    "claim_ids": [
+     "phetchaburi-c10",
+     "phetchaburi-c11",
+     "phetchaburi-c17"
+    ]
+   },
+   {
+    "text_en": "Western edge vs interior: the mall-and-hotel gravity of Pratunam/Ratchaprarop (where the Orange Line stations will land) lies beyond the unit, while the interior stays residential, institutional and rail-scaled.",
+    "claim_ids": [
+     "phetchaburi-c05",
+     "phetchaburi-c15"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Best fit: airport-linked shift workers and frequent flyers who will actually use the ARL, car-free commuters riding the Blue Line, and budget-minded renters who want central Bangkok at mid-market asking rents and eat street-side daily.",
+    "claim_ids": [
+     "phetchaburi-c04",
+     "phetchaburi-c03",
+     "phetchaburi-c13",
+     "phetchaburi-c18"
+    ]
+   },
+   {
+    "text_en": "Poor fit: nightlife-first renters (no bar district documented here; partiers are redirected out of the adjacent corridor), park-first households (nearest large park ~2.2 km away), and frequent MRT-ARL mixers annoyed by split ticketing.",
+    "claim_ids": [
+     "phetchaburi-c15",
+     "phetchaburi-c17",
+     "phetchaburi-c03"
+    ]
+   },
+   {
+    "text_en": "Fit with patience: households unaffected by construction who can ride out roughly five more years of Orange Line works in exchange for a future three-rail interchange at the doorstep.",
+    "claim_ids": [
+     "phetchaburi-c05",
+     "phetchaburi-c04"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "Orange Line western-section opening is announced inconsistently (Nov 2028 target vs Jul 2030 projection in the same source); treat any date as provisional (phetchaburi-c05).",
+   "App nightlife 9 has no venue-level corroboration in sources read; likely borrowed from the adjacent Pratunam strip and one-stop Sukhumvit access - candidate for re-scoring (phetchaburi-c15).",
+   "Rent references (21k/45.5k) look like corridor blends of Rama IX/Asoke stock rather than polygon-filtered unit rents; no signed-lease data exists in sources used (phetchaburi-c14, phetchaburi-c13).",
+   "The 'Nimit Lang Ruea' lead could not be matched to any project here; documented displacement-rehousing is the Rim Bueng Makkasan Baan Mankong scheme (phetchaburi-c12, phetchaburi-c10).",
+   "The promised public park on the SRT estate is a 2023 governor's statement and a decade of advocacy, not a built facility; zone plans remain estimates (phetchaburi-c17, phetchaburi-c07).",
+   "Groceries, healthcare and public sports facilities inside the 800 m were not verified by sources read; the app's gym_sports 9 rests on unexamined mapping.",
+   "Whether Bueng Makkasan/Baan Mankong, Suan Ratchathewi Phirom, Ratchaprarop ARL and individual food venues sit inside the app polygon is undetermined - coordinator polygon checks pending."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "ready_for_review",
+  "researcher": "zcode-main (D-1 dispatch; ≤2 concurrent subagents)",
+  "reviewer": null,
+  "reviewed_at": null,
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "2 claim(s) carry relation_to_entity=unknown as an honest gap: phetchaburi-c10, phetchaburi-c11.",
+   "13 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Coordinator polygon checks needed: Baan Mankong site at Bueng Makkasan/Soi Mo Leng, Suan Ratchathewi Phirom garden, Orange Line OR09/OR10 footprints, Wongnai venue addresses, and the SRT estate boundary against the app's 800 m catchment.",
+   "open issue: Nightlife rating: app shows 9 but no source documents a bar district inside the unit; recommend re-deriving from polygon-filtered venue data and considering a score review.",
+   "open issue: Rent references: re-derive from polygon-filtered asking rents and, if possible, signed-lease data; portal blends noted in phetchaburi-c13/c14.",
+   "open issue: Orange Line western opening dates conflict (2028 vs 2030); recheck MRTA announcements by mid-2027.",
+   "open issue: Three-airport HSR timeline (NTP 2026, service 2031) is an official projection with a history of slippage; recheck EECO status page.",
+   "open issue: Grocery, healthcare and public sports infrastructure inside the unit unverified; needs a venue-level pass (app gym_sports 9 currently uncorroborated).",
+   "open issue: 'Nimit Lang Ruea' name in the batch lead unresolved; confirm whether it refers to a different district's project or is a mislabel.",
+   "open issue: Access failures logged: hotels.com Go Guides timed out once on WebFetch (read succeeded via web reader); TripAdvisor nightlife listing returned HTTP 403 and was skipped.",
+   "open issue: No evidence found (Thai or English) that the Bueng Makkasan pond has been filled in 2025-2026; pond-and-park status within the SRT estate remains open."
+  ]
+ }
+}

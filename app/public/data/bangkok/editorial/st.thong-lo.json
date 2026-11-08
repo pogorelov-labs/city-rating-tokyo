@@ -1,0 +1,582 @@
+{
+ "key": "st.thong-lo",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Thong Lo is Sukhumvit Soi 55, a roughly two-kilometre commercial spine starting at BTS Thong Lo and ending at Khlong Saen Saep. Its lower sois pack community malls, a 24-hour diner, Michelin-listed Thai kitchens and hidden cocktail bars within a short walk of the station, which is what the food and nightlife scores reward. The same density is the burden: a single road with no parallel alternative backs up in the evening, the middle sois stay loud past midnight next to homes, and the catchment holds essentially no public park. Rents sit near the top of the Bangkok market, and public asking-price averages — including the app's own reference — are portal-derived rather than measured contracts.",
+   "claims": [
+    "thong-lo-c04",
+    "thong-lo-c05",
+    "thong-lo-c07",
+    "thong-lo-c08",
+    "thong-lo-c09",
+    "thong-lo-c10",
+    "thong-lo-c11",
+    "thong-lo-c12",
+    "thong-lo-c14",
+    "thong-lo-c15",
+    "thong-lo-c16",
+    "thong-lo-c17"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Restaurant and bar density is real and verifiable at street level: Michelin-starred R.HAAN (Soi 9), Bib Gourmand Supanniga (Soi 55 mouth), Err on Soi 38, and a hidden-bar cluster around Sois 5-16 including an Asia's 50 Best entrant in 2025.",
+     "claims": [
+      "thong-lo-c05",
+      "thong-lo-c07"
+     ]
+    },
+    {
+     "en": "Errands and odd-hours food are covered without a car: a 24-hour Foodland diner at Eight Thonglor (Soi 8), Villa Market at Market Place (Soi 15), and plates from under 50 to under 200 THB alongside the upscale end.",
+     "claims": [
+      "thong-lo-c15"
+     ]
+    },
+    {
+     "en": "The Japanese presence translates into practical services — izakaya strips, Japanese-speaking clinics, a Japanese Medical Center at Samitivej — not just prestige dining.",
+     "claims": [
+      "thong-lo-c14"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "One station, one line, one spine: BTS Thong Lo is the only rail option, and with no parallel road a blocked junction strands the whole soi; deep-soi residents budget 15-25 minutes or a 20-40 THB motorbike taxi at rush hour.",
+     "claims": [
+      "thong-lo-c08",
+      "thong-lo-c10"
+     ]
+    },
+    {
+     "en": "Sidewalk quality on the soi has lagged the area's prices — a 2023 walk account describes thin, cluttered, crumbling pavement — and BMA's 26.3-million-THB rebuild for the full soi was still showing zero physical progress as of its September 2025 report.",
+     "claims": [
+      "thong-lo-c09"
+     ]
+    },
+    {
+     "en": "Almost no public green: the nearest real parks (Benchasiri, Benjakitti) sit beyond an 800 m radius, leaving a private rooftop lawn and tree-lined side sois as substitutes.",
+     "claims": [
+      "thong-lo-c12"
+     ]
+    },
+    {
+     "en": "Rent references in every direction are asking prices from portals; the app's 28,000/56,500 THB medians fall inside independently published ranges (1-bed roughly 25,000-65,000 in newer buildings) but no signed-contract series was found.",
+     "claims": [
+      "thong-lo-c11"
+     ]
+    },
+    {
+     "en": "Night noise reaches homes: the middle sois (10-17) stay loud past midnight, so the building's immediate neighbors matter more than the postcode.",
+     "claims": [
+      "thong-lo-c16"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Daytime belongs to BTS commuters, WFH lunches at Market Place, brunch and the cafe circuit; rooftops start around 5pm, cocktails from 8pm, and the Japanese dining side and mouth-of-soi kitchens run to 3:30-4am — the soi is busiest exactly when residents are heading home.",
+     "claims": [
+      "thong-lo-c16",
+      "thong-lo-c07"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Depth from Sukhumvit reorders everything: Sois 1-9 near the BTS are the priciest and most walkable, Sois 10-17 concentrate the malls and bar noise, and past Soi 18 the sois turn quieter and somewhat cheaper — but rents do not always fall in step with distance.",
+     "claims": [
+      "thong-lo-c04",
+      "thong-lo-c08",
+      "thong-lo-c16"
+     ]
+    },
+    {
+     "en": "Sukhumvit Road itself is a different pedestrian world from the soi behind it: wide, well-maintained sidewalks and tactile paving up top, thin and cluttered walkways in the sois.",
+     "claims": [
+      "thong-lo-c09"
+     ]
+    },
+    {
+     "en": "Several headline amenities sit outside the 800 m radius — the Soi 25 Japanese strip and Donki Mall (Sukhumvit 63 side), Soi 57's rooftop — so the station-area unit offers a thinner slice of the Thonglor brand than guides imply.",
+     "claims": [
+      "thong-lo-c04",
+      "thong-lo-c14"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Best fit: residents who live car-free, work in or near central Sukhumvit, and want dense food and bars inside the few blocks around the station.",
+     "claims": [
+      "thong-lo-c17",
+      "thong-lo-c15"
+     ]
+    },
+    {
+     "en": "Poor fit: anyone maximizing square meters per baht (guides point to the value belt further east), families who need a park on foot (Phrom Phong suits better), or commuters who need a second rail line or a reliable drive through the soi.",
+     "claims": [
+      "thong-lo-c17",
+      "thong-lo-c08",
+      "thong-lo-c12"
+     ]
+    },
+    {
+     "en": "Noise-sensitive night sleepers should pick a side-soi building after checking its immediate neighbors at night, not rely on the neighborhood's name.",
+     "claims": [
+      "thong-lo-c16",
+      "thong-lo-c17"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Current operating status of the Soi 38 night food market is conflicting (2026-updated tourism page says ~20 stalls active; some listings say permanently closed).",
+   "The identity of the app's ~0.1 ha park inside the catchment was not established from sources read.",
+   "BMA's Soi Thong Lo sidewalk project shows 0% physical progress at its last public report (2025-09-23); completion status unknown.",
+   "Safety rating (6) could not be validated: no Thong Lo-specific crime or safety reporting was found in body-read sources.",
+   "All rent figures in circulation, including the app reference, are asking-price based; signed-lease data was not found.",
+   "Venue in/out calls for the 800 m radius are coordinate estimates, not POI-layer measurements.",
+   "Reddit resident thread on Thong Lo could not be accessed, so school-cluster traffic claims circulate only as unverified snippets."
+  ],
+  "attribution_required": [
+   "thong-lo-c05"
+  ]
+ },
+ "claims": [
+  {
+   "id": "thong-lo-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2023-2026 sources",
+    "recheck": null
+   },
+   "limitations": [
+    "Exact soi length varies by source (2 km vs 3 km); 2 km preferred from two concordant sources"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current administrative boundaries",
+    "recheck": null
+   },
+   "limitations": [
+    "Wikipedia describes khwaeng extents on the odd side; the even-side (Khlong Toei) attribution of Soi 38 comes from Time Out's Err address ('Phra Khanong, Khlong Toei' — note that address string is itself imprecise) and general district layout, not from a boundary map of the exact catchment"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026 sources",
+    "recheck": null
+   },
+   "limitations": [
+    "No source read specifies the exact eastern edge of an 800 m radius from the station mouth; the 'outside' relation is a coordinate-based judgment (Ekkamai soi mouth ~0.9-1.0 km east)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c04",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2026 sources",
+    "recheck": "verify against app POI mapping"
+   },
+   "limitations": [
+    "Straight-line geometry, not walking distance; soi numbering is not linear in metres",
+    "Source 4 places Donki Mall on the Ekkamai side — contradicts casual assumptions that Donki serves Thong Lo station users directly"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c05",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2026-05-14",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Venue list is the guide's editorial selection; the 449 food places in app data dwarf the handful a guide names",
+    "Guide enthusiasm is a judgment, not a measurement of everyday affordability"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c06",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2015-10-01",
+    "observed": "2013-2026",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "No primary or journalistic confirmation of 2026 operating status; tourist-listing conflict unresolved"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Time Out's list is promotional; occupancy and noise externalities are not assessed there"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c08",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2023-2026 sources",
+    "recheck": null
+   },
+   "limitations": [
+    "Perception-based; no measured traffic counts",
+    "The 15-25 minute figure comes from a highlights-only source corroborated qualitatively by body-read sources"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2023 walk account; 2024-2025 procurement record",
+    "recheck": "2027-01-01"
+   },
+   "limitations": [
+    "The 2023 account predates any works; current state of lower-soi sidewalks unverified",
+    "No later-than-Sept-2025 status in the government table retrieved"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c10",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2026 sources",
+    "recheck": null
+   },
+   "limitations": [
+    "No source read assesses station crowding at peak or entrance/exit capacity"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c11",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "2025-06 through 2026-10 published ranges",
+    "recheck": "2027-01-01"
+   },
+   "limitations": [
+    "All figures are asking prices from portals/editorial estimates; no signed-lease or REIC transaction series was directly read",
+    "Sample sizes undisclosed for most ranges; BAANLYY's own n=1 highlights how thin public evidence is",
+    "The app's median (n=33/24) sits inside these ranges, which supports plausibility but not precision"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c12",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2022 (forest park opening) to 2026",
+    "recheck": "verify against app park layer"
+   },
+   "limitations": [
+    "The identity of the app's 0.1 ha park is unresolved (possibly a pocket green or temple ground); do not present the park-adjacency as measured",
+    "Distances are estimates from published locations"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c13",
+   "status": "conflicted",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": "2026-09-27",
+    "observed": "2011-2026",
+    "recheck": "2027 rainy season"
+   },
+   "limitations": [
+    "No Thong-Lo-specific damage reporting was found for the Sept 2026 event; 'east hardest hit' is the closest official characterization",
+    "Area-guide flood claims are editorial judgments, and one publisher explicitly refuses to quantify drainage"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c14",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2019-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "No catchment-level count of Japanese residents or businesses was found; do not over-claim 'Japanese quarter' for the 800 m area itself",
+    "Citywide Japanese population figure is not a Thong Lo figure"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c15",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Ordinary-Thai-food vs upscale ratio is not quantified by any source read; app's 449 food places vs 44 cafes is the only density measure available",
+    "Camillian Hospital address implies proximity but was not distance-verified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c16",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2026 sources",
+    "recheck": null
+   },
+   "limitations": [
+    "Perception accounts from publishers, not acoustic measurements",
+    "Weekend-vs-weekday amplitude not documented beyond brunch commentary"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c17",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2026 sources",
+    "recheck": null
+   },
+   "limitations": [
+    "Perception-based conditional judgments from relocation publishers; no survey data"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c18",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Rename date not pinned; Central Pattana demographic figure comes from the mall's own research (developer interest)",
+    "MUU opening date not stated in the source read"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "thong-lo-c19",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026 evidence base",
+    "recheck": null
+   },
+   "limitations": [
+    "This is the researcher's reconciliation, not a source's claim; the model's exact score mechanics are outside this bundle"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_e89b9a34f48c",
+   "url": "https://www.timeout.com/bangkok/things-to-do/your-ultimate-guide-to-thonglor",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out"
+   }
+  },
+  {
+   "id": "src_b8b65c0bc90e",
+   "url": "https://propertyscout.co.th/en/location-guides/thong-lo-area-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyScout",
+    "family": "PropertyScout"
+   }
+  },
+  {
+   "id": "src_051987d9ea26",
+   "url": "https://migrationology.com/sukhumvit-soi-38-convenient-street-food-bangkok",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Migrationology (Mark Wiens)",
+    "family": "Migrationology"
+   }
+  },
+  {
+   "id": "src_aca2ff99749a",
+   "url": "https://chartercitiesinstitute.org/blog-posts/where-i-live-bangkok-thailand",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Charter Cities Institute",
+    "family": "Charter Cities Institute"
+   }
+  },
+  {
+   "id": "src_7e83847314c8",
+   "url": "https://www.thailandstarterkit.com/moving/living-in-thonglor/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thailand Starter Kit",
+    "family": "Thailand Starter Kit"
+   }
+  },
+  {
+   "id": "src_394e1e595594",
+   "url": "https://baanlyy.com/learn/living-in-thonglor",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BAANLYY",
+    "family": "BAANLYY"
+   }
+  },
+  {
+   "id": "src_c188172740c9",
+   "url": "https://www.bbc.com/news/articles/ck1wxx8n2x3zo",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BBC News",
+    "family": "BBC"
+   }
+  },
+  {
+   "id": "src_b2f82e53a8e3",
+   "url": "https://en.wikipedia.org/wiki/Watthana_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_168b589d7cea",
+   "url": "https://en.wikipedia.org/wiki/Benjakitti_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_b5fc50bfcaa8",
+   "url": "https://en.wikipedia.org/wiki/Khlong_Phra_Khanong",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_2be18167bbae",
+   "url": "https://dp.bangkok.go.th/plans70/frontend/web/index.php?r=site%2Fprojectviewun&ID=5520",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Metropolitan Administration, Department of Public Works (สำนักการโยธา)",
+    "family": "BMA (bangkok.go.th)"
+   }
+  },
+  {
+   "id": "src_d3d255e14f91",
+   "url": "https://yourthaiguide.com/sukhumvit-soi-38-night-food-market-still-an-authentic-night-street-food-heaven",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Your Thai Guide",
+    "family": "Your Thai Guide"
+   }
+  },
+  {
+   "id": "src_c6e041a659ca",
+   "url": "https://www.mitziemee.com/bangkok-sukhumvit-soi-38-my-late-night-street-food-fix/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Mitzie Mee",
+    "family": "Mitzie Mee"
+   }
+  },
+  {
+   "id": "src_35dd438da083",
+   "url": "https://www.ryt9.com/s/prg/3502535",
+   "body_read": true,
+   "attribution": {
+    "publisher": "RYT9 / ThaiPR.net",
+    "family": "ThaiPR.net wire (ryt9.com)"
+   }
+  },
+  {
+   "id": "src_11214cfee59b",
+   "url": "https://www.superagent.co/en/blog/thonglor-area-bangkok-the-complete-2026-expat-rental-guide",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Superagent",
+    "family": "Superagent"
+   }
+  },
+  {
+   "id": "src_84564110f7a6",
+   "url": "https://www.bkkoracle.com/guides/best-areas-to-live-in-bangkok",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BKK Oracle",
+    "family": "BKK Oracle"
+   }
+  },
+  {
+   "id": "src_f30510d30dad",
+   "url": "https://thonglor.in.th/en/blog/thonglor-soi-15",
+   "body_read": false,
+   "attribution": {
+    "publisher": "thonglor.in.th",
+    "family": "thonglor.in.th"
+   }
+  }
+ ]
+}

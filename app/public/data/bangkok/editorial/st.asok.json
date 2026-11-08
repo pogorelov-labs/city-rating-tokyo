@@ -1,0 +1,516 @@
+{
+ "key": "st.asok",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Asok is Bangkok's crossroads more than its neighborhood: the only place where the BTS Sukhumvit Line and the MRT Blue Line meet, with Terminal 21 at the corner, Exchange Tower offices on one side and the Soi Cowboy bar strip about a block away. Guides rate it the easiest place in Bangkok to live without a car, and the 800 m catchment is dense with convenience stores, supermarkets and cheap soi food. The price of that position is paid daily — one of the city's most crowded station platforms, noise from two roads, two rail lines and the bar soi, and footpaths old enough that the city government announced their rebuild in 2025. It fits people who will use the interchange every day; it wears down people who will hear it from home.",
+   "claims": [
+    "asok-c01",
+    "asok-c02",
+    "asok-c03",
+    "asok-c06",
+    "asok-c07",
+    "asok-c08",
+    "asok-c09",
+    "asok-c10",
+    "asok-c11",
+    "asok-c12",
+    "asok-c13",
+    "asok-c14",
+    "asok-c15",
+    "asok-c16",
+    "asok-c17",
+    "asok-c19"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "The two-line interchange means most of central Bangkok is reachable without a car, and guides describe residents here giving up taxis almost entirely.",
+     "claims": [
+      "asok-c11",
+      "asok-c01"
+     ]
+    },
+    {
+     "en": "Everyday essentials are unusually dense within 800 m: 61 convenience stores, eight supermarket-type stores (Tops, Foodland, Villa Market, Makro Food Service among them) and two marketplaces.",
+     "claims": [
+      "asok-c16"
+     ]
+    },
+    {
+     "en": "Eating out runs from a Korean community cluster on Soi 12 to Middle Eastern and Thai soi kitchens and Terminal 21's food court, so daily food does not require traveling.",
+     "claims": [
+      "asok-c13",
+      "asok-c03"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Crowding is structural, not occasional: a 2016 editorial ranked Asok's crowds 1/5, and when one BTS train failed at the evening rush in September 2026, passengers backed up from Asok's platform to the street-level gates.",
+     "claims": [
+      "asok-c08",
+      "asok-c09"
+     ]
+    },
+    {
+     "en": "Noise stacks up from three directions — Sukhumvit and Asok Montri roads, the two rail viaducts, and the Soi Cowboy strip — which is why guides tell renters to go five minutes deep into a side soi.",
+     "claims": [
+      "asok-c14",
+      "asok-c02"
+     ]
+    },
+    {
+     "en": "The walk to the stations ran for decades on 30-year-old paving tiles that collapse and splash mud; the BMA promised a rebuild starting 2025 but completion is not yet verified.",
+     "claims": [
+      "asok-c10"
+     ]
+    },
+    {
+     "en": "Rents carry a location premium and the nearest full hospital (Bumrungrad) is about 1.2 km out — everyday medicine here means pharmacies and small clinics.",
+     "claims": [
+      "asok-c12",
+      "asok-c17"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Weekday mornings and early evenings belong to office commuters squeezing through the interchange, while late evening shifts the center of gravity to the ~40 bars of Soi Cowboy and the tourist flow around Terminal 21 — the same corner, two different crowds.",
+     "claims": [
+      "asok-c07",
+      "asok-c02",
+      "asok-c08"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The difference between blocks is bigger than the difference between hours: Cowboy's bar row sits ~120 m from the interchange while the mouths of Sois 15, 19 and 23 carry office and apartment life, and Soi 11 mixes guesthouses with residences a few hundred meters west.",
+     "claims": [
+      "asok-c02",
+      "asok-c06",
+      "asok-c13"
+     ]
+    },
+    {
+     "en": "Guides characterize the area as having less identity than Thonglor or Silom — it is picked for the crossroads, which is why side-soi selection (window orientation, distance from the main road) does most of the work in whether a given unit is livable.",
+     "claims": [
+      "asok-c15",
+      "asok-c14"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Strong fit: commuters who change lines daily, airport travelers via Makkasan, and workers in the surrounding towers who want a car-free routine.",
+     "claims": [
+      "asok-c11",
+      "asok-c19",
+      "asok-c07"
+     ]
+    },
+    {
+     "en": "Poor fit: quiet-seekers and home-all-day remote workers, per the guides' own verdicts; families wanting calm are pointed one stop east to Phrom Phong.",
+     "claims": [
+      "asok-c19",
+      "asok-c14"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "No recent (2024-2026) station-level ridership breakdown for BTS Asok vs MRT Sukhumvit vs transfer flows was found; crowding rests on editorial and event evidence.",
+   "All rent figures are asking prices; signed-contract levels and the portal's 'near E4' radius are unknown, and the app's DooAsset medians rest on n=30/18.",
+   "Whether the 2025 Asok Montri footpath renovation was completed, and to what standard, is unverified.",
+   "Benjakitti Park opening hours conflict (04:30-21:00 per Wikipedia vs 04:30-22:00 per OSM), and entrance positions are not individually mapped.",
+   "Safety (app score 6) and gym/sports provision (app score 10) found no supporting qualitative or quantitative sources this session.",
+   "Whether the app's '15.3 ha park within 800 m' corresponds to Benjakitti's portion inside the radius is an unverified inference.",
+   "Resident-voiced accounts (Reddit r/Bangkok threads, TripAdvisor and ExpatForum discussions) were all blocked or paywalled this session."
+  ],
+  "attribution_required": [
+   "asok-c01",
+   "asok-c05",
+   "asok-c06",
+   "asok-c09",
+   "asok-c10"
+  ]
+ },
+ "claims": [
+  {
+   "id": "asok-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1999-12-05",
+    "observed": "current state as described 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Thai/English alias set (อโศก, Asoke, Asok Montri) assembled from sources 1, 3, 5 rather than one authoritative gazetteer."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "bar cluster first formed early 1970s; still mapped 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Distance is a straight-line figure from a coarse OSM polygon, not a walking route.",
+    "Wikipedia does not describe current noise or complaint levels."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "operating as of 2025-2026 sources",
+    "recheck": null
+   },
+   "limitations": [
+    "'Anchor' is the guide's editorial characterization."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c04",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2022-01-01",
+    "observed": "forest park fully opened 2022; geometry extracted 2026-11-05",
+    "recheck": null
+   },
+   "limitations": [
+    "Coarse OSM polygons: distance error roughly +/-20-50 m.",
+    "Entrance locations are not individually mapped; 'main entrance within 800 m' cannot be asserted, only that the park boundary crosses the catchment.",
+    "Opening hours conflict: Wikipedia 04:30-21:00 vs OSM tag 04:30-22:00."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c05",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "geometry extracted 2026-11-05",
+    "recheck": null
+   },
+   "limitations": [
+    "Coarse 14-node polygon; error roughly +/-20-50 m, but the margin beyond 800 m is ~160 m so the outside verdict is robust."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c06",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "OSM extract 2026-11-05",
+    "recheck": null
+   },
+   "limitations": [
+    "Bounding-box method overstates distance for angled roads; treat as order-of-magnitude.",
+    "Soi lengths approximate from bbox extents."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "corridor state as described by 2026 sources",
+    "recheck": null
+   },
+   "limitations": [
+    "Corridor-level characterization not converted into an inside/outside list of individual hotels."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c08",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "BK ranking 2016; guides 2025-09 to 2025-12",
+    "recheck": null
+   },
+   "limitations": [
+    "BK ranking is a decade-old subjective editorial.",
+    "Crowding descriptions are qualitative; no current station-level ridership split BTS vs MRT vs transfer flows was found."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2026-09-25",
+    "observed": "single evening event",
+    "recheck": null
+   },
+   "limitations": [
+    "One event; does not establish a recurring frequency.",
+    "No operator statement quoted; figures come from reporters and users."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "announced 2025-03-18; contractor target 2025-07",
+    "recheck": "2026-12-31"
+   },
+   "limitations": [
+    "Announcement only; no completion report found in this session.",
+    "Article paraphrases officials; no independent condition survey."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c11",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guides 2025-09 to 2025-12",
+    "recheck": null
+   },
+   "limitations": [
+    "Journey times are guide estimates, not measured.",
+    "'Most connected in Bangkok' is promotional framing, though the two-line interchange fact is verifiable."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c12",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "DDproperty listings dated 2026-11-04 (n=20 visible of 5,072); Condoreviews ranges updated 2025-12-31; app medians as of 2026-10-25 (n=30/18, station-override proxy)",
+    "recheck": "2027-02-01"
+   },
+   "limitations": [
+    "No median or average statistic was readable on the portal page; only page-1 examples.",
+    "Asking rents exceed signed rents in this market typically; app medians use a small sample (n=30/18).",
+    "Sources are commercial (listings portal, condo-review site)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c13",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guides 2025-12 to 2026-09",
+    "recheck": null
+   },
+   "limitations": [
+    "Guide assertions; no independent census of cuisine types inside the 800 m radius.",
+    "App-side Overture counts (729 food, 90 cafes, 147 nightlife) were provided by the project brief, not re-derived here."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c14",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guides 2025-12 to 2026-09",
+    "recheck": null
+   },
+   "limitations": [
+    "Perception-based; no decibel data or complaint statistics.",
+    "Cowboy adjacency affects a subset of blocks, not the whole unit."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c15",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guides 2025-12 to 2026-09",
+    "recheck": null
+   },
+   "limitations": [
+    "Both sources are property-adjacent editorial voices; a resident-sourced view (Reddit thread) could not be fetched this session."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c16",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "OSM extract 2026-11-05",
+    "recheck": null
+   },
+   "limitations": [
+    "OSM completeness is uneven; counts are floors, not censuses.",
+    "Includes unnamed entries; building-level placement of each supermarket not verified."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c17",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "OSM extract 2026-11-05; guide updated 2025-12-31",
+    "recheck": null
+   },
+   "limitations": [
+    "OSM point may sit at a campus centroid; boundary-to-boundary distance could differ slightly, but ~1.2 km leaves the outside verdict robust.",
+    "Guide walk-time claim may be measured from a different starting block within the wider 'Asoke' area."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c18",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "geometry extracted 2026-11-05; park operating hours as published",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "Entrance positions not individually mapped; 'main entrance' location unresolved.",
+    "Hours conflict between Wikipedia and OSM.",
+    "Tree-canopy quality of streets is not evidenced by any fetched source."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "asok-c19",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guides 2025-12 to 2026-09",
+    "recheck": null
+   },
+   "limitations": [
+    "Both sources are property-market voices; conditional fit for night workers, students or retirees is not covered."
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_3d5cfc5d8426",
+   "url": "https://www.openstreetmap.org/way/1306732424",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap contributors",
+    "family": "OpenStreetMap"
+   }
+  },
+  {
+   "id": "src_a5d83686796f",
+   "url": "https://en.wikipedia.org/wiki/Soi_Cowboy",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_168b589d7cea",
+   "url": "https://en.wikipedia.org/wiki/Benjakitti_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_27dde7ecc436",
+   "url": "https://en.wikipedia.org/wiki/Asok_BTS_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_54e967e9afb8",
+   "url": "https://condoreviewsthailand.com/neighborhoods/asoke",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Condoreviews Thailand",
+    "family": "Condoreviews Thailand"
+   }
+  },
+  {
+   "id": "src_4807525fec70",
+   "url": "https://propertysights.com/th/blog/อโศก",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertySights",
+    "family": "PropertySights"
+   }
+  },
+  {
+   "id": "src_710cddb8b229",
+   "url": "https://thethaiger.com/news/bangkok/walking-the-talk-bangkok-chief-to-revamp-asoke-footpaths-by-july",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Thaiger",
+    "family": "Thaiger"
+   }
+  },
+  {
+   "id": "src_f6a1287ecb31",
+   "url": "https://www.sanook.com/news/9907531/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Sanook News",
+    "family": "Sanook"
+   }
+  },
+  {
+   "id": "src_0db0b5cb3c6a",
+   "url": "https://www.bkmagazine.com/city-living/bangkok-best-worst-bts-stations",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BK Magazine",
+    "family": "BK Magazine"
+   }
+  },
+  {
+   "id": "src_a40ee61e0ac1",
+   "url": "https://www.ddproperty.com/en/condo-for-rent/near-e4-asok-bts-2159",
+   "body_read": true,
+   "attribution": {
+    "publisher": "DDproperty",
+    "family": "DDproperty (PropertyGuru Group)"
+   }
+  }
+ ]
+}

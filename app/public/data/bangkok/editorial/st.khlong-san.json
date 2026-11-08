@@ -1,0 +1,321 @@
+{
+ "key": "st.khlong-san",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Khlong San station ends the BTS Gold Line on Somdet Chao Phraya Road, deep in a low-rise, temple-dotted west-bank district — with ICONSIAM's riverfront a short hop down the line at Charoen Nakhon station and the BTS Silom Line one stop beyond that.",
+   "claims": [
+    "khlong-san-st-c03",
+    "khlong-san-st-c04",
+    "khlong-san-st-c06",
+    "khlong-san-st-c07",
+    "khlong-san-st-c08",
+    "khlong-san-st-c11"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "A rare combination for the price band: residential west-bank quiet with a direct people-mover link to the BTS Silom Line and river piers for cross-river life.",
+     "claims": [
+      "khlong-san-st-c11",
+      "khlong-san-st-c07"
+     ]
+    },
+    {
+     "en": "ICONSIAM's retail and river park sit just off the unit's edge, giving mall-grade daily life without a mall-grade address premium.",
+     "claims": [
+      "khlong-san-st-c06"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Public green is nearly absent inside the unit (0.2 ha) — the big parks named for the district sit beyond the catchment and the riverside park is private.",
+     "claims": [
+      "khlong-san-st-c08"
+     ]
+    },
+    {
+     "en": "The Gold Line is a light people-mover: ~2.8 million riders a year system-wide, service to midnight, and a 2026 ridership slide — not a trunk line.",
+     "claims": [
+      "khlong-san-st-c04",
+      "khlong-san-st-c03"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Days run on school, hospital and commuting traffic with mall weekends; after dark the action stays at the riverfront edge while the sois empty early — the line itself stops around midnight.",
+     "claims": [
+      "khlong-san-st-c10",
+      "khlong-san-st-c04"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The river-facing corner near the Charoen Nakhon station edge carries the mall's energy and the 16.1% Samphanthawong share; the streets around Taksin Hospital and the district office are the quiet, village-like core.",
+     "claims": [
+      "khlong-san-st-c06",
+      "khlong-san-st-c05",
+      "khlong-san-st-c09"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Choose it if you want mid-market rents (app 19,000 for a 1-bed) with riverfront weekends and a one-stop BTS commute — families and quiet-preferring renters fit best.",
+     "claims": [
+      "khlong-san-st-c07",
+      "khlong-san-st-c11"
+     ]
+    },
+    {
+     "en": "Skip it if you need parks at the door, late-night streets, or heavy rapid-transit capacity — green is 0.2 ha and the people mover is small.",
+     "claims": [
+      "khlong-san-st-c08",
+      "khlong-san-st-c04"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Unresolved: which 0.2-ha object the app counts as park; which two piers; whether ICONSIAM falls inside this unit's polygon edge (~500 m by coordinates); fare 15 vs 16 THB; peak frequency is summary-only; anchors verified against OSM with no mismatch."
+  ],
+  "attribution_required": [
+   "khlong-san-st-c02",
+   "khlong-san-st-c03",
+   "khlong-san-st-c04",
+   "khlong-san-st-c05",
+   "khlong-san-st-c06",
+   "khlong-san-st-c07",
+   "khlong-san-st-c09",
+   "khlong-san-st-c10",
+   "khlong-san-st-c11"
+  ]
+ },
+ "claims": [
+  {
+   "id": "khlong-san-st-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "ICONSIAM's ~500 m distance sits inside a nominal 800 m catchment, so the mall likely clips this unit's edge (partial) even though its station belongs to st.charoen-nakhon — coordinator's polygon call",
+    "app-data anchor (not a web source): city-rating app station record: khlong-san"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c03",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the 5-6-minute peak frequency and elderly fare come from an unattributed search summary — flag; the 15-vs-16 baht discrepancy is visible in the source itself"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c04",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no station-level split found (system-wide line totals); the 2026 decline's cause is not stated in the source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c05",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c06",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no Phase-2/expansion plans found in accessible sources; the '~500 m inside the catchment edge' statement is a coordinate estimate"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c07",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "PropertyScout's two internal tables disagree; means are luxury-skewed; budget figure (7-10k) is search-summary corroboration only"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c08",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "neither named public park's distance to G3 is stated in sources; the River Park's public accessibility is not established here"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "temple-by-temple membership in the unit not verified; note Wat Kalayanamit is NOT in this district's list (it belongs to Bangkok Yai's Wat Kanlaya khwaeng per the same article's implicit boundaries)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c10",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no venue-level verification possible in body reads; if the score draws on riverside venues at the unit's edge, the coordinator should note the edge-dependence"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c11",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "extension timelines are plan-stage; which two piers the app counts is not identified in sources"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "khlong-san-st-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no 2024-2026 residential-completion data found for the district; ridership-decline cause unstated"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_b648d75e0ded",
+   "url": "https://en.wikipedia.org/wiki/Khlong_San_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_72eebd4675d7",
+   "url": "https://en.wikipedia.org/wiki/Gold_Line_(Bangkok)",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_d39878d0d7b4",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%99",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_0f27047f94e6",
+   "url": "https://en.wikipedia.org/wiki/ICONSIAM",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "wikimedia"
+   }
+  },
+  {
+   "id": "src_37b68ce967d7",
+   "url": "https://propertyscout.co.th/en/bangkok/khlong-san/rentals/condo",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyScout",
+    "family": "real-estate-platform"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap via Overpass",
+    "family": "openstreetmap"
+   }
+  }
+ ]
+}

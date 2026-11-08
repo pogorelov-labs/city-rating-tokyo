@@ -1,7 +1,8 @@
 # Final results review — Bangkok editorial research program (2026-11-08)
 
-**Completion state: 183/183 entities carry a schema-valid bundle** — 22 full
-(tier A), 24 light (tier B), 137 scripted data-only placeholders (tier C) —
+**Completion state: 183/183 entities carry a schema-valid bundle** — originally 22 full
+(tier A), 24 light (tier B), 137 scripted data-only placeholders (tier C); **now 31 A / 15 B / 137 C**
+after the D-1 batch-5 upgrades (2026-11-08) —
 per the A2 tiering the handoff amendment introduced. Statuses: 46
 `ready_for_review`, 137 `draft` (placeholders, by design). Master index:
 [`2026-11-08-tier-plan.md`](2026-11-08-tier-plan.md). This file is the

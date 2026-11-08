@@ -11,6 +11,7 @@ import { DEFAULT_WEIGHTS } from '@/lib/types';
 import { areaKind } from '@/lib/area-key';
 import { stationDisplayName } from '@/lib/station-name';
 import { GUIDE_CATEGORIES, guideDetailHref, guideMoney, rentDefinitionKey } from '@/lib/area-guide';
+import { editorialCardMeta } from '@/lib/editorial-research';
 import styles from './compact-area-card.module.css';
 
 export interface CompactAreaCardProps {
@@ -49,12 +50,13 @@ export default function CompactAreaCard({ area, city, score, weights, thumbnail,
   const date = provenance?.as_of ?? area.rent_updated;
   const nf = new Intl.NumberFormat(locale, { maximumFractionDigits: 1 });
   const origin = city === 'tokyo' ? 'tokyo' : kind;
+  const editorialMeta = city === 'bangkok' ? editorialCardMeta(area.slug) : null;
   return (
     <article className={`${styles.card} ${styles[variant]}`} aria-label={names.primary}>
       {thumbnail?.thumb && !photoFailed && <Image className={styles.photo} src={thumbnail.thumb} alt={names.primary}
         width={600} height={220} unoptimized loading="eager" onError={() => setPhotoFailed(true)} />}
       <div className={styles.body}>
-        <p className={styles.scope}>{t(`cities.${city}`)} · {t(`kinds.${kind}`)}</p>
+        <p className={styles.scope}>{t(`cities.${city}`)} · {t(`kinds.${kind}`)}{editorialMeta?.dataOnly && <> · <span>{t(`editorial.dataOnly`)}</span></>}</p>
         <div className={styles.titleRow}>
           <div className={styles.nameBlock}><h2>{names.primary}</h2>{names.secondary && <p className={styles.localName}>{names.secondary}</p>}</div>
           {score != null && <div className={styles.score}>{nf.format(score)}<small>/10</small></div>}

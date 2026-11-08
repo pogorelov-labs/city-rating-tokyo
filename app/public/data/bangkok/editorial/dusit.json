@@ -1,0 +1,299 @@
+{
+ "key": "dusit",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Dusit is Bangkok at its most formal: the Dusit Palace complex, the Marble Temple, Government House, and since August 2019 the Sappaya-Sapasathan parliament on the Kiakkai riverfront - 424,000 square metres, the world's largest parliament building. It is also the quietest khet in this researched comparison set (about 7,100 residents per km2) and, unusually for inner Bangkok, one with no BTS or MRT station inside it - buses and river piers carry the commute until the MRT Purple extension opens (2030 target, four planned stations). Green coverage looks abundant (10.5%) but much of it is royal or institutional ground; the old zoo has been fenced since 2018 with its replacement built far out in Pathum Thani. Rents run 9k-28k for listed stock. The trade-offs are as formal as the district: thin nightlife, thin retail, and a September 2025 tunnel-construction sinkhole that closed Samsen Road.",
+   "claims": [
+    "dusit-c02",
+    "dusit-c03",
+    "dusit-c05",
+    "dusit-c06",
+    "dusit-c08",
+    "dusit-c07"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Quiet at inner-Bangkok density: 7,109/km2, the researched comparison set's lowest, across palace grounds, ministries and university campuses - a genuinely calm address.",
+     "claims": [
+      "dusit-c09",
+      "dusit-c02"
+     ]
+    },
+    {
+     "en": "Rents under-index the postcode: listed 1BRs from 9k-13k THB and 2BRs 20k-28k (Oct 2026), with only a thin 25-listing market - value before the 2030 metro arrives.",
+     "claims": [
+      "dusit-c08"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Transit-poor by design, not accident: no BTS/MRT station inside the khet; rail stops sit on its edges (Yommarat, Sam Sen, the non-public Chitrlada halt) until MRT Purple's Nov-2030 target.",
+     "claims": [
+      "dusit-c06"
+     ]
+    },
+    {
+     "en": "The 10.5% park share is not walkable-to green: the zoo chunk has been fenced since 2018, Sanam Suea Pa is a royal-household office site, and Suan Chitlada is a residence quarter - public usable parkland is far smaller than the number implies.",
+     "claims": [
+      "dusit-c05",
+      "dusit-c04"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Days follow ministries, parliament sessions and hospital shifts; after dark the district effectively closes - no nightlife venue type appeared in any source read, and riverside Kiakkai is a parliament corner, not a promenade scene.",
+     "claims": [
+      "dusit-c03",
+      "dusit-c09"
+     ]
+    }
+   ],
+   "variation": [],
+   "fit": [
+    {
+     "en": "Strong fit for people whose life is the state itself - parliament, ministries, camps, hospitals - and for quiet-seekers who accept bus-and-boat transit until 2030.",
+     "claims": [
+      "dusit-c02",
+      "dusit-c06",
+      "dusit-c09"
+     ]
+    },
+    {
+     "en": "Avoid if you need rail at the door or a functioning Samsen frontage today: the sinkhole closure and the 2030 metro horizon define daily logistics for now.",
+     "claims": [
+      "dusit-c07",
+      "dusit-c06"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "118.7-ha park composition and Royal Plaza access rules unsourced; old zoo site's future has no body-level plan (park/hospital debate is snippet/forum-level only); 2025 collapse article carries a suspected-LLM tag - corroborate with news bodies before publication; Nang Loeng market not verified in bodies read; population vintages conflict (75,814 TH wiki / 95,852 EN 2017 / 83,897 app)."
+  ],
+  "attribution_required": [
+   "dusit-c02",
+   "dusit-c03",
+   "dusit-c05",
+   "dusit-c07",
+   "dusit-c08",
+   "dusit-c10"
+  ]
+ },
+ "claims": [
+  {
+   "id": "dusit-c01",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "on next DOPA cycle"
+   },
+   "limitations": [
+    "population vintages conflict across sources; TH wiki year field suspect"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "dusit-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "dusit-c03",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2021-05-01",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "dusit-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2018 closure to present",
+    "recheck": "old-site announcement; new-zoo 2571/2572 milestones"
+   },
+   "limitations": [
+    "old-site future unverified in bodies read - open issue"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "dusit-c05",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no source read itemizes the 118.7 ha composition; access rules for Royal Plaza/Suan Amporn unsourced"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "dusit-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "Purple line milestones"
+   },
+   "limitations": [
+    "halt stations are edge features; their polygon-side membership app-decided"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "dusit-c07",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-09-24",
+    "observed": null,
+    "recheck": "Samsen reopening + MRTA tunnel remediation reports"
+   },
+   "limitations": [
+    "source flagged for suspected LLM-generated content; corroborate with Reuters/Thai media bodies before editorial use"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "dusit-c08",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "October 2026",
+    "recheck": "quarterly"
+   },
+   "limitations": [
+    "25-listing sample; averages unstable; portal bias"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "dusit-c09",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "nightlife-5 is an absence-of-evidence reading over four bodies + searches; app's 15-venue count is small but its composition unknown"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "dusit-c10",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "absence-of-findings claim within the logged query set"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_1d889668cbf5",
+   "url": "https://en.wikipedia.org/wiki/Dusit_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "Wikipedia (EN)"
+   }
+  },
+  {
+   "id": "src_f8ea14a23139",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%94%E0%B8%B8%E0%B8%AA%E0%B8%B4%E0%B8%95",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Wikipedia (TH)"
+   }
+  },
+  {
+   "id": "src_3adde92287da",
+   "url": "https://en.wikipedia.org/wiki/Sappaya-Sapasathan",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "Wikipedia (EN)"
+   }
+  },
+  {
+   "id": "src_0665ccb856b2",
+   "url": "https://www.thaipbs.or.th/news/content/273852",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS",
+    "family": "Thai PBS (public broadcaster)"
+   }
+  },
+  {
+   "id": "src_edb9ab169444",
+   "url": "https://isranews.org/article/isranews-scoop/137982-isra-news-zoo.html",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Isranews",
+    "family": "Isranews (agency)"
+   }
+  },
+  {
+   "id": "src_e7f47cd6e7d1",
+   "url": "https://www.mrta.co.th/th/rat-burana",
+   "body_read": true,
+   "attribution": {
+    "publisher": "MRTA",
+    "family": "MRTA (government, official)"
+   }
+  },
+  {
+   "id": "src_d521e8e25036",
+   "url": "https://en.wikipedia.org/wiki/2025_Bangkok_road_collapse",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "Wikipedia (EN)"
+   }
+  },
+  {
+   "id": "src_364acb37e79e",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/dusit",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  }
+ ]
+}

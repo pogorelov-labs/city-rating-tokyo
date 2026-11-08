@@ -1,0 +1,623 @@
+{
+ "key": "phra-nakhon",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Phra Nakhon is the heritage core: the Grand Palace, Wat Pho, Sanam Luang and the river piers, with Banglamphu's guesthouse economy and Khao San's nightlife inside the same khet as quiet old shophouse quarters. Its green is genuinely public — Sanam Luang, Saranrom and Santichaiprakan post daily hours — though about half the mapped 38.5 ha is temple and palace grounds rather than open park. Two MRT stations (Sam Yot, Sanam Chai) serve the southern half while Banglamphu relies on boats and buses. Registered population has fallen from 114,124 (1985) to 38,408 (2025), and the trade-offs are tourist monoculture, conservation-constrained housing and no full-service hospital inside the khet.",
+   "claims": [
+    "phra-nakhon-c02",
+    "phra-nakhon-c03",
+    "phra-nakhon-c12",
+    "phra-nakhon-c09",
+    "phra-nakhon-c13",
+    "phra-nakhon-c10"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Sanam Luang (~11.9 ha, 05:00-22:00), Saranrom (~3.7 ha) and Santichaiprakan (~1.3 ha) are polygon-interior public parks with posted hours — the researched set's most defensible green 10.",
+     "claims": [
+      "phra-nakhon-c02"
+     ]
+    },
+    {
+     "en": "Fourteen named ferry terminals in-polygon plus two MRT stations give the southern khet genuine river-and-rail access.",
+     "claims": [
+      "phra-nakhon-c03"
+     ]
+    },
+    {
+     "en": "Cheap for the core: studios and shophouse rooms consistent with the 14,000/28,000 blend, especially in Wang Burapha's shrinking quarters.",
+     "claims": [
+      "phra-nakhon-c12"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "No full-service hospital inside the polygon (Klang is just outside; Siriraj across the river) against an otherwise dense market layer.",
+     "claims": [
+      "phra-nakhon-c09"
+     ]
+    },
+    {
+     "en": "Tourist monoculture around Khao San and conservation-constrained old housing stock shape what living here is actually like.",
+     "claims": [
+      "phra-nakhon-c13"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Ceremonial calendar and tourist high season set the rhythm; Khao San runs late while riverside and temple quarters empty early.",
+     "claims": [
+      "phra-nakhon-c10"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Banglamphu/Khao San, the royal-field and temple core, and the riverside piers are three different neighborhoods inside 5.5 km².",
+     "claims": [
+      "phra-nakhon-c01"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Strong fit: heritage-oriented residents and low-budget starters who accept old-building conditions and thin resident services.",
+     "claims": [
+      "phra-nakhon-c14"
+     ]
+    },
+    {
+     "en": "Poor fit: households needing hospitals, modern condos or quiet tourist-free streets.",
+     "claims": [
+      "phra-nakhon-c15"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "green 10 - verified and caveated: The green case is genuinely polygon-interior: Sanam Luang (~11.9 ha, 05:00-22:00, royal-ceremony closures), Saranrom (~3.7 ha, 05:00-21:00), Santichaiprakan (~1.3 ha around Fort Phra Sumen), Rommaninat (former prison, up to ~4.6 ha, in-khet confirmed), plus Mahakan, Nagaraphirom, Utokatan, Maha Chetsadabodin - all with posted daily hours and no admission fee. The honest caveat: OSM-verifiable public green sums to ~19-20 ha, roughly half the app's 38.5 ha; the balance is plausibly temple/palace grounds that are not all publicly usable. Recommend keeping green 10 with a 'public-park subset verified; total includes non-public grounds' note.",
+   "safety 5 - unanchored: No khet-level crime data in either language; the evidence base is a tourist-facing scam/pickpocket genre (oldest body-read source c. 2012) whose own author says violent robberies are uncommon and most visitors will be fine. A mid-low score is plausible via the night-strip vs empty-interior mechanism, but that is inference. Recommend pairing the rating with an explicit 'perception genre, no local statistics' label, as flagged for the sibling sam-yot unit.",
+   "transport 7 - half-coverage rail plus a river network: The district has two underground Blue Line stations inside (Sam Yot, Sanam Chai - the latter with a free underground museum) and Wat Mangkon just outside; the northern half (Banglamphu, Khao San, Samsen) has no rail at all. What carries the rest: 14 named in-polygon ferry terminals, the blue-flag tourist boat terminating at Phra Athit, cross-river ferries, and a weekday-peak-only khlong boat at the north edge. Orange Line (Sanam Luang, Democracy Monument) and Purple Line (Phan Fa) entrance designs were approved 21 May 2025 - future relief, not present. The 7 reads as the midpoint between an unusually good river network and an unusually rail-poor north.",
+   "crowd 2 and the tourist-vs-resident split: The crush is real but venue-local: national arrival volumes (35.5M in 2024, ~32.9M in 2025) funnel into the palace/Wat Pho corridor and the 410-m Khao San strip, while registered residents fell to 38,408 (Dec 2025) and some khwaeng count under 1,800 people. The app's crowd 2 is best explained as venue-adjacency inside an emptying district - and the strip's intensity is being actively managed down by vendor rules, which the food-9 and nightlife-9 stories partially depend on.",
+   "rent 8 inside a conservation cage: Cheap is real at the observed end: HipFlat shows 17 listings, studios from 3,800 THB, 1-beds from ~15,000, residential bulk 13.5-67k - the app's 14,000/28,000 editorial matches. The mechanism worth naming is the conservation regime (height caps, mandated facade colors, committee sign-off, 121 listed buildings): it freezes the skyline and the housing stock, keeps new supply near zero, and leaves the budget tail to old shophouses that portals barely list. Affordability here is inseparable from building age and renovation friction.",
+   "daily essentials 9 - markets yes, hospitals no: The essentials score is carried by a market layer few districts match (Trok Mor, Pak Khlong Talat, Pahurat, Tha Phra Chan, Norrarat, flea and walking-street markets) plus in-khet Big C/Golden Place/7-Eleven coverage. The uncovered flank is acute care: no full-service hospital inside the polygon - Klang just outside on the Pom Prap side, Siriraj across the river, Vajira across the northern khlong. Recommend the guide text keep the market praise and state the hospital gap plainly rather than folding it into a generic 'essentials' sentence."
+  ],
+  "attribution_required": [
+   "phra-nakhon-c01",
+   "phra-nakhon-c02",
+   "phra-nakhon-c08",
+   "phra-nakhon-c10",
+   "phra-nakhon-c12",
+   "phra-nakhon-c17"
+  ]
+ },
+ "claims": [
+  {
+   "id": "phra-nakhon-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "khwaeng areas from Thai Wikipedia table; not cross-checked against BMA khwaeng gazette",
+    "app polygon includes Democracy Monument; batch-2 PIP note recorded a different result for a phaya-thai check - flagged as open issue",
+    "app-data anchor (not a web source): point-in-polygon checks against app/src/data/bangkok/geometry.json entity phra-nakhon"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "registered (bureaucratic) population, not present population; in a tourist district the daytime headcount diverges strongly",
+    "batch-2 recorded Wang Burapha 8,344 for 2025 (DOPA path) vs 8,238 here (Thai wiki Dec 2568) - month/revision difference, both in the same range"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "area cross-check (11.94 published vs 10.99 OSM-computed) is a planar approximation, not a survey",
+    "closure frequency for ceremonies is not quantified by any source read"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "OSM hours (04:00) differ by an hour from Thai Wikipedia (05:00); no operator page was body-read",
+    "glasshouse 'neglected' is the Thai Wikipedia author's description"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no independent visitor report on current condition; hours from wiki + OSM only"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the ~4.6 ha figure is snippet-level only (no body read of the Wikipedia or BMA page); the OSM-mapped green core is ~1.05 ha",
+    "Corrections Museum status (Thu-Sat, possibly relocated) unverified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c07",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "area decomposition of the 38.5 ha is an estimate; temple/palace-grounds share is inferred, not documented",
+    "OSM planar projection slightly underestimates curved parcels",
+    "Siwalai garden (1.0 ha) excluded from the public set as it is inside the Grand Palace walls",
+    "app-data anchor (not a web source): app park_ha 38.5 (7.2%)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c08",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Sanam Chai depth and design praise ('four most beautiful stations') is Wikipedia's characterization, not an operator source",
+    "bus coverage (Ratchadamnoen/Samsen corridors) was not researched - no claim about bus density",
+    "app-data anchor (not a web source): st.sam-yot.json claim sam-yot-c01 (BL30, entrances, khwaeng span)",
+    "app-data anchor (not a web source): point-in-polygon: Sam Yot IN, Sanam Chai IN, Wat Mangkon OUT, Itsaraphap n/a"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "fares and schedules are snippet-level; no operator page body-read",
+    "app 24-pier count unexplained; treat pier number as directionally right, exact count unverified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "article date not shown; event date 21 May 2025 taken from the article body",
+    "construction timelines for Orange/Purple sections not stated; recheck when stations open"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "height-limit specifics rest on snippet-level academic/press sources (PDFs not downloaded)",
+    "no source read quantifies how often renovation permits are denied or delayed for residents"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c12",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "17 listings is a thin market sample; HipFlat page itself flags some mis-mapped units (a Nonthaburi condo listed under Phra Nakhon)",
+    "non-portal stock (old shophouses, rooms above shops) unmeasured - the budget tail is invisible to this evidence"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the Oct 2026 petition and sandbox rest on snippet-level aggregation; no primary article body-read",
+    "the Coconuts vendor feature is undated and internally consistent with 2016-17, not 2024-26",
+    "whether the April 2025 boundary rules are still enforced in 2026 was not verified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c14",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "core safety source is c. 2012; no 2024-2026 incident reporting body-read for this khet",
+    "no police statistics (บก.นครบาล or BMA safety dashboard) were located in EN or TH searches; treat safety 5 as unanchored",
+    "Reddit/TripAdvisor resident threads not consulted (403 by policy)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c15",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "OSM completeness for small grocery (mini-Tops, Tesco Lotus-go) is imperfect; absence of evidence for a shop type is not evidence of absence",
+    "Klang/Siriraj travel burden is qualitative; no ambulance routing data"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c16",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "arrival figures are national, not district-level; no Rattanakosin visitor count found",
+    "'quieter than before' is a single snippet; not corroborated by a second independent body-read"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c17",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Maharaj Road sandbag wall is imagery/summary level only; no body-read source",
+    "post-2011 flood-defence upgrades inside the khet were not researched beyond the 2025 bridge-raising item",
+    "app-data anchor (not a web source): น้ำท่วมทะลักท่าพระจันทร์ จนท.เร่งเสริมกระสอบทราย (3 ต.ค. 2554)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "phra-nakhon-c18",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "no footfall data for the palace corridor was found; the venue-vs-district split is inference from geography + arrivals",
+    "arrivals are national; Bangkok/old-town share not isolated"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_bd0955f221ac",
+   "url": "https://en.wikipedia.org/wiki/Phra_Nakhon_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_e5475d8e1301",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%84%E0%B8%A3",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_60b5fdbacc73",
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%97%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap via Overpass API",
+    "family": "OpenStreetMap via Overpass API"
+   }
+  },
+  {
+   "id": "src_6c5ad16dcba3",
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%A3%E0%B8%B2%E0%B8%8D%E0%B8%A3%E0%B8%A1%E0%B8%A2%E0%B9%8C",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_6056e652ba96",
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%99%E0%B8%95%E0%B8%B4%E0%B8%8A%E0%B8%B1%E0%B8%A2%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_f3fbd53250ec",
+   "url": "https://en.wikipedia.org/wiki/Rommaninat_Park",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Wikipedia + BMA greener.bangkok.go.th (via search aggregation)",
+    "family": "Wikipedia + BMA greener.bangkok.go.th (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_30f3a7314e98",
+   "url": "https://en.wikipedia.org/wiki/Sanam_Chai_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_8ffd4c89517b",
+   "url": "https://chaophrayatouristboat.com",
+   "body_read": false,
+   "attribution": {
+    "publisher": "chaophrayatouristboat.com (via search aggregation)",
+    "family": "chaophrayatouristboat.com (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_18a7ce85c38f",
+   "url": "https://www.thanakom.co.th",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BMA / KT-Thanakom (via search aggregation)",
+    "family": "BMA / KT-Thanakom (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_d90d6bc566d2",
+   "url": "https://innews.news/news.php?n=77707",
+   "body_read": true,
+   "attribution": {
+    "publisher": "inNews",
+    "family": "inNews"
+   }
+  },
+  {
+   "id": "src_9b9502a98b64",
+   "url": "https://www.matichon.co.th/weekly/hot-news/article_128871",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Matichon Weekly",
+    "family": "Matichon Weekly"
+   }
+  },
+  {
+   "id": "src_7019e9592d90",
+   "url": "https://thesiamsociety.org/wp-content/uploads/2012/04/JSS_100_0j_ChatriPrakitnonthakan_RattanakosinCharterTheThaiCulturalCharterForConservation.pdf",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Siam Society (Chatri Prakitnonthakan)",
+    "family": "Siam Society (Chatri Prakitnonthakan)"
+   }
+  },
+  {
+   "id": "src_778131d53d5f",
+   "url": "https://eqmplatform.onep.go.th/Uploads/Plan/510b888f-dd43-4614-97bf-4665a19387d0.pdf",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Office of Natural Resources and Environmental Policy and Planning (ONEP)",
+    "family": "Office of Natural Resources and Environmental Policy and Planning (ONEP)"
+   }
+  },
+  {
+   "id": "src_72a3ed6b7767",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/phra-nakhon",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  },
+  {
+   "id": "src_059be95e96fa",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/phra-nakhon/one-bed",
+   "body_read": false,
+   "attribution": {
+    "publisher": "HipFlat (via search snippet)",
+    "family": "HipFlat (via search snippet)"
+   }
+  },
+  {
+   "id": "src_59bad5ea859f",
+   "url": "https://www.thaipbsworld.com/around-thailand/572096",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS World",
+    "family": "Thai PBS World"
+   }
+  },
+  {
+   "id": "src_8a557f62ef7e",
+   "url": "https://coconuts.co/bangkok/food-drink/coconuts-exclusive-vendors-bangkoks-khaosan-road-express-fears-street-food-ban/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Coconuts Bangkok",
+    "family": "Coconuts Bangkok"
+   }
+  },
+  {
+   "id": "src_b1a62318cd51",
+   "url": "https://coconuts.co/bangkok/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Coconuts/Bangkok coverage (via search aggregation)",
+    "family": "Coconuts/Bangkok coverage (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_70d4f2b8c542",
+   "url": "https://www.bangkokpost.com/business/general/2705763/khao-san-wants-later-closing-time",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Bangkok Post",
+    "family": "Bangkok Post"
+   }
+  },
+  {
+   "id": "src_d9a1435c4d43",
+   "url": "https://www.facebook.com/nbtworld/posts/1544923447671780",
+   "body_read": false,
+   "attribution": {
+    "publisher": "NBT World (via search aggregation)",
+    "family": "NBT World (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_53158bafc262",
+   "url": "https://www.travelfish.org/orientation_detail/thailand/bangkok_and_surrounds/bangkok/bangkok/182",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Travelfish",
+    "family": "Travelfish"
+   }
+  },
+  {
+   "id": "src_72eed30895ee",
+   "url": "https://www.trailblazingadventures.com/khao-san-road-bangkok",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Traveler safety guides 2025-2026 (via search aggregation)",
+    "family": "Traveler safety guides 2025-2026 (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_68c5644105fd",
+   "url": "https://www.policehospital.org",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Official hospital listing (via search aggregation)",
+    "family": "Official hospital listing (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_c32d11b21df7",
+   "url": "https://www.tatnews.org",
+   "body_read": false,
+   "attribution": {
+    "publisher": "TAT figures (via search aggregation)",
+    "family": "TAT figures (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_77ee7f46b42a",
+   "url": "https://www.springnews.co.th",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Spring News (via search aggregation)",
+    "family": "Spring News (via search aggregation)"
+   }
+  },
+  {
+   "id": "src_37d253d7ec31",
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%81%E0%B8%A0%E0%B8%B1%E0%B8%A2%E0%B9%83%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2_%E0%B8%9E.%E0%B8%A8._2554",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  }
+ ]
+}

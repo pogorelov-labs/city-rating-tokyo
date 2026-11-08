@@ -1,0 +1,155 @@
+{
+ "batch_id": "2026-11-08-batch5-b-to-a",
+ "created_at_note": "fill after creation",
+ "task": "Bangkok editorial research — D-1 tier-B→A full upgrades (plan §6; DEC-4 approved 2026-11-08; research only, no live app data changed)",
+ "handoff": "research/bangkok/editorial/2026-11-05-handoff/HANDOFF.md",
+ "app_snapshot_id": "bkk-d6499618507e7561",
+ "weights": {
+  "transport": 18,
+  "rent": 18,
+  "daily_essentials": 14,
+  "safety": 10,
+  "food": 12,
+  "green": 8,
+  "gym_sports": 4,
+  "vibe": 4,
+  "nightlife": 8,
+  "crowd": 4
+ },
+ "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
+ "researcher": "zcode-main (D-1 dispatch; ≤2 concurrent subagents)",
+ "parent_batch": "research/bangkok/editorial/batches/2026-11-07-batch4-light-zcode-main",
+ "selection": {
+  "method": "three separate axes per HANDOFF.md; see selection.md",
+  "window": null,
+  "selected": [
+   "st.sala-daeng",
+   "st.siam",
+   "st.chit-lom",
+   "st.hua-lamphong",
+   "st.saphan-taksin",
+   "st.victory-monument",
+   "st.mo-chit",
+   "st.phra-ram-9",
+   "st.phetchaburi"
+  ],
+  "deferred": []
+ },
+ "tool_and_access_limits": [
+  "Overpass/OSM APIs blocked; OSM website/API reads allowed (rate-limited)",
+  "No paywall bypass; no proxy mirrors; no personal data",
+  "AI-summary provenance banned (F-2); stable https canonical URLs only",
+  "Reddit/TripAdvisor historically 403 — log once and move on"
+ ],
+ "qa_status_overrides": {},
+ "entities": [
+  {
+   "key": "st.sala-daeng",
+   "kind": "station_area",
+   "name_en": "Sala Daeng / Si Lom",
+   "name_th": "ศาลาแดง / สีลม",
+   "aliases": [],
+   "scope_notes": "",
+   "selection_rationale": "",
+   "model_score_default": 7.54,
+   "cohort_rank": 18,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.siam",
+   "kind": "station_area",
+   "name_en": "Siam",
+   "name_th": "สยาม",
+   "aliases": [],
+   "scope_notes": "",
+   "selection_rationale": "",
+   "model_score_default": 7.56,
+   "cohort_rank": 17,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.chit-lom",
+   "kind": "station_area",
+   "name_en": "Chit Lom",
+   "name_th": "ชิดลม",
+   "aliases": [],
+   "scope_notes": "",
+   "selection_rationale": "",
+   "model_score_default": 7.52,
+   "cohort_rank": 19,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.hua-lamphong",
+   "kind": "station_area",
+   "name_en": "Hua Lamphong",
+   "name_th": "หัวลำโพง",
+   "aliases": [],
+   "scope_notes": "",
+   "selection_rationale": "",
+   "model_score_default": 7.36,
+   "cohort_rank": 27,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.saphan-taksin",
+   "kind": "station_area",
+   "name_en": "Saphan Taksin",
+   "name_th": "สะพานตากสิน",
+   "aliases": [],
+   "scope_notes": "",
+   "selection_rationale": "",
+   "model_score_default": 7.34,
+   "cohort_rank": 28,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.victory-monument",
+   "kind": "station_area",
+   "name_en": "Victory Monument",
+   "name_th": "อนุสาวรีย์ชัยสมรภูมิ",
+   "aliases": [],
+   "scope_notes": "",
+   "selection_rationale": "",
+   "model_score_default": 7.44,
+   "cohort_rank": 22,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.mo-chit",
+   "kind": "station_area",
+   "name_en": "Mo Chit / Chatuchak Park",
+   "name_th": "หมอชิต / สวนจตุจักร",
+   "aliases": [],
+   "scope_notes": "",
+   "selection_rationale": "",
+   "model_score_default": 7.56,
+   "cohort_rank": 16,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.phra-ram-9",
+   "kind": "station_area",
+   "name_en": "Phra Ram 9",
+   "name_th": "พระราม 9",
+   "aliases": [],
+   "scope_notes": "",
+   "selection_rationale": "",
+   "model_score_default": 7.38,
+   "cohort_rank": 26,
+   "cohort_size": 133
+  },
+  {
+   "key": "st.phetchaburi",
+   "kind": "station_area",
+   "name_en": "Phetchaburi / Makkasan",
+   "name_th": "เพชรบุรี / มักกะสัน",
+   "aliases": [],
+   "scope_notes": "",
+   "selection_rationale": "",
+   "model_score_default": 7.42,
+   "cohort_rank": 23,
+   "cohort_size": 133
+  }
+ ]
+}

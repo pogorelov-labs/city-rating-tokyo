@@ -1,0 +1,572 @@
+{
+ "key": "pom-prap-sattru-phai",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Pom Prap Sattru Phai is the thin residential skin between Bangkok's ceremonial centre and its trading core. Wikipedia's numbers make it the densest district in Thailand (about 24,100/km2 registered in 2017; the app uses the 2020 point, 41,524 people), and its landmarks read like a packing list: the Golden Mount in khwaeng Ban Bat, the 1900 Nang Loeng market in Wat Sommanat, the electronics lanes of Khlong Thom, the Soi Nana bar strip and the new Bangkok Kunsthalle in khwaeng Pom Prap, and the Rajadamnern boxing stadium on Ratchadamnoen. None of Bangkok's 12 Blue Line stations named for this area is administratively inside it - Wat Mangkon sits across Charoen Krung in Samphanthawong, Sam Yot across the moat in Phra Nakhon - which is the district in one sentence: it lives off edges. The honest counterweights are documented: its garment wholesale (Bobae) is contracting fast, and in August 2026 a fire in the steel-structured Khlong Thom Center injured 11 and partly collapsed the building - the dense-old-town tax, paid in public.",
+   "claims": [
+    "pom-prap-sattru-phai-c01",
+    "pom-prap-sattru-phai-c03",
+    "pom-prap-sattru-phai-c05",
+    "pom-prap-sattru-phai-c06",
+    "pom-prap-sattru-phai-c08",
+    "pom-prap-sattru-phai-c10",
+    "pom-prap-sattru-phai-c11",
+    "pom-prap-sattru-phai-c13",
+    "pom-prap-sattru-phai-c14",
+    "pom-prap-sattru-phai-c15",
+    "pom-prap-sattru-phai-c16",
+    "pom-prap-sattru-phai-c17"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "A nightlife register most central districts lack: small bars in shophouses (Tep with live Thai music Fri-Sun from 7pm) plus a muay thai stadium that holds fights every day of the week - no club strip required.",
+     "claims": [
+      "pom-prap-sattru-phai-c03",
+      "pom-prap-sattru-phai-c11"
+     ]
+    },
+    {
+     "en": "Asking rents that undercut central Bangkok for the location, at the verified low end at least: The Prague 1-beds listed at 12,000-13,000 THB against a 12,000-25,000 district band.",
+     "claims": [
+      "pom-prap-sattru-phai-c13"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The wholesale base is shrinking under the character it creates: Bo Bae foot traffic is reported down up to 95% since e-commerce, with storefronts emptying even as some rents were slashed from 40,000 to 8,000 THB - the 'two clocks' of the district are not equally loud anymore.",
+     "claims": [
+      "pom-prap-sattru-phai-c08",
+      "pom-prap-sattru-phai-c14"
+     ]
+    },
+    {
+     "en": "Density is structural, not incidental: the most densely populated district in Thailand per Wikipedia, with crowding that changes register by hour - market morning, canal-walk Fri-Sun evening, bar night - and 13 nights of fairground saturation every November at the Golden Mount.",
+     "claims": [
+      "pom-prap-sattru-phai-c01",
+      "pom-prap-sattru-phai-c05",
+      "pom-prap-sattru-phai-c14"
+     ]
+    },
+    {
+     "en": "Old-town building risk is realized, not theoretical: the August 2026 Khlong Thom Center fire (11 injured, partial collapse of a steel-structured market building) shows what the shophouse-and-market fabric can cost.",
+     "claims": [
+      "pom-prap-sattru-phai-c10"
+     ]
+    },
+    {
+     "en": "A sex-industry pocket at 22 July Circle (per Wikipedia) sits between the temples and the craft bars - a vibe discontinuity the food and nightlife counts do not show.",
+     "claims": [
+      "pom-prap-sattru-phai-c16"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Evening: Fri-Sun the Khlong Ong Ang promenade runs 16:00-22:00 with food stalls and lantern-lit alleys, Tep's live Thai music starts around 7pm on Soi Nana, and Rajadamnern's nightly cards fill the stadium.",
+     "claims": [
+      "pom-prap-sattru-phai-c06",
+      "pom-prap-sattru-phai-c03",
+      "pom-prap-sattru-phai-c11"
+     ]
+    },
+    {
+     "en": "November overrides the routine: the Golden Mount fair runs 13 days and nights (17-29 Nov in 2026) with a dawn red-cloth procession, rides and street food, and is described by Time Out as Bangkok's biggest temple fair.",
+     "claims": [
+      "pom-prap-sattru-phai-c05"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Nightlife is two registers apart: craft-cocktail small bars on Soi Nana versus the 22 July Circle sex-industry pocket a few blocks away - both inside the khet, neither representative of the other.",
+     "claims": [
+      "pom-prap-sattru-phai-c03",
+      "pom-prap-sattru-phai-c16"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Good fit if you want central-location living at verified low-end asking rents (1-beds from 12,000 THB) and can accept that only ~11 condo listings define the evidence base - shophouse and old-walk-up housing, the district's real volume, is essentially unlisted.",
+     "claims": [
+      "pom-prap-sattru-phai-c13"
+     ]
+    },
+    {
+     "en": "Good fit for people whose evenings matter more than their parks: daily muay thai, a small-bar strip, Fri-Sun canal walks - but a poor fit if a large green space inside the unit is a requirement; the nearest 4.5 ha park (Rommaninat) is in Phra Nakhon, and the 0.7 ha mapped-park figure is what the green 9 leans against.",
+     "claims": [
+      "pom-prap-sattru-phai-c03",
+      "pom-prap-sattru-phai-c11",
+      "pom-prap-sattru-phai-c15"
+     ]
+    },
+    {
+     "en": "Poor fit for anyone who needs modern building services and fire-certified older stock: the Aug 2026 steel-structure fire, plus the hour-shifting crowds of the densest district in Thailand, are the price of the heritage location.",
+     "claims": [
+      "pom-prap-sattru-phai-c10",
+      "pom-prap-sattru-phai-c01",
+      "pom-prap-sattru-phai-c14"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "The green 9 vs 0.7 ha tension is resolved here as a mechanism claim (temple compound + canal promenade + outside parks), not a measurement - no canopy data or park-boundary reproduction was possible; treat the score as editorial, and recheck if the app's park polygon changes.",
+   "Both nearby MRT stations are administratively outside the khet (Wat Mangkon per Wikipedia in Samphanthawong; Sam Yot in Phra Nakhon), which conflicts with the pilot bundle's 'straddling' note for Wat Mangkon - the transport 8 should not be phrased as 'station inside the district'.",
+   "Rent evidence is a ~11-unit asking-price sample; the app's 24,000 THB 2-bed reference sits below every observed 2-bed listing (25,000-32,000), and the 12,000 THB 1-bed matches the observed floor - neither figure is a median of the district's real housing stock.",
+   "The Michelin star/Bib identifications (Potong, Bunloet) and the 2025 fair dates rest on search snippets because the Michelin and some Thai pages were not body-readable; verify against the next printed guide before repeating the pair in published copy."
+  ],
+  "attribution_required": [
+   "pom-prap-sattru-phai-c01",
+   "pom-prap-sattru-phai-c09",
+   "pom-prap-sattru-phai-c10",
+   "pom-prap-sattru-phai-c11",
+   "pom-prap-sattru-phai-c12",
+   "pom-prap-sattru-phai-c13",
+   "pom-prap-sattru-phai-c15",
+   "pom-prap-sattru-phai-c16"
+  ]
+ },
+ "claims": [
+  {
+   "id": "pom-prap-sattru-phai-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2017 registered population; district established 1915",
+    "recheck": "2027 BMA registration statistics"
+   },
+   "limitations": [
+    "density ranking is Wikipedia's unqualified assertion; not cross-checked against BMA statistics",
+    "registered population, not present population"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c02",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2019-07-29",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Wat Mangkon station district attribution conflicts between Wikipedia (Samphanthawong) and the pilot bundle (straddles boundary); unresolved",
+    "no body-read source states walking distance from the khet's residential lanes to Sam Yot or Wat Mangkon entrances"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "bar scene described as of January 2025; addresses undated",
+    "recheck": "2027 venue audits"
+   },
+   "limitations": [
+    "Time Out gives no addresses; the district attribution rests on Wikipedia's landmark listing plus OTA address snippets (corroboration, not sole evidence)",
+    "nightlife is small-bar scale, not clubs; hours documented for only one venue"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c04",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "visitor info as of July 2026 guide",
+    "recheck": "2027 fee check"
+   },
+   "limitations": [
+    "hours/fee come from a commercial travel guide marked 'approx.' and conflict mildly with TAT snippets (07:00-19:00)",
+    "entrance-road description in the guide (Bamrung Mueang Rd) conflicts with Boripat Rd per Wikipedia",
+    "no source states the compound's area in hectares"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2026-11-17",
+    "observed": "annual, dates lunar-tied around Loy Krathong",
+    "recheck": "2026-11-30"
+   },
+   "limitations": [
+    "admission/fee during the fair not stated by either source",
+    "2025 fair details and the reported entertainment scale-back rest on search snippets only",
+    "'biggest' is Time Out's characterization"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2020-01-01",
+    "observed": "restoration 2020; schedule documented March 2021",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "schedule is 2021-era; current practice unverified",
+    "no source assigns the two banks to their districts",
+    "no current photo/video verification performed"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c07",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1900-03-29",
+    "observed": "operating continuously; hours as published Aug 2025",
+    "recheck": "2027-08-01"
+   },
+   "limitations": [
+    "closing time conflicts: 6-17 daily vs morning-market sources saying stalls pack up by 15:00",
+    "promotional source; no critical reporting on vendor turnover"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "reported 7 Jul 2026",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "article does not give the district; percentage claims are reported, not audited",
+    "BMA renovation timing unknown",
+    "does not distinguish Bobae Market from Bobae Tower operations"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c09",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2015-03-01",
+    "observed": "closure ongoing since March 2015 per Wikipedia (accessed Nov 2026)",
+    "recheck": null
+   },
+   "limitations": [
+    "single-source (Wikipedia) for the 2015 night-market closure",
+    "current daytime trade status not independently re-verified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2026-08-28",
+    "observed": null,
+    "recheck": "2027-02-28"
+   },
+   "limitations": [
+    "Thai-language source",
+    "aftermath (cause findings, vendor relocations) not yet reported in a body-read source",
+    "casualty count is the figure at time of publication"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c11",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1945-12-23",
+    "observed": "operating; RWS era since 2022",
+    "recheck": null
+   },
+   "limitations": [
+    "khwaeng-level location not given",
+    "current ticket prices and session times absent"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c12",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-01-12",
+    "observed": "operating since Jan 2024",
+    "recheck": "2027-01-31"
+   },
+   "limitations": [
+    "district attribution rests on a search-snippet address, not the body-read source",
+    "no community-reaction coverage body-read",
+    "art-trade source, uncritical of gentrification effects"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c13",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "listings live November 2026",
+    "recheck": "2027-05-31"
+   },
+   "limitations": [
+    "sample of ~11 residential units is far below statistical significance",
+    "asking rents exclude the large unlisted shophouse/old-walk-up stock where most cheap rooms actually sit",
+    "no trend data"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c14",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "schedules as documented 2021-2026",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "sources span 2021-2026 and different weekdays; the stacked picture is constructed, not witnessed",
+    "weekday-vs-weekend contrast not documented per lane"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c15",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "as of Nov 2026",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "whether the green 9 is justified depends on editorial weight given to temple-compound and canal-walk space vs mapped park area - a mechanism choice, not a measurement",
+    "no canopy or green-coverage raster consulted",
+    "Sanam Luang's Phra Nakhon location is standard administrative geography, not separately body-read"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c16",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "Wikipedia description as of Nov 2026 (undated claim)",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "encyclopedic one-liner, undated; no recent reporting body-read",
+    "not a safety statistic"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pom-prap-sattru-phai-c17",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026 guide editions per snippets",
+    "recheck": "2026-12-31"
+   },
+   "limitations": [
+    "Michelin pages are JS-rendered and were not body-readable; distinctions and addresses are snippet corroboration, flagged accordingly",
+    "which guide year the app's count refers to is unknown"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_9df800f576ed",
+   "url": "https://en.wikipedia.org/wiki/Pom_Prap_Sattru_Phai_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_d0085b8563dd",
+   "url": "https://en.wikipedia.org/wiki/Wat_Saket",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_fda23a28647c",
+   "url": "https://en.wikipedia.org/wiki/Sam_Yot_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_f3fbd53250ec",
+   "url": "https://en.wikipedia.org/wiki/Rommaninat_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_b46fd01a90cd",
+   "url": "https://en.wikipedia.org/wiki/Rajadamnern_Stadium",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_fe16369d56c8",
+   "url": "https://en.wikipedia.org/wiki/Khlong_Ong_Ang",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "Wikipedia (Wikimedia)"
+   }
+  },
+  {
+   "id": "src_5074c79ba1e3",
+   "url": "https://www.tatnews.org/2021/03/award-winning-khlong-ong-ang-walking-street-isnt-your-average-walking-street",
+   "body_read": true,
+   "attribution": {
+    "publisher": "TAT Newsroom",
+    "family": "Tourism Authority of Thailand (government)"
+   }
+  },
+  {
+   "id": "src_60bc07e5b5ea",
+   "url": "https://www.thaipbsworld.com/economy/pratunam,-bo-bae-vendors-hit-hard-by-weak-purchasing-power,-high-rents-and-e-commerce-boom",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS World",
+    "family": "Thai PBS (public broadcaster)"
+   }
+  },
+  {
+   "id": "src_4c86b8ca98ec",
+   "url": "https://www.thaipbs.or.th/news/content/510039",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS",
+    "family": "Thai PBS (public broadcaster)"
+   }
+  },
+  {
+   "id": "src_cf954bb8ae91",
+   "url": "https://www.timeout.com/bangkok/news/golden-mount-temple-fair-102026",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out"
+   }
+  },
+  {
+   "id": "src_5d8bacfe9951",
+   "url": "https://www.timeout.com/bangkok/bars/best-bars-to-check-out-along-soi-nana-in-chinatown",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out"
+   }
+  },
+  {
+   "id": "src_4d5aeb05ed85",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/pom-prap-sattru-phai",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat (property portal)"
+   }
+  },
+  {
+   "id": "src_eaa1f84ba23b",
+   "url": "https://www.am2026thailand.go.th/explore-bangkok/nang-loeng-market",
+   "body_read": true,
+   "attribution": {
+    "publisher": "AM2026 Thailand (APEC 2026 host committee)",
+    "family": "Royal Thai Government (AM2026 host committee)"
+   }
+  },
+  {
+   "id": "src_732094c471d9",
+   "url": "https://artasiapacific.com/news/private-art-space-takes-over-factory-in-bangkok-s-chinatown",
+   "body_read": true,
+   "attribution": {
+    "publisher": "ArtAsiaPacific",
+    "family": "ArtAsiaPacific"
+   }
+  },
+  {
+   "id": "src_bddd03e8bc75",
+   "url": "https://www.khaosanroad.com/articles/wat-saket-golden-mount-visitor-guide-from-khao-san-road",
+   "body_read": true,
+   "attribution": {
+    "publisher": "khaosanroad.com",
+    "family": "khaosanroad.com (independent travel site)"
+   }
+  },
+  {
+   "id": "src_a572e1568ba4",
+   "url": "https://guide.michelin.com/en/bangkok-region/bangkok/restaurant/potong",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Michelin Guide",
+    "family": "Michelin"
+   }
+  },
+  {
+   "id": "src_5eee9b2b6de9",
+   "url": "https://www.restaurantpotong.com/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Potong (official site)",
+    "family": "Potong (restaurant)"
+   }
+  },
+  {
+   "id": "src_cb8799bba21d",
+   "url": "https://www.hotels.com/go/thailand/best-chinatown-nightlife",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Hotels.com (go guide)",
+    "family": "Hotels.com (Expedia group)"
+   }
+  },
+  {
+   "id": "src_4468fbddd837",
+   "url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/bunloet",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Michelin Guide",
+    "family": "Michelin"
+   }
+  }
+ ]
+}

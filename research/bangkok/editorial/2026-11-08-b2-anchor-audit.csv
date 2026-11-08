@@ -1,0 +1,109 @@
+area_id,app_lat,app_lng,wiki_title,wiki_lat,wiki_lng,offset_m,band
+don-mueang,13.91469,100.59787,Don Mueang railway station,13.919727,100.601072,658,major >500
+wat-mangkon,13.74221,100.50991,Wat Mangkon MRT station,13.742625,100.50673333,346,drift 251-500
+bang-son,13.82008,100.53246,Bang Son railway station,13.8221,100.5342,293,drift 251-500
+wutthakat,13.71302,100.4689,Wutthakat BTS station,13.7123,100.471,241,minor 101-250
+bearing,13.66118,100.60181,Bearing BTS station,13.65933611,100.60105,221,minor 101-250
+sam-yan,13.73206,100.53012,Sam Yan MRT station,13.73277778,100.52944444,108,minor 101-250
+sam-yot,13.747,100.5023,Sam Yot MRT station,13.74725,100.50133333,108,minor 101-250
+ratchaprarop,13.75511,100.54212,Ratchaprarop station,13.7548,100.543,101,minor 101-250
+hua-lamphong,13.73757,100.51713,Hua Lamphong MRT station,13.7373,100.518,99,match <=100
+phasi-charoen,13.71291,100.43433,Phasi Charoen MRT station,13.71291667,100.43519444,93,match <=100
+taling-chan,13.78927,100.44008,Taling Chan railway station,13.7893,100.4393,84,match <=100
+phra-ram-9,13.75782,100.56528,Phra Ram 9 MRT station,13.75722222,100.56527778,66,match <=100
+bang-khae,13.71194,100.42234,Bang Khae MRT station,13.71208333,100.42286111,59,match <=100
+kamphaeng-phet,13.79795,100.54788,Kamphaeng Phet MRT station,13.797693,100.548361,59,match <=100
+sutthisan,13.78949,100.57408,Sutthisan MRT station,13.79,100.574,57,match <=100
+udom-suk,13.67987,100.60947,Udom Suk BTS station,13.68031667,100.60965833,54,match <=100
+queen-sirikit-national-convention-centre,13.72267,100.55991,Queen Sirikit National Convention Centre MRT station,13.7231,100.56,49,match <=100
+huai-khwang,13.77869,100.57357,Huai Khwang MRT station,13.7786,100.574,48,match <=100
+phetchaburi,13.74919,100.56342,Phetchaburi MRT station,13.7491,100.563,46,match <=100
+punnawithi,13.68928,100.609,Punnawithi BTS station,13.68891944,100.60921111,46,match <=100
+itsaraphap,13.73836,100.4857,Itsaraphap MRT station,13.73841667,100.48530556,43,match <=100
+ban-thap-chang,13.73289,100.69082,Ban Thap Chang station,13.7328,100.6911,32,match <=100
+lumphini,13.72561,100.54572,Lumphini MRT station,13.7256,100.546,30,match <=100
+bang-kapi,13.76908,100.63977,Bang Kapi MRT station,13.7692,100.6396,23,match <=100
+sala-daeng,13.72857,100.53434,Sala Daeng BTS station,13.72850833,100.53413333,23,match <=100
+lat-phrao-71,13.78709,100.60757,Lat Phrao 71 MRT station,13.7872,100.6074,22,match <=100
+phahonyothin-24,13.82412,100.56643,Phahon Yothin 24 BTS station,13.8243,100.5665,21,match <=100
+bang-wa,13.72079,100.45779,Bang Wa station,13.720625,100.45786944,20,match <=100
+ramkhamhaeng,13.74299,100.60015,Ramkhamhaeng station,13.7429,100.6,19,match <=100
+thung-song-hong,13.86021,100.56753,Thung Song Hong station,13.8601,100.5674,19,match <=100
+lat-phrao,13.8065,100.57287,Lat Phrao MRT station,13.8064,100.573,18,match <=100
+bang-chak,13.69676,100.60534,Bang Chak BTS station,13.6969,100.6053,16,match <=100
+bang-khen,13.84937,100.56167,Bang Khen station,13.8493,100.5618,16,match <=100
+chok-chai-4,13.79443,100.59443,Chok Chai 4 MRT station,13.7945,100.5943,16,match <=100
+si-kritha,13.75041,100.64479,Si Kritha MRT station,13.7503,100.6447,16,match <=100
+si-nut,13.7111,100.6442,Si Nut MRT station,13.711,100.6441,16,match <=100
+saint-louis,13.72082,100.52669,Saint Louis BTS station,13.7209,100.5268,15,match <=100
+thailand-cultural-centre,13.76616,100.57012,Thailand Cultural Centre MRT station,13.7661,100.57,15,match <=100
+yaek-lam-sali,13.76182,100.64557,Yaek Lam Sali MRT station,13.7617,100.6455,15,match <=100
+wat-samian-nari,13.84159,100.5575,Wat Samian Nari station,13.8415,100.5574,15,match <=100
+11th-infantry-regiment,13.86758,100.59197,11th Infantry Regiment BTS station,13.8677,100.592,14,match <=100
+srinagarindra-38,13.70112,100.64647,Srinagarindra 38 MRT station,13.701,100.6465,14,match <=100
+yaek-kor-por-aor,13.92501,100.62584,Yaek Kor Por Aor BTS station,13.9249,100.6259,14,match <=100
+bang-o,13.79898,100.50979,Bang O MRT station,13.7989,100.5097,13,match <=100
+saphan-taksin,13.71881,100.51422,Saphan Taksin BTS station,13.718775,100.51410556,13,match <=100
+wongwian-yai,13.72108,100.49516,Wongwian Yai station,13.72111111,100.49527778,13,match <=100
+chong-nonsi,13.7238,100.52933,Chong Nonsi BTS station,13.72378611,100.52944444,12,match <=100
+phawana,13.80016,100.5842,Phawana MRT station,13.8002,100.5841,12,match <=100
+royal-forest-department,13.85033,100.58182,Royal Forest Department BTS station,13.8504,100.5819,12,match <=100
+bang-pho,13.8064,100.52101,Bang Pho MRT station,13.8064,100.5209,12,match <=100
+bang-khun-non,13.76333,100.4733,Bang Khun Non MRT station,13.7633,100.4732,11,match <=100
+fai-chai,13.7558,100.46932,Fai Chai MRT station,13.7557,100.4693,11,match <=100
+pho-nimit,13.71924,100.48597,Pho Nimit BTS station,13.71916667,100.48591667,10,match <=100
+bang-phlat,13.79241,100.50489,Bang Phlat MRT station,13.7925,100.5049,10,match <=100
+bhumibol-adulyadej-hospital,13.91071,100.6174,Bhumibol Adulyadej Hospital BTS station,13.9108,100.6174,10,match <=100
+si-la-salle,13.65497,100.64216,Si La Salle MRT station,13.6549,100.6421,10,match <=100
+lak-song,13.71088,100.40948,Lak Song MRT station,13.7108,100.4095,9,match <=100
+lat-phrao-101,13.77463,100.62984,Lat Phrao 101 MRT station,13.7747,100.6298,9,match <=100
+phahonyothin-59,13.88245,100.60073,Phahon Yothin 59 BTS station,13.8825,100.6008,9,match <=100
+sirindhorn,13.78387,100.49333,Sirindhorn MRT station,13.783797,100.493356,9,match <=100
+bang-yi-khan,13.77738,100.48526,Bang Yi Khan MRT station,13.777305,100.485226,9,match <=100
+charoen-nakhon,13.72646,100.50907,Charoen Nakhon station,13.7265,100.509,9,match <=100
+wat-phra-sri-mahathat,13.87528,100.59673,Wat Phra Sri Mahathat station,13.8752,100.5967,9,match <=100
+bang-na,13.66814,100.60466,Bang Na BTS station,13.6682,100.6047,8,match <=100
+ekkamai,13.71954,100.58511,Ekkamai BTS station,13.71955833,100.585175,7,match <=100
+lat-krabang,13.72768,100.7486,Lat Krabang station,13.72761944,100.74861111,7,match <=100
+mahatthai,13.77837,100.62316,Mahat Thai MRT station,13.7784,100.6231,7,match <=100
+surasak,13.71927,100.52146,Surasak BTS station,13.7193,100.5214,7,match <=100
+bang-bua,13.85605,100.58518,Bang Bua BTS station,13.8561,100.5852,6,match <=100
+lat-phrao-83,13.7837,100.61366,Lat Phrao 83 MRT station,13.7837,100.6136,6,match <=100
+ratchayothin,13.82975,100.56972,Ratchayothin BTS station,13.8297,100.5697,6,match <=100
+sai-yud,13.88845,100.60427,Sai Yud BTS station,13.8885,100.6043,6,match <=100
+asok,13.73704,100.56036,Asok BTS station,13.73703333,100.56041944,6,match <=100
+phra-khanong,13.71517,100.59124,Phra Khanong BTS station,13.71519444,100.59128333,5,match <=100
+talat-phlu,13.71422,100.47669,Talat Phlu BTS station,13.71417222,100.47669722,5,match <=100
+tao-poon,13.80616,100.53078,Tao Poon MRT station,13.8062,100.5308,5,match <=100
+thong-lo,13.72423,100.57851,Thong Lo BTS station,13.72424444,100.57855833,5,match <=100
+phetkasem-48,13.71556,100.44545,Phetkasem 48 MRT station,13.71552778,100.44547222,4,match <=100
+phloen-chit,13.74307,100.54898,Phloen Chit BTS station,13.74308056,100.54901944,4,match <=100
+royal-thai-air-force-museum,13.91797,100.62169,Royal Thai Air Force Museum BTS station,13.918,100.6217,4,match <=100
+charan-13,13.74017,100.47071,Charan 13 MRT station,13.740196,100.470682,4,match <=100
+kalantan,13.72527,100.64178,Kalantan MRT station,13.7253,100.6418,4,match <=100
+victory-monument,13.76276,100.53705,Victory Monument BTS station,13.76274444,100.53708694,4,match <=100
+wong-sawang,13.82986,100.5265,Wong Sawang MRT station,13.8299,100.5265,4,match <=100
+phaya-thai,13.75696,100.53382,Phaya Thai station,13.75694167,100.53384444,3,match <=100
+ratchathewi,13.75186,100.53155,Ratchathewi station,13.751875,100.531575,3,match <=100
+chit-lom,13.7441,100.54307,Chit Lom BTS station,13.74410833,100.54309722,3,match <=100
+sena-nikhom,13.83641,100.57363,Sena Nikhom BTS station,13.8364,100.5736,3,match <=100
+ari,13.77971,100.54462,Ari BTS station,13.77970278,100.54464167,2,match <=100
+phrom-phong,13.73043,100.56971,Phrom Phong BTS station,13.73043889,100.56973056,2,match <=100
+saphan-mai,13.89661,100.60908,Saphan Mai BTS station,13.8966,100.6091,2,match <=100
+siam,13.74562,100.53422,Siam BTS station,13.74561944,100.53422778,1,match <=100
+krung-thep-aphiwat,13.80403,100.54171,Krung Thep Aphiwat Central Terminal,13.805,100.54166667,108,minor 101-250
+krung-thon-buri,13.72093,100.50272,Krung Thon Buri BTS station,13.72083333,100.50277778,12,match <=100
+lak-si,13.88408,100.58269,Lak Si station,13.884348,100.580793,207,minor 101-250
+min-buri,13.80841,100.73269,Min Buri MRT station,13.80861111,100.73277778,24,match <=100
+mo-chit,13.8026,100.55379,Mo Chit BTS station,13.80258333,100.55383333,5,match <=100
+nana,13.74054,100.55543,Nana BTS station,13.74060278,100.55539722,8,match <=100
+national-stadium,13.74651,100.52909,National Stadium BTS station,13.74651389,100.52910833,2,match <=100
+saphan-khwai,13.79382,100.54971,Saphan Khwai BTS station,13.7938,100.54973056,3,match <=100
+kasetsart-university,13.84231,100.57711,Kasetsart University BTS station,13.8424,100.5771,10,match <=100
+khlong-san,13.73031,100.50772,Khlong San station,13.7304,100.5076,16,match <=100
+khlong-toei,13.72213,100.55437,Khlong Toei MRT station,13.7224,100.554,50,match <=100
+on-nut,13.70562,100.601,On Nut BTS station,13.70561111,100.60108333,9,match <=100
+ratchadamri,13.73947,100.53945,Ratchadamri BTS station,13.73919167,100.53940833,31,match <=100
+ratchadaphisek,13.79897,100.57455,Ratchadaphisek MRT station,13.7991,100.575,51,match <=100
+sanam-chai,13.74433,100.49462,Sanam Chai MRT station,13.74388889,100.49475,51,match <=100
+sanam-pao,13.77262,100.54207,Sanam Pao BTS station,13.77262222,100.54209167,2,match <=100

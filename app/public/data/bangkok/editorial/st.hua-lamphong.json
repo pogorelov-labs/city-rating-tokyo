@@ -1,0 +1,639 @@
+{
+ "key": "st.hua-lamphong",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Hua Lamphong is a station area mid-transition: since January 2023 its 1916 terminus handles 62 daily ordinary, commuter and tourist trains instead of the country's expresses, and SRT is programming the hall with exhibitions and a planned locomotive display. Around it, the unit takes in the Talat Noi fringe of workshops, shrines and street art, Bo Bae's wholesale mornings, and the southern edge of Chinatown where BMA's food-vending zones concentrate 173 stalls on Yaowarat Road after 18:00. The exchange is concrete: low old-stock rents and four transport modes against vendor-contested footpaths, dry-season PM2.5 episodes, and no documented park inside the unit. It suits people who want food, rail and heritage at the door on a budget, not those who need lawn-and-trees evenings or long-distance departures.",
+   "claims": [
+    "hua-lamphong-c01",
+    "hua-lamphong-c03",
+    "hua-lamphong-c04",
+    "hua-lamphong-c05",
+    "hua-lamphong-c07",
+    "hua-lamphong-c08",
+    "hua-lamphong-c09",
+    "hua-lamphong-c10",
+    "hua-lamphong-c11",
+    "hua-lamphong-c12",
+    "hua-lamphong-c13",
+    "hua-lamphong-c14",
+    "hua-lamphong-c15",
+    "hua-lamphong-c16",
+    "hua-lamphong-c18"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Four transport modes meet at the unit: MRT BL28 with four exits, a direct underground walkway into the railway station, five bus routes on Rama IV, a canal-boat pier at Exit 2 and river boats at the Marine Department pier on the fringe.",
+     "claims": [
+      "hua-lamphong-c12",
+      "hua-lamphong-c13"
+     ]
+    },
+    {
+     "en": "The evening food economy is institutionally protected, not just popular: BMA licenses 173 vendors on Yaowarat Road until midnight against 95 in daytime, plus a 17:00-23:00 zone on Khao Lam Road by the canal.",
+     "claims": [
+      "hua-lamphong-c08"
+     ]
+    },
+    {
+     "en": "Talat Noi's lanes keep a resident-first, working character - shrines between shophouses, generational workshops, street art - that two independent guides read as unstaged daily life rather than a set for visitors.",
+     "claims": [
+      "hua-lamphong-c07"
+     ]
+    },
+    {
+     "en": "Old-stock flats price below the app's blend: portal listings around Talat Noi average about 18,900 THB for a one-bed against the app's 28,500 reference, with doors at 12,000.",
+     "claims": [
+      "hua-lamphong-c16"
+     ]
+    },
+    {
+     "en": "The Phadung Krung Kasem promenade - walkways widened to 5-9.5 m beside the station, vendors rezoned - gives the unit a usable linear public space where most inner-city blocks have none.",
+     "claims": [
+      "hua-lamphong-c14"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The long-distance hub role is gone: since 19 January 2023 the expresses leave from Krung Thep Aphiwat, and what remains is slow trains, tourists and events in a hall the SRT itself calls a venue.",
+     "claims": [
+      "hua-lamphong-c03",
+      "hua-lamphong-c04"
+     ]
+    },
+    {
+     "en": "Footpaths are contested space: vendors' goods on Mahachai Road pushed pedestrians onto the carriageway in 2023, and BMA's own Yaowarat inspection found stalls over the lines and wash water on the road.",
+     "claims": [
+      "hua-lamphong-c10",
+      "hua-lamphong-c09"
+     ]
+    },
+    {
+     "en": "Dry-season air fails health thresholds at district level - Pathum Wan read 55.2 ug/m3 PM2.5 on 2 December 2025 against a 37.5 threshold - an episodic tax the area's street canyons do not soften.",
+     "claims": [
+      "hua-lamphong-c11"
+     ]
+    },
+    {
+     "en": "No conventional park is documented inside the unit; quiet open space means the canal promenade and the station forecourt, and the green score likely counts frontage rather than park access.",
+     "claims": [
+      "hua-lamphong-c15"
+     ]
+    },
+    {
+     "en": "Tourism-versus-residence pressure is real even in the exception: the one long-form piece on Talat Noi praises its community-led path while documenting a city where locals are priced out of touristifying districts.",
+     "claims": [
+      "hua-lamphong-c18"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Mornings run wholesale and commuter: Bo Bae traders and canal-side vendors were the parties BMA spent 2023 negotiating and rezoning, and the station's remaining ordinary trains start before 05:00.",
+     "claims": [
+      "hua-lamphong-c09",
+      "hua-lamphong-c03"
+     ]
+    },
+    {
+     "en": "After 18:00 the licensed Yaowarat zone more than doubles to 173 stalls and the Khao Lam zone opens; guides tell visitors to arrive after 18:00 on weekdays, when the road becomes one continuous food counter.",
+     "claims": [
+      "hua-lamphong-c08"
+     ]
+    },
+    {
+     "en": "Weekends change the rules: the district office documented itinerant vendors occupying the Mahachai footpath on Saturdays-Sundays and holidays, with enforcement teams and police assigned.",
+     "claims": [
+      "hua-lamphong-c09",
+      "hua-lamphong-c10"
+     ]
+    },
+    {
+     "en": "Seasonally, the dry season adds an air-quality episode risk - the documented 2 December 2025 reading put the station's district above the health threshold - that the wet season does not carry.",
+     "claims": [
+      "hua-lamphong-c11"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The station core on Rong Mueang (Pathum Wan) reads administrative and calm - a hall running commuter timetables and exhibitions - compared with the trading blocks across the canal in Samphanthawong.",
+     "claims": [
+      "hua-lamphong-c01",
+      "hua-lamphong-c07"
+     ]
+    },
+    {
+     "en": "Inside Talat Noi, the contrast is workshop-and-shrine lanes versus the Charoen Krung corridor's shops and traffic; guides route visitors out via the river pier to skip sitting in Chinatown traffic.",
+     "claims": [
+      "hua-lamphong-c07"
+     ]
+    },
+    {
+     "en": "Canal-side blocks gained 5-9.5 m promenades in the 2022-2023 upgrade, while inland lanes keep the narrow, vendor-contested footpaths the district keeps re-clearing.",
+     "claims": [
+      "hua-lamphong-c14",
+      "hua-lamphong-c10"
+     ]
+    },
+    {
+     "en": "Rent varies with frontage, not just distance: riverside Si Phraya condos list at 29,500-35,000 THB while inland Talat Noi one-beds start at 12,000.",
+     "claims": [
+      "hua-lamphong-c16"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Budget renter without a car who eats out: strong fit - cheap old stock, metro-station-rail-walkway stack, canal and river boats, licensed evening food.",
+     "claims": [
+      "hua-lamphong-c16",
+      "hua-lamphong-c12",
+      "hua-lamphong-c08"
+     ]
+    },
+    {
+     "en": "Heritage-and-photography visitor or worker: the 1916 hall, free small museum and planned locomotive display reward repeated visits, though a 2025 visitor calls it a short stop rather than a destination.",
+     "claims": [
+      "hua-lamphong-c04",
+      "hua-lamphong-c05"
+     ]
+    },
+    {
+     "en": "Park-seeking or quiet-evening resident: weak fit - no documented park inside the unit and a food street designed to run until midnight at the northern edge.",
+     "claims": [
+      "hua-lamphong-c15",
+      "hua-lamphong-c08"
+     ]
+    },
+    {
+     "en": "Air-quality-sensitive resident: district PM2.5 readings in episodes run well over the health threshold, a structural downside of the location's street canyon and traffic.",
+     "claims": [
+      "hua-lamphong-c11"
+     ]
+    },
+    {
+     "en": "Long-distance rail traveller: mismatch - night trains and expresses now start at Krung Thep Aphiwat, not here.",
+     "claims": [
+      "hua-lamphong-c03"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "The large 'Thai Railway Museum and learning centre' conversion and the Platform 4 locomotive display remain stated plans; only the small existing museum is confirmed by a 2025 visitor account - English coverage goes quiet after mid-2023.",
+   "Museum opening hours conflict across sources and eras; confirm with SRT before publishing hours.",
+   "Rent figures are portal asking prices from a single 22-listing snapshot; signed contracts, letting periods and second-portal corroboration are missing.",
+   "Whether Yaowarat Road's vending stretch, Bo Bae and the Talat Noi lanes fall inside the app polygon is decided by the coordinator's geometry check, not by this research.",
+   "The Phadung Krung Kasem electric-boat service's operating status as of 2025-2026 is unverified (figures date to 2022).",
+   "Healthcare facilities and gyms inside the unit are unverified - no citable sources were found; the app's gym_sports 8 could not be checked against evidence.",
+   "Station-area park hectares in the app's data layer could not be reconciled from public sources; treat the green score as frontage-driven until the polygon check."
+  ],
+  "attribution_required": [
+   "hua-lamphong-c01",
+   "hua-lamphong-c02",
+   "hua-lamphong-c11",
+   "hua-lamphong-c12",
+   "hua-lamphong-c16",
+   "hua-lamphong-c17",
+   "hua-lamphong-c18"
+  ]
+ },
+ "claims": [
+  {
+   "id": "hua-lamphong-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "1916-06-25",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Wikipedia-sourced; not independently re-verified against SRT documents in this pass."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-01-19",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-01-19",
+    "observed": "2023",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "Service counts are as reported in 2023; current timetables may differ."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2022-12 to 2023-06 reporting",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "Visitor figures are SRT-sourced; 'expected to open soon' locomotive display completion unverified in 2024-2026 sources reviewed."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c05",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2025 visit (article updated 2025-12-24)",
+    "recheck": null
+   },
+   "limitations": [
+    "Single visitor's account; guide's 'don't expect a major attraction' framing is opinion."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c06",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "listing snapshot 2026-11-08; canal zoning 2022",
+    "recheck": null
+   },
+   "limitations": [
+    "Distance ranges are portal/listing statements, not survey measurements; polygon membership undetermined here."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c07",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "guide content 2026-07 and undated",
+    "recheck": null
+   },
+   "limitations": [
+    "Tourism-guide framing; 'authenticity' is the guides' judgement, not a resident survey."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "BMA data as of 2023-10",
+    "recheck": null
+   },
+   "limitations": [
+    "2023 administrative snapshot; vendor counts change with BMA policy rounds."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-07-04",
+    "observed": "2023",
+    "recheck": null
+   },
+   "limitations": [
+    "Enforcement posture at a point in time; no follow-up survey of outcomes."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c10",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-08-21",
+    "observed": "2023",
+    "recheck": null
+   },
+   "limitations": [
+    "Both items are BMA enforcement framings; no independent pedestrian count."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c11",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-12-02",
+    "observed": "single episode day",
+    "recheck": "2027-04-30"
+   },
+   "limitations": [
+    "One episode day; street-canyon exposure near Yaowarat traffic can exceed district averages."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c12",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current as of retrieval",
+    "recheck": null
+   },
+   "limitations": [
+    "Sidewalk quality between exits and destinations not assessed by this source."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "boat service documented 2022",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "Boat service figures are 2022 BMA project data; current frequencies unverified; Phan Fa Lilat's exact distance from the unit not measured here."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c14",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-07-04",
+    "observed": "2022-2026 programme",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "Canal is not a park; historically poor water quality; the programme's own pilots drew criticism elsewhere (tree loss at Chong Nonsi) per the same 2026 article."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c15",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "sources 2022-2026",
+    "recheck": "2027-06-30"
+   },
+   "limitations": [
+    "Negative/absence inference - absence of documentation is not proof of absence; app green score of 7 likely reflects frontage/tree cover, to be checked against its data layer."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c16",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "live-listing snapshot retrieved 2026-11-08",
+    "recheck": "2027-05-08"
+   },
+   "limitations": [
+    "Single portal, 22 listings, asking (not signed) rents, snapshot undated by the portal itself; blend-vs-old-stock interpretation is the researcher's, not the portal's."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c17",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "plan as documented 2021-2023",
+    "recheck": "2027-12-31"
+   },
+   "limitations": [
+    "No construction-start date verified in this pass."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "hua-lamphong-c18",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2025-04 publication",
+    "recheck": null
+   },
+   "limitations": [
+    "Student-run magazine essay; selective evidence; no quantified displacement figures for the unit."
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_560570f882de",
+   "url": "https://en.wikipedia.org/wiki/Hua_Lamphong_railway_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_0e498c637127",
+   "url": "https://en.wikipedia.org/wiki/Hua_Lamphong_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_873e339a53a1",
+   "url": "https://th.wikipedia.org/wiki/สถานีรถไฟกรุงเทพ",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_b53ac3ccccfc",
+   "url": "https://en.wikipedia.org/wiki/Krung_Thep_Aphiwat_Central_Terminal",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_30535a266299",
+   "url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_c785ca1e2a37",
+   "url": "https://thethaiger.com/news/bangkok/bangkoks-historic-hua-lamphong-station-plans-major-events-and-exhibitions",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Thaiger",
+    "family": "Thaiger"
+   }
+  },
+  {
+   "id": "src_e7481ad038c5",
+   "url": "https://www.nationthailand.com/thailand/general/40028819",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation Thailand",
+    "family": "Nation Group"
+   }
+  },
+  {
+   "id": "src_c3078a29aaee",
+   "url": "https://www.nationthailand.com/thailand/general/40029072",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation Thailand",
+    "family": "Nation Group"
+   }
+  },
+  {
+   "id": "src_751d0cfc1006",
+   "url": "https://www.nationthailand.com/thailand/bangkok/40068526",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation Thailand",
+    "family": "Nation Group"
+   }
+  },
+  {
+   "id": "src_891a8a10628a",
+   "url": "https://www.phuket101.net/bangkok/hua-lamphong-railway-station/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Phuket 101",
+    "family": "Phuket 101 (Willy Thuan)"
+   }
+  },
+  {
+   "id": "src_413dc76f6a82",
+   "url": "https://www.dephanakron.com/chinatown-bangkok-yaowarat",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Depa Nakron",
+    "family": "Depa Nakron"
+   }
+  },
+  {
+   "id": "src_a39e64e00772",
+   "url": "https://www.thattravelblog.com/blog/chinatown-songwat-talat-noi-bangkok-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "That Travel Blog",
+    "family": "That Travel Blog"
+   }
+  },
+  {
+   "id": "src_dfe3061799cd",
+   "url": "https://propertyscout.co.th/en/bangkok/talat-noi/rentals",
+   "body_read": true,
+   "attribution": {
+    "publisher": "PropertyScout",
+    "family": "PropertyScout"
+   }
+  },
+  {
+   "id": "src_b45e7d615258",
+   "url": "https://readthecloud.com/social/public-space/khlong-phadung-krung-kasem/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Cloud (Read the Cloud)",
+    "family": "Read the Cloud"
+   }
+  },
+  {
+   "id": "src_fef2aa8b2763",
+   "url": "https://moneyandbanking.co.th/2023/70012/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Money & Banking Magazine",
+    "family": "Media Associated (Money & Banking)"
+   }
+  },
+  {
+   "id": "src_2391fc64c47a",
+   "url": "https://brownpoliticalreview.org/lost-in-transformation",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Brown Political Review",
+    "family": "Brown Political Review"
+   }
+  },
+  {
+   "id": "src_78b79ad501cc",
+   "url": "https://www.thaipbsworld.com/climate/worsening-air-quality-in-bangkok,-with-excessive-pm2.5-dust-in-all-districts",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS World",
+    "family": "Thai PBS (public broadcaster)"
+   }
+  },
+  {
+   "id": "src_34fd5c62d00a",
+   "url": "https://www.thaitrainguide.com/2023/01/17/full-list-of-62-trains-remaining-at-hua-lamphong-station/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Train Guide (Richard Barrow)",
+    "family": "Thai Train Guide"
+   }
+  },
+  {
+   "id": "src_106e4c789d70",
+   "url": "https://www.newswit.com/th/ifpkxsv4fq030van1nzc9dol9n8kjfom",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Newswit",
+    "family": "Newswit"
+   }
+  },
+  {
+   "id": "src_522ac397e774",
+   "url": "https://www.independent.co.uk/news/bangkok-ap-thailand-southeast-asia-china-b2265255.html",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Independent (AP wire)",
+    "family": "Independent (AP)"
+   }
+  }
+ ]
+}

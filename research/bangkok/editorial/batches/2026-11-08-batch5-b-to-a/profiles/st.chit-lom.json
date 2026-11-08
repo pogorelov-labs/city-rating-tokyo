@@ -1,0 +1,1373 @@
+{
+ "schema_version": "1.0",
+ "entity": {
+  "city": "bangkok",
+  "key": "st.chit-lom",
+  "kind": "station_area",
+  "name_en": "Chit Lom",
+  "name_th": "ชิดลม",
+  "aliases": [],
+  "scope_notes": ""
+ },
+ "selection_context": {
+  "app_snapshot_id": "bkk-d6499618507e7561",
+  "model_score_default": 7.52,
+  "cohort_rank": 19,
+  "cohort_size": 133,
+  "popularity_status": "unmeasured",
+  "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
+  "popularity_source_ids": [],
+  "selection_rationale": ""
+ },
+ "sources": [
+  {
+   "id": "src_7d8cf0276524",
+   "canonical_url": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "title": "Chit Lom BTS station",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": "2026-03-15",
+   "retrieved_at": "2026-11-08T08:05:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none — volunteer-edited encyclopedia",
+   "limitations": [
+    "Stub article carrying March 2026 banners for missing citations and primary-source reliance",
+    "2021 ridership figure (3,154,058) is a pandemic-year statistic"
+   ]
+  },
+  {
+   "id": "src_6fd72dec4bb7",
+   "canonical_url": "https://en.wikipedia.org/wiki/Erawan_Shrine",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Erawan_Shrine",
+   "title": "Erawan Shrine",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:10:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Infobox coordinates block initially shows a mismatched pair; the article's final footer coordinate (13.744361N 100.540444E) is the shrine one",
+    "Casualty and date details rest on cited 2015 press reports"
+   ]
+  },
+  {
+   "id": "src_7e869560d326",
+   "canonical_url": "https://en.wikipedia.org/wiki/Ratchaprasong",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Ratchaprasong",
+   "title": "Ratchaprasong",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:20:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "District-level article; exact block-by-block membership of the app's 800 m unit is not stated"
+   ]
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "canonical_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "title": "Lumphini Park",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:25:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Article coordinates (13.73056N, 100.54167E) point at the park's centre; the northern Sarasin edge is nearer the station and polygon membership must be checked by the coordinator"
+   ]
+  },
+  {
+   "id": "src_1fc36699994a",
+   "canonical_url": "https://en.wikipedia.org/wiki/Platinum_Fashion_Mall",
+   "retrieved_url": "https://en.wikipedia.org/wiki/Platinum_Fashion_Mall",
+   "title": "Platinum Fashion Mall",
+   "publisher": "Wikipedia (English)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:30:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Short article; gives no stall/shop counts and no visitor numbers"
+   ]
+  },
+  {
+   "id": "src_4aab2c4fca93",
+   "canonical_url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B4%E0%B8%94%E0%B8%A5%E0%B8%A1",
+   "retrieved_url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B4%E0%B8%94%E0%B8%A5%E0%B8%A1",
+   "title": "สถานีชิดลม (Chit Lom station, Thai Wikipedia)",
+   "publisher": "Wikipedia (Thai)",
+   "publisher_family": "wikimedia",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:15:00Z",
+   "body_read": true,
+   "type": "other",
+   "commercial_context": "none",
+   "limitations": [
+    "Thai-language source; figures (9 exits, 7.5 m x 513 m skywalk, ~260M THB) paraphrased here in English",
+    "Same volunteer-maintained reliability caveats as other Wikipedia articles"
+   ]
+  },
+  {
+   "id": "src_31cd3bdbbaa0",
+   "canonical_url": "https://www.bbc.com/news/articles/ckg8v51g9lno",
+   "retrieved_url": "https://www.bbc.com/news/articles/ckg8v51g9lno",
+   "title": "Thai court sentences two men to death over Bangkok shrine bombing",
+   "publisher": "BBC News",
+   "publisher_family": "bbc",
+   "author": "Jonathan Head",
+   "published_at": "2026-06-11",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:35:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none — public-service broadcaster",
+   "limitations": [
+    "Article is about the June 2026 verdict; historical casualty figures (20 dead, 120+ injured) summarised within it",
+    "Notes unresolved questions about whether justice was served"
+   ]
+  },
+  {
+   "id": "src_410615786a1c",
+   "canonical_url": "https://www.khaosodenglish.com/featured/2024/05/01/bangkok-makes-progress-in-improving-sidewalks-and-sets-10-standards/",
+   "retrieved_url": "https://www.khaosodenglish.com/featured/2024/05/01/bangkok-makes-progress-in-improving-sidewalks-and-sets-10-standards/",
+   "title": "Bangkok Makes Progress in Improving Sidewalks and Sets 10 Standards",
+   "publisher": "Khaosod English",
+   "publisher_family": "khaosod",
+   "author": null,
+   "published_at": "2024-05-01",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:00:00Z",
+   "body_read": true,
+   "type": "news",
+   "commercial_context": "none",
+   "limitations": [
+    "Reports BMA's own framing (no independent audit of walkability)",
+    "No budget figures given; vendor-blocking problem not addressed in this piece"
+   ]
+  },
+  {
+   "id": "src_edcc56ab152b",
+   "canonical_url": "https://www.timeout.com/bangkok/restaurants/the-50-best-restaurants-in-bangkok",
+   "retrieved_url": "https://www.timeout.com/bangkok/restaurants/the-50-best-restaurants-in-bangkok",
+   "title": "The 50 best restaurants in Bangkok",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "timeout",
+   "author": "Time Out Bangkok (edited by Andrew Fowler)",
+   "published_at": "2025-03-10",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:15:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "listings guide; venue selection is editorial and may involve commercial relationships",
+   "limitations": [
+    "One outlet's editorial ranking",
+    "Lang Suan / Ratchadamri addresses may sit toward the unit edge — polygon check pending"
+   ]
+  },
+  {
+   "id": "src_f8238a88f6b6",
+   "canonical_url": "https://www.timeout.com/bangkok/bars/best-rooftop-and-sky-high-bars",
+   "retrieved_url": "https://www.timeout.com/bangkok/bars/best-rooftop-and-sky-high-bars",
+   "title": "The best rooftop bars in Bangkok",
+   "publisher": "Time Out Bangkok",
+   "publisher_family": "timeout",
+   "author": null,
+   "published_at": "2026-05-29",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:20:00Z",
+   "body_read": true,
+   "type": "editorial_guide",
+   "commercial_context": "listings guide; venue selection editorial",
+   "limitations": [
+    "Guide selection, not an exhaustive inventory of the area's bars"
+   ]
+  },
+  {
+   "id": "src_d5cef1b4dadc",
+   "canonical_url": "https://www.prnewswire.com/ae/news-releases/the-store-of-bangkok-central-chidlom-elevates-retail-experience-as-the-no-1-luxury-department-store-302337219.html",
+   "retrieved_url": "https://www.prnewswire.com/ae/news-releases/the-store-of-bangkok-central-chidlom-elevates-retail-experience-as-the-no-1-luxury-department-store-302337219.html",
+   "title": "The Store of Bangkok: Central Chidlom Elevates Retail Experience as the No. 1 Luxury Department Store",
+   "publisher": "PR Newswire (Central Department Store release)",
+   "publisher_family": "prnewswire-central",
+   "author": null,
+   "published_at": "2024-12-20",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:55:00Z",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "company press release promoting its own flagship store; figures are company statements",
+   "limitations": [
+    "'No. 1 luxury department store' and 30,000 daily visitors are the company's own positioning/targets, not independent measurements",
+    "No floor area or per-phase opening dates given"
+   ]
+  },
+  {
+   "id": "src_8f47ad3e3737",
+   "canonical_url": "https://www.erawanbangkok.com/en/erawan-shrine/",
+   "retrieved_url": "https://www.erawanbangkok.com/en/erawan-shrine/",
+   "title": "Erawan Shrine (official page)",
+   "publisher": "Erawan Bangkok Co., Ltd.",
+   "publisher_family": "erawan-bangkok",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:05:00Z",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "operator of the Erawan Bangkok complex surrounding the shrine; devotional-tourism framing",
+   "limitations": [
+    "Does not state opening hours or the 1956 founding date on this page",
+    "Text overlaps closely with the Wikipedia article's wording"
+   ]
+  },
+  {
+   "id": "src_d9cb7bb63d51",
+   "canonical_url": "https://www.platinumfashionmall.com/",
+   "retrieved_url": "https://www.platinumfashionmall.com/",
+   "title": "Platinum Fashion Mall (official site)",
+   "publisher": "The Platinum Fashion Mall Co., Ltd.",
+   "publisher_family": "platinum",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T09:30:00Z",
+   "body_read": true,
+   "type": "official_operator",
+   "commercial_context": "mall operator marketing site",
+   "limitations": [
+    "No shop counts or visitor statistics on the landing page",
+    "Wholesale positioning implied by content rather than stated in one line"
+   ]
+  },
+  {
+   "id": "src_22be58b804cc",
+   "canonical_url": "https://propertyscout.co.th/en/bangkok/bts/chit-lom",
+   "retrieved_url": "https://propertyscout.co.th/en/bangkok/bts/chit-lom",
+   "title": "Property Guide for BTS Chit Lom Station",
+   "publisher": "PropertyScout",
+   "publisher_family": "propertyscout",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:40:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property portal marketing its own listings near the station",
+   "limitations": [
+    "Pricing chart values absent from page body; only 'lower than Bangkok average' percentages shown — treated cautiously as a possible methodology artefact",
+    "Asking rents only"
+   ]
+  },
+  {
+   "id": "src_a9838735cff2",
+   "canonical_url": "https://amazingproperties.org/search/bangkok/condo-for-rent/chidlom",
+   "retrieved_url": "https://amazingproperties.org/search/bangkok/condo-for-rent/chidlom",
+   "title": "47 Condos for Rent in Chidlom, Bangkok (Nov 2026)",
+   "publisher": "Amazing Properties",
+   "publisher_family": "amazingproperties",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:45:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "agent listing portal; commentary favours its own tenant base",
+   "limitations": [
+    "Asking rents, not signed leases",
+    "Agent-characterised tenant profile",
+    "Some listed projects (Scope Langsuan, Tonson) sit toward the unit's western edge"
+   ]
+  },
+  {
+   "id": "src_537f20b992db",
+   "canonical_url": "https://propertyhub.in.th/en/condo-for-rent/project-magnolias-ratchadamri-boulevard",
+   "retrieved_url": "https://propertyhub.in.th/en/condo-for-rent/project-magnolias-ratchadamri-boulevard",
+   "title": "Magnolias Ratchadamri Boulevard for Rent",
+   "publisher": "PropertyHub.in.th",
+   "publisher_family": "propertyhub",
+   "author": null,
+   "published_at": null,
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:50:00Z",
+   "body_read": true,
+   "type": "commercial_property",
+   "commercial_context": "property portal listing page",
+   "limitations": [
+    "Asking rents only",
+    "Building is one stop south (Ratchadamri BTS, ~260-300 m from that station); membership in the Chit Lom catchment needs the polygon check"
+   ]
+  },
+  {
+   "id": "src_6d3b21590eca",
+   "canonical_url": "https://thethaiger.com/thai-life/property/bangkok-rent-neighbourhood-budget-2026",
+   "retrieved_url": "https://thethaiger.com/thai-life/property/bangkok-rent-neighbourhood-budget-2026",
+   "title": "Bangkok rent by neighbourhood: what your budget gets in 2026",
+   "publisher": "The Thaiger",
+   "publisher_family": "thaiger",
+   "author": null,
+   "published_at": "2026-06-12",
+   "updated_at": null,
+   "retrieved_at": "2026-11-08T08:47:00Z",
+   "body_read": true,
+   "type": "expat_publication",
+   "commercial_context": "expat-life publication with property-industry adjacency",
+   "limitations": [
+    "Does not cover Chidlom/Ratchaprasong — used only to corroborate central-Bangkok corridor rent bands",
+    "Methodology (asking vs signed) undisclosed"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "chit-lom-c01",
+   "text_en": "BTS Chit Lom (E1) is an elevated Sukhumvit Line station opened on 5 December 1999 on Phloen Chit Road at the Chit Lom junction (Phloen Chit, Chit Lom and Lang Suan roads) in Pathum Wan district, near the Ratchaprasong intersection in Lumphini subdistrict, and the name is also rendered 'Chidlom'.",
+   "kind": "factual_report",
+   "topics": [
+    "identity",
+    "transit"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "BTS Chit Lom station (E1)",
+    "relation_to_entity": "inside",
+    "notes": "Station is the entity's anchor; the surrounding area spans Lumphini subdistrict (Pathum Wan) with the Pratunam edge reaching into Ratchathewi district."
+   },
+   "temporal_scope": {
+    "event_date": "1999-12-05",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": "Opening date stable; ridership figures fluctuate year to year."
+   },
+   "evidence": [
+    {
+     "source_id": "src_7d8cf0276524",
+     "locator": "infobox and lead paragraph",
+     "paraphrase": "Station on the Sukhumvit Line, code E1, opened 5 December 1999, located on Phloen Chit Road at Chit Lom intersection to Lang Suan and Chit Lom Road, Pathum Wan district; coordinates 13.7441N 100.5431E."
+    },
+    {
+     "source_id": "src_4aab2c4fca93",
+     "locator": "บทนำ / ที่ตั้ง (lead and location sections)",
+     "paraphrase": "Thai Wikipedia: elevated BTS station on the Sukhumvit line, service began 5 December 1999 (พ.ศ. 2542), west of the Chit Lom junction, near the Ratchaprasong intersection in Lumphini subdistrict."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "English article carries March 2026 maintenance banners about sourcing",
+    "2021 ridership of 3,154,058 quoted in infobox is a pandemic-year low"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c02",
+   "text_en": "The station is an unusually well-connected skywalk node: nine access points include a direct skybridge to Central Chidlom and a 7.5 m-wide, 513 m-long skywalk (about 260 million baht invested by Central Pattana) linking the Ratchaprasong intersection, CentralWorld and onward toward Siam station.",
+   "kind": "factual_report",
+   "topics": [
+    "transport",
+    "walkability"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Chit Lom–Ratchaprasong skywalk network",
+    "relation_to_entity": "entire_unit",
+    "notes": "The elevated network is the connective spine of the whole unit."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "skywalk in place since the 2010s; links verified 2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_4aab2c4fca93",
+     "locator": "ทางเดินลอยฟ้า / ทางเข้า-ออก (skywalk and exits sections)",
+     "paraphrase": "Skywalk 7.5 m wide and 513 m long links the station to Ratchaprasong intersection, CentralWorld and Siam station; Central Pattana invested roughly 260 million baht; nine station entrances/exits including bridges to Grand Hyatt Erawan, InterContinental, Holiday Inn, Renaissance, Mercury Tower, Gaysorn, Central Chidlom, Central Embassy and Big C Ratchadamri."
+    },
+    {
+     "source_id": "src_7d8cf0276524",
+     "locator": "lead paragraph",
+     "paraphrase": "Station linked by skybridge directly to Central Chidlom and by Sky Walk to Ratchaprasong intersection (CentralWorld, Gaysorn, Erawan Shrine) and to Siam station."
+    },
+    {
+     "source_id": "src_7e869560d326",
+     "locator": "Transportation section",
+     "paraphrase": "Chit Lom Station connects to Central Chidlom, Maneeya Center, Grand Hyatt Erawan, Gaysorn and CentralWorld; the walkway extends to Siam Station."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Per-segment lengths between individual malls are not published",
+    "Skywalk reach does not by itself measure street-level walkability (see chit-lom-c15)"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c03",
+   "text_en": "The Erawan Shrine (Thao Maha Phrom Shrine), housing the four-faced Phra Phrom statue enshrined on 9 November 1956, stands at the Ratchaprasong intersection beside the Grand Hyatt Erawan, is overlooked by the Chit Lom elevated walkway, and is one of several Hindu shrines that give the junction its 'Intersection of Gods' character.",
+   "kind": "factual_report",
+   "topics": [
+    "culture",
+    "identity",
+    "religion"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Erawan Shrine, Ratchaprasong intersection",
+    "relation_to_entity": "inside",
+    "notes": "Adjacent to the skywalk; unambiguously within the unit."
+   },
+   "temporal_scope": {
+    "event_date": "1956-11-09",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_6fd72dec4bb7",
+     "locator": "lead and history section",
+     "paraphrase": "Shrine houses the Thai representation of Brahma; statue enshrined 9 November 1956 as part of the Erawan Hotel development; located at Grand Hyatt Erawan, Ratchaprasong, in Lumphini subdistrict, Pathum Wan; Chit Lom station's elevated walkway overlooks it; five other Hindu deity shrines are in the area."
+    },
+    {
+     "source_id": "src_8f47ad3e3737",
+     "locator": "Erawan Shrine page (about / worship customs)",
+     "paraphrase": "Operator page describes worship of all four faces in four directions, offerings of lotus, water and candles, and hired Thai dance troupes performing for answered prayers."
+    },
+    {
+     "source_id": "src_7e869560d326",
+     "locator": "Attractions section",
+     "paraphrase": "Ratchaprasong lists Erawan Shrine plus Lakshmi, Trimurti, Ganesha, Indra and other shrines, nicknamed the 'Intersection of Gods'."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Wikipedia article's infobox coordinates initially mismatch; footer coordinate 13.744361N 100.540444E is the shrine"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "chit-lom-c04",
+   "text_en": "A bomb detonated at the Erawan Shrine on the evening of 17 August 2015 killed 20 people and injured about 125; the shrine reopened within two days, and in June 2026, after a trial lasting more than a decade, a Thai court sentenced two Uyghur men to death for the attack.",
+   "kind": "factual_report",
+   "topics": [
+    "events",
+    "history",
+    "safety"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Erawan Shrine, Ratchaprasong intersection",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "2015-08-17",
+    "observed_period": "trial concluded June 2026",
+    "recheck_by": null,
+    "notes": "Verdict is under appeal per the BBC report."
+   },
+   "evidence": [
+    {
+     "source_id": "src_6fd72dec4bb7",
+     "locator": "17 August 2015 section",
+     "paraphrase": "Three-kilogram TNT device detonated 18:55 near the shrine, killing 20 bystanders and injuring 125; statue slightly damaged; shrine reopened after repairs within two days, a speed that drew criticism."
+    },
+    {
+     "source_id": "src_31cd3bdbbaa0",
+     "locator": "article body (verdict reporting)",
+     "paraphrase": "Court convicted two Uyghur men of planning and detonating the bomb on 17 August 2015 that killed 20 and injured more than 120; trial lasted over ten years partly due to translator shortages; both allege torture-induced confessions; appeal announced."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Casualty tallies differ slightly between reports (125 vs 'more than 120')",
+    "Security-camera failures and investigation criticisms noted by sources"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "chit-lom-c05",
+   "text_en": "Ratchaprasong has repeatedly been a mass-protest flashpoint: the 2010 red-shirt occupation of the intersection ended in a 19 May 2010 military clearance with roughly 90 deaths and CentralWorld burned, and the intersection again hosted protests in 2014 and during the 2020-2021 demonstration wave.",
+   "kind": "factual_report",
+   "topics": [
+    "history",
+    "politics",
+    "safety"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprasong intersection",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": "2010-05-19",
+    "observed_period": "2010-2021 protest episodes",
+    "recheck_by": null,
+    "notes": "The brief's 'big bike-protest at Erawan' variant could not be confirmed; see open issues."
+   },
+   "evidence": [
+    {
+     "source_id": "src_7e869560d326",
+     "locator": "History / Incidents section",
+     "paraphrase": "Red-shirt protesters occupied the area around Ratchaprasong from March to May 2010 ('the red city'); the army cleared the intersection on 19 May 2010 with roughly 90 civilian and soldier deaths and CentralWorld partially destroyed by fire, rebuilt by June 2012; demonstrations against the Yingluck government in 2014; the area again saw demonstrations during the 2020-2021 Thai protests."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Thai and English searches found no mainstream confirmation of a 'big bike' convoy protest specifically at Erawan Shrine; vehicle-convoy (car mob) protests are documented for 2021 in general",
+    "2010 death toll is approximate in the source"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c06",
+   "text_en": "The shrine operates as a daily devotional site where worshippers hire Thai dance troupes to give thanks, and since March 2020 incense and candles have been banned on the site for health and air-quality (PM2.5) reasons.",
+   "kind": "factual_report",
+   "topics": [
+    "air_quality",
+    "crowds",
+    "culture",
+    "religion"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Erawan Shrine",
+    "relation_to_entity": "inside",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "ban in force since 2020-03 and still in effect per 2025 Thai reporting",
+    "recheck_by": null,
+    "notes": "Thai-language searches in January 2025 reported the measure entering its seventh year."
+   },
+   "evidence": [
+    {
+     "source_id": "src_8f47ad3e3737",
+     "locator": "worship customs section",
+     "paraphrase": "Worshippers honour all four faces in four directions with offerings such as lotus flowers and water; the shrine often features Thai dance troupes hired by worshippers whose prayers were answered."
+    },
+    {
+     "source_id": "src_6fd72dec4bb7",
+     "locator": "2020 ban on incense and candles section",
+     "paraphrase": "Beginning March 2020, incense and candles were no longer allowed to be lit at the shrine due to health and environmental concerns."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "PRD (thainews.prd.go.th) confirmation of the 2025 seventh-year continuation was unreachable (DNS failure), so the 2025 continuation rests on search-engine descriptions of it plus the Wikipedia ban record"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "chit-lom-c07",
+   "text_en": "Rental listings for the Chidlom/Chit Lom area in November 2026 spanned 27,000 to 380,000 THB a month — from a 45 sqm studio at The Address Chidlom to a 154 sqm two-bedroom at Scope Langsuan — with a distinct luxury cluster between roughly 80,000 and 180,000 THB.",
+   "kind": "estimate",
+   "topics": [
+    "affordability",
+    "rent"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Chidlom rental corridor (Chit Lom / Lang Suan / Phloen Chit blocks)",
+    "relation_to_entity": "entire_unit",
+    "notes": "Portal defines the area by name rather than the app polygon; edge projects need the coordinator's polygon check."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "listings observed November 2026",
+    "recheck_by": "2027-11-08",
+    "notes": "Asking rents; turnover monthly."
+   },
+   "evidence": [
+    {
+     "source_id": "src_a9838735cff2",
+     "locator": "listing table (47 condos for rent)",
+     "paraphrase": "Cheapest listing: The Address Chidlom studio 45 sqm at 27,000 THB/month; dearest: Scope Langsuan 154 sqm two-bedroom at 380,000 THB/month; mid luxury cluster includes The Park Chidlom 145 sqm at 100,000, Sindhorn Residence 147 sqm at 180,000, Somkid Gardens 125 sqm at 85,000, and Na Vara Residence 61 sqm at 45,000; page text calls Chidlom rents 'toward the upper end of Bangkok's rental market'."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Asking rents, not signed leases; no transaction data found",
+    "Single agent portal's snapshot of 47 listings (21 visible on first page)",
+    "Premium addresses on Lang Suan/Tonson may fall partly outside the app polygon"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c08",
+   "text_en": "At Magnolias Ratchadamri Boulevard — a 60-storey, 316-unit luxury tower completed in 2015 about 260-300 m from BTS Ratchadamri — the portal shows 144 rentals ranging from 42,000 THB for a one-bedroom to 450,000 THB for a duplex penthouse, with two-bedrooms quoted at 70,000-120,000 THB.",
+   "kind": "estimate",
+   "topics": [
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Magnolias Ratchadamri Boulevard (Rajadamri Road at Rama I corner)",
+    "relation_to_entity": "inside",
+    "notes": "Roughly 300-400 m from Chit Lom station as the sky flies; exact polygon membership for the coordinator."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "listings observed November 2026",
+    "recheck_by": "2027-11-08",
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_537f20b992db",
+     "locator": "project listing results",
+     "paraphrase": "144 properties for rent; cheapest 42,000 THB (58 sqm one-bedroom); most expensive 450,000 THB (360 sqm three-bed duplex penthouse); priciest non-penthouse two-bedroom 90 sqm at 120,000 THB; building 60 floors, 316 units, completed 2015, about 260-300 m from BTS Ratchadamri."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Asking rents only",
+    "The building is deliberately top-end, so it is not a corridor-average sample"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c09",
+   "text_en": "The app's 120,000-THB two-bed reference sits at the top of the mainstream two-bedroom cluster rather than at a corridor median: observed two-bedroom asking rents cluster from about 45,000-70,000 THB in ordinary towers up to 70,000-120,000 THB in luxury high-rises, so the override is best read as premium-building stock with a skewed sample.",
+   "kind": "researcher_inference",
+   "topics": [
+    "methodology",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Chit Lom / Ratchaprasong rental corridor",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "November 2026 listings",
+    "recheck_by": "2027-11-08",
+    "notes": "Supports the brief's lead 1 hypothesis with evidence."
+   },
+   "evidence": [
+    {
+     "source_id": "src_537f20b992db",
+     "locator": "project listing results",
+     "paraphrase": "Two-bedrooms at the luxury benchmark tower run 70,000-120,000 THB; 120,000 is that building's ceiling for a standard 2-bed layout."
+    },
+    {
+     "source_id": "src_a9838735cff2",
+     "locator": "listing table",
+     "paraphrase": "Across 47 Chidlom listings, ordinary two-bedroom quotes appear at 45,000 (Na Vara), 85,000-100,000 (Somkid Gardens, The Park Chidlom) and upward, i.e. many two-bed quotes sit well below 120,000."
+    },
+    {
+     "source_id": "src_22be58b804cc",
+     "locator": "Properties and projects section",
+     "paraphrase": "More than 3,700 rental properties listed near BTS Chit Lom with condo starts from 13,000 THB and apartments from 25,000 THB — showing a long affordable tail beneath the luxury cluster."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No published median rent for the corridor was found; the inference compares clusters, not a computed median",
+    "PropertyScout's page shows area rents 'lower than Bangkok average' for every size class, an anomaly not reconciled here",
+    "All figures are asking rents"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "chit-lom-c10",
+   "text_en": "Eight of Time Out Bangkok's '50 best restaurants in Bangkok' (March 2025) sit within the blocks around the station — four on Phloen Chit, three on Lang Suan and one on Ratchadamri — including Inddee at No. 8 and Bisou at No. 14 on Lang Suan.",
+   "kind": "factual_report",
+   "topics": [
+    "food"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Phloen Chit / Lang Suan / Ratchadamri dining blocks",
+    "relation_to_entity": "entire_unit",
+    "notes": "Lang Suan addresses are inside the Chit Lom catchment proper; Ratchadamri entry (Zuma at the St. Regis) is toward the southern edge."
+   },
+   "temporal_scope": {
+    "event_date": "2025-03-10",
+    "observed_period": null,
+    "recheck_by": "2027-03-10",
+    "notes": "Annual-style list; ranking changes yearly."
+   },
+   "evidence": [
+    {
+     "source_id": "src_edcc56ab152b",
+     "locator": "ranked entries",
+     "paraphrase": "Area entries: Elements #23 (Phloen Chit), Nan Bei #37 (Rosewood, Phloen Chit), Savelberg #38 (Phloen Chit), Santiaga #31 (Mahatun Plaza, Phloen Chit), Inddee #8 (Langsuan), Bisou #14 (Langsuan), Smokin' Pug #28 (Lang Suan), Zuma #39 (St. Regis, Ratchadamri)."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "One outlet's editorial selection",
+    "Does not capture everyday or street-level eating options"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c11",
+   "text_en": "Hotel rooftop bars anchor the area's after-dark offer: Red Sky on floors 55-56 of Centara Grand at CentralWorld (from 16:00 daily), Sato San on the 32nd floor of Moxy Bangkok Ratchaprasong (launched New Year's Eve 2025) and The Speakeasy at Hotel Muse on Lang Suan.",
+   "kind": "factual_report",
+   "topics": [
+    "nightlife"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprasong / Lang Suan rooftops",
+    "relation_to_entity": "entire_unit",
+    "notes": "Speakeasy on Lang Suan is toward the western edge of the unit."
+   },
+   "temporal_scope": {
+    "event_date": "2025-12-31",
+    "observed_period": "venues operating as of May 2026 guide",
+    "recheck_by": null,
+    "notes": "Sato San launch date as stated by Time Out ('Launched New Year's Eve 2025')."
+   },
+   "evidence": [
+    {
+     "source_id": "src_f8238a88f6b6",
+     "locator": "Red Sky / Sato San / The Speakeasy entries",
+     "paraphrase": "Red Sky at Centara Grand & Convention Centre, 999/99 Rama I Rd, opens 4pm daily with 360-degree views; Sato San at 32/F Moxy Bangkok Ratchaprasong, open daily 6pm-2am, panoramic views across Ratchaprasong taking in CentralWorld and Erawan Shrine; The Speakeasy at 24-25/F Hotel Muse, Langsuan Road, with live music Thursday-Saturday."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Guide selection, not an inventory; club-style nightlife is not represented here"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c12",
+   "text_en": "Central Chidlom, the flagship of Thailand's biggest department-store chain, underwent a 4-billion-baht rebranding as 'The Store of Bangkok' announced in December 2024 and completing through 2025, with a Sky Terrace linked to Chit Lom BTS and a company target of 30,000 daily visitors.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "recent_changes",
+    "shopping"
+   ],
+   "polarity": "strength",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Central Chidlom, Phloen Chit Road",
+    "relation_to_entity": "inside",
+    "notes": "Direct skybridge from the station (see chit-lom-c02)."
+   },
+   "temporal_scope": {
+    "event_date": "2024-12-20",
+    "observed_period": "transformation completing during 2025",
+    "recheck_by": "2026-12-20",
+    "notes": "Press-release figures are company statements."
+   },
+   "evidence": [
+    {
+     "source_id": "src_d5cef1b4dadc",
+     "locator": "release body",
+     "paraphrase": "With a 4 billion baht investment the renovation positions the store as Thailand's No. 1 luxury department store; transformation completes in 2025 with a projected 30% sales increase; targets 30,000 daily visitors; glass facade and Sky Terrace connected to Chit Lom BTS; 150+ beauty brands and Thailand's largest sneaker destination."
+    },
+    {
+     "source_id": "src_7e869560d326",
+     "locator": "Shopping section",
+     "paraphrase": "Central Chidlom described as the flagship department store of Thailand's biggest retail chain."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "All quantitative claims (4bn THB, 30,000 visitors) come from the company's own release",
+    "Independent verification of completed 2025 phase openings not obtained"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "chit-lom-c13",
+   "text_en": "The Platinum Fashion Mall on Phetchaburi Road at the unit's Pratunam edge has operated since 2000 as a five-billion-baht wholesale-and-retail fashion complex with seven shopping floors (Ginza to Food Center), open 09:00-20:00 daily.",
+   "kind": "factual_report",
+   "topics": [
+    "crowds",
+    "shopping"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Platinum Fashion Mall, Phetchaburi Road (Ratchathewi district)",
+    "relation_to_entity": "partial",
+    "notes": "The brief places the Platinum/Pratunam edge inside the 800 m catchment; the mall itself sits in Ratchathewi district, so exact polygon membership is a coordinator check."
+   },
+   "temporal_scope": {
+    "event_date": "2000-01-01",
+    "observed_period": "operating daily; hours verified 2026",
+    "recheck_by": null,
+    "notes": "Platinum 2 annex completed March 2011."
+   },
+   "evidence": [
+    {
+     "source_id": "src_1fc36699994a",
+     "locator": "infobox and description",
+     "paraphrase": "Mall opened 2000 on Phetchaburi Road next to Pantip Plaza; five-billion-baht six-storey complex with seven shopping floors named Ginza, Soho, Oxford, Nathan, Camden, Orchard and Food Center; specialises in fashion clothes and accessories retail and wholesale; Platinum 2 completed March 2011."
+    },
+    {
+     "source_id": "src_d9cb7bb63d51",
+     "locator": "official site contact/hours",
+     "paraphrase": "Address 222 Petchaburi Road, Ratchathevee, Bangkok; open 09:00-20:00; promotes international-tourist shopping privileges."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Widely quoted stall counts (thousands of shops) were not verified on the sources used",
+    "Crowd volume inferred from wholesale role and hours rather than measured"
+   ],
+   "review_status": "corroborated"
+  },
+  {
+   "id": "chit-lom-c14",
+   "text_en": "The nearest major public park is Lumphini Park — 57.6 hectares, donated in 1925, bounded by Rama IV, Ratchadamri and Witthayu roads — whose article coordinates place its centre about 1.5 km south of BTS Chit Lom; no other named public park appears in the sources covering the immediate Chit Lom/Ratchaprasong block.",
+   "kind": "factual_report",
+   "topics": [
+    "green_space"
+   ],
+   "polarity": "tradeoff",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Lumphini Park",
+    "relation_to_entity": "outside",
+    "notes": "Centre-to-station straight-line distance computed from Wikipedia coordinates (13.7441N 100.5431E vs 13.73056N 100.54167E) is about 1.5 km; the park's northern Sarasin edge is nearer and polygon membership must be confirmed by the coordinator's geometry pass, not by raw radius. Absence of another named park in the block is an inference across the sources used."
+   },
+   "temporal_scope": {
+    "event_date": "1925-01-01",
+    "observed_period": null,
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_94e88a6dbde1",
+     "locator": "lead and history sections",
+     "paraphrase": "360 rai (57.6 ha) park; Witthayu, Rama IV and Ratchadamri roads form its eastern, southern and western borders; land donated 1925; lake, 2.5 km of jogging paths, library, playground and pool."
+    },
+    {
+     "source_id": "src_7e869560d326",
+     "locator": "Shopping / Attractions sections",
+     "paraphrase": "The Ratchaprasong district article lists malls, hotels and shrines but no public park within the shopping district itself."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Distance is computed from article coordinates, not surveyed",
+    "Whether the park's northern edge grazes the app unit is explicitly left to the coordinator's polygon check",
+    "Private greenery (hotel gardens, the 'Garden of Rose' theming at Central Chidlom) is not park access"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c15",
+   "text_en": "Bangkok's sidewalks — including those around Ratchaprasong — were described by the BMA in May 2024 as historically notorious for being uneven, easily damaged and a tripping hazard; Ratchadamri and Phloen Chit sidewalks had been rebuilt, Ratchaprasong was being renovated under a 16-route programme, and 38 more routes were planned for 2024 plus 22 in 2025 under 10 new design standards.",
+   "kind": "factual_report",
+   "topics": [
+    "infrastructure",
+    "recent_changes",
+    "walkability"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchadamri / Phloen Chit / Ratchaprasong sidewalks",
+    "relation_to_entity": "entire_unit",
+    "notes": "The named routes are the unit's main ground-level streets."
+   },
+   "temporal_scope": {
+    "event_date": "2024-05-01",
+    "observed_period": "programme reported running 2024-2025",
+    "recheck_by": "2026-12-01",
+    "notes": "Works status as of the report date; ground conditions may since have changed."
+   },
+   "evidence": [
+    {
+     "source_id": "src_410615786a1c",
+     "locator": "article body",
+     "paraphrase": "BMA spokesperson Ekwaranyu Amrapal said 16 routes of sidewalks are being improved, naming Ratchadamri, Phloen Chit and Udomsuk; a photo caption notes renovation 'including Ratchaprasong'; sidewalks historically 'notorious for being uneven, easily damaged, and often a tripping hazard'; 1,000 km goal with 10 new standards (10 cm ramps, tactile paving, drainage changes)."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Reports the city's own progress framing; no independent walkability audit cited",
+    "Does not quantify how much of Ratchaprasong was complete at publication"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c16",
+   "text_en": "The blocks around the station pack CentralWorld (one of Southeast Asia's largest malls), the Central Chidlom flagship, Gaysorn Village, Gaysorn Amarin, Big C Ratchadamri with a fitness centre and 10-screen cineplex, and the Grand Hyatt Erawan, while Peninsular Plaza closed on 1 March 2022 and the Police Hospital and Mater Dei School adjoin the station area.",
+   "kind": "factual_report",
+   "topics": [
+    "daily_essentials",
+    "healthcare",
+    "identity",
+    "shopping"
+   ],
+   "polarity": "mixed",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Ratchaprasong shopping district",
+    "relation_to_entity": "entire_unit",
+    "notes": "Southern blocks (Big C Ratchadamri, CentralWorld's southern half) sit toward the unit's edge; polygon check pending."
+   },
+   "temporal_scope": {
+    "event_date": "2022-03-01",
+    "observed_period": "composition as of 2026",
+    "recheck_by": null,
+    "notes": "Peninsular Plaza closure date from the district article."
+   },
+   "evidence": [
+    {
+     "source_id": "src_7e869560d326",
+     "locator": "Shopping and Hotels sections",
+     "paraphrase": "CentralWorld described as Southeast Asia's second largest mall; Central Chidlom the flagship of Thailand's biggest retail chain; Gaysorn Village upscale designer goods; Gaysorn Amarin formerly Sogo; Big C Ratchadamri has shops, a fitness centre and a 10-screen EGV Metropolis cineplex; The Peninsular Plaza closed 1 March 2022; Grand Hyatt Erawan built on the original Erawan Hotel site."
+    },
+    {
+     "source_id": "src_4aab2c4fca93",
+     "locator": "สถานที่ใกล้เคียง (nearby places)",
+     "paraphrase": "Nearby sites include Erawan Shrine, the Police Hospital and Mater Dei School, whose adjacency caused the 'No Way Station' privacy-wall controversy on platform 2."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "'Second largest mall in Southeast Asia' is a Wikipedia descriptor, not independently verified here",
+    "Police Hospital adjacency implies ambulance/siren traffic on Ratchadamri at times"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c17",
+   "text_en": "Agent commentary characterises Chidlom renters as skewed toward established professionals, long-term expats and diplomatic staff, with landlords favouring longer, stable tenancies and area rents described as 'toward the upper end of Bangkok's rental market'.",
+   "kind": "reported_perception",
+   "topics": [
+    "demographics",
+    "rent"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Chidlom rental market",
+    "relation_to_entity": "entire_unit",
+    "notes": ""
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "agent commentary observed November 2026",
+    "recheck_by": null,
+    "notes": ""
+   },
+   "evidence": [
+    {
+     "source_id": "src_a9838735cff2",
+     "locator": "market context paragraph",
+     "paraphrase": "The page describes Chidlom rents as sitting toward the upper end of Bangkok's rental market, a tenant profile skewed toward established professionals, long-term expats and diplomatic staff, and landlords favouring longer, stable tenancies."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "Single commercial agent's characterisation, unverified by tenancy data",
+    "US Embassy/Witthayu diplomatic presence nearby is consistent but not independently established here"
+   ],
+   "review_status": "proposed"
+  },
+  {
+   "id": "chit-lom-c18",
+   "text_en": "The area's daily rhythm is anchored by fixed retail hours — Platinum trading 09:00-20:00 and Central Chidlom 10:00-22:00 — with rooftop bars opening in late afternoon (Red Sky from 16:00, Sato San 18:00-02:00), so shrine-and-mall footfall dominates daytime and the block quiets to bar traffic after the malls close.",
+   "kind": "researcher_inference",
+   "topics": [
+    "rhythm"
+   ],
+   "polarity": "neutral",
+   "geography": {
+    "scope": "station_area",
+    "place_name": "Chit Lom / Ratchaprasong retail core",
+    "relation_to_entity": "entire_unit",
+    "notes": "Inferred from posted hours; no footfall counts found."
+   },
+   "temporal_scope": {
+    "event_date": null,
+    "observed_period": "hours as posted on sources read November 2026",
+    "recheck_by": null,
+    "notes": "Weekday/weekend split and seasonal (high-season November-February) variation not verified."
+   },
+   "evidence": [
+    {
+     "source_id": "src_d9cb7bb63d51",
+     "locator": "opening hours",
+     "paraphrase": "Platinum Fashion Mall open 09:00-20:00 daily."
+    },
+    {
+     "source_id": "src_d5cef1b4dadc",
+     "locator": "store details",
+     "paraphrase": "Central Chidlom hours 10:00-22:00 daily."
+    },
+    {
+     "source_id": "src_f8238a88f6b6",
+     "locator": "Red Sky / Sato San entries",
+     "paraphrase": "Red Sky opens 4pm daily; Sato San open daily 6pm-2am."
+    }
+   ],
+   "supporting_claim_ids": [],
+   "conflicts_with": [],
+   "limitations": [
+    "No pedestrian-count or event-calendar data found",
+    "Thursday devotional custom at the shrine is widely repeated in Thai sources but was not confirmed from a strong source in this session"
+   ],
+   "review_status": "corroborated"
+  }
+ ],
+ "question_answers": [
+  {
+   "id": "Q01",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c01",
+    "chit-lom-c02",
+    "chit-lom-c03",
+    "chit-lom-c13",
+    "chit-lom-c14"
+   ],
+   "notes": "Aliases: Chit Lom / Chidlom (Thai ชิดลม). Station in Pathum Wan district (Lumphini subdistrict for the Ratchaprasong side); the Platinum/Pratunam edge crosses into Ratchathewi (c13). Named corridors: Phloen Chit Rd, Rama I Rd, Ratchadamri Rd, Lang Suan Rd, Chit Lom Rd. Clearly inside per sources: Erawan Shrine, Central Chidlom, Gaysorn, CentralWorld, Grand Hyatt, Amarin; edge cases for the coordinator's polygon pass: Platinum (partial), Lumphini Park (outside on centre distance, north edge closer), Scope Langsuan/Tonson projects."
+  },
+  {
+   "id": "Q02",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c03",
+    "chit-lom-c06",
+    "chit-lom-c02"
+   ],
+   "notes": "The distinctive everyday experience is commerce fused with devotion: office workers and tourists circling the four-faced Brahma with hired dance troupes (c03, c06) while commuting on a 513 m skywalk threaded through malls (c02). Whose: worshippers, retail workers, shoppers, hotel guests."
+  },
+  {
+   "id": "Q03",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c02",
+    "chit-lom-c10",
+    "chit-lom-c11",
+    "chit-lom-c12"
+   ],
+   "notes": "What people value, by mechanism: zero-transfer mall-to-mall reach (verified skywalk engineering, c02); restaurant density on quiet sois (c10, guide opinion); rooftop views (c11, guide opinion); a rebuilt flagship for one-stop retail (c12, operator claim). Guide opinion vs fact separated by claim kind."
+  },
+  {
+   "id": "Q04",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c15",
+    "chit-lom-c13",
+    "chit-lom-c07",
+    "chit-lom-c05"
+   ],
+   "notes": "Deliberate counter-evidence: street-level sidewalks historically a tripping hazard with renovation ongoing (c15); wholesale crowds and long trading days at the Platinum edge (c13); rents at the top of the market (c07); and a protest/bombing history at the intersection itself (c04, c05). Unsuitable for budget renters and seekers of quiet residential streets."
+  },
+  {
+   "id": "Q05",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c18",
+    "chit-lom-c06",
+    "chit-lom-c13"
+   ],
+   "notes": "Rhythm inferred from posted hours and devotional practice: shrine devotion through the day (c06), mall core 09:00/10:00-20:00/22:00 (c18), bars from late afternoon (c18). Weekday/weekend and seasonal splits not verified — flagged in c18 limitations."
+  },
+  {
+   "id": "Q06",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c02",
+    "chit-lom-c15",
+    "chit-lom-c01"
+   ],
+   "notes": "Walk-to-transit reality: nine station access points and direct skybridges to Central Chidlom, Gaysorn, hotels and CentralWorld make the elevated access unusually good for the corridor (c02, c01); at street level the BMA itself called sidewalks notorious and was mid-renovation in 2024 (c15). Skywalk covers the corridor, not the side sois. No walking times were derived from the 800 m radius."
+  },
+  {
+   "id": "Q07",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c12",
+    "chit-lom-c16",
+    "chit-lom-c10",
+    "chit-lom-c18"
+   ],
+   "notes": "Daily-life support is retail-heavy: Central Chidlom flagship with food/beauty floors and 10:00-22:00 hours (c12, c18), Big C Ratchadamri hypermarket with fitness centre and cineplex (c16), Police Hospital adjacent (c16), dense upmarket dining (c10). Ordinary everyday groceries skew premium rather than wet-market."
+  },
+  {
+   "id": "Q08",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c07",
+    "chit-lom-c08",
+    "chit-lom-c09"
+   ],
+   "notes": "Affordability: only asking rents available; November 2026 Chidlom listings 27,000-380,000 THB with a luxury cluster 80k-180k (c07); luxury benchmark tower 2BRs 70k-120k (c08). The app's 120k 2-bed override is top-of-cluster premium stock, not a median (c09). Sample limits: agent-portal snapshots, not signed leases."
+  },
+  {
+   "id": "Q09",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c14",
+    "chit-lom-c16"
+   ],
+   "notes": "Usable green: no named public park in the immediate block across the sources used; Lumphini Park (57.6 ha) is the nearest major park, its centre about 1.5 km south (c14). Tree cover and private gardens (hotel grounds, store theming) are not park access. This supports the brief's lead 4 ('almost no named park') and sits in tension with the app's green 9 — a scoring discussion for the coordinator, not changed here."
+  },
+  {
+   "id": "Q10",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c17",
+    "chit-lom-c02",
+    "chit-lom-c09",
+    "chit-lom-c14",
+    "chit-lom-c13"
+   ],
+   "notes": "Conditional fit: strong for car-free corporate expats, diplomatic staff and luxury shoppers who will pay upper-market rents (c17, c09) and value skywalk reach (c02); poor for budget renters (c09), park-and-quiet seekers (c14) and anyone allergic to wholesale-mall crowds at the Pratunam edge (c13). No universal 'best-area' claim made."
+  },
+  {
+   "id": "Q11",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c12",
+    "chit-lom-c15",
+    "chit-lom-c11",
+    "chit-lom-c04",
+    "chit-lom-c16"
+   ],
+   "notes": "Recent changes: 4bn-THB Central Chidlom transformation announced Dec 2024 completing through 2025 (c12); BMA sidewalk programme covering Ratchadamri/Phloen Chit with Ratchaprasong under renovation, 2024-2025 (c15); Sato San rooftop opened New Year's Eve 2025 (c11); 2015-bombing death-sentence verdict June 2026 (c04); Peninsular Plaza closed 2022 (c16). Event vs publication dates kept separate in each claim's temporal_scope."
+  },
+  {
+   "id": "Q12",
+   "status": "answered",
+   "claim_ids": [
+    "chit-lom-c09",
+    "chit-lom-c14",
+    "chit-lom-c05",
+    "chit-lom-c07"
+   ],
+   "notes": "Uncertainties: asking-vs-signed rent unknown and no corridor median published (c07, c09); PropertyScout's below-Bangkok-average anomaly unreconciled (c09); polygon membership of Platinum edge, Lumphini north edge and Lang Suan projects unresolved (c13, c14); the 'big bike protest at Erawan' lead unconfirmed in either language (c05 limitations); app green 9 vs named-park absence tension (c14). Outside the score: the June 2026 verdict's appeal (c04)."
+  }
+ ],
+ "editorial": {
+  "preview": {
+   "text_en": "A commerce-first skywalk junction where a Brahma shrine draws worshippers between two luxury department stores, and the nearest big park is about 1.5 km down Ratchadamri Road.",
+   "claim_ids": [
+    "chit-lom-c03",
+    "chit-lom-c14"
+   ]
+  },
+  "guide_lead": {
+   "text_en": "Chit Lom is the Ratchaprasong node where retail and ritual share one junction: a BTS station with nine access points, a 7.5 m-wide, 513 m-long skywalk strung across CentralWorld, Gaysorn and the Grand Hyatt, and the four-faced Phra Phrom statue enshrined there since 1956. The trade shows up in rents that run from 27,000 THB studios to six-figure two-bedrooms in towers like Magnolias Ratchadamri, where 120,000 THB is the ceiling of the standard two-bedroom range rather than a corridor median. Street level is the weaker layer: the BMA called city sidewalks historically a tripping hazard and was still renovating Ratchaprasong in 2024. It rewards corporate expats and shoppers; it taxes budget renters and anyone hunting for a park.",
+   "claim_ids": [
+    "chit-lom-c01",
+    "chit-lom-c02",
+    "chit-lom-c03",
+    "chit-lom-c07",
+    "chit-lom-c08",
+    "chit-lom-c09",
+    "chit-lom-c15",
+    "chit-lom-c14",
+    "chit-lom-c17"
+   ]
+  },
+  "strengths": [
+   {
+    "text_en": "Elevated connectivity is verified engineering, not brochure copy: nine station access points and a 513 m, 7.5 m-wide skywalk link Central Chidlom, Gaysorn, CentralWorld and on to Siam station without a street crossing.",
+    "claim_ids": [
+     "chit-lom-c02"
+    ]
+   },
+   {
+    "text_en": "Restaurant density on the quiet side sois is unusually high for central Bangkok — 8 of Time Out's 50 best sit on Phloen Chit, Lang Suan and Ratchadamri, led by Inddee at No. 8.",
+    "claim_ids": [
+     "chit-lom-c10"
+    ]
+   },
+   {
+    "text_en": "Everyday retail is deep: Central Chidlom reopened as a 4-billion-baht 'Store of Bangkok' flagship with a Sky Terrace straight onto the BTS, and Big C Ratchadamri adds a hypermarket, gym and cineplex.",
+    "claim_ids": [
+     "chit-lom-c12",
+     "chit-lom-c16"
+    ]
+   }
+  ],
+  "tradeoffs": [
+   {
+    "text_en": "Rents are the tax on the address: November 2026 listings ran 27,000-380,000 THB with the luxury cluster at 80k-180k, and the app's 120k two-bed is premium-building ceiling stock rather than a corridor median.",
+    "claim_ids": [
+     "chit-lom-c07",
+     "chit-lom-c08",
+     "chit-lom-c09"
+    ]
+   },
+   {
+    "text_en": "The crowd score has two engines: the shrine's daily devotional flow with hired dance troupes, and the Platinum Fashion Mall's 09:00-20:00 wholesale trade at the Pratunam edge.",
+    "claim_ids": [
+     "chit-lom-c06",
+     "chit-lom-c13"
+    ]
+   },
+   {
+    "text_en": "Skywalk gloss does not extend to the pavement: the BMA itself described sidewalks here as historically uneven and a tripping hazard, with Ratchaprasong still under renovation in May 2024.",
+    "claim_ids": [
+     "chit-lom-c15"
+    ]
+   }
+  ],
+  "day_night": [
+   {
+    "text_en": "Daytime belongs to worship and wholesale: shrine visitors circling all four faces of Phra Phrom while Platinum's seven wholesale floors trade from 09:00.",
+    "claim_ids": [
+     "chit-lom-c06",
+     "chit-lom-c13"
+    ]
+   },
+   {
+    "text_en": "Evenings thin out into hotel bars rather than street nightlife — Red Sky from 16:00 on the 55th floor, Sato San on the Moxy's 32nd, Speakeasy on Lang Suan — with the mall core closing between 20:00 and 22:00.",
+    "claim_ids": [
+     "chit-lom-c11",
+     "chit-lom-c18"
+    ]
+   },
+   {
+    "text_en": "The block has absorbed political weather before: the 2010 crackdown, the 2014 protests and the 2020-2021 wave all used this intersection, and the 2015 bombing still shapes its security memory through the June 2026 verdict.",
+    "claim_ids": [
+     "chit-lom-c04",
+     "chit-lom-c05"
+    ]
+   }
+  ],
+  "within_area_variation": [
+   {
+    "text_en": "Lang Suan and the side sois run quieter and restaurant-led, while the Ratchaprasong corridor is mall-and-shrine dense.",
+    "claim_ids": [
+     "chit-lom-c10",
+     "chit-lom-c03"
+    ]
+   },
+   {
+    "text_en": "The northern Pratunam edge flips register entirely: Platinum's wholesale crowds and Ratchathewi-district pavements rather than flagship retail.",
+    "claim_ids": [
+     "chit-lom-c13"
+    ]
+   },
+   {
+    "text_en": "Green access differs by degree, not kind: tree-lined streets and private gardens everywhere, an actual park only about 1.5 km south at Lumphini's centre.",
+    "claim_ids": [
+     "chit-lom-c14"
+    ]
+   }
+  ],
+  "conditional_fit": [
+   {
+    "text_en": "Fits corporate expats, diplomatic staff and long-stay professionals whom agents describe as the tenant base, and who can carry upper-market rents.",
+    "claim_ids": [
+     "chit-lom-c17",
+     "chit-lom-c09"
+    ]
+   },
+   {
+    "text_en": "Fits car-free shoppers and hotel guests who will live on the skywalk network.",
+    "claim_ids": [
+     "chit-lom-c02"
+    ]
+   },
+   {
+    "text_en": "Does not fit budget renters priced out at 45k+ for ordinary two-beds, nor families wanting a park within the block, nor seekers of club-district nightlife.",
+    "claim_ids": [
+     "chit-lom-c07",
+     "chit-lom-c14",
+     "chit-lom-c11"
+    ]
+   }
+  ],
+  "uncertainties": [
+   "All rent figures are asking prices; no signed-lease or median data was found, so the app's 45k/120k references cannot be validated against transactions (chit-lom-c07, chit-lom-c09).",
+   "Polygon membership is unresolved for the Platinum/Pratunam edge, Lumphini Park's northern corner and the Lang Suan projects; the coordinator's geometry pass decides these (chit-lom-c13, chit-lom-c14).",
+   "The 'big bike protest at Erawan' lead could not be confirmed in English or Thai mainstream coverage; only general 2020-2021 protest and 2021 car-mob history is documented (chit-lom-c05).",
+   "PropertyScout's portal shows area rents below its Bangkok average for every size class, an anomaly left unreconciled (chit-lom-c09)."
+  ]
+ },
+ "images": [],
+ "review": {
+  "status": "ready_for_review",
+  "researcher": "zcode-main (D-1 dispatch; ≤2 concurrent subagents)",
+  "reviewer": null,
+  "reviewed_at": null,
+  "checks": {
+   "identity": "pass",
+   "geography": "pass",
+   "sources": "pass",
+   "recency": "pass",
+   "claim_support": "pass",
+   "contradictions": "pass",
+   "copy": "pass",
+   "translations": "not_applicable",
+   "image_rights": "not_applicable"
+  },
+  "notes": [
+   "Researcher self-checks only; independent review still required (batch review/findings.md).",
+   "6 claim(s) carry explicit recheck_by flags for volatile facts.",
+   "open issue: Coordinator polygon checks needed: whether Lumphini Park's northern (Sarasin) edge, the Platinum/Pratunam edge, Magnolias Ratchadamri and the Lang Suan projects (Scope, Muniq, Tonson) fall inside the app's 800 m unit.",
+   "open issue: Brief lead 2 ('big bike-protest/temple-event history at Erawan') unconfirmed: Thai and English searches found no mainstream report of a big-bike convoy protest at the shrine; documented event history is the 2006 vandalism, the 17 Aug 2015 bombing (verdict June 2026), the 2010 red-shirt occupation/crackdown, 2014 protests and 2020-2021 demonstrations.",
+   "open issue: Rent evidence is asking-price-only from three agent portals; a signed-lease or median-rent dataset would settle the override-vs-median question properly.",
+   "open issue: PropertyScout's 'lower than Bangkok average' rent percentages for every bedroom type contradict the portal's own premium positioning of the area and were treated cautiously.",
+   "open issue: Access failures this session (logged once each): bangkokpost.com routes to a tollbit paywall endpoint; ddproperty.com returned HTTP 403; fazwaz.com area page 404; two 2015-era BBC URLs 404; tourismthailand.org attraction page returned no content; thainews.prd.go.th failed DNS resolution.",
+   "open issue: App green 9 vs the 'almost no named park' picture: sources support the absence of a named park in the immediate block; scoring reconciliation belongs to the coordinator.",
+   "open issue: The Thursday-devotional custom at Erawan Shrine is widely repeated in Thai secondary sources but was not verified from a strong primary source this session."
+  ]
+ }
+}

@@ -1,0 +1,335 @@
+{
+ "key": "st.saint-louis",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Saint Louis is the anti-Chong Nonsi: the Silom line's infill station S4 (opened 8 February 2021) sits where North Sathorn becomes South Sathorn, straddling Bang Rak and Sathon, above a neighbourhood of church, hospital and school rather than towers. Saint Louis Hospital (1898, Thailand's first Catholic hospital) is ~200 m from the platform, the Soi Saint Louis 3 food row supplies B40-70 lunches, and the sois read tree-lined and calm. Two ratings strain against the evidence: nightlife 9 despite guides calling the pocket's scene quiet, and green 7 against a mapped 0.0 ha of park. A known caveat, tracked as a pipeline item: the app's station anchor coordinate sits roughly 720 m from the real station node.",
+   "claims": [
+    "saint-louis-c01",
+    "saint-louis-c03",
+    "saint-louis-c05",
+    "saint-louis-c06",
+    "saint-louis-c07",
+    "saint-louis-c02"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Hospital-and-church neighbourhood infrastructure at walking distance: Saint Louis Hospital ~200 m from the platform plus schools and a documented multi-faith cluster.",
+     "claims": [
+      "saint-louis-c03",
+      "saint-louis-c04"
+     ]
+    },
+    {
+     "en": "A genuine local food row (St. Louis Soi 3) with long-standing B40-70 vendors, distinct from tourist Silom.",
+     "claims": [
+      "saint-louis-c05"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Nightlife 9 overstates the pocket: the sources describe a quiet, bar-scarce residential soi, with the nearest real bar clusters one or two stops away.",
+     "claims": [
+      "saint-louis-c06"
+     ]
+    },
+    {
+     "en": "No park inside the unit - Lumphini is ~1.4 km away across Rama IV - so green 7 rests entirely on buffer effects.",
+     "claims": [
+      "saint-louis-c07"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Office-clock days (lunch carts, hospital shifts) give way to shophouse-step evenings; the soi goes quiet well before the Sathorn tower bars do.",
+     "claims": [
+      "saint-louis-c10",
+      "saint-louis-c06"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The station frontage on Sathorn Road is office-block territory; one soi south toward Saint Louis Soi 2-3 the character flips to low-rise residential and food carts.",
+     "claims": [
+      "saint-louis-c01",
+      "saint-louis-c05"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Strong fit: Sathorn/Silom office workers and hospital-adjacent households who want calm, walkable sois and BTS access without interchange crowds.",
+     "claims": [
+      "saint-louis-c09",
+      "saint-louis-c10"
+     ]
+    },
+    {
+     "en": "Poor fit: nightlife-first renters and park users - both 9s/7s in the scorecard trace to neighbouring units' amenities, not this pocket's.",
+     "claims": [
+      "saint-louis-c06",
+      "saint-louis-c07"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Anchor mismatch: app anchor '@13.7273-ish' vs OSM station node 13.72082, 100.52669 - >=720 m apart; unit membership near the anchor is unreliable pending coordinator verification (saint-louis-c02).",
+   "rating nightlife (9): no in-soi venue cluster found in any source; likely catchment-edge borrowing (saint-louis-c06).",
+   "rating green (7): zero mapped park confirmed; mechanism inferred (saint-louis-c07).",
+   "Rent comparison rests on 2019 listings plus 2026 highlight-level guides; no current portal median for this pocket (saint-louis-c08).",
+   "2024-2026 change evidence is thin - a gap, not a verified 'nothing happened'."
+  ],
+  "attribution_required": [
+   "saint-louis-c02"
+  ]
+ },
+ "claims": [
+  {
+   "id": "saint-louis-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2021-02-08",
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "coordinator (app anchor + polygon)"
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c03",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": "1898",
+    "observed": null,
+    "recheck": "coordinator polygon audit"
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c04",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2019 snapshot; echoed 2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Vendor survival since 2019 not individually verified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c06",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2019-2026 guides",
+    "recheck": null
+   },
+   "limitations": [
+    "All three sources highlight-level or pre-station; the app's 16-venue count not independently reproduced"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c07",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "OSM snapshot 2026-11-07",
+    "recheck": "coordinator polygon audit"
+   },
+   "limitations": [
+    "'Green 7' mechanism inferred, not documented; app's scoring internals unknown"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c08",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "2019 listings + 2026 guide",
+    "recheck": null
+   },
+   "limitations": [
+    "No current portal medians obtained for this pocket; BK listing prices are 7 years old"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c09",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c10",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2019-2026 guides",
+    "recheck": null
+   },
+   "limitations": [
+    "Highlight-level sources only"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026",
+    "recheck": null
+   },
+   "limitations": [
+    "Absence of findings is not proof of absence; Thai-language search for ย่านเซนต์หลุยส์ news was not run beyond the station article"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "saint-louis-c12",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2026 guides",
+    "recheck": null
+   },
+   "limitations": [
+    "No sidewalk measurements; highlight-level sources"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap via Overpass API",
+    "family": "OpenStreetMap via Overpass API"
+   }
+  },
+  {
+   "id": "src_f7b5c3011ef2",
+   "url": "https://th.wikipedia.org/wiki/สถานีเซนต์หลุยส์",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_36aae08f9016",
+   "url": "https://en.wikipedia.org/wiki/Saint_Louis_Hospital",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_0c30efbe3854",
+   "url": "https://www.bkmagazine.com/city-living/should-you-live-sathorns-soi-st-louis/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "BK Magazine",
+    "family": "expat_lifestyle_press"
+   }
+  },
+  {
+   "id": "src_f2ca06cf9697",
+   "url": "https://www.superagent.co/en/blog/saint-louis-bts-station-quiet-sathorn-pocket-rental-guide",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Superagent",
+    "family": "real_estate_content"
+   }
+  },
+  {
+   "id": "src_72ccd1bf6f8f",
+   "url": "https://planwellabroad.com/articles/living-in-sathorn-bangkok",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Plan Well Abroad",
+    "family": "expat_lifestyle_press"
+   }
+  },
+  {
+   "id": "src_acc47c013106",
+   "url": "https://www.thailandstarterkit.com/moving/living-in-sathorn/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thailand Starter Kit",
+    "family": "expat_lifestyle_press"
+   }
+  },
+  {
+   "id": "src_bdc4a9a49b6c",
+   "url": "https://roavara.com/sathorn-area-guide/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Roavara",
+    "family": "real_estate_content"
+   }
+  },
+  {
+   "id": "src_1bed4b558b36",
+   "url": "https://connex.in.th/en/content/bts-saint-louis",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Connex Property",
+    "family": "real_estate_content"
+   }
+  }
+ ]
+}

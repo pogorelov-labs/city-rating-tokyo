@@ -1,0 +1,1311 @@
+{
+ "wave": "C-6/G14 link-health wave 1",
+ "generated_at": "2026-11-08T18:02:36Z",
+ "url_count": 162,
+ "summary": {
+  "ok": 152,
+  "http-error": 6,
+  "network-error": 4
+ },
+ "policy": "dead URLs are flagged on the source record; affected claims downgrade to archived-citation status — never deleted silently",
+ "results": [
+  {
+   "url": "https://amazingproperties.org/search/bangkok/condo-for-rent/chidlom",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://article.redprice.co/lalaisap-silom5/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://asianews.network/bangkok-car-free-2026-encourages-residents-to-switch-travel-modes/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://bangkokforvisitors.com/districts/victory-monument/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://bangkokvenues.com/areas/siam/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://brownpoliticalreview.org/lost-in-transformation",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://e.vnexpress.net/news/travel/places/49-storey-ghost-tower-in-bangkok-goes-viral-after-surviving-powerful-earthquake-4869103.html",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://editors.spacebar.th/business/chatuchak-crisis-half-number-shoppers-disappeared-leaving-only-13000-stalls-vendors",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/BNH_Hospital",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Benjakitti_Park",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/CentralWorld",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Central_GR9",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Charoen_Krung_Road",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Park",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Park_MRT_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Chatuchak_Weekend_Market",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Chit_Lom_BTS_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Erawan_Shrine",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Hua_Lamphong_MRT_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Hua_Lamphong_railway_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Krung_Thep_Aphiwat_Central_Terminal",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom",
+    "st.sala-daeng",
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/MRT_Orange_Line",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Makkasan_station_(Airport_Rail_Link)",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Mo_Chit_2_Bus_Terminal",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Mo_Chit_BTS_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Orange_Line_(Bangkok)",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Patpong",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Phetchaburi_MRT_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Phra_Ram_9_MRT_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Platinum_Fashion_Mall",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Pratunam,_Bangkok",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Queen_Sirikit_Park",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Ratchaprasong",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Sala_Daeng_BTS_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Santiphap_Park",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Saphan_Taksin_BTS_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Sathorn_Unique_Tower",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Si_Lom_MRT_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Siam_BTS_station",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Sra_Pathum_Palace",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Victory_Monument_(Bangkok)",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Wachirabenchathat_Park",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/Wat_Pathum_Wanaram",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://en.wikivoyage.org/wiki/Bangkok/Ratchada",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://futuresoutheastasia.com/makkasan/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://journals.open.tudelft.nl/footprint/article/view/764",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://lanta.news/articles/14-year-old-paragon-shooter-showing-good-behavior-in-psychiatric-care",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://lebua.com/restaurants/sky",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://map.uniqlo.com/th/th/detail/11400003",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://mgronline.com/business/detail/9600000113241",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://moneyandbanking.co.th/2023/70012/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://office.centralpattana.co.th/office/central-rama-9",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://propertyhub.in.th/en/condo-for-rent/project-magnolias-ratchadamri-boulevard",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://propertyscout.co.th/en/bangkok/bts/chit-lom",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://propertyscout.co.th/en/bangkok/makkasan/rentals/condo",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://propertyscout.co.th/en/bangkok/phra-ram-9/rentals/condo",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://propertyscout.co.th/en/bangkok/talat-noi/rentals",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://propertyscout.co.th/en/bangkok/victory-monument/rentals/condo/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://propertyscout.co.th/en/location-guides/sathorn-neighborhood-guide",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://readthecloud.com/social/public-space/khlong-phadung-krung-kasem/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://taraohreilly.com/silom-bangkok-neighbourhood-eat-see-stay-guide/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://tenarapartners.com/guide-rama9.html",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%95%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B9%8C%E0%B8%9E%E0%B8%87%E0%B8%A8%E0%B9%8C",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%8A%E0%B8%B4%E0%B8%94%E0%B8%A5%E0%B8%A1",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/วังสระปทุม",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/สถานีรถไฟกรุงเทพ",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://th.wikipedia.org/wiki/สวนจตุจักร",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://thepattayanews.com/2025/09/17/revamping-bangkoks-iconic-victory-monument-a-major-upgrade-for-a-historic-hub/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://thestandard.co/bangkok-chatuchak-market-rent-fines/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://thestandard.co/makkasan-complex-mega-project/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://thethaiger.com/news/bangkok/bangkok-greenlights-136m-baht-upgrade-for-victory-monument",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://thethaiger.com/news/bangkok/bangkoks-historic-hua-lamphong-station-plans-major-events-and-exhibitions",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://thethaiger.com/news/bangkok/times-up-stallholders-at-chatuchak-weekend-market-told-to-leave",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://thethaiger.com/news/national/bangkoks-jodd-fairs-market-is-relocating",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://thethaiger.com/thai-life/property/bangkok-rent-neighbourhood-budget-2026",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://travjoy.com/blog/jodd-fairs-night-market-bangkok-a-complete-2026-guide-to-the-ratchada-site",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://us.trip.com/travel-guide/attraction/bangkok/saphan-taksin-public-park-137366945",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://web.codi.or.th/index.php/20240929-57255",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://www.bangkokbiznews.com/business/business/1194818",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.bangkokbiznews.com/news/news-update/1213716",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.bangkokpost.com/business/general/3098902/central-park-mall-launch-ups-rivalry",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.bangkokpost.com/thailand/general/2954112/vendors-evicted-from-profitless-chatuchak-zone",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.bangkokpost.com/thailand/general/2964115/hundreds-of-vendors-at-chatuchak-market-given-deadline-to-move",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.bangkokpost.com/thailand/general/3105765/victory-monument-slated-for-overhaul",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.bangkokpost.com/thailand/general/3310515/skywalk-to-complete-victory-monument-loop-in-october",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.bbc.com/news/articles/ckg8v51g9lno",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://www.bkmagazine.com/city-living/how-to-spend-24-hours-silom-and-sathorn-local/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.bkmagazine.com/food/street-food/restaurants-article-chow-down-charoenkrung",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://www.centralgroup.com/en/newsroom/corporate-news/713/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://www.centralworld.co.th/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.chaophrayaexpressboat.com/chaophrayaexpressboat?lang=en",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://www.demflyers.com/2016/01/18/how-to-survive-a-bangkok-ping-pong-show-without-getting-horribly-scammed",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.dephanakron.com/chinatown-bangkok-yaowarat",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.eeco.or.th/en/high-speed-rail-linking-three-airports/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://www.erawanbangkok.com/en/erawan-shrine/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://www.feastographyblog.com/blog/boat-noodle-alley",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.gov.uk/foreign-travel-advice/thailand/safety-and-security",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/sathon",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://www.independent.co.uk/news/bangkok-ap-thailand-southeast-asia-china-b2265255.html",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.khaosodenglish.com/featured/2024/05/01/bangkok-makes-progress-in-improving-sidewalks-and-sets-10-standards/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://www.khaosodenglish.com/life/food/2017/04/28/pride-produce-puts-bangkoks-tor-kor-market-among-worlds-best/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.khaosodenglish.com/news/2026/08/15/seven-youths-arrested-over-robbery-of-japanese-tourist-in-bangkok",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://www.khaosodenglish.com/news/business/2025/09/06/central-park-the-latest-game-changer-in-bangkoks-downtown-scene/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.linkedin.com/posts/niramon-serisakul_rajavithi-skywalk-opened-today-ahead-of-activity-7511456200883056640-JYrf",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.matichon.co.th/prachachuen/news_5869979",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.nationthailand.com/in-focus/30195551",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.nationthailand.com/news/general/40041314",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.nationthailand.com/thailand/bangkok/40060365",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.nationthailand.com/thailand/bangkok/40068526",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.nationthailand.com/thailand/bangkok/40070409",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.nationthailand.com/thailand/general/40028819",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.nationthailand.com/thailand/general/40029072",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.nationthailand.com/thailand/general/40034305",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.newswit.com/th/ifpkxsv4fq030van1nzc9dol9n8kjfom",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.phuket101.net/bangkok/hua-lamphong-railway-station/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.pilotguides.com/articles/bangkok-shopping-guide/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.piyavate.com/en/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://www.prachachat.net/business/news-1877826",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.prachachat.net/economic/news-2059265",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.prachachat.net/hilight-prachachat/news-194941",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.prnewswire.com/ae/news-releases/the-store-of-bangkok-central-chidlom-elevates-retail-experience-as-the-no-1-luxury-department-store-302337219.html",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://www.siamparagon.co.th/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.siamparagon.co.th/directory/store/gourmet-market-occupant-927",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.silomcomplex.co.th/en/get-to-know",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.soidb.com/bangkok/store/uniqlo-central-rama9.html",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://www.sonicresidence.com/condo/chatuchak",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.superagent.co/en/blog/bangkok-condo-rental-prices-near-each-bts-station-2025-data",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.superagent.co/en/blog/renting-near-jj-market-chatuchak-weekend-market-living-guide",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.superagent.co/en/blog/renting-near-silom-food-street-bangkoks-lunch-district-living-guide",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.superagent.co/en/blog/silom-and-bangrak-condo-rental-prices-the-business-district-breakdown",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.thailand-property.com/condos-for-rent/bangkok/ratchathewi/makkasan",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://www.thailandplus.tv/archives/548927",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://www.thaipbs.or.th/news/content/343007",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://www.thaipbs.or.th/news/content/500677",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.thaipbsworld.com/climate/worsening-air-quality-in-bangkok,-with-excessive-pm2.5-dust-in-all-districts",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.thaipbsworld.com/travel-tourism/rethinking-victory-monument:-bangkok%E2%80%99s-busiest-bus-hub",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.thaitrainguide.com/2023/01/17/full-list-of-62-trains-remaining-at-hua-lamphong-station/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.thansettakij.com/general-news/647960",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.thansettakij.com/general-news/667739",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.thattravelblog.com/blog/chinatown-songwat-talat-noi-bangkok-guide",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.hua-lamphong"
+   ]
+  },
+  {
+   "url": "https://www.thebangkokinsight.com/news/business/economics/883716",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.saphan-taksin"
+   ]
+  },
+  {
+   "url": "https://www.thefinestthai.com/2026/06/03/soi-lalai-sap-silom-lunch-market-street-food-guide/",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.timeout.com/bangkok/bars/best-rooftop-and-sky-high-bars",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://www.timeout.com/bangkok/news/rajavithi-skywalk-victory-monument-083126",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  },
+  {
+   "url": "https://www.timeout.com/bangkok/restaurants/the-50-best-restaurants-in-bangkok",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://www.timeout.com/bangkok/things-to-do/chatuchak-weekend-market-guide",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.timeout.com/bangkok/things-to-do/siam-square-your-ultimate-neighbourhood-guide",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/1456",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.travelfish.org/eatandmeet_profile/thailand/bangkok_and_surrounds/bangkok/bangkok/3133",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.wongnai.com/restaurants?regions=174&categories=3",
+   "status": 200,
+   "error": null,
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://policy.bangkok.go.th/watch/pub-project/legacy?id=63918",
+   "status": 403,
+   "error": "http 403",
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://th.usembassy.gov/common-scams-to-avoid/",
+   "status": 403,
+   "error": "http 403",
+   "cited_by": [
+    "st.mo-chit"
+   ]
+  },
+  {
+   "url": "https://www.ddproperty.com/en/condo-for-rent/at-silom-grand-terrace-124",
+   "status": 403,
+   "error": "http 403",
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.ddproperty.com/en/condo-for-rent/near-cen-siam-bts-2123",
+   "status": 403,
+   "error": "http 403",
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.ddproperty.com/en/property/klass-siam-bangkok-for-rent-11808978",
+   "status": 403,
+   "error": "http 403",
+   "cited_by": [
+    "st.siam"
+   ]
+  },
+  {
+   "url": "https://www.platinumfashionmall.com/",
+   "status": 520,
+   "error": "http 520",
+   "cited_by": [
+    "st.chit-lom"
+   ]
+  },
+  {
+   "url": "https://aroimakmak.com/jodd-fairs",
+   "status": null,
+   "error": "RemoteDisconnected",
+   "cited_by": [
+    "st.phra-ram-9"
+   ]
+  },
+  {
+   "url": "https://dusitcentralpark.com/",
+   "status": null,
+   "error": "RemoteDisconnected",
+   "cited_by": [
+    "st.sala-daeng"
+   ]
+  },
+  {
+   "url": "https://www.hotels.com/go/thailand/bangkok-pratunam-nightlife",
+   "status": null,
+   "error": "TimeoutError",
+   "cited_by": [
+    "st.phetchaburi"
+   ]
+  },
+  {
+   "url": "https://www.hotels.com/go/thailand/best-victory-monument-shopping",
+   "status": null,
+   "error": "TimeoutError",
+   "cited_by": [
+    "st.victory-monument"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,349 @@
+{
+ "key": "din-daeng",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Din Daeng packs city-hall offices, a top-tier daily-essentials layer and four MRT Blue Line stations into 8.35 km2 between Vibhavadi and Ratchadaphisek, with rents from the mid-teens - but it is also the district Bangkok's own livability index put last in 2025, and the Pollution Control Department's noisiest monitoring point (71.6-81.6 dB(A), every measured day over standard). Living here means corridor convenience with corridor noise, markets at the door, and a forest strip rather than a park.",
+   "claims": [
+    "din-daeng-c02",
+    "din-daeng-c08",
+    "din-daeng-c04",
+    "din-daeng-c03",
+    "din-daeng-c05"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Four in-polygon MRT Blue stations (Phra Ram 9, Cultural Centre, Huai Khwang, Sutthisan) give the khet a genuine rail spine without a BTS wait-list price.",
+     "claims": [
+      "din-daeng-c02"
+     ]
+    },
+    {
+     "en": "Daily life is dense and cheap: wet markets plus Big C Extra and Fortune Town on the corridor, 1-bed rents of roughly 13-27k THB, and the Jodd Fairs night-market strip running 17:00-01:00.",
+     "claims": [
+      "din-daeng-c08",
+      "din-daeng-c05",
+      "din-daeng-c06"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Objective environmental strain: the PCD's Din Daeng station is the city's noisiest (71.6-81.6 dB(A), 100% of measured days over the 70 dB(A) standard), and Rocket Media Lab's Bangkok Index 2025 ranks the khet last of 50 (17.35/50).",
+     "claims": [
+      "din-daeng-c03",
+      "din-daeng-c04"
+     ]
+    },
+    {
+     "en": "Green 8 overstates what the map shows: OSM named public green inside the khet sums to roughly 3 ha, led by the 1.53-ha Vibhavadi forest strip - the 15.5 ha app figure needs a methodology check.",
+     "claims": [
+      "din-daeng-c10"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Days run on civil-service and market rhythms around City Hall 2 and the wet markets; evenings shift to the Ratchadaphisek corridor (Jodd Fairs to 01:00) while the flat sois go quiet - with traffic noise never fully dropping, per the monitoring record.",
+     "claims": [
+      "din-daeng-c06",
+      "din-daeng-c03"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Khwaeng Din Daeng's flats-markets-schools half and khwaeng Ratchadaphisek's malls-stations-night-market half are effectively two neighbourhoods; the Phetchaburi/Makkasan transit cluster at the southern tip sits just outside the app polygon (batch-3's Makkasan khwaeng, Ratchathewi).",
+     "claims": [
+      "din-daeng-c01",
+      "din-daeng-c02"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Choose it if you want CBD-adjacent rents (13k studio / 25-27k 2-bed) with four MRT stations and 24-hour-grade food access, and can tolerate road noise as a constant.",
+     "claims": [
+      "din-daeng-c05",
+      "din-daeng-c02",
+      "din-daeng-c03"
+     ]
+    },
+    {
+     "en": "Skip it if green space, quiet, or a BTS line matter most: the largest park is a roadside forest strip, the measured noise is the city's worst, and the livability index placed the khet 50th of 50 in 2025.",
+     "claims": [
+      "din-daeng-c10",
+      "din-daeng-c03",
+      "din-daeng-c04"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Unresolved: park_ha 15.5 counting rule (OSM named green ~3 ha); safety 5 has no published statistics (perception label recommended); the 17.35 livability score rests on snippet-corroboration (TNN 403); the red-line missing link through the khet is not under construction with a firm date. Anchors verified against OSM with no mismatch."
+  ],
+  "attribution_required": [
+   "din-daeng-c01",
+   "din-daeng-c02",
+   "din-daeng-c05",
+   "din-daeng-c11"
+  ]
+ },
+ "claims": [
+  {
+   "id": "din-daeng-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "app district polygon excludes the Phetchaburi/Makkasan transit cluster at the southern tip even though the corridor abuts the khet",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (din-daeng)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "missing-link construction timing (~2028) rests on search-result reporting, not a body-read article; Thai wiki's five-station list includes 'Ratchadaphisek', for which no operating Blue Line station exists - treated as a naming slip for one of the verified four",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (din-daeng)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "data is 2019; no newer khet-level measurement located in EN or TH"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c04",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "TNN article (the primary write-up of the 17.35 figure) is Cloudflare-403 and was not body-read; the figure is corroborated by search snippets of TNN and by English Wikipedia, not by a full read of the index's own per-district page"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c05",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "portal averages, not a census; USD figures converted at portal display rate"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "stall count is the travel-guide's figure; source is an affiliate travel blog (commercial context flagged)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c07",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "absence of evidence is not evidence of safety; the two 2025 cases are organized-crime flavored and do not measure everyday street safety"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "OSM under-counts stalls; the 1,322 figure is the app's own count and was not independently reproducible"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c09",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the app crowd score's own method is not documented; this is the mechanism we can defend from sources"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c10",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "OSM misses BMA pocket parks without names; park_ha 15.5 is the app's own figure - coordinator methodology decision required"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c11",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "single-source (Wikipedia) political fact; no independent news body-read located for the seat flip"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "din-daeng-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "OSM facility list is not an audit of membership access; some listed gyms are institutional (UTCC)"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_4c00563a48c5",
+   "url": "https://en.wikipedia.org/wiki/Din_Daeng_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_724a8ef73cc8",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%94%E0%B8%87",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_cd7699c7ba7b",
+   "url": "https://www.thaipbs.or.th/news/content/281469",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS",
+    "family": "Thai PBS"
+   }
+  },
+  {
+   "id": "src_412c7aba2e17",
+   "url": "https://www.khaosodenglish.com/news/2025/10/17/bangkok-police-bust-chinese-men-in-three-unrelated-cases-in-single-day/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Khaosod English",
+    "family": "Khaosod English"
+   }
+  },
+  {
+   "id": "src_15ba7563b7ed",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/din-daeng",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  },
+  {
+   "id": "src_cbf59de46ad5",
+   "url": "https://travjoy.com/blog/jodd-fairs-night-market-bangkok-a-complete-2026-guide-to-the-ratchada-site",
+   "body_read": true,
+   "attribution": {
+    "publisher": "TravJoy",
+    "family": "TravJoy"
+   }
+  },
+  {
+   "id": "src_9ba90629ae34",
+   "url": "https://bkkindex.rocketmedialab.co/graph",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Rocket Media Lab",
+    "family": "Rocket Media Lab"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap via Overpass API",
+    "family": "OpenStreetMap via Overpass API"
+   }
+  },
+  {
+   "id": "src_ee4c43c8d5a9",
+   "url": "https://www.tnnthailand.com/tnnexclusive/238186",
+   "body_read": false,
+   "attribution": {
+    "publisher": "TNN Thailand",
+    "family": "TNN Thailand"
+   }
+  }
+ ]
+}

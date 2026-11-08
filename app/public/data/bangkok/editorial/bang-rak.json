@@ -1,0 +1,560 @@
+{
+ "key": "bang-rak",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Bang Rak is the district Bangkok works in: the Sala Daeng BTS x MRT Si Lom interchange, the Silom office strip, and the Charoen Krung riverside with the old Post Office, Assumption Cathedral and two Michelin one-star kitchens. On office weekdays Soi Convent turns into one of the city's densest lunch-cart corridors between 11:00 and 13:30, then the same blocks go quiet. The district's green space is thin inside its own boundary — Lumphini Park is across Rama IV in Pathum Wan — and the much-photographed canal park near Chong Nonsi is only partly built and mostly on the Sathon side. It ranks near the top for connectivity and food, and that ranking is earned at the interchange corner, not uniformly across its five khwaeng.",
+   "claims": [
+    "bang-rak-c02",
+    "bang-rak-c03",
+    "bang-rak-c06",
+    "bang-rak-c07",
+    "bang-rak-c09",
+    "bang-rak-c10",
+    "bang-rak-c11",
+    "bang-rak-c12",
+    "bang-rak-c13",
+    "bang-rak-c18"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Four BTS stations plus an MRT interchange inside the khet, with Saphan Taksin doubling as the Chao Phraya boat hub — car-free centrality few districts match.",
+     "claims": [
+      "bang-rak-c03"
+     ]
+    },
+    {
+     "en": "Daily needs cluster at the interchange: Silom Complex with a Tops supermarket at Sala Daeng, Robinson Bangrak at Silom x Charoen Krung, and BNH/Lerdsin hospitals inside the district.",
+     "claims": [
+      "bang-rak-c13",
+      "bang-rak-c12"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Asking rents sit well above most of the city (1-bed averaging ~THB 28-29k in Oct 2026) and the practical park, Lumphini, lies outside the khet across Rama IV.",
+     "claims": [
+      "bang-rak-c09",
+      "bang-rak-c10"
+     ]
+    }
+   ],
+   "dayNight": [],
+   "variation": [
+    {
+     "en": "Charoen Krung riverside: heritage and creative anchor (1940 Post Office/TCDC, Assumption Cathedral) with quieter high-end eating, plus the partially built canal-park corridor at its Sathon-facing edge.",
+     "claims": [
+      "bang-rak-c02",
+      "bang-rak-c11"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Fits: CBD workers in the Silom/Sathorn/Charoen Krung corridor and anyone prioritizing two-rail-plus-river access without a car — the guides' most repeated rationale.",
+     "claims": [
+      "bang-rak-c03",
+      "bang-rak-c18"
+     ]
+    },
+    {
+     "en": "Strains: budget renters expecting CBD centrality at mid-market prices — only the older soi buildings off Surawong drop to 15-25k THB, and the most affordable averages sit above the app's 1-bed figure.",
+     "claims": [
+      "bang-rak-c09"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Silom Walking Street's current schedule and very operation are unverified since ~2020; sources conflict on frequency.",
+   "No district-specific flood record either way: 2011 spared central Bangkok; Sept 2026 citywide flooding did not name Bang Rak streets.",
+   "The app's 26k/55k rents match asking averages in range, but signed-lease data and HipFlat's methodology are unavailable.",
+   "MahaNakhon's in-district attribution rests on one encyclopedia source without a cadastral check.",
+   "Expressway proximity/noise near Saphan Taksin was not verified.",
+   "Resident-authored accounts (Reddit, forums) were inaccessible (HTTP 403), so livability perceptions lean on commercial and lifestyle guides.",
+   "Asiatique, River City, temple and pier counts in the app facts were not independently verified in this pass."
+  ],
+  "attribution_required": [
+   "bang-rak-c01",
+   "bang-rak-c04",
+   "bang-rak-c16"
+  ]
+ },
+ "claims": [
+  {
+   "id": "bang-rak-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current administrative structure",
+    "recheck": null
+   },
+   "limitations": [
+    "Khwaeng areas/populations not verified against primary BMA records (webportal.bangkok.go.th returned 403)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c02",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "long-standing institutions",
+    "recheck": null
+   },
+   "limitations": [
+    "Wikipedia does not explicitly call Charoen Krung 'the first paved road', only an 1862 main thoroughfare; the common 'first modern road' framing was not confirmed in a body read",
+    "Le Du's star line was not visible in the retrieved Michelin excerpt (80/20's was); its star status is corroborated only via search results referencing the same 2026 guide",
+    "The app's '3 Michelin stars + 3 Bib Gourmand' count was not independently reproduced"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current network",
+    "recheck": null
+   },
+   "limitations": [
+    "Note: Wikipedia's transport list also includes BTS Saint Louis and MRT Lumphini in its district frame; Saint Louis station is generally at the Sathon-side end of its layout — edge allocations of boundary-adjacent stations were not cadastrally verified",
+    "No walking-time conversions made per method rules"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c04",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current",
+    "recheck": null
+   },
+   "limitations": [
+    "Rests on one encyclopedia's subdistrict attribution; primary land-registry check not performed"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c05",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "as of April 2026 article; recurring weekday pattern",
+    "recheck": "2027-04-01"
+   },
+   "limitations": [
+    "One food-blog source; no independent verification of stall counts or hours",
+    "Guide-text claim, not a field observation"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026 venue observations per guide",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "Venue counts from one independent 2026 guide plus operator/visitor reports; not an official registry",
+    "Japanese-strip characterization of Thaniya corroborated by a commercial rental guide, not by an authoritative cultural source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c07",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2025-2026",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "The r/ThailandTourism thread (Sept 2025) could not be opened directly (HTTP 403 on both www and old.reddit), so the forum account is known only through search-result summaries — treated as corroboration, not primary evidence",
+    "Perception-based; no crime statistics collected"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c08",
+   "status": "conflicted",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026 guides",
+    "recheck": null
+   },
+   "limitations": [
+    "Characterizations from guides and a rental platform's content marketing, not acoustic measurement",
+    "The Soi 4 daytime detail comes from the same publisher's related article seen only in search excerpts; not counted as body-read evidence",
+    "'Tree-lined' as a physical characteristic of Soi Pramuan was not independently verified in a body-read source — only the quiet register was"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c09",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "October 2026 snapshot (HipFlat); May 2026 guide (Superagent)",
+    "recheck": "2027-05-01"
+   },
+   "limitations": [
+    "All figures are asking rents; signed-lease data unavailable",
+    "HipFlat averages shown in USD with unstated methodology; THB conversion uses an assumed ~33 THB/USD rate",
+    "Platform coverage skews to condo listings; houses and informal rentals underrepresented",
+    "The app's 26k/55k is itself an editorial estimate; the comparison here is range-consistency, not validation of medians"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c10",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current",
+    "recheck": null
+   },
+   "limitations": [
+    "The ~9.2 ha / 2.3% park-share figure is the app's own dataset, not independently verified here",
+    "Small pocket green inside the khet (e.g., temple grounds) not inventoried"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2021-12-25",
+    "observed": "2021 opening through 2026 reporting",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "Phase completion status after 2021 is not documented in any body-read source; 'still being rolled out' rests on the July 2026 plan-level reporting rather than a dated construction update",
+    "No source states precisely which completed sections lie inside Bang Rak"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c12",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current",
+    "recheck": null
+   },
+   "limitations": [
+    "The five-minute-walk framing is the rental guide's, not a measured distance",
+    "Hospital service quality or pricing not assessed"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "current store page; 2026 guide",
+    "recheck": null
+   },
+   "limitations": [
+    "Robinson Bangrak detail comes from the rental platform's related article seen in search excerpts; not body-read as primary evidence",
+    "The Central page mentions station access without explicitly claiming a built skybridge link"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c14",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2019-12-01",
+    "observed": "Dec 2019 start; last dated on-ground account Mar 2020",
+    "recheck": "2026-12-15"
+   },
+   "limitations": [
+    "Two sources conflict on frequency and hours; neither is the organizer",
+    "No 2024-2026 confirmation found — current operation is unconfirmed, not disproven",
+    "Bangkok Post articles on the 2019 launch unreachable (paywall redirect not followed)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c15",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2011 and September 2026 events reviewed; no district-level series",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "Neither source names Bang Rak streets; district-specific flood frequency remains unknown (honest not_found)",
+    "No Thai-language district archive search (e.g., BMA drainage works on Charoen Krung) was completed"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c16",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-10-25",
+    "observed": "first phase operating; later phases opening through subsequent quarters",
+    "recheck": null
+   },
+   "limitations": [
+    "Developer's own press release; occupancy and later-phase dates self-reported",
+    "Effect on Bang Rak foot traffic or rents is inference, not measured"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c17",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026 guide descriptions",
+    "recheck": null
+   },
+   "limitations": [
+    "Inference, not measurement: no daytime-population or footfall data located",
+    "Guide descriptions could overstate uniform weekday crush"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "bang-rak-c18",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "2021-2026 guides",
+    "recheck": null
+   },
+   "limitations": [
+    "Commercial and lifestyle guides dominate this framing; resident-authored accounts (Reddit/forums) were inaccessible (HTTP 403), so the perception base is narrower than ideal"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_91f014c1a2a6",
+   "url": "https://en.wikipedia.org/wiki/Bang_Rak_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_b128963c3c2e",
+   "url": "https://www.thefinestthai.com/2026/04/16/soi-convent-and-silom-bangkoks-best-kept-secret-for-lunchtime-street-food",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Finest Thai",
+    "family": "The Finest Thai"
+   }
+  },
+  {
+   "id": "src_9431c63c3ea8",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/bang-rak",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  },
+  {
+   "id": "src_01bcfff9afda",
+   "url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/80-20",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Michelin Guide",
+    "family": "Michelin"
+   }
+  },
+  {
+   "id": "src_9b180be2c290",
+   "url": "https://www.southeastasiasimplified.com/blog/entertainment-11/patpong-bangkok-what-to-know-before-you-visit-2026-145",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Southeast Asia Simplified",
+    "family": "Southeast Asia Simplified"
+   }
+  },
+  {
+   "id": "src_6bafb4b19c8b",
+   "url": "https://www.timeout.com/bangkok/things-to-do/reconnect-with-your-city-find-out-where-to-unwind-in-the-bustling-neighborhood-of-silom",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out Group"
+   }
+  },
+  {
+   "id": "src_531883aa5458",
+   "url": "https://www.timeout.com/bangkok/things-to-do/things-to-do-in-silom",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Time Out Bangkok",
+    "family": "Time Out Group"
+   }
+  },
+  {
+   "id": "src_b2d5cd8c6bba",
+   "url": "https://www.central.co.th/en/store/central-silom-complex",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Central Retail",
+    "family": "Central Group"
+   }
+  },
+  {
+   "id": "src_4450f4ad7cd5",
+   "url": "https://www.thaipbs.or.th/news/content/558613",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai PBS",
+    "family": "Thai PBS (public broadcaster)"
+   }
+  },
+  {
+   "id": "src_142983c8e694",
+   "url": "http://www.theatlantic.com/photo/2011/11/thailands-disastrous-slow-moving-flood/100188/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Atlantic",
+    "family": "The Atlantic"
+   }
+  },
+  {
+   "id": "src_2ce01d126616",
+   "url": "https://www.nationthailand.com/blogs/in-focus/40010150",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation Thailand",
+    "family": "Nation Thailand / Asia News Network"
+   }
+  },
+  {
+   "id": "src_d57ff1ff0912",
+   "url": "https://www.pattayamail.com/thailandnews/bangkoks-chong-nonsi-canal-park-to-be-partially-opened-on-dec-25-380618",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Pattaya Mail",
+    "family": "Pattaya Mail"
+   }
+  },
+  {
+   "id": "src_3255884c2b6d",
+   "url": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "One Bangkok (TCC Assets)",
+    "family": "TCC Assets / One Bangkok"
+   }
+  },
+  {
+   "id": "src_5440d2b32e00",
+   "url": "https://www.placesandfoods.com/2020/03/silom-walking-street-bangkok.html",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Places and Foods",
+    "family": "Places and Foods"
+   }
+  },
+  {
+   "id": "src_977caacad9db",
+   "url": "https://asianews.network/venice-of-the-east-reborn-bangkoks-plan-to-reclaim-its-1100-canals-as-linear-parks",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Asia News Network",
+    "family": "Nation Thailand / Asia News Network"
+   }
+  },
+  {
+   "id": "src_3595b2eef256",
+   "url": "https://en.wikipedia.org/wiki/Chong_Nonsi_Canal_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  },
+  {
+   "id": "src_009411b5c356",
+   "url": "https://whybangkok.com/areas/silom/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "WhyBangkok",
+    "family": "WhyBangkok"
+   }
+  },
+  {
+   "id": "src_aaae55e4c236",
+   "url": "https://www.superagent.co/en/blog/renting-near-silom-nightlife-what-expats-need-to-know",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Superagent",
+    "family": "Superagent (rental platform)"
+   }
+  },
+  {
+   "id": "src_e83859ba2f65",
+   "url": "https://thesmartlocal.co.th/silom-district-guide/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Smart Local (Thailand)",
+    "family": "The Smart Local"
+   }
+  },
+  {
+   "id": "src_17c8d19830f9",
+   "url": "https://touristbangkok.com/bangkok-shopping-guide/bangkok-markets/silom-walking-street",
+   "body_read": true,
+   "attribution": {
+    "publisher": "TouristBangkok",
+    "family": "TouristBangkok"
+   }
+  },
+  {
+   "id": "src_0092da4e0d5d",
+   "url": "https://guide.michelin.com/us/en/bangkok-region/bangkok/restaurant/le-du",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Michelin Guide",
+    "family": "Michelin"
+   }
+  },
+  {
+   "id": "src_36aae08f9016",
+   "url": "https://en.wikipedia.org/wiki/Saint_Louis_Hospital",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikimedia"
+   }
+  }
+ ]
+}

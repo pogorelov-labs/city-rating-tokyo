@@ -1,0 +1,345 @@
+{
+ "key": "st.kamphaeng-phet",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Kamphaeng Phet (MRT BL12, opened 2004) is the market's own station: Exit 1-2 drop into Chatuchak Weekend Market's 35 acres, Exit 3 into Or Kor Tor's graded, air-conditioned produce halls, and bus bays with roughly a dozen routes sit at the exits — a transport-10 built on adjacency and buses rather than rail variety, since the BTS interchange is one stop north at Chatuchak Park. Rents track the Chatuchak blend (16,000-25,000 baht studios and small one-beds captured district-wide). The honest caveats: the 0.1 ha of mapped park means green 9 is buffer effect from parks centred in other units, the unit's nightlife and safety scores have no found evidence either way, and the market itself is mid-redevelopment after City Hall's 2025 clock-tower evictions.",
+   "claims": [
+    "kamphaeng-phet-c01",
+    "kamphaeng-phet-c02",
+    "kamphaeng-phet-c03",
+    "kamphaeng-phet-c04",
+    "kamphaeng-phet-c08",
+    "kamphaeng-phet-c10"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Unmatched market access for a rail stop: direct exits into the weekend market and the daily Or Tor Kor market, plus roughly a dozen bus routes at two on-street stops.",
+     "claims": [
+      "kamphaeng-phet-c02",
+      "kamphaeng-phet-c05",
+      "kamphaeng-phet-c06"
+     ]
+    },
+    {
+     "en": "MetroMall underground and a compact station footprint keep errands indoor-adjacent in rain or heat, at the district's mid-market rent level.",
+     "claims": [
+      "kamphaeng-phet-c01",
+      "kamphaeng-phet-c08"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "MRT-only: no BTS interchange at the station (one stop away at BL13), ridership one-sixth of the neighbouring interchange, and the transport 10 depends on market/bus adjacency — confirm the rubric.",
+     "claims": [
+      "kamphaeng-phet-c03",
+      "kamphaeng-phet-c09"
+     ]
+    },
+    {
+     "en": "Green 9 is borrowed scenery: 0.1 ha mapped in-unit and no park centroid within 850 m; the park complex's centroids lie 1.1-1.5 km away in the mo-chit/chatuchak units.",
+     "claims": [
+      "kamphaeng-phet-c04"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Weekdays belong to market logistics and Or Kor Tor's morning trade; Saturdays-Sundays the unit absorbs a 200,000-visitor surge that starts at the station exits and drains outward.",
+     "claims": [
+      "kamphaeng-phet-c05"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "The unit splits between the market's south-western edge (exits 1-2, weekend economy) and the Kamphaeng Phet 1 Road strip (exit 3, daily market, temple and school), with the park complex beyond the boundary to the west.",
+     "claims": [
+      "kamphaeng-phet-c02",
+      "kamphaeng-phet-c04"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Fit for market traders and staff, produce buyers, and bus-to-MRT transfer riders who value the market on the doorstep.",
+     "claims": [
+      "kamphaeng-phet-c02",
+      "kamphaeng-phet-c05"
+     ]
+    },
+    {
+     "en": "Poor fit for those who want the park as a daily amenity inside their own unit, multi-line rail variety, or verified nightlife.",
+     "claims": [
+      "kamphaeng-phet-c04",
+      "kamphaeng-phet-c11"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "App anchor 13.8049 sits ~770 m north of the OSM station node 13.7980, near Chatuchak Park MRT — reconcile the anchor convention (kamphaeng-phet-c01).",
+   "Transport 10 for an MRT-only stop rests on inference from exits/buses; rubric confirmation needed (kamphaeng-phet-c03).",
+   "Nightlife 7 and safety 7 have no unit-specific evidence found (kamphaeng-phet-c11).",
+   "Or Tor Kor's CNN '4th best fresh market' rank is unverifiable (source URL 404) — use qualitative reputation only (kamphaeng-phet-c06)."
+  ],
+  "attribution_required": [
+   "kamphaeng-phet-c02",
+   "kamphaeng-phet-c06",
+   "kamphaeng-phet-c08",
+   "kamphaeng-phet-c09",
+   "kamphaeng-phet-c10"
+  ]
+ },
+ "claims": [
+  {
+   "id": "kamphaeng-phet-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "ridership year 2021",
+    "recheck": null
+   },
+   "limitations": [
+    "Underlying article is an unsourced stub; ridership not corroborated by a second read source."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": "2027-11"
+   },
+   "limitations": [
+    "The page lists 'ขนส่งหมอชิต' at Exit 1 without stating distance; do not read it as the Mo Chit 2 terminal being next door."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c03",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "No measured connectivity index found; inference only."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c04",
+   "status": "corroborated",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Centroid distance overstates separation for parks whose edges reach toward the station; polygon check still required."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c05",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "market operations as published 2025-2026",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "Weekday footfall unmeasured; Friday-night operation appears only in search summaries (snippet-level)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c06",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "guide dataset as of 2 Aug 2026",
+    "recheck": "2027-08"
+   },
+   "limitations": [
+    "CNN 2017 ranking unverifiable (URL 404); search summaries repeat it but snippet corroboration only — excluded from load-bearing claims."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c07",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2025 consolidation consideration",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "Terminal article's own figures conflict; consolidation is a reported consideration, not a decision."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c08",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": "October 2026 market data",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "USD display without stated conversion; district average pulled by Lat Phrao-corridor stock; no station-adjacent listing captured."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c09",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "ridership year 2021",
+    "recheck": null
+   },
+   "limitations": [
+    "Both figures from flagged/stub-level articles; ratio more robust than absolutes."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c10",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-02-19",
+    "observed": null,
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "Vendor-side account only via social post surfaced in search (not read); enforcement outcome unreported in read sources."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "kamphaeng-phet-c11",
+   "status": "corroborated",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "checked Nov 2026",
+    "recheck": "2027-05"
+   },
+   "limitations": [
+    "Venue-level nightlife and safety data not found; JJ Green closure claim is snippet-level only and excluded from load-bearing claims."
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_4f2339bc6726",
+   "url": "https://en.wikipedia.org/wiki/Kamphaeng_Phet_MRT_station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_c511ccfdb273",
+   "url": "https://metro.bemplc.co.th/Line-Maps?Line=1&Station=12",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Bangkok Expressway and Metro (BEM)",
+    "family": "BEM"
+   }
+  },
+  {
+   "id": "src_001aa18f4a35",
+   "url": "https://th.wikipedia.org/wiki/สถานีสวนจตุจักร",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_8fd02d1790b8",
+   "url": "https://th.wikipedia.org/wiki/สถานีจตุจักร",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (Thai)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_e6df8008652f",
+   "url": "https://www.chatuchakmarket.org",
+   "body_read": true,
+   "attribution": {
+    "publisher": "chatuchakmarket.org",
+    "family": "chatuchakmarket.org"
+   }
+  },
+  {
+   "id": "src_5a7ce177c60b",
+   "url": "https://saphankwai.com/guides/or-tor-kor-market/",
+   "body_read": true,
+   "attribution": {
+    "publisher": "SaphanKwai.com",
+    "family": "SaphanKwai.com"
+   }
+  },
+  {
+   "id": "src_ea24839d6f44",
+   "url": "https://en.wikipedia.org/wiki/Mo_Chit_2_bus_terminal",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (English)",
+    "family": "Wikipedia"
+   }
+  },
+  {
+   "id": "src_f275cce21ddf",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/chatuchak",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  },
+  {
+   "id": "src_94f622063906",
+   "url": "https://thethaiger.com/news/bangkok/times-up-stallholders-at-chatuchak-weekend-market-told-to-leave",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Thaiger",
+    "family": "Thaiger"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap (Overpass API)",
+    "family": "OpenStreetMap"
+   }
+  }
+ ]
+}

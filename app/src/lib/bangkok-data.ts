@@ -3,6 +3,8 @@ import zoneFlagsData from '@/data/entertainment/bangkok-area-flags.json';
 import railData from '@/data/bangkok/rail.json';
 import stationAreasData from '@/data/bangkok/stations.json';
 import areaGuideCopy from '@/data/area-guide-copy.json';
+import { mergeEditorialSnippets, EDITORIAL_ENABLED } from './editorial-research';
+import editorialIndexJson from '@/data/bangkok/editorial-index.json';
 import type { BangkokRentProvenance, District, DistrictRent, MapStation, RailLine, RailStation, StationArea } from './types';
 import type { Locale } from '@/i18n/routing';
 import { stationAreaKey } from './area-key';
@@ -121,7 +123,14 @@ export function getBangkokSnippets(locale: Locale): Record<string, string> {
     const summary = (areaGuideCopy as Record<string, Record<Locale, string>>)[`bangkok:station:${area.id}`]?.[locale];
     if (summary) out[stationAreaKey(area.id)] = summary.length > 140 ? `${summary.slice(0, 140).trimEnd()}…` : summary;
   }
-  return out;
+  const previews: Record<string, string> = {};
+  if (EDITORIAL_ENABLED) {
+    const index = (editorialIndexJson as { entities: Record<string, { copy_eligible: boolean; preview?: { en: string } | null }> }).entities;
+    for (const [key, rec] of Object.entries(index)) {
+      if (rec.copy_eligible && rec.preview?.en) previews[key] = rec.preview.en;
+    }
+  }
+  return mergeEditorialSnippets(out, previews, EDITORIAL_ENABLED);
 }
 
 // ─── Station areas (the level between districts and the 200 m grid) ────────

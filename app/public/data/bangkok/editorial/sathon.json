@@ -1,0 +1,349 @@
+{
+ "key": "sathon",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Sathon wraps three khwaeng of residential sois around the Sathorn office corridor, with the deepest rental stock of the researched comparison set (8,231 listings), 12+ embassies, Saint Louis Hospital, and the researched comparison set's best named-park access - the 80 Phansa royal park reopened in 2025-2026 with expanded green, and the 4.5 km Chong Nonsi canal park keeps extending even as its water quality lags. The honest asterisks: the BTS stations that give the district its name sit in the road median the app polygon excludes (transport 7, not 9), the 25-ha green figure needs a counting rule, and rents - though slipping - remain the priciest of the four researched khets.",
+   "claims": [
+    "sathon-c01",
+    "sathon-c07",
+    "sathon-c05",
+    "sathon-c06",
+    "sathon-c03",
+    "sathon-c04"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Parks you can actually use: the renovated 80 Phansa royal park (05:00-21:00, lit loop, playground, stage) plus the canal-park walkway segments and Taksin bridge park - the researched comparison set's strongest named-green access.",
+     "claims": [
+      "sathon-c05",
+      "sathon-c04"
+     ]
+    },
+    {
+     "en": "Office-district completeness: Saint Louis Hospital and schools, 1,098 food POIs, wet markets inland, and a BRT corridor threading Narathiwas - daily life rarely requires leaving the khet.",
+     "claims": [
+      "sathon-c08",
+      "sathon-c03"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "The transit paradox: three BTS stations carry the district's name but stand in the median the polygon excludes, leaving interior sois (Yen Akat, Chan, Nang Linchi) a kilometre-plus from any rail gate - hence transport 7.",
+     "claims": [
+      "sathon-c03",
+      "sathon-c12"
+     ]
+    },
+    {
+     "en": "Priciest of the researched comparison set: portal 1-bed averages ~USD 889 (~30k THB) with the blend at 25,000/55,000, and the canal park's water is still visibly poor despite the 2024-2026 build-out.",
+     "claims": [
+      "sathon-c07",
+      "sathon-c06"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Weekdays pulse with office and embassy traffic on the corridor; the parks take over at dawn and dusk (05:00-21:00, lit for runners); weekends belong to the canal park and riverside; nightlife concentrates on the excluded north edge around Chong Nonsi while the interior goes quiet.",
+     "claims": [
+      "sathon-c02",
+      "sathon-c05",
+      "sathon-c09"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Three Sathons: the excluded-but-famous Sathorn Rd corridor (towers, BTS, embassies' front doors), the residential Thung Wat Don/Yen Akat interior with heritage houses, and the canal-and-river east where the parks and Wat Yannawa sit - administratively one khet, split by the polygon.",
+     "claims": [
+      "sathon-c12",
+      "sathon-c09",
+      "sathon-c04"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Choose it if you work in the CBD and want a walkable green routine (royal park loop, canal walkways) and full services at 25-30k for a 1-bed - and don't mind the BTS being a boundary feature rather than a door-step one.",
+     "claims": [
+      "sathon-c05",
+      "sathon-c08",
+      "sathon-c07",
+      "sathon-c03"
+     ]
+    },
+    {
+     "en": "Skip it if rent is the constraint (cheapest 1-beds here cost what Thon Buri charges for two) or if you need rail at the door in the interior sois.",
+     "claims": [
+      "sathon-c07",
+      "sathon-c03"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "Unresolved: the 25.0-ha park counting rule (OSM in-polygon ~5-6 ha); canal-park Phase 3 completion (target end-2025, unconfirmed); BRT service details; per-tower khet membership on the corridor; single-family rent data (PropertyScout 404). Anchors verified against OSM with no mismatch beyond the known corridor exclusions."
+  ],
+  "attribution_required": [
+   "sathon-c01",
+   "sathon-c02",
+   "sathon-c03",
+   "sathon-c07",
+   "sathon-c09",
+   "sathon-c10",
+   "sathon-c12"
+  ]
+ },
+ "claims": [
+  {
+   "id": "sathon-c01",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "office towers straddle both sides; per-building khet membership was not audited - only the boundary behaviour is PIP-established",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c03",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the 7-vs-9 reading is the researcher's; the app's own transport methodology is not documented",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c04",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "OSM misses untagged green; the 25.0 figure may include cemetery/canal-strips/road planting - coordinator methodology decision required",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "park area not stated in the article body; registry entry snippet-only"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "phase-level status and budget are aggregated snippets; the end-2025 completion claim was not verifiable from a body-read source"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c07",
+   "status": "proposed",
+   "kind": "estimate",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "portal averages luxury-skewed; PropertyScout cross-check 404 so no second rent family"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "the 1,098 food count is the app's own; corridor dining straddles the Bang Rak boundary",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c09",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "nightlife venue locations are corridor-level observations, not a venue audit",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c10",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "absence of search results is weak evidence"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "Phase 3 completion not confirmed by a body-read source; no rail changes verified"
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "sathon-c12",
+   "status": "proposed",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": null,
+    "recheck": null
+   },
+   "limitations": [
+    "polygon-edge judgement flagged for coordinator; administrative membership of individual towers not audited",
+    "app-data anchor (not a web source): App district polygon point-in-polygon checks (sathon)"
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_0970d3440ddb",
+   "url": "https://en.wikipedia.org/wiki/Sathon_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "English Wikipedia",
+    "family": "English Wikipedia"
+   }
+  },
+  {
+   "id": "src_e206266bf9bc",
+   "url": "https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B8%A3",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Thai Wikipedia",
+    "family": "Thai Wikipedia"
+   }
+  },
+  {
+   "id": "src_eba87fa72be3",
+   "url": "https://thestandard.co/life/new-sathorn-royal-park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "THE STANDARD",
+    "family": "THE STANDARD"
+   }
+  },
+  {
+   "id": "src_751d0cfc1006",
+   "url": "https://www.nationthailand.com/thailand/bangkok/40068526",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation",
+    "family": "The Nation"
+   }
+  },
+  {
+   "id": "src_61fdbe70837a",
+   "url": "https://www.hipflat.com/condo-for-rent/bangkok/sathon",
+   "body_read": true,
+   "attribution": {
+    "publisher": "HipFlat",
+    "family": "HipFlat"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap via Overpass API",
+    "family": "OpenStreetMap via Overpass API"
+   }
+  },
+  {
+   "id": "src_384fd24dd5a1",
+   "url": "https://www.mrta-purplelinesouth.com",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BMA/press via search aggregation",
+    "family": "BMA/press via search aggregation"
+   }
+  },
+  {
+   "id": "src_ddd9ae0eaf64",
+   "url": "https://greener.bangkok.go.th/park/suan-chaloem-phra-kian-80-phansa-phra-bat-somdet-phra-jao-yu-hua-sathorn",
+   "body_read": false,
+   "attribution": {
+    "publisher": "BMA greener.bangkok.go.th (via search aggregation)",
+    "family": "BMA greener.bangkok.go.th (via search aggregation)"
+   }
+  }
+ ]
+}

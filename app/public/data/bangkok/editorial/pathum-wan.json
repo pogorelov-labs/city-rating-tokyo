@@ -1,0 +1,686 @@
+{
+ "key": "pathum-wan",
+ "as_of": null,
+ "guide": {
+  "lead": {
+   "en": "Pathum Wan is Bangkok compressed into 8.37 km2: Siam Paragon's 400,000 m2 and Siam Square's 4,200 shops on Crown Property and university land, a 57.6-ha royal-donation park that opens at 04:30, the 36.3-ha Royal Bangkok Sports Club racetrack sitting members-only in the middle, Chulalongkorn University anchoring two khwaengs, and since 25 October 2024 One Bangkok's THB-120bn district at Wireless x Rama IV with its own park and an underground MRT link. The registered population keeps shrinking (139,008 in 1992 to 40,077 in 2023) while footfall counters spin — Siam Paragon alone reports 150,000-200,000 visitors a day, and every New Year's Eve the police close six roads around Ratchaprasong from noon. Rents lead the city: district-mean USD23/sqm, top appraisals 1,000,000 THB per sq wa, and the blend of 38,000/85,000 THB maps cleanly onto the district's 1BR/2BR asking percentiles.",
+   "claims": [
+    "pathum-wan-c01",
+    "pathum-wan-c02",
+    "pathum-wan-c03",
+    "pathum-wan-c05",
+    "pathum-wan-c06",
+    "pathum-wan-c07",
+    "pathum-wan-c08",
+    "pathum-wan-c09",
+    "pathum-wan-c11",
+    "pathum-wan-c12",
+    "pathum-wan-c13",
+    "pathum-wan-c14",
+    "pathum-wan-c15"
+   ]
+  },
+  "sections": {
+   "strengths": [
+    {
+     "en": "Ten stations inside one district: BTS Siam interchange plus Chit Lom, Phloen Chit, Ratchadamri and National Stadium; MRT Lumphini, Sam Yan, Hua Lamphong and Si Lom; the SRT terminus — ten stations inside one district, plus ten boat piers on two canals.",
+     "claims": [
+      "pathum-wan-c05",
+      "pathum-wan-c06"
+     ]
+    },
+    {
+     "en": "Lumphini Park is genuinely inside the polygon: 57.6 ha, 04:30-21:00 daily, a 2.5 km running loop and BMA operation, plus the 4.5-ha Centenary Park and One Bangkok's 8 ha of on-site greenery.",
+     "claims": [
+      "pathum-wan-c08"
+     ]
+    }
+   ],
+   "tradeoffs": [
+    {
+     "en": "Rent 1 is land-priced, not hype: 1,000,000 THB/sq wa appraisals on Phloen Chit, Witthayu and Rama I (country max), market trades to 3.9M, district-mean rent 28.5% above Bangkok — and the flagship towers price 9.1% above the district mean itself.",
+     "claims": [
+      "pathum-wan-c07"
+     ]
+    },
+    {
+     "en": "About a third of the mapped green is not yours to use: the 36.3-ha Royal Bangkok Sports Club is members-only (grandstand on race Sundays excepted) and Sa Pathum Palace's 7.9-ha garden is royal ground.",
+     "claims": [
+      "pathum-wan-c08",
+      "pathum-wan-c09"
+     ]
+    },
+    {
+     "en": "Crowd 1 is visitor arithmetic: 150-200k/day through Siam Paragon, ~400k/day through Siam Square, six roads closed for NYE — against roughly 40,000 registered residents, down from 139,008 in 1992.",
+     "claims": [
+      "pathum-wan-c11",
+      "pathum-wan-c02"
+     ]
+    },
+    {
+     "en": "The Siam/Ratchaprasong core runs on mall hours and closed streets; ground-level street life between the megablocks is arterial traffic, and the district's mainline rail history left for Krung Thep Aphiwat in 2023.",
+     "claims": [
+      "pathum-wan-c13",
+      "pathum-wan-c14"
+     ]
+    }
+   ],
+   "dayNight": [
+    {
+     "en": "Morning: Lumphini opens 04:30 for runners, Saen Saep boats from 05:30 weekdays, office towers fill the Witthayu-Phloen Chit belt; the residential Rong Mueang side stays quiet.",
+     "claims": [
+      "pathum-wan-c12",
+      "pathum-wan-c06"
+     ]
+    },
+    {
+     "en": "Evening: mall hours to ~22:00 carry the food and nightlife load (3,064/164 app counts); Lumphini is already closed at 21:00 — night green is private-estate only.",
+     "claims": [
+      "pathum-wan-c09",
+      "pathum-wan-c12"
+     ]
+    },
+    {
+     "en": "Weekend/event: retail peaks (festive projections 400-450k/day group-wide), race Sundays every other week at RBSC, and NYE brings six-road closures from noon to 05:00.",
+     "claims": [
+      "pathum-wan-c11",
+      "pathum-wan-c08"
+     ]
+    }
+   ],
+   "variation": [
+    {
+     "en": "Khwaeng Pathum Wan (2.2-2.3 km2, 2,746 residents): Siam Paragon, Siam Square, CentralWorld, Erawan Shrine, Police General Hospital, Suphachalasai Stadium — the visitor machine with almost nobody registered.",
+     "claims": [
+      "pathum-wan-c01",
+      "pathum-wan-c03"
+     ]
+    },
+    {
+     "en": "Khwaeng Rong Mueang (1.3-1.4 km2, 15,198 residents): Hua Lamphong station (SRT+MRT) and the district office — the most residential khwaeng, absorbing the district's mainline-rail loss.",
+     "claims": [
+      "pathum-wan-c01",
+      "pathum-wan-c14",
+      "pathum-wan-c02"
+     ]
+    }
+   ],
+   "fit": [
+    {
+     "en": "Premium seekers get the strongest address argument in Bangkok — top national land appraisals, flagship towers, a 57.6-ha park next door — if the asking percentiles fit.",
+     "claims": [
+      "pathum-wan-c07",
+      "pathum-wan-c08"
+     ]
+    },
+    {
+     "en": "Car-free households are the clearest winners: ten stations, two canal boat lines, event-grade bus access, and a police-endorsed walk-the-skywalk culture on closure days.",
+     "claims": [
+      "pathum-wan-c05",
+      "pathum-wan-c06",
+      "pathum-wan-c13"
+     ]
+    },
+    {
+     "en": "Students and academics: the Chula campus spans two khwaengs with Centenary Park, Sam Yan MRT and the tutoring capital within one district — but student-housing rents sit on the same expensive land.",
+     "claims": [
+      "pathum-wan-c03",
+      "pathum-wan-c12",
+      "pathum-wan-c07"
+     ]
+    },
+    {
+     "en": "Poor fits: budget renters (1BR district percentile ~USD1,040/month), quiet-seekers near the retail core on weekends and event days, drivers during closures, and late-evening green users (park closes 21:00).",
+     "claims": [
+      "pathum-wan-c15",
+      "pathum-wan-c11",
+      "pathum-wan-c09"
+     ]
+    }
+   ]
+  },
+  "uncertainties": [
+   "One Bangkok hotel status conflicted: pre-opening coverage targeted Ritz-Carlton Nov 2024 and Andaz 2025, other reporting dates the openings Dec 2024 and 19 Dec 2025, while a Sep 2026 business report still lists both in the 2027 build-out — needs operator confirmation.",
+   "One Bangkok site size differs inside the operator's own releases (104 rai PPTV vs 108 rai TH release vs ~17 ha EN).",
+   "App's 55 temples vs 6 named Buddhist worship sites in OSM inside the khet — the app category is likely broader (shrines, spirit houses); definition unknown.",
+   "District rent blend inconsistency across app data: this brief carries 38,000/85,000 THB while a sibling batch-3 file describes the district blend as 33,500/74,000 — reconcile downstream; Hipflat percentiles support ~37k/84k.",
+   "Weekend-specific crowd counts do not exist publicly; crowd 1 rests on daily operator figures and police closures, not weekend measurements.",
+   "Heat/shade and walking comfort on the plaza canyons: no source found (Reddit/TripAdvisor 403); walkability claims rest on infrastructure only.",
+   "Lumphini Park's area: 57.6 ha official (360 rai) vs 52.3 ha computed from the OSM polygon; the app's 102.7-ha green selection is unpublished, so the composition is our reconstruction.",
+   "Whether Pathum Wan's USD23/sqm district mean is the highest of all 50 khet was not verified district-by-district; 'most expensive district' is anchored on land appraisals + city-center rent comparisons instead."
+  ],
+  "attribution_required": [
+   "pathum-wan-c02",
+   "pathum-wan-c09"
+  ]
+ },
+ "claims": [
+  {
+   "id": "pathum-wan-c01",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "long-standing administrative facts; khwaeng areas as published",
+    "recheck": null
+   },
+   "limitations": [
+    "Three khwaeng-area datasets disagree; khet total is consistent (8.369).",
+    "OSM khwaeng Lumphini missing from the khet relation's subarea members — identified by name query."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c02",
+   "status": "proposed",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "1992, Oct 2019, Dec 2023 registration snapshots",
+    "recheck": null
+   },
+   "limitations": [
+    "Registered-population series ends 2023; no 2024-2026 figure found.",
+    "Daytime population is far larger and uncounted here."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c03",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2005-12-09",
+    "observed": "Siam Square built 1962-63; Paragon since 2005",
+    "recheck": null
+   },
+   "limitations": [
+    "Siam Paragon's 400,000 m2 is a single-source figure without citation on Wikipedia.",
+    "Siam Square's 400,000/day is article-stated, uncited."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c04",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2024-10-25",
+    "observed": "phased opening Oct 2024 - 2030 (developer roadmap); status re-checked Sep 2026",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "Site size differs across the operator's own releases (104 vs 108 rai vs ~17 ha).",
+    "Hotel opening status conflicted (OI-4).",
+    "Retail area 190,000 sqm (Brand Inside) vs 160,000 sqm NLA (operator) — gross vs lettable, unresolved.",
+    "Visitor/occupancy figures are management-reported."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c05",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "inventory as of OSM extract 2026-11-07",
+    "recheck": null
+   },
+   "limitations": [
+    "No ARL station in-khet; residents connect via Ratchathewi-side stations.",
+    "Station-node PIP for MRT Si Lom is a ±1 building-row judgment on a boundary road.",
+    "Comparative 'largest ... so far' is researcher inference from sibling khet files, not an all-50-khet enumeration."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c06",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "service parameters as published; OSM extract 2026-11-07",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "App's own pier-mapping convention unknown; the 10-OSM-piers decomposition is our best match.",
+    "Khlong Phadung Krung Kasem piers serve short local hops, not the main boat line."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c07",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "Hipflat data window referencing Oct 2025-Jan 2026; appraisal cycle 2023-2026",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "No signed-rent source exists publicly; all figures are asking/portal-model.",
+    "THB/USD conversion (35-36) is researcher inference.",
+    "Whether Pathum Wan's USD23/sqm is the highest of all 50 khet was not checked district-by-district (single-portal claim)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c08",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "Lumphini created 1925; RBSC 1901; Centenary Park 2017; One Bangkok 2024",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "App's 102.7-ha composition not published; our reconstruction sums official+OSM pieces.",
+    "Lumphini 57.6 (official) vs 52.3 (OSM polygon) gap unexplained — probably fence-line vs boundary-road difference.",
+    "Race-day public access to RBSC is grandstand-only."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c09",
+   "status": "proposed",
+   "kind": "reported_perception",
+   "temporal": {
+    "event": null,
+    "observed": "current access rules as published",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "No experiential source found for heat/noise (Reddit/TripAdvisor 403); claim limited to access rules.",
+    "One Bangkok's 8 ha of greenery is private-estate open space, open to visitors during retail hours."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c10",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "bed counts as published (undated)",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "No grocery-market census attempted; 'no large wet market identified' is an OSM-absence finding, not proof.",
+    "Police General's OSM node sits off its address; khet membership rests on the published address."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c11",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2025-12-31",
+    "observed": "footfall figures 2024; closures Dec 2025",
+    "recheck": "2027-01-15"
+   },
+   "limitations": [
+    "600,000/day Ratchaprasong figure is association-cited, peak-era, search-level only — not body-read.",
+    "No weekend-specific counts published (OI-8).",
+    "Press-release genre sources (29, 30) carry corporate framing."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c12",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "hours and statements current as of Nov 2026",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "Rhythm is anchor-derived; no quantitative hourly data (same limitation as sibling station files).",
+    "Student-semester effects unverified."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c13",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "network as published; OSM extract 2026-11-07",
+    "recheck": null
+   },
+   "limitations": [
+    "R Walk details are guide-level (TripAdvisor/TAT-affiliated pages), corroborating only.",
+    "No experiential walking sources (forums 403); no shade data."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c14",
+   "status": "corroborated",
+   "kind": "factual_report",
+   "temporal": {
+    "event": "2023-01-19",
+    "observed": "service change Jan 2023; redevelopment status through 2026",
+    "recheck": "2027-01-15"
+   },
+   "limitations": [
+    "2025-2026 status (cultural programming, anniversary, extension tenders) is search-level only, no article URL captured.",
+    "Commuter-service frequency not quantified."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c15",
+   "status": "corroborated",
+   "kind": "researcher_inference",
+   "temporal": {
+    "event": null,
+    "observed": "as of Nov 2026",
+    "recheck": "2027-06-01"
+   },
+   "limitations": [
+    "Fit claims are researcher inference anchored on the cited evidence.",
+    "No resident or worker survey sources available (forums blocked)."
+   ],
+   "conflicts_with": []
+  },
+  {
+   "id": "pathum-wan-c16",
+   "status": "conflicted",
+   "kind": "factual_report",
+   "temporal": {
+    "event": null,
+    "observed": "2024-2026 reporting",
+    "recheck": "2027-01-15"
+   },
+   "limitations": [
+    "Ritz/Andaz opening dates conflicted across source generations (OI-4).",
+    "No 2024-2026 appraisal-cycle update found."
+   ],
+   "conflicts_with": []
+  }
+ ],
+ "sources": [
+  {
+   "id": "src_cbf827a9c015",
+   "url": "https://en.wikipedia.org/wiki/Pathum_Wan_district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_e5ce949ca696",
+   "url": "https://th.wikipedia.org/wiki/เขตปทุมวัน",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia (TH)",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_3255884c2b6d",
+   "url": "https://www.onebangkok.com/en/press-media/one-bangkok-a-transformative-urban-district",
+   "body_read": true,
+   "attribution": {
+    "publisher": "One Bangkok (TCC Assets / Frasers Property)",
+    "family": "onebangkok"
+   }
+  },
+  {
+   "id": "src_a94ee0f144f6",
+   "url": "https://www.onebangkok.com/en/press-media/one-bangkok-newest-neighbourhood/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "One Bangkok (TCC Assets / Frasers Property)",
+    "family": "onebangkok"
+   }
+  },
+  {
+   "id": "src_251cf14c43d7",
+   "url": "https://www.pptvhd36.com/news/สังคม/235282",
+   "body_read": false,
+   "attribution": {
+    "publisher": "PPTV HD36",
+    "family": "pptv"
+   }
+  },
+  {
+   "id": "src_88332c78a462",
+   "url": "https://moneyandbanking.co.th/2024/136644/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Money & Banking",
+    "family": "moneyandbanking"
+   }
+  },
+  {
+   "id": "src_93539843bb97",
+   "url": "https://www.forbesthailand.com/news/property/one-bangkok-open-on-25-october-2024",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Forbes Thailand",
+    "family": "forbes-thailand"
+   }
+  },
+  {
+   "id": "src_1b1552afaa80",
+   "url": "https://www.nationthailand.com/business/corporate/40071053",
+   "body_read": true,
+   "attribution": {
+    "publisher": "The Nation",
+    "family": "nation"
+   }
+  },
+  {
+   "id": "src_e7fd579300d3",
+   "url": "https://www.hipflat.com/projects/noble-ploenchit-xpfzrg",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Hipflat",
+    "family": "hipflat"
+   }
+  },
+  {
+   "id": "src_94e88a6dbde1",
+   "url": "https://en.wikipedia.org/wiki/Lumphini_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_f92ac4c6141c",
+   "url": "https://en.wikipedia.org/wiki/Royal_Bangkok_Sports_Club",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_5ce88393817a",
+   "url": "https://en.wikipedia.org/wiki/Chulalongkorn_University_Centenary_Park",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_224254de4a77",
+   "url": "https://en.wikipedia.org/wiki/King_Chulalongkorn_Memorial_Hospital",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_8536b4c23744",
+   "url": "https://en.wikipedia.org/wiki/Police_General_Hospital",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_bdb1c3af7270",
+   "url": "https://en.wikipedia.org/wiki/Bangkok_Railway_Station",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_4d8d327bd931",
+   "url": "https://en.wikipedia.org/wiki/Khlong_Saen_Saep_boat_service",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_199eef7634fd",
+   "url": "https://en.wikipedia.org/wiki/Siam_Square",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_93c5a54c9e72",
+   "url": "https://en.wikipedia.org/wiki/Siam_Paragon",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_6fd72dec4bb7",
+   "url": "https://en.wikipedia.org/wiki/Erawan_Shrine",
+   "body_read": true,
+   "attribution": {
+    "publisher": "Wikipedia",
+    "family": "wikipedia"
+   }
+  },
+  {
+   "id": "src_891755a79d60",
+   "url": "https://overpass-api.de/api/interpreter",
+   "body_read": true,
+   "attribution": {
+    "publisher": "OpenStreetMap",
+    "family": "osm-overpass"
+   }
+  },
+  {
+   "id": "src_584421528e03",
+   "url": "https://www.matichon.co.th/economy/news_3761834",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Matichon",
+    "family": "matichon"
+   }
+  },
+  {
+   "id": "src_18848fec89c3",
+   "url": "https://www.prachachat.net/hilight-prachachat/news-1169415",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Prachachat",
+    "family": "prachachat"
+   }
+  },
+  {
+   "id": "src_960f4af7cb9a",
+   "url": "https://www.tidlor.com/th/article/financial/investment/bangkok-land-prices",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Tidlor (NGERN TID LOR)",
+    "family": "tidlor"
+   }
+  },
+  {
+   "id": "src_fb9e2e4d243e",
+   "url": "https://www.posttoday.com/general-news/735729",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Post Today",
+    "family": "posttoday"
+   }
+  },
+  {
+   "id": "src_89785f5327ef",
+   "url": "https://www.thaipbs.or.th/news/content/500677",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thai PBS",
+    "family": "thaipbs"
+   }
+  },
+  {
+   "id": "src_2f9254300e24",
+   "url": "https://www.thansettakij.com/general-news/647960",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Than Settakij",
+    "family": "thansettakij"
+   }
+  },
+  {
+   "id": "src_4c6e4a93c16b",
+   "url": "https://thethaiger.com/hot-news/events/synnex-and-copperwired-launches-se-asias-first-nintendo-store-at-siam-paragon",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Thaiger",
+    "family": "thaiger"
+   }
+  },
+  {
+   "id": "src_c12ebad796bf",
+   "url": "https://www.nationthailand.com/pr-news/pr-news/40039565",
+   "body_read": false,
+   "attribution": {
+    "publisher": "The Nation",
+    "family": "nation"
+   }
+  },
+  {
+   "id": "src_c502bf5f0afc",
+   "url": "https://www.nationthailand.com/pr-news/pr-news/40042371",
+   "body_read": false,
+   "attribution": {
+    "publisher": "The Nation",
+    "family": "nation"
+   }
+  },
+  {
+   "id": "src_2dd2e95566aa",
+   "url": "https://brandinside.asia/one-bangkok-open-on-25th-october/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "Brand Inside",
+    "family": "brandinside"
+   }
+  },
+  {
+   "id": "src_470da69902fd",
+   "url": "https://www.onebangkok.com/th/press-media/one-bangkok-a-transformative-urban-district/",
+   "body_read": false,
+   "attribution": {
+    "publisher": "One Bangkok (TCC Assets / Frasers Property)",
+    "family": "onebangkok"
+   }
+  }
+ ]
+}

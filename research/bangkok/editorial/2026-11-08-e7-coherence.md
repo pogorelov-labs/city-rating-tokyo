@@ -65,3 +65,56 @@ east thong-lo/phra-ram-9, riverside khlong-san/saphan-taksin/charoen-nakhon,
 old-town pom-prap/phra-nakhon/dusit) can ride the same method in a later pass
 before integration if the adapter work wants full coverage; nothing found so
 far suggests risk there.
+
+
+## Addendum — remaining corridors swept (2026-11-08, same day): G22 coverage complete
+
+**Riverside (st.khlong-san-st · st.charoen-nakhon · st.saphan-taksin):** consistent.
+ICONSIAM geography agrees across units (khlong-san-st "across 500 metres" faces it;
+charoen-nakhon is stitched to it by bridge — matching the corrected khet-ring PIP).
+Gold Line ridership figures reconcile exactly (2.8M/yr system ≈ under 9,000/day);
+Khlong San market closure 2021 carried identically; Sathorn Unique "no recorded
+path to completion" matches the CNN-exclusion record.
+
+**Old-town (pom-prap-sattru-phai · phra-nakhon · dusit):** consistent. pom-prap's
+"temple hill you can walk up" is Wat Saket (in-khet) — distinct from Rommaninat
+which sam-yot owns; dusit's parks-not-walkable framing (zoo fenced, royal grounds)
+matches the program-wide green-basis finding and phra-nakhon's "royal parks with
+posted hours"; hospital absence stated only where true (phra-nakhon).
+
+**Sukhumvit-east (st.thong-lo · st.phra-ram-9):** consistent. Sidewalk critiques
+differ by soi without contradiction; Jodd Fairs demolition carried identically to
+batch-4 records.
+
+**Verdict: G22 now covers all six corridors — zero framing contradictions found
+anywhere at sweep time; the fix queue remains empty.** — **Staleness caveat (fourth review): the sweeps ran against the tier-B bundles of the 9 entities batch 5 later upgraded (e.g. sala-daeng in the Silom corridor, siam/chit-lom in Sukhumvit-core). Corridor framings must be re-checked against the tier-A bundles before integration — queued as a pre-E-2 step, scoped to the 9 upgraded units.** Cross-bundle fact spot-checks continue to
+hold (One Bangkok ×4; dual Pathum Wan blends correctly flagged, not smoothed).
+
+
+## Addendum 2 — re-sweep of the 9 upgraded units (2026-11-08, post-batch-5)
+
+The fourth review's staleness caveat resolved: all nine tier-A framings re-read
+against their corridor neighbors from the assembled bundles.
+
+| Unit (new) | Neighbor claims re-checked | Verdict |
+|---|---|---|
+| st.sala-daeng | chong-nonsi (office interchange), bang-rak (Patpong risk rating) | **consistent** — scam externality stated with recency flags (2016 + FCDO), matching bang-rak's comparative rating; Lumphini edge-only geometry holds |
+| st.siam | phloen-chit, asok | **consistent** — palace-precinct green feeds the same B-3 family; Lumphini distances (1.9 / 1.5 / 1.1 km from siam/chit-lom/phloen-chit) all true from their own anchors |
+| st.chit-lom | phloen-chit (skywalk), ratchadamri (Magnolias) | **consistent** — complementary skywalk framings; Magnolias used as luxury benchmark, not contradicted |
+| st.hua-lamphong | samphanthawong, wat-mangkon, sam-yot | **consistent** — Phadung Krung Kasem promenade (this unit) vs Khlong Ong Ang (sam-yot) are different canals, no collision; Yaowarat evening ramp (18:00 doubling vs 21:00 full) compatible from two edges |
+| st.saphan-taksin | charoen-nakhon, khlong-san-st | **consistent** — stacked interchange + ghost tower on-hold framing; ICONSIAM shuttles complementary |
+| st.mo-chit | chatuchak district (batch 3) | **consistent** — Section 30 eviction attribution RESOLVES the earlier ambiguity (clock tower = Chatuchak, not OTK); park-total conflicts join B-3/B-4 |
+| st.victory-monument | phaya-thai (batch 2), ratchathewi (batch 3) | **consistent** — genuine-straddle framing matches the corrected record in all three bundles; skywalk stated as announced/reported, recheck flagged |
+| st.phra-ram-9 | (RCA/Huai Khwang fringe) | **consistent** — demolition + successor-outside-catchment carried identically |
+| st.phetchaburi | ratchaprarop (Pratunam corridor) | **consistent** — shopping-first corridor framing, nightlife 9 declared ground-invisible |
+
+One **P3 copy nit** logged for the A-1 reviewer: sala-daeng's preview reads
+"a 57.6-hectare park edge … a few hundred metres from" — the hectare figure is
+the *whole park* (batch-3 decomposition) while only the SW corner edge touches
+the unit; the underlying claims carry the edge-only limitation correctly, but
+the preview phrasing could be tightened (e.g. "the edge of Lumphini's 57.6
+hectares") during human review.
+
+**Verdict: the re-sweep is clean — zero framing contradictions introduced by
+the upgrades; the E-7 staleness caveat is CLOSED, and G22 coverage is current
+against the tier-A record.**
