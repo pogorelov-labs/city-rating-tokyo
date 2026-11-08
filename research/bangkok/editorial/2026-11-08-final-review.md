@@ -110,7 +110,8 @@ was used for selection only.
 
 1. **Independent human review** of the 46 researched bundles (packet:
    `batches/REVIEWER-PACKET.md`; per-batch findings + master index are the
-   map). Tier C placeholders are bulk-checkable (identity + no-web-claims).
+   map). Tier C placeholders: script-assisted bulk check **137/137 PASS**
+   (2026-11-08) — reviewer sign-off pending.
 2. **Sender adoption** of the handoff amendments (A1–A8 applied to the
    in-repo copy; original line still authoritative).
 3. **Pipeline tickets** — the 2026-11-07 + 2026-11-08 notes hold the

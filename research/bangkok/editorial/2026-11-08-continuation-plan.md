@@ -30,8 +30,8 @@ workstreams so nothing lives in an appendix. Review history:
 - Snapshot `bkk-d6499618507e7561` throughout; **no live app data, scoring,
   filters, geometry, translations, image registries or application code were
   touched** (git-verified per commit).
-- Everything lives on local branch `research/editorial-batches-1-2`
-  (unpushed) — push/PR is DEC-1.
+- Branch `research/editorial-batches-1-2` — **pushed to origin + PR opened
+  2026-11-08 (DEC-1 approved and executed)**.
 
 ## 1. How to read this plan
 
@@ -56,12 +56,20 @@ from the two review documents.
 | DEC-9 | Corpus maintenance ownership + refresh SLO after this engagement (F-1, C-5) | every "AG" item beyond batch 5 | unassigned |
 | DEC-10 | Adapter build-step location + schema-migration policy (E-1) | E-2 cannot start | recommended: `scripts/bangkok` export step; additive migrations only |
 
+**Decision record (2026-11-08, user approval):** **DEC-1 executed** — branch
+pushed to `origin` and PR opened to `main` (§15). **DEC-5, DEC-6, DEC-7,
+DEC-8, DEC-10 adopted at the recommended defaults as listed above.**
+**DEC-2, DEC-3, DEC-4, DEC-9 remain open** — they need named people or a
+budget figure and cannot be satisfied by a blanket approval; their stated
+defaults apply (review gate stays open; calendar unowned; D-1 not started;
+maintenance unassigned).
+
 ## 3. WS-A — Review & approval gates (P0 · blocks everything product-facing)
 
 | ID | Item | Owner | Effort | Acceptance |
 |---|---|---|---|---|
 | A-1 | **Independent human review, tiers A+B (46 bundles; four batches in scope — C19).** Packet: `batches/REVIEWER-PACKET.md`. Spot pass 45–60 min; full pass 8–12 h. Reviewer sets `review.reviewer/reviewed_at/status` per bundle. Batch 3–4 stakes are in their findings docs; the five coordinator-drafted editorial sets (batch 3) and the batch-4 `partial`→`answered` QA normalizations are pre-flagged for attention (A-7). | HR (DEC-2) | M | every researched bundle `approved` or `blocked` with findings |
-| A-2 | **Tier-C bulk check (137 placeholders):** identity vs current app snapshot, zero web claims, `draft` status — script-assisted. | HR (script-assisted) | S | tail batch approved or regeneration list produced |
+| A-2 | **Tier-C bulk check (137 placeholders):** identity vs current app snapshot, zero web claims, `draft` status — script-assisted. 🟡 **Script half DONE 2026-11-08: 137/137 PASS** ([`2026-11-08-tier-c-bulk-check.md`](2026-11-08-tier-c-bulk-check.md), `kit/tools/tier_c_bulk_check.py`); human sign-off pending (DEC-2). | HR (script-assisted) | S | tail batch approved or regeneration list produced |
 | A-3 | **Sender adoption of amendments A1–A8** (in-repo amended `2026-11-05-handoff/HANDOFF.md`; redline with receipts). | SL | S | amended copy accepted, or superseding revision reconciled |
 | A-4 | **Review rework/quarantine path (C2):** `blocked` bundles get a named fixer, scoped rework, re-review; blocked bundles are excluded from any integration slice until approved. Findings tracked per bundle. | HR + AG | M | no blocked bundle outside the quarantine list |
 | A-5 | **Legal/defamation/privacy gate (G11/G17):** before any user-visible copy — negative nameable claims (scam environments, shootings, displacement narratives, venue labels) reviewed for defamation risk; bundle audit for personal data (resident quotes, addresses); redact or attribute. | HR + legal | M | sign-off for every copy-bearing unit |
@@ -259,3 +267,9 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
   B-12 taxonomy proposal and C-7 content-recheck for the closed batches
   remain open (C-7's first-content-recheck route: reviewer spot-checks +
   wave C-1).
+- **2026-11-08 (decisions):** user approval recorded → DEC-1 executed (branch
+  pushed to origin, PR opened to `main`); DEC-5/6/7/8/10 adopted at
+  recommended defaults; DEC-2/3/4/9 remain open (need named people/budget).
+  A-2 script half run: **137/137 placeholders PASS** against current app data
+  ([`2026-11-08-tier-c-bulk-check.md`](2026-11-08-tier-c-bulk-check.md));
+  reviewer sign-off still pending (DEC-2).
