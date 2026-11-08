@@ -65,3 +65,27 @@ east thong-lo/phra-ram-9, riverside khlong-san/saphan-taksin/charoen-nakhon,
 old-town pom-prap/phra-nakhon/dusit) can ride the same method in a later pass
 before integration if the adapter work wants full coverage; nothing found so
 far suggests risk there.
+
+
+## Addendum — remaining corridors swept (2026-11-08, same day): G22 coverage complete
+
+**Riverside (st.khlong-san-st · st.charoen-nakhon · st.saphan-taksin):** consistent.
+ICONSIAM geography agrees across units (khlong-san-st "across 500 metres" faces it;
+charoen-nakhon is stitched to it by bridge — matching the corrected khet-ring PIP).
+Gold Line ridership figures reconcile exactly (2.8M/yr system ≈ under 9,000/day);
+Khlong San market closure 2021 carried identically; Sathorn Unique "no recorded
+path to completion" matches the CNN-exclusion record.
+
+**Old-town (pom-prap-sattru-phai · phra-nakhon · dusit):** consistent. pom-prap's
+"temple hill you can walk up" is Wat Saket (in-khet) — distinct from Rommaninat
+which sam-yot owns; dusit's parks-not-walkable framing (zoo fenced, royal grounds)
+matches the program-wide green-basis finding and phra-nakhon's "royal parks with
+posted hours"; hospital absence stated only where true (phra-nakhon).
+
+**Sukhumvit-east (st.thong-lo · st.phra-ram-9):** consistent. Sidewalk critiques
+differ by soi without contradiction; Jodd Fairs demolition carried identically to
+batch-4 records.
+
+**Verdict: G22 now covers all six corridors — zero framing contradictions found
+anywhere; the fix queue remains empty.** Cross-bundle fact spot-checks continue to
+hold (One Bangkok ×4; dual Pathum Wan blends correctly flagged, not smoothed).
