@@ -57,11 +57,11 @@ without coordinate templates, 2 no-wiki-title).
 ## 2b. Coverage update + a self-inflicted data-loss lesson (fifth review, same day)
 
 - The 20 "HTTPError" rows were **transient rate-limiting, not dead links** —
-  a delayed retry recovered 8 more areas → audit now **100/133** (90 ≤100 m;
+  delayed retries recovered 8 more, then a final pass recovered 8 of the 9 persistent rows → audit now **108/133** (90 ≤100 m;
   drift cases unchanged: don-mueang 658, wat-mangkon 346, bang-son 293;
   wutthakat 241 = minor). Remaining 35 missing: 19 articles without
   coordinates, 4 without an EN article, 12 persistent fetch-errors
-  (documented; ~83% coverage is the accepted ceiling for this environment).
+  (documented; ~81% coverage is the accepted ceiling for this environment — the recovery also adopted the tmp+rename safe-write pattern).
 - **Process lesson:** two successive write crashes truncated the audit CSV
   (write-open truncates before the crash; one run then wrote an empty list
   over it). Restored from git (273ceb2) — the committed-artifact discipline
