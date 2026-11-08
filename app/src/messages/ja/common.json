@@ -1014,7 +1014,12 @@
       "asOf": "編集リサーチ基準日 {date}",
       "recheckDue": "要再確認: {date}",
       "greenBuffer1km": "緑スコアはグリッド地点から1km以内の公園面積を数えています（区域外の公園も含む）。",
-      "transportMechanism": "交通スコアは鉄道駅に加え、バス停と船の桟橋も数えています。"
+      "transportMechanism": "交通スコアは鉄道駅に加え、バス停と船の桟橋も数えています。",
+      "guide": "編集ガイド",
+      "attributionNotice": "単一ソースの記述",
+      "uncertainties": "不確実な点",
+      "evidence": "根拠と出典",
+      "eventDate": "出来事日: {date}"
     },
     "disclosure": {
       "greenBuffer1km": "緑スコアはグリッド地点から1km以内の公園面積を数えています（区域外の公園も含む）。",

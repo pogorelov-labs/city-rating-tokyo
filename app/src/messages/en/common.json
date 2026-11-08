@@ -1014,7 +1014,12 @@
       "asOf": "Editorial research as of {date}",
       "recheckDue": "Facts due recheck: {date}",
       "greenBuffer1km": "Green score counts park hectares within 1 km of the area's grid points — parks beyond the boundary count too.",
-      "transportMechanism": "Transport counts rail stations, bus stops and boat piers around the area — not only rail."
+      "transportMechanism": "Transport counts rail stations, bus stops and boat piers around the area — not only rail.",
+      "guide": "Editorial guide",
+      "attributionNotice": "single-source claim",
+      "uncertainties": "Uncertainties",
+      "evidence": "Evidence & sources",
+      "eventDate": "Event date: {date}"
     },
     "disclosure": {
       "greenBuffer1km": "Green score counts park hectares within 1 km of the area's grid points — parks beyond the boundary count too.",
