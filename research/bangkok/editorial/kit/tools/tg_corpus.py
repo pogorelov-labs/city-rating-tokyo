@@ -149,6 +149,11 @@ def cmd_pull(channel, limit, max_pages):
         msgs = parse_feed(page)
         if not msgs:
             break
+        if oldest is not None and all(m["id"] >= oldest for m in msgs):
+            # stall: pagination returned nothing older — the same page would
+            # repeat forever (found in the 2026-11-08 third review)
+            print(f"pagination stalled at {oldest} (no older messages exposed); stopping")
+            break
         pages += 1
         with open(path, "a", encoding="utf-8") as f:
             for rec in msgs:
@@ -202,13 +207,25 @@ def cmd_cite(channel, mid, source_type, body_read):
             break
     if rec is None:
         raise SystemExit(f"message {mid} not in corpus — pull {channel} first")
-    reg = registry_entry(channel) or {}
+    reg = registry_entry(channel)
+    if reg is None:
+        raise SystemExit(f"{channel} is not registered — register + verify + "
+                         "content-inspect before citing (kit/registry/telegram-channels.json)")
+    if reg.get("usable_for_evidence") is False:
+        raise SystemExit(f"{channel} is REJECTED for evidence use by the registry "
+                         f"({reg.get('official_status')}) — see its limitations; "
+                         "do not cite. Update the registry only with new evidence.")
+    family = reg.get("publisher_family", channel) or channel
+    if "telegram" not in family.lower():
+        # defense-in-depth: canonical.py rule 0 keeps families containing
+        # "telegram" out of outlet families — the marker must always be present
+        family = f"{family} (Telegram channel)"
     record = {
         "canonical_url": rec["url"],
         "retrieved_url": rec["url"],
         "title": f"{reg.get('display_name', channel)} post {mid} ({rec['datetime']})",
         "publisher": reg.get("display_name", channel),
-        "publisher_family": reg.get("publisher_family", channel),
+        "publisher_family": family,
         "author": None,
         "published_at": rec["datetime"],
         "retrieved_at": rec["pulled_at"].replace("+00:00", "Z"),
@@ -279,7 +296,7 @@ def main():
     c = sub.add_parser("cite"); c.add_argument("--channel", required=True)
     c.add_argument("--id", type=int, required=True)
     c.add_argument("--type", default="news")
-    c.add_argument("--body-read", action="store_true", default=True)
+    c.add_argument("--body-read", action=argparse.BooleanOptionalAction, default=True)
     sub.add_parser("status")
     sub.add_parser("restamp")
     args = ap.parse_args()

@@ -11,6 +11,10 @@ identity; assemble.py and audit.py both compute corroboration through it so
 labels and re-audits agree.
 
 Rules (first match wins; case-insensitive; "^" prefix = startswith):
+0. Anything mentioning "telegram" is returned UNCHANGED — a Telegram channel
+   is its own publisher (operator identity usually unverified; a channel
+   displaying an outlet's name must never corroborate that outlet's own
+   family — found in the 2026-11-08 third review, D-6).
 1. Wikimedia Foundation projects (wikipedia / wikimedia / wikivoyage /
    wikidata) -> "wikimedia" — same publisher.
 2. OpenStreetMap + Overpass -> "openstreetmap" — Overpass is a query API
@@ -61,6 +65,10 @@ def canon_family(raw):
     s = (raw or "").strip().lower()
     if not s:
         return raw
+    if "telegram" in s:
+        # rule 0: a Telegram channel is its own publisher — a channel showing an
+        # outlet's name must never corroborate that outlet's own family
+        return raw.strip() if isinstance(raw, str) else raw
     for out, needles in ORG_RULES:
         for n in needles:
             if n.startswith("^"):

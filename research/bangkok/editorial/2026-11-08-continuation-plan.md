@@ -22,8 +22,9 @@ workstreams so nothing lives in an appendix. Review history:
   ([`2026-11-08-gate-verification.md`](2026-11-08-gate-verification.md));
   after the fix + a logged contract-repair pass, ALL OK ×5 (schema +
   semantic) and audit zero-P1 ×5 stand for real.
-- Program totals (tiers A+B): 668 sources (527 body-read, 547 distinct URLs,
-  299 publisher families), 667 claims — 422 corroborated / 205 proposed /
+- Program totals (tiers A+B): 668 sources (527 body-read, 547 distinct URLs as
+  researched — 543 after the contract-repair merges, 299 publisher families),
+  667 claims — 422 corroborated / 205 proposed /
   40 conflicted as researched; **399 / 228 / 40 after the executed B-10
   canonical relabel (2026-11-08; deterministic rule set, 23 relabels —
   [`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md))**.
@@ -114,7 +115,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | C-3 | Wave **2027-02 → 2027-06** (≈70 items — the spring cluster): One Bangkok phases; canal-park progress; Chula/RMU land dispute; vendor-crackdown effects; Charoen Chai status; Khlong Thom Center post-fire; rents across tier A/B | quarterly | |
 | C-4 | Wave **2027-07 → 2029** (≈40 items): DOPA census releases; quarterly portal rent refresh; SRT/MRTA/BEM ridership; named milestones (Purple line Nov 2030, Orange line Jul 2030, Ratchathewi flyover Apr 2028, Central Ladprao renovation to 2058 lease) | as published | |
 | C-5 | **Living registry (C9):** regenerate the calendar at every batch end via `kit/recheck-due.py`; fold bundle `open_issues` (~547 notes) in as verifiable items; **owner named via DEC-3**. | continuous | script to build |
-| C-6 | **Link-rot waves (G14):** quarterly checks over the 547 canonical URLs; dead URLs flagged on the source record, affected claims downgraded to "archived citation" status — never deleted silently. | quarterly | script to build |
+| C-6 | **Link-rot waves (G14):** quarterly checks over the canonical URLs (543 post-repair); wave 1 DONE 2026-11-08 — 485 OK, 4 dead flagged archived-citation, 33 access-limited; dead URLs flagged on the source record, affected claims downgraded to "archived citation" status — never deleted silently. | quarterly | wave 1 done |
 | C-7 | **End-of-batch volatile recheck (handoff method rule — missed in all four batches).** Before closing any batch, re-open the volatile operational/price/closure sources it cites (rents, market schedules, opening hours, transport status) and confirm they still say what the claims say; append dated confirmation notes or corrections. | every batch close | Program DoD item 10; batch DoD amended |
 
 ## 6. WS-D — Tier upgrades & corpus maintenance (gated on A-1)
@@ -298,4 +299,22 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
   [`2026-11-08-independent-review.md`](2026-11-08-independent-review.md).
   **DEC-2 (human signatory) remains open** — this is an agent review.
   Next: fix F1/F2 mechanically from `raw/`, re-assemble batch 2 (F4), run the
-  F3 evidence pass, then human sign-off.
+  F3 evidence pass, then human sign-off. — **Amended (third review): F4 must
+  NOT re-assemble batch 2** (raw/ predates coordinator corrections; kit rule
+  "never re-assemble closed batches") — the fix is a logged profile-level
+  strip of inline refs, contract-repair style.
+- **2026-11-08 (third review, parallel):** the agent reviewer's work was
+  **verified before acceptance** (F1/F2/F3/F5/F8 all reproduce; their commits,
+  records and audit diff check out) and then audited from new angles —
+  findings: my limitations repair was partial (F2 stands), my "zero P1" claims
+  were rule-relative, my sam-yot verification-pass record is not evidenced in
+  the delivered bundle (harshest correction), my khlong-san correction was
+  wrong (station cell vs khet — verified by own PIP probes), and my B-13
+  conflict link needs re-examination in rework. New fixes landed: canonical
+  rule 0 (Telegram-channel families never merge with outlets — latent bug
+  found), tg_corpus verdict guard + argparse + stall-break fixes, packet
+  retraction of the false "machine-verified" residual, URL-count 547→543
+  corrections. E-5 amendment recorded: copy eligibility keys on *human*
+  sign-off (`agent-review:*` reviewer ≠ copy-eligible). Process items opened:
+  contract-derived audit-rule checklist (Angle F); two-writers-one-tree
+  hazard. Receipt: [`2026-11-08-third-review.md`](2026-11-08-third-review.md).

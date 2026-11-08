@@ -79,8 +79,12 @@ review (see `research/bangkok/notes/2026-11-07-editorial-batch-pipeline-followup
 - Overpass unavailable: mapped park hectares unidentified (nana 1.4 ha,
   ratchathewi 1.0 ha, wat-mangkon 0.5 ha, charoen-nakhon 0.8 ha; phaya-thai
   14.8 ha undecomposed) — pipeline item, not a bundle fix.
-- Snippet-only sources used as corroboration only, each flagged on the source
-  record; no claim rests solely on one (machine-verified).
+- ~~Snippet-only sources used as corroboration only, each flagged on the source
+  record; no claim rests solely on one (machine-verified).~~ **RETRACTED
+  2026-11-08** (independent review F3): 21 claims across 6 bundles rest solely
+  on unread sources (sam-yot 11; hua-lamphong, phaya-thai, phetchaburi,
+  saint-louis, sala-daeng). The affected bundles are blocked; see
+  [`../2026-11-08-independent-review.md`](../2026-11-08-independent-review.md).
 - Conflicting-by-design: Soi 38 night market status; Silom Walking Street
   schedule; Victory Monument khet attribution; Wat Ratchanatdaram khet;
   ICS opening month; Gold Line fare; Nana Plaza bar count/hours; Princess

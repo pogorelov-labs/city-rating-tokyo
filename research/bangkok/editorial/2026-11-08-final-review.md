@@ -11,7 +11,8 @@ gate remains open (see §7).
 
 ## 1. Volume and provenance (researched tiers A+B, 46 bundles)
 
-668 sources cited / 527 body-read / 547 distinct canonical URLs across 299
+668 sources cited / 527 body-read / **547 distinct canonical URLs as researched
+(543 after the 2026-11-08 contract-repair merges)** across 299
 publisher families; 667 claims — **422 corroborated / 205 proposed / 40
 conflicted as researched; 399 / 228 / 40 after the 2026-11-08 canonical
 publisher-family relabel (B-10/G21)**, which merged Wikipedia language

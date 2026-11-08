@@ -47,6 +47,20 @@ class TestCanonicalFamilies(unittest.TestCase):
         self.assertNotEqual(canon_family("PropertyScout"), canon_family("PropertySights"))
         self.assertNotEqual(canon_family("Thairath"), canon_family("Nation Group"))
 
+    def test_telegram_channels_never_merge_with_outlets(self):
+        # third review (2026-11-08): a channel displaying an outlet's name is a
+        # different publisher — masquerading risk (see telegram-channels.json)
+        self.assertEqual(canon_family("Bangkok Post (Telegram channel)"),
+                         "Bangkok Post (Telegram channel)")
+        self.assertEqual(
+            canon_family("Telegram channel 'BANGKOK POST' (operator unknown)"),
+            "Telegram channel 'BANGKOK POST' (operator unknown)")
+        self.assertNotEqual(canon_family("Bangkok Post (Telegram channel)"),
+                            canon_family("Bangkok Post"))
+        self.assertNotEqual(
+            canon_family("Telegram channel 'BANGKOK POST' (operator unknown)"),
+            canon_family("Bangkok Post"))
+
     def test_unknown_passthrough_and_case(self):
         self.assertEqual(canon_family("Khaosod English"), "Khaosod English")
         self.assertEqual(canon_family("  Khaosod English "), "Khaosod English")

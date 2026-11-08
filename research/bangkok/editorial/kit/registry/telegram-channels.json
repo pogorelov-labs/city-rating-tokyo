@@ -13,7 +13,7 @@
  "channels": {
   "bangkokpost": {
    "display_name": "BANGKOK POST (Telegram channel)",
-   "publisher_family": "Unknown operator ('BANGKOK POST' display name)",
+   "publisher_family": "Telegram channel 'BANGKOK POST' (operator unknown)",
    "language": "en",
    "source_type": "editorial_guide",
    "official_status": "likely-unofficial-content-channel",
