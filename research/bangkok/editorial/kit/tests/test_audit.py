@@ -92,7 +92,7 @@ class TestAudit(unittest.TestCase):
         b = base_bundle()
         b["claims"][0]["limitations"] = list("revenue figures are operator-sourced")
         msgs = self.run_audit(b)
-        self.assertTrue(any("exploded into single characters" in m for m in msgs), msgs)
+        self.assertTrue(any("limitations array exploded" in m for m in msgs), msgs)
 
     def test_dangling_and_self_conflicts_are_p1(self):
         b = base_bundle()
@@ -132,6 +132,70 @@ class TestAudit(unittest.TestCase):
             json.dump(b, open(p, "w", encoding="utf-8"), ensure_ascii=False)
             audit.audit_bundle(p)
         self.assertFalse(audit.ISSUES)
+
+    # --- 2026-11-08 independent review: sign-off + normalize-damage gates ---
+
+    def test_approved_with_reviewer_and_timestamp_has_no_p1(self):
+        b = base_bundle()
+        b["review"].update({"status": "approved", "reviewer": "r",
+                            "reviewed_at": "2026-11-08T00:00:00+03:00"})
+        msgs = self.run_audit(b)
+        self.assertFalse([m for m in msgs if m.startswith("P1")], msgs)
+
+    def test_approved_without_reviewer_is_p1(self):
+        b = base_bundle()
+        b["review"]["status"] = "approved"
+        msgs = self.run_audit(b)
+        self.assertTrue(any("approved without a reviewer" in m for m in msgs), msgs)
+
+    def test_approved_with_failing_check_is_p1(self):
+        b = base_bundle()
+        b["review"].update({"status": "approved", "reviewer": "r",
+                            "reviewed_at": "2026-11-08T00:00:00+03:00",
+                            "checks": {"copy": "fail"}})
+        msgs = self.run_audit(b)
+        self.assertTrue(any("approved with non-pass checks" in m for m in msgs), msgs)
+
+    def test_reviewer_set_but_ready_is_p2_only(self):
+        b = base_bundle()
+        b["review"]["reviewer"] = "r"
+        msgs = self.run_audit(b)
+        self.assertTrue(any("still ready_for_review" in m for m in msgs), msgs)
+        self.assertFalse([m for m in msgs if m.startswith("P1")], msgs)
+
+    def test_placeholder_editorial_is_p1(self):
+        b = base_bundle()
+        b["editorial"]["day_night"] = [
+            {"text_en": "text", "claim_ids": ["testx-c01"]},
+            {"text_en": "claim_ids", "claim_ids": ["testx-c01"]},
+        ]
+        msgs = self.run_audit(b)
+        self.assertTrue(any("placeholder text" in m for m in msgs), msgs)
+
+    def test_exploded_uncertainties_is_p1(self):
+        b = base_bundle()
+        b["editorial"]["uncertainties"] = list("uncertainty text exploded")
+        msgs = self.run_audit(b)
+        self.assertTrue(any("uncertainties exploded" in m for m in msgs), msgs)
+
+    def test_inline_claim_ref_in_copy_is_p1(self):
+        b = base_bundle()
+        b["editorial"]["preview"]["text_en"] = "A concrete place [testx-c01]."
+        msgs = self.run_audit(b)
+        self.assertTrue(any("inline claim reference" in m for m in msgs), msgs)
+
+    def test_exploded_source_limitations_is_p1(self):
+        b = base_bundle()
+        b["sources"][0]["limitations"] = list("a long limitation string")
+        msgs = self.run_audit(b)
+        self.assertTrue(any("source" in m and "limitations array exploded" in m
+                            for m in msgs), msgs)
+
+    def test_app_data_locator_on_web_source_is_p1(self):
+        b = base_bundle()
+        b["claims"][0]["evidence"][0]["locator"] = "facts: park_ha 3.5"
+        msgs = self.run_audit(b)
+        self.assertTrue(any("app-data locator on web source" in m for m in msgs), msgs)
 
 
 if __name__ == "__main__":

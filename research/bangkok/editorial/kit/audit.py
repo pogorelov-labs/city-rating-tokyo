@@ -37,6 +37,12 @@ SRCTYPES = {"official_operator", "government", "tourism_publisher", "editorial_g
 QA_IDS = {f"Q{i:02d}" for i in range(1, 13)}
 BANNED = re.compile(r"\b(vibrant|hidden gem|something for everyone)\b", re.I)
 WALKTIME = re.compile(r"\b\d+\s*[- ]?(min(ute)?s?|hour)s?\b.{0,20}\b(walk|stroll)\b|\bwalk\b.{0,30}\b\d+\s*[- ]?min", re.I)
+# 2026-11-08 independent review: normalize damage that no gate caught.
+PLACEHOLDER_TEXT = {"text", "text_en", "claim_ids", "texts", "claims"}
+INLINE_CLAIM_REF = re.compile(r"\b[a-z0-9][a-z0-9-]*-c\d{2}\b")
+APP_LOCATOR = re.compile(
+    r"\b(areas\[\]|districts\[\]|confidence\.[a-z_]+|sources\.[a-z_]+|ratings\b|"
+    r"facts:\s*park_ha|rent_1br|rent_2br|app[- ]data)\b", re.I)
 
 # G20 — injection/HTML sweep over user-facing text.
 INJ_HTML = re.compile(r"<[a-zA-Z][a-zA-Z0-9]*[^>]*>")
@@ -108,6 +114,13 @@ def audit_bundle(path):
         m = re.match(r"^(\d{4})-(\d{2})-(\d{2})", s.get("published_at") or "")
         if m and date(int(m.group(1)), int(m.group(2)), int(m.group(3))) > TODAY:
             note("P1", short, f"future published_at {s['published_at']} on {s['id']}")
+        # 2026-11-08: the normalize bug also hit SOURCE limitations; the earlier
+        # repair and rule only covered claim arrays (all-single-char case).
+        slim = s.get("limitations") or []
+        single = sum(1 for x in slim if isinstance(x, str) and len(x) <= 1)
+        if single >= 10:
+            note("P1", short, f"source {s['id']}: limitations array exploded "
+                              f"({single}/{len(slim)} single-character entries)")
         # G24 — URL scheme + AI-summary provenance
         scheme = urlparse(s["canonical_url"]).scheme.lower()
         if scheme == "http":
@@ -123,6 +136,7 @@ def audit_bundle(path):
         note("P1", short, "duplicate canonical URLs within bundle")
 
     cids = set()
+    provenance_bad = False
     for c in b["claims"]:
         cid = c["id"]
         cids.add(cid)
@@ -144,6 +158,11 @@ def audit_bundle(path):
                 note("P1", short, f"{cid}: evidence points to missing source {e['source_id']}")
             elif not src["body_read"]:
                 note("P2", short, f"{cid}: evidence uses body_read=false source {e['source_id']}")
+            # 2026-11-08: app-data locators must not be attached to a web source.
+            if APP_LOCATOR.search(e.get("locator") or ""):
+                note("P1", short, f"{cid}: app-data locator on web source "
+                                  f"{e['source_id']} — provenance mismatch")
+                provenance_bad = True
         fams = {canon_family(s["publisher_family"]) for s in b["sources"]
                 if s["id"] in {e["source_id"] for e in c["evidence"]}}
         expected = "corroborated" if len(fams) >= 2 else "proposed"
@@ -160,8 +179,10 @@ def audit_bundle(path):
             elif link not in cids:
                 note("P1", short, f"{cid}: conflicts_with dangling link {link}")
         lims = c.get("limitations") or []
-        if len(lims) > 5 and all(isinstance(x, str) and len(x) <= 1 for x in lims):
-            note("P1", short, f"{cid}: limitations array exploded into single characters ({len(lims)} entries)")
+        single = sum(1 for x in lims if isinstance(x, str) and len(x) <= 1)
+        if single >= 10:
+            note("P1", short, f"{cid}: limitations array exploded "
+                              f"({single}/{len(lims)} single-character entries)")
 
     qmap = {q["id"]: q for q in b["question_answers"]}
     if set(qmap) != QA_IDS:
@@ -194,25 +215,52 @@ def audit_bundle(path):
         for gate, frag in injection_scan(t or ""):
             sev = "P2" if gate == "G20-phrase" else "P1"
             note(sev, short, f"{gate}: {frag!r} in user-facing text")
+    copy_bad = False
     for blk in ("preview", "guide_lead"):
         if ed[blk] is None:
             note("P1", short, f"{blk} is null — required card/lead copy missing")
+            copy_bad = True
             continue
         if BANNED.search(ed[blk]["text_en"]):
             note("P1", short, f"{blk}: banned phrase")
+            copy_bad = True
         if not ed[blk]["claim_ids"]:
             note("P1", short, f"{blk}: no claim provenance")
+        t = (ed[blk].get("text_en") or "").strip()
+        if t.lower() in PLACEHOLDER_TEXT:
+            note("P1", short, f"{blk}: placeholder text {t!r} (normalize damage)")
+            copy_bad = True
+        if INLINE_CLAIM_REF.search(t):
+            note("P1", short, f"{blk}: inline claim reference in user-facing copy")
+            copy_bad = True
     for lst in ("strengths", "tradeoffs", "day_night", "within_area_variation", "conditional_fit"):
         if not ed[lst]:
             note("P2", short, f"editorial.{lst} empty")
         for i, it in enumerate(ed[lst]):
             if BANNED.search(it["text_en"]):
                 note("P1", short, f"{lst}[{i}]: banned phrase")
+                copy_bad = True
             if not it["claim_ids"]:
                 note("P1", short, f"{lst}[{i}]: no claim provenance")
             for cid in it["claim_ids"]:
                 if cid not in cids:
                     note("P1", short, f"{lst}[{i}]: dangling claim ref {cid}")
+            t = (it.get("text_en") or "").strip()
+            if t.lower() in PLACEHOLDER_TEXT:
+                note("P1", short, f"{lst}[{i}]: placeholder text {t!r} (normalize damage)")
+                copy_bad = True
+            if INLINE_CLAIM_REF.search(t):
+                note("P1", short, f"{lst}[{i}]: inline claim reference in user-facing copy")
+                copy_bad = True
+    unc = ed.get("uncertainties") or []
+    unc_text = [(x.get("text_en") or x.get("text") or "") if isinstance(x, dict) else str(x)
+                for x in unc]
+    if any(v.strip().lower() in PLACEHOLDER_TEXT for v in unc_text):
+        note("P1", short, "editorial.uncertainties contains placeholder text (normalize damage)")
+        copy_bad = True
+    if len(unc_text) > 3 and all(len(v) <= 1 for v in unc_text):
+        note("P1", short, f"editorial.uncertainties exploded into {len(unc_text)} characters (normalize damage)")
+        copy_bad = True
 
     for t in all_text(b["editorial"]):
         if WALKTIME.search(t):
@@ -225,10 +273,33 @@ def audit_bundle(path):
         note("P1", short, f"review.checks.sources=pass but unsupported claims: {unsupported}")
     if unsupported and b["review"]["checks"]["claim_support"] == "pass":
         note("P1", short, "review.checks.claim_support=pass despite unsupported claims")
-    if b["review"]["status"] != "ready_for_review":
-        note("P2", short, f"review.status={b['review']['status']}")
-    if b["review"]["reviewer"] is not None:
-        note("P1", short, "reviewer set — no independent review has happened")
+    if provenance_bad and b["review"]["checks"].get("claim_support") == "pass":
+        note("P1", short, "review.checks.claim_support=pass despite provenance mismatches")
+    if copy_bad and b["review"]["checks"].get("copy") == "pass":
+        note("P1", short, "review.checks.copy=pass despite copy defects")
+
+    # 2026-11-08 independent review: sign-off consistency (replaces the old
+    # "reviewer set -> P1" rule, which made a completed review fail the gate).
+    rv = b["review"]
+    status = rv.get("status")
+    reviewer = rv.get("reviewer")
+    reviewed_at = rv.get("reviewed_at")
+    nonpass = [k for k, v in (rv.get("checks") or {}).items()
+               if v not in ("pass", "not_applicable")]
+    if status == "approved":
+        if not reviewer:
+            note("P1", short, "approved without a reviewer")
+        if not reviewed_at:
+            note("P1", short, "approved without reviewed_at")
+        if nonpass:
+            note("P1", short, f"approved with non-pass checks: {nonpass}")
+    elif status == "blocked":
+        if not reviewer:
+            note("P2", short, "blocked bundle has no reviewer recorded")
+    elif status != "ready_for_review":
+        note("P2", short, f"review.status={status}")
+    if reviewer and status == "ready_for_review":
+        note("P2", short, "reviewer set but review.status is still ready_for_review")
 
 def main():
     ap = argparse.ArgumentParser()
