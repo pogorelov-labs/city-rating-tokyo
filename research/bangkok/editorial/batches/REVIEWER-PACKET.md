@@ -13,6 +13,7 @@ For the independent review the handoff requires. Every bundle sits at
 specific. **Researcher self-checks are not this review.**
 
 - Batches: `2026-11-05-pilot-zcode-main`, `2026-11-07-batch2-zcode-main` (full bundles), `2026-11-07-batch3-zcode-main` (10 full),
+  `2026-11-08-batch5-b-to-a` (9 full — D-1 tier-B→A upgrades; see §3c below),
   `2026-11-07-batch4-light-zcode-main` (24 light), `2026-11-08-tail-data-only`
   (137 scripted placeholders — bulk-checkable: identity + no-web-claims only).
   Master index: `../2026-11-08-tier-plan.md`. Additional batch 3–4 stakes:
@@ -140,3 +141,34 @@ gated (`validate` ALL OK ×5; `audit` zero P1):
   preview index; full narrative/evidence on demand) — separate reviewed change.
 - Batch 3 may dispatch once every pilot + batch-2 bundle is approved.
 - Translations and image rights remain separate gates.
+
+
+## 3c. Batch 5 (2026-11-08) — D-1 tier-B→A upgrades (9 full bundles)
+
+Contract-clean batch (assembly normalizations: zero). Per-bundle stakes are
+in its own `batches/2026-11-08-batch5-b-to-a/review/findings.md` — written at
+close. The highest-stakes items for your attention:
+
+1. **st.saphan-taksin — NEW pipeline risk (beyond the prior batch):** BTS S6
+   is single-platform/single-track in the Taksin Bridge median; the ordered
+   double-track conversion (2017, ~1B THB/40 months) had not begun as of the
+   Aug 2026 station-article revision — a potential 3-year closure on the
+   Silom line's bottleneck. Verify the claim chain (MGR Online + Wikipedia
+   revision date) and decide whether this becomes a score-context disclosure.
+2. **Three brief leads were contradicted by evidence** — the bundles carry
+   the corrections as findings: chit-lom's "bike protest" (does not exist in
+   coverage; the real event history is 2006/2010/2015/2020-21), saphan-taksin's
+   ghost tower ("on hold, no plans" — NOT "cancelled"; survived the 2025-03-28
+   quake), phetchaburi's CODI project name (ChamF Rim Bueng Makkasan, not
+   "Nimit Lang Ruea").
+3. **Ratings-context decompositions to eyeball against the scores:**
+   sala-daeng green 10 = Lumphini west edge only (geometry-probe confirmed);
+   siam green ~6 ha = Sra Pathum palace precinct + temple grounds (not public
+   park); phra-ram-9 food/nightlife 8 predate the Jodd Fairs demolition
+   (successor ~2 km out, outside the catchment); phetchaburi nightlife 9 has
+   no local venue basis; mo-chit market decline vs tourist image.
+4. **B-2 note:** the corpus-wide anchor audit (91% of anchors within 100 m of
+   Wikipedia coords; 4 same-station displacement cases) — batch-5 distance
+   claims key on app anchors per the briefs.
+5. Gate state at close: validate ALL OK ×9, audit zero-P1 (23 documented
+   P2s), G20/G17 clean, geometry spot-checks recorded in the findings file.

@@ -132,3 +132,34 @@ The tiered program completed all 183 entities (`editorial/2026-11-08-tier-plan.m
 8. **Kit TODO:** `check_geometry.py` prefers station-geometry keys over district keys
    (`chatuchak` exists in both) — needs an explicit `--khet` flag; found by the batch-3
    chatuchak agent, worked around by direct OSM queries.
+
+## Batch-5 receipts (2026-11-08, D-1 tier-B→A research pass — new ticket candidates)
+
+1. **BTS S6 Saphan Taksin single-platform bottleneck (new, high):** the
+   Silom line's capacity is capped by the bridge-median station; double-track
+   conversion ordered 2017-11 (~1B THB / 40 months) unstarted per the Aug
+   2026 station-article revision — a multi-year full-closure risk. Candidate:
+   transit-score context note + a CRTKY ticket for the operations data.
+2. **Victory Monument khet straddle + cell edge:** monument circle inside the
+   app's phaya-thai khet ring but Gazette/encyclopedias say Ratchathewi; and
+   the circle sits ~10–20 m beyond the station cell's northern tip. Candidate:
+   B-2/B-4 family (receipts: 2026-11-08-b2-b4-pipeline-receipts.md §2 cases
+   6/7/9).
+3. **B-2 drift classification (new):** corpus-wide audit — 91% of anchors
+   within 100 m; all 4 offset cases are SAME-station displacements (the app
+   never anchors the wrong station): wat-mangkon 346 m (Wikipedia infobox),
+   bang-son 293 m and don-mueang 658 m (large/elevated complex position),
+   wutthakat 241 m. Distance-base rule: bundles key on app anchors — hold.
+4. **GR9 (phra-ram-9):** phased retail reopening from early 2028 per Central
+   Group's 2026-03-26 newsroom; the "opens 20 May 2026" claim belongs to
+   Central Khon Kaen; Robinson ceased 2025-11-27. Recheck in C-waves.
+5. **Orange Line (phetchaburi):** tunneling under Phetchaburi Rd began Jul
+   2024 (14% mid-2025); opening dates conflict 2028/2030; Pratunam overpass
+   demolition due 2026-03. Recheck in C-waves.
+6. **Chatuchak Section 30 eviction (mo-chit):** 529 stallholders, BMA
+   non-renewal (contracts expired 2024-10-31), court case; market contracts
+   ALL expire 2027-10-31 — a timed recheck with potential score context.
+7. **Mo Chit 2 / park areas:** Mo Chit 2 confirmed ~2 km out (outside both
+   catchments); four-park totals conflict (753 rai ≈ 120 ha vs app
+   149.2/167.1) — joins the B-3/B-4 green/polygon family.
+
