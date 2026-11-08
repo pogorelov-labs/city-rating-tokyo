@@ -106,11 +106,15 @@ The tiered program completed all 183 entities (`editorial/2026-11-08-tier-plan.m
    ratchathewi 17.8 = 8.81 named public + institutional gardens; din-daeng OSM ~3 ha vs
    app 15.5; **dusit 118.7 ha largely NON-public** (zoo fenced since 2018, Sanam Suea Pa
    royal). Feeds the green-basis audit candidate from the 2026-11-07 note.
-4. **Polygon coarseness:** khlong-san district polygon (10 vertices) PIP-OUTs ICONSIAM
-   despite the mall being in khwaeng Wat Kanlaya, and PIP-INS River City; the sathon
-   polygon hugs the south side of Sathorn Rd — all three BTS nodes PIP-OUT, which is the
-   clean mechanism for its transport 7; thon-buri does NOT contain BTS Wongwian Yai
-   (khlong-san, per station infobox + PIP).
+4. **Polygon coarseness:** 🔄 **CORRECTED 2026-11-08 (independent review F5 + `--khet` PIP
+   probes):** the earlier khlong-san claim here conflated the **station cell** with the
+   **khet** — the app's khlong-san khet polygon (`geometry.json`, 50 vertices) **CONTAINS**
+   ICONSIAM and G2 Charoen Nakhon and excludes River City; the 10-vertex object the agent
+   measured is `station-geometry.json["khlong-san"]` (the documented B-8 key-shadowing trap).
+   Remaining genuine items: the sathon boundary is metres-sensitive (app anchors for
+   Surasak/Saint Louis sit on the line — "all three BTS nodes outside" holds for the app
+   anchors and should be phrased as boundary-sensitive); thon-buri does NOT contain BTS
+   Wongwian Yai (khlong-san, per station infobox + PIP).
 5. **Rent semantics:** phloen-chit station record blends 33,500/74,000 while the pathum-wan
    district record says 38,000/85,000 — two different "Pathum Wan blends" in the app;
    chit-lom's 120,000/— 2-bed override (highest in the app) is a top-decile luxury asking

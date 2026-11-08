@@ -1,4 +1,6 @@
-# Continuation plan & detailed backlog — Bangkok editorial research (v2.2, 2026-11-08)
+# Continuation plan & detailed backlog — Bangkok editorial research (v2.3, 2026-11-08)
+
+**v2.3 — integrates the independent agent review (A-1 executed: 22 approved / 24 blocked; tier C 137/137) and the third critical pass. New/changed: A-8 rework queue (24 blocked bundles, dependency-ordered); B-4 khlong-san claim corrected (station cell ≠ khet — verified by own PIP probes; final-review §2.4 and pipeline notes corrected too); B-13 conflict-link caveat; B-15 contract-derived audit checklist; E-5 amended (copy eligibility keys on HUMAN sign-off — `agent-review:*` reviewer ≠ copy-eligible); gate-count convention (audit findings are rule-relative — always report the rule version); F-4-fix must NOT re-assemble batch 2; D-6 Telegram corpus in the workflow; C-6 wave 1 done; PR #177 live.**
 
 **v2.2 — the agent-executable lane is DONE (2026-11-08, commits 28805ad…): B-8, B-10, B-11, B-13, B-14 executed; G20/G21/G24 live in the kit; F-2 standing rules in the prompt template; kit unit tests green (B-9 local part). Corroboration relabel landed at the deterministic 23 (→ 399/228/40), superseding the deep review's 27; 71 batch-4 limitations arrays repaired (new audit rule); tail-batch manifest gap fixed. Remaining: owner decisions (DEC-1…10), human review gates (A-1/A-2), pipeline-team items (B-1..B-7, B-9 CI wiring), WS-C/D/E/F/G.**
 
@@ -17,6 +19,12 @@ workstreams so nothing lives in an appendix. Review history:
 - **183/183 entities** carry a schema-valid bundle: 22 tier A (full),
   24 tier B (light), 137 tier C (data-only placeholders, `draft` by design).
   Master index: [`2026-11-08-tier-plan.md`](2026-11-08-tier-plan.md).
+- **Independent agent review executed (A-1 agent pass, 2026-11-08)**:
+  **22 approved / 24 blocked**; tier C **137/137 PASS** independently
+  reproduced. Recorded in `review.reviewer` as `agent-review:*` — **not a
+  human signatory**; DEC-2/G10 (human sign-off) remains open. Report:
+  [`2026-11-08-independent-review.md`](2026-11-08-independent-review.md).
+  The 24 blocks route through A-8 (rework queue).
 - All 5 batches pass `kit/validate.py` — **genuinely as of 2026-11-08**: the
   schema half of the validator had been silently discarding errors
   ([`2026-11-08-gate-verification.md`](2026-11-08-gate-verification.md));
@@ -69,10 +77,17 @@ maintenance unassigned).
 
 | ID | Item | Owner | Effort | Acceptance |
 |---|---|---|---|---|
-| A-1 | **Independent human review, tiers A+B (46 bundles; four batches in scope — C19).** Packet: `batches/REVIEWER-PACKET.md`. Spot pass 45–60 min; full pass 8–12 h. Reviewer sets `review.reviewer/reviewed_at/status` per bundle. Batch 3–4 stakes are in their findings docs; the five coordinator-drafted editorial sets (batch 3) and the batch-4 `partial`→`answered` QA normalizations are pre-flagged for attention (A-7). | HR (DEC-2) | M | every researched bundle `approved` or `blocked` with findings |
-| A-2 | **Tier-C bulk check (137 placeholders):** identity vs current app snapshot, zero web claims, `draft` status — script-assisted. 🟡 **Script half DONE 2026-11-08: 137/137 PASS** ([`2026-11-08-tier-c-bulk-check.md`](2026-11-08-tier-c-bulk-check.md), `kit/tools/tier_c_bulk_check.py`); human sign-off pending (DEC-2). | HR (script-assisted) | S | tail batch approved or regeneration list produced |
+| A-1 | **Independent human review, tiers A+B (46 bundles).** 🟡 **Agent review DONE 2026-11-08: 22 approved / 24 blocked** ([`2026-11-08-independent-review.md`](2026-11-08-independent-review.md); reviewer recorded as `agent-review:DeepSeek Harness/deepseek-flash`, explicitly not a human signatory). ⏳ **Human sign-off remains (DEC-2)** — the human signs the 22 cleared bundles and the reworked ones (A-8); packet: `batches/REVIEWER-PACKET.md`. | HR (DEC-2) | M | every researched bundle human-signed |
+| A-2 | **Tier-C bulk check (137 placeholders).** ✅ **DONE pending signature**: script half 137/137 PASS ([`2026-11-08-tier-c-bulk-check.md`](2026-11-08-tier-c-bulk-check.md), `kit/tools/tier_c_bulk_check.py`) + independently reproduced by the agent review; human/owner signature is the remaining act (DEC-2). | HR (script-assisted) | S | owner signature recorded |
 | A-3 | **Sender adoption of amendments A1–A8** (in-repo amended `2026-11-05-handoff/HANDOFF.md`; redline with receipts). | SL | S | amended copy accepted, or superseding revision reconciled |
-| A-4 | **Review rework/quarantine path (C2):** `blocked` bundles get a named fixer, scoped rework, re-review; blocked bundles are excluded from any integration slice until approved. Findings tracked per bundle. | HR + AG | M | no blocked bundle outside the quarantine list |
+| A-4 | **Review rework/quarantine path (C2):** `blocked` bundles get a named fixer, scoped rework, re-review; blocked bundles are excluded from any integration slice until approved. Findings tracked per bundle. → **ACTIVE: A-8 below.** | HR + AG | M | no blocked bundle outside the quarantine list |
+| A-8 | **Blocked-bundle rework queue (24 bundles; review findings F1–F7, F10, F12) — NEW v2.3, dependency-ordered:**
+ 1. **F1+F2 (lossless, from `raw/`):** rebuild corrupted `day_night`/`within_area_variation`/`uncertainties` (60 placeholder entries, 12 batch-4 bundles) + repair mixed/source limitations arrays (49 more, 7 bundles). Kit rule extended to their ≥10-single-char form; byte-checkable vs raw.
+ 2. **F4 (batch 2, 4 bundles):** strip inline `[ent-cNN]` refs from copy; per-block claim_ids from the block's own text. **Profile-level logged strip — NEVER re-assemble** (raw/ predates coordinator corrections; amended from the reviewer's §9.2).
+ 3. **F3 (6 bundles, 21 claims):** body-read or replace sole evidence, or drop the claim + the copy citing it. Real re-research; token cost — DEC-4-adjacent. sam-yot (11 claims) is the sharp end; the "post-hoc pass" its commit message claims is NOT in the delivered bundle.
+ 4. **F5 (khlong-san):** rewrite c02/c03/scope_notes from `--khet` truth (khet ring CONTAINS ICONSIAM/G2, excludes River City); correct final-review §2.4 (done) + pipeline notes (done).
+ 5. **F6/F7/F10/F12:** app-data locators off web sources (4 claims); wat-mangkon "refutes the pilot" → "consistent with" wording (and re-examine the B-13 conflicts_with link target); internal/research voice out of copy; charoen-nakhon QA notes re-derived.
+ Re-run validate+audit after each step; re-review per A-4. | AG (fixer) + HR (re-review) | M | 24 blocked → 0 blocked; re-gates green under the current rule version |
 | A-5 | **Legal/defamation/privacy gate (G11/G17):** before any user-visible copy — negative nameable claims (scam environments, shootings, displacement narratives, venue labels) reviewed for defamation risk; bundle audit for personal data (resident quotes, addresses); redact or attribute. | HR + legal | M | sign-off for every copy-bearing unit |
 | A-6 | **Thai-source verification (G13):** Thai-language claims that surface in copy get a Thai-capable check against the cited section (~⅓ of sources are Thai-language), or the claim is flagged and excluded from copy. | HR/AG | S | Thai-sourced copy verified or excluded |
 | A-7 | **Reviewer focus list:** batch-4 QA `partial`→`answered` normalizations; sam-yot post-hoc verification pass; five coordinator-drafted editorial sets (batch 3); the corrected cross-batch facts (Rommaninat, Pathum Wan blends). | HR | S | covered in review notes |
@@ -90,7 +105,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | B-1 | **Ghost-station audit (P0).** `st.sena-ruam` (rank #9/133) is a never-built BTS infill (N6) modeled as operating in `rail.json` (Prachachat 2026-11-05 council hearing is the live hook). Audit **all 139 stations** against operator publications; resolve sena-ruam (remove/reclassify — product decision; its catchment is a real gap cell between Ari and Saphan Khwai); add a build assertion: a modeled station must exist in a published operator source. | PL | M | 139-row audit table committed; sena-ruam resolved; build passes |
 | B-2 | **Anchor-convention audit (P0) + distance-base rule.** App centers vs OSM/Wikipedia nodes differ 270–770 m on ≥8 units (saint-louis ≥720 m — the real infill station is 13.72082/100.52669), match to 5 decimals on others; Wikipedia/OSM themselves carry displaced coords for BTS Chit Lom and Victory Monument. Document the convention or correct coordinates; **add a distance-base rule** for bundles (app anchor vs verified station coordinate) and mark affected claims (saint-louis unit is the known case). | PL | M | convention documented in `00-overview.md`; offsets ≤ threshold or explained; geometry pass re-run; affected claims marked |
 | B-3 | **Green-basis decision (P0; DEC-6).** Proven: green = park ha within 1 km of grid points. Decompositions: pathum-wan 102.7 ha = Lumphini 57.6 + Centenary 4.5 + One Bangkok ~8 + **RBSC 36.3 members-only** + royal 7.9 (~60–65% public); phra-nakhon ~19–20 public vs 38.5; chatuchak 149.2 OSM vs 167.1; ratchathewi 17.8 = 8.81 named public; din-daeng OSM ~3 vs app 15.5; **dusit 118.7 largely non-public** (zoo fenced since 2018; Sanam Suea Pa royal); kamphaeng-phet 0.1 ha in-unit. Decide: disclose the buffer basis in UI honesty notes, or add a catchment-interior green sub-signal; exclude non-public state land from public-green figures. | PL + product (DEC-6) | M | decision recorded; honesty update or pipeline change; re-derivation only via the build |
-| B-4 | **Polygon quality pass (P1).** khlong-san district polygon (10 vertices, coarsest in set) PIP-OUTs ICONSIAM (in-khet per khwaeng Wat Kanlaya) and PIP-INS River City; sathon polygon hugs the south side of Sathorn Rd — all three BTS nodes PIP-OUT (the clean mechanism for transport 7); thon-buri does not contain BTS Wongwian Yai (khlong-san, per infobox + PIP); Victory Monument khet conflict (app polygon vs sources). Re-source coarse district polygons or document the 150 m border rule per case. | PL | M | PIP audit table for affected khets; polygons corrected or cases documented |
+| B-4 | **Polygon quality pass (P1).** 🔄 **CORRECTED v2.3 (review F5 + own PIP probes):** the earlier khlong-san claim here and in the final review conflated the **station cell** with the **khet** — the 50-vertex `geometry.json` khlong-san ring **CONTAINS** ICONSIAM and G2 Charoen Nakhon and excludes River City; the 10-vertex object is `station-geometry.json["khlong-san"]` (the documented B-8 key-shadowing trap). Remaining genuine items: sathon boundary is metres-sensitive (app anchors for Surasak/Saint Louis sit on the line — "all three BTS nodes outside" holds for app anchors, phrase as boundary-sensitive); thon-buri does not contain BTS Wongwian Yai; Victory Monument khet conflict. Re-source coarse district polygons or document the 150 m border rule per case. | PL | M | PIP audit table for affected khets; polygons corrected or cases documented |
 | B-5 | **Rent semantics cleanup (P1).** Dual "Pathum Wan blends" (phloen-chit record 33,500/74,000 vs district record 38,000/85,000); chit-lom 120,000 2-bed override is top-decile luxury, not a median (FazWaz Pathum Wan 2-bed avg 99,600, n=1,114; corridor median ~40k); pom-prap 2-bed 24,000 sits below all 14 observed asks (25,000–32,000) → recalibrate via CRTKY-141. Keep `blend`/`override`/`median` labels visible in ComparePanel. | PL | M | one blend per district; labels verified; pom-prap recalibrated |
 | B-6 | **Fact corrections (P1, quick).** ratchathewi "1 Michelin star" → two one-star venues verify in-khet (Signature at VIE, Wana Yook); chit-lom "5 piers" → 2 distinct (4 duplicate OSM nodes); ratchathewi "0 piers" vs Pratunam pier nodes PIP-in-khet; hua-lamphong "2 piers" = canal (Khlong Phadung Krung Kasem), not river; Four Seasons Bangkok = 2015 rebrand, not 2024; OTK "CNN 4th best" rank unverifiable (URL 404) — already excluded from claims. | PL | S | corrections via fail-closed build replay |
 | B-7 | **Counter-evidence → labeling policy (P2; DEC-7).** Dated events with receipts: Or Tor Kor shooting 2025-07-28 (5 dead); din-daeng = noisiest PCD station (71.6–81.6 dB(A), 182/182 days over) + Rocket Media rank 50/50; BTS Asok rush failure 2025-09-25; 529-stallholder clock-tower eviction 2025; Jodd Fairs Rama 9 demolished 2025-01; Khlong San Plaza closed 2021. Decide product visibility; **never** let a single incident become a persistent area label (handoff rule). | product (DEC-7) | S | policy recorded |
@@ -99,8 +114,9 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | B-10 | ✅ **DONE 2026-11-08** — canonical family mapping (`kit/canonical.py`), relabel pass, re-gates: **23 of 422 corroborated → proposed (399/228/40)**; deterministic count supersedes the deep review's 27; 71 batch-4 limitations arrays repaired by the new audit rule (byte-exact vs raw). Ledger: [`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md). | AG | S | relabel applied; gates green; corrected counts in manifests |
 | B-11 | ✅ **DONE 2026-11-08** — canonical source registry committed (`kit/registry/source-attributions.json`; deterministic stats: 54 family-inconsistent / 39 publisher-inconsistent / 32 title-inconsistent). Adapter to reference it in E-1/E-2. | PL/AG | S | registry committed; adapter uses it |
 | B-12 | **Source-type taxonomy refinement.** 58% of sources sit in the collapsed `other` bucket (encyclopedia/OSM/datasets swallowed); refine the enum or add subtypes; report source-mix per bundle. 🟡 **Measured proposal ready 2026-11-08** ([`2026-11-08-source-taxonomy-v1.1-proposal.md`](2026-11-08-source-taxonomy-v1.1-proposal.md): additive enum + migration policy; adoption = SL decision). | SL/AG | S | taxonomy v1.1 or documented decision |
-| B-13 | ✅ **DONE 2026-11-08** — validator + audit check `conflicts_with` integrity (dangling/self); reviewer-derived links applied (`wat-mangkon-c06`→c02/c04, the only intra-bundle claim-vs-claim contradiction). Honest corpus finding: source-level conflicts live inside single claims by design; going-forward agents declare claim-vs-claim conflicts via the prompt-template rule. | AG | S | conflicts_with populated where detectable; validator checks links |
+| B-13 | ✅ **DONE 2026-11-08** — validator + audit check `conflicts_with` integrity (dangling/self); reviewer-derived links applied (`wat-mangkon-c06`→c02/c04, the only intra-bundle claim-vs-claim contradiction). Honest corpus finding: source-level conflicts live inside single claims by design; going-forward agents declare claim-vs-claim conflicts via the prompt-template rule. 🔄 **Caveat (third review):** the c06→c02/c04 link target is questionable after F7 (c02/c04 are correct; the real tension is c06's framing vs Wikipedia's simplification) — re-examine during A-8 step 5 rather than silently keeping it. | AG | S | conflicts_with populated where detectable; validator checks links |
 | B-14 | ✅ **DONE 2026-11-08** — all 5 manifests carry `research_started_at`/`research_completed_at` (raw-write mtimes; profile-mtime fallback for the scripted tail) — and the tail batch, which had **no manifest at all** (batch-DoD gap), gained one. | AG | S | manifests carry start/end; batch DoD updated |
+| B-15 | **Contract-derived audit checklist (third review, Angle F — top process item).** Every gate rule to date was added reactively after a defect class was *found*, never from the contract. Derive from HANDOFF.md: every "must" clause → a named audit rule or an explicit `not machine-checkable` note; commit the checklist beside the kit; fold the reviewer's six new rules + the placeholder/limitations/inline-ref/app-data-locator rules into it as the seed. | AG | M | checklist committed; every handoff must-clause mapped; kit README links it |
 
 ## 5. WS-C — Re-verification calendar (P1 · AG · quarterly waves)
 
@@ -137,7 +153,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 | E-2 | **Implementation** behind E-1, with the app's own checks (lint, toolchain tests, TS, production build, e2e). Research is **never** imported into `districts.json`/`stations.json`/rent references **or the existing `area-guide-copy.json` short-copy strings** (handoff boundary; reconcile via reviewed migration instead). | eng | L | app checks green; map bundle delta within budget |
 | E-3 | **Score-context disclosures in UI (A4/C-ep4):** green buffer basis, transport mechanism, rent label semantics — placed **one tap from the score** (not buried in the guide); plus a corpus-skew disclosure (expat/tourist source skew, score-correlated selection, single-season observations). | product | S | disclosures live |
 | E-4 | Raw research corpus stays out of the map bundle (hard rule); gallery/preview images only after WS-G. | eng | — | bundle audit |
-| E-5 | **Copy evidence bar (G12) — the load-bearing new gate.** Card preview: **corroborated claims only** (canonical families, post-B-10). Guide narrative: corroborated + proposed with attribution. Conflicted claims: never in copy — evidence disclosure only. `researcher_inference`: never in copy. Enforced by the adapter with a test case, not by convention. | eng+product | M | adapter rejects out-of-bar claims (test in CI) |
+| E-5 | **Copy evidence bar (G12) — the load-bearing new gate.** Card preview: **corroborated claims only** (canonical families, post-B-10). Guide narrative: corroborated + proposed with attribution. Conflicted claims: never in copy — evidence disclosure only. `researcher_inference`: never in copy. **Amended v2.3 (third review): copy eligibility also keys on HUMAN sign-off — a bundle whose `review.reviewer` starts with `agent-review:` is not copy-eligible until a human signatory records approval** (otherwise the agent review's `approved` statuses leak into product). Enforced by the adapter with a test case, not by convention. | eng+product | M | adapter rejects out-of-bar claims + un-signed bundles (tests in CI) |
 | E-6 | **Tier-C card UX (DEC-8) — the two-speed seam is visible by design (A1).** 137 guide-less entities render an explicit data-only card (score+facts); the adapter must **never** synthesize guide-like prose from facts for unresearched units — that would launder tier C into fake tier A. | product | S | decision recorded + implemented |
 | E-7 | **Corridor coherence pass (G22) + cross-bundle fact sweep.** Adjacent researched units narrate shared places with un-swept framing contradictions (chong-nonsi/sala-daeng/bang-rak on Silom–Patpong–Lumphini; wat-mangkon/sam-yot/sanam-chai on the canal; asok/nana/phloen-chit on Sukhumvit) — sweep framing (not raw facts), plus the remaining cross-bundle fact drift (One Bangkok is consistent ×4; Pathum Wan blends are not). Fix before integration. | AG | M | coherence report; fixes applied |
 | E-8 | **Voice/length normalization + time-boxing (G23).** Measured variance: 18.2 vs 13.8 vs 9.2 editorial items/unit; previews 137–543 chars. Adapter caps sections, normalizes register on structured fields (never rewrites semantics), stamps each guide with its observation window, renders change claims with event dates ("demolished 2025-01", never unanchored "recently") and rhythm claims with observed-period labels (single-season observations). | eng | M | normalized build; no semantic drift |
@@ -166,26 +182,28 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 5. **No paywall bypass, no proxy mirrors, no personal data** — standing method rules; AI-summary provenance banned (F-2).
 6. **Safety-5 routing (C18):** the five safety-5 entities stay perception-labeled until CRTKY-150 (BMA risk registry) provides evidence — connect there; do not invent unit-level claims.
 7. **Corridor honesty:** adjacent-unit guides must not contradict each other's corrected facts (Rommaninat, Pathum Wan blends) — E-7 enforces before integration.
-8. **Telegram corpus rules (D-6, 2026-11-08):** public channels only via the web preview (no account, no private groups, no comments); **no user identity ever** (channel posts only; posts naming private individuals never reach bundles); message text is untrusted input (G20 applies); corpus files stay local — citations are canonical `t.me/<channel>/<id>` URLs; every channel gets a registry verdict (verify → pull → **content-inspect**) before any citation; polite pull rates, failures logged once. Template rule 12 carries this to research agents.
+8. **Telegram corpus rules (D-6, 2026-11-08):** public channels only via the web preview (no account, no private groups, no comments); **no user identity ever** (channel posts only; posts naming private individuals never reach bundles); message text is untrusted input (G20 applies); corpus files stay local — citations are canonical `t.me/<channel>/<id>` URLs; every channel gets a registry verdict (verify → pull → **content-inspect**) before any citation; `cite` refuses unregistered/rejected channels; Telegram families never merge with outlet families (canonical rule 0); polite pull rates, failures logged once. Template rule 12 carries this to research agents.
+9. **Fix tools, not just document traps** (B-8 lesson, third review): the key-shadowing trap was documented in batch-3 open_issues, yet batch-4's agent still hit it because the `--khet` fix was deferred — a documented trap is a trap.
+10. **Gate counts are rule-relative**: audit findings must always report the audit-rule version alongside the count ("zero P1" twice proved to mean "under the rules then in force" — gate-verification P0 and the independent review).
 
 ## 11. Quality-gate register (G1–G24)
 
 | # | Gate | Attaches at | Status | Mechanized |
 |---|---|---|---|---|
 | G1 | Schema + semantic-ref validation | per bundle | ✅ — B-13 adds `conflicts_with` link checks | `kit/validate.py` |
-| G2 | Semantic audit (IDs, corroboration, body-read reliance, banned words, radius→time, ref closure) | per batch | ✅ — B-10/B-11 refine canonicalization | `kit/audit.py` |
+| G2 | Semantic audit (IDs, corroboration, body-read reliance, banned words, radius→time, ref closure) | per batch | ✅ — six rules added by the independent review (sign-off consistency, placeholder damage, source-limitations integrity, inline refs, app-data locators, checks honesty); **counts are rule-relative — always report the rule version** (WS-H #10) | `kit/audit.py` |
 | G3 | Digest gate vs `source-manifest.json` | pre-research | ✅ | shasum |
 | G4 | Geometry pass (PIP/haversine on boundary claims) | pre-assembly | ✅ (B-8 adds `--khet`) | `kit/check_geometry.py` |
-| G5 | Copy gate (banned phrases, radius→time) | pre-assembly | ✅ | in G2 |
-| G6 | Post-hoc source verification | weak bundles | ✅ (sam-yot precedent) | agent pass |
-| G7 | Batch-stop researcher review + findings | per batch | ✅ | manual |
+| G5 | Copy gate (banned phrases, radius→time) | pre-assembly | ✅ — review adds placeholder + inline-ref rules | in G2 |
+| G6 | Post-hoc source verification | weak bundles | 🔄 sam-yot precedent NOT evidenced in the delivered bundle (review F3) — A-8 step 3 re-does it properly | agent pass |
+| G7 | Batch-stop researcher review + findings | per batch | 🟡 batch-3/4 findings.md missing (F8) — A-8 closes | manual |
 | G8 | Live-data integrity | every commit | ✅ | `git status` |
-| G9 | Data-only placeholder check | tier C | ✅ | audit handles |
-| G10 | Independent human review | before product use | ⏳ pending (DEC-2) | packet |
+| G9 | Data-only placeholder check | tier C | ✅ (audit handles + A-2 bulk check + reviewer reproduction) | audit handles |
+| G10 | Independent human review | before product use | 🟡 agent review DONE (22/24) — human signatory pending (DEC-2) | packet + review record |
 | G11 | Legal/defamation review | before publication | ❌ → A-5 | no |
-| G12 | Copy evidence-bar enforcement | adapter | ❌ → E-5 | to build |
+| G12 | Copy evidence-bar enforcement | adapter | ❌ → E-5 (amended: human-sign-off key) | to build |
 | G13 | Thai-source verification | copy-bearing Thai claims | ❌ → A-6 | no |
-| G14 | Link-rot check | quarterly | ❌ → C-6 | to build |
+| G14 | Link-rot check | quarterly | 🟡 wave 1 DONE 2026-11-08 (485 OK / 4 dead flagged / 33 access-limited); quarterly schedule pending (C-6) | wave done |
 | G15 | Bundle re-anchor after app-data change | every snapshot change | ❌ → D-4 | to build |
 | G16 | Kit tests / CI | every kit change | 🟡 tests green locally (18); CI wiring pending (B-9) | tests done |
 | G17 | Personal-data audit | before publication | ❌ → A-5 | no |
@@ -202,9 +220,9 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 "Product-ready v1" holds when **all** of the following are true:
 
 1. 183/183 bundles at their tier DoD (A/B human-approved via G10; C bulk-approved via A-2).
-2. Zero open P1 audit findings across all batches.
+2. Zero open P1 audit findings across all batches **under the current audit-rule version** (rule version recorded with every count — WS-H #10).
 3. Legal/privacy (A-5) signed for every copy-bearing unit; Thai verification (A-6) done or copy excluded.
-4. Evidence bar (E-5/G12) implemented **and test-covered** in the adapter.
+4. Evidence bar (E-5/G12) implemented **and test-covered** in the adapter, including the human-sign-off eligibility key (v2.3).
 5. Integration slice merged with the app's own checks green; disclosures (E-3) live; tier-C card UX decided (E-6/DEC-8).
 6. Bundle re-anchoring current with the shipped app snapshot (D-4/G15).
 7. Recheck calendar owned (DEC-3) and current; link-rot waves scheduled (C-6/G14).
@@ -217,15 +235,20 @@ Per-artifact DoD (full checklists): [`2026-11-08-critique-gates-dod.md`](2026-11
 ## 13. Sequencing (dependency-ordered)
 
 ```
-Now        → DEC-1..DEC-10 owner decisions
-           → A-1/A-2 review gates ∥ A-3 sender adoption
-           → B-2 → B-1 → B-4 (P0 data, fail-closed replay) ∥ B-10/B-11 (kit canon)
-Next       → B-3/B-5/B-6/B-7 (product decisions + facts) ∥ B-8/B-9/B-12 (kit/taxonomy)
+Done       → DEC-1 (pushed, PR #177) · B-8/B-10/B-11/B-13/B-14 · G20/G21/G24 in kit
+             · F-2 rules · C-6 wave 1 · D-6 TG corpus · A-1 agent review (22/24)
+             · A-2 script half (137/137) · gate-verification P0 fix
+Now        → A-8 rework queue (F1+F2 lossless → F4 profile-strip → F3 evidence
+             pass → F5/F6/F7/F10/F12 copy fixes) — 24 blocked → 0
+           → A-2 signature + A-1 human sign-off (DEC-2) after A-8
+           → B-2 → B-1 → B-4-corrected (P0 data, fail-closed replay) ∥ B-15
+             contract-derived checklist ∥ B-12 adoption (SL)
+Next       → B-3/B-5/B-6/B-7 (product decisions + facts) ∥ B-9 CI wiring
            → D-4 re-anchor (after any landed data change) ∥ D-3 tail regen
 Gated on   → D-1 batch 5 (B→A upgrades; DEC-4) ∥ C-1 recheck wave (Nov–Dec 2026)
-A-1
-Then       → E-1 spec → E-2 implementation ∥ E-7 coherence pass ∥ E-5 evidence bar
-           → E-3 disclosures ∥ E-6/DEC-8 tier-C card ∥ E-8 normalization ∥ G20/G24 in kit
+A-8+A-1
+Then       → E-1 spec (with E-5 human-sign-off key + DEC-10 defaults) → E-2
+           → E-7 coherence pass ∥ E-3 disclosures ∥ E-6/DEC-8 tier-C card ∥ E-8
 When live  → WS-F translations (F-1) ∥ WS-G images (G-1/G-2)
 Per batch  → C-7 end-of-batch volatile recheck before close (handoff rule)
 Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
@@ -240,6 +263,8 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
 - Final program review: [`2026-11-08-final-review.md`](2026-11-08-final-review.md)
 - Critique + gates + DoD: [`2026-11-08-critique-gates-dod.md`](2026-11-08-critique-gates-dod.md)
 - Deep review (five angles, empirical): [`2026-11-08-deep-review.md`](2026-11-08-deep-review.md)
+- Third review (verify-the-verifier): [`2026-11-08-third-review.md`](2026-11-08-third-review.md)
+- Independent agent review (A-1 executed): [`2026-11-08-independent-review.md`](2026-11-08-independent-review.md)
 - Kit: [`kit/`](kit/README.md) (scaffold · prompt template · canonical families · geometry checker · assembler · validator · audit · briefs · tools · tests · registry)
 
 ## 15. Progress log
@@ -318,3 +343,10 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
   sign-off (`agent-review:*` reviewer ≠ copy-eligible). Process items opened:
   contract-derived audit-rule checklist (Angle F); two-writers-one-tree
   hazard. Receipt: [`2026-11-08-third-review.md`](2026-11-08-third-review.md).
+- **2026-11-08 (plan v2.3):** integrates the agent review + third review into
+  the workstreams — A-8 rework queue added (dependency-ordered; F4 amended to
+  profile-strip, never re-assemble); B-4 khlong-san claim corrected (station
+  cell ≠ khet; final review + pipeline notes corrected); B-13 link caveat;
+  B-15 contract-derived checklist added; E-5 human-sign-off key; WS-H #9/#10;
+  gate register + DoD + sequencing updated to the post-review state
+  (Done/Now/Next re-anchored on A-8 → human sign-off).
