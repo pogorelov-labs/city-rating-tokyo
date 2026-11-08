@@ -25,9 +25,18 @@ def apply_enrichments(root: Path, districts: list[dict], areas: list[dict]) -> N
     if (len(district_ids) != 50 or len(set(district_ids)) != 50
             or set(district_ids) != set(baseline['district_ids'])):
         raise ValueError('Enrichment district join mismatch (requires all 50 districts)')
-    if (len(area_ids) != 133 or len(set(area_ids)) != 133
-            or set(area_ids) != set(tourism) or set(area_ids) != set(baseline['area_ids'])):
-        raise ValueError('Tourism area join mismatch (requires all 133 areas)')
+    if (len(area_ids) != len(set(area_ids))
+            or set(area_ids) != set(baseline['area_ids'])):
+        raise ValueError('Tourism area join mismatch (areas must match the enrichments baseline)')
+    # B-1 (sena-ruam removal): the frozen tourism source may carry entries for
+    # areas the build no longer produces (ghost stations). Join from the BUILT
+    # areas; stale source entries are ignored, never silently joined.
+    stale_tourism = set(tourism) - set(area_ids)
+    missing_tourism = set(area_ids) - set(tourism)
+    if missing_tourism:
+        raise ValueError(f'Tourism source missing entries for built areas: {sorted(missing_tourism)[:5]}')
+    if len(stale_tourism) > 1:
+        raise ValueError(f'Unexpected stale tourism entries: {sorted(stale_tourism)[:5]}')
     if set(michelin) != set(baseline['michelin_districts']) or not set(michelin) <= set(district_ids):
         raise ValueError('Michelin district join mismatch')
     if not set(baseline['embassies_800m']) <= set(district_ids):
