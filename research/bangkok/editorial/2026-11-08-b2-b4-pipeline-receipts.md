@@ -73,6 +73,22 @@ without coordinate templates, 2 no-wiki-title).
    victory-monument cell-edge (case 9) — recorded in the plan's D-1/B-4 rows
    via this document.
 
+## 3b. Drift-case classification (post-audit, same day)
+
+All four offset cases are **same-station displacements** — the app never
+anchors the wrong station:
+- wat-mangkon 346 m — Wikipedia infobox conflict (batch-2 record, confirmed);
+- bang-son 293 m — large elevated interchange complex (MRT Purple + SRT Light
+  Red); article coordinate vs app anchor at the complex's other part;
+- don-mueang 658 m — SRT Dark Red Line Don Mueang; the station complex's
+  position vs the article coordinate (the complex was rebuilt/moved platforms
+  in the 2020s);
+- wutthakat 241 m — BTS Silom node precision vs catchment anchor.
+
+Ticket-relevant rule holds: bundles key distance claims on app anchors; the
+four cases need no bundle marks unless a claim cites a distance to the
+*Wikipedia* coordinate (none do).
+
 ## 4. What stays blocked
 
 Polygon **re-sourcing** (replacing coarse khet rings with better boundaries)
