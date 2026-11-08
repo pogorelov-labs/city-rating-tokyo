@@ -29,6 +29,17 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const TIER_ORDER = { A: 3, B: 2, C: 1 };
+// Tier is a recorded fact (batch identity), not a shape inference — the
+// fifth-review finding: a claims>=12 heuristic misclassified 8 tier-B light
+// bundles (8–12-claim contract) as tier A.
+const TIER_BY_BATCH = {
+  '2026-11-05-pilot-zcode-main': 'A',
+  '2026-11-07-batch2-zcode-main': 'A',
+  '2026-11-07-batch3-zcode-main': 'A',
+  '2026-11-08-batch5-b-to-a': 'A',
+  '2026-11-07-batch4-light-zcode-main': 'B',
+  '2026-11-08-tail-data-only': 'C',
+};
 const AGENT_REVIEWER = /^agent-review:/;
 const BANNED = /\b(vibrant|hidden gem|something for everyone)\b/i;
 
@@ -38,6 +49,9 @@ const isDataOnly = bundle =>
 
 export function tierOf(bundle) {
   if (isDataOnly(bundle)) return 'C';
+  const recorded = bundle._batch && TIER_BY_BATCH[bundle._batch];
+  if (recorded) return recorded;
+  // fallback for unregistered batches (documented heuristic, not authoritative)
   const claims = bundle.claims?.length ?? 0;
   const sources = bundle.sources?.length ?? 0;
   return claims >= 12 && sources >= 4 ? 'A' : 'B';
@@ -60,7 +74,7 @@ export function selectBundles(bundles) {
     const prev = byEntity.get(key);
     if (!prev) { byEntity.set(key, b); continue; }
     const [ta, tb] = [TIER_ORDER[tierOf(b)], TIER_ORDER[tierOf(prev)]];
-    if (ta > tb) { b.superseded_by = undefined; prev.superseded = true; byEntity.set(key, b); }
+    if (ta > tb) { prev.superseded = true; byEntity.set(key, b); }
     else if (ta < tb) { b.superseded = true; }
     else { b.superseded = true; } // same tier twice → keep first, mark the other
   }
@@ -107,6 +121,7 @@ export function buildIndexEntity(bundle) {
     tier,
     copy_eligible: copyEligible(bundle),
     as_of: null, // P1: derived from review.reviewed_at / manifest research_completed_at
+    chunk: `/data/bangkok/editorial/${entity.key}.json`,
     review: signoffRecord(bundle),
     stats: { sources: bundle.sources?.length ?? 0,
              body_read: (bundle.sources ?? []).filter(s => s.body_read).length,
@@ -164,7 +179,9 @@ export function loadBundles(batchesRoot) {
     for (const fn of readdirSync(profiles)) {
       if (!fn.endsWith('.json')) continue;
       try {
-        bundles.push(JSON.parse(readFileSync(join(profiles, fn), 'utf8')));
+        const bundle = JSON.parse(readFileSync(join(profiles, fn), 'utf8'));
+        bundle._batch = dir.name;
+        bundles.push(bundle);
       } catch { /* skip unreadable partial */ }
     }
   }
@@ -175,7 +192,6 @@ export function buildIndex(bundles, supersededIds) {
   const entities = {};
   for (const b of selectBundles(bundles)) {
     const rec = buildIndexEntity(b);
-    if (b.superseded && !rec.superseded_by) rec.superseded_by = true;
     if (supersededIds?.has(b.entity.key)) rec.superseded_by = rec.superseded_by ?? true;
     entities[b.entity.key] = rec;
   }

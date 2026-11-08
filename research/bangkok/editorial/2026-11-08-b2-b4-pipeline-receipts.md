@@ -54,6 +54,22 @@ without coordinate templates, 2 no-wiki-title).
 | 8 | BTS Phaya Thai + ARL outside the phaya-thai khet | `--khet phaya-thai` 13.75696/100.53382 (TRUE anchor) | **OUT** (ratchathewi: **IN**) | confirms the batch-2 finding with the true anchor |
 | 9 | victory-monument station cell excludes the monument circle | station cell 13.7699/100.5350 | **OUT** (cell top edge 13.76978) | the monument sits ~10–20 m beyond the cell's northern tip — a genuine catchment-edge artifact worth a pipeline note |
 
+## 2b. Coverage update + a self-inflicted data-loss lesson (fifth review, same day)
+
+- The 20 "HTTPError" rows were **transient rate-limiting, not dead links** —
+  a delayed retry recovered 8 more areas → audit now **100/133** (90 ≤100 m;
+  drift cases unchanged: don-mueang 658, wat-mangkon 346, bang-son 293;
+  wutthakat 241 = minor). Remaining 35 missing: 19 articles without
+  coordinates, 4 without an EN article, 12 persistent fetch-errors
+  (documented; ~83% coverage is the accepted ceiling for this environment).
+- **Process lesson:** two successive write crashes truncated the audit CSV
+  (write-open truncates before the crash; one run then wrote an empty list
+  over it). Restored from git (273ceb2) — the committed-artifact discipline
+  saved the data — and the recovery now builds both final lists in memory
+  before opening any file for write. Verify-a-fix-by-its-effect extends to:
+  *never open write mode on an artifact until its replacement content is
+  fully constructed.*
+
 ## 3. Corrections this audit makes to the program record
 
 1. **sathon "all three BTS nodes PIP-out" is overturned.** The claim (batch-4

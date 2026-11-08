@@ -122,7 +122,7 @@ from B-6, C8). Receipts: the 2026-11-07 + 2026-11-08 pipeline notes.
 
 ## 5. WS-C — Re-verification calendar (P1 · AG · quarterly waves)
 
-**201 dated recheck flags** extracted from the researched bundles — registry:
+**603 registry items** (253 dated recheck flags + 399 open issues, post-batch-5 and under the supersede-precedence rule) — registry:
 [`2026-11-08-recheck-calendar.csv`](2026-11-08-recheck-calendar.csv)
 (16 due 2026 · 150 during 2027 · 2 later · 33 tied to named events).
 

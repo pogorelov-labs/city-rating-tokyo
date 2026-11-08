@@ -1,4 +1,4 @@
-# Reviewer packet — editorial batches 1–2 (12 bundles)
+# Reviewer packet — Bangkok editorial program (55 researched bundles + 137 tier-C)
 
 > **Executed 2026-11-08** by an independent agent review: 22 approved / 24
 > blocked of the 46 researched bundles; tier C 137/137 PASS. Bundle statuses
@@ -58,7 +58,7 @@ Sign-off mechanics: set `review.reviewer`, `review.reviewed_at`,
 scores are NOT part of this review — score questions route to the pipeline
 review (see `research/bangkok/notes/2026-11-07-editorial-batch-pipeline-followups-crtky130.md`).
 
-## 2. Highest-stakes claims — verify these first (~45–60 min)
+## 2. Highest-stakes claims — verify these first (~45–60 min for this section; the full 55-bundle pass is a multi-session job — §3 lists per-batch stakes)
 
 | Claim | Where | How to verify |
 |---|---|---|

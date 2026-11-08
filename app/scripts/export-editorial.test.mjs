@@ -34,8 +34,10 @@ test('sign-off key: human-approved bundle IS copy-eligible', () => {
 
 test('precedence: tier-A beats tier-B for the same entity; superseded recorded', () => {
   const tierB = base({ entity: { key: 'st.sala', kind: 'station_area', name_en: 'S', name_th: 'S' },
-                       sources: [{ id: 's1' }], claims: [{ id: 'c1' }] }); // 1 claim -> tier B
+                       _batch: '2026-11-07-batch4-light-zcode-main',
+                       sources: [{ id: 's1' }], claims: [{ id: 'c1' }] });
   const tierA = { ...agentApproved(), entity: { key: 'st.sala', kind: 'station_area', name_en: 'S', name_th: 'S' },
+                  _batch: '2026-11-08-batch5-b-to-a',
                   sources: [{ id: 's1' }, { id: 's2' }, { id: 's3' }, { id: 's4' }],
                   claims: Array.from({ length: 14 }, (_, i) => ({ id: `c${i}` })) };
   const picked = selectBundles([tierB, tierA]);
