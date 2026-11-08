@@ -8,10 +8,12 @@ import type { MapStation, RailStation, StationRatings } from '@/lib/types';
 import { useAppStore, useCityActions, useCityState } from '@/lib/store';
 import { useAreaLists } from '@/lib/area-lists';
 import { parseAreaKey, stationAreaKey } from '@/lib/area-key';
-import { cellInfo, scoreCells, useBangkokGrid, type GridDistrict } from '@/lib/bangkok-grid';
+import { cellInfo, useBangkokGrid, type GridDistrict } from '@/lib/bangkok-grid';
+import { calculateWeightedScore } from '@/lib/scoring';
+import { measure } from '@/lib/render-profile';
 import { stationPrimaryName } from '@/lib/station-name';
 import { useIsTouch } from '@/lib/use-is-touch';
-import { CellDetails } from './popups';
+import { CellDetails } from './CellDetails';
 
 const STATION_BY_ID = new Map((railData as unknown as { stations: RailStation[] }).stations.map((s) => [s.id, s]));
 
@@ -45,12 +47,13 @@ export default function CellCard({ districts }: { districts: MapStation[] }) {
     () => (grid && index !== null ? cellInfo(grid, index, gridDistricts) : null),
     [grid, index, gridDistricts],
   );
-  // One cell's score: the full-grid pass is cheap, but only the value is needed.
+  // The mobile card needs one score, not another 39,149-cell pass and a
+  // 339 KB Float32 allocation. Match the grid's float32 storage/rounding.
   const score = useMemo(() => {
-    if (!grid || index === null || !info) return null;
-    const s = scoreCells(grid, weights, gridDistricts)[index];
+    if (!isTouch || !info) return null;
+    const s = measure('cell.score', () => Math.fround(calculateWeightedScore(info.ratings, weights)), 1);
     return Number.isNaN(s) ? null : s;
-  }, [grid, index, info, weights, gridDistricts]);
+  }, [isTouch, info, weights]);
 
   const districtName = useCallback(
     (slug: string) => {
@@ -80,7 +83,7 @@ export default function CellCard({ districts }: { districts: MapStation[] }) {
     <div
       // Reserve the same right-hand zoom column as MobileStationCard; the
       // compare panel and filter drawer still stack above both.
-      className="md:hidden fixed bottom-0 left-3 right-16 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 max-h-[60vh] overflow-y-auto"
+      className="map-touch-cell absolute bottom-0 left-3 right-16 md:max-w-96 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 max-h-[min(60%,calc(100%-10rem))] md:max-h-[min(60%,calc(100%-7rem))] overflow-y-auto"
       style={{ marginBottom: 'max(12px, env(safe-area-inset-bottom, 12px))' }}
       role="dialog"
       aria-label={t('map.cellTitle')}
@@ -100,8 +103,7 @@ export default function CellCard({ districts }: { districts: MapStation[] }) {
         <button
           onClick={() => setSelectedStation(null)}
           aria-label={t('map.closeCardCell')}
-          className="shrink-0 -mr-1 -mt-1 p-2 text-gray-400 active:text-gray-600 active:bg-gray-100 rounded-lg"
-          style={{ minWidth: 36, minHeight: 36 }}
+          className="grid h-11 w-11 shrink-0 -mr-1 -mt-1 place-items-center text-slate-600 active:bg-gray-100 rounded-lg focus-visible:outline-2 focus-visible:outline-blue-600"
         >
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M18 6L6 18M6 6l12 12" />

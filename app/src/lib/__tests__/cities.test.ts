@@ -115,6 +115,9 @@ describe('url state per city', () => {
   const view = (filters = bkkDefaults) => ({
     weights: { ...DEFAULT_WEIGHTS },
     filters: { ...filters, categoryMins: { ...filters.categoryMins } },
+    hideFloodRisk: false,
+    hideHighSeismic: false,
+    hideAdultZones: false,
     selectedStation: null,
     compareStations: [] as string[],
     heatmapMode: false,

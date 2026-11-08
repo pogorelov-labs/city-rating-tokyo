@@ -1,0 +1,11 @@
+.map-filter-sheet { max-height: 80dvh; transition-duration: 160ms; transition-timing-function: cubic-bezier(.3, 0, 1, 1); }
+.map-filter-sheet[data-open="true"] { transition-duration: 220ms; transition-timing-function: cubic-bezier(0, 0, .3, 1); }
+.map-filter-sheet::backdrop { background: rgb(0 0 0 / 40%); opacity: 0; transition: opacity 160ms ease-out; }
+.map-filter-sheet[data-open="true"]::backdrop { opacity: 1; }
+.map-filter-sheet[data-dragging="true"] { transition: none; }
+.map-filter-scroll { max-height: calc(80dvh - 56px); }
+.map-filter-grip { cursor: grab; }
+.map-filter-sheet[data-dragging="true"] .map-filter-grip { cursor: grabbing; }
+@media (prefers-reduced-motion: reduce) {
+  .map-filter-sheet, .map-filter-sheet::backdrop, .mobile-filter-launcher, .map-touch-card { transition: none !important; }
+}

@@ -1,5 +1,6 @@
 'use client';
 
+import { requestDistrictFocus } from '@/lib/map-navigation-intent';
 import { useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { useTranslations, useLocale } from 'next-intl';
@@ -28,6 +29,7 @@ const GridHotspotList = dynamic(() => import('./bangkok/GridRanking').then((m) =
 
 interface FilterPanelProps {
   stations: MapStation[];
+  onAreaChosen?: () => void;
 }
 
 const CATEGORY_MIN_OPTIONS = [5, 6, 7, 8] as const;
@@ -68,6 +70,7 @@ function DualRange({
   label: string;
   umamiEvent: string;
 }) {
+  const t = useTranslations('filter');
   const pctLow = ((valueLow - min) / (max - min)) * 100;
   const pctHigh = ((valueHigh - min) / (max - min)) * 100;
 
@@ -92,6 +95,8 @@ function DualRange({
           max={max}
           step={step}
           value={valueLow}
+          aria-label={t('rangeMinimum', { label })} aria-valuetext={formatLow}
+          aria-valuemax={Math.min(max, valueHigh - step)}
           onChange={(e) => {
             const v = Number(e.target.value);
             onLowChange(Math.min(v, valueHigh - step));
@@ -107,6 +112,8 @@ function DualRange({
           max={max}
           step={step}
           value={valueHigh}
+          aria-label={t('rangeMaximum', { label })} aria-valuetext={formatHigh}
+          aria-valuemin={Math.max(min, valueLow + step)}
           onChange={(e) => {
             const v = Number(e.target.value);
             onHighChange(Math.max(v, valueLow + step));
@@ -120,7 +127,7 @@ function DualRange({
   );
 }
 
-export default function FilterPanel({ stations }: FilterPanelProps) {
+export default function FilterPanel({ stations, onAreaChosen }: FilterPanelProps) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
   const city = useCity();
@@ -237,7 +244,9 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
               <button
                 key={s.slug}
                 onClick={() => {
+                  requestDistrictFocus(city.id, s.slug);
                   setSelectedStation(s.slug);
+                  onAreaChosen?.();
                   setHoveredStation(null);
                   setSearch('');
                 }}
@@ -503,6 +512,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
                 </div>
                 <input
                   type="range"
+                  aria-label={`${t('filter.weights')}: ${t(`ratings.${key}`)}`}
                   min={0}
                   max={50}
                   value={weights[key]}
@@ -530,7 +540,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
         {isGrid ? (
           <>
             <p className="text-[11px] text-gray-500 leading-snug mb-2">{t('filter.bestSpotsHint')}</p>
-            <GridHotspotList districts={stations} />
+            <GridHotspotList districts={stations} onAreaChosen={onAreaChosen} />
           </>
         ) : ranked.length === 0 ? (
           <p className="text-sm text-gray-400">
@@ -541,7 +551,7 @@ export default function FilterPanel({ stations }: FilterPanelProps) {
             {ranked.map((s, i) => (
               <li key={s.slug}>
                 <button
-                  onClick={() => setSelectedStation(s.slug)}
+                  onClick={() => { requestDistrictFocus(city.id, s.slug); setSelectedStation(s.slug); onAreaChosen?.(); }}
                   onMouseEnter={() => setHoveredStation(s.slug)}
                   onMouseLeave={() => setHoveredStation(null)}
                   onFocus={() => setHoveredStation(s.slug)}

@@ -1,4 +1,5 @@
 import AirPanel from '@/components/AirPanel';
+import type { ReactNode } from 'react';
 import { getTranslations } from 'next-intl/server';
 import type { MapStation } from '@/lib/types';
 import type { CityId } from '@/lib/cities';
@@ -13,6 +14,10 @@ import FeedbackWidget from '@/components/FeedbackWidget';
 import CitySwitcher from '@/components/CitySwitcher';
 import { AreaListsProvider } from '@/lib/area-lists';
 import { ScoredAreasProvider } from '@/lib/scoring-react';
+import PrototypeBar from './bangkok/prototype/PrototypeBar';
+import ProfiledRegion from './bangkok/prototype/ProfiledRegion';
+import type { BangkokRenderer } from '@/lib/bangkok-prototype';
+import { resolveBangkokRenderer } from '@/lib/bangkok-renderer';
 
 interface Props {
   city: CityId;
@@ -21,6 +26,7 @@ interface Props {
   stationAreas?: MapStation[];
   thumbnails: Record<string, { thumb: string; lqip: string }>;
   snippets: Record<string, string>;
+  prototypeRenderer?: BangkokRenderer;
 }
 
 /**
@@ -28,12 +34,14 @@ interface Props {
  * actions, locale), filter sidebar, map. `CityProvider` tells every client
  * component below which city's config / store slice to use.
  */
-export default async function CityHome({ city, stations, stationAreas, thumbnails, snippets }: Props) {
+export default async function CityHome({ city, stations, stationAreas, thumbnails, snippets, prototypeRenderer }: Props) {
   const t = await getTranslations();
   const isBangkok = city === 'bangkok';
+  const profile = (id: string, children: ReactNode) => prototypeRenderer
+    ? <ProfiledRegion id={id}>{children}</ProfiledRegion> : children;
 
   const page = (
-    <div className="flex flex-col h-dvh overflow-x-hidden">
+    <div className={`flex flex-col h-dvh overflow-x-hidden${prototypeRenderer ? ' renderer-lab' : ''}`}>
       <header className="flex items-center justify-between gap-2 px-4 py-2 border-b border-gray-200 bg-white shrink-0 min-w-0">
         <div className="flex items-center gap-2 min-w-0">
           {/* On mobile the city switcher doubles as the title. */}
@@ -65,19 +73,20 @@ export default async function CityHome({ city, stations, stationAreas, thumbnail
         </div>
       </header>
       <AirPanel city={city} compact />
+      {prototypeRenderer && <PrototypeBar renderer={prototypeRenderer} />}
 
       <div className="flex flex-1 overflow-hidden">
         <aside className="hidden md:block w-72 border-r border-gray-200 bg-white overflow-y-auto shrink-0">
-          <FilterPanel stations={stations} />
+          {profile('sidebar', <FilterPanel stations={stations} />)}
           <div className="p-3 border-t border-gray-200">
             <FeedbackWidget source="general" />
           </div>
         </aside>
 
-        <main className="flex-1 relative">
-          <MapWrapper stations={stations} thumbnails={thumbnails} snippets={snippets} />
+        <main className="map-area-shell flex-1 relative">
+          {profile('map-ui', <MapWrapper stations={stations} thumbnails={thumbnails} snippets={snippets} prototypeRenderer={prototypeRenderer} bangkokRenderer={resolveBangkokRenderer(process.env.BANGKOK_MAP_RENDERER)} />)}
           <MobileSearchPill stations={stations} />
-          <MobileDrawer stations={stations} />
+          {profile('mobile-drawer', <MobileDrawer stations={stations} />)}
         </main>
       </div>
     </div>

@@ -10,6 +10,59 @@ or deployment details, host/service names, credentials, worker/session
 identifiers, CI run IDs, hashes, manifests or internal gate lists. Put technical
 evidence in research notes or the PR body and link it.
 
+## Unreleased
+
+- Both Bangkok maps count rapid zoom-button presses and stop under a new
+  contact without selecting an area. The 3D map follows the final direction
+  of a flick, including a parallel two-finger pan. Tap again at the same spot
+  to select it. Switching between flat and tilted views keeps your heading.
+  Map motion follows your device unless you choose **Smooth** just for Bangkok.
+- Camera tools fold into one button on narrow or shallow maps, including
+  when the air panel is open on a desktop. On phones you can pull
+  down the filter sheet, close it with Escape, or choose a ranking result to
+  return to the map. Rent and commute sliders announce their minimum and maximum.
+
+## v0.3.0 — Bangkok in 3D
+
+Notes updated 2026-11-01. [Release history and publication dates](https://github.com/pogorelov-labs/city-rating-tokyo/releases).
+
+### Added
+
+- Bangkok opens in a tilted 3D map with buildings, rail, parks and water, with
+  district, station-area and 200 m grid views. A standard map remains available
+  and is used automatically when 3D initialization fails.
+- Selected and compared areas have distinct fills and outlines. Map controls,
+  loading states and recovery messages are available in English, Japanese and Russian.
+
+### Improved
+
+- Weight and filter changes update cached scores and map paint without rebuilding
+  static labels or geometry. Camera motion reuses the grid texture.
+- The mobile cell card calculates only its selected cell's score.
+
+### Fixed
+
+- Bangkok's default grid filters include all eligible cells. The family filter
+  now agrees between the map, match count and ranked places.
+- Shared links retain flood, family and applicable Tokyo seismic filters.
+- Same-tab city switches restore each city's filters and selections; opening a
+  city link in a new tab carries only the shared weights.
+- Invalid or unrated cell references are removed from map links while valid
+  comparisons and filters are kept.
+- Search, rankings and guide links frame a selected Bangkok district. Direct
+  map clicks keep the street view, and the standard map keeps the card reachable.
+- Named-area colors and selection follow stable feature IDs through map tiling
+  and graphics-context restoration.
+- Station areas remain labeled when rail is hidden. Clicking an unscored rail
+  stop preserves the current selection and its share link.
+- English locale rewrites remain internal in the standalone server.
+
+This code release preserves the existing scoring rules, shared-link format and
+published rating datasets. Building detail depends on basemap coverage; physical
+mobile-device performance varies. No map API key is required.
+
+[Release notes](docs/releases/v0.3.0.md) · [Map architecture](docs/BANGKOK_MAP.md)
+
 ## v0.2.1 — 2026-11-01
 
 - Custom score weights now survive full navigation and opening the other city

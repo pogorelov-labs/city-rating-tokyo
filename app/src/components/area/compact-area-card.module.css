@@ -67,3 +67,14 @@
 .hover .qualifier { font-size: 9px; }
 
 :global(.area-guide-popup .leaflet-popup-content) { margin: 0 !important; }
+
+/* Short map workspaces keep the essential card header and actions accessible. */
+@container (max-width: 767px) and (max-height: 359px) {
+  .mobile .photo { display: none; }
+  .mobile .body { padding: 6px 10px; }
+  .mobile .scope { display: none; }
+  .mobile .titleRow { margin-top: 0; }
+  .mobile .nameBlock h2 { font-size: 17px; }
+  .mobile .score { font-size: 19px; }
+  .mobile .actions { padding: 4px 10px; }
+}

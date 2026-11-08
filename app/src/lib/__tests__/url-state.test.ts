@@ -10,6 +10,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { decodeParamsToState, encodeStateToParams } from '../url-state';
+import { CITIES } from '../cities';
 import {
   DEFAULT_FILTERS,
   DEFAULT_WEIGHTS,
@@ -50,6 +51,9 @@ const LEGACY_WEIGHT_KEYS = [
 const baselineState = {
   weights: { ...DEFAULT_WEIGHTS },
   filters: { ...DEFAULT_FILTERS },
+  hideFloodRisk: false,
+  hideHighSeismic: false,
+  hideAdultZones: false,
   selectedStation: null,
   compareStations: [] as string[],
   heatmapMode: false,
@@ -75,6 +79,31 @@ describe('encodeStateToParams', () => {
 });
 
 describe('decodeParamsToState — round trip', () => {
+  it.each(['tokyo', 'bangkok'] as const)('round-trips supported safety and family filters for %s', (city) => {
+    const state = {
+      ...baselineState,
+      filters: CITIES[city].defaultFilters,
+      hideFloodRisk: true,
+      hideHighSeismic: city === 'tokyo',
+      hideAdultZones: true,
+    };
+    const encoded = encodeStateToParams(state, city);
+    expect(encoded.get('flood')).toBe('1');
+    expect(encoded.get('adult')).toBe('1');
+    expect(encoded.get('seismic')).toBe(city === 'tokyo' ? '1' : null);
+    expect(decodeParamsToState(encoded, city)).toMatchObject({
+      hideFloodRisk: true,
+      hideHighSeismic: city === 'tokyo',
+      hideAdultZones: true,
+    });
+  });
+
+  it('leaves missing, malformed and unsupported safety flags off', () => {
+    expect(decodeParamsToState(new URLSearchParams('flood=yes&adult=0&seismic=1'), 'bangkok'))
+      .toMatchObject({ hideFloodRisk: false, hideHighSeismic: false, hideAdultZones: false });
+    expect(encodeStateToParams(baselineState).toString()).toBe('');
+  });
+
   it('round-trips a non-default weight set through encode then decode', () => {
     const weights: WeightConfig = {
       transport: 30, rent: 5, daily_essentials: 10, safety: 20, food: 15,

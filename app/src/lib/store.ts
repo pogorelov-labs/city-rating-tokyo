@@ -38,6 +38,9 @@ export interface UrlHydration {
   level?: AreaLevel;
   weights?: WeightConfig;
   filters?: Partial<FilterState>;
+  hideFloodRisk?: boolean;
+  hideHighSeismic?: boolean;
+  hideAdultZones?: boolean;
   selectedStation?: string;
   compareStations?: string[];
   heatmapMode?: boolean;
@@ -117,6 +120,9 @@ export const useAppStore = create<AppState>((set) => ({
       if (partial.level) next.level = partial.level;
       if (partial.selectedStation) next.selectedStation = partial.selectedStation;
       if (partial.compareStations) next.compareStations = partial.compareStations;
+      if (partial.hideFloodRisk !== undefined) next.hideFloodRisk = partial.hideFloodRisk;
+      if (partial.hideHighSeismic !== undefined) next.hideHighSeismic = partial.hideHighSeismic;
+      if (partial.hideAdultZones !== undefined) next.hideAdultZones = partial.hideAdultZones;
       if (partial.filters) {
         next.filters = {
           ...prev.filters,

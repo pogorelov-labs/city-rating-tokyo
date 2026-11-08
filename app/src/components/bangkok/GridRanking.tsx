@@ -27,8 +27,9 @@ function useGridRanking(districts: MapStation[]) {
   const weights = useDeferredValue(useAppStore((s) => s.weights));
   const filters = useCityState((s) => s.filters);
   const hideFloodRisk = useCityState((s) => s.hideFloodRisk);
+  const hideAdultZones = useCityState((s) => s.hideAdultZones);
   const areas = useSharedAreaList(districts, 'primary');
-  const scored = useScoredGrid(grid, areas, weights, filters, city.defaultFilters, hideFloodRisk);
+  const scored = useScoredGrid(grid, areas, weights, filters, city.defaultFilters, hideFloodRisk, hideAdultZones);
   const hotspots = useGridHotspots(grid, scored, 10, true);
   const ranking = useMemo(() => scored ? { ...scored, hotspots } : null, [scored, hotspots]);
   return { grid, error, ranking };
@@ -63,7 +64,7 @@ export function GridMatchCount({ districts }: { districts: MapStation[] }) {
  * dealbreakers, ≥ 1.5 km apart, named after the nearest station area (or
  * the district where no station is in walking range).
  */
-export function GridHotspotList({ districts }: { districts: MapStation[] }) {
+export function GridHotspotList({ districts, onAreaChosen }: { districts: MapStation[]; onAreaChosen?: () => void }) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
   const lists = useAreaLists();
@@ -98,7 +99,7 @@ export function GridHotspotList({ districts }: { districts: MapStation[] }) {
         return (
           <li key={i}>
             <button
-              onClick={() => setSelectedStation(key)}
+              onClick={() => { setSelectedStation(key); onAreaChosen?.(); }}
               onMouseEnter={() => setHoveredStation(key)}
               onMouseLeave={() => setHoveredStation(null)}
               onFocus={() => setHoveredStation(key)}

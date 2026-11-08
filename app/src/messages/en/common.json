@@ -154,6 +154,8 @@
     "quickProfiles": "Quick Profiles",
     "dealbreakers": "Dealbreakers",
     "clearAll": "Clear all",
+    "rangeMinimum": "{label}, minimum",
+    "rangeMaximum": "{label}, maximum",
     "weights": "Weights",
     "weightsDescription": "Adjust what matters most to you",
     "resetDefaults": "Reset to defaults",
@@ -268,7 +270,29 @@
     "cellAreaLink": "{station} station area →",
     "stationAreaCaption": "Nearest-station area (≤ 800 m straight-line)",
     "hotspotTitle": "Best spot #{rank}",
-    "closeCardCell": "Close cell card"
+    "closeCardCell": "Close cell card",
+    "rendererLabel": "Map renderer",
+    "rendererThreeD": "3D map",
+    "rendererStandard": "Standard map",
+    "rendererUnavailableWebgl": "3D map unavailable: WebGL is not supported.",
+    "rendererUnavailableLoad": "3D map could not load.",
+    "rendererUnavailableContext": "3D map graphics context was lost.",
+    "mapControls": "3D map controls",
+    "view2d": "2D view",
+    "view3d": "3D view",
+    "buildings": "Buildings",
+    "resetAsok": "Center on Asok",
+    "cameraMotion": "Map motion",
+    "motionSystem": "Follow device",
+    "motionSmooth": "Smooth",
+    "selectedArea": "Selected area",
+    "closeSelectedArea": "Close selected area",
+    "interactiveBangkok": "Interactive Bangkok map",
+    "resetBearing": "Reset bearing",
+    "tileError": "Some map details could not load.",
+    "mapAttribution": "Map attribution",
+    "layers": "Map layers",
+    "dismissTileError": "Dismiss"
   },
   "compare": {
     "clearAll": "Clear all",
@@ -280,7 +304,8 @@
   },
   "drawer": {
     "filters": "Filters",
-    "filtersAndRanking": "Filters & Ranking"
+    "filtersAndRanking": "Filters & Ranking",
+    "close": "Close filters"
   },
   "feedback": {
     "station": {

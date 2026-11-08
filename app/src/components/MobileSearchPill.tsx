@@ -1,5 +1,6 @@
 'use client';
 
+import { requestDistrictFocus } from '@/lib/map-navigation-intent';
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { MapStation } from '@/lib/types';
@@ -51,6 +52,7 @@ export default function MobileSearchPill({ stations }: Props) {
   }, [open]);
 
   const handleSelect = (slug: string) => {
+    requestDistrictFocus(city.id, slug);
     setSelectedStation(slug);
     setHoveredStation(null);
     setSearch('');

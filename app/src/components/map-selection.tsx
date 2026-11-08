@@ -4,6 +4,8 @@ import { useEffect, useLayoutEffect } from 'react';
 import { useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import { useAppStore } from '@/lib/store';
+import { bangkokCameraReduced, prefersReducedMotion } from '@/lib/map-motion';
+import { useCityId } from '@/lib/city-context';
 
 type LatLng = [number, number];
 const MAX_FLY_ZOOM = 14;
@@ -15,6 +17,7 @@ type BoundsSelection = { kind: 'bounds'; bounds: [LatLng, LatLng]; bottomInset: 
 /** Share the selection lifecycle while retaining each city's flight strategy. */
 export function useMapSelection(selection: PointSelection | BoundsSelection) {
   const map = useMap();
+  const reduce = useCityId() === 'bangkok' ? bangkokCameraReduced : prefersReducedMotion;
   const lat = selection.kind === 'point' ? selection.lat : undefined;
   const lng = selection.kind === 'point' ? selection.lng : undefined;
   const kind = selection.kind;
@@ -41,6 +44,12 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
       onFlyStart?.();
 
       const targetZoom = currentZoom >= 13 ? currentZoom : 14;
+      if (reduce()) {
+        map.stop();
+        map.setView([lat, lng], targetZoom, { animate: false });
+        onFlyEnd?.();
+        return;
+      }
 
       // Fade canvas markers during flyTo to hide CSS-scaling artifact.
       // Leaflet applies transform:scale(2^Δzoom) to the canvas during zoom
@@ -94,11 +103,15 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
       return;
     }
     pendingBoundsFlights.get(map)?.();
-    map.stop();
     // Mark the flight first so any popup closed below knows it is not the
     // user's × (see the Popup `remove` handler).
     onFlyStart();
     map.closePopup();
+    if (reduce()) {
+      map.fitBounds(latLngBounds, { paddingTopLeft: padTL, paddingBottomRight: padBR, maxZoom: MAX_FLY_ZOOM, animate: false });
+      onFlyEnd();
+      return;
+    }
     // The listener deliberately outlives this effect: if the selection is
     // cleared or changed mid-flight, the current animation still ends with a
     // moveend and must clear `isFlying` (otherwise labels / popup stay hidden).
@@ -121,7 +134,7 @@ export function useMapSelection(selection: PointSelection | BoundsSelection) {
     // The bounds component is keyed by selection. As before, callback changes
     // must not detach a flight listener or restart an in-progress animation.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [map, kind, lat, lng]);
+  }, [map, kind, lat, lng, reduce]);
 }
 
 export function MapSelectionPoint(props: Omit<PointSelection, 'kind'>) {

@@ -154,6 +154,8 @@
     "quickProfiles": "Профили",
     "dealbreakers": "Обязательные условия",
     "clearAll": "Сбросить",
+    "rangeMinimum": "{label}: минимум",
+    "rangeMaximum": "{label}: максимум",
     "weights": "Приоритеты",
     "weightsDescription": "Настройте, что для вас важнее",
     "resetDefaults": "По умолчанию",
@@ -268,7 +270,29 @@
     "cellAreaLink": "Зона станции {station} →",
     "stationAreaCaption": "Зона ближайшей станции (до 800 м по прямой)",
     "hotspotTitle": "Лучшее место № {rank}",
-    "closeCardCell": "Закрыть карточку клетки"
+    "closeCardCell": "Закрыть карточку клетки",
+    "rendererLabel": "Вид карты",
+    "rendererThreeD": "3D-карта",
+    "rendererStandard": "Обычная карта",
+    "rendererUnavailableWebgl": "3D-карта недоступна: WebGL не поддерживается.",
+    "rendererUnavailableLoad": "Не удалось загрузить 3D-карту.",
+    "rendererUnavailableContext": "Графический контекст 3D-карты потерян.",
+    "mapControls": "Управление 3D-картой",
+    "view2d": "Вид 2D",
+    "view3d": "Вид 3D",
+    "buildings": "Здания",
+    "resetAsok": "Перейти к Асоку",
+    "cameraMotion": "Движение карты",
+    "motionSystem": "Как в системе",
+    "motionSmooth": "Плавное",
+    "selectedArea": "Выбранный район",
+    "closeSelectedArea": "Закрыть выбранный район",
+    "interactiveBangkok": "Интерактивная карта Бангкока",
+    "resetBearing": "Сбросить ориентацию",
+    "tileError": "Не удалось загрузить некоторые детали карты.",
+    "mapAttribution": "Источники карты",
+    "layers": "Слои карты",
+    "dismissTileError": "Закрыть"
   },
   "compare": {
     "clearAll": "Очистить",
@@ -280,7 +304,8 @@
   },
   "drawer": {
     "filters": "Фильтры",
-    "filtersAndRanking": "Фильтры и рейтинг"
+    "filtersAndRanking": "Фильтры и рейтинг",
+    "close": "Закрыть фильтры"
   },
   "feedback": {
     "station": {

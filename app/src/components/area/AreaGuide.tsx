@@ -10,6 +10,7 @@ import { DEFAULT_WEIGHTS, PRESET_PROFILES } from '@/lib/types';
 import { calculateWeightedScore } from '@/lib/scoring';
 import { useAppStore } from '@/lib/store';
 import { decodeParamsToState } from '@/lib/url-state';
+import { guideMapHref } from '@/lib/guide-map-url';
 import { dataLabel } from '@/i18n/message-key';
 import { GUIDE_CATEGORIES, guideMoney, guideTraits, rentDefinitionKey, withGuideWeights, type AreaGuideData, type RatingKey } from '@/lib/area-guide';
 import type { Locale } from '@/i18n/routing';
@@ -216,6 +217,10 @@ export default function AreaGuide({ area, children }: { area: AreaGuideData; chi
   const all = useTranslations();
   const weights = useAppStore(state => state.weights);
   const setAllWeights = useAppStore(state => state.setAllWeights);
+  // Subscribe to the map slice and shared overlays so navigation follows changes.
+  const mapState = useAppStore(state => state.cities[area.city]);
+  const heatmapMode = useAppStore(state => state.heatmapMode);
+  const heatmapDimension = useAppStore(state => state.heatmapDimension);
   const [hydrated, setHydrated] = useState(false);
   const [hub, setHub] = useState(area.city === 'tokyo' ? 'shinjuku' : 'siam');
   const [photoFailed, setPhotoFailed] = useState(false);
@@ -266,7 +271,9 @@ export default function AreaGuide({ area, children }: { area: AreaGuideData; chi
       if (profile) setAllWeights(profile.weights);
     }
   };
-  const mapHref = withGuideWeights(area.mapHref, weights);
+  const mapHref = guideMapHref(area.mapHref, area.city, {
+    ...mapState, weights, heatmapMode, heatmapDimension,
+  });
   const scope = t(`map.scope.${origin}`);
   const photo = area.photo && !photoFailed ? area.photo : null;
   const factNote = area.city === 'tokyo' ? t('facts.tokyoNote') : t(`facts.${area.kind}Note`, { area: nf.format(area.areaKm2 ?? 0) });

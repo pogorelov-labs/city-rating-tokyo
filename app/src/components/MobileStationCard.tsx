@@ -140,9 +140,9 @@ export default function MobileStationCard({
   return (
     <div
       ref={cardRef}
-      // Reserve a right-hand column for the shared Leaflet zoom controls.
+      // Reserve a right-hand column for map controls and keep the card inside the map workspace.
       // Compare and filter panels still stack above the card and controls.
-      className={`md:hidden fixed bottom-0 left-3 right-16 z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 transition-transform duration-200 ease-out ${
+      className={`map-touch-card absolute bottom-0 left-3 right-16 md:max-w-96 max-h-[min(60%,calc(100%-10rem))] md:max-h-[min(60%,calc(100%-7rem))] flex flex-col overflow-hidden z-[1000] bg-white rounded-xl shadow-2xl border border-gray-200 transition-transform duration-200 ease-out ${
         open ? 'translate-y-0' : 'translate-y-full'
       }`}
       style={{
@@ -150,6 +150,7 @@ export default function MobileStationCard({
         marginBottom: 'max(12px, env(safe-area-inset-bottom, 12px))',
       }}
       role="dialog"
+      data-open={open}
       aria-label={names.primary}
     >
       <CompactAreaCard key={station.slug} area={station} city={city.id} score={score} weights={weights}
