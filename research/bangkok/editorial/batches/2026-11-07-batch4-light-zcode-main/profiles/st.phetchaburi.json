@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.42,
-  "cohort_rank": 23,
-  "cohort_size": 133,
+  "cohort_rank": 22,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
   "popularity_source_ids": [],
@@ -958,7 +958,8 @@
    "open issue: Verify the MRT Phetchaburi station's opening year from a stronger source (extract omitted it; context implies the 2004 original line) (phetchaburi-c01).",
    "open issue: DooAsset's Makkasan page lists some 'nearest project' stock on the Asok side; if the app's Voronoi splits west of the walkway, several of those listings belong to other cells - polygon audit needed (phetchaburi-c02).",
    "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c05/c07); F10 'this batch' in tradeoffs. See research/bangkok/editorial/2026-11-08-independent-review.md.",
-   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

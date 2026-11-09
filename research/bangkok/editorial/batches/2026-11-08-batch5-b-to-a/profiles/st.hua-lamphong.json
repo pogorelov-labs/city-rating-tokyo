@@ -13,7 +13,7 @@
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.36,
   "cohort_rank": 27,
-  "cohort_size": 133,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
   "popularity_source_ids": [],
@@ -1490,7 +1490,8 @@
    "open issue: Phadung Krung Kasem electric-boat service: current routes/frequencies unverified since 2022 documentation.",
    "open issue: Bangkok Post canonical articles (SRT redevelopment specials) sit behind a tollbit paywall gateway and were not retrieved; the 2021 SRT mixed-use plan (commercial space/hotel) is therefore not covered by a body-read source.",
    "open issue: Polygon membership of Yaowarat Road stretch, Mahachai Road, Bo Bae and Talat Noi fringe pending coordinator geometry check; claim geographies are provisional.",
-   "open issue: newswit item reads as a district-office release via a distributor; pair with an independent source before treating footpath conditions as current."
+   "open issue: newswit item reads as a district-office release via a distributor; pair with an independent source before treating footpath conditions as current.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

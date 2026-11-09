@@ -16,7 +16,7 @@
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.92,
   "cohort_rank": 3,
-  "cohort_size": 133,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth was measured for batch selection only (2024-11-05..2026-11-07 window, publisher-family dedup, coverage-scan.json); it is a research-selection signal, not a popularity score.",
   "popularity_source_ids": [],
@@ -1410,7 +1410,8 @@
    "open issue: 13 mapped temples and 224 food places not individually verified; Nang Loeng market location (Pom Prap Sattru Phai) unverified.",
    "open issue: Overpass POST endpoint returned 406 on first attempts; all OSM figures come from successful GET queries on 2026-11-07 (base timestamp 2026-11-07T13:13Z).",
    "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs in guide items (preview/lead clean). See research/bangkok/editorial/2026-11-08-independent-review.md.",
-   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.24,
-  "cohort_rank": 30,
-  "cohort_size": 133,
+  "cohort_rank": 29,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
   "popularity_source_ids": [],
@@ -895,7 +895,8 @@
    "open issue: One Bangkok unit membership (outside-leaning, possible partial) requires the app polygon check (ratchadamri-c06).",
    "open issue: No unit-level footway or crossing audit source; BMA Rama-I prototype only snippet-level (ratchadamri-c10).",
    "open issue: Bangkok Post, Reddit, TripAdvisor accesses failed (paywall/403) - no bypass attempted.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 'brief' only in uncertainties; P3 'live page 2026' date. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 'brief' only in uncertainties; P3 'live page 2026' date. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

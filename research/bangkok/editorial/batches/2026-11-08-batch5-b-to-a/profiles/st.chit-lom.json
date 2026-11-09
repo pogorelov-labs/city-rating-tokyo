@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.52,
-  "cohort_rank": 19,
-  "cohort_size": 133,
+  "cohort_rank": 17,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
   "popularity_source_ids": [],
@@ -1367,7 +1367,8 @@
    "open issue: PropertyScout's 'lower than Bangkok average' rent percentages for every bedroom type contradict the portal's own premium positioning of the area and were treated cautiously.",
    "open issue: Access failures this session (logged once each): bangkokpost.com routes to a tollbit paywall endpoint; ddproperty.com returned HTTP 403; fazwaz.com area page 404; two 2015-era BBC URLs 404; tourismthailand.org attraction page returned no content; thainews.prd.go.th failed DNS resolution.",
    "open issue: App green 9 vs the 'almost no named park' picture: sources support the absence of a named park in the immediate block; scoring reconciliation belongs to the coordinator.",
-   "open issue: The Thursday-devotional custom at Erawan Shrine is widely repeated in Thai secondary sources but was not verified from a strong primary source this session."
+   "open issue: The Thursday-devotional custom at Erawan Shrine is widely repeated in Thai secondary sources but was not verified from a strong primary source this session.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

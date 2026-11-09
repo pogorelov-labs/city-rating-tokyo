@@ -17,7 +17,7 @@
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.68,
   "cohort_rank": 12,
-  "cohort_size": 133,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
   "popularity_source_ids": [],
@@ -1160,7 +1160,8 @@
    "open issue: No verified 2024-2026 Pratunam/Platinum redevelopment decision found; livestream-reseller market disruption is documented only at news-snippet level (ratchaprarop-c14).",
    "open issue: Rent evidence is district-level (FazWaz Ratchathewi feed); no listing explicitly on Ratchaprarop Rd appeared on the page read, so 'own stock' rents are inferred from adjacent-road examples (ratchaprarop-c11).",
    "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 'ARL-only control' jargon in copy. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 'ARL-only control' jargon in copy. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

@@ -17,8 +17,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.74,
-  "cohort_rank": 8,
-  "cohort_size": 133,
+  "cohort_rank": 9,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
   "popularity_source_ids": [],
@@ -1770,7 +1770,8 @@
    "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3: 11 claims sole-unread; false 'corroboration only' source limitation; checks fail. See research/bangkok/editorial/2026-11-08-independent-review.md.",
    "REMOVED (A-8 rework, F3): rent-listings claim's every source unreachable on 2026-11-08 (property-scout/baanfinder 403, onlineoops dead, propertyhub figures behind JS) — could not be body-read; the observed listing figures survive here as an unverified-from-primary observation: 11,000-13,000 THB studios 74-100 m from the station; 14,000-15,000 THB 1BR; ~20,000 THB old shophouse (propertyscout/baanfinder/propertyhub snippets).",
    "REMOVED (A-8 rework, F3): population-registry claim's sources unreachable (stat.bora.dopa.go.th dead from this environment, webportal 403). Substance preserved: registered population of khwaeng Wang Burapha Phirom reportedly shrank 10,414 (2019) → 8,360 (2024 registry) per DOPA file 67 — UNVERIFIED from primary.",
-   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

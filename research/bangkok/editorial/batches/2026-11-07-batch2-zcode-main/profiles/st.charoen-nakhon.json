@@ -17,7 +17,7 @@
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.96,
   "cohort_rank": 2,
-  "cohort_size": 133,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth was measured for batch selection only (2024-11-05..2026-11-07 window, publisher-family dedup, coverage-scan.json); it is a research-selection signal, not a popularity score.",
   "popularity_source_ids": [],
@@ -1324,7 +1324,8 @@
    "open issue: No full-service hospital, gym names, or sidewalk-quality descriptions located inside the catchment — gaps, not negative findings",
    "open issue: Access failures logged: Bangkok Post 2036319 (tollbit paywall), bangkok-spirit.com via WebFetch (403, succeeded via web_reader), old.reddit.com (403; URL also unconfirmed), ddproperty.com district pages (404 x2), chaophrayaexpressboat.com/en/services (404), Overpass third query (timeout x2)",
    "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs; F12 empty QA notes. See research/bangkok/editorial/2026-11-08-independent-review.md.",
-   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

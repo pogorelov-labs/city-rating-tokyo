@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.54,
-  "cohort_rank": 18,
-  "cohort_size": 133,
+  "cohort_rank": 16,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
   "popularity_source_ids": [],
@@ -1573,7 +1573,8 @@
    "open issue: Lumphini Park hours and the hawker-centre timeline need a BMA source before publication (c14; Wikipedia single-source).",
    "open issue: Duangtawee/monkey-pool tension from the brief: unverified; no reliable public source found, adult-venue directories rejected as sources.",
    "open issue: Gym/fitness inventory inside the unit (fitness clubs beyond condo gyms and park facilities) not verified this pass; gym_sports 10 rests on park edge plus unverified club supply (Q07).",
-   "open issue: Weekend rhythm: no dedicated weekend survey of the area was found; weekend statements rest on weekday-only market hours plus mall/park operation (c17)."
+   "open issue: Weekend rhythm: no dedicated weekend survey of the area was found; weekend statements rest on weekday-only market hours plus mall/park operation (c17).",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

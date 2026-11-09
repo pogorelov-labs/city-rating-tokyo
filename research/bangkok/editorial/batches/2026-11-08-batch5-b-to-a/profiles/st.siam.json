@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.56,
-  "cohort_rank": 17,
-  "cohort_size": 133,
+  "cohort_rank": 15,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
   "popularity_source_ids": [],
@@ -1355,7 +1355,8 @@
    "open issue: Confirm Philtration's exact address and whether it falls inside the 800 m polygon; the venue directory gives no street address.",
    "open issue: The brief's concert-capacity-dispute lead is unresolved (no mainstream coverage found); the 'parade closures' element is partially addressed by annual countdown road closures on Rama I (see siam--c07).",
    "open issue: Bangkok Post was inaccessible in this environment (307 redirect to TollBit paywall gateway) and thailand.prd.go.th failed DNS; both were logged once and equivalents were used.",
-   "open issue: App rent references (฿37,000 / ฿82,500) sit between the observed edge-block and Ratchadamri-tower ask clusters; the ฿45,000/฿95,000 lead matches only the luxury end (see siam--c10). No score changes proposed."
+   "open issue: App rent references (฿37,000 / ฿82,500) sit between the observed edge-block and Ratchadamri-tower ask clusters; the ฿45,000/฿95,000 lead matches only the luxury end (see siam--c10). No score changes proposed.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

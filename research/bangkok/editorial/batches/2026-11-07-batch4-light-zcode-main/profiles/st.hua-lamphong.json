@@ -13,7 +13,7 @@
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.36,
   "cohort_rank": 27,
-  "cohort_size": 133,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
   "popularity_source_ids": [],
@@ -860,7 +860,8 @@
    "REMOVED (A-8 rework, F6+F3): app-data statement (catchment split across four khet: Pathum Wan 47.4%, Bang Rak 28.9%, Samphanthawong 18.4%, Pom Prap Sattru Phai 5.3%; station on the Pathum Wan side, khwaeng Rong Mueang) was attached to an unreadable X post — app-data anchors are recorded in review notes, never as web-sourced claims.",
    "REMOVED (A-8 rework, F6+F3): app-data provenance statement (safety 6 is an editorial input; app confidence 'editorial', source label 'ai_research'; no accessible unit-level crime statistics found in EN or TH) was attached to the same unreadable X post — preserved here as the score-context note.",
    "A-8 rework 2026-11-08: c11 downgraded to proposed after its app-data evidence entry moved to limitations (F6 fix) — remaining web evidence is a single family.",
-   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

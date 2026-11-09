@@ -16,7 +16,7 @@
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 8.0,
   "cohort_rank": 1,
-  "cohort_size": 133,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Each bundle logs its independent publisher families; search-hit totals, SEO duplication and venue stars are explicitly not treated as popularity measurements.",
   "popularity_source_ids": [],
@@ -1617,7 +1617,8 @@
    "open issue: Find platform-level BTS crowding data (morning peak at Chong Nonsi) to test the crowd=1 score properly.",
    "open issue: Verify current status of Ojo rooftop bar and MahaNakhon SkyWalk operations (names/ticketing) from an operator source.",
    "open issue: Obtain resident-written (non-agent) accounts of living specifically within 800 m of BTS Chong Nonsi — Reddit retrieval failed in this session.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 residual: accepted resident-quote walking time. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 residual: accepted resident-quote walking time. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

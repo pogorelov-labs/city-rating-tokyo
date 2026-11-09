@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.42,
-  "cohort_rank": 23,
-  "cohort_size": 133,
+  "cohort_rank": 22,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
   "popularity_source_ids": [],
@@ -1400,7 +1400,8 @@
    "open issue: Grocery, healthcare and public sports infrastructure inside the unit unverified; needs a venue-level pass (app gym_sports 9 currently uncorroborated).",
    "open issue: 'Nimit Lang Ruea' name in the batch lead unresolved; confirm whether it refers to a different district's project or is a mislabel.",
    "open issue: Access failures logged: hotels.com Go Guides timed out once on WebFetch (read succeeded via web reader); TripAdvisor nightlife listing returned HTTP 403 and was skipped.",
-   "open issue: No evidence found (Thai or English) that the Bueng Makkasan pond has been filled in 2025-2026; pond-and-park status within the SRT estate remains open."
+   "open issue: No evidence found (Thai or English) that the Bueng Makkasan pond has been filled in 2025-2026; pond-and-park status within the SRT estate remains open.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

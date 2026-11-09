@@ -28,8 +28,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.7,
-  "cohort_rank": 7,
-  "cohort_size": 50,
+  "cohort_rank": 105,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
   "popularity_source_ids": [],
@@ -1445,7 +1445,8 @@
    "open issue: Resident voice is one neighborhood guide (Jatujak Living); no market-vendor or long-term-resident testimony was body-read - Q02's subarea split rests on administrative and venue evidence.",
    "open issue: Red Line Chatuchak station node identity (OSM node 7787093471 at 13.8266,100.5495) sits between the MRT Chatuchak Park area and Kasetsart - khwaeng attribution not pinned; harmless for khet-level claims.",
    "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2: 8 snippet-only corroboration sources; no sole reliance. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2: 8 snippet-only corroboration sources; no sole reliance. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

@@ -17,8 +17,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.86,
-  "cohort_rank": 4,
-  "cohort_size": 133,
+  "cohort_rank": 5,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth was measured for batch selection only (2024-11-05..2026-11-07 window, publisher-family dedup, coverage-scan.json); it is a research-selection signal, not a popularity score.",
   "popularity_source_ids": [],
@@ -1498,7 +1498,8 @@
    "open issue: Sukhumvit skywalk continuity toward Chidlom/Phloen Chit is search-level info only (visitthailandtoday/royalivory snippets); confirm before claiming walkable elevated access from Nana.",
    "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F4 inline claim refs; F14 reviewer green candidate note (non-blocking). See research/bangkok/editorial/2026-11-08-independent-review.md.",
    "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
-   "C-1 recheck 2026-11-08 (recorded receipt): the c14 're-run Overpass/OSM when network allows' item was satisfied by the independent review's OSM-API audit (F14): only named park intersecting the cell is the Phloen Chit linear park (0.515 ha; hours 05:00-22:00) + 1.37 ha non-private leisure=garden. Green-basis disclosure question stays with B-3."
+   "C-1 recheck 2026-11-08 (recorded receipt): the c14 're-run Overpass/OSM when network allows' item was satisfied by the independent review's OSM-API audit (F14): only named park intersecting the cell is the Phloen Chit linear park (0.515 ha; hours 05:00-22:00) + 1.37 ha non-private leisure=garden. Green-basis disclosure question stays with B-3.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }
