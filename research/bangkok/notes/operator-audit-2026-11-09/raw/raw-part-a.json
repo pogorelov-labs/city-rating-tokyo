@@ -1,0 +1,1429 @@
+{
+ "part": "a",
+ "stations": [
+  {
+   "id": "11th-infantry-regiment",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/dark-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS northern extension Mo Chit-Saphan Mai-Khu Khot (Ha Yaek Lat Phrao opened 2019, remaining stations December 2020); MRTA-built Green Line section operated by BTSC. Station verified on the official BTS route map (N9-N24)."
+  },
+  {
+   "id": "ari",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Part of the original BTS Sukhumvit Line, in service since 1999 (official BTS route map roster)."
+  },
+  {
+   "id": "asok",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Part of the original BTS Sukhumvit Line, in service since 1999 (official BTS route map roster)."
+  },
+  {
+   "id": "ban-thap-chang",
+   "operator_found": "Asia Era One Co., Ltd. - operator under SRT agreement (SRTET takeover scheduled 2027-02-01); owner: State Railway of Thailand (SRT)",
+   "lines_found": [
+    "arl"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.nationthailand.com/news/general/40071485",
+    "https://srtet.co.th/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'ARL' is the line brand, not an operator company. Actual operator is Asia Era One Co., Ltd. (took over ARL operations under the SRT high-speed rail concession in 2021). Its agreement was to expire 2026-09-30; SRT signed a 4-month MOU (2026-10-01 to 2027-01-31) and SRTET takes over operations on 2027-02-01 (Nation Thailand, 2026-09-25).",
+   "notes": "Airport Rail Link station in service since the 2010 opening; roster cross-checked via OSM Airport Rail Link relations (station stops: Phaya Thai, Ratchaprarop, Makkasan, Hua Mak, Ban Thap Chang, Lat Krabang, Suvarnabhumi). The ARL's own website (airportraillink.railway.co.th) was unreachable (DNS failure) from this network. Operational."
+  },
+  {
+   "id": "bang-bamru",
+   "operator_found": "SRTET (SRT Electric Train Co., Ltd.) - operator; State Railway of Thailand (SRT) - owner",
+   "lines_found": [
+    "srt_dark_red",
+    "srt_light_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://srtet.co.th/th/fare-timetable"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "Recorded lines list only srt_light_red. The SRTET official Red Line served-station roster includes Bang Bamru on the dark red Krung Thep Aphiwat-Taling Chan route; the same station complex is served by both SRT red lines.",
+   "notes": "SRT red line hub served by dark red and light red (SRTET roster); operational."
+  },
+  {
+   "id": "bang-bua",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/dark-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS northern extension Mo Chit-Saphan Mai-Khu Khot (Ha Yaek Lat Phrao opened 2019, remaining stations December 2020); MRTA-built Green Line section operated by BTSC. Station verified on the official BTS route map (N9-N24)."
+  },
+  {
+   "id": "bang-chak",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.bts.co.th/eng/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS On Nut-Bearing extension (2011); MRTA-built section, operated by BTSC."
+  },
+  {
+   "id": "bang-chan",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "bang-kapi",
+   "operator_found": "MRTA (owner); Eastern Bangkok Monorail Co., Ltd. (EBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/the-yellow-line",
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://ebm.co.th/en/routemap/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Eastern Bangkok Monorail Co., Ltd. (EBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official BTS route map Yellow Line roster (YL01-YL23) and within the MRTA Yellow Line project (23 stations, commercial service since 2023-07-03, EBM concessionaire). Operational."
+  },
+  {
+   "id": "bang-khae",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "bang-khen",
+   "operator_found": "SRTET (SRT Electric Train Co., Ltd.) - operator; State Railway of Thailand (SRT) - owner",
+   "lines_found": [
+    "srt_dark_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://srtet.co.th/th/fare-timetable"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Present in the SRTET official Red Line served-station roster (Krung Thep Aphiwat-Rangsit route); operational."
+  },
+  {
+   "id": "bang-khun-non",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station BL04 in the MRTA official Blue Line list. MRTA-owned, BEM-operated. Also the planned western terminus of the future Orange Line (under construction) - the Blue Line station itself is operational."
+  },
+  {
+   "id": "bang-krasor",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/chalong-ratchadham"
+   ],
+   "confidence": "medium",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Individual station name not found on reachable MRTA pages (operator BEM's own site, bangkokmetro.co.th, unreachable from this network). Line membership cross-checked via OSM relation 'MRT Purple Line' (operator-tagged BEM) stop roster; line facts (16 stations, 2016-08-06 opening, BEM concession) per MRTA project page."
+  },
+  {
+   "id": "bang-na",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.bts.co.th/eng/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS On Nut-Bearing extension (2011); MRTA-built section, operated by BTSC."
+  },
+  {
+   "id": "bang-o",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "bang-phai",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "bang-phlat",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "bang-phlu",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/chalong-ratchadham",
+    "https://www.mrta.co.th/en/mrt-chalong-ratchadham"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station named on official MRTA Purple Line pages (PP01-PP04 guides / project and P&R lists); 16-station line opened 2016-08-06, MRTA-owned, BEM-operated."
+  },
+  {
+   "id": "bang-pho",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "bang-rak-noi-tha-it",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/chalong-ratchadham",
+    "https://www.mrta.co.th/en/mrt-chalong-ratchadham"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station named on official MRTA Purple Line pages (PP01-PP04 guides / project and P&R lists); 16-station line opened 2016-08-06, MRTA-owned, BEM-operated."
+  },
+  {
+   "id": "bang-rak-yai",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/chalong-ratchadham"
+   ],
+   "confidence": "medium",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Individual station name not found on reachable MRTA pages (operator BEM's own site, bangkokmetro.co.th, unreachable from this network). Line membership cross-checked via OSM relation 'MRT Purple Line' (operator-tagged BEM) stop roster; line facts (16 stations, 2016-08-06 opening, BEM concession) per MRTA project page."
+  },
+  {
+   "id": "bang-son",
+   "operator_found": "SRTET (SRT Electric Train Co., Ltd.) - operator; State Railway of Thailand (SRT) - owner",
+   "lines_found": [
+    "mrt_purple",
+    "srt_dark_red",
+    "srt_light_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://srtet.co.th/th/fare-timetable",
+    "https://www.mrta.co.th/en/chalong-ratchadham"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "Recorded lines list mrt_purple + srt_light_red. The SRTET official roster also includes Bang Son on the dark red route - the same station complex serves both SRT red lines and interchanges with MRT Purple.",
+   "notes": "Triple interchange: SRT dark red / SRT light red / MRT Purple (Bang Son station); all operational. Purple membership cross-checked via OSM 'MRT Purple Line' relation (BEM-tagged)."
+  },
+  {
+   "id": "bang-sue",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "bang-wa",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "bts_silom",
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Interchange hub modeled as one entry: BTS Bang Wa (Silom Line S12, opened 2013) and MRT Blue Bang Wa (BL34) are two separate physical stations about 500 m apart; both operational. Blue roster per MRTA official list; BTS roster per official BTS route map."
+  },
+  {
+   "id": "bang-yi-khan",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "bearing",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.bts.co.th/eng/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS On Nut-Bearing extension (2011); MRTA-built section, operated by BTSC."
+  },
+  {
+   "id": "bhumibol-adulyadej-hospital",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/dark-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS northern extension Mo Chit-Saphan Mai-Khu Khot (Ha Yaek Lat Phrao opened 2019, remaining stations December 2020); MRTA-built Green Line section operated by BTSC. Station verified on the official BTS route map (N9-N24)."
+  },
+  {
+   "id": "chaeng-watthana-14",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "chaeng-watthana-pak-kret-28",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "chang-erawan",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/the-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "MRTA Green Line extension Bearing-Samut Prakan/Kheha, service launched 2018-12-06 (MRTA project page); operated by BTSC."
+  },
+  {
+   "id": "charan-13",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "charoen-nakhon",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC - operator); owned by BMA enterprise Krungthep Thanakhom Co., Ltd. (KT)",
+   "lines_found": [
+    "bts_gold"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.nationthailand.com/news/general/40059831"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Gold Line station G2 on the official BTS route map; in service since December 2020. Operator of record: BTSC; line owned by BMA/Krungthep Thanakhom, which announced the flat fare rise 16 to 17 THB effective 2026-01-01 (Nation Thailand, 2025-12-15)."
+  },
+  {
+   "id": "chatuchak",
+   "operator_found": "SRTET (SRT Electric Train Co., Ltd.) - operator; State Railway of Thailand (SRT) - owner",
+   "lines_found": [
+    "srt_dark_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://srtet.co.th/th/fare-timetable"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "SRT dark red station Chatuchak (จตุจักร) per the SRTET official served-station roster; connected by walkways toward the BTS Mo Chit / MRT Chatuchak Park interchange cluster. Operational."
+  },
+  {
+   "id": "chatuchak-park",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "chit-lom",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Part of the original BTS Sukhumvit Line, in service since 1999 (official BTS route map roster)."
+  },
+  {
+   "id": "chok-chai-4",
+   "operator_found": "MRTA (owner); Eastern Bangkok Monorail Co., Ltd. (EBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/the-yellow-line",
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://ebm.co.th/en/routemap/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Eastern Bangkok Monorail Co., Ltd. (EBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official BTS route map Yellow Line roster (YL01-YL23) and within the MRTA Yellow Line project (23 stations, commercial service since 2023-07-03, EBM concessionaire). Operational."
+  },
+  {
+   "id": "chong-nonsi",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Original BTS Silom Line (1999), station S3 (official BTS route map)."
+  },
+  {
+   "id": "don-mueang",
+   "operator_found": "SRTET (SRT Electric Train Co., Ltd.) - operator; State Railway of Thailand (SRT) - owner",
+   "lines_found": [
+    "srt_dark_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://srtet.co.th/th/fare-timetable"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "SRT dark red station serving Don Mueang airport (SRTET served-station roster). Operational."
+  },
+  {
+   "id": "ekkamai",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Seed name_th field holds latin text 'ekkamai'; official Thai name is เอกมัย (BTS route map). Part of the original BTS Sukhumvit Line, in service since 1999."
+  },
+  {
+   "id": "fai-chai",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "government-complex",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA). Official station name: Chaloem Phrakiat Government Center (PK12)."
+  },
+  {
+   "id": "ha-yaek-lat-phrao",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/dark-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS northern extension Mo Chit-Saphan Mai-Khu Khot (Ha Yaek Lat Phrao opened 2019, remaining stations December 2020); MRTA-built Green Line section operated by BTSC. Station verified on the official BTS route map (N9-N24)."
+  },
+  {
+   "id": "hua-lamphong",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "hua-mak",
+   "operator_found": "Asia Era One Co., Ltd. - operator under SRT agreement (SRTET takeover scheduled 2027-02-01); owner: State Railway of Thailand (SRT)",
+   "lines_found": [
+    "arl"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.nationthailand.com/news/general/40071485",
+    "https://srtet.co.th/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'ARL' is the line brand, not an operator company. Actual operator is Asia Era One Co., Ltd. (took over ARL operations under the SRT high-speed rail concession in 2021). Its agreement was to expire 2026-09-30; SRT signed a 4-month MOU (2026-10-01 to 2027-01-31) and SRTET takes over operations on 2027-02-01 (Nation Thailand, 2026-09-25).",
+   "notes": "Airport Rail Link station in service since the 2010 opening; roster cross-checked via OSM Airport Rail Link relations (station stops: Phaya Thai, Ratchaprarop, Makkasan, Hua Mak, Ban Thap Chang, Lat Krabang, Suvarnabhumi). The ARL's own website (airportraillink.railway.co.th) was unreachable (DNS failure) from this network. Operational."
+  },
+  {
+   "id": "huai-khwang",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "itsaraphap",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "kalantan",
+   "operator_found": "MRTA (owner); Eastern Bangkok Monorail Co., Ltd. (EBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/the-yellow-line",
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://ebm.co.th/en/routemap/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Eastern Bangkok Monorail Co., Ltd. (EBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official BTS route map Yellow Line roster (YL01-YL23) and within the MRTA Yellow Line project (23 stations, commercial service since 2023-07-03, EBM concessionaire). Operational."
+  },
+  {
+   "id": "kamphaeng-phet",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "kan-kheha",
+   "operator_found": "SRTET (SRT Electric Train Co., Ltd.) - operator; State Railway of Thailand (SRT) - owner",
+   "lines_found": [
+    "srt_dark_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://srtet.co.th/th/fare-timetable"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Present in the SRTET official Red Line served-station roster (Krung Thep Aphiwat-Rangsit route); operational."
+  },
+  {
+   "id": "kasetsart-university",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/dark-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS northern extension Mo Chit-Saphan Mai-Khu Khot (Ha Yaek Lat Phrao opened 2019, remaining stations December 2020); MRTA-built Green Line section operated by BTSC. Station verified on the official BTS route map (N9-N24)."
+  },
+  {
+   "id": "khae-rai",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "kheha",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/the-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "MRTA Green Line extension Bearing-Samut Prakan/Kheha, service launched 2018-12-06 (MRTA project page); operated by BTSC."
+  },
+  {
+   "id": "khlong-bang-phai",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/chalong-ratchadham",
+    "https://www.mrta.co.th/en/mrt-chalong-ratchadham"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station named on official MRTA Purple Line pages (PP01-PP04 guides / project and P&R lists); 16-station line opened 2016-08-06, MRTA-owned, BEM-operated."
+  },
+  {
+   "id": "khlong-san",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC - operator); owned by BMA enterprise Krungthep Thanakhom Co., Ltd. (KT)",
+   "lines_found": [
+    "bts_gold"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.nationthailand.com/news/general/40059831"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Gold Line station G3 on the official BTS route map; in service since December 2020. Operator of record: BTSC; line owned by BMA/Krungthep Thanakhom, which announced the flat fare rise 16 to 17 THB effective 2026-01-01 (Nation Thailand, 2025-12-15)."
+  },
+  {
+   "id": "khlong-toei",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "khu-bon",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "khu-khot",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/dark-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS northern extension Mo Chit-Saphan Mai-Khu Khot (Ha Yaek Lat Phrao opened 2019, remaining stations December 2020); MRTA-built Green Line section operated by BTSC. Station verified on the official BTS route map (N9-N24)."
+  },
+  {
+   "id": "krung-thep-aphiwat",
+   "operator_found": "SRTET (SRT Electric Train Co., Ltd.) - operator; State Railway of Thailand (SRT) - owner",
+   "lines_found": [
+    "srt_dark_red",
+    "srt_light_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://srtet.co.th/th/fare-timetable"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Krung Thep Aphiwat Central Terminal (official name; formerly Bang Sue Grand Station) - platforms served by the SRT dark red line per SRTET roster. The light red line terminates at the walkway-linked Sirindhorn stop; the recorded srt_light_red membership follows the dataset's interchange-hub convention and is kept. Operational."
+  },
+  {
+   "id": "krung-thon-buri",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC - operator); owned by BMA enterprise Krungthep Thanakhom Co., Ltd. (KT)",
+   "lines_found": [
+    "bts_silom",
+    "bts_gold"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.nationthailand.com/news/general/40059831"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Interchange hub: BTS Silom Line S7 and Gold Line G1 ('Krung Thon Buri (BTS Gold Line)') - physically linked stations modeled as one hub; both operational. Gold Line owned by BMA/Krungthep Thanakhom, operated by BTSC; flat fare rises 16 to 17 THB on 2026-01-01 (Nation Thailand, 2025-12-15)."
+  },
+  {
+   "id": "lak-hok",
+   "operator_found": "SRTET (SRT Electric Train Co., Ltd.) - operator; State Railway of Thailand (SRT) - owner",
+   "lines_found": [
+    "srt_dark_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://srtet.co.th/th/fare-timetable"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Present in the SRTET official Red Line served-station roster (Krung Thep Aphiwat-Rangsit route); operational."
+  },
+  {
+   "id": "lak-si",
+   "operator_found": "SRTET (SRT Electric Train Co., Ltd.) - operator; State Railway of Thailand (SRT) - owner",
+   "lines_found": [
+    "mrt_pink",
+    "srt_dark_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://srtet.co.th/th/fare-timetable",
+    "https://nbm.co.th/en/routemap/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Interchange hub modeled as one entry: SRT dark red Lak Si station (SRTET roster, PK14 pink station connected); note the BTS Sukhumvit Line has no 'Lak Si' station (official BTS map N9-N24), so no bts_sukhumvit membership. Both lines operational."
+  },
+  {
+   "id": "lak-song",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "lat-krabang",
+   "operator_found": "Asia Era One Co., Ltd. - operator under SRT agreement (SRTET takeover scheduled 2027-02-01); owner: State Railway of Thailand (SRT)",
+   "lines_found": [
+    "arl"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.nationthailand.com/news/general/40071485",
+    "https://srtet.co.th/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'ARL' is the line brand, not an operator company. Actual operator is Asia Era One Co., Ltd. (took over ARL operations under the SRT high-speed rail concession in 2021). Its agreement was to expire 2026-09-30; SRT signed a 4-month MOU (2026-10-01 to 2027-01-31) and SRTET takes over operations on 2027-02-01 (Nation Thailand, 2026-09-25).",
+   "notes": "Airport Rail Link station in service since the 2010 opening; roster cross-checked via OSM Airport Rail Link relations (station stops: Phaya Thai, Ratchaprarop, Makkasan, Hua Mak, Ban Thap Chang, Lat Krabang, Suvarnabhumi). The ARL's own website (airportraillink.railway.co.th) was unreachable (DNS failure) from this network. Operational."
+  },
+  {
+   "id": "lat-phrao",
+   "operator_found": "MRTA (owner); Blue Line: Bangkok Expressway and Metro PCL (BEM) - operator; Yellow Line: Eastern Bangkok Monorail Co., Ltd. (EBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_blue",
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/the-yellow-line",
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Eastern Bangkok Monorail Co., Ltd. (EBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Interchange hub: MRT Blue Lat Phrao (BL15, MRTA official Blue Line list) and Yellow Line Lat Phrao (YL01, official BTS route map). Yellow Line operated by EBM (BTS Group) under MRTA concession, Blue Line by BEM; both operational."
+  },
+  {
+   "id": "lat-phrao-101",
+   "operator_found": "MRTA (owner); Eastern Bangkok Monorail Co., Ltd. (EBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/the-yellow-line",
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://ebm.co.th/en/routemap/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Eastern Bangkok Monorail Co., Ltd. (EBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official BTS route map Yellow Line roster (YL01-YL23) and within the MRTA Yellow Line project (23 stations, commercial service since 2023-07-03, EBM concessionaire). Operational."
+  },
+  {
+   "id": "lat-phrao-71",
+   "operator_found": "MRTA (owner); Eastern Bangkok Monorail Co., Ltd. (EBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/the-yellow-line",
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://ebm.co.th/en/routemap/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Eastern Bangkok Monorail Co., Ltd. (EBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official BTS route map Yellow Line roster (YL01-YL23) and within the MRTA Yellow Line project (23 stations, commercial service since 2023-07-03, EBM concessionaire). Operational."
+  },
+  {
+   "id": "lat-phrao-83",
+   "operator_found": "MRTA (owner); Eastern Bangkok Monorail Co., Ltd. (EBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/the-yellow-line",
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://ebm.co.th/en/routemap/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Eastern Bangkok Monorail Co., Ltd. (EBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official BTS route map Yellow Line roster (YL01-YL23) and within the MRTA Yellow Line project (23 stations, commercial service since 2023-07-03, EBM concessionaire). Operational."
+  },
+  {
+   "id": "lat-pla-khao",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "lumphini",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "mahatthai",
+   "operator_found": "MRTA (owner); Eastern Bangkok Monorail Co., Ltd. (EBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/the-yellow-line",
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://ebm.co.th/en/routemap/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Eastern Bangkok Monorail Co., Ltd. (EBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official BTS route map Yellow Line roster (YL01-YL23) and within the MRTA Yellow Line project (23 stations, commercial service since 2023-07-03, EBM concessionaire). Operational."
+  },
+  {
+   "id": "maiyalap",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA). NBM official spelling: 'Mayalap' (PK20)."
+  },
+  {
+   "id": "makkasan",
+   "operator_found": "Asia Era One Co., Ltd. - operator under SRT agreement (SRTET takeover scheduled 2027-02-01); owner: State Railway of Thailand (SRT)",
+   "lines_found": [
+    "arl"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.nationthailand.com/news/general/40071485",
+    "https://srtet.co.th/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'ARL' is the line brand, not an operator company. Actual operator is Asia Era One Co., Ltd. (took over ARL operations under the SRT high-speed rail concession in 2021). Its agreement was to expire 2026-09-30; SRT signed a 4-month MOU (2026-10-01 to 2027-01-31) and SRTET takes over operations on 2027-02-01 (Nation Thailand, 2026-09-25).",
+   "notes": "Airport Rail Link station in service since the 2010 opening; roster cross-checked via OSM Airport Rail Link relations (station stops: Phaya Thai, Ratchaprarop, Makkasan, Hua Mak, Ban Thap Chang, Lat Krabang, Suvarnabhumi). The ARL's own website (airportraillink.railway.co.th) was unreachable (DNS failure) from this network. Operational."
+  },
+  {
+   "id": "min-buri",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "min-buri-market",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "ministry-of-public-health",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/chalong-ratchadham"
+   ],
+   "confidence": "medium",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Individual station name not found on reachable MRTA pages (operator BEM's own site, bangkokmetro.co.th, unreachable from this network). Line membership cross-checked via OSM relation 'MRT Purple Line' (operator-tagged BEM) stop roster; line facts (16 stations, 2016-08-06 opening, BEM concession) per MRTA project page."
+  },
+  {
+   "id": "mo-chit",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Part of the original BTS Sukhumvit Line, in service since 1999 (official BTS route map roster)."
+  },
+  {
+   "id": "muang-thong-thani",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/pink-line-extension-si-rat---muang-thong-thani",
+    "https://www.thaipbsworld.com/around-thailand/free-trail-of-pink-line%E2%80%99s-new-extension-runs-from-today-until-june-16th"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Main-line station PK10 'Muang Thong Thani' on the official NBM/BTS maps, operational since 2023-12-31. MRTA notes PK10 was formerly named Si Rat; current official maps list PK09 Si Rat and PK10 Muang Thong Thani as separate stations (rail.json part B keeps a separate 'si-rat' entry - data owner should re-check naming consistency). The 2-station spur Si Rat-Muang Thong Thani (MT01 Impact Muang Thong Thani, MT02 Lake Muang Thong Thani) had free trial rides from 2025-05-20 and began commercial service 2025-06-17 (Thai PBS World, 2025-05-20; MRTA extension page)."
+  },
+  {
+   "id": "nana",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Part of the original BTS Sukhumvit Line, in service since 1999 (official BTS route map roster)."
+  },
+  {
+   "id": "national-stadium",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Original BTS Silom Line (1999), station W1 (official BTS route map)."
+  },
+  {
+   "id": "national-telecom",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "nonthaburi-civic-center",
+   "operator_found": "MRTA (owner); Purple Line: Bangkok Expressway and Metro PCL (BEM) - operator; Pink Line: Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink",
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/the-pink-line",
+    "https://www.mrta.co.th/en/chalong-ratchadham",
+    "https://nbm.co.th/en/routemap/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Interchange hub: Pink Line PK01 (northern terminus, official NBM route map; MRTA Pink project page confirms Purple Line interchange at Civic Center) and MRT Purple Nonthaburi Civic Center (named on MRTA Purple project page). Pink operated by NBM (BTS Group), Purple by BEM; both operational."
+  },
+  {
+   "id": "nopparat",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "on-nut",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Part of the original BTS Sukhumvit Line, in service since 1999 (official BTS route map roster)."
+  },
+  {
+   "id": "outer-ring-road-ram-inthra",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "pak-kret-bypass",
+   "operator_found": "MRTA (owner); Northern Bangkok Monorail Co., Ltd. (NBM, BTS Group subsidiary) - operator",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://nbm.co.th/en/routemap/",
+    "https://www.mrta.co.th/en/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json operator label 'MRT' implies the BEM-operated MRT system; actual operator is Northern Bangkok Monorail Co., Ltd. (NBM), a BTS Group subsidiary, under MRTA concession. Line membership and status match.",
+   "notes": "Station present on the official NBM route map (PK01-PK30); Pink Line main section (Khae Rai-Min Buri, 30 stations) in commercial service since 2023-12-31 (MRTA)."
+  },
+  {
+   "id": "pak-nam",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/the-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "MRTA Green Line extension Bearing-Samut Prakan/Kheha, service launched 2018-12-06 (MRTA project page); operated by BTSC."
+  },
+  {
+   "id": "phahon-yothin",
+   "operator_found": "MRTA (owner); Bangkok Expressway and Metro PCL (BEM) - operator",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/en/mrt-chaloem-ratchamongkhon",
+    "https://www.mrta.co.th/en/chaloem-ratchamongkhon-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Station present in the MRTA official Blue Line station list (BL01-BL38). MRTA-owned, operated by BEM under concession; loop complete since 2020."
+  },
+  {
+   "id": "phahonyothin-24",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/dark-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS northern extension Mo Chit-Saphan Mai-Khu Khot (Ha Yaek Lat Phrao opened 2019, remaining stations December 2020); MRTA-built Green Line section operated by BTSC. Station verified on the official BTS route map (N9-N24). BTS official spelling: 'Phahon Yothin 24' (N10)."
+  },
+  {
+   "id": "phahonyothin-59",
+   "operator_found": "BTS (Bangkok Mass Transit System PCL, BTSC)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/en/dark-green-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS northern extension Mo Chit-Saphan Mai-Khu Khot (Ha Yaek Lat Phrao opened 2019, remaining stations December 2020); MRTA-built Green Line section operated by BTSC. Station verified on the official BTS route map (N9-N24). BTS official spelling: 'Phahon Yothin 59' (N18)."
+  }
+ ]
+}

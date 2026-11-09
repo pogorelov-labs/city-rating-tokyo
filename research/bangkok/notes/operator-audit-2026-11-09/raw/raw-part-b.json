@@ -1,0 +1,1377 @@
+{
+ "part": "b",
+ "stations": [
+  {
+   "id": "phasi-charoen",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "phawana",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "phaya-thai",
+   "operator_found": "SRT Electrified Train Co Ltd (SRTET), subsidiary of State Railway of Thailand (SRT)",
+   "lines_found": [
+    "bts_sukhumvit",
+    "arl"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.srtet.co.th/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json uses the service name 'ARL' as operator; actual operator is SRT Electrified Train Co Ltd (SRTET), a State Railway of Thailand subsidiary.",
+   "notes": "Shared interchange: BTS Sukhumvit platform (BTSC) and Airport Rail Link platform (SRTET), two operators."
+  },
+  {
+   "id": "phetchaburi",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Blue Line since 2004. Planned interchange with MRT Orange Line (under construction); links to ARL Makkasan/City Air Terminal on foot."
+  },
+  {
+   "id": "phetkasem-48",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "phloen-chit",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "pho-nimit",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "phra-khanong",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "phra-nang-klao-bridge",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-purple-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "phra-ram-9",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "phraek-sa",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "phrom-phong",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "pu-chao",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "punnawithi",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "queen-sirikit-national-convention-centre",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "rajabhat-phranakhon",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "ram-inthra-3",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "ram-inthra-kor-mor-4",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "ram-inthra-kor-mor-6",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "ram-inthra-kor-mor-9",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "ramkhamhaeng",
+   "operator_found": "SRT Electrified Train Co Ltd (SRTET), subsidiary of State Railway of Thailand (SRT)",
+   "lines_found": [
+    "arl"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.srtet.co.th/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json uses the service name 'ARL' as operator; actual operator is SRT Electrified Train Co Ltd (SRTET), a State Railway of Thailand subsidiary.",
+   "notes": null
+  },
+  {
+   "id": "rangsit",
+   "operator_found": "State Railway of Thailand (SRT); operations by SRT Electrified Train Co Ltd (SRTET)",
+   "lines_found": [
+    "srt_dark_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.srtet.co.th/th/station-information?id=11",
+    "https://www.srtet.co.th/th/route-information"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Northern terminus of Dark Red Line (Bang Sue-Rangsit, full operation 29 Nov 2021). SRT Red Line Phase II (Thammasat University-Rangsit) construction began 15 Jul 2026 north of Rangsit; station remains operational."
+  },
+  {
+   "id": "ratchadamri",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "ratchadaphisek",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "ratchaprarop",
+   "operator_found": "SRT Electrified Train Co Ltd (SRTET), subsidiary of State Railway of Thailand (SRT)",
+   "lines_found": [
+    "arl"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.srtet.co.th/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json uses the service name 'ARL' as operator; actual operator is SRT Electrified Train Co Ltd (SRTET), a State Railway of Thailand subsidiary.",
+   "notes": null
+  },
+  {
+   "id": "ratchathewi",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "ratchayothin",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS Sukhumvit N11, opened 2019-12-04 (on Phahonyothin Rd). Proposed MRT Yellow northern extension would connect here (planned, not under construction)."
+  },
+  {
+   "id": "royal-forest-department",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "royal-irrigation-department",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line",
+    "https://www.mrta.co.th/th/news-release/30905"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": "Sep 13 - Dec 3 2025: western section (Nonthaburi Civic Centre - Royal Irrigation Department) suspended after a power-rail failure, shuttle bus operated; full-line service resumed Dec 3 2025 (MRTA news release 30905)."
+  },
+  {
+   "id": "royal-thai-air-force-museum",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "royal-thai-naval-academy",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sai-luat",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sai-ma",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-purple-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sai-yud",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "saint-louis",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Infill station, opened 2021-02-08."
+  },
+  {
+   "id": "sala-daeng",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sam-yaek-bang-yai",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-purple-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sam-yan",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sam-yot",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Blue Line (opened 2019-07-29). Interchange expansion for MRT Purple southern section (Tao Poon-Rat Burana, under construction, target 2029) is being built at this station; Blue service unaffected."
+  },
+  {
+   "id": "samakkhi",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "samrong",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group) (Sukhumvit Line); Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "bts_sukhumvit",
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire). (Yellow Line side)",
+   "notes": "Interchange: BTS Sukhumvit E15 (opened 2017-04-03, BTSC) and MRT Yellow monorail terminus (2023, EBM)."
+  },
+  {
+   "id": "sanam-chai",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sanam-pao",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sanambin-nam",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line",
+    "https://www.mrta.co.th/th/news-release/30905"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": "Sep 13 - Dec 3 2025: western section (Nonthaburi Civic Centre - Royal Irrigation Department) suspended after a power-rail failure, shuttle bus operated; full-line service resumed Dec 3 2025 (MRTA news release 30905)."
+  },
+  {
+   "id": "saphan-khwai",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "saphan-mai",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "saphan-taksin",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sena-nikhom",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "setthabutbamphen",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "si-bearing",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "si-dan",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "si-iam",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "si-kritha",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "si-la-salle",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "si-lom",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "si-nut",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "si-rat",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "si-thepha",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "siam",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit",
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS central hub: cross-platform interchange between Sukhumvit and Silom lines, both BTSC-operated (opened 1999)."
+  },
+  {
+   "id": "sirindhorn",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "srinagarindra",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "srinagarindra-38",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "sukhumvit",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "surasak",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "sutthisan",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "suvarnabhumi",
+   "operator_found": "SRT Electrified Train Co Ltd (SRTET), subsidiary of State Railway of Thailand (SRT)",
+   "lines_found": [
+    "arl"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.srtet.co.th/"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json uses the service name 'ARL' as operator; actual operator is SRT Electrified Train Co Ltd (SRTET), a State Railway of Thailand subsidiary.",
+   "notes": null
+  },
+  {
+   "id": "talad-bang-yai",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-purple-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "talat-phlu",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "taling-chan",
+   "operator_found": "State Railway of Thailand (SRT); operations by SRT Electrified Train Co Ltd (SRTET)",
+   "lines_found": [
+    "srt_light_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.srtet.co.th/th/station-information?id=14",
+    "https://www.srtet.co.th/th/route-information"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Current western terminus of Light Red Line Bang Son-Taling Chan section (in service since Aug 2021). Taling Chan-Salaya extension and Taling Chan-Siriraj branch planned; tenders expected 2025-2026."
+  },
+  {
+   "id": "tao-poon",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue",
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line",
+    "https://www.mrta.co.th/th/the-purple-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Southern terminus of MRT Purple (2016-08-06) and interchange with MRT Blue (2017-08-11); both MRTA-owned, BEM-operated."
+  },
+  {
+   "id": "tha-phra",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "thailand-cultural-centre",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "Blue Line 2004. Planned interchange with MRT Orange Line (Bang Khun Non-Min Buri, under construction)."
+  },
+  {
+   "id": "thipphawan",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "thong-lo",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "thung-song-hong",
+   "operator_found": "State Railway of Thailand (SRT); operations by SRT Electrified Train Co Ltd (SRTET)",
+   "lines_found": [
+    "srt_dark_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.srtet.co.th/th/station-information?id=6",
+    "https://www.srtet.co.th/th/route-information"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "udom-suk",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "vacharaphol",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "victory-monument",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "wat-mangkon",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_blue"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-blue-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "wat-phra-sri-mahathat",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit",
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": "Shared interchange: BTS Sukhumvit N17 (opened 2020-06-05, BTSC) and MRT Pink monorail (NBM, BTS Group)."
+  },
+  {
+   "id": "wat-samian-nari",
+   "operator_found": "State Railway of Thailand (SRT); operations by SRT Electrified Train Co Ltd (SRTET)",
+   "lines_found": [
+    "srt_dark_red"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.srtet.co.th/th/station-information?id=3",
+    "https://www.srtet.co.th/th/route-information"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "wong-sawang",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-purple-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "wongwian-yai",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": "BTS Silom Line since 2009-05-15. MRT Purple southern section interchange under construction and separate SRT Dark Red Line Wongwian Yai station (RS09) also under construction nearby; BTS service unaffected."
+  },
+  {
+   "id": "wutthakat",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_silom"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "yaek-kor-por-aor",
+   "operator_found": "Bangkok Mass Transit System PCL (BTSC, BTS Group)",
+   "lines_found": [
+    "bts_sukhumvit"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "yaek-lam-sali",
+   "operator_found": "Eastern Bangkok Monorail Co Ltd (EBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_yellow"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-yellow-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Eastern Bangkok Monorail Co Ltd (EBM), a BTS Group company, under an MRTA concession (MRTA project page names EBM as concessionaire).",
+   "notes": "MRT Yellow YL10. Planned MRT Brown Line (Khae Rai-Lam Sali) interchange in project preparation."
+  },
+  {
+   "id": "yaek-nonthaburi-1",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-purple-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  },
+  {
+   "id": "yaek-pak-kret",
+   "operator_found": "Northern Bangkok Monorail Co Ltd (NBM, BTS Group), MRTA concession",
+   "lines_found": [
+    "mrt_pink"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.bts.co.th/eng/routemap.html",
+    "https://www.mrta.co.th/th/the-pink-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": true,
+   "mismatch_detail": "rail.json implies operator 'MRT'; actual operator is Northern Bangkok Monorail Co Ltd (NBM), a BTS Group company, under an MRTA concession (MRTA project page names NBM as concessionaire).",
+   "notes": null
+  },
+  {
+   "id": "yaek-tiwanon",
+   "operator_found": "MRTA (project owner); operated by Bangkok Expressway and Metro PCL (BEM)",
+   "lines_found": [
+    "mrt_purple"
+   ],
+   "status": "operational",
+   "source_urls": [
+    "https://www.mrta.co.th/th/the-purple-line"
+   ],
+   "confidence": "high",
+   "mismatch_vs_recorded": false,
+   "mismatch_detail": null,
+   "notes": null
+  }
+ ]
+}
