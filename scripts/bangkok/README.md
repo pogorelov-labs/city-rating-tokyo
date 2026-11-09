@@ -118,7 +118,8 @@ All **10 original validation gates are resolved**; see the
 [completed remediation](../../docs/DATA_REFRESH_REMEDIATION.md) and
 [committed evidence note](../../research/bangkok/notes/2026-10-26-frozen-refresh.md).
 Historical population/normalization fixtures remain unchanged. The current
-binary is `grid-1d6ed2ef00c3.bin` (**143,925 bytes**).
+binary is `grid-9f58a60ae7ca.bin` (**143,892 bytes**, post-CRTKY-209-era; the
+2026-10-24 refresh shipped `grid-1d6ed2ef00c3.bin` / 143,925 bytes).
 
 For exact frozen-input rebuilds, restore the archived raw payloads and caches:
 
@@ -126,6 +127,13 @@ For exact frozen-input rebuilds, restore the archived raw payloads and caches:
 uv run scripts/bangkok/freeze-inputs.py --verify
 uv run scripts/bangkok/build.py --inputs-manifest data/bangkok/refresh-inputs.json
 ```
+
+Before any *intended* data change, run the replay audit (CRTKY-210):
+`uv run scripts/bangkok/replay_audit.py` replays the build in a temporary
+worktree and lists exactly which pipeline receipts (population baselines,
+input manifest, fixtures, normalization golden, provenance fixture) the
+change invalidates. `--against-merge <sha>` classifies a recorded diff.
+Receipts are reported, never applied automatically.
 
 The committed manifest records all raw hashes and Wikimedia revisions; its
 build date also fixes the output date. Live Wikimedia refetches cannot promise
