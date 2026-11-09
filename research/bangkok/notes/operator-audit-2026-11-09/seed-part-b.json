@@ -1,0 +1,900 @@
+{
+ "count": 89,
+ "stations": [
+  {
+   "id": "phasi-charoen",
+   "name_en": "Phasi Charoen",
+   "name_th": "ภาษีเจริญ",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.71291,
+   "lng": 100.43433
+  },
+  {
+   "id": "phawana",
+   "name_en": "Phawana",
+   "name_th": "ภาวนา",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.80016,
+   "lng": 100.5842
+  },
+  {
+   "id": "phaya-thai",
+   "name_en": "Phaya Thai",
+   "name_th": "พญาไท",
+   "lines_recorded": [
+    "bts_sukhumvit",
+    "arl"
+   ],
+   "lat": 13.75696,
+   "lng": 100.53382
+  },
+  {
+   "id": "phetchaburi",
+   "name_en": "Phetchaburi",
+   "name_th": "เพชรบุรี",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.74919,
+   "lng": 100.56342
+  },
+  {
+   "id": "phetkasem-48",
+   "name_en": "Phetkasem 48",
+   "name_th": "เพชรเกษม 48",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.71556,
+   "lng": 100.44545
+  },
+  {
+   "id": "phloen-chit",
+   "name_en": "Phloen Chit",
+   "name_th": "เพลินจิต",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.74307,
+   "lng": 100.54898
+  },
+  {
+   "id": "pho-nimit",
+   "name_en": "Pho Nimit",
+   "name_th": "โพธิ์นิมิตร",
+   "lines_recorded": [
+    "bts_silom"
+   ],
+   "lat": 13.71924,
+   "lng": 100.48597
+  },
+  {
+   "id": "phra-khanong",
+   "name_en": "Phra Khanong",
+   "name_th": "พระโขนง",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.71517,
+   "lng": 100.59124
+  },
+  {
+   "id": "phra-nang-klao-bridge",
+   "name_en": "Phra Nang Klao Bridge",
+   "name_th": "สะพานพระนั่งเกล้า",
+   "lines_recorded": [
+    "mrt_purple"
+   ],
+   "lat": 13.87029,
+   "lng": 100.48013
+  },
+  {
+   "id": "phra-ram-9",
+   "name_en": "Phra Ram 9",
+   "name_th": "พระราม 9",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.75782,
+   "lng": 100.56528
+  },
+  {
+   "id": "phraek-sa",
+   "name_en": "Phraek Sa",
+   "name_th": "แพรกษา",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.58419,
+   "lng": 100.60791
+  },
+  {
+   "id": "phrom-phong",
+   "name_en": "Phrom Phong",
+   "name_th": "พร้อมพงษ์",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.73043,
+   "lng": 100.56971
+  },
+  {
+   "id": "pu-chao",
+   "name_en": "Pu Chao",
+   "name_th": "ปู่เจ้า",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.63728,
+   "lng": 100.59201
+  },
+  {
+   "id": "punnawithi",
+   "name_en": "Punnawithi",
+   "name_th": "ปุณณวิถี",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.68928,
+   "lng": 100.609
+  },
+  {
+   "id": "queen-sirikit-national-convention-centre",
+   "name_en": "Queen Sirikit National Convention Centre",
+   "name_th": "ศูนย์การประชุมแห่งชาติสิริกิติ์",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.72267,
+   "lng": 100.55991
+  },
+  {
+   "id": "rajabhat-phranakhon",
+   "name_en": "Rajabhat Phranakhon",
+   "name_th": "ราชภัฏพระนคร",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.87994,
+   "lng": 100.5893
+  },
+  {
+   "id": "ram-inthra-3",
+   "name_en": "Ram Inthra 3",
+   "name_th": "รามอินทรา 3",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.87095,
+   "lng": 100.60262
+  },
+  {
+   "id": "ram-inthra-kor-mor-4",
+   "name_en": "Ram Inthra Kor Mor 4",
+   "name_th": "รามอินทรา กม.4",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.85831,
+   "lng": 100.62613
+  },
+  {
+   "id": "ram-inthra-kor-mor-6",
+   "name_en": "Ram Inthra Kor Mor 6",
+   "name_th": "รามอินทรา กม.6",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.84527,
+   "lng": 100.65024
+  },
+  {
+   "id": "ram-inthra-kor-mor-9",
+   "name_en": "Ram Inthra Kor Mor 9",
+   "name_th": "รามอินทรา กม.9",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.83379,
+   "lng": 100.66757
+  },
+  {
+   "id": "ramkhamhaeng",
+   "name_en": "Ramkhamhaeng",
+   "name_th": "รามคำแหง",
+   "lines_recorded": [
+    "arl"
+   ],
+   "lat": 13.74299,
+   "lng": 100.60015
+  },
+  {
+   "id": "rangsit",
+   "name_en": "Rangsit",
+   "name_th": "รังสิต",
+   "lines_recorded": [
+    "srt_dark_red"
+   ],
+   "lat": 13.99055,
+   "lng": 100.60218
+  },
+  {
+   "id": "ratchadamri",
+   "name_en": "Ratchadamri",
+   "name_th": "ราชดำริ",
+   "lines_recorded": [
+    "bts_silom"
+   ],
+   "lat": 13.73947,
+   "lng": 100.53945
+  },
+  {
+   "id": "ratchadaphisek",
+   "name_en": "Ratchadaphisek",
+   "name_th": "รัชดาภิเษก",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.79897,
+   "lng": 100.57455
+  },
+  {
+   "id": "ratchaprarop",
+   "name_en": "Ratchaprarop",
+   "name_th": "ราชปรารภ",
+   "lines_recorded": [
+    "arl"
+   ],
+   "lat": 13.75511,
+   "lng": 100.54212
+  },
+  {
+   "id": "ratchathewi",
+   "name_en": "Ratchathewi",
+   "name_th": "ราชเทวี",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.75186,
+   "lng": 100.53155
+  },
+  {
+   "id": "ratchayothin",
+   "name_en": "Ratchayothin",
+   "name_th": "รัชโยธิน",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.82975,
+   "lng": 100.56972
+  },
+  {
+   "id": "royal-forest-department",
+   "name_en": "Royal Forest Department",
+   "name_th": "กรมป่าไม้",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.85033,
+   "lng": 100.58182
+  },
+  {
+   "id": "royal-irrigation-department",
+   "name_en": "Royal Irrigation Department",
+   "name_th": "กรมชลประทาน",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.89857,
+   "lng": 100.50709
+  },
+  {
+   "id": "royal-thai-air-force-museum",
+   "name_en": "Royal Thai Air Force Museum",
+   "name_th": "พิพิธภัณฑ์กองทัพอากาศ",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.91797,
+   "lng": 100.62169
+  },
+  {
+   "id": "royal-thai-naval-academy",
+   "name_en": "Royal Thai Naval Academy",
+   "name_th": "โรงเรียนนายเรือ",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.60841,
+   "lng": 100.59491
+  },
+  {
+   "id": "sai-luat",
+   "name_en": "Sai Luat",
+   "name_th": "สายลวด",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.57778,
+   "lng": 100.60546
+  },
+  {
+   "id": "sai-ma",
+   "name_en": "Sai Ma",
+   "name_th": "ไทรม้า",
+   "lines_recorded": [
+    "mrt_purple"
+   ],
+   "lat": 13.87051,
+   "lng": 100.46669
+  },
+  {
+   "id": "sai-yud",
+   "name_en": "Sai Yud",
+   "name_th": "สายหยุด",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.88845,
+   "lng": 100.60427
+  },
+  {
+   "id": "saint-louis",
+   "name_en": "Saint Louis",
+   "name_th": "เซนต์หลุยส์",
+   "lines_recorded": [
+    "bts_silom"
+   ],
+   "lat": 13.72082,
+   "lng": 100.52669
+  },
+  {
+   "id": "sala-daeng",
+   "name_en": "Sala Daeng",
+   "name_th": "ศาลาแดง",
+   "lines_recorded": [
+    "bts_silom"
+   ],
+   "lat": 13.72857,
+   "lng": 100.53434
+  },
+  {
+   "id": "sam-yaek-bang-yai",
+   "name_en": "Sam Yaek Bang Yai",
+   "name_th": "สามแยกบางใหญ่",
+   "lines_recorded": [
+    "mrt_purple"
+   ],
+   "lat": 13.87467,
+   "lng": 100.41936
+  },
+  {
+   "id": "sam-yan",
+   "name_en": "Sam Yan",
+   "name_th": "สามย่าน",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.73206,
+   "lng": 100.53012
+  },
+  {
+   "id": "sam-yot",
+   "name_en": "Sam Yot",
+   "name_th": "สามยอด",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.747,
+   "lng": 100.5023
+  },
+  {
+   "id": "samakkhi",
+   "name_en": "Samakkhi",
+   "name_th": "สามัคคี",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.88928,
+   "lng": 100.51057
+  },
+  {
+   "id": "samrong",
+   "name_en": "Samrong",
+   "name_th": "สำโรง",
+   "lines_recorded": [
+    "bts_sukhumvit",
+    "mrt_yellow"
+   ],
+   "lat": 13.64649,
+   "lng": 100.59579
+  },
+  {
+   "id": "sanam-chai",
+   "name_en": "Sanam Chai",
+   "name_th": "สนามไชย",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.74433,
+   "lng": 100.49462
+  },
+  {
+   "id": "sanam-pao",
+   "name_en": "Sanam Pao",
+   "name_th": "สนามเป้า",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.77262,
+   "lng": 100.54207
+  },
+  {
+   "id": "sanambin-nam",
+   "name_en": "Sanambin Nam",
+   "name_th": "สนามบินน้ำ",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.87414,
+   "lng": 100.51632
+  },
+  {
+   "id": "saphan-khwai",
+   "name_en": "Saphan Khwai",
+   "name_th": "สะพานควาย",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.79382,
+   "lng": 100.54971
+  },
+  {
+   "id": "saphan-mai",
+   "name_en": "Saphan Mai",
+   "name_th": "สะพานใหม่",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.89661,
+   "lng": 100.60908
+  },
+  {
+   "id": "saphan-taksin",
+   "name_en": "Saphan Taksin",
+   "name_th": "สะพานตากสิน",
+   "lines_recorded": [
+    "bts_silom"
+   ],
+   "lat": 13.71881,
+   "lng": 100.51422
+  },
+  {
+   "id": "sena-nikhom",
+   "name_en": "Sena Nikhom",
+   "name_th": "เสนานิคม",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.83641,
+   "lng": 100.57363
+  },
+  {
+   "id": "setthabutbamphen",
+   "name_en": "Setthabutbamphen",
+   "name_th": "เศรษฐบุตรบำเพ็ญ",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.81269,
+   "lng": 100.71263
+  },
+  {
+   "id": "si-bearing",
+   "name_en": "Si Bearing",
+   "name_th": "ศรีแบริ่ง",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.64349,
+   "lng": 100.63627
+  },
+  {
+   "id": "si-dan",
+   "name_en": "Si Dan",
+   "name_th": "ศรีด่าน",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.6331,
+   "lng": 100.63011
+  },
+  {
+   "id": "si-iam",
+   "name_en": "Si Iam",
+   "name_th": "ศรีเอี่ยม",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.66769,
+   "lng": 100.64507
+  },
+  {
+   "id": "si-kritha",
+   "name_en": "Si Kritha",
+   "name_th": "ศรีกรีฑา",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.75041,
+   "lng": 100.64479
+  },
+  {
+   "id": "si-la-salle",
+   "name_en": "Si La Salle",
+   "name_th": "ศรีลาซาล",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.65497,
+   "lng": 100.64216
+  },
+  {
+   "id": "si-lom",
+   "name_en": "Si Lom",
+   "name_th": "สีลม",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.7292,
+   "lng": 100.53707
+  },
+  {
+   "id": "si-nut",
+   "name_en": "Si Nut",
+   "name_th": "ศรีนุช",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.7111,
+   "lng": 100.6442
+  },
+  {
+   "id": "si-rat",
+   "name_en": "Si Rat",
+   "name_th": "ศรีรัช",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.90057,
+   "lng": 100.54001
+  },
+  {
+   "id": "si-thepha",
+   "name_en": "Si Thepha",
+   "name_th": "ศรีเทพา",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.62984,
+   "lng": 100.62269
+  },
+  {
+   "id": "siam",
+   "name_en": "Siam",
+   "name_th": "สยาม",
+   "lines_recorded": [
+    "bts_sukhumvit",
+    "bts_silom"
+   ],
+   "lat": 13.74562,
+   "lng": 100.53422
+  },
+  {
+   "id": "sirindhorn",
+   "name_en": "Sirindhorn",
+   "name_th": "สิรินธร",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.78387,
+   "lng": 100.49333
+  },
+  {
+   "id": "srinagarindra",
+   "name_en": "Srinagarindra",
+   "name_th": "ศรีนครินทร์",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.592,
+   "lng": 100.60904
+  },
+  {
+   "id": "srinagarindra-38",
+   "name_en": "Srinagarindra 38",
+   "name_th": "ศรีนครินทร์ 38",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.70112,
+   "lng": 100.64647
+  },
+  {
+   "id": "sukhumvit",
+   "name_en": "Sukhumvit",
+   "name_th": "สุขุมวิท",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.73747,
+   "lng": 100.5615
+  },
+  {
+   "id": "surasak",
+   "name_en": "Surasak",
+   "name_th": "สุรศักดิ์",
+   "lines_recorded": [
+    "bts_silom"
+   ],
+   "lat": 13.71927,
+   "lng": 100.52146
+  },
+  {
+   "id": "sutthisan",
+   "name_en": "Sutthisan",
+   "name_th": "สุทธิสาร",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.78949,
+   "lng": 100.57408
+  },
+  {
+   "id": "suvarnabhumi",
+   "name_en": "Suvarnabhumi",
+   "name_th": "สุวรรณภูมิ",
+   "lines_recorded": [
+    "arl"
+   ],
+   "lat": 13.6943,
+   "lng": 100.7513
+  },
+  {
+   "id": "talad-bang-yai",
+   "name_en": "Talad Bang Yai",
+   "name_th": "ตลาดบางใหญ่",
+   "lines_recorded": [
+    "mrt_purple"
+   ],
+   "lat": 13.88101,
+   "lng": 100.40929
+  },
+  {
+   "id": "talat-phlu",
+   "name_en": "Talat Phlu",
+   "name_th": "ตลาดพลู",
+   "lines_recorded": [
+    "bts_silom"
+   ],
+   "lat": 13.71422,
+   "lng": 100.47669
+  },
+  {
+   "id": "taling-chan",
+   "name_en": "Taling Chan",
+   "name_th": "ชุมทางตลิ่งชัน",
+   "lines_recorded": [
+    "srt_light_red"
+   ],
+   "lat": 13.78927,
+   "lng": 100.44008
+  },
+  {
+   "id": "tao-poon",
+   "name_en": "Tao Poon",
+   "name_th": "เตาปูน",
+   "lines_recorded": [
+    "mrt_blue",
+    "mrt_purple"
+   ],
+   "lat": 13.80616,
+   "lng": 100.53078
+  },
+  {
+   "id": "tha-phra",
+   "name_en": "Tha Phra",
+   "name_th": "ท่าพระ",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.72965,
+   "lng": 100.47404
+  },
+  {
+   "id": "thailand-cultural-centre",
+   "name_en": "Thailand Cultural Centre",
+   "name_th": "ศูนย์วัฒนธรรมแห่งประเทศไทย",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.76616,
+   "lng": 100.57012
+  },
+  {
+   "id": "thipphawan",
+   "name_en": "Thipphawan",
+   "name_th": "ทิพวัล",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.63673,
+   "lng": 100.6099
+  },
+  {
+   "id": "thong-lo",
+   "name_en": "Thong Lo",
+   "name_th": "ทองหล่อ",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.72423,
+   "lng": 100.57851
+  },
+  {
+   "id": "thung-song-hong",
+   "name_en": "Thung Song Hong",
+   "name_th": "ทุ่งสองห้อง",
+   "lines_recorded": [
+    "srt_dark_red"
+   ],
+   "lat": 13.86021,
+   "lng": 100.56753
+  },
+  {
+   "id": "udom-suk",
+   "name_en": "Udom Suk",
+   "name_th": "อุดมสุข",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.67987,
+   "lng": 100.60947
+  },
+  {
+   "id": "vacharaphol",
+   "name_en": "Vacharaphol",
+   "name_th": "วัชรพล",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.84926,
+   "lng": 100.64288
+  },
+  {
+   "id": "victory-monument",
+   "name_en": "Victory Monument",
+   "name_th": "อนุสาวรีย์ชัยสมรภูมิ",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.76276,
+   "lng": 100.53705
+  },
+  {
+   "id": "wat-mangkon",
+   "name_en": "Wat Mangkon",
+   "name_th": "วัดมังกร",
+   "lines_recorded": [
+    "mrt_blue"
+   ],
+   "lat": 13.74221,
+   "lng": 100.50991
+  },
+  {
+   "id": "wat-phra-sri-mahathat",
+   "name_en": "Wat Phra Sri Mahathat",
+   "name_th": "วัดพระศรีมหาธาตุ",
+   "lines_recorded": [
+    "bts_sukhumvit",
+    "mrt_pink"
+   ],
+   "lat": 13.87528,
+   "lng": 100.59673
+  },
+  {
+   "id": "wat-samian-nari",
+   "name_en": "Wat Samian Nari",
+   "name_th": "วัดเสมียนนารี",
+   "lines_recorded": [
+    "srt_dark_red"
+   ],
+   "lat": 13.84159,
+   "lng": 100.5575
+  },
+  {
+   "id": "wong-sawang",
+   "name_en": "Wong Sawang",
+   "name_th": "วงศ์สว่าง",
+   "lines_recorded": [
+    "mrt_purple"
+   ],
+   "lat": 13.82986,
+   "lng": 100.5265
+  },
+  {
+   "id": "wongwian-yai",
+   "name_en": "Wongwian Yai",
+   "name_th": "วงเวียนใหญ่",
+   "lines_recorded": [
+    "bts_silom"
+   ],
+   "lat": 13.72108,
+   "lng": 100.49516
+  },
+  {
+   "id": "wutthakat",
+   "name_en": "Wutthakat",
+   "name_th": "วุฒากาศ",
+   "lines_recorded": [
+    "bts_silom"
+   ],
+   "lat": 13.71302,
+   "lng": 100.4689
+  },
+  {
+   "id": "yaek-kor-por-aor",
+   "name_en": "Yaek Kor Por Aor",
+   "name_th": "แยก คปอ.",
+   "lines_recorded": [
+    "bts_sukhumvit"
+   ],
+   "lat": 13.92501,
+   "lng": 100.62584
+  },
+  {
+   "id": "yaek-lam-sali",
+   "name_en": "Yaek Lam Sali",
+   "name_th": "แยกลำสาลี",
+   "lines_recorded": [
+    "mrt_yellow"
+   ],
+   "lat": 13.76182,
+   "lng": 100.64557
+  },
+  {
+   "id": "yaek-nonthaburi-1",
+   "name_en": "Yaek Nonthaburi 1",
+   "name_th": "แยกนนทบุรี 1",
+   "lines_recorded": [
+    "mrt_purple"
+   ],
+   "lat": 13.86596,
+   "lng": 100.49408
+  },
+  {
+   "id": "yaek-pak-kret",
+   "name_en": "Yaek Pak Kret",
+   "name_th": "แยกปากเกร็ด",
+   "lines_recorded": [
+    "mrt_pink"
+   ],
+   "lat": 13.9062,
+   "lng": 100.50539
+  },
+  {
+   "id": "yaek-tiwanon",
+   "name_en": "Yaek Tiwanon",
+   "name_th": "แยกติวานนท์",
+   "lines_recorded": [
+    "mrt_purple"
+   ],
+   "lat": 13.83953,
+   "lng": 100.51497
+  }
+ ]
+}
