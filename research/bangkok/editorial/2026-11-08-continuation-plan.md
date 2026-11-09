@@ -271,6 +271,26 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
 
 ## 15. Progress log
 
+- **2026-11-09 (D-4/D-3 executed + production verified):** re-anchor.py
+  --write across all six batches against the 132-area snapshot — 23 score
+  drifts (±0.04–0.14), ~137 tie/size updates, districts layer clean,
+  st.sena-ruam MISS → manual routing (note already in-bundle). Tool fix en
+  route: --write previously only fired in the tie branch (score-drift bundles
+  were reported but never written — a latent bug from the pre-B-1
+  zero-drift validation). The schema forbids extra selection_context keys, so
+  the re-anchor stamp rides the review note only. Gates: validate ALL OK ×6,
+  audit zero P1, kit 33 green. Exporter re-emit was a byte-level no-op
+  (chunks/index carry no selection_context — the re-anchored context feeds
+  briefs/packet/claims context, not the served surface). PR #183 merged.
+  PRODUCTION: deploy of #182 verified live — new grid bin 200, old bin 404,
+  st.sena-ruam.json 404, editorial chunks 200; e2e-production asserted
+  '132 station areas' against the identical standalone build. The ghost
+  station is gone from the shipped app; research and app now share one
+  snapshot. Remaining human/machine gates: A-1 named reviewer + sign-off CSV
+  (DEC-2), A-5/A-6 human halves, NocoDB token rotation, Coolify scheduled
+  Docker-cleanup toggle, B-1 139-station operator audit ticket.
+
+
 - **2026-11-09 (B-1 COMPLETED via deterministic replay):** the hand-surgical
   removal left CI red — the pipeline's frozen-receipt web (unchanged_signatures,
   signals_sha256, inputs_manifest_sha256, cross-city provenance, normalization
