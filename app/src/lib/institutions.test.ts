@@ -11,7 +11,7 @@ describe('institution consumers and joins', () => {
   it('joins every public station, station area and district by canonical ID', () => {
     expect(stations).toHaveLength(1493);
     expect(districts.districts).toHaveLength(50);
-    expect(areas.areas).toHaveLength(133);
+    expect(areas.areas).toHaveLength(132); // B-1: sena-ruam removed
     for (const row of stations) expect(getInstitutions('tokyo', 'station', row.slug)).toBeDefined();
     for (const row of districts.districts) expect(getInstitutions('bangkok', 'district', row.slug)).toBeDefined();
     for (const row of areas.areas) expect(getInstitutions('bangkok', 'station', row.id)).toBeDefined();

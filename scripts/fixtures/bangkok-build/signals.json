@@ -1151,7 +1151,7 @@
   },
   "din-daeng": {
    "raw": {
-    "transport": 0.5156,
+    "transport": 0.5144,
     "rent": 13000,
     "daily_essentials": 2.6147,
     "safety": 5,
@@ -1189,7 +1189,7 @@
     "mochit": 22
    },
    "min_transit": 15,
-   "mean_station_distance_m": 853,
+   "mean_station_distance_m": 855,
    "facts": {
     "area_km2": 8.35,
     "population": 115508,
@@ -1304,7 +1304,7 @@
   },
   "dusit": {
    "raw": {
-    "transport": 0.3502,
+    "transport": 0.3498,
     "rent": 13000,
     "daily_essentials": 2.0164,
     "safety": 8,
@@ -2349,7 +2349,7 @@
   },
   "phaya-thai": {
    "raw": {
-    "transport": 0.5587,
+    "transport": 0.5446,
     "rent": 18000,
     "daily_essentials": 2.4836,
     "safety": 8,
@@ -2380,14 +2380,14 @@
    "points": 232,
    "inhabited_share": 1.0,
    "hub_minutes": {
-    "siam": 21,
+    "siam": 22,
     "asok": 27,
     "silom": 29,
     "rama9": 24,
     "mochit": 17
    },
    "min_transit": 17,
-   "mean_station_distance_m": 720,
+   "mean_station_distance_m": 774,
    "facts": {
     "area_km2": 9.59,
     "population": 67388,
@@ -2418,8 +2418,7 @@
     "ari",
     "kamphaeng-phet",
     "sanam-pao",
-    "saphan-khwai",
-    "sena-ruam"
+    "saphan-khwai"
    ],
    "lines": [
     "bts_sukhumvit",
@@ -3844,20 +3843,20 @@
   },
   "ari": {
    "raw": {
-    "transport": 0.5668,
+    "transport": 0.5635,
     "rent": 18000,
-    "daily_essentials": 2.7399,
+    "daily_essentials": 2.7935,
     "safety": 8.0,
-    "food": 5.6568,
-    "green": 2.4014,
-    "gym_sports": 3.2091,
-    "vibe": 2.6952,
-    "nightlife": 3.1518,
-    "crowd": 5.5799
+    "food": 5.705,
+    "green": 2.36,
+    "gym_sports": 3.2325,
+    "vibe": 2.6882,
+    "nightlife": 3.244,
+    "crowd": 5.6529
    },
    "ratings": {
     "food": 9,
-    "nightlife": 8,
+    "nightlife": 9,
     "daily_essentials": 8,
     "gym_sports": 8,
     "vibe": 8,
@@ -3867,7 +3866,7 @@
     "rent": 7,
     "safety": 8
    },
-   "points": 30,
+   "points": 41,
    "districts": [
     {
      "slug": "phaya-thai",
@@ -3886,31 +3885,31 @@
    },
    "min_transit": 9,
    "resident_minutes": {
-    "siam": 19,
-    "asok": 25,
-    "silom": 27,
-    "rama9": 22,
+    "siam": 20,
+    "asok": 26,
+    "silom": 28,
+    "rama9": 23,
     "mochit": 17
    },
    "facts": {
-    "area_km2": 1.2,
-    "food": 375,
-    "cafes": 67,
-    "nightlife": 28,
-    "convenience": 11,
+    "area_km2": 1.64,
+    "food": 480,
+    "cafes": 85,
+    "nightlife": 43,
+    "convenience": 17,
     "markets": 1,
-    "essentials": 93,
-    "sports": 16,
-    "culture": 8,
+    "essentials": 132,
+    "sports": 18,
+    "culture": 12,
     "temples": 1,
-    "park_ha": 5.1,
+    "park_ha": 6.4,
     "piers": 0
    },
    "osm_counts": {
-    "food": 123,
-    "nightlife": 7,
-    "essentials": 36,
-    "sports": 0,
+    "food": 144,
+    "nightlife": 8,
+    "essentials": 46,
+    "sports": 1,
     "culture": 4
    }
   },
@@ -3934,7 +3933,7 @@
     "gym_sports": 10,
     "vibe": 9,
     "green": 9,
-    "transport": 8,
+    "transport": 9,
     "crowd": 1,
     "rent": 4,
     "safety": 6
@@ -4314,7 +4313,7 @@
    "ratings": {
     "food": 7,
     "nightlife": 6,
-    "daily_essentials": 7,
+    "daily_essentials": 8,
     "gym_sports": 6,
     "vibe": 7,
     "green": 4,
@@ -4460,7 +4459,7 @@
     "crowd": 4.7119
    },
    "ratings": {
-    "food": 4,
+    "food": 5,
     "nightlife": 4,
     "daily_essentials": 4,
     "gym_sports": 8,
@@ -4990,7 +4989,7 @@
     "gym_sports": 4,
     "vibe": 3,
     "green": 4,
-    "transport": 7,
+    "transport": 8,
     "crowd": 6,
     "rent": 9,
     "safety": 7
@@ -6325,7 +6324,7 @@
    },
    "ratings": {
     "food": 4,
-    "nightlife": 2,
+    "nightlife": 3,
     "daily_essentials": 2,
     "gym_sports": 3,
     "vibe": 2,
@@ -6396,14 +6395,14 @@
     "crowd": 5.8117
    },
    "ratings": {
-    "food": 7,
+    "food": 8,
     "nightlife": 8,
     "daily_essentials": 8,
     "gym_sports": 8,
     "vibe": 7,
     "green": 4,
-    "transport": 4,
-    "crowd": 2,
+    "transport": 5,
+    "crowd": 3,
     "rent": 8,
     "safety": 5
    },
@@ -6621,7 +6620,7 @@
    },
    "ratings": {
     "food": 8,
-    "nightlife": 7,
+    "nightlife": 8,
     "daily_essentials": 7,
     "gym_sports": 6,
     "vibe": 8,
@@ -7078,7 +7077,7 @@
    "ratings": {
     "food": 5,
     "nightlife": 5,
-    "daily_essentials": 2,
+    "daily_essentials": 3,
     "gym_sports": 4,
     "vibe": 6,
     "green": 8,
@@ -7115,8 +7114,8 @@
    "min_transit": 10,
    "resident_minutes": {
     "siam": 29,
-    "asok": 34,
-    "silom": 36,
+    "asok": 35,
+    "silom": 37,
     "rama9": 30,
     "mochit": 14
    },
@@ -7304,9 +7303,9 @@
     "nightlife": 4,
     "daily_essentials": 3,
     "gym_sports": 3,
-    "vibe": 2,
+    "vibe": 3,
     "green": 7,
-    "transport": 2,
+    "transport": 3,
     "crowd": 7,
     "rent": 9,
     "safety": 7
@@ -7887,7 +7886,7 @@
     "food": 6,
     "nightlife": 6,
     "daily_essentials": 6,
-    "gym_sports": 4,
+    "gym_sports": 5,
     "vibe": 5,
     "green": 1,
     "transport": 3,
@@ -8407,7 +8406,7 @@
     "vibe": 4,
     "green": 8,
     "transport": 5,
-    "crowd": 7,
+    "crowd": 6,
     "rent": 9,
     "safety": 7
    },
@@ -8632,7 +8631,7 @@
     "nightlife": 2,
     "daily_essentials": 3,
     "gym_sports": 6,
-    "vibe": 4,
+    "vibe": 5,
     "green": 5,
     "transport": 1,
     "crowd": 6,
@@ -8772,7 +8771,7 @@
     "crowd": 4.4679
    },
    "ratings": {
-    "food": 2,
+    "food": 3,
     "nightlife": 1,
     "daily_essentials": 3,
     "gym_sports": 2,
@@ -9305,9 +9304,9 @@
     "daily_essentials": 6,
     "gym_sports": 5,
     "vibe": 6,
-    "green": 2,
+    "green": 3,
     "transport": 7,
-    "crowd": 6,
+    "crowd": 5,
     "rent": 9,
     "safety": 7
    },
@@ -11196,7 +11195,7 @@
     "nightlife": 7,
     "daily_essentials": 8,
     "gym_sports": 8,
-    "vibe": 7,
+    "vibe": 8,
     "green": 8,
     "transport": 5,
     "crowd": 5,
@@ -11252,43 +11251,43 @@
   },
   "saphan-khwai": {
    "raw": {
-    "transport": 0.6986,
+    "transport": 0.6798,
     "rent": 18000,
-    "daily_essentials": 2.5822,
-    "safety": 7.92,
-    "food": 5.1218,
-    "green": 1.3938,
-    "gym_sports": 2.6638,
-    "vibe": 2.6237,
-    "nightlife": 3.0936,
-    "crowd": 5.5995
+    "daily_essentials": 2.6139,
+    "safety": 7.94,
+    "food": 5.1795,
+    "green": 1.4701,
+    "gym_sports": 2.7421,
+    "vibe": 2.5787,
+    "nightlife": 3.1357,
+    "crowd": 5.7171
    },
    "ratings": {
     "food": 8,
     "nightlife": 8,
     "daily_essentials": 8,
-    "gym_sports": 7,
+    "gym_sports": 8,
     "vibe": 8,
     "green": 6,
-    "transport": 9,
+    "transport": 8,
     "crowd": 3,
     "rent": 7,
     "safety": 8
    },
-   "points": 25,
+   "points": 32,
    "districts": [
     {
      "slug": "phaya-thai",
-     "share": 0.92
+     "share": 0.938
     },
     {
      "slug": "chatuchak",
-     "share": 0.08
+     "share": 0.062
     }
    ],
    "rent_1br": 18000,
-   "rent_2br": 36500,
-   "safety": 7.92,
+   "rent_2br": 37000,
+   "safety": 7.9375,
    "hub_minutes": {
     "siam": 15,
     "asok": 21,
@@ -11298,31 +11297,31 @@
    },
    "min_transit": 6,
    "resident_minutes": {
-    "siam": 22,
-    "asok": 28,
-    "silom": 30,
+    "siam": 23,
+    "asok": 29,
+    "silom": 31,
     "rama9": 26,
-    "mochit": 11
+    "mochit": 12
    },
    "facts": {
-    "area_km2": 1.04,
-    "food": 142,
-    "cafes": 25,
-    "nightlife": 15,
-    "convenience": 12,
+    "area_km2": 1.35,
+    "food": 323,
+    "cafes": 56,
+    "nightlife": 47,
+    "convenience": 15,
     "markets": 1,
-    "essentials": 87,
-    "sports": 3,
-    "culture": 9,
+    "essentials": 135,
+    "sports": 11,
+    "culture": 16,
     "temples": 8,
-    "park_ha": 0.7,
+    "park_ha": 1.3,
     "piers": 0
    },
    "osm_counts": {
-    "food": 14,
-    "nightlife": 0,
-    "essentials": 23,
-    "sports": 0,
+    "food": 34,
+    "nightlife": 4,
+    "essentials": 37,
+    "sports": 1,
     "culture": 2
    }
   },
@@ -11556,78 +11555,6 @@
     "essentials": 20,
     "sports": 0,
     "culture": 1
-   }
-  },
-  "sena-ruam": {
-   "raw": {
-    "transport": 0.6378,
-    "rent": 18000,
-    "daily_essentials": 2.7885,
-    "safety": 8.0,
-    "food": 5.5385,
-    "green": 2.0031,
-    "gym_sports": 3.1699,
-    "vibe": 2.5495,
-    "nightlife": 3.3546,
-    "crowd": 5.6472
-   },
-   "ratings": {
-    "food": 8,
-    "nightlife": 9,
-    "daily_essentials": 8,
-    "gym_sports": 8,
-    "vibe": 8,
-    "green": 8,
-    "transport": 8,
-    "crowd": 3,
-    "rent": 7,
-    "safety": 8
-   },
-   "points": 30,
-   "districts": [
-    {
-     "slug": "phaya-thai",
-     "share": 1.0
-    }
-   ],
-   "rent_1br": 18000,
-   "rent_2br": 37000,
-   "safety": 8.0,
-   "hub_minutes": {
-    "siam": 13,
-    "asok": 19,
-    "silom": 21,
-    "rama9": 24,
-    "mochit": 7
-   },
-   "min_transit": 7,
-   "resident_minutes": {
-    "siam": 21,
-    "asok": 27,
-    "silom": 29,
-    "rama9": 24,
-    "mochit": 14
-   },
-   "facts": {
-    "area_km2": 1.26,
-    "food": 334,
-    "cafes": 57,
-    "nightlife": 49,
-    "convenience": 12,
-    "markets": 0,
-    "essentials": 100,
-    "sports": 13,
-    "culture": 11,
-    "temples": 0,
-    "park_ha": 1.8,
-    "piers": 0
-   },
-   "osm_counts": {
-    "food": 45,
-    "nightlife": 7,
-    "essentials": 28,
-    "sports": 2,
-    "culture": 0
    }
   },
   "setthabutbamphen": {
@@ -12094,7 +12021,7 @@
    "ratings": {
     "food": 4,
     "nightlife": 6,
-    "daily_essentials": 4,
+    "daily_essentials": 5,
     "gym_sports": 3,
     "vibe": 5,
     "green": 3,
@@ -12169,7 +12096,7 @@
     "daily_essentials": 3,
     "gym_sports": 4,
     "vibe": 5,
-    "green": 7,
+    "green": 8,
     "transport": 2,
     "crowd": 7,
     "rent": 9,
@@ -12399,7 +12326,7 @@
     "vibe": 7,
     "green": 4,
     "transport": 7,
-    "crowd": 4,
+    "crowd": 3,
     "rent": 9,
     "safety": 7
    },
@@ -12917,7 +12844,7 @@
     "daily_essentials": 6,
     "gym_sports": 7,
     "vibe": 6,
-    "green": 4,
+    "green": 5,
     "transport": 4,
     "crowd": 5,
     "rent": 8,
@@ -13289,7 +13216,7 @@
    },
    "ratings": {
     "food": 4,
-    "nightlife": 4,
+    "nightlife": 5,
     "daily_essentials": 4,
     "gym_sports": 7,
     "vibe": 6,
@@ -13511,7 +13438,7 @@
     "food": 5,
     "nightlife": 3,
     "daily_essentials": 3,
-    "gym_sports": 2,
+    "gym_sports": 3,
     "vibe": 6,
     "green": 7,
     "transport": 7,

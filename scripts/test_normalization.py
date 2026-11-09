@@ -49,18 +49,26 @@ def test_bangkok_historical_aggregate_golden():
 def test_bangkok_refresh_golden_changes_have_complete_review_evidence():
     old = json.loads((FIXTURES / 'bangkok-golden.json').read_text())['output']
     new = json.loads((FIXTURES / 'bangkok-refresh-2026-10-24-golden.json').read_text())['output']
-    changes = {}
+    changes, removed, added = {}, [], []
     def collect(before, after, path=()):
         if isinstance(before, dict) and isinstance(after, dict):
-            assert before.keys() == after.keys()
-            for key in before:
+            # Removed/added keys are allowed only when the review records them.
+            removed.extend('.'.join(path + (k,)) for k in before.keys() - after.keys())
+            added.extend('.'.join(path + (k,)) for k in after.keys() - before.keys())
+            for key in before.keys() & after.keys():
                 collect(before[key], after[key], path + (key,))
         elif before != after:
             changes['.'.join(path)] = (before, after)
     collect(old, new)
     review = json.loads((ROOT / 'research/bangkok/notes/2026-10-26-frozen-refresh-review.json').read_text())
-    assert {row['path']: (row['before'], row['after']) for row in review['golden_changes']} == changes
+    # Rows marked superseded recorded a delta that a later reviewed change
+    # (e.g. B-1 re-normalization) has since undone; they stay as history.
+    live = [row for row in review['golden_changes'] if not row.get('superseded_by')]
+    assert {row['path']: (row['before'], row['after']) for row in live} == changes
     assert all(row['acceptance'] for row in review['golden_changes'])
+    assert set(review.get('removed_keys', [])) == set(removed)
+    assert not added, f'unreviewed added keys: {added}'
+    assert review['removed_keys_review']['acceptance']
 
 
 @pytest.mark.parametrize('invert,expected', [(False, [1, 2, 4, 6, 7, 8, 10]), (True, [10, 8, 7, 6, 4, 2, 1])])

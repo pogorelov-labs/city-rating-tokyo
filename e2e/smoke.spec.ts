@@ -83,8 +83,8 @@ test.describe('smoke', () => {
 
     await page.getByRole('radio', { name: 'Stations' }).click();
     await expect(page).toHaveURL(/lv=station/);
-    await expect(page.locator('.leaflet-bkk-areas-pane path')).toHaveCount(133, { timeout: 10_000 });
-    await expect(page.getByRole('complementary').getByText('133 station areas', { exact: true })).toBeVisible();
+    await expect(page.locator('.leaflet-bkk-areas-pane path')).toHaveCount(132, { timeout: 10_000 });
+    await expect(page.getByRole('complementary').getByText('132 station areas', { exact: true })).toBeVisible();
 
     await page.getByRole('radio', { name: '200 m grid' }).click();
     await expect(page).toHaveURL(/lv=grid/);

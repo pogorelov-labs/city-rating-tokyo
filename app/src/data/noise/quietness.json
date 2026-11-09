@@ -35753,21 +35753,6 @@
         "expressway_distance_m": 1730.3
       }
     },
-    "sena-ruam": {
-      "status": "available",
-      "confidence": "estimate",
-      "calibration": "uncalibrated_transfer",
-      "data_date": "2026-10-15",
-      "model_version": "quietness-v1",
-      "day": 4.0,
-      "night": 4.5,
-      "anchors": [],
-      "proxies": {
-        "nightlife_800m": 11,
-        "arterial_distance_m": 3.6,
-        "expressway_distance_m": 1105.8
-      }
-    },
     "setthabutbamphen": {
       "status": "available",
       "confidence": "estimate",

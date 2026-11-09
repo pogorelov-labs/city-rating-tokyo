@@ -114,7 +114,7 @@ def test_real_export_completeness_and_publication_boundary(generated):
     bangkok = generated['district-institutions.json']
     assert len(tokyo['stations']) == 1493
     assert len(bangkok['districts']) == 50
-    assert len(bangkok['station_areas']) == 133
+    assert len(bangkok['station_areas']) == 132  # B-1: sena-ruam removed
     assert tokyo['stations']['hiroo'] == {'embassies_within_800m': 40, 'english_medicine_within_2km': 61}
     assert tokyo['_meta']['tokyo_medicine_records'] == 508
     assert bangkok['_meta']['district_join'] == {'outside': 0, 'boundary_assigned': 0, 'total_assigned': 79}

@@ -508,30 +508,6 @@
    "recheck_due": null,
    "superseded_by": null
   },
-  "st.sena-ruam": {
-   "preview": null,
-   "tier": "A",
-   "copy_eligible": false,
-   "as_of": null,
-   "chunk": "/data/bangkok/editorial/st.sena-ruam.json",
-   "review": {
-    "status": "approved",
-    "signatory": "none|agent",
-    "reviewer": "agent-review:DeepSeek Harness/deepseek-flash (independent pass; not a human signatory)",
-    "reviewed_at": "2026-11-08T13:00:00+03:00"
-   },
-   "stats": {
-    "sources": 14,
-    "body_read": 12,
-    "claims": 17
-   },
-   "disclosures": [
-    "disclosure.greenBuffer1km",
-    "disclosure.transportMechanism"
-   ],
-   "recheck_due": "2027-05-07",
-   "superseded_by": null
-  },
   "bang-phlat": {
    "preview": null,
    "tier": "B",

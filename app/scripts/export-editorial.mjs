@@ -199,9 +199,19 @@ export function loadBundles(batchesRoot) {
   return bundles;
 }
 
-export function buildIndex(bundles, supersededIds) {
+/** Entity keys the shipped app can actually render: station areas + districts. */
+export function loadLiveKeys(appDir) {
+  const areas = JSON.parse(readFileSync(join(appDir, 'src/data/bangkok/stations.json'), 'utf8')).areas;
+  const districts = JSON.parse(readFileSync(join(appDir, 'src/data/bangkok/districts.json'), 'utf8')).districts;
+  return new Set([...areas.map(a => `st.${a.id}`), ...districts.map(d => d.slug)]);
+}
+
+export function buildIndex(bundles, supersededIds, liveKeys) {
   const entities = {};
   for (const b of selectBundles(bundles)) {
+    // Entities the app no longer has (removed areas) never ship — the research
+    // bundle stays as the historical record, the served surface does not.
+    if (liveKeys && !liveKeys.has(b.entity.key)) continue;
     const rec = buildIndexEntity(b);
     if (supersededIds?.has(b.entity.key)) rec.superseded_by = rec.superseded_by ?? true;
     entities[b.entity.key] = rec;
@@ -209,11 +219,13 @@ export function buildIndex(bundles, supersededIds) {
   return { _meta: { schema_version: '1.1-p0', exporter: 'export-editorial.mjs P0' }, entities };
 }
 
-export function run({ researchDir, emit, outIndex, outChunks }) {
+export function run({ researchDir, emit, outIndex, outChunks, liveKeys }) {
   const bundles = loadBundles(researchDir);
   const selected = selectBundles(bundles);
-  const index = buildIndex(bundles);
+  const index = buildIndex(bundles, undefined, liveKeys);
   const lines = [`bundles loaded: ${bundles.length}; entities after precedence: ${selected.length}`];
+  const skipped = selected.filter(b => liveKeys && !liveKeys.has(b.entity.key));
+  if (skipped.length) lines.push(`outside app snapshot (skipped): ${skipped.map(b => b.entity.key).join(', ')}`);
   const eligible = Object.values(index.entities).filter(e => e.copy_eligible).length;
   const tierC = Object.values(index.entities).filter(e => e.tier === 'C').length;
   lines.push(`copy_eligible: ${eligible} (human sign-off required for the rest — E-5 key)`);
@@ -223,6 +235,7 @@ export function run({ researchDir, emit, outIndex, outChunks }) {
     writeFileSync(outIndex, JSON.stringify(index, null, 1));
     mkdirSync(outChunks, { recursive: true });
     for (const b of selected) {
+      if (liveKeys && !liveKeys.has(b.entity.key)) continue;
       const allowed = new Set(claimsForGuide(b.claims).map(c => c.id));
       writeFileSync(join(outChunks, `${b.entity.key}.json`),
                     JSON.stringify(buildChunk(b, allowed), null, 1));
@@ -248,6 +261,7 @@ if (isMain) {
     emit: process.argv.includes('--emit'),
     outIndex: arg('--out-index') ?? join(appDir, 'src/data/bangkok/editorial-index.json'),
     outChunks: arg('--out-chunks') ?? join(appDir, 'public/data/bangkok/editorial'),
+    liveKeys: loadLiveKeys(appDir),
   });
   console.log(lines.join('\n'));
 }
