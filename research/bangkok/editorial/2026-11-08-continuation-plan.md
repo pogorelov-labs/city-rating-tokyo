@@ -271,6 +271,14 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
 
 ## 15. Progress log
 
+- **2026-11-09 (A-1 packet addendum):** reviewer pre-flight packet written —
+  [`2026-11-09-a1-reviewer-packet.md`](2026-11-09-a1-reviewer-packet.md): re-anchor
+  notice (review current bundle files, not older printouts), the thong-lo-c19
+  stale `51/133` citation flagged with a one-token proposed correction
+  (decision routed through the CSV, no silent edits to approved content),
+  sena-ruam row → `skip` guidance, and explicit decision semantics
+  (approved|blocked|skip; unfilled rows fail validation).
+
 - **2026-11-09 (D-4/D-3 executed + production verified):** re-anchor.py
   --write across all six batches against the 132-area snapshot — 23 score
   drifts (±0.04–0.14), ~137 tie/size updates, districts layer clean,
