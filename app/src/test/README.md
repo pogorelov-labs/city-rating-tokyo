@@ -9,6 +9,14 @@ Run one environment with `npm run test -- --project components` or `--project no
 The added dev dependencies are pinned to releases supporting CI Node 20; newer
 jsdom and jest-dom majors/minors have raised their minimum Node version.
 
+`setup.ts` backs the jsdom window with a minimal in-memory `localStorage`
+when the real one is absent: Node ≥22 declares a global `localStorage` that is
+inert without `--localstorage-file`, and on new Node versions it shadows
+jsdom's storage inside Vitest (seen as `Cannot read properties of undefined
+(reading 'getItem')` in storage-touching suites). Production code reads
+`window.localStorage`, which the shim covers; tests should reference
+`window.localStorage` too, not the bare global.
+
 Component suites use the real city store and next-intl provider. Animation-frame
 callbacks are controlled independently from fake timers to reproduce throttled-tab
 races. Leaflet and grid downloads are outside these component contracts. jsdom

@@ -18,13 +18,13 @@ it('opts in locally without changing device motion or the shared URL, then follo
   expect(select).toHaveValue('system');
   expect(cameraMotion('step')).toMatchObject({ duration: 0, essential: false });
   fireEvent.change(select, { target: { value: 'smooth' } });
-  expect(localStorage.getItem(key)).toBe('smooth');
+  expect(window.localStorage.getItem(key)).toBe('smooth'); // node 26's broken global localStorage shadows jsdom's — go through window
   expect(prefersReducedMotion()).toBe(true);
   expect(bangkokCameraReduced()).toBe(false);
   expect(cameraMotion('step').essential).toBe(true);
   expect(window.location.href).toBe(url);
   act(() => {
-    localStorage.removeItem(key);
+    window.localStorage.removeItem(key);
     window.dispatchEvent(new StorageEvent('storage', { key }));
   });
   expect(select).toHaveValue('system');
