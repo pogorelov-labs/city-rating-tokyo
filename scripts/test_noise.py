@@ -83,7 +83,7 @@ def test_calibration_split_is_by_location_and_mae_is_real(rebuilt):
 def test_both_cities_have_estimates_but_bangkok_has_no_measured_values(rebuilt):
     output, report, _ = rebuilt
     assert len(output['tokyo']) == 1493
-    assert len(output['bangkok']) == 133
+    assert len(output['bangkok']) == 132  # B-1: sena-ruam removed
     assert report['bangkok']['mae_db'] is None
     for city in ['tokyo', 'bangkok']:
         for row in output[city].values():

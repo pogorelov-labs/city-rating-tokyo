@@ -29,7 +29,8 @@ def test_applied_values_match_frozen_observations_and_committed_fields():
                           for r in historic}
     tourism = load('data/tourism/proximity.json')['stations']['bangkok']
     michelin = load('data/michelin/proximity.json')['districts']
-    assert len(areas) == len(tourism) == 133
+    assert len(areas) == 132  # B-1: sena-ruam ghost area removed
+    assert len(tourism) == 133  # frozen source keeps the stale entry; the join ignores it
     assert len(michelin) == 9
     # Recreate the spatial builder's omission before composing. No zero fallback.
     for row in districts:
@@ -48,8 +49,8 @@ def test_applied_values_match_frozen_observations_and_committed_fields():
     for area_id, facts in by_id.items():
         assert {k: facts[k] for k in ('hotels_800m', 'attractions_800m')} == tourism[area_id]
         assert facts['tourist_badge'] is (facts['hotels_800m'] >= 50 or facts['attractions_800m'] >= 8)
-    assert sum(f['hotels_800m'] > 0 for f in by_id.values()) == 99
-    assert sum(f['attractions_800m'] > 0 for f in by_id.values()) == 66
+    assert sum(f['hotels_800m'] > 0 for f in by_id.values()) == 98  # sena-ruam (18 hotels) removed (B-1)
+    assert sum(f['attractions_800m'] > 0 for f in by_id.values()) == 65  # sena-ruam (2 attractions) removed (B-1)
     assert sum(f['tourist_badge'] for f in by_id.values()) == 19
     for area_id, hotels, attractions in [('nana', 197, 3), ('asok', 156, 4)]:
         assert {k: by_id[area_id][k] for k in AREA_FIELDS} == dict(hotels_800m=hotels, attractions_800m=attractions, tourist_badge=True)

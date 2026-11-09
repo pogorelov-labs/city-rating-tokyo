@@ -40,11 +40,25 @@ def line_tracks(routes: list[dict], rail_relations: dict[str, list[int]]) -> dic
         tracks[lid] = merged if merged.geom_type == "MultiLineString" else MultiLineString([merged])
     return tracks
 
+# B-1 (CRTKY-130 ghost-station audit, 2026-11-08): OSM carries the never-built
+# BTS Sukhumvit infill "Sena Ruam" (planned N6 between Phra Khanong and On Nut
+# corridor mapping) as an in-service railway=station stop on the Sukhumvit
+# route relation; the Prachachat 2026-11-05 council hearing confirms it was
+# never constructed. The app must not model unopened stations: excluded at
+# ingestion until a published operator source lists it as in service.
+# Receipts: research/bangkok/editorial (st.sena-ruam bundle; batch-3 findings).
+# The full 139-station operator audit continues under B-1 (pipeline branch).
+GHOST_STATIONS: frozenset[str] = frozenset({"sena ruam", "sena-ruam"})
+
+
 def build_rail(districts: list[dict], rail_relations: dict[str, list[int]]):
     """Stations (merged interchanges), per-line ordered stop lists, track paths."""
     routes = load("rail_routes")["elements"]
     stop_tags = {e["id"]: e.get("tags", {}) for e in load("rail_stops")["elements"]}
     cands = load_station_candidates()
+    # B-1: drop ghost stations (never opened per operator sources) before
+    # any matching can resurrect them
+    cands = [c for c in cands if c["norm"] not in GHOST_STATIONS]
     tracks = line_tracks(routes, rail_relations)
 
     stations: list[dict] = []
@@ -97,6 +111,8 @@ def build_rail(districts: list[dict], rail_relations: dict[str, list[int]]):
                 tags = stop_tags.get(m["ref"], {})
                 name = tags.get("name:en") or tags.get("name")
                 name_th = tags.get("name:th") or ""
+                if name and norm_name(name) in GHOST_STATIONS:
+                    continue  # B-1: never-built station (see GHOST_STATIONS receipt)""
                 cand = nearest_candidate(x, y, 350, norm_name(name) if name else None) or nearest_candidate(x, y, 350)
                 if not name:
                     if cand is None:

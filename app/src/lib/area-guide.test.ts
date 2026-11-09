@@ -24,7 +24,7 @@ describe('area guide data contracts', () => {
       ...getBangkokStationAreas().map(station => ({ city: 'bangkok' as const, kind: 'station' as const, slug: station.id })),
       ...getBangkokDistricts().map(district => ({ city: 'bangkok' as const, kind: 'district' as const, slug: district.slug })),
     ];
-    expect(cases).toHaveLength(1676);
+    expect(cases).toHaveLength(1675); // B-1: sena-ruam removed
     for (const item of cases) for (const locale of ['en', 'ja', 'ru'] as const) {
       const area = await buildAreaGuide(item.city, item.kind, item.slug, locale);
       expect(area, item.slug).not.toBeNull();

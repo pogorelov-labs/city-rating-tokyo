@@ -271,6 +271,30 @@ Always     → C-5/C-6 registry upkeep ∥ D-5 coverage battery ∥ WS-H guards
 
 ## 15. Progress log
 
+- **2026-11-09 (B-1 COMPLETED via deterministic replay):** the hand-surgical
+  removal left CI red — the pipeline's frozen-receipt web (unchanged_signatures,
+  signals_sha256, inputs_manifest_sha256, cross-city provenance, normalization
+  goldens, byte-replay fixtures) is exactly the machinery that forbids
+  hand-editing 133-area percentile state. Resolution: full deterministic replay
+  of the frozen 2026-10-26 inputs (90/90 manifest hashes verified; raw inputs
+  byte-identical to the worktree copies — the earlier "refreshed inputs" rating
+  shifts came from the worktree's refreshed overlay state, not raw/) with the
+  committed GHOST_STATIONS exclusion; build.py regenerated everything in 5.3s.
+  Audit vs production: districts layer ZERO rating changes; 28 area rating
+  fields shifted ±1 (percentile re-normalization + catchment absorption by
+  ari/saphan-khwai) — every change review-recorded (27 B-1 rows appended to the
+  frozen-refresh review, 4 October rows superseded, 10 sena-ruam keys recorded
+  as removed_keys; the evidence test now validates removals + supersessions).
+  Re-pinned: refresh baseline signatures/checksums, refresh-inputs manifest,
+  bangkok-build signals fixture, normalization refresh golden (132),
+  institutions/noise exports (provenance stamps), provenance-only fixture.
+  Surface: st.sena-ruam chunk + index entry dropped; exporter gained a
+  loadLiveKeys guard (bundles for absent areas never ship). Suites: bangkok
+  150, root 664, app 568/569 (1 pre-existing env-only failure, green in CI).
+  PR #182 merged-when-green after this entry; then D-4 re-anchor + D-3 tail +
+  exporter re-run against the 132-area snapshot.
+
+
 - **2026-11-08 (AG lane executed, commits 28805ad…d40c83c + this one):**
   B-10 canonical relabel (23 claims; 399/228/40; 71 batch-4 limitations
   repairs caught by the new audit rule; deep-review 27 superseded) ·

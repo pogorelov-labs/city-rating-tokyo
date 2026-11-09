@@ -8,8 +8,8 @@
     "vibe": 0.93
   },
   "district_count": 50,
-  "station_count": 179,
-  "stations_in_bangkok": 139,
+  "station_count": 178,
+  "stations_in_bangkok": 138,
   "medians": {
     "transport": 6,
     "rent": 9,
@@ -27,7 +27,7 @@
     "p50": 6.2,
     "p95": 8.2
   },
-  "station_area_count": 133,
+  "station_area_count": 132,
   "station_medians": {
     "transport": 6,
     "rent": 9,

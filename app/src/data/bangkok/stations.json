@@ -200,7 +200,7 @@
     "green": 9,
     "gym_sports": 8,
     "vibe": 8,
-    "nightlife": 8,
+    "nightlife": 9,
     "crowd": 3
    },
    "confidence": {
@@ -286,28 +286,28 @@
    },
    "min_transit": 9,
    "resident_minutes": {
-    "siam": 19,
-    "asok": 25,
-    "silom": 27,
-    "rama9": 22,
+    "siam": 20,
+    "asok": 26,
+    "silom": 28,
+    "rama9": 23,
     "mochit": 17
    },
    "neighbors": [
     "sanam-pao",
-    "sena-ruam"
+    "saphan-khwai"
    ],
    "facts": {
-    "area_km2": 1.2,
-    "food": 375,
-    "cafes": 67,
-    "nightlife": 28,
-    "convenience": 11,
+    "area_km2": 1.64,
+    "food": 480,
+    "cafes": 85,
+    "nightlife": 43,
+    "convenience": 17,
     "markets": 1,
-    "essentials": 93,
-    "sports": 16,
-    "culture": 8,
+    "essentials": 132,
+    "sports": 18,
+    "culture": 12,
     "temples": 1,
-    "park_ha": 5.1,
+    "park_ha": 6.4,
     "piers": 0
    },
    "image": {
@@ -353,7 +353,7 @@
     }
    ],
    "ratings": {
-    "transport": 8,
+    "transport": 9,
     "rent": 4,
     "daily_essentials": 10,
     "safety": 6,
@@ -1178,7 +1178,7 @@
    "ratings": {
     "transport": 6,
     "rent": 9,
-    "daily_essentials": 7,
+    "daily_essentials": 8,
     "safety": 6,
     "food": 7,
     "green": 4,
@@ -1495,7 +1495,7 @@
     "rent": 8,
     "daily_essentials": 4,
     "safety": 7,
-    "food": 4,
+    "food": 5,
     "green": 9,
     "gym_sports": 8,
     "vibe": 7,
@@ -2594,7 +2594,7 @@
     }
    ],
    "ratings": {
-    "transport": 7,
+    "transport": 8,
     "rent": 9,
     "daily_essentials": 3,
     "safety": 7,
@@ -5504,7 +5504,7 @@
     "green": 6,
     "gym_sports": 3,
     "vibe": 2,
-    "nightlife": 2,
+    "nightlife": 3,
     "crowd": 7
    },
    "confidence": {
@@ -5655,16 +5655,16 @@
     }
    ],
    "ratings": {
-    "transport": 4,
+    "transport": 5,
     "rent": 8,
     "daily_essentials": 8,
     "safety": 5,
-    "food": 7,
+    "food": 8,
     "green": 4,
     "gym_sports": 8,
     "vibe": 7,
     "nightlife": 8,
-    "crowd": 2
+    "crowd": 3
    },
    "confidence": {
     "food": "strong",
@@ -6138,7 +6138,7 @@
     "green": 9,
     "gym_sports": 6,
     "vibe": 8,
-    "nightlife": 7,
+    "nightlife": 8,
     "crowd": 2
    },
    "confidence": {
@@ -7095,7 +7095,7 @@
    "ratings": {
     "transport": 9,
     "rent": 8,
-    "daily_essentials": 2,
+    "daily_essentials": 3,
     "safety": 7,
     "food": 5,
     "green": 8,
@@ -7190,8 +7190,8 @@
    "min_transit": 10,
    "resident_minutes": {
     "siam": 29,
-    "asok": 34,
-    "silom": 36,
+    "asok": 35,
+    "silom": 37,
     "rama9": 30,
     "mochit": 14
    },
@@ -7570,14 +7570,14 @@
     }
    ],
    "ratings": {
-    "transport": 2,
+    "transport": 3,
     "rent": 9,
     "daily_essentials": 3,
     "safety": 7,
     "food": 3,
     "green": 7,
     "gym_sports": 3,
-    "vibe": 2,
+    "vibe": 3,
     "nightlife": 4,
     "crowd": 7
    },
@@ -8818,7 +8818,7 @@
     "safety": 7,
     "food": 6,
     "green": 1,
-    "gym_sports": 4,
+    "gym_sports": 5,
     "vibe": 5,
     "nightlife": 6,
     "crowd": 5
@@ -9944,7 +9944,7 @@
     "gym_sports": 6,
     "vibe": 4,
     "nightlife": 4,
-    "crowd": 7
+    "crowd": 6
    },
    "confidence": {
     "food": "moderate",
@@ -10419,7 +10419,7 @@
     "food": 7,
     "green": 5,
     "gym_sports": 6,
-    "vibe": 4,
+    "vibe": 5,
     "nightlife": 2,
     "crowd": 6
    },
@@ -10722,7 +10722,7 @@
     "rent": 9,
     "daily_essentials": 3,
     "safety": 7,
-    "food": 2,
+    "food": 3,
     "green": 4,
     "gym_sports": 2,
     "vibe": 3,
@@ -11863,11 +11863,11 @@
     "daily_essentials": 6,
     "safety": 7,
     "food": 6,
-    "green": 2,
+    "green": 3,
     "gym_sports": 5,
     "vibe": 6,
     "nightlife": 5,
-    "crowd": 6
+    "crowd": 5
    },
    "confidence": {
     "food": "moderate",
@@ -15904,7 +15904,7 @@
     "food": 7,
     "green": 8,
     "gym_sports": 8,
-    "vibe": 7,
+    "vibe": 8,
     "nightlife": 7,
     "crowd": 5
    },
@@ -16045,30 +16045,30 @@
    "districts": [
     {
      "slug": "phaya-thai",
-     "share": 0.92
+     "share": 0.938
     },
     {
      "slug": "chatuchak",
-     "share": 0.08
+     "share": 0.062
     }
    ],
    "ratings": {
-    "transport": 9,
+    "transport": 8,
     "rent": 7,
     "daily_essentials": 8,
     "safety": 8,
     "food": 8,
     "green": 6,
-    "gym_sports": 7,
+    "gym_sports": 8,
     "vibe": 8,
     "nightlife": 8,
     "crowd": 3
    },
    "confidence": {
-    "food": "moderate",
-    "nightlife": "moderate",
+    "food": "strong",
+    "nightlife": "strong",
     "daily_essentials": "strong",
-    "gym_sports": "estimate",
+    "gym_sports": "moderate",
     "vibe": "moderate",
     "transport": "moderate",
     "rent": "editorial",
@@ -16078,18 +16078,19 @@
    },
    "sources": {
     "food": [
-     "overture"
+     "overture",
+     "osm"
     ],
     "nightlife": [
-     "overture"
+     "overture",
+     "osm"
     ],
     "daily_essentials": [
      "overture",
      "osm"
     ],
     "gym_sports": [
-     "overture",
-     "osm"
+     "overture"
     ],
     "vibe": [
      "overture"
@@ -16114,7 +16115,7 @@
    "data_date": "2026-10",
    "rent": {
     "one_bed": 18000,
-    "two_bed": 36500,
+    "two_bed": 37000,
     "source": "listing_research",
     "updated": "2026-09",
     "as_of": "2026-09",
@@ -16134,7 +16135,7 @@
     "source_audit": "research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md",
     "editorial_baseline": {
      "rent_1br": 18000,
-     "rent_2br": 36500
+     "rent_2br": 37000
     }
    },
    "transit_minutes": {
@@ -16146,28 +16147,28 @@
    },
    "min_transit": 6,
    "resident_minutes": {
-    "siam": 22,
-    "asok": 28,
-    "silom": 30,
+    "siam": 23,
+    "asok": 29,
+    "silom": 31,
     "rama9": 26,
-    "mochit": 11
+    "mochit": 12
    },
    "neighbors": [
-    "mo-chit",
-    "sena-ruam"
+    "ari",
+    "mo-chit"
    ],
    "facts": {
-    "area_km2": 1.04,
-    "food": 142,
-    "cafes": 25,
-    "nightlife": 15,
-    "convenience": 12,
+    "area_km2": 1.35,
+    "food": 323,
+    "cafes": 56,
+    "nightlife": 47,
+    "convenience": 15,
     "markets": 1,
-    "essentials": 87,
-    "sports": 3,
-    "culture": 9,
+    "essentials": 135,
+    "sports": 11,
+    "culture": 16,
     "temples": 8,
-    "park_ha": 0.7,
+    "park_ha": 1.3,
     "piers": 0
    },
    "image": {
@@ -16664,151 +16665,6 @@
     "th": "https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%B4%E0%B8%84%E0%B8%A1"
    },
    "hotels_800m": 3,
-   "attractions_800m": 2,
-   "tourist_badge": false
-  },
-  {
-   "id": "sena-ruam",
-   "name_en": "Sena Ruam",
-   "name_th": "เสนาร่วม",
-   "name_jp": "セーナールワム",
-   "lat": 13.78594,
-   "lng": 100.54686,
-   "station_ids": [
-    "sena-ruam"
-   ],
-   "line_ids": [
-    "bts_sukhumvit"
-   ],
-   "district": "phaya-thai",
-   "districts": [
-    {
-     "slug": "phaya-thai",
-     "share": 1.0
-    }
-   ],
-   "ratings": {
-    "transport": 8,
-    "rent": 7,
-    "daily_essentials": 8,
-    "safety": 8,
-    "food": 8,
-    "green": 8,
-    "gym_sports": 8,
-    "vibe": 8,
-    "nightlife": 9,
-    "crowd": 3
-   },
-   "confidence": {
-    "food": "strong",
-    "nightlife": "strong",
-    "daily_essentials": "strong",
-    "gym_sports": "moderate",
-    "vibe": "moderate",
-    "transport": "moderate",
-    "rent": "editorial",
-    "safety": "editorial",
-    "green": "moderate",
-    "crowd": "moderate"
-   },
-   "sources": {
-    "food": [
-     "overture",
-     "osm"
-    ],
-    "nightlife": [
-     "overture",
-     "osm"
-    ],
-    "daily_essentials": [
-     "overture",
-     "osm"
-    ],
-    "gym_sports": [
-     "overture"
-    ],
-    "vibe": [
-     "overture"
-    ],
-    "transport": [
-     "osm_rail",
-     "transit_model"
-    ],
-    "rent": [
-     "listing_research"
-    ],
-    "safety": [
-     "ai_research"
-    ],
-    "green": [
-     "osm"
-    ],
-    "crowd": [
-     "overture"
-    ]
-   },
-   "data_date": "2026-10",
-   "rent": {
-    "one_bed": 18000,
-    "two_bed": 37000,
-    "source": "listing_research",
-    "updated": "2026-09",
-    "as_of": "2026-09",
-    "confidence": "editorial",
-    "metric": "typical_asking",
-    "provenance": "district_blend",
-    "definition": "Typical asking rent for a ~30-35 m² 1-bedroom condo (rent_1br) and a ~60-70 m² 2-bedroom condo (rent_2br) in the district's main residential corridors. Not a statistical median.",
-    "method": "Resident-weighted district rent blend, rounded to 500 THB. Researcher estimate calibrated by hand against the public sources listed below. The 2026-10-25 source audit does not establish statistical district medians for the reference size bands; it preserves every district value and documents separately labeled station-level proxies.",
-    "sample_size": null,
-    "sources": [],
-    "limitations": [
-     "All 50 district values remain editorial estimates; no public source in the audit isolates both reference size/tenure cohorts by khet.",
-     "Published station-bedroom medians cover all floor areas and cannot silently replace fixed-size district estimates.",
-     "Grid rent remains district-level; non-overridden station areas retain the resident-weighted district blend."
-    ],
-    "audited_at": "2026-10-25",
-    "source_audit": "research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md",
-    "editorial_baseline": {
-     "rent_1br": 18000,
-     "rent_2br": 37000
-    }
-   },
-   "transit_minutes": {
-    "siam": 13,
-    "asok": 19,
-    "silom": 21,
-    "rama9": 24,
-    "mochit": 7
-   },
-   "min_transit": 7,
-   "resident_minutes": {
-    "siam": 21,
-    "asok": 27,
-    "silom": 29,
-    "rama9": 24,
-    "mochit": 14
-   },
-   "neighbors": [
-    "ari",
-    "saphan-khwai"
-   ],
-   "facts": {
-    "area_km2": 1.26,
-    "food": 334,
-    "cafes": 57,
-    "nightlife": 49,
-    "convenience": 12,
-    "markets": 0,
-    "essentials": 100,
-    "sports": 13,
-    "culture": 11,
-    "temples": 0,
-    "park_ha": 1.8,
-    "piers": 0
-   },
-   "image": null,
-   "wikipedia": {},
-   "hotels_800m": 18,
    "attractions_800m": 2,
    "tourist_badge": false
   },
@@ -17774,7 +17630,7 @@
    "ratings": {
     "transport": 5,
     "rent": 9,
-    "daily_essentials": 4,
+    "daily_essentials": 5,
     "safety": 7,
     "food": 4,
     "green": 3,
@@ -17935,7 +17791,7 @@
     "daily_essentials": 3,
     "safety": 7,
     "food": 4,
-    "green": 7,
+    "green": 8,
     "gym_sports": 4,
     "vibe": 5,
     "nightlife": 6,
@@ -18413,7 +18269,7 @@
     "gym_sports": 5,
     "vibe": 7,
     "nightlife": 6,
-    "crowd": 4
+    "crowd": 3
    },
    "confidence": {
     "food": "moderate",
@@ -19533,7 +19389,7 @@
     "daily_essentials": 6,
     "safety": 7,
     "food": 7,
-    "green": 4,
+    "green": 5,
     "gym_sports": 7,
     "vibe": 6,
     "nightlife": 6,
@@ -20327,7 +20183,7 @@
     "green": 7,
     "gym_sports": 7,
     "vibe": 6,
-    "nightlife": 4,
+    "nightlife": 5,
     "crowd": 7
    },
    "confidence": {
@@ -20801,7 +20657,7 @@
     "safety": 7,
     "food": 5,
     "green": 7,
-    "gym_sports": 2,
+    "gym_sports": 3,
     "vibe": 6,
     "nightlife": 3,
     "crowd": 8

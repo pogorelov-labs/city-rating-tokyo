@@ -6195,7 +6195,7 @@
     "source_audit": "research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md"
    },
    "transit_minutes": {
-    "siam": 21,
+    "siam": 22,
     "asok": 27,
     "silom": 29,
     "rama9": 24,
@@ -6206,8 +6206,7 @@
     "ari",
     "kamphaeng-phet",
     "sanam-pao",
-    "saphan-khwai",
-    "sena-ruam"
+    "saphan-khwai"
    ],
    "nearby_station_ids": [
     "bang-sue",

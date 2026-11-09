@@ -147,7 +147,7 @@ def test_editorial_covers_every_district():
 
 def test_rent_override_provenance_and_area_join():
     validate_overrides(RENT_OVERRIDES, {a["id"] for a in AREAS})
-    assert len(AREAS) == 133
+    assert len(AREAS) == 132  # B-1: sena-ruam ghost area removed
     assert len(RENT_OVERRIDES["areas"]) == META["rent_audit"]["station_override_count"] == 10
     assert all(e["confidence"] == "estimate" for e in RENT_OVERRIDES["areas"].values())
     assert not {"ari", "siam", "surasak", "saint-louis"} & set(RENT_OVERRIDES["areas"])

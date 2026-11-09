@@ -46,8 +46,8 @@
    "data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
    "app/src/data/stations.json": "3d6e79839efb87a1d3cb6a5770ae91e912745675b69996704bb1dc2bea648973",
    "app/src/data/bangkok/geometry.json": "1cfd9ccb9afbe662b7ba9cd36a729778b9cac2a14f70364664f576be840adb43",
-   "app/src/data/bangkok/districts.json": "2df7cb309aea13820c6c0edefbd4e50ecc1fa5d0ce3b0587e72466abb71727b3",
-   "app/src/data/bangkok/stations.json": "3647b260b699aa5511d4d8da3dfecb71d03790ebf13d129fde0462bba744504f"
+   "app/src/data/bangkok/districts.json": "99900e9e4227b356f04a20d1ec91009c8d0f198ea427a6bcdfdc6f19c0cca1af",
+   "app/src/data/bangkok/stations.json": "3007461f423e6febd42d77cb088d5be92d6ee716c9e41b93867764296254e2fa"
   },
   "district_join": {
    "outside": 0,
@@ -671,10 +671,6 @@
    "english_medicine_within_2km": null
   },
   "sena-nikhom": {
-   "embassies_within_800m": 0,
-   "english_medicine_within_2km": null
-  },
-  "sena-ruam": {
    "embassies_within_800m": 0,
    "english_medicine_within_2km": null
   },
