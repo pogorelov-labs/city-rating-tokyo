@@ -9,7 +9,7 @@
 
 The Next.js app serves Greater Tokyo and Bangkok in EN/JA/RU from committed
 build-time data. Tokyo has 1,493 station slugs: 251 researched entries and 1,242
-computed entries. Bangkok has 50 districts, 133 station areas, 179 rail stations
+computed entries. Bangkok has 50 districts, 132 station areas, 178 rail stations
 on 10 lines and 39,149 grid cells at 200 m. Coverage is not uniform evidence
 quality; see [data readiness](#data-readiness--coverage-honesty-maintainers).
 Deployment details and operational access are maintained outside this public repository.

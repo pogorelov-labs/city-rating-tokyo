@@ -12,6 +12,11 @@ evidence in research notes or the PR body and link it.
 
 ## Unreleased
 
+- Bangkok's station-area level no longer includes **Sena Ruam**: the mapped
+  station was never built, so its catchment was removed and neighbouring
+  areas re-checked. There are now **132 station areas from 178 rail stations**;
+  district scores are unchanged and station-area rankings moved by at most one
+  position.
 - Both Bangkok maps count rapid zoom-button presses and stop under a new
   contact without selecting an area. The 3D map follows the final direction
   of a flick, including a parallel two-finger pan. Tap again at the same spot

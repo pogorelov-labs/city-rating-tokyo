@@ -1,13 +1,13 @@
 # City Rating — Tokyo + Bangkok
 
-Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU**. Explore **1,493 Tokyo train stations** or Bangkok's **50 districts, 133 station areas and 200 m grid**. Adjust weights across **10 categories**, filter by commute and budget, and open localized guides with comparison plots, commute bars, area maps and expandable source information.
+Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU**. Explore **1,493 Tokyo train stations** or Bangkok's **50 districts, 132 station areas and 200 m grid**. Adjust weights across **10 categories**, filter by commute and budget, and open localized guides with comparison plots, commute bars, area maps and expandable source information.
 
 **Live:** [city-rating.pogorelov.dev](https://city-rating.pogorelov.dev/?ref=github)  
 **Repo / issues:** [github.com/pogorelov-labs/city-rating-tokyo](https://github.com/pogorelov-labs/city-rating-tokyo)
 
 [Latest published release](https://github.com/pogorelov-labs/city-rating-tokyo/releases/latest) · [Bangkok in 3D: v0.3.0 notes](docs/releases/v0.3.0.md) · [Changelog](CHANGELOG.md)
 
-**Bangkok (since Sept 2026):** all **50 districts** (khet), **133 station areas** and **39,149 grid cells** at **200 m**, with **179 rail stations on 10 lines** — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
+**Bangkok (since Sept 2026):** all **50 districts** (khet), **132 station areas** and **39,149 grid cells** at **200 m**, with **178 rail stations on 10 lines** — switch cities from the header; your weights carry over. See [Bangkok](#bangkok-district-layer) below.
 
 ## What it does
 
@@ -17,7 +17,7 @@ Interactive neighborhood ratings for **Greater Tokyo and Bangkok** in **EN/JA/RU
 
 ## Bangkok (district layer)
 
-- **Levels:** 50 districts (polygons), 133 nearest-station areas and a 200 m grid — a quarter of Bangkok's districts have no rail inside.
+- **Levels:** 50 districts (polygons), 132 nearest-station areas and a 200 m grid — a quarter of Bangkok's districts have no rail inside.
 - **Map:** tilted buildings, muted parks/water, distinct selection/comparison, and a standard-map fallback. Scores and shared links work across both renderers; see the [map guide](docs/BANGKOK_MAP.md).
 - **Data:** OpenStreetMap + [Overture Maps Places](https://docs.overturemaps.org/guides/places/) (two independent POI sources, r ≈ 0.9 agreement), Wikidata (names, population), a door-to-door commute model to five hubs, Wikimedia Commons photos.
 - **Rent provenance:** 10 central station areas use DooAsset's published condominium asking-rent medians by bedroom, across all floor areas, at **estimate** confidence. These are single-provider proxies with source dates/sample sizes, not fixed-size market rents. All district and grid rents remain **editorial**; other station areas use district blends. ComparePanel distinguishes these provenances. See the [central rent audit](research/bangkok/notes/2026-10-25-central-rent-audit-crtky141.md).

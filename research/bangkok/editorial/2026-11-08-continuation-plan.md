@@ -1,4 +1,21 @@
-# Continuation plan & detailed backlog — Bangkok editorial research (v2.4, 2026-11-08)
+# Continuation plan & detailed backlog — Bangkok editorial research (v2.5, 2026-11-09)
+
+**v2.5 — app and research are one snapshot again. B-1 executed via deterministic
+pipeline replay (PR #182, merged, deployed, production-verified: 132 areas / 178
+stations, new grid bin `grid-9f58a60ae7ca`, districts layer unchanged, 28 area
+rating fields re-normalized ±1 and review-recorded). D-4/D-3 re-anchor of all
+192 bundles to the 132-area snapshot (PR #183; re-anchor `--write` latent bug
+fixed — it previously wrote only tie-branch updates). A-1 reviewer packet
+addendum on main (PR #185): re-anchor notice, thong-lo-c19 `51/133`→`51/132`
+flag routed through the CSV, sena-ruam row → `skip`. Post-B-1 snapshot identity:
+`app/src/data/bangkok/stations.json` sha256 `3007461f423e…`; the bundles'
+`app_snapshot_id: bkk-d6499618507e7561` remains the historical 2026-11-05 seed
+provenance, not the current-snapshot identity. Open work: the human gates only —
+A-1 named reviewer + filled CSV (packet ready), A-5/A-6 human halves, NocoDB
+token rotation (exposure is active per build), Coolify scheduled-cleanup
+toggle, B-1 139-station operator-audit ticket. Optional agent lanes (not
+started): operator-audit dispatch, localStorage test fix, one-shot
+replay-audit/re-pin tool.**
 
 **v2.4 — A-8 executed and integrated: all 24 blocked bundles cleared (F1: 72 editorial rebuilds from raw · F2: 49 limitation joins · F4: 95 profile-level strips · F3: 17 body-read upgrades + 1 replacement source + 4 removals with substance preserved · F5/F6/F7/F10/F12 fixed); 46/46 researched bundles `approved` (agent-review provenance); main report's Result/table/addendum updated; ledger [`2026-11-08-a8-rework-log.jsonl`](2026-11-08-a8-rework-log.jsonl). B-13 caveat resolved (c06→c02/c04 link removed per F7); B-13/B-9/G6 rows refreshed; A-7 covered by the review; F8 findings-files remain owed (A-9). **The only open A-gate is the human signature (DEC-2) over the 46 approved bundles.**
 
@@ -26,7 +43,7 @@ workstreams so nothing lives in an appendix. Review history:
   [`2026-11-08-independent-review.md`](2026-11-08-independent-review.md).
   All 24 blocks were cleared by the A-8 rework the same day (46/46 `approved`,
   agent-review provenance).
-- All 5 batches pass `kit/validate.py` — **genuinely as of 2026-11-08**: the
+- All 6 batches pass `kit/validate.py` — **genuinely as of 2026-11-08**: the
   schema half of the validator had been silently discarding errors
   ([`2026-11-08-gate-verification.md`](2026-11-08-gate-verification.md));
   after the fix + a logged contract-repair pass, ALL OK ×5 (schema +
@@ -37,9 +54,13 @@ workstreams so nothing lives in an appendix. Review history:
   40 conflicted as researched; **399 / 228 / 40 after the executed B-10
   canonical relabel (2026-11-08; deterministic rule set, 23 relabels —
   [`2026-11-08-canonical-relabel.md`](2026-11-08-canonical-relabel.md))**.
-- Snapshot `bkk-d6499618507e7561` throughout; **no live app data, scoring,
-  filters, geometry, translations, image registries or application code were
-  touched** (git-verified per commit).
+- App snapshot: seeded from `bkk-d6499618507e7561` (2026-11-05). The standing
+  boundary — research never modifies app data, scoring, geometry, translations,
+  image registries or application code — holds, with **one authorized exception
+  executed through the app-data lane**: the B-1 ghost-station removal (PR #182,
+  deterministic replay of the frozen inputs, CI-gated and production-verified).
+  The app is now the 132-area snapshot (stations.json `3007461f423e…`, deployed
+  2026-11-09) and D-4 re-anchored every bundle's selection_context to it.
 - Branch `research/editorial-batches-1-2` — **pushed to origin + PR opened
   2026-11-08 (DEC-1 approved and executed)**.
 

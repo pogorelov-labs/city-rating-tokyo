@@ -4,7 +4,7 @@ A short guide for humans and AI agents working on this codebase. Read this befor
 
 ## Architecture in one paragraph
 
-City Rating covers **1,493 Greater Tokyo stations** and Bangkok's **50 districts, 133 station areas and 39,149 grid cells** at **200 m**, with **179 rail stations / 10 lines**. Both cities share **10 rating categories** and **EN/JA/RU**. The Next.js frontend (`app/`) renders from committed JSON and `demo-ratings.ts`. Tokyo's Python pipeline (`scripts/`) reads/writes the configured datastore; Bangkok has a separate acquisition/offline-build pipeline (`scripts/bangkok/`). The MCP service (`mcp/`) currently exposes Tokyo through a datamart and semantic search. See [fresh-clone setup and prerequisites](README.md#getting-started). Production deployment is automated from `main`; deployment details are maintained outside this public repository.
+City Rating covers **1,493 Greater Tokyo stations** and Bangkok's **50 districts, 132 station areas and 39,149 grid cells** at **200 m**, with **178 rail stations / 10 lines**. Both cities share **10 rating categories** and **EN/JA/RU**. The Next.js frontend (`app/`) renders from committed JSON and `demo-ratings.ts`. Tokyo's Python pipeline (`scripts/`) reads/writes the configured datastore; Bangkok has a separate acquisition/offline-build pipeline (`scripts/bangkok/`). The MCP service (`mcp/`) currently exposes Tokyo through a datamart and semantic search. See [fresh-clone setup and prerequisites](README.md#getting-started). Production deployment is automated from `main`; deployment details are maintained outside this public repository.
 
 ## The three scoring copies (and the schema package)
 

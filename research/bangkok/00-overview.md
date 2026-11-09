@@ -6,7 +6,7 @@ detail**, switchable on the map (`?lv=…`):
 | Level | Unit | Count | Rated against |
 |---|---|---|---|
 | Districts (default) | **khet**, the administrative district | 50 | the other 49 districts |
-| Stations (`lv=station`) | the walkable area of a rail station: land ≤ 800 m from it and nearer to it than to any other station; interchanges of different lines ≤ 450 m apart (Asok + Sukhumvit, Sala Daeng + Si Lom, Mo Chit + Chatuchak Park, Ha Yaek Lat Phrao + Phahon Yothin, Phetchaburi + Makkasan, Krung Thep Aphiwat + Bang Sue) are one area | 133 (from 139 stations inside Bangkok) | the other station areas |
+| Stations (`lv=station`) | the walkable area of a rail station: land ≤ 800 m from it and nearer to it than to any other station; interchanges of different lines ≤ 450 m apart (Asok + Sukhumvit, Sala Daeng + Si Lom, Mo Chit + Chatuchak Park, Ha Yaek Lat Phrao + Phahon Yothin, Phetchaburi + Makkasan, Krung Thep Aphiwat + Bang Sue) are one area | 132 (from 138 stations inside Bangkok; the never-built sena-ruam ghost station was removed 2026-11-09) | the other station areas |
 | 200 m grid (`lv=grid`) | a 200 × 200 m cell | 39,149 | where residents live (resident-weighted percentile) |
 
 Districts are the unit residents and listings use, and a quarter of them have
@@ -42,6 +42,13 @@ planes are unchanged. See the [completed remediation](../../docs/DATA_REFRESH_RE
 and [committed evidence note](notes/2026-10-26-frozen-refresh.md). The extract-specific
 attribution/geometry review is complete with documented limits; source changes
 do not establish real-world improvement or advance retained source epochs.
+
+**2026-11-09 (B-1):** the never-built sena-ruam ghost station was removed via a
+deterministic replay of the same frozen inputs; the live state is **50 districts,
+132 station areas (from 138 stations), 178 rail stations, 39,149 cells**, grid
+binary `grid-9f58a60ae7ca.bin` (143,892 bytes). The 2026-10-27 counts above are
+historical. The 133-entry tourism source still carries sena-ruam as a stale row;
+the enrichment join ignores it by design.
 
 ```
 uv run scripts/bangkok/fetch.py      # network, cached in data/bangkok/raw/ (gitignored, ~50 MB)
