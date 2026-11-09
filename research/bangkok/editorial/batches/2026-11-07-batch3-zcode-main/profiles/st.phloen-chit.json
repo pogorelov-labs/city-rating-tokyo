@@ -16,8 +16,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.78,
-  "cohort_rank": 6,
-  "cohort_size": 133,
+  "cohort_rank": 7,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
   "popularity_source_ids": [],
@@ -1670,7 +1670,8 @@
    "open issue: {'id': 'OI-9', 'issue': 'Access failures encountered.', 'notes': 'centralembassy.com/en/about-us HTTP 404; timeout.com Open House page HTTP 404; Reddit/TripAdvisor 403 (policy); Overpass blocked (policy); Bangkok Post paywalled (One Bangkok visitor article not read; figure sourced to Nation Thailand body-read instead).'}",
    "open issue: {'id': 'OI-10', 'issue': 'App facts left unverified.', 'notes': '351 food, 53 cafes, 33 nightlife venues, 2 piers, 10.7 ha park area, 1.07 km2 unit area — no accessible independent source could confirm any count; Overpass blocked. The 1.07 km2 unit vs named-green ~2.2-2.4 ha (~20-22% if all mapped green were Nai Lert, which it cannot be at 10.7 ha) — decomposition pending.'}",
    "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 legacy AI-summary source; 5 snippet-only sources. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 legacy AI-summary source; 5 snippet-only sources. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

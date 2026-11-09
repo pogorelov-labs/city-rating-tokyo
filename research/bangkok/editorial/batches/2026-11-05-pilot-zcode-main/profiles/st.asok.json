@@ -15,9 +15,9 @@
  },
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
-  "model_score_default": 7.68,
-  "cohort_rank": 11,
-  "cohort_size": 133,
+  "model_score_default": 7.86,
+  "cohort_rank": 4,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Each bundle logs its independent publisher families; search-hit totals, SEO duplication and venue stars are explicitly not treated as popularity measurements.",
   "popularity_source_ids": [],
@@ -1340,7 +1340,8 @@
    "open issue: Find signed-rent or transaction data for the catchment to complement asking-rent medians (app n=30/18).",
    "open issue: Source evidence for safety-related perception (app safety=6) and gym/sports facilities (app gym_sports=10) — none collected this session.",
    "open issue: Resident-perspective sources: Reddit threads on living in Asoke (noise, why live there) could not be fetched (HTTP 403); retry via a logged-in or alternative route.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

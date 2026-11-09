@@ -17,7 +17,7 @@
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 6.46,
   "cohort_rank": 51,
-  "cohort_size": 133,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Each bundle logs its independent publisher families; search-hit totals, SEO duplication and venue stars are explicitly not treated as popularity measurements.",
   "popularity_source_ids": [],
@@ -1514,7 +1514,8 @@
    "open issue: The 'Phetchaburi-Thong Lo Road' flooding item from search results could not be tied to Bangkok's Soi Thong Lo and was discarded; soi-specific flood severity remains thinly documented (one publisher explicitly declines to quantify drainage).",
    "open issue: No catchment-level Japanese-population figure exists in sources read; district (Watthana ~15,000 registered foreigners, 2023) and city (~59,744 Japanese citizens, 2021) numbers should not be attributed to the 800 m area.",
    "open issue: Samitivej Hospital distance conflicting between sources ('about half a kilometre' vs address-based estimate ~1 km from the station); hospital-access framing should defer to the app's POI layer.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 residual: 3 snippet corroboration-only sources; no sole reliance. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 residual: 3 snippet corroboration-only sources; no sole reliance. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

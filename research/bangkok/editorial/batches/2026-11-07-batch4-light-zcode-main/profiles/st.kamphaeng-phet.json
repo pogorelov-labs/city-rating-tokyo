@@ -11,9 +11,9 @@
  },
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
-  "model_score_default": 7.62,
-  "cohort_rank": 13,
-  "cohort_size": 133,
+  "model_score_default": 7.7,
+  "cohort_rank": 10,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
   "popularity_source_ids": [],
@@ -857,7 +857,8 @@
    "open issue: Identify what the app's 0.1 ha mapped park parcel is (no named OSM park inside the band).",
    "open issue: Find a readable source with vendor-side detail on the 2025 market eviction; social-post-only so far.",
    "open issue: Station article is an unsourced stub; BEM page corroborates exits but not ridership.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 source-date annotations. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 source-date annotations. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

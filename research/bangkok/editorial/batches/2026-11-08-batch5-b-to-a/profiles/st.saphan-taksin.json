@@ -13,7 +13,7 @@
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.34,
   "cohort_rank": 28,
-  "cohort_size": 133,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
   "popularity_source_ids": [],
@@ -1316,7 +1316,8 @@
    "open issue: Grocery, gym and clinic provision inside the 800 m catchment is unsourced; app daily_essentials 8 and gym_sports 8 were not checkable against evidence this pass.",
    "open issue: No 2024-2026 English-language news on the stalled BTS station expansion was opened; the 'not begun' status rests on the Aug 2026 Wikipedia revision - worth a dedicated news check before publication.",
    "open issue: TG corpus hint placeholder ({{TG_CORPUS_HINT}}) was unfilled in the brief; no resident_report/Telegram claims were included.",
-   "open issue: Oriental Pier (N1) renovation (operator notice, from the 6 Oct 2026 banner) may shift some river traffic patterns north of the hub; effect on Sathorn pier headways unknown."
+   "open issue: Oriental Pier (N1) renovation (operator notice, from the 6 Oct 2026 banner) may shift some river traffic patterns north of the hub; effect on Sathorn pier headways unknown.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.44,
-  "cohort_rank": 22,
-  "cohort_size": 133,
+  "cohort_rank": 21,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
   "popularity_source_ids": [],
@@ -1411,7 +1411,8 @@
    "open issue: A Lotus's convenience store at Center One appears only in directory snippets; verify on an opened page before treating neighbourhood grocery coverage as two-supermarket.",
    "open issue: Van operations at the monument have been reorganised repeatedly (2016 NCPO reorganisation, later moves); which intercity routes still depart from the islands in 2026 needs confirmation.",
    "open issue: Santiphap Park visitor counts trace to a 2009 BMA park-office citation; current usage figures unavailable.",
-   "open issue: Historic 2012 hospital-access obstruction (ambulance deaths claim) predates later reorganisations; current ambulance-access conditions at Rajavithi Hospital unverified."
+   "open issue: Historic 2012 hospital-access obstruction (ambulance deaths claim) predates later reorganisations; current ambulance-access conditions at Rajavithi Hospital unverified.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

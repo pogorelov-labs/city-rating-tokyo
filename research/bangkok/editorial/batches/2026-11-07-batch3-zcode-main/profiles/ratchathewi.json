@@ -20,8 +20,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.96,
-  "cohort_rank": 5,
-  "cohort_size": 50,
+  "cohort_rank": 3,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
   "popularity_source_ids": [],
@@ -1415,7 +1415,8 @@
    "open issue: App district center (13.75882,100.53212) is inside Thung Phaya Thai near the district office belt, ~1.1 km WNW of the OSM polygon centroid - fine, but worth confirming whether the app centers districts on office seats.",
    "open issue: Century Movie Plaza: verified live (official site with programme; search-surface: opened Dec 2005, 8 screens) - the 'closed?' lead is contradicted at snippet level; a body-read of a schedule page was not possible (JS-rendered).",
    "open issue: No district-level crime statistics found anywhere; safety 5 stays an untested prior.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 claim prefix ratchathewi-d-*; P2 legacy AI-summary source. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 claim prefix ratchathewi-d-*; P2 legacy AI-summary source. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

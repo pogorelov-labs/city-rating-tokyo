@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.38,
-  "cohort_rank": 26,
-  "cohort_size": 133,
+  "cohort_rank": 25,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
   "popularity_source_ids": [],
@@ -1349,7 +1349,8 @@
    "open issue: Academic study on the 'New Chinatown' (Huai Khwang/Ratchada) surfaced in search but was not retrievable (rate limit); would strengthen the community-layer claim.",
    "open issue: Coordinator tasks: polygon checks for Fortune Town, Piyavate Hospital, RCA, SET, Pracha Rat Bamphen strip and the successor market site; verify app's mapped park hectares against the no-core-park finding.",
    "open issue: Signed-rent data (as opposed to asking) for 2025-2026 not found from an open source; rent baseline remains asking-price-based.",
-   "open issue: Sidewalk/crossing quality and entrance congestion around exits 1-3 not audited (no field observation); statements limited to sourced tunnel/exit facts."
+   "open issue: Sidewalk/crossing quality and entrance congestion around exits 1-3 not audited (no field observation); statements limited to sourced tunnel/exit facts.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

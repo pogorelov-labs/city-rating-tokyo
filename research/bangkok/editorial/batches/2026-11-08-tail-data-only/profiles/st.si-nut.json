@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 4.12,
-  "cohort_rank": 130,
-  "cohort_size": 133,
+  "cohort_rank": 129,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected.",
   "popularity_source_ids": [],
@@ -125,7 +125,8 @@
    "image_rights": "not_applicable"
   },
   "notes": [
-   "DATA-ONLY tier placeholder: scripted from the verified app snapshot; carries no web claims. Status draft — upgrade path per tier plan (2026-11-08-tier-plan.md)."
+   "DATA-ONLY tier placeholder: scripted from the verified app snapshot; carries no web claims. Status draft — upgrade path per tier plan (2026-11-08-tier-plan.md).",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

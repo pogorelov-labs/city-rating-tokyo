@@ -86,25 +86,26 @@ def main():
             sc = b["selection_context"]
             old = (sc.get("model_score_default"), sc.get("cohort_rank"), sc.get("cohort_size"))
             new = (new_score, new_rank, new_size)
-            if old[0] != new[0]:
+            if old == new:
+                print(f"[ok] {key}: no drift")
+                continue
+            if old[0] == new[0]:
+                # same score, different rank order — a tie whose ordering the
+                # current snapshot defines authoritatively (e.g. post-B-1
+                # re-normalization or cohort resize)
+                print(f"[tie] {key}: score unchanged at {new[0]}; rank {old[1]}→{new[1]}/{new[2]}")
+            else:
                 drift += 1
                 print(f"[DRIFT] {key}: score {old[0]}→{new[0]} rank {old[1]}→{new[1]}/{new[2]}")
-            elif old[1:] != new[1:]:
-                # same score, different tie order — the seed's arbitrary
-                # tie-break, not a real drift (snapshot unchanged here)
-                print(f"[tie] {key}: score unchanged at {new[0]}; rank {old[1]}→{new[1]}/{new[2]} (tie order)")
-                if args.write:
-                    sc["model_score_default"] = new_score
-                    sc["cohort_rank"] = new_rank
-                    sc["cohort_size"] = new_size
-                    sc["reanchored"] = "D-4/G15 re-anchor to current snapshot"
-                    b.setdefault("review", {}).setdefault("notes", []).append(
-                        "D-4/G15 re-anchor applied: selection_context re-derived from the "
-                        "current app snapshot (claims/copy untouched).")
-                    with open(p, "w", encoding="utf-8") as f:
-                        json.dump(b, f, ensure_ascii=False, indent=1)
-            else:
-                print(f"[ok] {key}: no drift")
+            if args.write:
+                sc["model_score_default"] = new_score
+                sc["cohort_rank"] = new_rank
+                sc["cohort_size"] = new_size
+                b.setdefault("review", {}).setdefault("notes", []).append(
+                    "D-4/G15 re-anchor applied: selection_context re-derived from the "
+                    "current app snapshot (claims/copy untouched).")
+                with open(p, "w", encoding="utf-8") as f:
+                    json.dump(b, f, ensure_ascii=False, indent=1)
     print(f"{'WRITTEN' if args.write else 'DRY-RUN'}: {drift} bundle(s) drifted")
 
 

@@ -16,8 +16,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.82,
-  "cohort_rank": 5,
-  "cohort_size": 133,
+  "cohort_rank": 6,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
   "popularity_source_ids": [],
@@ -1778,7 +1778,8 @@
    "open issue: {'id': 'OI-6', 'issue': 'App facts left unverified.', 'notes': '560 food venues, 109 cafes, 39 nightlife venues, 13 temples, 2.29 km2 area — no independent source could confirm counts; temple identification inside the unit not achieved.'}",
    "open issue: {'id': 'OI-7', 'issue': 'District blend vs station evidence for rent.', 'notes': \"16,000/33,000 THB is a district-weighted editorial blend; station-level room stock asks far less. Whether the app's rent 8 should absorb this is an editorial decision, not a factual one.\"}",
    "open issue: {'id': 'OI-8', 'issue': 'Access failures encountered.', 'notes': 'web_reader MCP 500 errors (2 calls); urbanrail.net/as/thai/ 404 (correct path used); greener.bangkok.go.th 403 via WebFetch (read via exa fetch); Reddit/TripAdvisor/Overpass blocked by policy; Bangkok Post paywalled and not bypassed.'}",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 short claim prefix; 5 snippet-only sources. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 short claim prefix; 5 snippet-only sources. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

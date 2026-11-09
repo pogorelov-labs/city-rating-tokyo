@@ -15,9 +15,9 @@
  },
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
-  "model_score_default": 7.28,
-  "cohort_rank": 29,
-  "cohort_size": 133,
+  "model_score_default": 7.36,
+  "cohort_rank": 26,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Each bundle logs its independent publisher families; search-hit totals, SEO duplication and venue stars are explicitly not treated as popularity measurements.",
   "popularity_source_ids": [],
@@ -1410,7 +1410,8 @@
    "open issue: Check named gyms, fitness studios and co-working spaces inside the 800 m circle to test the app's gym_sports 8.",
    "open issue: Verify khwaeng-level composition of the 800 m circle (Sam Sen Nai vs Phaya Thai vs Thanon Phaya Thai); current attribution is provisional.",
    "open issue: Thai-language snippets (RentHub room rents from ~7,500-11,500 THB; Wongnai/Grab 30+ cafe counts) were logged but not body-read; verifying them would sharpen the affordability floor and cafe density.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 residual: app park_ha 5.1 unmatched (accepted). See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 residual: app park_ha 5.1 unmatched (accepted). See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

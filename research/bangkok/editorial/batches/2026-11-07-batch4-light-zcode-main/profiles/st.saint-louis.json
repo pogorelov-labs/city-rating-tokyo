@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.46,
-  "cohort_rank": 21,
-  "cohort_size": 133,
+  "cohort_rank": 19,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
   "popularity_source_ids": [],
@@ -882,7 +882,8 @@
    "open issue: No current rent medians for the Saint Louis pocket from a raw-body portal source; BK's listings are 2019 vintage (saint-louis-c08).",
    "open issue: Thai-language coverage of ย่านเซนต์หลุยส์ beyond the station article was not searched in this pass - possible missing local sources.",
    "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F3 (c10/c12) + F10 'brief ... needs re-checking' in preview/lead. See research/bangkok/editorial/2026-11-08-independent-review.md.",
-   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

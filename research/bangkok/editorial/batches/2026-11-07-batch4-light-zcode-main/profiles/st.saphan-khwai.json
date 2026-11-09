@@ -11,9 +11,9 @@
  },
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
-  "model_score_default": 7.6,
-  "cohort_rank": 15,
-  "cohort_size": 133,
+  "model_score_default": 7.46,
+  "cohort_rank": 20,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
   "popularity_source_ids": [],
@@ -850,7 +850,8 @@
    "open issue: Safety 8 unverified — needs either local-crime data or an explicit 'perception, not documented' label.",
    "open issue: No resident-report sources accessible (Reddit/TripAdvisor 403 per brief); lived-experience claims rest on two editorial guides with different voices.",
    "open issue: Station article is an unsourced stub — ridership and surroundings would benefit from a BTS official page cross-check.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 source-date annotations. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P3 source-date annotations. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

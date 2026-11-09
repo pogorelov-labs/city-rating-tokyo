@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.56,
-  "cohort_rank": 16,
-  "cohort_size": 133,
+  "cohort_rank": 14,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
   "popularity_source_ids": [],
@@ -885,7 +885,8 @@
    "open issue: Chatuchak Park MRT's station code: body reads (Thai Wikipedia, OSM, BEM line map) give BL13; a search-engine summary claimed BL12. App station_ids must be checked against BL13 (mo-chit-c02).",
    "open issue: Vendor-side account of the 2025 market eviction exists mainly as a social post; a readable news piece with vendor quotes would strengthen mo-chit-c06.",
    "open issue: No accessible resident-report sources (Reddit/TripAdvisor 403 per brief) — lived-experience claims lean on editorial guides and review aggregates.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 'coordinator' only in uncertainties; P3 date annotations. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 'coordinator' only in uncertainties; P3 date annotations. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.52,
-  "cohort_rank": 19,
-  "cohort_size": 133,
+  "cohort_rank": 17,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
   "popularity_source_ids": [],
@@ -850,7 +850,8 @@
    "open issue: CentralWorld/Pathumwananurak seam with st.siam needs the polygon check.",
    "open issue: Reddit/TripAdvisor 403 and Bangkok Post paywall blocked perception-side and news-side corroboration.",
    "open issue: claim chit-lom-c06 removed during assembly: its only evidence was a non-web app-data anchor (limitation recorded on neighboring claims)",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 c06 removed at assembly (documented); P3 'live page 2026' date. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2 c06 removed at assembly (documented); P3 'live page 2026' date. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

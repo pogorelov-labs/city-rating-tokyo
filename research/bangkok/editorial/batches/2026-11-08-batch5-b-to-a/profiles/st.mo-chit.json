@@ -12,8 +12,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.56,
-  "cohort_rank": 16,
-  "cohort_size": 133,
+  "cohort_rank": 14,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected; coverage breadth used for selection only.",
   "popularity_source_ids": [],
@@ -1491,7 +1491,8 @@
    "open issue: BMA policy-portal page 63918 has internally contradictory metadata (12% header vs accepted 17 Jul 2026 in report table) and wrong project coordinates; worth re-checking on the BMA portal.",
    "open issue: Healthcare and gym inventory inside the catchment unverified (BouProperty source down with HTTP 522); no hospital claim was made.",
    "open issue: Whether the ~70% vendor opposition to 'Set Zero' and the 2,300-baht fee sequence reflect final outcomes — the dispute (fees, arrears, court cases) was unresolved in all 2026 material read.",
-   "open issue: Market hours discrepancy (Sat-Sun 09:00 vs 10:00 opening) across guides remains unreconciled."
+   "open issue: Market hours discrepancy (Sat-Sun 09:00 vs 10:00 opening) across guides remains unreconciled.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

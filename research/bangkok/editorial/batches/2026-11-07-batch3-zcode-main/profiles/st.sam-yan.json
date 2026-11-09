@@ -15,8 +15,8 @@
  "selection_context": {
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.78,
-  "cohort_rank": 7,
-  "cohort_size": 133,
+  "cohort_rank": 8,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Coverage breadth is measured for batch selection only (windowed, publisher-family-deduped scan); it is a research-selection signal, never a popularity score.",
   "popularity_source_ids": [],
@@ -1577,7 +1577,8 @@
    "open issue: Research CU Bike bike-share status (brief lead left unexplored).",
    "B-10/G21 canonical relabel applied 2026-11-08: corroboration labels recomputed under canonical publisher families (kit/canonical.py) — Wikipedia language editions/Wikimedia projects and OSM/Overpass variants count as ONE family; HipFlat casing/snippet variants likewise. See 2026-11-08-canonical-relabel-log.jsonl for the per-claim ledger.",
    "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record.",
-   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2: 3 snippet-only corroboration sources. See research/bangkok/editorial/2026-11-08-independent-review.md."
+   "Independent review 2026-11-08 (agent, not a human signatory): APPROVED for the human sign-off; no further research work required. P2: 3 snippet-only corroboration sources. See research/bangkok/editorial/2026-11-08-independent-review.md.",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }

@@ -13,7 +13,7 @@
   "app_snapshot_id": "bkk-d6499618507e7561",
   "model_score_default": 7.34,
   "cohort_rank": 28,
-  "cohort_size": 133,
+  "cohort_size": 132,
   "popularity_status": "unmeasured",
   "popularity_method": "No citywide popularity measure has been collected. Tier B selection used within-cohort rank; coverage recorded opportunistically per bundle.",
   "popularity_source_ids": [],
@@ -865,7 +865,8 @@
    "C-6 wave 1 (2026-11-08): 1 source URL dead — archived-citation status recorded on the source record.",
    "Independent review 2026-11-08 (agent): BLOCKED; fix and re-review before integration. F1 + F2 (1 claim + 8 source arrays) + F6 + false claim_support=pass. See research/bangkok/editorial/2026-11-08-independent-review.md.",
    "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): REMOVED saphan-taksin-c12 (review F6+F3): pure app-data provenance statement (safety 7 editorial; no accessible EN/TH crime stats for the pier/station area) that had been attached to the unrelated Sathorn Unique Tower article — preserved here as the score-context note.",
-   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2)."
+   "A-8 rework 2026-11-08 (fixer: zcode-main/AG; verified losslessly vs raw where applicable; gates green): cleared per the independent review's rework protocol (2026-11-08-independent-review.md §9): all findings blocking this bundle fixed and re-gated. Agent-review provenance — human sign-off still pending (DEC-2).",
+   "D-4/G15 re-anchor applied: selection_context re-derived from the current app snapshot (claims/copy untouched)."
   ]
  }
 }
