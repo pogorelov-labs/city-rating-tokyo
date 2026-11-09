@@ -21,14 +21,28 @@ def repo_root(start):
         d = os.path.dirname(d)
     raise SystemExit("repo root not found (no .git above %s)" % start)
 
+def current_snapshot_id(root):
+    """bkk-<first 12 hex of stations.json sha256> for the CURRENT app build.
+
+    The 2026-11-05-era batches carry the original minted seed literal
+    (bkk-d6499618507e7561) whose derivation predates this helper; treat that
+    field as per-batch seed provenance and mint a fresh id per new batch.
+    """
+    import hashlib
+    with open(os.path.join(root, "app/src/data/bangkok/stations.json"), "rb") as f:
+        return "bkk-" + hashlib.sha256(f.read()).hexdigest()[:12]
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--batch-id", required=True)
     ap.add_argument("--entities", default="", help="comma-separated entity keys, e.g. st.nana,pom-prap-sattru-phai")
     ap.add_argument("--seed", default=None, help="path to priority-seed.json to prefill scores/ranks")
+    ap.add_argument("--app-snapshot-id", default=None,
+                    help="snapshot id recorded in batch.json (default: minted from the current app/src/data/bangkok/stations.json)")
     args = ap.parse_args()
 
     root = repo_root(__file__)
+    snapshot_id = args.app_snapshot_id or current_snapshot_id(root)
     batches = os.path.join(root, "research/bangkok/editorial/batches")
     path = os.path.join(batches, args.batch_id)
     if os.path.exists(path):
@@ -63,7 +77,7 @@ def main():
         "created_at_note": "fill after creation",
         "task": "Bangkok editorial research batch (research only; no live app data changed)",
         "handoff": "research/bangkok/editorial/2026-11-05-handoff/HANDOFF.md",
-        "app_snapshot_id": "bkk-d6499618507e7561",
+        "app_snapshot_id": snapshot_id,
         "weights": {"transport": 18, "rent": 18, "daily_essentials": 14, "safety": 10,
                     "food": 12, "green": 8, "gym_sports": 4, "vibe": 4, "nightlife": 8, "crowd": 4},
         "popularity_method": ("No citywide popularity measure has been collected. Coverage breadth "

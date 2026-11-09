@@ -51,7 +51,7 @@ key piece of content:
 - Bangkok map `/bangkok` — 50 district polygons + city switcher state
 - District detail `/bangkok/district/watthana` — heading and rail stations
 - Bangkok district tooltips render in Leaflet's tooltip pane (above the polygons)
-- Bangkok levels of detail — Stations (133 areas) and the 200 m grid (canvas, Best spots, top-5 pins)
+- Bangkok levels of detail — Stations (132 areas) and the 200 m grid (canvas, Best spots, top-5 pins)
 - A grid cell click opens its popup (`?lv=grid&s=cell.N`)
 - Station and district guides — comparison plot/table, commute bars, geographic
   scope and expandable local facts
