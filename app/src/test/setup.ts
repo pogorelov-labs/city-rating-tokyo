@@ -8,10 +8,6 @@ import { afterEach } from 'vitest';
 // missing surface. Back the jsdom window with a minimal in-memory
 // implementation when the real one is absent (tests keep using
 // window.localStorage; production code always does).
-declare global {
-  // eslint-disable-next-line no-var
-  var localStorage: Storage | undefined;
-}
 if (typeof window !== 'undefined' && !window.localStorage?.getItem) {
   const store = new Map<string, string>();
   const shim = {
